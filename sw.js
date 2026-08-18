@@ -19,7 +19,7 @@ var PRECACHE_URLS = [
   '/assets/js/main.js',
   '/assets/js/translations.js',
   '/assets/js/info-bar.js',
-  '/assets/images/logo/better-malolos-logo.svg',
+  '/assets/images/logo/better-malolos-logo.png',
   '/assets/images/logo/better-malolos-logo-white.svg',
   '/assets/images/logo/favicon.svg',
   '/assets/images/logo/favicon.ico',
