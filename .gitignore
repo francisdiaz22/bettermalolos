@@ -1,0 +1,17 @@
+.DS_Store
+node_modules/
+dist/
+.next/
+react-app/out/
+out/
+*.backup
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# Build-time config (see .env.example) and release archives
+.env
+release/

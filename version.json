@@ -1,0 +1,11 @@
+{
+  "version": "1.1.19",
+  "major": 1,
+  "minor": 1,
+  "patch": 19,
+  "lastUpdated": "2026-06-16",
+  "changelog": {
+    "1.0.0": "Initial release",
+    "1.1.0": "Added version management system"
+  }
+}
