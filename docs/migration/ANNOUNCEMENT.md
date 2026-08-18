@@ -62,7 +62,7 @@ We welcome feedback on both versions. Please:
 
 - Open an issue with the `react` label for React-specific feedback
 - Join the discussion in our Discord community
-- Email volunteer@bettermalolos.org with questions
+- Email info@bettermalolos.org with questions
 
 ## Acknowledgments
 

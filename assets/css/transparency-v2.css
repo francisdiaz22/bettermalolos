@@ -942,7 +942,7 @@
 }
 
 .dpwh-table thead {
-  background: #0032a0;
+  background: var(--color-primary);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -1045,7 +1045,7 @@
 
 .dpwh-cat-badge.flood {
   background: rgba(0, 119, 190, 0.1);
-  color: #0077be;
+  color: var(--color-info);
 }
 
 .dpwh-cat-badge.water {

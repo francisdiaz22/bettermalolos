@@ -15,7 +15,7 @@ We take security seriously at BetterMalolos.org. If you discover a security vuln
 
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
-Instead, please email: **volunteer@bettermalolos.org**
+Instead, please email: **info@bettermalolos.org**
 
 Include in your report:
 
@@ -95,7 +95,7 @@ Out of scope:
 
 ## Contact
 
-For security concerns: **volunteer@bettermalolos.org**
+For security concerns: **info@bettermalolos.org**
 
 For general inquiries: Open a GitHub issue or join our [Discord](https://discord.com/invite/qeSu7RJkjQ)
 

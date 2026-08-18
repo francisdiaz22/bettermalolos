@@ -1,17 +1,24 @@
 /* Better Malolos - Complete Main Stylesheet */
 :root {
-  --color-primary: #0032a0;
-  --color-primary-dark: #002170;
-  --color-secondary: #003d82;
-  --color-accent: #f77f00;
-  --color-success: #06a77d;
-  --color-danger: #d62828;
-  --color-info: #0077be;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8f9fa;
-  --color-text: #1a1a1a;
-  --color-text-light: #666666;
-  --color-white: #ffffff;
+  /* 1997 Philippine ₱10 note palette — update brand colours only here. */
+  --color-primary: #713b4a;
+  --color-primary-dark: #542633;
+  --color-secondary: #3d7772;
+  --color-accent: #b96d5b;
+  --color-success: #4d786a;
+  --color-danger: #8b3345;
+  --color-info: #4c7e7c;
+  --color-bg: #fffdf9;
+  --color-bg-alt: #f7eee5;
+  --color-text: #332832;
+  --color-text-light: #6e6264;
+  --color-white: #fffdf9;
+  --color-border: #dfc8bd;
+  --color-primary-soft: #f3e5e1;
+  --color-secondary-soft: #e2efeb;
+  --color-primary-rgb: 113, 59, 74;
+  --color-secondary-rgb: 61, 119, 114;
+  --color-accent-rgb: 185, 109, 91;
   --font-main: 'Inter', sans-serif;
   --line-height-body: 1.6;
   --line-height-heading: 1.2;
@@ -2676,7 +2683,7 @@ h6 {
 }
 
 .footer-social-link:hover .footer-social-icon {
-  color: #0032a0;
+  color: var(--color-accent);
 }
 
 .footer-social-icon {
@@ -9099,7 +9106,7 @@ a.a11y-contact-item:hover i {
 }
 
 .sitemap-section-icon--online {
-  background: linear-gradient(135deg, #06a77d 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-secondary) 100%);
 }
 
 .sitemap-section-header h2 {
@@ -9112,8 +9119,8 @@ a.a11y-contact-item:hover i {
 .sitemap-badge {
   display: inline-flex;
   align-items: center;
-  background: #e6f4ea;
-  color: #06a77d;
+  background: var(--color-secondary-soft);
+  color: var(--color-success);
   padding: 4px 10px;
   border-radius: 50px;
   font-size: 0.6875rem;
@@ -9138,7 +9145,7 @@ a.a11y-contact-item:hover i {
   gap: 8px;
   padding: 10px 14px;
   background: var(--color-white);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -9149,7 +9156,7 @@ a.a11y-contact-item:hover i {
 
 .sitemap-link-item:hover {
   border-color: var(--color-primary);
-  background: rgba(0, 50, 160, 0.04);
+  background: var(--color-primary-soft);
   color: var(--color-primary);
   text-decoration: none;
   transform: translateX(2px);
@@ -9170,13 +9177,13 @@ a.a11y-contact-item:hover i {
 }
 
 .sitemap-link-item--external:hover {
-  background: rgba(6, 167, 125, 0.06);
-  border-color: #06a77d;
-  color: #06a77d;
+  background: var(--color-secondary-soft);
+  border-color: var(--color-success);
+  color: var(--color-success);
 }
 
 .sitemap-link-item--external:hover i {
-  color: #06a77d;
+  color: var(--color-success);
 }
 
 @media (max-width: 1200px) {
@@ -9232,7 +9239,7 @@ a.a11y-contact-item:hover i {
 
 /* Medical Hotline Cards */
 .hotlines-badge--medical {
-  background: linear-gradient(135deg, #0077be 0%, #0066a0 100%);
+  background: linear-gradient(135deg, var(--color-info) 0%, var(--color-secondary) 100%);
   color: white;
 }
 
@@ -9241,16 +9248,16 @@ a.a11y-contact-item:hover i {
 }
 
 .hotline-card--medical {
-  border-color: #bfdbfe;
+  border-color: var(--color-secondary-soft);
 }
 
 .hotline-card--medical:hover {
-  border-color: #0077be;
-  background: #eff6ff;
+  border-color: var(--color-info);
+  background: var(--color-secondary-soft);
 }
 
 .hotline-card--medical > i {
-  color: #0077be;
+  color: var(--color-info);
 }
 
 /* Environmental Initiatives Section */
@@ -9875,7 +9882,7 @@ a.a11y-contact-item:hover i {
 .vol-popup-header {
   position: relative;
   padding: 38px 32px 30px;
-  background: linear-gradient(140deg, #0032a0 0%, #003d82 55%, #001f6b 100%);
+  background: linear-gradient(140deg, var(--color-primary) 0%, var(--color-secondary) 55%, var(--color-primary-dark) 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -9906,7 +9913,7 @@ a.a11y-contact-item:hover i {
   height: 180px;
   bottom: -70px;
   left: -50px;
-  background: rgba(247, 127, 0, 0.1);
+  background: rgba(var(--color-accent-rgb), 0.1);
 }
 
 .vol-popup-logo {
@@ -9972,8 +9979,8 @@ a.a11y-contact-item:hover i {
   align-items: center;
   gap: 6px;
   padding: 7px 14px;
-  background: rgba(0, 50, 160, 0.06);
-  border: 1.5px solid rgba(0, 50, 160, 0.14);
+  background: rgba(var(--color-primary-rgb), 0.06);
+  border: 1.5px solid rgba(var(--color-primary-rgb), 0.14);
   border-radius: 100px;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -9998,7 +10005,7 @@ a.a11y-contact-item:hover i {
   gap: 9px;
   width: 100%;
   padding: 14px 24px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, #003d82 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
@@ -10007,7 +10014,7 @@ a.a11y-contact-item:hover i {
   border: none;
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
-  box-shadow: 0 4px 16px rgba(0, 50, 160, 0.32);
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.32);
   font-family: var(--font-main);
 }
 

@@ -29,7 +29,7 @@ For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md
 #### Setup
 
 ```bash
-git clone https://github.com/BetterMalolos/bettermalolos.git
+git clone https://github.com/francisdiaz22/bettermalolos.git
 cd bettermalolos
 npm install
 npm run dev
@@ -48,7 +48,7 @@ Open http://localhost:8000 in your browser.
 #### Setup
 
 ```bash
-git clone https://github.com/BetterMalolos/bettermalolos.git
+git clone https://github.com/francisdiaz22/bettermalolos.git
 cd bettermalolos
 git checkout react-typescript
 cd react-app
@@ -62,7 +62,7 @@ Open http://localhost:3000 in your browser.
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/BetterMalolos/bettermalolos/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/francisdiaz22/bettermalolos/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce
@@ -183,9 +183,9 @@ Pull requests are reviewed for:
 ## Community
 
 - **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
-- **Facebook:** [@bettermalolos.org](https://www.facebook.com/profile.php?id=61593596483093)
+- **Facebook:** [@bettermalolos.org](https://www.facebook.com/MalolosCIOPage)
 - **LinkedIn:** [Connect with us](https://www.linkedin.com/company/bettermalolos)
-- **Email:** volunteer@bettermalolos.org
+- **Email:** info@bettermalolos.org
 
 ## Recognition
 

@@ -3,14 +3,18 @@
  * Better Malolos Portal - Minimal Professional Design
  */
 
-// Brand colors
+// Read chart colors from the global CSS palette rather than maintaining a page palette.
+function getThemeColor(token) {
+  return getComputedStyle(document.documentElement).getPropertyValue(token).trim();
+}
+
 const COLORS = {
-  primary: '#0032a0',
-  primaryDark: '#002170',
-  secondary: '#003D82',
-  accent: '#F77F00',
-  success: '#06A77D',
-  info: '#0077BE',
+  primary: getThemeColor('--color-primary'),
+  primaryDark: getThemeColor('--color-primary-dark'),
+  secondary: getThemeColor('--color-secondary'),
+  accent: getThemeColor('--color-accent'),
+  success: getThemeColor('--color-success'),
+  info: getThemeColor('--color-info'),
 };
 
 // Barangay data (2024 Census)

@@ -76,7 +76,7 @@ Report issues or provide feedback:
 
 - GitHub Issues with `react` label
 - Discord community
-- Email: volunteer@bettermalolos.org
+- Email: info@bettermalolos.org
 
 ## Contributors
 

@@ -33,7 +33,7 @@ KEEP_AS_IS = {
     'NAPC', 'PCSO', 'PAGASA', 'PHIVOLCS', 'NDRRMC', 'OCD',
     'R2TMC', 'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA',
     'Filipizen', 'BetterMalolos.org', 'Better Malolos',
-    'Abakada.org', 'volunteer@bettermalolos.org',
+    'Abakada.org', 'info@bettermalolos.org',
     'accounting@malolos.gov.ph', 'Facebook', 'Google',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',
     'Bulacan', 'Malolos', 'Bayombong',

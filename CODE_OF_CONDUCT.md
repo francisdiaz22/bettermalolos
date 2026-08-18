@@ -40,7 +40,7 @@ This Code of Conduct applies to all project spaces, including:
 
 Instances of unacceptable behavior may be reported to:
 
-- Email: volunteer@bettermalolos.org
+- Email: info@bettermalolos.org
 - Discord: Contact a moderator
 
 All complaints will be reviewed and investigated promptly and fairly. The project team is obligated to maintain confidentiality regarding the reporter.

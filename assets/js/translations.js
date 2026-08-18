@@ -716,7 +716,7 @@ const translations = {
     'a11y-text-alternatives': 'Text Alternatives',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Volunteer with us',
-    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'a11y-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Works on all devices and screen sizes.',
     'acct-1-day': '1 day',
@@ -2378,7 +2378,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       "Visit the Municipal Treasurer's Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
     'faq-volunteer-with-us': 'Volunteer with us',
-    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'faq-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What are the office hours of the Municipal Hall?',
     'faq-what-benefits-do-senior-citizens-receive': 'What benefits do senior citizens receive?',
@@ -2888,7 +2888,7 @@ const translations = {
     'home-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'home-municipality': 'Municipality',
     'home-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
-    'home-once-the-largest': 'Once the Largest',
+    'home-once-the-largest': 'Cradle of the Republic',
     'home-open-data-philippines': 'Open Data Philippines',
     'home-ordinance-framework': 'Ordinance Framework',
     'home-popular': 'Popular:',
@@ -2912,11 +2912,11 @@ const translations = {
     'home-malolos-municipal-hall-bulacan-3708': 'Malolos Municipal Hall, Bulacan 3708',
     'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
     'home-malolos-was-the-largest-municipality-in-the':
-      'Malolos was the largest municipality in the province until Caliat and Bintawan were separated to become Quezon and Villaverde respectively.',
+      'Malolos hosted the Malolos Congress and the inauguration of the First Philippine Republic, earning its place as the cradle of the Philippine Republic.',
     'home-tax-payments': 'Tax Payments',
     'home-terms-of-use': 'Terms of Use',
     'home-the-1889-redevelopment-created-a-grid-of-100':
-      'The 1889 redevelopment created a grid of 100 square blocks, each with an aggregate area of one hectare, with streets running north-south and east-west.',
+      'Malolos is home to a nationally recognized historic town center, preserving heritage churches, ancestral houses, and civic spaces connected to the First Philippine Republic.',
     'home-total-municipal-area': 'Total Municipal Area',
     'home-urban-planning': 'Urban Planning',
     'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
@@ -5182,7 +5182,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under the Data Privacy Act of 2012, you have the following rights regarding your personal information:',
     'privacy-volunteer-with-us': 'Volunteer with us',
-    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'privacy-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We collect minimal information necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -6113,7 +6113,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify information directly from original and official sources',
     'terms-volunteer-with-us': 'Volunteer with us',
-    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'terms-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Warranties of merchantability',
     'terms-website-availability': 'Website Availability',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly include:',
@@ -7112,7 +7112,7 @@ const translations = {
     'a11y-text-alternatives': 'Mga Alternatibong Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Mag-volunteer sa amin',
-    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'a11y-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Gumagana sa lahat ng device at laki ng screen.',
     'acct-1-day': '1 araw',
@@ -8792,7 +8792,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bumisita sa Opisina ng Ingat-Yaman ng Munisipyo sa Munisipyo na may iyong Tax Declaration o pinakabagong Opisyal na Resibo. Ang pagbabayad ay sa cash. Ang mga buwis sa ari-arian ay dapat bayaran quarterly, ngunit maaari kang magbayad taun-taon upang makakuha ng diskwento.',
     'faq-volunteer-with-us': 'Mag-volunteer sa amin',
-    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'faq-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ang office hours ng ang Munisipyo?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -9306,7 +9306,7 @@ const translations = {
     'home-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'home-municipality': 'Munisipalidad',
     'home-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
-    'home-once-the-largest': 'Dating Pinakamalaki',
+    'home-once-the-largest': 'Duyan ng Republika',
     'home-open-data-philippines': 'Open Data Philippines',
     'home-ordinance-framework': 'Balangkas ng Ordinansa',
     'home-popular': 'Sikat:',
@@ -9331,11 +9331,11 @@ const translations = {
       'Malolos Pangmunisipyo Hall, Bulacan 3708',
     'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
     'home-malolos-was-the-largest-municipality-in-the':
-      'Ang Malolos ang pinakamalaking munisipalidad sa probinsya hanggang sa pinaghiwalay ang Caliat at Bintawan upang maging Quezon at Villaverde.',
+      'Pinagdausan ng Malolos ang Kongreso ng Malolos at ang pagpapasinaya ng Unang Republika ng Pilipinas, kaya tinaguriang duyan ng Republika ng Pilipinas.',
     'home-tax-payments': 'Pagbabayad ng Buwis',
     'home-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'home-the-1889-redevelopment-created-a-grid-of-100':
-      'Ang muling pagbuo noong 1889 ay lumikha ng grid na may 100 parisukat na bloke, bawat isa ay may kabuuang lawak na isang ektarya, na may mga kalye na patungo sa hilaga-timog at silangan-kanluran.',
+      'Tahanan ang Malolos ng kinikilalang makasaysayang sentro ng bayan, na nagpapanatili ng mga makasaysayang simbahan, bahay, at gusaling kaugnay ng Unang Republika ng Pilipinas.',
     'home-total-municipal-area': 'Kabuuang Lawak ng Munisipalidad',
     'home-urban-planning': 'Pagpaplano ng Lungsod',
     'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
@@ -11647,7 +11647,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ang Data Privacy Act ng 2012, ikaw ay maaari ang following mga karapatan regarding iyong personal na impormasyon:',
     'privacy-volunteer-with-us': 'Mag-volunteer sa amin',
-    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'privacy-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektahin minimal impormasyon necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -12585,7 +12585,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasyon directly mula sa original sa opisyal na sources',
     'terms-volunteer-with-us': 'Mag-volunteer sa amin',
-    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'terms-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Mga garantiya ng kakayahang ibenta',
     'terms-website-availability': 'Pagkakaroon ng Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly isama:',
@@ -13585,7 +13585,7 @@ const translations = {
     'a11y-text-alternatives': 'Dagiti Alternatibo a Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Ag-volunteer kadakami',
-    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'a11y-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes':
       'Agtrabtrabaho iti amin a device ken kadakkel ti screen.',
@@ -15275,7 +15275,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bisitaen ti Opisina ti Tesorero ti Munisipalidad iti Munisipalidad nga addaan iti Tax Declaration wenno kaudian nga Opisyal a Resibo. Ti panagbayad ket cash. Dagiti buwis iti kukua ket masapul a bayadan quarterly, ngem mabalinmo ti agbayad iti tinawen tapno magun-od ti diskwento.',
     'faq-volunteer-with-us': 'Ag-volunteer kadakami',
-    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'faq-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ti office hours ti ti Munisipalidad?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -15815,11 +15815,11 @@ const translations = {
     'home-malolos-municipal-hall-bulacan-3708': 'Malolos Munisipal Hall, Bulacan 3708',
     'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
     'home-malolos-was-the-largest-municipality-in-the':
-      'Ti Malolos ti kadakkelan a munisipalidad iti probinsia agingga a naisina ti Caliat ken Bintawan tapno agbalin a Quezon ken Villaverde.',
+      'Ti Malolos ti nagbalinan ti Malolos Congress ken pannakainagurasion ti Umuna a Republika ti Pilipinas, isu a naawagan a duyan ti Republika ti Pilipinas.',
     'home-tax-payments': 'Panagbayad ti Buwis',
     'home-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'home-the-1889-redevelopment-created-a-grid-of-100':
-      'Ti panagpasayaat idi 1889 ket nangaramid iti grid a 100 a kuadrado a bloke, tunggal maysa ket addaan dagup a kalawa a maysa nga ektarya, nga addaan kadagiti kalsada a mapan iti amianan-abagatan ken daya-laud.',
+      'Ti Malolos ti pagtaengan ti nabigbig a makasaysayan a sentro ti ili, a mangsalaknib kadagiti simbaan, balay, ken pampubliko a lugar a naisilpu iti Umuna a Republika ti Pilipinas.',
     'home-total-municipal-area': 'Dagup a Kalawa ti Munisipalidad',
     'home-urban-planning': 'Panagplano ti Ili',
     'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
@@ -18132,7 +18132,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ti Data Privacy Act ti 2012, ikaw ay maaari ti following dagiti karapatan regarding iyong personal na impormasion:',
     'privacy-volunteer-with-us': 'Ag-volunteer kadakami',
-    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'privacy-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektaen minimal impormasion necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -19072,7 +19072,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasion directly manipud iti original iti opisyal na sources',
     'terms-volunteer-with-us': 'Ag-volunteer kadakami',
-    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
+    'terms-volunteerbettermalolosorg': 'info@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Dagiti garantiya ti kakayahang ibenta',
     'terms-website-availability': 'Pannakagun-od ti Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly iraman:',

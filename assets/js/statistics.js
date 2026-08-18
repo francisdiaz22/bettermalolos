@@ -3,15 +3,19 @@
  * Better Malolos Portal
  */
 
-// Site branding color palette for charts
+// Read chart colors from the global CSS palette rather than maintaining a page palette.
+function getThemeColor(token) {
+  return getComputedStyle(document.documentElement).getPropertyValue(token).trim();
+}
+
 const CHART_COLORS = {
-  primary: '#0032a0',
-  primaryDark: '#002170',
-  accent: '#F77F00',
-  success: '#06A77D',
-  danger: '#D62828',
-  info: '#0077BE',
-  secondary: '#003D82',
+  primary: getThemeColor('--color-primary'),
+  primaryDark: getThemeColor('--color-primary-dark'),
+  accent: getThemeColor('--color-accent'),
+  success: getThemeColor('--color-success'),
+  danger: getThemeColor('--color-danger'),
+  info: getThemeColor('--color-info'),
+  secondary: getThemeColor('--color-secondary'),
 };
 
 /**

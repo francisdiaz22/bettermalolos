@@ -3,14 +3,18 @@
  * Better Malolos Portal
  */
 
-// Brand colors
+// Read brand colors from the global CSS palette so charts stay in sync with the site.
+function getThemeColor(token) {
+  return getComputedStyle(document.documentElement).getPropertyValue(token).trim();
+}
+
 const COLORS = {
-  primary: '#0032a0',
-  secondary: '#003D82',
-  success: '#06A77D',
-  danger: '#D62828',
-  info: '#0077BE',
-  accent: '#F77F00',
+  primary: getThemeColor('--color-primary'),
+  secondary: getThemeColor('--color-secondary'),
+  success: getThemeColor('--color-success'),
+  danger: getThemeColor('--color-danger'),
+  info: getThemeColor('--color-info'),
+  accent: getThemeColor('--color-accent'),
 };
 
 // Chart instances

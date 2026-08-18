@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="footer-tagline">{t('footer-tagline')}</p>
             <div className="footer-social-new">
               <a
-                href="https://www.facebook.com/profile.php?id=61593596483093"
+                href="https://www.facebook.com/MalolosCIOPage"
                 className="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -121,7 +121,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/OfficialLguMalolosFanpage/"
+                  href="https://www.facebook.com/MalolosCIOPage"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -148,11 +148,11 @@ export default function Footer() {
             >
               {t('footer-cost')} <span className="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@bettermalolos.org" className="footer-contribute">
+            <a href="mailto:info@bettermalolos.org" className="footer-contribute">
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
-              href="https://github.com/BetterMalolos/bettermalolos"
+              href="https://github.com/francisdiaz22/bettermalolos"
               className="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"
@@ -160,36 +160,6 @@ export default function Footer() {
               <i className="bi bi-github"></i> {t('footer-contribute')}
             </a>
             <div className="footer-partners">
-              <a
-                href="https://abakada.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abakada.org"
-              >
-                <img
-                  src="/assets/images/logo/abakada-footer.svg"
-                  alt="Abakada.org"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://hivcareph.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HIV Care Philippines"
-              >
-                <img
-                  src="/assets/images/logo/hiv-care-logo-footer.svg"
-                  alt="HIV Care Philippines"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"

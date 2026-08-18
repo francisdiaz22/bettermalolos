@@ -64,7 +64,7 @@ BetterMalolos.org now has two versions:
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterMalolos/bettermalolos.git
+git clone https://github.com/francisdiaz22/bettermalolos.git
 cd bettermalolos
 
 # Switch to React branch
@@ -231,7 +231,7 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 - Open an issue on GitHub with the `react` label
 - Join our Discord community for real-time discussion
-- Email: volunteer@bettermalolos.org
+- Email: info@bettermalolos.org
 
 ---
 

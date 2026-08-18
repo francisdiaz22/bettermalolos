@@ -71,6 +71,26 @@ Visit the live website: [https://bettermalolos.org](https://bettermalolos.org)
 | **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                          |
 | **Performance**     | GZIP Compression, Browser Caching, Asset Minification                  |
 
+## Global Colorway
+
+The site uses the 1997 Philippine ₱10 note as its visual reference: warm security-paper neutrals, engraved maroon, muted teal, and restrained terracotta. The palette is defined once in [`assets/css/style.css`](assets/css/style.css) under `:root`; pages and component styles must use these CSS custom properties rather than adding page-specific brand hex values.
+
+| Token | Hex | Role |
+| ----- | --- | ---- |
+| `--color-primary` | `#713B4A` | Engraved maroon; primary actions and headings |
+| `--color-primary-dark` | `#542633` | Hover and strong contrast state |
+| `--color-secondary` | `#3D7772` | Security-print teal; secondary UI |
+| `--color-accent` | `#B96D5B` | Terracotta; limited emphasis |
+| `--color-success` | `#4D786A` | Muted green status state |
+| `--color-danger` | `#8B3345` | Deep red status state |
+| `--color-info` | `#4C7E7C` | Informational teal state |
+| `--color-bg` | `#FFFDF9` | Note-paper page surface |
+| `--color-bg-alt` | `#F7EEE5` | Warm alternate surface |
+| `--color-text` | `#332832` | Primary ink text |
+| `--color-text-light` | `#6E6264` | Secondary ink text |
+
+When the palette is revised, change the token values in `assets/css/style.css` (and the PWA `theme_color` in `manifest.webmanifest`) rather than editing individual pages. Keep the RGB companion tokens aligned with their matching hex values when changing a color used in translucent effects.
+
 ## Key Features
 
 | Feature                          | Description                                                                                                                                                                                                       |
@@ -98,7 +118,7 @@ Visit the live website: [https://bettermalolos.org](https://bettermalolos.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterMalolos/bettermalolos.git
+git clone https://github.com/francisdiaz22/bettermalolos.git
 
 # Navigate to project directory
 cd bettermalolos
@@ -129,7 +149,7 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/BetterMalolos/bettermalolos.git
+git clone https://github.com/francisdiaz22/bettermalolos.git
 cd bettermalolos
 ```
 
@@ -454,11 +474,11 @@ See [LICENSE](LICENSE) for full details.
 | Channel  | Link                                                                      |
 | -------- | ------------------------------------------------------------------------- |
 | Website  | [bettermalolos.org](https://bettermalolos.org)                              |
-| Email    | volunteer@bettermalolos.org                                                |
-| Facebook | [@bettermalolos.org](https://www.facebook.com/profile.php?id=61593596483093)            |
+| Email    | info@bettermalolos.org                                                |
+| Facebook | [@bettermalolos.org](https://www.facebook.com/MalolosCIOPage)            |
 | LinkedIn | [BetterMalolos](https://www.linkedin.com/company/bettermalolos/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [BetterMalolos/bettermalolos](https://github.com/BetterMalolos/bettermalolos) |
+| GitHub   | [francisdiaz22/bettermalolos](https://github.com/francisdiaz22/bettermalolos) |
 
 ## Acknowledgments
 
