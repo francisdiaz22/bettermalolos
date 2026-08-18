@@ -123,8 +123,8 @@ export default function Header() {
         <div className="logo-container">
           <Link href="/">
             <img
-              src="/assets/images/logo/better-solano-logo.svg"
-              alt="Better Solano Logo"
+              src="/assets/images/logo/better-malolos-logo.svg"
+              alt="Better Malolos Logo"
               className="logo-img"
             />
           </Link>

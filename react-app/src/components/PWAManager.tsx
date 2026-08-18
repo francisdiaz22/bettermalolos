@@ -75,10 +75,10 @@ export default function PWAManager() {
         <div className="pwa-install-banner" role="alert" aria-live="polite">
           <div className="pwa-install-content">
             <i className="bi bi-download" aria-hidden="true"></i>
-            <span>Install BetterSolano for quick access to services.</span>
+            <span>Install BetterMalolos for quick access to services.</span>
           </div>
           <div className="pwa-install-actions">
-            <button className="pwa-install-btn" onClick={handleInstall} aria-label="Install BetterSolano app">
+            <button className="pwa-install-btn" onClick={handleInstall} aria-label="Install BetterMalolos app">
               Install
             </button>
             <button

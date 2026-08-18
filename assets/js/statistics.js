@@ -1,6 +1,6 @@
 /**
  * Statistics Page - Chart.js Implementation
- * Better Solano Portal
+ * Better Malolos Portal
  */
 
 // Site branding color palette for charts

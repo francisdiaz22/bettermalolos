@@ -1,5 +1,5 @@
 /**
- * Better Solano - Enhanced Translation System
+ * Better Malolos - Enhanced Translation System
  * Supports: English (en), Filipino (fil), Ilocano (ilo)
  * Updated: 2025-12-10
  */
@@ -24,7 +24,7 @@ const translations = {
 
     // Statistics Page
     'stats-title': 'Municipal Statistics',
-    'stats-subtitle': 'Data and statistics about Solano, Nueva Vizcaya',
+    'stats-subtitle': 'Data and statistics about Malolos, Bulacan',
     'stats-demographics': 'Demographics Overview',
     'stats-economic': 'Economic Indicators',
     'stats-barangay': 'Population by Barangay',
@@ -50,16 +50,16 @@ const translations = {
     'breadcrumb-terms': 'Terms of Use',
 
     // Hero Section
-    'hero-welcome': 'Welcome to BetterSolano.org',
+    'hero-welcome': 'Welcome to BetterMalolos.org',
     'hero-subtitle':
-      'Access government services, information, and resources for the people of Solano, Nueva Vizcaya.',
+      'Access government services, information, and resources for the people of Malolos, Bulacan.',
     'hero-browse': 'Browse Services',
     'hero-contact': 'Contact Us',
     'hero-search-placeholder': 'Search for services...',
     'hero-find-service': 'Find a Service',
 
     // Appointment CTA
-    'appointment-cta-heading': "Enhancing Appointment Services of LGU Solano Mayor's Office",
+    'appointment-cta-heading': "Enhancing Appointment Services of LGU Malolos Mayor's Office",
     'appointment-cta-subtitle': 'No lines. No back-and-forth. Just efficient appointments.',
     'appointment-schedule-btn': 'Schedule Appointment',
     'appointment-create-btn': 'Create Account',
@@ -110,16 +110,16 @@ const translations = {
     'contact-directions': 'Get Directions',
 
     // Footer
-    'footer-title': 'Better Solano',
+    'footer-title': 'Better Malolos',
     'footer-desc':
-      'A service-first information portal for the Municipality of Solano, Nueva Vizcaya.',
+      'A service-first information portal for the Municipality of Malolos, Bulacan.',
     'footer-quick-links': 'Quick Links',
     'footer-all-services': 'All Services',
     'footer-officials': 'Officials',
     'footer-contact-us': 'Contact Us',
     'footer-faq': 'FAQ',
     'footer-contact': 'Contact',
-    'footer-copyright': 'Better Solano. All rights reserved.',
+    'footer-copyright': 'Better Malolos. All rights reserved.',
     'accessibility-statement': 'Accessibility Statement',
     'footer-privacy': 'Privacy Policy',
     'footer-terms': 'Terms of Use',
@@ -129,7 +129,7 @@ const translations = {
 
     // Services Page
     'services-title': 'Municipal Services Directory',
-    'services-subtitle': 'Browse all services offered by the Municipality of Solano',
+    'services-subtitle': 'Browse all services offered by the Municipality of Malolos',
     'search-placeholder': 'Search services...',
     'search-no-results': 'No services found',
     'search-try-different': 'Try different keywords or browse categories below',
@@ -207,7 +207,7 @@ const translations = {
 
     // Certificates Page - Service Items
     'cert-birth': 'Birth Certificate',
-    'cert-birth-desc': 'Get a certified copy of birth certificate registered in Solano',
+    'cert-birth-desc': 'Get a certified copy of birth certificate registered in Malolos',
     'cert-marriage': 'Marriage Certificate',
     'cert-marriage-desc': 'Register or request certified true copy of marriage certificate',
     'cert-death': 'Death Certificate',
@@ -259,11 +259,11 @@ const translations = {
     'health-stat-hospitals': 'Major Hospitals',
     'health-stat-bhs': 'Barangay Health Stations',
     'health-stat-mho': 'Municipal Health Office',
-    'health-section-hospitals': 'Hospitals in Solano',
+    'health-section-hospitals': 'Hospitals in Malolos',
     'health-section-mho': 'Municipal Health Office',
     'health-section-bhs': 'Barangay Health Stations',
-    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Solano',
-    'health-mho-title': 'Solano Municipal Health Office',
+    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Malolos',
+    'health-mho-title': 'Malolos Municipal Health Office',
     'health-mho-desc':
       'The Municipal Health Office provides primary healthcare services including a lying-in facility and laboratory services. It serves as the main public health center for the municipality.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -289,7 +289,7 @@ const translations = {
 
     // Ordinance Framework Page
     'ord-page-title': 'Ordinance Framework',
-    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Malolos',
     'ord-page-badge': 'Legislative',
     'ord-what-is': 'What is an Ordinance?',
     'ord-what-is-p1':
@@ -304,7 +304,7 @@ const translations = {
     'ord-cat-traffic': 'Traffic & Transportation',
     'ord-cat-zoning': 'Zoning & Land Use',
     'ord-2025-title': '2025 Ordinances',
-    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Solano in 2025',
+    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Malolos in 2025',
     'ord-table-number': 'Ordinance No.',
     'ord-table-title': 'Title',
     'ord-table-date': 'Session Date',
@@ -312,7 +312,7 @@ const translations = {
 
     // Resolution Framework Page
     'reso-page-title': 'Resolution Framework',
-    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Malolos',
     'reso-page-badge': 'Legislative',
     'reso-what-is': 'What is a Resolution?',
     'reso-what-is-p1':
@@ -327,9 +327,9 @@ const translations = {
     'reso-type-authorization': 'Authorization',
     'reso-type-appropriation': 'Appropriation',
     'reso-2026-title': '2026 Resolutions',
-    'reso-2026-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Solano in 2026',
+    'reso-2026-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Malolos in 2026',
     'reso-2025-title': '2025 Resolutions',
-    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Solano in 2025',
+    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Malolos in 2025',
     'reso-table-number': 'Resolution No.',
     'reso-table-title': 'Title',
     'reso-table-date': 'Session Date',
@@ -337,7 +337,7 @@ const translations = {
 
     // Business Services Page
     'biz-page-title': 'Business Services',
-    'biz-page-desc': 'Permits, licenses, and support for businesses in Solano',
+    'biz-page-desc': 'Permits, licenses, and support for businesses in Malolos',
     'biz-page-badge': 'Business',
     'biz-permit-new': 'Business Permit (New)',
     'biz-permit-new-desc': "Apply for a new mayor's permit to operate a business",
@@ -440,13 +440,13 @@ const translations = {
 
     // Government Page
     'gov-title': 'Government Structure & Officials',
-    'gov-subtitle': 'Meet the leadership and offices serving Solano',
+    'gov-subtitle': 'Meet the leadership and offices serving Malolos',
     'gov-executive': 'Executive Branch',
     'gov-sb-members': 'Sangguniang Bayan Members',
-    'gov-sb-subtitle': 'Municipal Councilors serving the people of Solano',
+    'gov-sb-subtitle': 'Municipal Councilors serving the people of Malolos',
     'gov-departments': 'Department Heads & Key Offices',
     'gov-dept-subtitle': 'Municipal offices providing services to citizens',
-    'gov-barangays': 'Barangays of Solano',
+    'gov-barangays': 'Barangays of Malolos',
     'gov-barangays-count': '22 Barangays serving our community',
     'gov-organizational-chart': 'Organizational Chart',
     'gov-term': 'Term',
@@ -547,7 +547,7 @@ const translations = {
 
     // News Page
     'news-title': 'News & Announcements',
-    'news-subtitle': 'Latest updates from the Municipality of Solano',
+    'news-subtitle': 'Latest updates from the Municipality of Malolos',
     'news-latest': 'Latest News',
     'news-announcements': 'Announcements',
     'news-events': 'Events',
@@ -661,10 +661,10 @@ const translations = {
     'a11y-all-functionality-available-using-only-a-keyboard':
       'All functionality available using only a keyboard.',
     'a11y-all-images-have-descriptive-alt-text': 'All images have descriptive alt text.',
-    'a11y-better-solano-is-committed-to-ensuring-digital':
-      'Better Solano is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.',
-    'a11y-better-solano-is-committed-to-ensuring-that-our':
-      'Better Solano is committed to ensuring that our digital services are accessible to all citizens, regardless of ability. We view accessibility not as a feature, but as a fundamental right.',
+    'a11y-better-malolos-is-committed-to-ensuring-digital':
+      'Better Malolos is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.',
+    'a11y-better-malolos-is-committed-to-ensuring-that-our':
+      'Better Malolos is committed to ensuring that our digital services are accessible to all citizens, regardless of ability. We view accessibility not as a feature, but as a fundamental right.',
     'a11y-blgf-portal': 'BLGF Portal',
     'a11y-business': 'Business',
     'a11y-certificates': 'Certificates',
@@ -675,8 +675,8 @@ const translations = {
     'a11y-conformant': 'Conformant',
     'a11y-css3': 'CSS3',
     'a11y-education': 'Education',
-    'a11y-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'a11y-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'a11y-environment': 'Environment',
     'a11y-freedom-of-information': 'Freedom of Information',
     'a11y-health': 'Health',
@@ -688,11 +688,11 @@ const translations = {
     'a11y-javascript': 'JavaScript',
     'a11y-keyboard-navigation': 'Keyboard Navigation',
     'a11y-last-updated-november-29-2025': 'Last updated: November 29, 2025',
-    'a11y-lgu-solano-facebook': 'LGU Solano Facebook',
+    'a11y-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'a11y-meets-wcag-aa-contrast-requirements': 'Meets WCAG AA contrast requirements.',
     'a11y-no-time-limits': 'No Time Limits',
     'a11y-no-time-limits-on-reading-or-interacting': 'No time limits on reading or interacting.',
-    'a11y-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'a11y-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'a11y-open-data-philippines': 'Open Data Philippines',
     'a11y-ordinance-framework': 'Ordinance Framework',
     'a11y-privacy-policy': 'Privacy Policy',
@@ -716,7 +716,7 @@ const translations = {
     'a11y-text-alternatives': 'Text Alternatives',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Volunteer with us',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Works on all devices and screen sizes.',
     'acct-1-day': '1 day',
@@ -772,8 +772,8 @@ const translations = {
     'acct-dtr-leave-forms-ot-authorization': 'DTR, Leave forms, OT authorization',
     'acct-duration': 'Duration',
     'acct-education': 'Education',
-    'acct-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'acct-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'acct-environment': 'Environment',
     'acct-evangeline-b-ramos': 'Evangeline B. Ramos',
     'acct-financial-reports-are-submitted-monthly-to-coa':
@@ -796,20 +796,20 @@ const translations = {
     'acct-jocelyn-l-gatan': 'Jocelyn L. Gatan',
     'acct-key-personnel-handling-accounting-services': 'Key personnel handling accounting services',
     'acct-legislative': 'Legislative',
-    'acct-lgu-solano-facebook': 'LGU Solano Facebook',
+    'acct-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'acct-location': 'Location',
     'acct-mary-jane-c-salvador': 'Mary Jane C. Salvador',
     'acct-mun-accounting': 'Mun. Accounting',
     'acct-municipal-accountant': 'Municipal Accountant',
     'acct-municipal-accounting-office': 'Municipal Accounting Office',
-    'acct-municipal-accounting-office-municipal-hall-solano':
-      'Municipal Accounting Office, Municipal Hall, Solano, Nueva Vizcaya',
+    'acct-municipal-accounting-office-municipal-hall-malolos':
+      'Municipal Accounting Office, Municipal Hall, Malolos, Bulacan',
     'acct-municipal-hall': 'Municipal Hall',
     'acct-obligation-request-obr': 'Obligation Request (ObR)',
     'acct-office': 'Office',
     'acct-office-information': 'Office Information',
     'acct-office-personnel': 'Office Personnel',
-    'acct-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'acct-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'acct-ongoing': 'Ongoing',
     'acct-open-data-philippines': 'Open Data Philippines',
     'acct-ordinance-framework': 'Ordinance Framework',
@@ -905,15 +905,15 @@ const translations = {
     'agri-cmci-dti-portal': 'CMCI DTI Portal',
     'agri-contribute-code-with-us': 'Contribute code with us',
     'agri-education': 'Education',
-    'agri-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'agri-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'agri-environment': 'Environment',
     'agri-freedom-of-information': 'Freedom of Information',
     'agri-health': 'Health',
     'agri-home': 'Home',
     'agri-infrastructure': 'Infrastructure',
-    'agri-lgu-solano-facebook': 'LGU Solano Facebook',
-    'agri-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'agri-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'agri-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'agri-open-data-philippines': 'Open Data Philippines',
     'agri-ordinance-framework': 'Ordinance Framework',
     'agri-privacy-policy': 'Privacy Policy',
@@ -948,7 +948,7 @@ const translations = {
       'Appraisal and valuation of real properties for taxation purposes',
     'assessor-assessors-staff-will-conduct-onsite-inspection':
       "Assessor's staff will conduct on-site inspection and measurement of the property.",
-    'assessor-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'assessor-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'assessor-availability': 'Availability',
     'assessor-blgf-portal': 'BLGF Portal',
     'assessor-bring-original-documents': 'Bring original documents',
@@ -962,7 +962,7 @@ const translations = {
     'assessor-certification-of-the-total-land-area-based-on-tax':
       'Certification of the total land area based on tax records.',
     'assessor-certification-that-a-person-has-no-declared':
-      'Certification that a person has no declared property in Solano.',
+      'Certification that a person has no declared property in Malolos.',
     'assessor-certifications': 'Certifications',
     'assessor-certified-true-copy-of-tax-declaration': 'Certified True Copy of Tax Declaration',
     'assessor-change-of-land-classification-for-assessment':
@@ -975,8 +975,8 @@ const translations = {
     'assessor-duplicate-copy': 'Duplicate Copy',
     'assessor-education': 'Education',
     'assessor-email': 'Email',
-    'assessor-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'assessor-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'assessor-environment': 'Environment',
     'assessor-fee': 'Fee',
     'assessor-fee-2': 'Fee:',
@@ -1003,15 +1003,15 @@ const translations = {
     'assessor-land-reclassification': 'Land Reclassification',
     'assessor-land-reclassification-changes-the-category-of':
       'Land reclassification changes the category of land for assessment purposes, which affects the applicable assessment level and tax rate.',
-    'assessor-lgu-solano-facebook': 'LGU Solano Facebook',
+    'assessor-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'assessor-lis-pendens': 'Lis Pendens',
     'assessor-list-of-all-properties-declared-under-a-persons':
       "List of all properties declared under a person's name.",
     'assessor-location': 'Location',
     'assessor-mortgage-annotation': 'Mortgage Annotation',
     'assessor-municipal-assessors-office': "Municipal Assessor's Office",
-    'assessor-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Municipal Hall, Ground Floor Solano, Nueva Vizcaya 3708',
+    'assessor-municipal-hall-ground-floor-malolos-bulacan':
+      'Municipal Hall, Ground Floor Malolos, Bulacan 3708',
     'assessor-new-owner': 'New Owner',
     'assessor-new-tax-declaration': 'New Tax Declaration',
     'assessor-new-tax-declaration-is-issued-reflecting-the':
@@ -1023,7 +1023,7 @@ const translations = {
     'assessor-office-hours': 'Office Hours',
     'assessor-official-copy-of-tax-declaration-for-legal-and':
       'Official copy of tax declaration for legal and banking purposes.',
-    'assessor-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'assessor-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'assessor-open-data-philippines': 'Open Data Philippines',
     'assessor-ordinance-framework': 'Ordinance Framework',
     'assessor-ownercreditor': 'Owner/Creditor',
@@ -1122,8 +1122,8 @@ const translations = {
     'bc-death-certificate': 'Death Certificate',
     'bc-documents-needed-for-your-application': 'Documents needed for your application',
     'bc-education': 'Education',
-    'bc-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'bc-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'bc-environment': 'Environment',
     'bc-fee': 'Fee',
     'bc-fill-out-request-form': 'Fill Out Request Form',
@@ -1142,13 +1142,13 @@ const translations = {
     'bc-legislative': 'Legislative',
     'bc-local-civil-registrar': 'Local Civil Registrar',
     'bc-marriage-certificate': 'Marriage Certificate',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Municipal Hall, 2nd Floor Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Municipal Hall, 2nd Floor Malolos, Bulacan',
     'bc-need-help': 'Need Help?',
     'bc-office-information': 'Office Information',
     'bc-official-certified-copy-of-birth-certificate':
-      'Official certified copy of birth certificate registered in Solano',
-    'bc-official-lgu-solano-portal': 'Official LGU Solano Portal',
+      'Official certified copy of birth certificate registered in Malolos',
+    'bc-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'bc-open-data-philippines': 'Open Data Philippines',
     'bc-ordinance-framework': 'Ordinance Framework',
     'bc-ownerrepresentative': 'Owner/Representative',
@@ -1207,8 +1207,8 @@ const translations = {
     'biz-cmci-dti-portal': 'CMCI DTI Portal',
     'biz-contribute-code-with-us': 'Contribute code with us',
     'biz-education': 'Education',
-    'biz-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'biz-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'biz-environment': 'Environment',
     'biz-freedom-of-information': 'Freedom of Information',
     'biz-health': 'Health',
@@ -1216,13 +1216,13 @@ const translations = {
       'Hog, cattle, goat, and carabao slaughter with meat inspection services',
     'biz-home': 'Home',
     'biz-infrastructure': 'Infrastructure',
-    'biz-lgu-solano-facebook': 'LGU Solano Facebook',
+    'biz-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'biz-market-clearance-entrance-fees-vendor-services':
       'Market clearance, entrance fees, vendor services, and CTC issuance',
     'biz-new-business-application': 'New Business Application',
     'biz-new-permits-renewals-mayors-clearance-and-other':
       "New permits, renewals, Mayor's clearance, and other business permits",
-    'biz-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'biz-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'biz-open-data-philippines': 'Open Data Philippines',
     'biz-ordinance-framework': 'Ordinance Framework',
     'biz-privacy-policy': 'Privacy Policy',
@@ -1263,7 +1263,7 @@ const translations = {
     'bpl-annual-renewal-of-existing-business-permit':
       'Annual renewal of existing business permit (January 1-20 without surcharge)',
     'bpl-application-for-new-business-permit-for':
-      'Application for new business permit for businesses operating in Solano',
+      'Application for new business permit for businesses operating in Malolos',
     'bpl-application-form-all-requirements': 'Application form, all requirements',
     'bpl-assessment-sheet': 'Assessment sheet',
     'bpl-barangay-business-clearance': 'Barangay Business Clearance',
@@ -1282,7 +1282,7 @@ const translations = {
     'bpl-business-permit-services': 'Business Permit Services',
     'bpl-business-permits-licensing-section': 'Business Permits & Licensing Section',
     'bpl-business-permits-licensing-section-municipal-hall':
-      'Business Permits & Licensing Section, Municipal Hall, Solano, Nueva Vizcaya',
+      'Business Permits & Licensing Section, Municipal Hall, Malolos, Bulacan',
     'bpl-cda-registration-for-cooperatives': 'CDA Registration (for cooperatives)',
     'bpl-certificates': 'Certificates',
     'bpl-citizens-charter': "Citizen's Charter",
@@ -1303,8 +1303,8 @@ const translations = {
     'bpl-duly-accomplished-application-form': 'Duly accomplished Application Form',
     'bpl-duration': 'Duration',
     'bpl-education': 'Education',
-    'bpl-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'bpl-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'bpl-environment': 'Environment',
     'bpl-fee': 'Fee',
     'bpl-fees-vary-based-on-business-type-capitalization':
@@ -1338,7 +1338,7 @@ const translations = {
       'Late renewal incurs 25% surcharge + 2% monthly interest',
     'bpl-legislative': 'Legislative',
     'bpl-letter-of-intent': 'Letter of Intent',
-    'bpl-lgu-solano-facebook': 'LGU Solano Facebook',
+    'bpl-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'bpl-licensing-officer': 'Licensing Officer',
     'bpl-list-of-activitiesprogram': 'List of activities/program',
     'bpl-location': 'Location',
@@ -1360,7 +1360,7 @@ const translations = {
     'bpl-office': 'Office',
     'bpl-office-information': 'Office Information',
     'bpl-office-personnel': 'Office Personnel',
-    'bpl-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'bpl-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'bpl-official-receipt': 'Official Receipt',
     'bpl-open-data-philippines': 'Open Data Philippines',
     'bpl-order-of-payment': 'Order of Payment',
@@ -1453,13 +1453,13 @@ const translations = {
     'budget-contractor': 'Contractor',
     'budget-contribute-code-with-us': 'Contribute code with us',
     'budget-debt-service': 'Debt Service',
-    'budget-dpwh-infrastructure-projects-in-solano': 'DPWH Infrastructure Projects in Solano',
+    'budget-dpwh-infrastructure-projects-in-malolos': 'DPWH Infrastructure Projects in Malolos',
     'budget-dpwh-transparency-portal': 'DPWH Transparency Portal',
     'budget-economic-services': 'Economic Services',
     'budget-education': 'Education',
     'budget-egb-construction-corporation': 'EGB Construction Corporation',
-    'budget-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'budget-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'budget-environment': 'Environment',
     'budget-expenditure-allocation': 'Expenditure Allocation',
     'budget-external-sources': 'External Sources',
@@ -1474,8 +1474,8 @@ const translations = {
     'budget-health': 'Health',
     'budget-health-education-welfare': 'Health, Education, Welfare',
     'budget-home': 'Home',
-    'budget-implementing-agency-nueva-vizcaya-district':
-      'Implementing Agency: Nueva Vizcaya District Engineering Office',
+    'budget-implementing-agency-bulacan-district':
+      'Implementing Agency: Bulacan District Engineering Office',
     'budget-income-sources': 'Income Sources',
     'budget-infrastructure': 'Infrastructure',
     'budget-infrastructure-development': 'Infrastructure & Development',
@@ -1483,14 +1483,14 @@ const translations = {
     'budget-interest-charges': 'Interest & Charges',
     'budget-jan-mar': 'Jan - Mar',
     'budget-legislative': 'Legislative',
-    'budget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'budget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'budget-local-sources': 'Local Sources',
-    'budget-magat-river-bagahabag-section-solano-nueva-vizcaya':
-      'Magat River, Bagahabag Section, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-1-brgy-bangar-solano':
-      'Magat River, Bangar Section 1, Brgy. Bangar, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-2-brgy-bangar-solano':
-      'Magat River, Bangar Section 2, Brgy. Bangar, Solano, Nueva Vizcaya',
+    'budget-magat-river-bagahabag-section-malolos-bulacan':
+      'Magat River, Bagahabag Section, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-1-brgy-bangar-malolos':
+      'Magat River, Bangar Section 1, Brgy. Bangar, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-2-brgy-bangar-malolos':
+      'Magat River, Bangar Section 2, Brgy. Bangar, Malolos, Bulacan',
     'budget-major-development-projects-serving-the-community':
       'Major development projects serving the community',
     'budget-national-government-projects': 'National Government Projects',
@@ -1538,15 +1538,15 @@ const translations = {
     'cert-cmci-dti-portal': 'CMCI DTI Portal',
     'cert-contribute-code-with-us': 'Contribute code with us',
     'cert-education': 'Education',
-    'cert-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'cert-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'cert-environment': 'Environment',
     'cert-freedom-of-information': 'Freedom of Information',
     'cert-health': 'Health',
     'cert-home': 'Home',
     'cert-infrastructure': 'Infrastructure',
-    'cert-lgu-solano-facebook': 'LGU Solano Facebook',
-    'cert-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'cert-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'cert-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'cert-open-data-philippines': 'Open Data Philippines',
     'cert-ordinance-framework': 'Ordinance Framework',
     'cert-privacy-policy': 'Privacy Policy',
@@ -1564,8 +1564,8 @@ const translations = {
     'cert-volunteer-with-us': 'Volunteer with us',
     'contact-accessibility': 'Accessibility',
     'contact-agriculture': 'Agriculture',
-    'contact-bfp-solano': 'BFP Solano',
-    'contact-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'contact-bfp-malolos': 'BFP Malolos',
+    'contact-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'contact-blgf-portal': 'BLGF Portal',
     'contact-break': 'Break',
     'contact-business': 'Business',
@@ -1573,11 +1573,11 @@ const translations = {
     'contact-citizens-charter': "Citizen's Charter",
     'contact-cmci-dti-portal': 'CMCI DTI Portal',
     'contact-contact': 'Contact',
-    'contact-dilg-solano': 'DILG Solano',
-    'contact-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'contact-dilg-malolos': 'DILG Malolos',
+    'contact-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'contact-education': 'Education',
-    'contact-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'contact-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'contact-environment': 'Environment',
     'contact-for-medical-emergencies-and-hospital-inquiries':
       'For medical emergencies and hospital inquiries.',
@@ -1587,25 +1587,25 @@ const translations = {
     'contact-infrastructure': 'Infrastructure',
     'contact-kabalikat-civicom': 'KABALIKAT Civicom',
     'contact-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'contact-lgu-solano-facebook': 'LGU Solano Facebook',
-    'contact-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'contact-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'contact-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'contact-lunch-break': 'Lunch Break',
-    'contact-magro-solano': 'MAGRO Solano',
-    'contact-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'contact-magro-malolos': 'MAGRO Malolos',
+    'contact-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'contact-mayors-office': "Mayor's Office",
     'contact-mayors-office-0917-595-1931': "Mayor's Office 0917 595 1931",
-    'contact-mdrrmo-solano': 'MDRRMO Solano',
-    'contact-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'contact-mdrrmo-malolos': 'MDRRMO Malolos',
+    'contact-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'contact-medical-emergency-hotlines': 'Medical Emergency Hotlines',
     'contact-mmg-hospital': 'MMG Hospital',
     'contact-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
     'contact-mobile': 'Mobile',
-    'contact-mswdo-solano': 'MSWDO Solano',
-    'contact-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
+    'contact-mswdo-malolos': 'MSWDO Malolos',
+    'contact-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
     'contact-national-local-holidays': 'National & Local Holidays',
-    'contact-nuvelco-solano': 'NUVELCO Solano',
-    'contact-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
-    'contact-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'contact-nuvelco-malolos': 'NUVELCO Malolos',
+    'contact-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
+    'contact-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'contact-open': 'Open',
     'contact-open-data-philippines': 'Open Data Philippines',
     'contact-ordinance-framework': 'Ordinance Framework',
@@ -1613,8 +1613,8 @@ const translations = {
     'contact-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'contact-plt-hospital': 'PLT Hospital',
     'contact-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'contact-pnp-solano': 'PNP Solano',
-    'contact-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'contact-pnp-malolos': 'PNP Malolos',
+    'contact-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'contact-privacy-policy': 'Privacy Policy',
     'contact-public-safety': 'Public Safety',
     'contact-quick-links': 'Quick Links',
@@ -1624,8 +1624,8 @@ const translations = {
     'contact-red-cross-0917-507-9950': 'Red Cross 0917 507 9950',
     'contact-resolution-framework': 'Resolution Framework',
     'contact-resources': 'Resources',
-    'contact-rhu-solano': 'RHU Solano',
-    'contact-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'contact-rhu-malolos': 'RHU Malolos',
+    'contact-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'contact-salubris-hospital': 'Salubris Hospital',
     'contact-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'contact-sangguniang-bayan': 'Sangguniang Bayan',
@@ -1697,8 +1697,8 @@ const translations = {
     'cr-document-owner': 'Document Owner',
     'cr-education': 'Education',
     'cr-email': 'Email',
-    'cr-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'cr-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'cr-environment': 'Environment',
     'cr-fee': 'Fee',
     'cr-fees': 'Fees',
@@ -1718,14 +1718,14 @@ const translations = {
       'Issuance of marriage certificates and marriage license',
     'cr-late-registration-of-birth-marriage-or-death':
       'Late registration of birth, marriage, or death',
-    'cr-lcrsolanogovph': 'lcr@solano.gov.ph',
+    'cr-lcrmalolosgovph': 'lcr@malolos.gov.ph',
     'cr-legal-process-to-legitimize-children-born-out-of':
       'Legal process to legitimize children born out of wedlock',
     'cr-legitimation': 'Legitimation',
     'cr-legitimation-annotation': 'Legitimation Annotation',
     'cr-legitimation-is-the-legal-process-by-which':
       "Legitimation is the legal process by which children born out of wedlock are legitimized by the subsequent marriage of their parents. This is annotated on the child's birth certificate.",
-    'cr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'cr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'cr-license-waiting': 'License Waiting',
     'cr-local-civil-registrar': 'Local Civil Registrar',
     'cr-location': 'Location',
@@ -1735,10 +1735,10 @@ const translations = {
     'cr-marriage-license-requirements': 'Marriage License Requirements',
     'cr-municipal-civil-registrar': 'Municipal Civil Registrar',
     'cr-municipal-civil-registrars-office': "Municipal Civil Registrar's Office",
-    'cr-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Municipal Hall, Ground Floor Solano, Nueva Vizcaya 3708',
+    'cr-municipal-hall-ground-floor-malolos-bulacan':
+      'Municipal Hall, Ground Floor Malolos, Bulacan 3708',
     'cr-office-hours': 'Office Hours',
-    'cr-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'cr-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'cr-open-data-philippines': 'Open Data Philippines',
     'cr-ordinance-framework': 'Ordinance Framework',
     'cr-ownerrelative': 'Owner/Relative',
@@ -1769,9 +1769,9 @@ const translations = {
     'cr-the-certificate-of-no-marriage-record-cenomar-is':
       'The Certificate of No Marriage Record (CENOMAR) is a certification issued by PSA stating that a person has no record of marriage. This is commonly required for marriage license applications, visa applications, and other legal purposes.',
     'cr-the-local-civil-registrar-handles-the':
-      'The Local Civil Registrar handles the registration of deaths and issuance of certified true copies of death certificates for deaths that occurred in Solano.',
+      'The Local Civil Registrar handles the registration of deaths and issuance of certified true copies of death certificates for deaths that occurred in Malolos.',
     'cr-the-local-civil-registrar-issues-certified-true':
-      'The Local Civil Registrar issues certified true copies of birth certificates for individuals whose births were registered in Solano, Nueva Vizcaya.',
+      'The Local Civil Registrar issues certified true copies of birth certificates for individuals whose births were registered in Malolos, Bulacan.',
     'cr-the-local-civil-registrar-processes-petitions-for':
       'The Local Civil Registrar processes petitions for correction of clerical or typographical errors and change of first name in civil registry documents under RA 9048 and RA 10172.',
     'cr-the-local-civil-registrar-provides':
@@ -1836,8 +1836,8 @@ const translations = {
     'dc-education': 'Education',
     'dc-embalmer': 'Embalmer',
     'dc-embalmers-certification': "Embalmer's Certification",
-    'dc-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'dc-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'dc-environment': 'Environment',
     'dc-fee': 'Fee',
     'dc-fee-summary': 'Fee Summary',
@@ -1865,17 +1865,17 @@ const translations = {
       'Is there a fee for death certificate registration?',
     'dc-juvy': 'Juvy',
     'dc-legislative': 'Legislative',
-    'dc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'dc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'dc-local-civil-registrar': 'Local Civil Registrar',
     'dc-marriage-certificate': 'Marriage Certificate',
     'dc-mho-certification-of-cause-of-death': 'MHO Certification of Cause of Death',
     'dc-mto-collection-officer': 'MTO Collection Officer',
-    'dc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Municipal Hall, 2nd Floor Solano, Nueva Vizcaya',
+    'dc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Municipal Hall, 2nd Floor Malolos, Bulacan',
     'dc-municipal-health-officer': 'Municipal Health Officer',
     'dc-need-help': 'Need Help?',
     'dc-office-information': 'Office Information',
-    'dc-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'dc-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'dc-oliver': 'Oliver',
     'dc-oliver-receiving-officer': 'Oliver - Receiving Officer',
     'dc-open-data-philippines': 'Open Data Philippines',
@@ -1953,8 +1953,8 @@ const translations = {
     'edu-education': 'Education',
     'edu-empowering-filipino-students-and-educators-with':
       'Empowering Filipino students and educators with 1,000+ free and open-source productivity tools across 18 categories — from document processing and design to AI and development.',
-    'edu-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'edu-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'edu-environment': 'Environment',
     'edu-free-tools-for-education': 'Free Tools for Education',
     'edu-freedom-of-information': 'Freedom of Information',
@@ -1964,13 +1964,13 @@ const translations = {
     'edu-higher-educational-institutions': 'Higher Educational Institutions',
     'edu-home': 'Home',
     'edu-infrastructure': 'Infrastructure',
-    'edu-isaiah-christian-academy-of-solano-inc': 'Isaiah Christian Academy of Solano, Inc.',
+    'edu-isaiah-christian-academy-of-malolos-inc': 'Isaiah Christian Academy of Malolos, Inc.',
     'edu-kids-workshop-learning-center': 'Kids Workshop Learning Center',
     'edu-lactawan-elementary-school': 'Lactawan Elementary School',
-    'edu-lgu-solano-facebook': 'LGU Solano Facebook',
+    'edu-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'edu-nio-jesus-de-praga-learning': 'Niño Jesus de Praga Learning',
-    'edu-nueva-vizcaya-caregiver-academy': 'Nueva Vizcaya Caregiver Academy',
-    'edu-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'edu-bulacan-caregiver-academy': 'Bulacan Caregiver Academy',
+    'edu-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'edu-open-data-philippines': 'Open Data Philippines',
     'edu-ordinance-framework': 'Ordinance Framework',
     'edu-pilar-d-galima-elementary-school': 'Pilar D. Galima Elementary School',
@@ -1981,7 +1981,7 @@ const translations = {
     'edu-quick-links': 'Quick Links',
     'edu-resolution-framework': 'Resolution Framework',
     'edu-resources': 'Resources',
-    'edu-saint-louis-college-of-solano-inc': 'Saint Louis College of Solano Inc',
+    'edu-saint-louis-college-of-malolos-inc': 'Saint Louis College of Malolos Inc',
     'edu-saint-louis-school-elementary-department': 'Saint Louis School - Elementary Department',
     'edu-saint-louis-school-high-school-department': 'Saint Louis School - High School Department',
     'edu-san-juan-elementary-school': 'San Juan Elementary School',
@@ -1992,12 +1992,12 @@ const translations = {
     'edu-sitemap': 'Sitemap',
     'edu-skip-to-main-content': 'Skip to main content',
     'edu-social-services': 'Social Services',
-    'edu-solano-east-central-school': 'Solano East Central School',
-    'edu-solano-high-school': 'Solano High School',
-    'edu-solano-institute-of-technology': 'Solano Institute of Technology',
-    'edu-solano-north-elementary-school': 'Solano North Elementary School',
-    'edu-solano-south-central-school': 'Solano South Central School',
-    'edu-solano-west-elementary-school': 'Solano West Elementary School',
+    'edu-malolos-east-central-school': 'Malolos East Central School',
+    'edu-malolos-high-school': 'Malolos High School',
+    'edu-malolos-institute-of-technology': 'Malolos Institute of Technology',
+    'edu-malolos-north-elementary-school': 'Malolos North Elementary School',
+    'edu-malolos-south-central-school': 'Malolos South Central School',
+    'edu-malolos-west-elementary-school': 'Malolos West Elementary School',
     'edu-tax-payments': 'Tax Payments',
     'edu-terms-of-use': 'Terms of Use',
     'edu-tucal-elementary-school': 'Tucal Elementary School',
@@ -2042,8 +2042,8 @@ const translations = {
     'eng-electrical-plans': 'Electrical Plans',
     'eng-electronics-permit': 'Electronics Permit',
     'eng-electronics-plans': 'Electronics Plans',
-    'eng-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'eng-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'eng-engineer-iii': 'Engineer III',
     'eng-engineering': 'Engineering',
     'eng-engineering-aide': 'Engineering Aide',
@@ -2069,17 +2069,17 @@ const translations = {
       'Key personnel handling building permit applications',
     'eng-latest-real-property-tax-receipt': 'Latest Real Property Tax Receipt',
     'eng-legislative': 'Legislative',
-    'eng-lgu-solano-facebook': 'LGU Solano Facebook',
+    'eng-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'eng-mechanical-permit': 'Mechanical Permit',
     'eng-mun-engineering': 'Mun. Engineering',
     'eng-municipal-engineer': 'Municipal Engineer',
     'eng-municipal-engineering-office': 'Municipal Engineering Office',
-    'eng-municipal-engineering-office-municipal-hall-solano':
-      'Municipal Engineering Office, Municipal Hall, Solano',
+    'eng-municipal-engineering-office-municipal-hall-malolos':
+      'Municipal Engineering Office, Municipal Hall, Malolos',
     'eng-office': 'Office',
     'eng-office-information': 'Office Information',
     'eng-office-personnel': 'Office Personnel',
-    'eng-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'eng-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'eng-open-data-philippines': 'Open Data Philippines',
     'eng-ordinance-framework': 'Ordinance Framework',
     'eng-pay-building-permit-fee-and-other-fees-at-the':
@@ -2145,8 +2145,8 @@ const translations = {
       'Developing a comprehensive system plan to mitigate flooding and protect public health.',
     'env-drainage-sewerage-management': 'Drainage & Sewerage Management',
     'env-education': 'Education',
-    'env-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'env-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'env-environment': 'Environment',
     'env-fee': 'Fee:',
     'env-flood-control-mitigation': 'Flood Control & Mitigation',
@@ -2160,8 +2160,8 @@ const translations = {
       'Implementing the 10-Year Plan including waste collection, segregation, and environmental protection.',
     'env-infrastructure': 'Infrastructure',
     'env-key-environmental-services-and-initiatives': 'Key Environmental Services and Initiatives',
-    'env-lgu-solano-facebook': 'LGU Solano Facebook',
-    'env-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'env-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'env-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'env-open-data-philippines': 'Open Data Philippines',
     'env-ordinance-framework': 'Ordinance Framework',
     'env-privacy-policy': 'Privacy Policy',
@@ -2195,15 +2195,15 @@ const translations = {
     'err403-contact-us': 'Contact Us',
     'err403-contribute-code-with-us': 'Contribute code with us',
     'err403-education': 'Education',
-    'err403-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'err403-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'err403-environment': 'Environment',
     'err403-freedom-of-information': 'Freedom of Information',
     'err403-go-to-homepage': 'Go to Homepage',
     'err403-health': 'Health',
     'err403-infrastructure': 'Infrastructure',
-    'err403-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err403-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'err403-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err403-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'err403-open-data-philippines': 'Open Data Philippines',
     'err403-ordinance-framework': 'Ordinance Framework',
     'err403-privacy-policy': 'Privacy Policy',
@@ -2230,15 +2230,15 @@ const translations = {
     'err404-cmci-dti-portal': 'CMCI DTI Portal',
     'err404-contribute-code-with-us': 'Contribute code with us',
     'err404-education': 'Education',
-    'err404-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'err404-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'err404-environment': 'Environment',
     'err404-freedom-of-information': 'Freedom of Information',
     'err404-go-to-homepage': 'Go to Homepage',
     'err404-health': 'Health',
     'err404-infrastructure': 'Infrastructure',
-    'err404-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err404-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'err404-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err404-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'err404-open-data-philippines': 'Open Data Philippines',
     'err404-ordinance-framework': 'Ordinance Framework',
     'err404-page-not-found': 'Page Not Found',
@@ -2266,15 +2266,15 @@ const translations = {
     'err500-contact-us': 'Contact Us',
     'err500-contribute-code-with-us': 'Contribute code with us',
     'err500-education': 'Education',
-    'err500-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'err500-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'err500-environment': 'Environment',
     'err500-freedom-of-information': 'Freedom of Information',
     'err500-go-to-homepage': 'Go to Homepage',
     'err500-health': 'Health',
     'err500-infrastructure': 'Infrastructure',
-    'err500-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err500-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'err500-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err500-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'err500-open-data-philippines': 'Open Data Philippines',
     'err500-ordinance-framework': 'Ordinance Framework',
     'err500-privacy-policy': 'Privacy Policy',
@@ -2324,11 +2324,11 @@ const translations = {
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (for sole proprietorship) or SEC Registration (for corporation)',
     'faq-education': 'Education',
-    'faq-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'faq-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'faq-environment': 'Environment',
-    'faq-for-birth-certificates-registered-in-solano-it':
-      'For birth certificates registered in Solano, it typically takes 15-30 minutes while you wait, provided the record is readily available.',
+    'faq-for-birth-certificates-registered-in-malolos-it':
+      'For birth certificates registered in Malolos, it typically takes 15-30 minutes while you wait, provided the record is readily available.',
     'faq-freedom-of-information': 'Freedom of Information',
     'faq-go-to-the-municipal-social-welfare-and':
       'Go to the Municipal Social Welfare and Development Office (MSWDO) with:',
@@ -2346,9 +2346,9 @@ const translations = {
       'I found a broken link or error on this website. How do I report it?',
     'faq-infrastructure': 'Infrastructure',
     'faq-is-this-website-mobilefriendly': 'Is this website mobile-friendly?',
-    'faq-lgu-solano-facebook': 'LGU Solano Facebook',
+    'faq-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'faq-location-sketchmap': 'Location Sketch/Map',
-    'faq-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'faq-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'faq-open-data-philippines': 'Open Data Philippines',
     'faq-openjs-foundation': 'OpenJS Foundation',
     'faq-ordinance-framework': 'Ordinance Framework',
@@ -2356,8 +2356,8 @@ const translations = {
     'faq-privacy-policy': 'Privacy Policy',
     'faq-public-safety': 'Public Safety',
     'faq-quick-links': 'Quick Links',
-    'faq-ramon-has-made-the-solano-project-open-source':
-      'Ramon has made the Solano Project open source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, data researcher, designer, content writer, translator, or a concerned citizen of Solano, your participation helps shape the project for all.',
+    'faq-ramon-has-made-the-malolos-project-open-source':
+      'Ramon has made the Malolos Project open source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, data researcher, designer, content writer, translator, or a concerned citizen of Malolos, your participation helps shape the project for all.',
     'faq-ramon-logan-jr': 'Ramon Logan Jr.',
     'faq-resolution-framework': 'Resolution Framework',
     'faq-resources': 'Resources',
@@ -2378,30 +2378,30 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       "Visit the Municipal Treasurer's Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
     'faq-volunteer-with-us': 'Volunteer with us',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What are the office hours of the Municipal Hall?',
     'faq-what-benefits-do-senior-citizens-receive': 'What benefits do senior citizens receive?',
-    'faq-what-do-i-need-to-start-a-new-business-in-solano':
-      'What do I need to start a new business in Solano?',
+    'faq-what-do-i-need-to-start-a-new-business-in-malolos':
+      'What do I need to start a new business in Malolos?',
     'faq-what-is-the-difference-between-psa-and-local':
       'What is the difference between PSA and local civil registrar certificates?',
     'faq-what-payment-methods-are-accepted': 'What payment methods are accepted?',
     'faq-when-should-i-renew-my-business-permit': 'When should I renew my business permit?',
-    'faq-who-developed-better-solano': 'Who developed Better Solano?',
-    'faq-yes-better-solano-is-fully-responsive-and':
-      'Yes! Better Solano is fully responsive and optimized for mobile phones, tablets, and desktop computers.',
+    'faq-who-developed-better-malolos': 'Who developed Better Malolos?',
+    'faq-yes-better-malolos-is-fully-responsive-and':
+      'Yes! Better Malolos is fully responsive and optimized for mobile phones, tablets, and desktop computers.',
     'faq-yes-but-they-must-bring': 'Yes, but they must bring:',
     'gov-accessibility': 'Accessibility',
-    'gov-accountingsolanogovph': 'accounting@solano.gov.ph',
+    'gov-accountingmalolosgovph': 'accounting@malolos.gov.ph',
     'gov-aggub': 'Aggub',
     'gov-agricultural-loans-crop-insurance-fertilizer':
       'Agricultural loans, crop insurance, fertilizer assistance',
     'gov-agriculture': 'Agriculture',
     'gov-agriculture-aquaculture-food-security-overseas':
       'Agriculture, Aquaculture & Food Security, Overseas Filipino Workers Affairs',
-    'gov-agrisolanogovph': 'agri@solano.gov.ph',
-    'gov-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'gov-agrimalolosgovph': 'agri@malolos.gov.ph',
+    'gov-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'gov-bagahabag': 'Bagahabag',
     'gov-bangaan': 'Bangaan',
     'gov-bangar': 'Bangar',
@@ -2410,10 +2410,10 @@ const translations = {
     'gov-bascaran': 'Bascaran',
     'gov-birth-death-marriage-certificates-cenomar': 'Birth, death, marriage certificates, CENOMAR',
     'gov-blgf-portal': 'BLGF Portal',
-    'gov-bplssolanogovph': 'bpls@solano.gov.ph',
+    'gov-bplsmalolosgovph': 'bpls@malolos.gov.ph',
     'gov-budget-preparation-appropriations-fiscal':
       'Budget preparation, appropriations, fiscal management',
-    'gov-budgetsolanogovph': 'budget@solano.gov.ph',
+    'gov-budgetmalolosgovph': 'budget@malolos.gov.ph',
     'gov-building-permits-construction-permits':
       'Building permits, construction permits, infrastructure',
     'gov-business': 'Business',
@@ -2422,7 +2422,7 @@ const translations = {
       "Business permits, Mayor's clearance, licensing",
     'gov-certificates': 'Certificates',
     'gov-citizens-charter': "Citizen's Charter",
-    'gov-civilregsolanogovph': 'civilreg@solano.gov.ph',
+    'gov-civilregmalolosgovph': 'civilreg@malolos.gov.ph',
     'gov-cmci-dti-portal': 'CMCI DTI Portal',
     'gov-communal': 'Communal',
     'gov-concepcion': 'Concepcion',
@@ -2438,9 +2438,9 @@ const translations = {
     'gov-education': 'Education',
     'gov-education-science-technology-transportation':
       'Education, Science & Technology, Transportation, Commerce, Trade & Industry',
-    'gov-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
-    'gov-engineersolanogovph': 'engineer@solano.gov.ph',
+    'gov-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
+    'gov-engineermalolosgovph': 'engineer@malolos.gov.ph',
     'gov-entrepreneurship-economic-development-historical':
       'Entrepreneurship & Economic Development, Historical Records & Preservation of Heritage, Culture and the Arts',
     'gov-environment': 'Environment',
@@ -2451,7 +2451,7 @@ const translations = {
     'gov-games-entertainment-amusement-internal-affairs':
       'Games, Entertainment & Amusement, Internal Affairs',
     'gov-government': 'Government',
-    'gov-gsosolanogovph': 'gso@solano.gov.ph',
+    'gov-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gov-health': 'Health',
     'gov-health-sanitation-finance-appropriation-and-budget':
       'Health & Sanitation, Finance Appropriation and Budget',
@@ -2471,7 +2471,7 @@ const translations = {
     'gov-hon-roland-m-carub-jd': 'Hon. Roland M. Carub, J.D.',
     'gov-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'gov-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
-    'gov-hrmosolanogovph': 'hrmo@solano.gov.ph',
+    'gov-hrmomalolosgovph': 'hrmo@malolos.gov.ph',
     'gov-human-resource-management': 'Human Resource Management',
     'gov-indigenous-people-affairs': 'Indigenous People Affairs',
     'gov-infrastructure': 'Infrastructure',
@@ -2503,15 +2503,15 @@ const translations = {
     'gov-legal-good-governance-justice-human-rights':
       'Legal, Good Governance, Justice, Human Rights, Environmental Management',
     'gov-legislative-branch': 'Legislative Branch',
-    'gov-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gov-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gov-liga-ng-mga-barangay-president': 'Liga ng mga Barangay President',
     'gov-market-clearance-entrance-fees-vendor-services-ctc':
       'Market clearance, entrance fees, vendor services, CTC',
-    'gov-mayorsolanogovph': 'mayor@solano.gov.ph',
-    'gov-mdrrmosolanogovph': 'mdrrmo@solano.gov.ph',
-    'gov-mhosolanogovph': 'mho@solano.gov.ph',
-    'gov-mpdosolanogovph': 'mpdo@solano.gov.ph',
-    'gov-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'gov-mayormalolosgovph': 'mayor@malolos.gov.ph',
+    'gov-mdrrmomalolosgovph': 'mdrrmo@malolos.gov.ph',
+    'gov-mhomalolosgovph': 'mho@malolos.gov.ph',
+    'gov-mpdomalolosgovph': 'mpdo@malolos.gov.ph',
+    'gov-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'gov-municipal-accounting-office': 'Municipal Accounting Office',
     'gov-municipal-agriculture-office': 'Municipal Agriculture Office',
     'gov-municipal-assessors-office': "Municipal Assessor's Office",
@@ -2523,7 +2523,7 @@ const translations = {
     'gov-municipal-offices': 'Municipal Offices',
     'gov-municipal-planning-development': 'Municipal Planning & Development',
     'gov-municipal-treasurers-office': "Municipal Treasurer's Office",
-    'gov-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'gov-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'gov-open-data-philippines': 'Open Data Philippines',
     'gov-ordinance-framework': 'Ordinance Framework',
     'gov-osmea': 'Osmeña',
@@ -2562,14 +2562,14 @@ const translations = {
     'gov-tax-payments-real-property-tax-revenue-collection':
       'Tax payments, real property tax, revenue collection',
     'gov-terms-of-use': 'Terms of Use',
-    'gov-the-executive-officials-leading-solanos-governance':
-      "The executive officials leading Solano's governance",
-    'gov-treasurersolanogovph': 'treasurer@solano.gov.ph',
+    'gov-the-executive-officials-leading-maloloss-governance':
+      "The executive officials leading Malolos's governance",
+    'gov-treasurermalolosgovph': 'treasurer@malolos.gov.ph',
     'gov-tucal': 'Tucal',
     'gov-uddiawan': 'Uddiawan',
     'gov-vaccination-health-certificates-medical-assistance':
       'Vaccination, health certificates, medical assistance',
-    'gov-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'gov-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'gov-view-job-vacancies': 'View Job Vacancies',
     'gov-view-services': 'View Services',
     'gov-volunteer-with-us': 'Volunteer with us',
@@ -2628,8 +2628,8 @@ const translations = {
     'gs-education': 'Education',
     'gs-email': 'Email',
     'gs-emergency-medical-services': 'Emergency Medical Services',
-    'gs-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'gs-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'gs-emtdriver': 'EMT/Driver',
     'gs-environment': 'Environment',
     'gs-equipment': 'Equipment',
@@ -2647,7 +2647,7 @@ const translations = {
     'gs-gso-head': 'GSO Head',
     'gs-gso-personnel': 'GSO Personnel',
     'gs-gso-staff': 'GSO Staff',
-    'gs-gsosolanogovph': 'gso@solano.gov.ph',
+    'gs-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gs-health': 'Health',
     'gs-heavy-duty': 'Heavy Duty',
     'gs-heavy-equipment-operator': 'Heavy Equipment Operator',
@@ -2657,7 +2657,7 @@ const translations = {
     'gs-industrial': 'Industrial',
     'gs-infrastructure': 'Infrastructure',
     'gs-issuance-of-purchase-order-po': 'Issuance of Purchase Order (PO)',
-    'gs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gs-light-vehicle-driver': 'Light Vehicle Driver',
     'gs-location': 'Location',
     'gs-mayors-office': "Mayor's Office",
@@ -2667,8 +2667,8 @@ const translations = {
     'gs-municipal-accounting': 'Municipal Accounting',
     'gs-municipal-engineering': 'Municipal Engineering',
     'gs-municipal-general-services-office': 'Municipal General Services Office',
-    'gs-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Municipal Hall, Ground Floor Solano, Nueva Vizcaya 3708',
+    'gs-municipal-hall-ground-floor-malolos-bulacan':
+      'Municipal Hall, Ground Floor Malolos, Bulacan 3708',
     'gs-municipal-treasurer': 'Municipal Treasurer',
     'gs-municipal-vehicles-available-for-official-use-and':
       'Municipal vehicles available for official use and public rental',
@@ -2677,7 +2677,7 @@ const translations = {
     'gs-office-hours': 'Office Hours',
     'gs-office-personnel': 'Office Personnel',
     'gs-office-staff-and-service-personnel': 'Office staff and service personnel',
-    'gs-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'gs-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'gs-official-receipt-approved-request': 'Official Receipt, Approved Request',
     'gs-open-data-philippines': 'Open Data Philippines',
     'gs-operator': 'Operator',
@@ -2771,21 +2771,21 @@ const translations = {
     'health-curifang-bhs': 'Curifang BHS',
     'health-dadap-bhs': 'Dadap BHS',
     'health-education': 'Education',
-    'health-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'health-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'health-environment': 'Environment',
     'health-freedom-of-information': 'Freedom of Information',
     'health-health': 'Health',
     'health-home': 'Home',
     'health-infrastructure': 'Infrastructure',
     'health-lactawan-bhs': 'Lactawan BHS',
-    'health-lgu-solano-facebook': 'LGU Solano Facebook',
+    'health-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'health-medical-mission-group-hospital-health-services':
       'Medical Mission Group Hospital & Health Services Cooperative',
     'health-nangalisan-bhs': 'Nangalisan BHS',
-    'health-national-highway-solano': 'National Highway, Solano',
+    'health-national-highway-malolos': 'National Highway, Malolos',
     'health-ocapon-bhs': 'Ocapon BHS',
-    'health-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'health-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'health-open-data-philippines': 'Open Data Philippines',
     'health-ordinance-framework': 'Ordinance Framework',
     'health-osmea-bhs': 'Osmeña BHS',
@@ -2836,7 +2836,7 @@ const translations = {
     'home-bintauan': 'Bintauan',
     'home-birth-certificate': 'Birth Certificate',
     'home-blgf-portal': 'BLGF Portal',
-    'home-brief-history-of-solano': 'Brief History of Solano',
+    'home-brief-history-of-malolos': 'Brief History of Malolos',
     'home-browse-complete-directory': 'Browse complete directory',
     'home-browse-services': 'Browse Services',
     'home-business': 'Business',
@@ -2847,11 +2847,11 @@ const translations = {
     'home-contact-us': 'Contact Us',
     'home-create-account': 'Create Account',
     'home-education': 'Education',
-    'home-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'home-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'home-environment': 'Environment',
     'home-father-alejandro-vidal': 'Father Alejandro Vidal',
-    'home-fetching-the-latest-news-from-solano': 'Fetching the latest news from Solano.',
+    'home-fetching-the-latest-news-from-malolos': 'Fetching the latest news from Malolos.',
     'home-find-a-service': 'Find a Service',
     'home-freedom-of-information': 'Freedom of Information',
     'home-governor-general-antonio-urbiztondo-declared':
@@ -2868,26 +2868,26 @@ const translations = {
     'home-history-1853':
       'The first Ilocanos arrived, brought by Don Diego Lumicao, a former gobernadorcillo.',
     'home-history-1889':
-      'Renamed Solano in honor of Governor General Ramon Solano y Llanderal. The town was redeveloped by Father Juan Villaverde with 14 parallel wide streets, each 20 meters wide, forming 100 square blocks.',
+      'Renamed Malolos in honor of Governor General Ramon Malolos y Llanderal. The town was redeveloped by Father Juan Villaverde with 14 parallel wide streets, each 20 meters wide, forming 100 square blocks.',
     'home-history-1957':
-      "The barrios of Ibung and Bintawan were separated to form the town of Ibung, later renamed as Villaverde. Solano's land area was reduced to 13,980 hectares.",
+      "The barrios of Ibung and Bintawan were separated to form the town of Ibung, later renamed as Villaverde. Malolos's land area was reduced to 13,980 hectares.",
     'home-ilocanos-arrived': 'Ilocanos arrived',
     'home-income-classification': 'Income Classification',
     'home-infrastructure': 'Infrastructure',
-    'home-interactive-map-showing-the-location-of-solano':
-      'Interactive map showing the location of Solano Municipal Hall in Nueva Vizcaya, Philippines. The map is centered at coordinates 16.5167°N, 121.1833°E. Use the plus and minus buttons or keyboard arrows to navigate the map.',
+    'home-interactive-map-showing-the-location-of-malolos':
+      'Interactive map showing the location of Malolos Municipal Hall in Bulacan, Philippines. The map is centered at coordinates 16.5167°N, 121.1833°E. Use the plus and minus buttons or keyboard arrows to navigate the map.',
     'home-javascript-is-required-to-view-the-interactive-map':
       'JavaScript is required to view the interactive map.',
     'home-land-area': 'Land Area',
-    'home-lgu-solano-facebook': 'LGU Solano Facebook',
-    'home-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'home-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'home-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'home-loading': 'Loading',
     'home-loading-updates': 'Loading updates...',
     'home-lungab': 'lungab',
     'home-lungabang': 'Lungabang',
-    'home-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'home-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'home-municipality': 'Municipality',
-    'home-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'home-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'home-once-the-largest': 'Once the Largest',
     'home-open-data-philippines': 'Open Data Philippines',
     'home-ordinance-framework': 'Ordinance Framework',
@@ -2898,7 +2898,7 @@ const translations = {
     'home-quick-access-to-frequently-requested-municipal':
       'Quick access to frequently requested municipal services',
     'home-quick-links': 'Quick Links',
-    'home-ramon-solano-y-llanderal': 'Ramon Solano y Llanderal',
+    'home-ramon-malolos-y-llanderal': 'Ramon Malolos y Llanderal',
     'home-real-property-tax': 'Real Property Tax',
     'home-resolution-framework': 'Resolution Framework',
     'home-resources': 'Resources',
@@ -2907,25 +2907,25 @@ const translations = {
     'home-sitemap': 'Sitemap',
     'home-skip-to-main-content': 'Skip to main content',
     'home-social-services': 'Social Services',
-    'home-solano': 'Solano',
-    'home-solano-at-a-glance': 'Solano at a Glance',
-    'home-solano-municipal-hall-nueva-vizcaya-3708': 'Solano Municipal Hall, Nueva Vizcaya 3708',
-    'home-solano-nueva-vizcaya-3708': 'Solano, Nueva Vizcaya 3708',
-    'home-solano-was-the-largest-municipality-in-the':
-      'Solano was the largest municipality in the province until Caliat and Bintawan were separated to become Quezon and Villaverde respectively.',
+    'home-malolos': 'Malolos',
+    'home-malolos-at-a-glance': 'Malolos at a Glance',
+    'home-malolos-municipal-hall-bulacan-3708': 'Malolos Municipal Hall, Bulacan 3708',
+    'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
+    'home-malolos-was-the-largest-municipality-in-the':
+      'Malolos was the largest municipality in the province until Caliat and Bintawan were separated to become Quezon and Villaverde respectively.',
     'home-tax-payments': 'Tax Payments',
     'home-terms-of-use': 'Terms of Use',
     'home-the-1889-redevelopment-created-a-grid-of-100':
       'The 1889 redevelopment created a grid of 100 square blocks, each with an aggregate area of one hectare, with streets running north-south and east-west.',
     'home-total-municipal-area': 'Total Municipal Area',
     'home-urban-planning': 'Urban Planning',
-    'home-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'home-view-all': 'View All',
     'home-view-all-officials': 'View All Officials',
-    'home-view-solano-on-openstreetmap': 'View Solano on OpenStreetMap',
+    'home-view-malolos-on-openstreetmap': 'View Malolos on OpenStreetMap',
     'home-view-statistics': 'View Statistics',
     'home-villaverde': 'Villaverde',
-    'home-weather-and-map-of-solano': 'Weather and Map of Solano',
+    'home-weather-and-map-of-malolos': 'Weather and Map of Malolos',
     'hrm-10-minutes': '10 minutes',
     'hrm-105-days-for-female-employees': '105 days for female employees',
     'hrm-12-days': '1-2 days',
@@ -2970,8 +2970,8 @@ const translations = {
     'hrm-education': 'Education',
     'hrm-employee-id': 'Employee ID',
     'hrm-employee-id-for-current-employees': 'Employee ID (for current employees)',
-    'hrm-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'hrm-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'hrm-environment': 'Environment',
     'hrm-fee-free': 'Fee: Free',
     'hrm-fee-free-for-current-employees': 'Fee: Free for current employees',
@@ -2991,7 +2991,7 @@ const translations = {
     'hrm-hrmo-staff': 'HRMO Staff',
     'hrm-human-resource-management-section': 'Human Resource Management Section',
     'hrm-human-resource-management-section-mayors-office':
-      "Human Resource Management Section, Mayor's Office, Municipal Hall, Solano, Nueva Vizcaya",
+      "Human Resource Management Section, Mayor's Office, Municipal Hall, Malolos, Bulacan",
     'hrm-important-notes': 'Important Notes',
     'hrm-infrastructure': 'Infrastructure',
     'hrm-issuance-of-certificate-of-employment': 'Issuance of Certificate of Employment',
@@ -3006,7 +3006,7 @@ const translations = {
     'hrm-leave-processing': 'Leave Processing',
     'hrm-leave-type': 'Leave Type',
     'hrm-legislative': 'Legislative',
-    'hrm-lgu-solano-facebook': 'LGU Solano Facebook',
+    'hrm-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'hrm-location': 'Location',
     'hrm-maternity-leave': 'Maternity Leave',
     'hrm-mayors-office': "Mayor's Office",
@@ -3021,7 +3021,7 @@ const translations = {
     'hrm-office-personnel': 'Office Personnel',
     'hrm-official-certification-of-current-or-previous':
       'Official certification of current or previous employment status',
-    'hrm-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'hrm-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'hrm-official-record-of-employment-history-for-lgu':
       'Official record of employment history for LGU employees',
     'hrm-official-statement-of-accumulated-leave-credits':
@@ -3103,8 +3103,8 @@ const translations = {
     'infra-cmci-dti-portal': 'CMCI DTI Portal',
     'infra-contribute-code-with-us': 'Contribute code with us',
     'infra-education': 'Education',
-    'infra-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'infra-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'infra-engineering-services': 'Engineering Services',
     'infra-environment': 'Environment',
     'infra-fee': 'Fee:',
@@ -3112,12 +3112,12 @@ const translations = {
     'infra-health': 'Health',
     'infra-home': 'Home',
     'infra-infrastructure': 'Infrastructure',
-    'infra-lgu-solano-facebook': 'LGU Solano Facebook',
+    'infra-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'infra-municipal-engineering-office': 'Municipal Engineering Office',
     'infra-municipal-general-services-office': 'Municipal General Services Office',
     'infra-municipal-planning-development': 'Municipal Planning & Development',
     'infra-occupancy-permit': 'Occupancy Permit',
-    'infra-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'infra-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'infra-open-data-philippines': 'Open Data Philippines',
     'infra-ordinance-framework': 'Ordinance Framework',
     'infra-privacy-policy': 'Privacy Policy',
@@ -3167,8 +3167,8 @@ const translations = {
     'leg-detailed-discussion-and-debate-on-the-proposed':
       'Detailed discussion and debate on the proposed ordinance',
     'leg-education': 'Education',
-    'leg-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'leg-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'leg-environment': 'Environment',
     'leg-expressions-of-the-legislative-bodys-will-or':
       "Expressions of the legislative body's will or opinion on specific matters, often used for commendations, requests, or policy positions.",
@@ -3207,7 +3207,7 @@ const translations = {
       'Ordinance takes effect and is enforced within the municipality',
     'leg-ordinances': 'Ordinances',
     'leg-ordinances-and-resolutions-of-the-sangguniang':
-      'Ordinances and resolutions of the Sangguniang Bayan ng Solano',
+      'Ordinances and resolutions of the Sangguniang Bayan ng Malolos',
     'leg-posting-publication': 'Posting / Publication',
     'leg-posting-transmittal': 'Posting / Transmittal',
     'leg-privacy-policy': 'Privacy Policy',
@@ -3289,7 +3289,7 @@ const translations = {
     'magri-certification-of-farm-location-and-area-cultivated':
       'Certification of farm location and area cultivated',
     'magri-certification-that-individual-is-a-registered':
-      'Certification that individual is a registered farmer in Solano',
+      'Certification that individual is a registered farmer in Malolos',
     'magri-certifications': 'Certifications',
     'magri-certified-seeds-distribution': 'Certified Seeds Distribution',
     'magri-citizens-charter': "Citizen's Charter",
@@ -3319,13 +3319,13 @@ const translations = {
     'magri-distribution-of-tilapia-carp-and-other-fingerlings':
       'Distribution of tilapia, carp, and other fingerlings',
     'magri-education': 'Education',
-    'magri-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'magri-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'magri-environment': 'Environment',
     'magri-farm-location-certification': 'Farm Location Certification',
     'magri-farm-machinery-services': 'Farm Machinery Services',
     'magri-farm-registration-certifications-and-agricultural':
-      'Farm registration, certifications, and agricultural programs for Solano farmers',
+      'Farm registration, certifications, and agricultural programs for Malolos farmers',
     'magri-farmer-certification': 'Farmer Certification',
     'magri-farmers-field-school': 'Farmers Field School',
     'magri-farmers-organization': 'Farmers Organization',
@@ -3358,7 +3358,7 @@ const translations = {
     'magri-land-title-tax-declaration-lease-contract':
       'Land Title / Tax Declaration / Lease Contract',
     'magri-legislative': 'Legislative',
-    'magri-lgu-solano-facebook': 'LGU Solano Facebook',
+    'magri-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'magri-linkage-to-organic-markets-and-buyers': 'Linkage to organic markets and buyers',
     'magri-livestock': 'Livestock',
     'magri-livestock-program': 'Livestock Program',
@@ -3374,14 +3374,14 @@ const translations = {
     'magri-mun-agriculture': 'Mun. Agriculture',
     'magri-municipal-agriculture-office': 'Municipal Agriculture Office',
     'magri-municipal-agriculture-office-municipal-hall':
-      'Municipal Agriculture Office, Municipal Hall, Solano, Nueva Vizcaya',
+      'Municipal Agriculture Office, Municipal Hall, Malolos, Bulacan',
     'magri-municipal-hall': 'Municipal Hall',
     'magri-no-payment-required': 'No Payment Required',
     'magri-office': 'Office',
     'magri-office-information': 'Office Information',
     'magri-official-certifications-issued-by-the-municipal':
       'Official certifications issued by the Municipal Agriculture Office',
-    'magri-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'magri-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'magri-official-production-records-for-loan-and':
       'Official production records for loan and insurance purposes',
     'magri-old-rsbsa-form-reference-number': 'Old RSBSA Form / Reference Number',
@@ -3443,8 +3443,8 @@ const translations = {
       'Support for organic farming practices and certification',
     'magri-support-for-pgs-and-thirdparty-organic':
       'Support for PGS and third-party organic certification',
-    'magri-support-programs-for-corn-farmers-in-solano':
-      'Support programs for corn farmers in Solano',
+    'magri-support-programs-for-corn-farmers-in-malolos':
+      'Support programs for corn farmers in Malolos',
     'magri-support-programs-for-rice-farmers-under-the-rice':
       'Support programs for rice farmers under the Rice Competitiveness Enhancement Fund (RCEF)',
     'magri-support-services-for-fisherfolk-and-aquaculture':
@@ -3518,8 +3518,8 @@ const translations = {
     'market-duration': 'Duration',
     'market-economic-enterprise-development-office': 'Economic Enterprise & Development Office',
     'market-education': 'Education',
-    'market-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'market-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'market-entrance-fees': 'Entrance Fees',
     'market-entrance-fees-are-based-on-goods-being-sold':
       'Entrance fees are based on goods being sold',
@@ -3563,7 +3563,7 @@ const translations = {
     'market-key-personnel-handling-public-market-services':
       'Key personnel handling public market services',
     'market-legislative': 'Legislative',
-    'market-lgu-solano-facebook': 'LGU Solano Facebook',
+    'market-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'market-location': 'Location',
     'market-market-clearance': 'Market Clearance',
     'market-market-collector': 'Market Collector',
@@ -3575,7 +3575,7 @@ const translations = {
     'market-office-head': 'Office Head',
     'market-office-information': 'Office Information',
     'market-office-personnel': 'Office Personnel',
-    'market-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'market-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'market-open-data-philippines': 'Open Data Philippines',
     'market-ordinance-framework': 'Ordinance Framework',
     'market-other-merchandise': 'Other Merchandise',
@@ -3607,8 +3607,8 @@ const translations = {
     'market-secure-and-fill-out-public-market-complaint-form':
       'Secure and fill out Public Market complaint form and submit to the Market Supervisor',
     'market-seedo-head': 'SEEDO Head',
-    'market-seedo-office-public-market-solano-nueva-vizcaya':
-      'SEEDO Office, Public Market, Solano, Nueva Vizcaya',
+    'market-seedo-office-public-market-malolos-bulacan':
+      'SEEDO Office, Public Market, Malolos, Bulacan',
     'market-seedo-public-market': 'SEEDO - Public Market',
     'market-select-a-service-to-view-the-detailed-process-and':
       'Select a service to view the detailed process and requirements',
@@ -3680,8 +3680,8 @@ const translations = {
     'mbudget-documents-required': 'Documents Required',
     'mbudget-duration': 'Duration',
     'mbudget-education': 'Education',
-    'mbudget-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mbudget-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mbudget-ensure-all-documents-are-complete-before':
       'Ensure all documents are complete before submission',
     'mbudget-environment': 'Environment',
@@ -3697,15 +3697,15 @@ const translations = {
     'mbudget-key-personnel-handling-budget-office-services':
       'Key personnel handling budget office services',
     'mbudget-legislative': 'Legislative',
-    'mbudget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mbudget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mbudget-local-school-board-ordinance': 'Local School Board Ordinance',
     'mbudget-location': 'Location',
     'mbudget-marcial-l-ramos-cpa': 'Marcial L. Ramos, CPA',
     'mbudget-melisa-claire-leal': 'Melisa Claire Leal',
     'mbudget-mun-budget': 'Mun. Budget',
     'mbudget-municipal-budget-office': 'Municipal Budget Office',
-    'mbudget-municipal-budget-office-municipal-hall-solano':
-      'Municipal Budget Office, Municipal Hall, Solano, Nueva Vizcaya',
+    'mbudget-municipal-budget-office-municipal-hall-malolos':
+      'Municipal Budget Office, Municipal Hall, Malolos, Bulacan',
     'mbudget-municipal-budget-officer': 'Municipal Budget Officer',
     'mbudget-municipal-hall': 'Municipal Hall',
     'mbudget-obligation-request': 'Obligation Request',
@@ -3717,7 +3717,7 @@ const translations = {
     'mbudget-office': 'Office',
     'mbudget-office-information': 'Office Information',
     'mbudget-office-personnel': 'Office Personnel',
-    'mbudget-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mbudget-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mbudget-official-receipt': 'Official Receipt',
     'mbudget-open-data-philippines': 'Open Data Philippines',
     'mbudget-ordinance-framework': 'Ordinance Framework',
@@ -3843,8 +3843,8 @@ const translations = {
     'mc-duration': 'Duration',
     'mc-edgar-mc': 'Edgar Mc',
     'mc-education': 'Education',
-    'mc-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mc-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mc-environment': 'Environment',
     'mc-fee': 'Fee',
     'mc-fifteen-15-days': 'fifteen (15) days',
@@ -3852,7 +3852,7 @@ const translations = {
       'Follow these steps to register your marriage certificate',
     'mc-for-delayed-registration': 'For Delayed Registration',
     'mc-for-engaged-couples-intending-to-get-married-in':
-      'For engaged couples intending to get married in Solano',
+      'For engaged couples intending to get married in Malolos',
     'mc-for-timely-registration-within-1530-days': 'For Timely Registration (Within 15/30 Days)',
     'mc-forms-for-marriage-license-application': 'Forms for marriage license application',
     'mc-free': 'Free',
@@ -3876,18 +3876,18 @@ const translations = {
     'mc-issuance-of-the-marriage-license': 'Issuance of the marriage license',
     'mc-juvy': 'Juvy',
     'mc-legislative': 'Legislative',
-    'mc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mc-license-validity': 'License Validity',
     'mc-local-civil-registrar': 'Local Civil Registrar',
     'mc-marriage-certificate-local-registration': 'Marriage Certificate (Local Registration)',
     'mc-mswdo-staff': 'MSWDO Staff',
     'mc-mto-collection-officer': 'MTO Collection Officer',
-    'mc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Municipal Hall, 2nd Floor Solano, Nueva Vizcaya',
+    'mc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Municipal Hall, 2nd Floor Malolos, Bulacan',
     'mc-nationwide': 'Nationwide',
     'mc-need-help': 'Need Help?',
     'mc-office-information': 'Office Information',
-    'mc-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mc-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mc-official-receipt': 'Official Receipt',
     'mc-oliver-receiving-officer': 'Oliver - Receiving Officer',
     'mc-open-data-philippines': 'Open Data Philippines',
@@ -4021,8 +4021,8 @@ const translations = {
       'Download the marriage license application form',
     'mcr-duration': 'Duration',
     'mcr-education': 'Education',
-    'mcr-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mcr-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mcr-environment': 'Environment',
     'mcr-fee': 'Fee',
     'mcr-fee-per-copy': 'Fee per Copy',
@@ -4043,7 +4043,7 @@ const translations = {
     'mcr-legal-capacity-to-contract-marriage-from-embassy':
       'Legal Capacity to Contract Marriage from Embassy',
     'mcr-legislative': 'Legislative',
-    'mcr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mcr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mcr-location': 'Location',
     'mcr-marriage-certificate': 'Marriage Certificate',
     'mcr-marriage-certificate-of-parents-if-legitimate':
@@ -4063,7 +4063,7 @@ const translations = {
     'mcr-municipal-civil-registrar': 'Municipal Civil Registrar',
     'mcr-municipal-civil-registrars-office': "Municipal Civil Registrar's Office",
     'mcr-municipal-civil-registrars-office-2nd-floor':
-      "Municipal Civil Registrar's Office, 2nd Floor, Municipal Hall, Solano, Nueva Vizcaya",
+      "Municipal Civil Registrar's Office, 2nd Floor, Municipal Hall, Malolos, Bulacan",
     'mcr-municipal-hall-2f': 'Municipal Hall, 2F',
     'mcr-nbipolice-clearance': 'NBI/Police Clearance',
     'mcr-negative-certification-from-psa': 'Negative Certification from PSA',
@@ -4073,7 +4073,7 @@ const translations = {
     'mcr-office-head': 'Office Head',
     'mcr-office-information': 'Office Information',
     'mcr-office-personnel': 'Office Personnel',
-    'mcr-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mcr-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mcr-official-receipt': 'Official Receipt',
     'mcr-open-data-philippines': 'Open Data Philippines',
     'mcr-order-of-payment': 'Order of Payment',
@@ -4099,11 +4099,11 @@ const translations = {
     'mcr-ra-9048-clerical-error-correction': 'RA 9048 - Clerical Error Correction',
     'mcr-register-births-and-deaths-within-30-days-to':
       'Register births and deaths within 30 days to avoid penalties',
-    'mcr-registration-of-birth-for-children-born-in-solano':
-      'Registration of birth for children born in Solano, Nueva Vizcaya',
+    'mcr-registration-of-birth-for-children-born-in-malolos':
+      'Registration of birth for children born in Malolos, Bulacan',
     'mcr-registration-of-death': 'Registration of Death',
     'mcr-registration-of-death-for-persons-who-died-in':
-      'Registration of death for persons who died in Solano, Nueva Vizcaya',
+      'Registration of death for persons who died in Malolos, Bulacan',
     'mcr-registration-of-live-birth': 'Registration of Live Birth',
     'mcr-registration-of-marriage': 'Registration of Marriage',
     'mcr-registration-officer': 'Registration Officer',
@@ -4112,7 +4112,7 @@ const translations = {
     'mcr-representatives-must-have-authorization-letter':
       'Representatives must have authorization letter and valid IDs',
     'mcr-request-for-certified-true-copies-of-civil':
-      'Request for certified true copies of civil registry documents registered in Solano',
+      'Request for certified true copies of civil registry documents registered in Malolos',
     'mcr-requirements': 'Requirements',
     'mcr-resolution-framework': 'Resolution Framework',
     'mcr-resources': 'Resources',
@@ -4184,8 +4184,8 @@ const translations = {
     'mgs-duration': 'Duration',
     'mgs-education': 'Education',
     'mgs-electricity': 'Electricity',
-    'mgs-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mgs-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mgs-environment': 'Environment',
     'mgs-equipment-accountability-is-strictly-enforced':
       'Equipment accountability is strictly enforced',
@@ -4209,7 +4209,7 @@ const translations = {
     'mgs-key-personnel-handling-general-services-operations':
       'Key personnel handling general services operations',
     'mgs-legislative': 'Legislative',
-    'mgs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mgs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mgs-light-vehicle': 'Light Vehicle',
     'mgs-light-vehicles': 'Light Vehicles',
     'mgs-location': 'Location',
@@ -4223,13 +4223,13 @@ const translations = {
     'mgs-motorcycles': 'Motorcycles',
     'mgs-municipal-general-services-office': 'Municipal General Services Office',
     'mgs-municipal-general-services-office-municipal-hall':
-      'Municipal General Services Office, Municipal Hall, Solano, Nueva Vizcaya',
+      'Municipal General Services Office, Municipal Hall, Malolos, Bulacan',
     'mgs-municipal-hall': 'Municipal Hall',
     'mgs-none': 'None',
     'mgs-office': 'Office',
     'mgs-office-information': 'Office Information',
     'mgs-office-personnel': 'Office Personnel',
-    'mgs-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mgs-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mgs-open-data-philippines': 'Open Data Philippines',
     'mgs-operators-pool': 'Operators Pool',
     'mgs-ordinance-framework': 'Ordinance Framework',
@@ -4300,8 +4300,8 @@ const translations = {
     'mgs-volunteer-with-us': 'Volunteer with us',
     'mgs-water': 'Water',
     'mpdo-12-days': '1-2 Days',
-    'mpdo-2nd-floor-municipal-hall-solano-nueva-vizcaya':
-      '2nd Floor, Municipal Hall, Solano, Nueva Vizcaya',
+    'mpdo-2nd-floor-municipal-hall-malolos-bulacan':
+      '2nd Floor, Municipal Hall, Malolos, Bulacan',
     'mpdo-30-days': '30+ Days',
     'mpdo-510-days': '5-10 Days',
     'mpdo-8am-5pm': '8AM - 5PM',
@@ -4347,8 +4347,8 @@ const translations = {
     'mpdo-downloadable-resources': 'Downloadable Resources',
     'mpdo-duly-accomplished-application-form': 'Duly accomplished Application Form',
     'mpdo-education': 'Education',
-    'mpdo-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mpdo-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mpdo-environment': 'Environment',
     'mpdo-environmental-compliance-certificate-if-required':
       'Environmental Compliance Certificate (if required)',
@@ -4370,7 +4370,7 @@ const translations = {
     'mpdo-land-use-reclassification': 'Land Use Reclassification',
     'mpdo-latest-real-property-tax-receipt': 'Latest Real Property Tax Receipt',
     'mpdo-legislative': 'Legislative',
-    'mpdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mpdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mpdo-location': 'Location',
     'mpdo-locational-clearance': 'Locational Clearance',
     'mpdo-locational-clearance-is-required-before-building':
@@ -4380,7 +4380,7 @@ const translations = {
     'mpdo-municipal-planning-and-development-office': 'Municipal Planning and Development Office',
     'mpdo-office': 'Office',
     'mpdo-office-information': 'Office Information',
-    'mpdo-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mpdo-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mpdo-ongoing': 'Ongoing',
     'mpdo-open-data-philippines': 'Open Data Philippines',
     'mpdo-ordinance-framework': 'Ordinance Framework',
@@ -4503,8 +4503,8 @@ const translations = {
     'mswdo-emergency-financial-assistance-for-various-needs':
       'Emergency financial assistance for various needs',
     'mswdo-employment-facilitation-ef': 'Employment Facilitation (EF)',
-    'mswdo-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mswdo-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mswdo-enrollment-requirements': 'Enrollment Requirements',
     'mswdo-environment': 'Environment',
     'mswdo-families-in-crisis-situations': 'Families in crisis situations',
@@ -4544,7 +4544,7 @@ const translations = {
     'mswdo-infrastructure': 'Infrastructure',
     'mswdo-interest': 'Interest',
     'mswdo-legal-assistance': 'Legal Assistance',
-    'mswdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdo-livelihood': 'Livelihood',
     'mswdo-loan-amount': 'Loan Amount',
     'mswdo-location': 'Location',
@@ -4554,7 +4554,7 @@ const translations = {
     'mswdo-medical-assistance': 'Medical Assistance',
     'mswdo-microenterprise-development-md': 'Microenterprise Development (MD)',
     'mswdo-mswdo-head': 'MSWDO Head',
-    'mswdo-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'mswdo-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'mswdo-municipal-social-welfare-and-development-office':
       'Municipal Social Welfare and Development Office',
     'mswdo-municipal-social-welfare-officer': 'Municipal Social Welfare Officer',
@@ -4570,7 +4570,7 @@ const translations = {
     'mswdo-nutritious-snacks-and-meals-during-day-care-hours':
       'Nutritious snacks and meals during day care hours.',
     'mswdo-office-hours': 'Office Hours',
-    'mswdo-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mswdo-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mswdo-open-data-philippines': 'Open Data Philippines',
     'mswdo-ordinance-framework': 'Ordinance Framework',
     'mswdo-parent-education-on-proper-nutrition-and-child':
@@ -4743,8 +4743,8 @@ const translations = {
     'mswdosvc-education': 'Education',
     'mswdosvc-educational-assistance': 'Educational assistance',
     'mswdosvc-emergency-cases-are-given-priority': 'Emergency cases are given priority',
-    'mswdosvc-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'mswdosvc-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'mswdosvc-encoding-and-processing-of-pwd-id': 'Encoding and processing of PWD ID',
     'mswdosvc-encoding-and-processing-of-senior-citizen-id':
       'Encoding and processing of Senior Citizen ID',
@@ -4786,7 +4786,7 @@ const translations = {
       'Key personnel handling social welfare services',
     'mswdosvc-legal-assistance-referral': 'Legal assistance referral',
     'mswdosvc-legislative': 'Legislative',
-    'mswdosvc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdosvc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdosvc-livelihood-assistance-programs': 'Livelihood assistance programs',
     'mswdosvc-location': 'Location',
     'mswdosvc-medical-certificate-indicating-type-of-disability':
@@ -4796,8 +4796,8 @@ const translations = {
     'mswdosvc-medical-certificatehospital-bill-for-medical':
       'Medical Certificate/Hospital Bill (for medical assistance)',
     'mswdosvc-mswdo-head': 'MSWDO Head',
-    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-solano':
-      'MSWDO Office, 2nd Floor, Municipal Hall, Solano, Nueva Vizcaya',
+    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-malolos':
+      'MSWDO Office, 2nd Floor, Municipal Hall, Malolos, Bulacan',
     'mswdosvc-mswdo-services': 'MSWDO Services',
     'mswdosvc-municipal-hall-2nd-floor': 'Municipal Hall, 2nd Floor',
     'mswdosvc-municipal-social-welfare-development-office':
@@ -4806,7 +4806,7 @@ const translations = {
     'mswdosvc-office-head-social-welfare-officer': 'Office Head / Social Welfare Officer',
     'mswdosvc-office-information': 'Office Information',
     'mswdosvc-office-personnel': 'Office Personnel',
-    'mswdosvc-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'mswdosvc-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'mswdosvc-open-data-philippines': 'Open Data Philippines',
     'mswdosvc-ordinance-framework': 'Ordinance Framework',
     'mswdosvc-osca-focal-person': 'OSCA Focal Person',
@@ -4821,7 +4821,7 @@ const translations = {
     'mswdosvc-processing-information': 'Processing Information',
     'mswdosvc-programs-and-services-for-womens-welfare-and':
       "Programs and services for women's welfare and protection",
-    'mswdosvc-proof-of-residence-in-solano': 'Proof of residence in Solano',
+    'mswdosvc-proof-of-residence-in-malolos': 'Proof of residence in Malolos',
     'mswdosvc-provision-of-immediate-interventionassistance':
       'Provision of immediate intervention/assistance',
     'mswdosvc-public-safety': 'Public Safety',
@@ -4915,20 +4915,20 @@ const translations = {
     'news-cmci-dti-portal': 'CMCI DTI Portal',
     'news-contribute-code-with-us': 'Contribute code with us',
     'news-education': 'Education',
-    'news-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'news-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'news-environment': 'Environment',
-    'news-fetching-news-and-updates-from-solano': 'Fetching news and updates from Solano.',
+    'news-fetching-news-and-updates-from-malolos': 'Fetching news and updates from Malolos.',
     'news-freedom-of-information': 'Freedom of Information',
     'news-health': 'Health',
     'news-home': 'Home',
     'news-infrastructure': 'Infrastructure',
-    'news-lgu-solano-facebook': 'LGU Solano Facebook',
+    'news-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'news-loading': 'Loading',
     'news-loading-news': 'Loading news...',
     'news-news': 'News',
     'news-news-updates': 'News & Updates',
-    'news-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'news-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'news-open-data-philippines': 'Open Data Philippines',
     'news-ordinance-framework': 'Ordinance Framework',
     'news-privacy-policy': 'Privacy Policy',
@@ -4941,7 +4941,7 @@ const translations = {
     'news-skip-to-main-content': 'Skip to main content',
     'news-social-services': 'Social Services',
     'news-stay-informed-about-the-latest-happenings-in':
-      'Stay informed about the latest happenings in Solano',
+      'Stay informed about the latest happenings in Malolos',
     'news-tax-payments': 'Tax Payments',
     'news-terms-of-use': 'Terms of Use',
     'news-volunteer-with-us': 'Volunteer with us',
@@ -4955,8 +4955,8 @@ const translations = {
     'officials-contribute-code-with-us': 'Contribute code with us',
     'officials-education': 'Education',
     'officials-elected-officials': 'Elected Officials',
-    'officials-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'officials-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'officials-environment': 'Environment',
     'officials-executive-branch': 'Executive Branch',
     'officials-freedom-of-information': 'Freedom of Information',
@@ -4974,13 +4974,13 @@ const translations = {
     'officials-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'officials-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
     'officials-infrastructure': 'Infrastructure',
-    'officials-lgu-solano-facebook': 'LGU Solano Facebook',
-    'officials-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'officials-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'officials-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'officials-meet-the-leaders-serving-the-municipality-of':
-      'Meet the leaders serving the Municipality of Solano',
+      'Meet the leaders serving the Municipality of Malolos',
     'officials-municipal-mayor': 'Municipal Mayor',
     'officials-municipal-vice-mayor': 'Municipal Vice Mayor',
-    'officials-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'officials-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'officials-open-data-philippines': 'Open Data Philippines',
     'officials-ordinance-framework': 'Ordinance Framework',
     'officials-privacy-policy': 'Privacy Policy',
@@ -4996,9 +4996,9 @@ const translations = {
     'officials-social-services': 'Social Services',
     'officials-tax-payments': 'Tax Payments',
     'officials-terms-of-use': 'Terms of Use',
-    'officials-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'officials-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'officials-volunteer-with-us': 'Volunteer with us',
-    'offline-emergency-hotlines-solano-nueva-vizcaya': 'Emergency Hotlines - Solano, Nueva Vizcaya',
+    'offline-emergency-hotlines-malolos-bulacan': 'Emergency Hotlines - Malolos, Bulacan',
     'offline-fire-bfp': 'Fire (BFP)',
     'offline-municipal-hall': 'Municipal Hall',
     'offline-police-pnp': 'Police (PNP)',
@@ -5016,16 +5016,16 @@ const translations = {
     'ord-cmci-dti-portal': 'CMCI DTI Portal',
     'ord-contribute-code-with-us': 'Contribute code with us',
     'ord-education': 'Education',
-    'ord-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'ord-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'ord-environment': 'Environment',
     'ord-freedom-of-information': 'Freedom of Information',
     'ord-health': 'Health',
     'ord-home': 'Home',
     'ord-infrastructure': 'Infrastructure',
     'ord-legislative': 'Legislative',
-    'ord-lgu-solano-facebook': 'LGU Solano Facebook',
-    'ord-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'ord-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'ord-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'ord-open-data-philippines': 'Open Data Philippines',
     'ord-ordinance-framework': 'Ordinance Framework',
     'ord-privacy-policy': 'Privacy Policy',
@@ -5046,10 +5046,10 @@ const translations = {
     'privacy-agriculture': 'Agriculture',
     'privacy-analytics-cookies': 'Analytics Cookies:',
     'privacy-analytics-data': 'Analytics Data:',
-    'privacy-bettersolanoorg-is-a-general-audience-website':
-      'BetterSolano.org is a general audience website providing civic information. We do not knowingly collect personal information from children under 18 years of age without parental consent.',
-    'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.',
+    'privacy-bettermalolosorg-is-a-general-audience-website':
+      'BetterMalolos.org is a general audience website providing civic information. We do not knowingly collect personal information from children under 18 years of age without parental consent.',
+    'privacy-bettermalolosorg-we-us-or-our-is-committed-to':
+      'BetterMalolos.org ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Browser type and version',
     'privacy-business': 'Business',
@@ -5080,8 +5080,8 @@ const translations = {
     'privacy-education': 'Education',
     'privacy-email-address-when-you-contact-us-or-submit':
       'Email address (when you contact us or submit feedback)',
-    'privacy-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'privacy-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'privacy-environment': 'Environment',
     'privacy-essential-cookies': 'Essential Cookies:',
     'privacy-exercising-your-rights': 'Exercising Your Rights',
@@ -5113,7 +5113,7 @@ const translations = {
     'privacy-legal-requirements': 'Legal Requirements:',
     'privacy-legislative': 'Legislative',
     'privacy-legitimate-interest': 'Legitimate Interest:',
-    'privacy-lgu-solano-facebook': 'LGU Solano Facebook',
+    'privacy-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'privacy-managing-cookies': 'Managing Cookies',
     'privacy-material-changes-may-be-announced-on-our-website':
       'Material changes may be announced on our website',
@@ -5122,7 +5122,7 @@ const translations = {
     'privacy-national-privacy-commission': 'National Privacy Commission',
     'privacy-not': 'not',
     'privacy-number-of-visitors-and-page-views': 'Number of visitors and page views',
-    'privacy-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'privacy-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'privacy-open-data-philippines': 'Open Data Philippines',
     'privacy-ordinance-framework': 'Ordinance Framework',
     'privacy-our-website-may-contain-links-to-external':
@@ -5182,7 +5182,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under the Data Privacy Act of 2012, you have the following rights regarding your personal information:',
     'privacy-volunteer-with-us': 'Volunteer with us',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We collect minimal information necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -5263,8 +5263,8 @@ const translations = {
     'propdec-education': 'Education',
     'propdec-effectivity-of-assessment': 'Effectivity of Assessment',
     'propdec-effectivity-quarter-and-year': 'Effectivity Quarter and Year',
-    'propdec-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'propdec-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'propdec-environment': 'Environment',
     'propdec-estimated-economic-life': 'Estimated Economic Life',
     'propdec-for-building-declaration': 'For Building Declaration',
@@ -5274,7 +5274,7 @@ const translations = {
     'propdec-freedom-of-information': 'Freedom of Information',
     'propdec-full-name-of-owner': 'Full Name of Owner',
     'propdec-government': 'Government',
-    'propdec-ground-floor-municipal-hall-solano': 'Ground Floor, Municipal Hall, Solano',
+    'propdec-ground-floor-municipal-hall-malolos': 'Ground Floor, Municipal Hall, Malolos',
     'propdec-handles-property-assessment-tax-declaration-and':
       'Handles property assessment, tax declaration, and real property records.',
     'propdec-health': 'Health',
@@ -5289,7 +5289,7 @@ const translations = {
     'propdec-land-declaration': 'Land Declaration',
     'propdec-land-tax-declaration': 'Land Tax Declaration',
     'propdec-legislative': 'Legislative',
-    'propdec-lgu-solano-facebook': 'LGU Solano Facebook',
+    'propdec-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'propdec-list-of-machineries-with-specifications': 'List of Machineries with Specifications',
     'propdec-location': 'Location',
     'propdec-machinery-declaration': 'Machinery Declaration',
@@ -5302,7 +5302,7 @@ const translations = {
     'propdec-occupancy-permit': 'Occupancy Permit',
     'propdec-octtctcloa-no': 'OCT/TCT/CLOA No.',
     'propdec-office': 'Office',
-    'propdec-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'propdec-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'propdec-open-data-philippines': 'Open Data Philippines',
     'propdec-ordinance-framework': 'Ordinance Framework',
     'propdec-owner-information': 'Owner Information',
@@ -5331,7 +5331,7 @@ const translations = {
     'propdec-tax-clearance-certificate': 'Tax Clearance Certificate',
     'propdec-tax-declaration': 'Tax Declaration',
     'propdec-tax-declaration-form-for-real-property-assessment':
-      'Tax declaration form for real property assessment in Solano, Nueva Vizcaya',
+      'Tax declaration form for real property assessment in Malolos, Bulacan',
     'propdec-tax-payments': 'Tax Payments',
     'propdec-tax-payments-2': 'Tax & Payments',
     'propdec-taxableexempt-status': 'Taxable/Exempt Status',
@@ -5352,16 +5352,16 @@ const translations = {
     'reso-cmci-dti-portal': 'CMCI DTI Portal',
     'reso-contribute-code-with-us': 'Contribute code with us',
     'reso-education': 'Education',
-    'reso-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'reso-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'reso-environment': 'Environment',
     'reso-freedom-of-information': 'Freedom of Information',
     'reso-health': 'Health',
     'reso-home': 'Home',
     'reso-infrastructure': 'Infrastructure',
     'reso-legislative': 'Legislative',
-    'reso-lgu-solano-facebook': 'LGU Solano Facebook',
-    'reso-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'reso-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'reso-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'reso-open-data-philippines': 'Open Data Philippines',
     'reso-ordinance-framework': 'Ordinance Framework',
     'reso-privacy-policy': 'Privacy Policy',
@@ -5379,16 +5379,16 @@ const translations = {
     'reso-volunteer-with-us': 'Volunteer with us',
     'safety-accessibility': 'Accessibility',
     'safety-agriculture': 'Agriculture',
-    'safety-bfp-solano': 'BFP Solano',
-    'safety-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'safety-bfp-malolos': 'BFP Malolos',
+    'safety-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'safety-blgf-portal': 'BLGF Portal',
     'safety-business': 'Business',
     'safety-certificates': 'Certificates',
     'safety-citizens-charter': "Citizen's Charter",
     'safety-cmci-dti-portal': 'CMCI DTI Portal',
     'safety-contribute-code-with-us': 'Contribute code with us',
-    'safety-dilg-solano': 'DILG Solano',
-    'safety-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'safety-dilg-malolos': 'DILG Malolos',
+    'safety-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'safety-disaster-assistance': 'Disaster Assistance',
     'safety-disaster-preparedness': 'Disaster Preparedness',
     'safety-education': 'Education',
@@ -5396,8 +5396,8 @@ const translations = {
     'safety-emergency-hotlines': 'Emergency Hotlines',
     'safety-emergency-response-and-disaster-preparedness':
       'Emergency response and disaster preparedness programs.',
-    'safety-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'safety-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'safety-environment': 'Environment',
     'safety-fee': 'Fee:',
     'safety-for-emergencies-and-inquiries-contact-these':
@@ -5410,31 +5410,31 @@ const translations = {
     'safety-infrastructure': 'Infrastructure',
     'safety-kabalikat-civicom': 'KABALIKAT Civicom',
     'safety-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'safety-lgu-solano-facebook': 'LGU Solano Facebook',
-    'safety-magro-solano': 'MAGRO Solano',
-    'safety-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'safety-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'safety-magro-malolos': 'MAGRO Malolos',
+    'safety-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'safety-mayors-office': "Mayor's Office",
     'safety-mayors-office-0917-595-1931': "Mayor's Office 0917 595 1931",
-    'safety-mdrrmo-solano': 'MDRRMO Solano',
-    'safety-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'safety-mdrrmo-malolos': 'MDRRMO Malolos',
+    'safety-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'safety-medical': 'Medical',
     'safety-medical-emergency-hotlines': 'Medical Emergency Hotlines',
     'safety-mmg-hospital': 'MMG Hospital',
     'safety-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
-    'safety-mswdo-solano': 'MSWDO Solano',
-    'safety-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
-    'safety-nuvelco-solano': 'NUVELCO Solano',
-    'safety-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
+    'safety-mswdo-malolos': 'MSWDO Malolos',
+    'safety-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
+    'safety-nuvelco-malolos': 'NUVELCO Malolos',
+    'safety-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
     'safety-office': 'Office:',
-    'safety-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'safety-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'safety-open-data-philippines': 'Open Data Philippines',
     'safety-ordinance-framework': 'Ordinance Framework',
     'safety-pdrrmo-n-vizcaya': 'PDRRMO N. Vizcaya',
     'safety-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'safety-plt-hospital': 'PLT Hospital',
     'safety-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'safety-pnp-solano': 'PNP Solano',
-    'safety-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'safety-pnp-malolos': 'PNP Malolos',
+    'safety-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'safety-privacy-policy': 'Privacy Policy',
     'safety-public-safety': 'Public Safety',
     'safety-public-safety-services': 'Public Safety Services',
@@ -5446,8 +5446,8 @@ const translations = {
     'safety-relief-goods-and-evacuation-support': 'Relief goods and evacuation support',
     'safety-resolution-framework': 'Resolution Framework',
     'safety-resources': 'Resources',
-    'safety-rhu-solano': 'RHU Solano',
-    'safety-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'safety-rhu-malolos': 'RHU Malolos',
+    'safety-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'safety-salubris-hospital': 'Salubris Hospital',
     'safety-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'safety-sangguniang-bayan': 'Sangguniang Bayan',
@@ -5482,8 +5482,8 @@ const translations = {
     'sitemap-contribute-code-with-us': 'Contribute code with us',
     'sitemap-education': 'Education',
     'sitemap-elected-officials': 'Elected Officials',
-    'sitemap-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'sitemap-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'sitemap-engineering-office': 'Engineering Office',
     'sitemap-environment': 'Environment',
     'sitemap-external-resources': 'External Resources',
@@ -5500,17 +5500,17 @@ const translations = {
     'sitemap-infrastructure': 'Infrastructure',
     'sitemap-legislative': 'Legislative',
     'sitemap-legislative-documents': 'Legislative Documents',
-    'sitemap-lgu-solano-facebook': 'LGU Solano Facebook',
+    'sitemap-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'sitemap-local-civil-registrar': 'Local Civil Registrar',
     'sitemap-main-navigation': 'Main Navigation',
     'sitemap-municipal-offices': 'Municipal Offices',
-    'sitemap-navigate-all-pages-and-services-of-better-solano':
-      'Navigate all pages and services of Better Solano',
+    'sitemap-navigate-all-pages-and-services-of-better-malolos':
+      'Navigate all pages and services of Better Malolos',
     'sitemap-navigation': 'Navigation',
     'sitemap-new-business-application': 'New Business Application',
     'sitemap-news': 'News',
-    'sitemap-official-lgu-solano-portal': 'Official LGU Solano Portal',
-    'sitemap-official-solano-website': 'Official Solano Website',
+    'sitemap-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
+    'sitemap-official-malolos-website': 'Official Malolos Website',
     'sitemap-online-payment-order': 'Online Payment Order',
     'sitemap-online-services': 'Online Services',
     'sitemap-open-data-philippines': 'Open Data Philippines',
@@ -5592,8 +5592,8 @@ const translations = {
     'slaughter-duration': 'Duration',
     'slaughter-economic-enterprise-development-office': 'Economic Enterprise & Development Office',
     'slaughter-education': 'Education',
-    'slaughter-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'slaughter-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'slaughter-environment': 'Environment',
     'slaughter-facility-maintenance': 'Facility Maintenance',
     'slaughter-fee': 'Fee',
@@ -5616,7 +5616,7 @@ const translations = {
     'slaughter-large': 'Large',
     'slaughter-large-cattle-registration-certificate': 'Large Cattle Registration Certificate',
     'slaughter-legislative': 'Legislative',
-    'slaughter-lgu-solano-facebook': 'LGU Solano Facebook',
+    'slaughter-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'slaughter-location': 'Location',
     'slaughter-meat-inspection-certificate-is-required-for-meat':
       'Meat Inspection Certificate is required for meat transport',
@@ -5627,7 +5627,7 @@ const translations = {
     'slaughter-office-head': 'Office Head',
     'slaughter-office-information': 'Office Information',
     'slaughter-office-personnel': 'Office Personnel',
-    'slaughter-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'slaughter-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'slaughter-open-data-philippines': 'Open Data Philippines',
     'slaughter-operations-management': 'Operations Management',
     'slaughter-ordinance-framework': 'Ordinance Framework',
@@ -5654,8 +5654,8 @@ const translations = {
     'slaughter-see-fee-schedule': 'See fee schedule',
     'slaughter-seedo-head': 'SEEDO Head',
     'slaughter-seedo-slaughterhouse': 'SEEDO - Slaughterhouse',
-    'slaughter-seedo-slaughterhouse-solano-nueva-vizcaya':
-      'SEEDO Slaughterhouse, Solano, Nueva Vizcaya',
+    'slaughter-seedo-slaughterhouse-malolos-bulacan':
+      'SEEDO Slaughterhouse, Malolos, Bulacan',
     'slaughter-select-a-service-to-view-the-detailed-process':
       'Select a service to view the detailed process, requirements, and fees',
     'slaughter-services': 'Services',
@@ -5703,17 +5703,17 @@ const translations = {
     'social-cmci-dti-portal': 'CMCI DTI Portal',
     'social-contribute-code-with-us': 'Contribute code with us',
     'social-education': 'Education',
-    'social-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'social-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'social-environment': 'Environment',
     'social-fee': 'Fee:',
     'social-freedom-of-information': 'Freedom of Information',
     'social-health': 'Health',
     'social-home': 'Home',
     'social-infrastructure': 'Infrastructure',
-    'social-lgu-solano-facebook': 'LGU Solano Facebook',
+    'social-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'social-mswdo-services': 'MSWDO Services',
-    'social-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'social-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'social-open-data-philippines': 'Open Data Philippines',
     'social-ordinance-framework': 'Ordinance Framework',
     'social-privacy-policy': 'Privacy Policy',
@@ -5770,8 +5770,8 @@ const translations = {
     'stats-economic-sectors': 'Economic Sectors',
     'stats-economy': 'Economy',
     'stats-education': 'Education',
-    'stats-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'stats-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'stats-environment': 'Environment',
     'stats-finance': 'Finance',
     'stats-financial-standing-for-fiscal-year-2023': 'Financial standing for fiscal year 2023',
@@ -5795,11 +5795,11 @@ const translations = {
     'stats-key-economic-data-and-business-statistics': 'Key economic data and business statistics',
     'stats-key-indicators-trend-20162024': 'Key Indicators Trend (2016-2024)',
     'stats-lactawan': 'Lactawan',
-    'stats-lgu-solano-facebook': 'LGU Solano Facebook',
+    'stats-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'stats-local-4055': 'Local 40.55%',
     'stats-municipal-data': 'Municipal Data',
     'stats-municipal-income': 'Municipal Income',
-    'stats-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'stats-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'stats-ordinance-framework': 'Ordinance Framework',
     'stats-osmea': 'Osmeña',
     'stats-overview': 'Overview',
@@ -5829,7 +5829,7 @@ const translations = {
     'stats-sitemap': 'Sitemap',
     'stats-skip-to-main-content': 'Skip to main content',
     'stats-social-services': 'Social Services',
-    'stats-solano-competitive-index': 'Solano Competitive Index',
+    'stats-malolos-competitive-index': 'Malolos Competitive Index',
     'stats-tax-payments': 'Tax Payments',
     'stats-terms-of-use': 'Terms of Use',
     'stats-trade-amp-commerce': 'Trade &amp; Commerce',
@@ -5849,8 +5849,8 @@ const translations = {
     'svc-cmci-dti-portal': 'CMCI DTI Portal',
     'svc-contribute-code-with-us': 'Contribute code with us',
     'svc-education': 'Education',
-    'svc-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'svc-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'svc-environment': 'Environment',
     'svc-freedom-of-information': 'Freedom of Information',
     'svc-getting-married': 'Getting Married',
@@ -5859,9 +5859,9 @@ const translations = {
     'svc-health': 'Health',
     'svc-home': 'Home',
     'svc-infrastructure': 'Infrastructure',
-    'svc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'svc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'svc-need-financial-help': 'Need Financial Help',
-    'svc-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'svc-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'svc-open-data-philippines': 'Open Data Philippines',
     'svc-ordinance-framework': 'Ordinance Framework',
     'svc-person-with-disability': 'Person with Disability',
@@ -5889,21 +5889,21 @@ const translations = {
     'tax-cmci-dti-portal': 'CMCI DTI Portal',
     'tax-contribute-code-with-us': 'Contribute code with us',
     'tax-education': 'Education',
-    'tax-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'tax-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'tax-environment': 'Environment',
     'tax-freedom-of-information': 'Freedom of Information',
     'tax-health': 'Health',
     'tax-home': 'Home',
     'tax-infrastructure': 'Infrastructure',
-    'tax-lgu-solano-facebook': 'LGU Solano Facebook',
+    'tax-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'tax-municipal-accounting-office': 'Municipal Accounting Office',
     'tax-municipal-assessors-office': "Municipal Assessor's Office",
     'tax-municipal-budget-office': 'Municipal Budget Office',
     'tax-municipal-treasurers-office': "Municipal Treasurer's Office",
     'tax-obligation-requests-barangay-budget-review-and':
       'Obligation requests, barangay budget review, and SEF budget preparation',
-    'tax-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'tax-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'tax-online-payment-order': 'Online Payment Order',
     'tax-open-data-philippines': 'Open Data Philippines',
     'tax-ordinance-framework': 'Ordinance Framework',
@@ -5944,7 +5944,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'All information on this website is provided "AS IS" without warranty of any kind, whether express or implied. This includes, but is not limited to:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Although volunteers aim to keep the website accessible and functional, BetterSolano.org cannot guarantee that the website will be:',
+      'Although volunteers aim to keep the website accessible and functional, BetterMalolos.org cannot guarantee that the website will be:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or other harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -5954,15 +5954,15 @@ const translations = {
     'terms-any-loss-corruption-or-disclosure-of-data-or':
       'Any loss, corruption, or disclosure of data or information',
     'terms-as-a-volunteerrun-initiative-this-website-does':
-      'As a volunteer-run initiative, this website does not replace official government channels. Residents and stakeholders are encouraged to conduct their own independent research and verification of all information found here and to consult official LGU Solano offices and government agencies when making important decisions.',
+      'As a volunteer-run initiative, this website does not replace official government channels. Residents and stakeholders are encouraged to conduct their own independent research and verification of all information found here and to consult official LGU Malolos offices and government agencies when making important decisions.',
     'terms-as-is-disclaimer': '"As Is" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Available or accessible at all times',
-    'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'BetterSolano.org is a civic platform dedicated to empowering the people of Solano by providing transparent access to the services, programs, and public funds of LGU Solano.',
-    'terms-bettersolanoorg-provides-public-domain':
-      'BetterSolano.org provides public domain information to support civic engagement, transparency, and informed participation in local governance.',
-    'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'BetterSolano.org values accuracy, public safety, and respect for rights. Despite good-faith efforts, some content may become outdated, incomplete, or raise legitimate concerns.',
+    'terms-bettermalolosorg-is-a-civic-platform-dedicated-to':
+      'BetterMalolos.org is a civic platform dedicated to empowering the people of Malolos by providing transparent access to the services, programs, and public funds of LGU Malolos.',
+    'terms-bettermalolosorg-provides-public-domain':
+      'BetterMalolos.org provides public domain information to support civic engagement, transparency, and informed participation in local governance.',
+    'terms-bettermalolosorg-values-accuracy-public-safety-and':
+      'BetterMalolos.org values accuracy, public safety, and respect for rights. Despite good-faith efforts, some content may become outdated, incomplete, or raise legitimate concerns.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Business',
     'terms-by-accessing-and-using-this-website-you':
@@ -5999,8 +5999,8 @@ const translations = {
     'terms-editorial-decisions-about-content-rest-with-the':
       'Editorial decisions about content rest with the website team, guided by public interest and civic responsibility.',
     'terms-education': 'Education',
-    'terms-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'terms-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'terms-environment': 'Environment',
     'terms-errorfree-or-uninterrupted': 'Error-free or uninterrupted',
     'terms-external-references': 'External References',
@@ -6018,7 +6018,7 @@ const translations = {
       'Fully compatible with all devices, browsers, or assistive technologies',
     'terms-governing-law': 'Governing Law',
     'terms-government': 'Government',
-    'terms-guidelines-for-using-bettersolanoorg': 'Guidelines for using BetterSolano.org',
+    'terms-guidelines-for-using-bettermalolosorg': 'Guidelines for using BetterMalolos.org',
     'terms-health': 'Health',
     'terms-home': 'Home',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -6040,13 +6040,13 @@ const translations = {
     'terms-legislative': 'Legislative',
     'terms-legitimate-concerns-will-be-reviewed-in-good':
       'Legitimate concerns will be reviewed in good faith by volunteers.',
-    'terms-lgu-solano-facebook': 'LGU Solano Facebook',
+    'terms-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'terms-limitation-of-liability': 'Limitation of Liability',
     'terms-modifications': 'Modifications',
     'terms-no-professional-advice': 'No Professional Advice',
     'terms-noninfringement-of-intellectual-property-rights':
       'Non-infringement of intellectual property rights',
-    'terms-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'terms-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'terms-open-data-philippines': 'Open Data Philippines',
     'terms-ordinance-framework': 'Ordinance Framework',
     'terms-our-response-process': 'Our Response Process',
@@ -6056,7 +6056,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Public Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Public domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Public domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterMalolos.org and LGU Malolos is encouraged as a civic courtesy.',
     'terms-public-safety': 'Public Safety',
     'terms-quick-links': 'Quick Links',
     'terms-resolution-framework': 'Resolution Framework',
@@ -6113,12 +6113,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify information directly from original and official sources',
     'terms-volunteer-with-us': 'Volunteer with us',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Warranties of merchantability',
     'terms-website-availability': 'Website Availability',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly include:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'While volunteers make every effort to secure BetterSolano.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.',
+      'While volunteers make every effort to secure BetterMalolos.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.',
     'terms-you-are-strongly-encouraged-to': 'You are strongly encouraged to:',
     'terms-your-contact-information-for-followup': 'Your contact information for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':
@@ -6173,8 +6173,8 @@ const translations = {
     'treas-discount': 'Discount:',
     'treas-discountpenalty': 'Discount/Penalty',
     'treas-education': 'Education',
-    'treas-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'treas-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'treas-environment': 'Environment',
     'treas-fee': 'Fee:',
     'treas-fee-collection': 'Fee Collection',
@@ -6183,8 +6183,8 @@ const translations = {
     'treas-free': 'Free',
     'treas-freedom-of-information': 'Freedom of Information',
     'treas-government': 'Government',
-    'treas-ground-floor-municipal-hall-solano-nueva-vizcaya':
-      'Ground Floor, Municipal Hall, Solano, Nueva Vizcaya',
+    'treas-ground-floor-municipal-hall-malolos-bulacan':
+      'Ground Floor, Municipal Hall, Malolos, Bulacan',
     'treas-health': 'Health',
     'treas-home': 'Home',
     'treas-hours': 'Hours',
@@ -6204,7 +6204,7 @@ const translations = {
     'treas-keep-all-official-receipts-for-records': 'Keep all official receipts for records',
     'treas-late-payment': 'Late Payment',
     'treas-legislative': 'Legislative',
-    'treas-lgu-solano-facebook': 'LGU Solano Facebook',
+    'treas-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'treas-location': 'Location',
     'treas-march-31': 'March 31',
     'treas-maximum-72-36-months': 'Maximum 72% (36 months)',
@@ -6215,7 +6215,7 @@ const translations = {
     'treas-no-discountpenalty': 'No discount/penalty',
     'treas-office': 'Office',
     'treas-office-information': 'Office Information',
-    'treas-official-lgu-solano-portal': 'Official LGU Solano Portal',
+    'treas-official-lgu-malolos-portal': 'Official LGU Malolos Portal',
     'treas-official-receipt': 'Official Receipt',
     'treas-open-data-philippines': 'Open Data Philippines',
     'treas-ordinance-framework': 'Ordinance Framework',
@@ -6254,7 +6254,7 @@ const translations = {
     'treas-tax-assessment-inquiry': 'Tax Assessment Inquiry',
     'treas-tax-clearance': 'Tax Clearance',
     'treas-tax-collection-fee-payments-and-financial':
-      'Tax collection, fee payments, and financial services for Solano residents',
+      'Tax collection, fee payments, and financial services for Malolos residents',
     'treas-tax-declaration-assessment': 'Tax Declaration / Assessment',
     'treas-tax-payments': 'Tax Payments',
     'treas-tax-payments-2': 'Tax & Payments',
@@ -6297,8 +6297,8 @@ const translations = {
     'tricycle-contact': 'Contact',
     'tricycle-contribute-code-with-us': 'Contribute code with us',
     'tricycle-education': 'Education',
-    'tricycle-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'tricycle-empowering-the-people-of-malolos-with-transparent':
+      'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'tricycle-encoding-of-application': 'Encoding of Application',
     'tricycle-environment': 'Environment',
     'tricycle-franchise-steps': 'Franchise Steps',
@@ -6318,7 +6318,7 @@ const translations = {
     'tricycle-inspection-of-tricycle-unit': 'Inspection of Tricycle Unit',
     'tricycle-legislative': 'Legislative',
     'tricycle-mayors-approval': "Mayor's Approval",
-    'tricycle-municipal-hall-solano-nueva-vizcaya': 'Municipal Hall, Solano, Nueva Vizcaya',
+    'tricycle-municipal-hall-malolos-bulacan': 'Municipal Hall, Malolos, Bulacan',
     'tricycle-municipal-mayor-approves-the-application-form':
       'Municipal Mayor approves the application form',
     'tricycle-municipal-treasurers-office-collects-the-fees':
@@ -6407,61 +6407,61 @@ const translations = {
     'tax-property': 'Real Property Tax',
     'tax-property-desc': 'Annual tax on land and improvements',
 
-    // Solano Quiz
-    'accessibility-solano-quiz': 'Solano Quiz',
-    'acct-solano-quiz': 'Solano Quiz',
-    'agri-solano-quiz': 'Solano Quiz',
-    'assessor-solano-quiz': 'Solano Quiz',
-    'birth-solano-quiz': 'Solano Quiz',
-    'biz-solano-quiz': 'Solano Quiz',
-    'bpls-solano-quiz': 'Solano Quiz',
-    'budget-solano-quiz': 'Solano Quiz',
-    'cert-solano-quiz': 'Solano Quiz',
-    'civil-solano-quiz': 'Solano Quiz',
-    'contact-solano-quiz': 'Solano Quiz',
-    'death-solano-quiz': 'Solano Quiz',
-    'edu-solano-quiz': 'Solano Quiz',
-    'eng-solano-quiz': 'Solano Quiz',
-    'env-solano-quiz': 'Solano Quiz',
-    'err403-solano-quiz': 'Solano Quiz',
-    'err404-solano-quiz': 'Solano Quiz',
-    'err500-solano-quiz': 'Solano Quiz',
-    'faq-solano-quiz': 'Solano Quiz',
-    'gensvc-solano-quiz': 'Solano Quiz',
-    'gov-solano-quiz': 'Solano Quiz',
-    'health-solano-quiz': 'Solano Quiz',
-    'home-solano-quiz': 'Solano Quiz',
-    'hr-solano-quiz': 'Solano Quiz',
-    'infra-solano-quiz': 'Solano Quiz',
-    'legis-solano-quiz': 'Solano Quiz',
-    'magri-solano-quiz': 'Solano Quiz',
-    'market-solano-quiz': 'Solano Quiz',
-    'marriage-solano-quiz': 'Solano Quiz',
-    'mbudget-solano-quiz': 'Solano Quiz',
-    'mcivil-solano-quiz': 'Solano Quiz',
-    'mgensvc-solano-quiz': 'Solano Quiz',
-    'mswdo-solano-quiz': 'Solano Quiz',
-    'mswdo-svc-solano-quiz': 'Solano Quiz',
-    'news-solano-quiz': 'Solano Quiz',
-    'officials-solano-quiz': 'Solano Quiz',
-    'ord-solano-quiz': 'Solano Quiz',
-    'plan-solano-quiz': 'Solano Quiz',
-    'privacy-solano-quiz': 'Solano Quiz',
-    'propdec-solano-quiz': 'Solano Quiz',
-    'reso-solano-quiz': 'Solano Quiz',
-    'safety-solano-quiz': 'Solano Quiz',
-    'sitemap-solano-quiz': 'Solano Quiz',
-    'slaughter-solano-quiz': 'Solano Quiz',
-    'social-solano-quiz': 'Solano Quiz',
-    'stats-solano-quiz': 'Solano Quiz',
-    'svc-solano-quiz': 'Solano Quiz',
-    'tax-solano-quiz': 'Solano Quiz',
-    'terms-solano-quiz': 'Solano Quiz',
-    'treas-solano-quiz': 'Solano Quiz',
-    'tricycle-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya': 'How well do you know Solano, Nueva Vizcaya?',
+    // Malolos Quiz
+    'accessibility-malolos-quiz': 'Malolos Quiz',
+    'acct-malolos-quiz': 'Malolos Quiz',
+    'agri-malolos-quiz': 'Malolos Quiz',
+    'assessor-malolos-quiz': 'Malolos Quiz',
+    'birth-malolos-quiz': 'Malolos Quiz',
+    'biz-malolos-quiz': 'Malolos Quiz',
+    'bpls-malolos-quiz': 'Malolos Quiz',
+    'budget-malolos-quiz': 'Malolos Quiz',
+    'cert-malolos-quiz': 'Malolos Quiz',
+    'civil-malolos-quiz': 'Malolos Quiz',
+    'contact-malolos-quiz': 'Malolos Quiz',
+    'death-malolos-quiz': 'Malolos Quiz',
+    'edu-malolos-quiz': 'Malolos Quiz',
+    'eng-malolos-quiz': 'Malolos Quiz',
+    'env-malolos-quiz': 'Malolos Quiz',
+    'err403-malolos-quiz': 'Malolos Quiz',
+    'err404-malolos-quiz': 'Malolos Quiz',
+    'err500-malolos-quiz': 'Malolos Quiz',
+    'faq-malolos-quiz': 'Malolos Quiz',
+    'gensvc-malolos-quiz': 'Malolos Quiz',
+    'gov-malolos-quiz': 'Malolos Quiz',
+    'health-malolos-quiz': 'Malolos Quiz',
+    'home-malolos-quiz': 'Malolos Quiz',
+    'hr-malolos-quiz': 'Malolos Quiz',
+    'infra-malolos-quiz': 'Malolos Quiz',
+    'legis-malolos-quiz': 'Malolos Quiz',
+    'magri-malolos-quiz': 'Malolos Quiz',
+    'market-malolos-quiz': 'Malolos Quiz',
+    'marriage-malolos-quiz': 'Malolos Quiz',
+    'mbudget-malolos-quiz': 'Malolos Quiz',
+    'mcivil-malolos-quiz': 'Malolos Quiz',
+    'mgensvc-malolos-quiz': 'Malolos Quiz',
+    'mswdo-malolos-quiz': 'Malolos Quiz',
+    'mswdo-svc-malolos-quiz': 'Malolos Quiz',
+    'news-malolos-quiz': 'Malolos Quiz',
+    'officials-malolos-quiz': 'Malolos Quiz',
+    'ord-malolos-quiz': 'Malolos Quiz',
+    'plan-malolos-quiz': 'Malolos Quiz',
+    'privacy-malolos-quiz': 'Malolos Quiz',
+    'propdec-malolos-quiz': 'Malolos Quiz',
+    'reso-malolos-quiz': 'Malolos Quiz',
+    'safety-malolos-quiz': 'Malolos Quiz',
+    'sitemap-malolos-quiz': 'Malolos Quiz',
+    'slaughter-malolos-quiz': 'Malolos Quiz',
+    'social-malolos-quiz': 'Malolos Quiz',
+    'stats-malolos-quiz': 'Malolos Quiz',
+    'svc-malolos-quiz': 'Malolos Quiz',
+    'tax-malolos-quiz': 'Malolos Quiz',
+    'terms-malolos-quiz': 'Malolos Quiz',
+    'treas-malolos-quiz': 'Malolos Quiz',
+    'tricycle-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan': 'How well do you know Malolos, Bulacan?',
     'home-evaluate-your-familiarity-with-the-municipalitys':
-      "Evaluate your familiarity with the municipality\'s heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Nueva Vizcaya\'s most prominent localities.",
+      "Evaluate your familiarity with the municipality\'s heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Bulacan\'s most prominent localities.",
     'home-take-the-quiz': 'Take the Quiz',
   },
 
@@ -6481,7 +6481,7 @@ const translations = {
     'nav-terms': 'Mga Tuntunin',
     'nav-accessibility': 'Aksesibilidad',
     'stats-title': 'Estadistika ng Munisipalidad',
-    'stats-subtitle': 'Datos at estadistika tungkol sa Solano, Nueva Vizcaya',
+    'stats-subtitle': 'Datos at estadistika tungkol sa Malolos, Bulacan',
     'stats-demographics': 'Pangkalahatang-ideya ng Demograpiya',
     'stats-economic': 'Mga Tagapagpahiwatig ng Ekonomiya',
     'stats-barangay': 'Populasyon Ayon sa Barangay',
@@ -6503,15 +6503,15 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ng Site',
     'breadcrumb-privacy': 'Patakaran sa Pagkapribado',
     'breadcrumb-terms': 'Mga Tuntunin ng Paggamit',
-    'hero-welcome': 'Maligayang Pagdating sa BetterSolano.org',
+    'hero-welcome': 'Maligayang Pagdating sa BetterMalolos.org',
     'hero-subtitle':
-      'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Solano, Nueva Vizcaya.',
+      'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Malolos, Bulacan.',
     'hero-browse': 'Tingnan ang mga Serbisyo',
     'hero-contact': 'Makipag-ugnayan sa Amin',
     'hero-search-placeholder': 'Maghanap ng serbisyo...',
     'hero-find-service': 'Maghanap ng Serbisyo',
     'appointment-cta-heading':
-      'Pagpapahusay ng Serbisyo sa Appointment ng Opisina ng Alkalde ng LGU Solano',
+      'Pagpapahusay ng Serbisyo sa Appointment ng Opisina ng Alkalde ng LGU Malolos',
     'appointment-cta-subtitle': 'Walang pila. Walang pabalik-balik. Mahusay na appointment lang.',
     'appointment-schedule-btn': 'Mag-iskedyul ng Appointment',
     'appointment-create-btn': 'Gumawa ng Account',
@@ -6552,16 +6552,16 @@ const translations = {
     'contact-municipal-hall': 'Munisipyo',
     'contact-location': 'Lokasyon',
     'contact-directions': 'Kumuha ng Direksyon',
-    'footer-title': 'Better Solano',
+    'footer-title': 'Better Malolos',
     'footer-desc':
-      'Isang portal ng impormasyon na inuuna ang serbisyo para sa Munisipalidad ng Solano, Nueva Vizcaya.',
+      'Isang portal ng impormasyon na inuuna ang serbisyo para sa Munisipalidad ng Malolos, Bulacan.',
     'footer-quick-links': 'Mabilis na Links',
     'footer-all-services': 'Lahat ng Serbisyo',
     'footer-officials': 'Mga Opisyal',
     'footer-contact-us': 'Makipag-ugnayan sa Amin',
     'footer-faq': 'Mga Madalas Itanong',
     'footer-contact': 'Makipag-ugnayan',
-    'footer-copyright': 'Better Solano. Nakalaan ang lahat ng karapatan.',
+    'footer-copyright': 'Better Malolos. Nakalaan ang lahat ng karapatan.',
     'accessibility-statement': 'Pahayag ng Aksesibilidad',
     'footer-privacy': 'Patakaran sa Pagkapribado',
     'footer-terms': 'Mga Tuntunin ng Paggamit',
@@ -6569,7 +6569,7 @@ const translations = {
     'footer-volunteer': 'Mag-volunteer sa amin',
     'footer-contribute': 'Mag-ambag ng code sa amin',
     'services-title': 'Direktoryo ng Serbisyong Munisipal',
-    'services-subtitle': 'Tingnan ang lahat ng serbisyong inaalok ng Munisipalidad ng Solano',
+    'services-subtitle': 'Tingnan ang lahat ng serbisyong inaalok ng Munisipalidad ng Malolos',
     'search-placeholder': 'Maghanap ng serbisyo...',
     'search-no-results': 'Walang nahanap na serbisyo',
     'search-try-different': 'Subukan ang ibang mga keyword o tingnan ang mga kategorya sa ibaba',
@@ -6648,7 +6648,7 @@ const translations = {
     'cert-page-badge': 'Mga Sertipiko',
     'cert-birth': 'Sertipiko ng Kapanganakan',
     'cert-birth-desc':
-      'Kumuha ng certified copy ng sertipiko ng kapanganakan na nakarehistro sa Solano',
+      'Kumuha ng certified copy ng sertipiko ng kapanganakan na nakarehistro sa Malolos',
     'cert-marriage': 'Sertipiko ng Kasal',
     'cert-marriage-desc': 'Magrehistro o humiling ng certified true copy ng sertipiko ng kasal',
     'cert-death': 'Sertipiko ng Kamatayan',
@@ -6696,12 +6696,12 @@ const translations = {
     'health-stat-hospitals': 'Mga Pangunahing Ospital',
     'health-stat-bhs': 'Mga Barangay Health Station',
     'health-stat-mho': 'Opisina ng Kalusugan ng Munisipalidad',
-    'health-section-hospitals': 'Mga Ospital sa Solano',
+    'health-section-hospitals': 'Mga Ospital sa Malolos',
     'health-section-mho': 'Opisina ng Kalusugan ng Munisipalidad',
     'health-section-bhs': 'Mga Barangay Health Station',
     'health-bhs-subtitle':
-      '22 Barangay Health Stations/Centers na naglilingkod sa lahat ng barangay ng Solano',
-    'health-mho-title': 'Opisina ng Kalusugan ng Munisipalidad ng Solano',
+      '22 Barangay Health Stations/Centers na naglilingkod sa lahat ng barangay ng Malolos',
+    'health-mho-title': 'Opisina ng Kalusugan ng Munisipalidad ng Malolos',
     'health-mho-desc':
       'Ang Municipal Health Office ay nagbibigay ng pangunahing serbisyo sa kalusugan kabilang ang lying-in facility at laboratory services. Ito ang pangunahing public health center ng munisipalidad.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -6723,7 +6723,7 @@ const translations = {
     'agri-office-mao-desc':
       'Pagpaparehistro sa RSBSA, mga sertipikasyon, programa sa palay/mais, livestock, serbisyo sa pangisdaan',
     'ord-page-title': 'Balangkas ng Ordinansa',
-    'ord-page-desc': 'Mga ordinansang ipinasa ng Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Mga ordinansang ipinasa ng Sangguniang Bayan ng Malolos',
     'ord-page-badge': 'Lehislatura',
     'ord-what-is': 'Ano ang Ordinansa?',
     'ord-what-is-p1':
@@ -6739,13 +6739,13 @@ const translations = {
     'ord-cat-zoning': 'Zoning at Paggamit ng Lupa',
     'ord-2025-title': 'Mga Ordinansa ng 2025',
     'ord-2025-subtitle':
-      'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Solano sa 2025',
+      'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Malolos sa 2025',
     'ord-table-number': 'Numero ng Ordinansa',
     'ord-table-title': 'Pamagat',
     'ord-table-date': 'Petsa ng Sesyon',
     'ord-view-all': 'Tingnan Lahat ng Ordinansa sa SB Website',
     'reso-page-title': 'Balangkas ng Resolusyon',
-    'reso-page-desc': 'Mga resolusyong ipinasa ng Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Mga resolusyong ipinasa ng Sangguniang Bayan ng Malolos',
     'reso-page-badge': 'Lehislatura',
     'reso-what-is': 'Ano ang Resolusyon?',
     'reso-what-is-p1':
@@ -6761,16 +6761,16 @@ const translations = {
     'reso-type-appropriation': 'Apropriyasyon',
     'reso-2026-title': 'Mga Resolusyon ng 2026',
     'reso-2026-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Solano sa 2026',
+      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Malolos sa 2026',
     'reso-2025-title': 'Mga Resolusyon ng 2025',
     'reso-2025-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Solano sa 2025',
+      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Malolos sa 2025',
     'reso-table-number': 'Numero ng Resolusyon',
     'reso-table-title': 'Pamagat',
     'reso-table-date': 'Petsa ng Sesyon',
     'reso-view-all': 'Tingnan Lahat ng Resolusyon sa SB Website',
     'biz-page-title': 'Serbisyo sa Negosyo',
-    'biz-page-desc': 'Mga permit, lisensya, at suporta para sa mga negosyo sa Solano',
+    'biz-page-desc': 'Mga permit, lisensya, at suporta para sa mga negosyo sa Malolos',
     'biz-page-badge': 'Negosyo',
     'biz-permit-new': 'Permit sa Negosyo (Bago)',
     'biz-permit-new-desc': "Mag-apply ng bagong mayor's permit para sa negosyo",
@@ -6859,13 +6859,13 @@ const translations = {
     'env-tree-desc': 'Permit para sa pagputol at pag-aalis ng puno',
     'section-responsible-offices': 'Mga Responsableng Opisina',
     'gov-title': 'Istruktura at Opisyal ng Pamahalaan',
-    'gov-subtitle': 'Kilalanin ang pamunuan at mga opisina na naglilingkod sa Solano',
+    'gov-subtitle': 'Kilalanin ang pamunuan at mga opisina na naglilingkod sa Malolos',
     'gov-executive': 'Ehekutibong Sangay',
     'gov-sb-members': 'Mga Miyembro ng Sangguniang Bayan',
-    'gov-sb-subtitle': 'Mga Konsehal na naglilingkod sa mga tao ng Solano',
+    'gov-sb-subtitle': 'Mga Konsehal na naglilingkod sa mga tao ng Malolos',
     'gov-departments': 'Mga Pinuno ng Departamento at Pangunahing Opisina',
     'gov-dept-subtitle': 'Mga opisina ng munisipalidad na nagbibigay ng serbisyo sa mga mamamayan',
-    'gov-barangays': 'Mga Barangay ng Solano',
+    'gov-barangays': 'Mga Barangay ng Malolos',
     'gov-barangays-count': '22 Barangay na naglilingkod sa ating komunidad',
     'gov-organizational-chart': 'Tsart ng Organisasyon',
     'gov-term': 'Termino',
@@ -6956,7 +6956,7 @@ const translations = {
     'legislative-approved': 'Naaprubahan',
     'legislative-enacted': 'Naisabatas',
     'news-title': 'Balita at Anunsyo',
-    'news-subtitle': 'Pinakabagong balita mula sa Munisipalidad ng Solano',
+    'news-subtitle': 'Pinakabagong balita mula sa Munisipalidad ng Malolos',
     'news-latest': 'Pinakabagong Balita',
     'news-announcements': 'Mga Anunsyo',
     'news-events': 'Mga Kaganapan',
@@ -7055,10 +7055,10 @@ const translations = {
     'a11y-all-functionality-available-using-only-a-keyboard':
       'Lahat ng functionality ay magagamit gamit lamang ang keyboard.',
     'a11y-all-images-have-descriptive-alt-text': 'Lahat ng larawan ay may deskriptibong alt text.',
-    'a11y-better-solano-is-committed-to-ensuring-digital':
-      'Ang Better Solano ay nakatuon sa pagtiyak ng digital na accessibility para sa mga taong maaari kapansanan. Patuloy naming pinapabuti ang karanasan ng gumagamit para sa lahat sa inilalapat ang mga kaugnay na pamantayan ng accessibility.',
-    'a11y-better-solano-is-committed-to-ensuring-that-our':
-      'Ang Better Solano ay nakatuon sa pagtiyak na ang aming mga digital na serbisyo ay naa-access ng lahat ng mamamayan, anuman ang kakayahan. Kami view accessibility hindi as isang feature, ngunit as isang fundamental right.',
+    'a11y-better-malolos-is-committed-to-ensuring-digital':
+      'Ang Better Malolos ay nakatuon sa pagtiyak ng digital na accessibility para sa mga taong maaari kapansanan. Patuloy naming pinapabuti ang karanasan ng gumagamit para sa lahat sa inilalapat ang mga kaugnay na pamantayan ng accessibility.',
+    'a11y-better-malolos-is-committed-to-ensuring-that-our':
+      'Ang Better Malolos ay nakatuon sa pagtiyak na ang aming mga digital na serbisyo ay naa-access ng lahat ng mamamayan, anuman ang kakayahan. Kami view accessibility hindi as isang feature, ngunit as isang fundamental right.',
     'a11y-blgf-portal': 'BLGF Portal',
     'a11y-business': 'Negosyo',
     'a11y-certificates': 'Mga Sertipiko',
@@ -7069,8 +7069,8 @@ const translations = {
     'a11y-conformant': 'Sumusunod',
     'a11y-css3': 'CSS3',
     'a11y-education': 'Edukasyon',
-    'a11y-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'a11y-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'a11y-environment': 'Kapaligiran',
     'a11y-freedom-of-information': 'Kalayaan sa Impormasyon',
     'a11y-health': 'Kalusugan',
@@ -7082,13 +7082,13 @@ const translations = {
     'a11y-javascript': 'JavaScript',
     'a11y-keyboard-navigation': 'Nabigasyon sa Keyboard',
     'a11y-last-updated-november-29-2025': 'Huling na-update: November 29, 2025',
-    'a11y-lgu-solano-facebook': 'LGU Solano Facebook',
+    'a11y-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'a11y-meets-wcag-aa-contrast-requirements':
       'Natutugunan ang mga kinakailangan sa contrast ng WCAG AA.',
     'a11y-no-time-limits': 'Walang Limitasyon sa Oras',
     'a11y-no-time-limits-on-reading-or-interacting':
       'Walang limitasyon sa oras sa pagbabasa o pakikipag-ugnayan.',
-    'a11y-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'a11y-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'a11y-open-data-philippines': 'Open Data Philippines',
     'a11y-ordinance-framework': 'Balangkas ng Ordinansa',
     'a11y-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -7112,7 +7112,7 @@ const translations = {
     'a11y-text-alternatives': 'Mga Alternatibong Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Mag-volunteer sa amin',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Gumagana sa lahat ng device at laki ng screen.',
     'acct-1-day': '1 araw',
@@ -7169,8 +7169,8 @@ const translations = {
     'acct-dtr-leave-forms-ot-authorization': 'DTR, mga form ng Leave, awtorisasyon ng OT',
     'acct-duration': 'Tagal',
     'acct-education': 'Edukasyon',
-    'acct-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'acct-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'acct-environment': 'Kapaligiran',
     'acct-evangeline-b-ramos': 'Evangeline B. Ramos',
     'acct-financial-reports-are-submitted-monthly-to-coa':
@@ -7195,20 +7195,20 @@ const translations = {
     'acct-key-personnel-handling-accounting-services':
       'Key mga tauhan humahawak ng mga serbisyo ng accounting',
     'acct-legislative': 'Lehislatura',
-    'acct-lgu-solano-facebook': 'LGU Solano Facebook',
+    'acct-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'acct-location': 'Lokasyon',
     'acct-mary-jane-c-salvador': 'Mary Jane C. Salvador',
     'acct-mun-accounting': 'Mun. Accounting',
     'acct-municipal-accountant': 'Accountant ng Munisipalidad',
     'acct-municipal-accounting-office': 'Opisina ng Accounting ng Munisipalidad',
-    'acct-municipal-accounting-office-municipal-hall-solano':
-      'Pangmunisipyo Opisina ng Accounting, Munisipyo, Solano, Nueva Vizcaya',
+    'acct-municipal-accounting-office-municipal-hall-malolos':
+      'Pangmunisipyo Opisina ng Accounting, Munisipyo, Malolos, Bulacan',
     'acct-municipal-hall': 'Munisipyo',
     'acct-obligation-request-obr': 'Kahilingan ng Obligasyon (ObR)',
     'acct-office': 'Opisina',
     'acct-office-information': 'Impormasyon ng Opisina',
     'acct-office-personnel': 'Mga Tauhan ng Opisina',
-    'acct-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'acct-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'acct-ongoing': 'Kasalukuyan',
     'acct-open-data-philippines': 'Open Data Philippines',
     'acct-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -7304,15 +7304,15 @@ const translations = {
     'agri-cmci-dti-portal': 'CMCI DTI Portal',
     'agri-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'agri-education': 'Edukasyon',
-    'agri-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'agri-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'agri-environment': 'Kapaligiran',
     'agri-freedom-of-information': 'Kalayaan sa Impormasyon',
     'agri-health': 'Kalusugan',
     'agri-home': 'Tahanan',
     'agri-infrastructure': 'Imprastraktura',
-    'agri-lgu-solano-facebook': 'LGU Solano Facebook',
-    'agri-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'agri-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'agri-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'agri-open-data-philippines': 'Open Data Philippines',
     'agri-ordinance-framework': 'Balangkas ng Ordinansa',
     'agri-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -7347,7 +7347,7 @@ const translations = {
       'Pagtatasa at pagpapahalaga ng mga tunay na ari-arian para sa layunin ng pagbubuwis',
     'assessor-assessors-staff-will-conduct-onsite-inspection':
       'Ang kawani ng Tagapagtasa ay magsasagawa ng on-site na inspeksyon at pagsukat ng ari-arian.',
-    'assessor-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'assessor-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'assessor-availability': 'Pagkakaroon',
     'assessor-blgf-portal': 'BLGF Portal',
     'assessor-bring-original-documents': 'Dalhin orihinal mga dokumento',
@@ -7361,7 +7361,7 @@ const translations = {
     'assessor-certification-of-the-total-land-area-based-on-tax':
       'Certification of the kabuuang lupa lugar based on buwis mga rekord.',
     'assessor-certification-that-a-person-has-no-declared':
-      'Sertipikasyon na ang isang tao ay walang idineklaang ari-arian sa Solano.',
+      'Sertipikasyon na ang isang tao ay walang idineklaang ari-arian sa Malolos.',
     'assessor-certifications': 'Mga Sertipikasyon',
     'assessor-certified-true-copy-of-tax-declaration':
       'Sertipikadong Tunay na Kopya of Deklarasyon ng Buwis',
@@ -7375,8 +7375,8 @@ const translations = {
     'assessor-duplicate-copy': 'Duplikadong Kopya',
     'assessor-education': 'Edukasyon',
     'assessor-email': 'Email',
-    'assessor-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'assessor-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'assessor-environment': 'Kapaligiran',
     'assessor-fee': 'Bayad',
     'assessor-fee-2': 'Bayad:',
@@ -7403,15 +7403,15 @@ const translations = {
     'assessor-land-reclassification': 'Reklasipikasyon ng Lupa',
     'assessor-land-reclassification-changes-the-category-of':
       'Land reclassification mga pagbabago ang category ng lupa para sa pagtatasa mga layunin, na affects ang naaangkop pagtatasa level sa tax rate.',
-    'assessor-lgu-solano-facebook': 'LGU Solano Facebook',
+    'assessor-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'assessor-lis-pendens': 'Lis Pendens',
     'assessor-list-of-all-properties-declared-under-a-persons':
       'Listahan ng lahat ng ari-ariang idineklara sa pangalan ng isang tao.',
     'assessor-location': 'Lokasyon',
     'assessor-mortgage-annotation': 'Anotasyon ng Mortgage',
     'assessor-municipal-assessors-office': 'Opisina ng Tagapagtasa ng Munisipalidad',
-    'assessor-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipyo, Unang Palapag, Solano, Nueva Vizcaya 3708',
+    'assessor-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipyo, Unang Palapag, Malolos, Bulacan 3708',
     'assessor-new-owner': 'Bagong May-ari',
     'assessor-new-tax-declaration': 'Bago Deklarasyon ng Buwis',
     'assessor-new-tax-declaration-is-issued-reflecting-the':
@@ -7423,7 +7423,7 @@ const translations = {
     'assessor-office-hours': 'Oras ng Opisina',
     'assessor-official-copy-of-tax-declaration-for-legal-and':
       'Opisyal na kopya ng tax declaration para sa legal at layuning pangbangko.',
-    'assessor-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'assessor-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'assessor-open-data-philippines': 'Open Data Philippines',
     'assessor-ordinance-framework': 'Balangkas ng Ordinansa',
     'assessor-ownercreditor': 'May-ari/Pinagkakautangan',
@@ -7525,8 +7525,8 @@ const translations = {
     'bc-documents-needed-for-your-application':
       'Mga dokumentong kailangan para sa iyong aplikasyon',
     'bc-education': 'Edukasyon',
-    'bc-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'bc-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'bc-environment': 'Kapaligiran',
     'bc-fee': 'Bayad',
     'bc-fill-out-request-form': 'Punan ang Form ng Kahilingan',
@@ -7545,13 +7545,13 @@ const translations = {
     'bc-legislative': 'Lehislatura',
     'bc-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'bc-marriage-certificate': 'Sertipiko ng Kasal',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipyo, Ikalawang Palapag Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipyo, Ikalawang Palapag Malolos, Bulacan',
     'bc-need-help': 'Kailangan Tulong?',
     'bc-office-information': 'Impormasyon ng Opisina',
     'bc-official-certified-copy-of-birth-certificate':
-      'Opisyal na sertipikadong kopya ng sertipiko ng kapanganakan na nakarehistro sa Solano',
-    'bc-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+      'Opisyal na sertipikadong kopya ng sertipiko ng kapanganakan na nakarehistro sa Malolos',
+    'bc-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'bc-open-data-philippines': 'Open Data Philippines',
     'bc-ordinance-framework': 'Balangkas ng Ordinansa',
     'bc-ownerrepresentative': 'May-ari/Kinatawan',
@@ -7611,8 +7611,8 @@ const translations = {
     'biz-cmci-dti-portal': 'CMCI DTI Portal',
     'biz-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'biz-education': 'Edukasyon',
-    'biz-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'biz-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'biz-environment': 'Kapaligiran',
     'biz-freedom-of-information': 'Kalayaan sa Impormasyon',
     'biz-health': 'Kalusugan',
@@ -7620,13 +7620,13 @@ const translations = {
       'Pagkatay ng baboy, baka, kambing, at kalabaw na may mga serbisyo ng inspeksyon ng karne',
     'biz-home': 'Tahanan',
     'biz-infrastructure': 'Imprastraktura',
-    'biz-lgu-solano-facebook': 'LGU Solano Facebook',
+    'biz-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'biz-market-clearance-entrance-fees-vendor-services':
       'Market clearance, mga bayad sa pagpasok, mga serbisyo sa vendor, at pagbibigay ng CTC',
     'biz-new-business-application': 'Bago Business Aplikasyon',
     'biz-new-permits-renewals-mayors-clearance-and-other':
       "Bagong mga permiso, mga pag-renew, Mayor's clearance, sa iba pang permiso sa negosyos",
-    'biz-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'biz-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'biz-open-data-philippines': 'Open Data Philippines',
     'biz-ordinance-framework': 'Balangkas ng Ordinansa',
     'biz-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -7668,7 +7668,7 @@ const translations = {
     'bpl-annual-renewal-of-existing-business-permit':
       'Taunang pag-renew ng umiiral na permiso sa negosyo (Enero 1-20 nang walang karagdagang singil)',
     'bpl-application-for-new-business-permit-for':
-      'Aplikasyon para sa bagong permiso sa negosyo para sa mga negosyong nag-ooperate sa Solano',
+      'Aplikasyon para sa bagong permiso sa negosyo para sa mga negosyong nag-ooperate sa Malolos',
     'bpl-application-form-all-requirements': 'Aplikasyon form, all mga kinakailangan',
     'bpl-assessment-sheet': 'Pagtatasa sheet',
     'bpl-barangay-business-clearance': 'Business Clearance ng Barangay',
@@ -7689,7 +7689,7 @@ const translations = {
     'bpl-business-permit-services': 'Permiso sa Negosyo Mga serbisyo',
     'bpl-business-permits-licensing-section': 'Business Mga permiso & Licensing Seksyon',
     'bpl-business-permits-licensing-section-municipal-hall':
-      'Business Mga permiso & Licensing Seksyon, Munisipyo, Solano, Nueva Vizcaya',
+      'Business Mga permiso & Licensing Seksyon, Munisipyo, Malolos, Bulacan',
     'bpl-cda-registration-for-cooperatives': 'CDA Registration (para sa mga kooperatiba)',
     'bpl-certificates': 'Mga Sertipiko',
     'bpl-citizens-charter': "Citizen's Charter",
@@ -7710,8 +7710,8 @@ const translations = {
     'bpl-duly-accomplished-application-form': 'Wastong napunang Application Form',
     'bpl-duration': 'Tagal',
     'bpl-education': 'Edukasyon',
-    'bpl-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'bpl-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'bpl-environment': 'Kapaligiran',
     'bpl-fee': 'Bayad',
     'bpl-fees-vary-based-on-business-type-capitalization':
@@ -7745,7 +7745,7 @@ const translations = {
       'Late renewal incurs 25% karagdagang singil + 2% buwanang interes',
     'bpl-legislative': 'Lehislatura',
     'bpl-letter-of-intent': 'Sulat of Intent',
-    'bpl-lgu-solano-facebook': 'LGU Solano Facebook',
+    'bpl-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'bpl-licensing-officer': 'Opisyal ng Lisensya',
     'bpl-list-of-activitiesprogram': 'Listahan ng mga aktibidad/programa',
     'bpl-location': 'Lokasyon',
@@ -7767,7 +7767,7 @@ const translations = {
     'bpl-office': 'Opisina',
     'bpl-office-information': 'Impormasyon ng Opisina',
     'bpl-office-personnel': 'Mga Tauhan ng Opisina',
-    'bpl-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'bpl-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'bpl-official-receipt': 'Opisyal na Resibo',
     'bpl-open-data-philippines': 'Open Data Philippines',
     'bpl-order-of-payment': 'Order of Pagbabayad',
@@ -7861,14 +7861,14 @@ const translations = {
     'budget-contractor': 'Kontratista',
     'budget-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'budget-debt-service': 'Serbisyo sa Utang',
-    'budget-dpwh-infrastructure-projects-in-solano':
-      'Mga Proyekto ng Imprastraktura ng DPWH sa Solano',
+    'budget-dpwh-infrastructure-projects-in-malolos':
+      'Mga Proyekto ng Imprastraktura ng DPWH sa Malolos',
     'budget-dpwh-transparency-portal': 'DPWH Transparency Portal',
     'budget-economic-services': 'Mga Serbisyong Pang-ekonomiya',
     'budget-education': 'Edukasyon',
     'budget-egb-construction-corporation': 'EGB Construction Corporation',
-    'budget-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'budget-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'budget-environment': 'Kapaligiran',
     'budget-expenditure-allocation': 'Alokasyon ng Gastusin',
     'budget-external-sources': 'Mga Panlabas na Pinagmumulan',
@@ -7884,8 +7884,8 @@ const translations = {
     'budget-health': 'Kalusugan',
     'budget-health-education-welfare': 'Kalusugan, Edukasyon, Kagalingan',
     'budget-home': 'Tahanan',
-    'budget-implementing-agency-nueva-vizcaya-district':
-      'Implementing Agency: Nueva Vizcaya Distrito Opisina ng Inhinyero',
+    'budget-implementing-agency-bulacan-district':
+      'Implementing Agency: Bulacan Distrito Opisina ng Inhinyero',
     'budget-income-sources': 'Mga Pinagmumulan ng Kita',
     'budget-infrastructure': 'Imprastraktura',
     'budget-infrastructure-development': 'Imprastraktura at Pagpapaunlad',
@@ -7893,14 +7893,14 @@ const translations = {
     'budget-interest-charges': 'Interes & Mga singil',
     'budget-jan-mar': 'Ene - Mar',
     'budget-legislative': 'Lehislatura',
-    'budget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'budget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'budget-local-sources': 'Mga Lokal na Pinagmumulan',
-    'budget-magat-river-bagahabag-section-solano-nueva-vizcaya':
-      'Ilog Magat, Seksyon ng Bagahabag, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-1-brgy-bangar-solano':
-      'Magat River, Bangar Seksyon 1, Brgy. Bangar, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-2-brgy-bangar-solano':
-      'Magat River, Bangar Seksyon 2, Brgy. Bangar, Solano, Nueva Vizcaya',
+    'budget-magat-river-bagahabag-section-malolos-bulacan':
+      'Ilog Magat, Seksyon ng Bagahabag, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-1-brgy-bangar-malolos':
+      'Magat River, Bangar Seksyon 1, Brgy. Bangar, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-2-brgy-bangar-malolos':
+      'Magat River, Bangar Seksyon 2, Brgy. Bangar, Malolos, Bulacan',
     'budget-major-development-projects-serving-the-community':
       'Mga pangunahing proyekto ng pagpapaunlad na nagsisilbi sa komunidad',
     'budget-national-government-projects': 'Pambansa Pamahalaan Projects',
@@ -7948,15 +7948,15 @@ const translations = {
     'cert-cmci-dti-portal': 'CMCI DTI Portal',
     'cert-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'cert-education': 'Edukasyon',
-    'cert-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'cert-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'cert-environment': 'Kapaligiran',
     'cert-freedom-of-information': 'Kalayaan sa Impormasyon',
     'cert-health': 'Kalusugan',
     'cert-home': 'Tahanan',
     'cert-infrastructure': 'Imprastraktura',
-    'cert-lgu-solano-facebook': 'LGU Solano Facebook',
-    'cert-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'cert-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'cert-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'cert-open-data-philippines': 'Open Data Philippines',
     'cert-ordinance-framework': 'Balangkas ng Ordinansa',
     'cert-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -7974,8 +7974,8 @@ const translations = {
     'cert-volunteer-with-us': 'Mag-volunteer sa amin',
     'contact-accessibility': 'Aksesibilidad',
     'contact-agriculture': 'Agrikultura',
-    'contact-bfp-solano': 'BFP Solano',
-    'contact-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'contact-bfp-malolos': 'BFP Malolos',
+    'contact-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'contact-blgf-portal': 'BLGF Portal',
     'contact-break': 'Pahinga',
     'contact-business': 'Negosyo',
@@ -7983,11 +7983,11 @@ const translations = {
     'contact-citizens-charter': "Citizen's Charter",
     'contact-cmci-dti-portal': 'CMCI DTI Portal',
     'contact-contact': 'Makipag-ugnayan',
-    'contact-dilg-solano': 'DILG Solano',
-    'contact-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'contact-dilg-malolos': 'DILG Malolos',
+    'contact-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'contact-education': 'Edukasyon',
-    'contact-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'contact-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'contact-environment': 'Kapaligiran',
     'contact-for-medical-emergencies-and-hospital-inquiries':
       'For medical emergencies and hospital mga pagtatanong.',
@@ -7997,25 +7997,25 @@ const translations = {
     'contact-infrastructure': 'Imprastraktura',
     'contact-kabalikat-civicom': 'KABALIKAT Civicom',
     'contact-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'contact-lgu-solano-facebook': 'LGU Solano Facebook',
-    'contact-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'contact-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'contact-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'contact-lunch-break': 'Tanghalian',
-    'contact-magro-solano': 'MAGRO Solano',
-    'contact-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'contact-magro-malolos': 'MAGRO Malolos',
+    'contact-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'contact-mayors-office': 'Opisina ng Punong Bayan',
     'contact-mayors-office-0917-595-1931': 'Opisina ng Punong Bayan 0917 595 1931',
-    'contact-mdrrmo-solano': 'MDRRMO Solano',
-    'contact-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'contact-mdrrmo-malolos': 'MDRRMO Malolos',
+    'contact-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'contact-medical-emergency-hotlines': 'Mga Medikal na Emergency Hotline',
     'contact-mmg-hospital': 'MMG Hospital',
     'contact-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
     'contact-mobile': 'Mobile',
-    'contact-mswdo-solano': 'MSWDO Solano',
-    'contact-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
+    'contact-mswdo-malolos': 'MSWDO Malolos',
+    'contact-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
     'contact-national-local-holidays': 'Pambansa & Lokal Holidays',
-    'contact-nuvelco-solano': 'NUVELCO Solano',
-    'contact-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
-    'contact-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'contact-nuvelco-malolos': 'NUVELCO Malolos',
+    'contact-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
+    'contact-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'contact-open': 'Buksan',
     'contact-open-data-philippines': 'Open Data Philippines',
     'contact-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -8023,8 +8023,8 @@ const translations = {
     'contact-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'contact-plt-hospital': 'PLT Hospital',
     'contact-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'contact-pnp-solano': 'PNP Solano',
-    'contact-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'contact-pnp-malolos': 'PNP Malolos',
+    'contact-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'contact-privacy-policy': 'Patakaran sa Pagkapribado',
     'contact-public-safety': 'Kaligtasang Pampubliko',
     'contact-quick-links': 'Mga Mabilisang Link',
@@ -8034,8 +8034,8 @@ const translations = {
     'contact-red-cross-0917-507-9950': 'Red Cross 0917 507 9950',
     'contact-resolution-framework': 'Balangkas ng Resolusyon',
     'contact-resources': 'Mga Mapagkukunan',
-    'contact-rhu-solano': 'RHU Solano',
-    'contact-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'contact-rhu-malolos': 'RHU Malolos',
+    'contact-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'contact-salubris-hospital': 'Salubris Hospital',
     'contact-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'contact-sangguniang-bayan': 'Sangguniang Bayan',
@@ -8108,8 +8108,8 @@ const translations = {
     'cr-document-owner': 'May-ari ng Dokumento',
     'cr-education': 'Edukasyon',
     'cr-email': 'Email',
-    'cr-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'cr-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'cr-environment': 'Kapaligiran',
     'cr-fee': 'Bayad',
     'cr-fees': 'Mga Bayad',
@@ -8129,14 +8129,14 @@ const translations = {
       'Issuance of kasal mga sertipiko and kasal lisensya',
     'cr-late-registration-of-birth-marriage-or-death':
       'Late registration of kapanganakan, kasal, or kamatayan',
-    'cr-lcrsolanogovph': 'lcr@solano.gov.ph',
+    'cr-lcrmalolosgovph': 'lcr@malolos.gov.ph',
     'cr-legal-process-to-legitimize-children-born-out-of':
       'Legal na proseso upang gawing lehitimo ang mga batang ipinanganak sa labas ng kasal',
     'cr-legitimation': 'Lehitimasyon',
     'cr-legitimation-annotation': 'Anotasyon ng Lehitimasyon',
     'cr-legitimation-is-the-legal-process-by-which':
       "Legitimation is the legal iproseso by which mga bata born out of wedlock are legitimized by the subsequent kasal of their mga magulang. This is annotated on the child's kapanganakan sertipiko.",
-    'cr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'cr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'cr-license-waiting': 'Paghihintay ng Lisensya',
     'cr-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'cr-location': 'Lokasyon',
@@ -8146,10 +8146,10 @@ const translations = {
     'cr-marriage-license-requirements': 'Lisensya sa Kasal Mga kinakailangan',
     'cr-municipal-civil-registrar': 'Tagapagrehistro Sibil ng Munisipalidad',
     'cr-municipal-civil-registrars-office': 'Pangmunisipyo Opisina ng Tagapagrehistro Sibil',
-    'cr-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipyo, Unang Palapag, Solano, Nueva Vizcaya 3708',
+    'cr-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipyo, Unang Palapag, Malolos, Bulacan 3708',
     'cr-office-hours': 'Oras ng Opisina',
-    'cr-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'cr-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'cr-open-data-philippines': 'Open Data Philippines',
     'cr-ordinance-framework': 'Balangkas ng Ordinansa',
     'cr-ownerrelative': 'May-ari/Kamag-anak',
@@ -8181,9 +8181,9 @@ const translations = {
     'cr-the-certificate-of-no-marriage-record-cenomar-is':
       'Ang Certificate ng No Marriage Record (CENOMAR) ay isang sertipikasyon issued sa pamamagitan ng PSA stating na isang person ay maaari walang record ng marriage. Itong ay commonly kinakailangan para sa lisensya sa kasal mga aplikasyon, visa mga aplikasyon, sa iba pang legal mga layunin.',
     'cr-the-local-civil-registrar-handles-the':
-      'Ang Local Civil Registrar handles ang pagpaparehistro ng deaths sa pagbibigay ng mga sertipikadong tunay na kopya ng sertipiko ng pagkamatays para sa deaths na occurred sa Solano.',
+      'Ang Local Civil Registrar handles ang pagpaparehistro ng deaths sa pagbibigay ng mga sertipikadong tunay na kopya ng sertipiko ng pagkamatays para sa deaths na occurred sa Malolos.',
     'cr-the-local-civil-registrar-issues-certified-true':
-      'Ang Local Civil Registrar mga isyu mga sertipikadong tunay na kopya ng sertipiko ng kapanganakans para sa mga indibidwal whose births ay registered sa Solano, Nueva Vizcaya.',
+      'Ang Local Civil Registrar mga isyu mga sertipikadong tunay na kopya ng sertipiko ng kapanganakans para sa mga indibidwal whose births ay registered sa Malolos, Bulacan.',
     'cr-the-local-civil-registrar-processes-petitions-for':
       'The Lokal Tagapagrehistro Sibil processes petitions for correction of clerical or typographical errors and baguhin of unang name in civil registry mga dokumento under RA 9048 and RA 10172.',
     'cr-the-local-civil-registrar-provides':
@@ -8249,8 +8249,8 @@ const translations = {
     'dc-education': 'Edukasyon',
     'dc-embalmer': 'Embalmer',
     'dc-embalmers-certification': 'Sertipikasyon ng Embalmer',
-    'dc-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'dc-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'dc-environment': 'Kapaligiran',
     'dc-fee': 'Bayad',
     'dc-fee-summary': 'Buod ng Bayad',
@@ -8279,17 +8279,17 @@ const translations = {
       'Is there a bayad for kamatayan sertipiko registration?',
     'dc-juvy': 'Juvy',
     'dc-legislative': 'Lehislatura',
-    'dc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'dc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'dc-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'dc-marriage-certificate': 'Sertipiko ng Kasal',
     'dc-mho-certification-of-cause-of-death': 'Sertipikasyon ng MHO ng Sanhi ng Pagkamatay',
     'dc-mto-collection-officer': 'MTO Collection Opisyal',
-    'dc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipyo, Ikalawang Palapag Solano, Nueva Vizcaya',
+    'dc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipyo, Ikalawang Palapag Malolos, Bulacan',
     'dc-municipal-health-officer': 'Opisyal ng Kalusugan ng Munisipalidad',
     'dc-need-help': 'Kailangan Tulong?',
     'dc-office-information': 'Impormasyon ng Opisina',
-    'dc-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'dc-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'dc-oliver': 'Oliver',
     'dc-oliver-receiving-officer': 'Oliver - Receiving Opisyal',
     'dc-open-data-philippines': 'Open Data Philippines',
@@ -8367,8 +8367,8 @@ const translations = {
     'edu-education': 'Edukasyon',
     'edu-empowering-filipino-students-and-educators-with':
       'Empowering Filipino students and educators with 1,000+ libre and open-source productivity tools across 18 categories — from dokumento processing and design to AI and development.',
-    'edu-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'edu-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'edu-environment': 'Kapaligiran',
     'edu-free-tools-for-education': 'Libreng Tools para sa Education',
     'edu-freedom-of-information': 'Kalayaan sa Impormasyon',
@@ -8378,13 +8378,13 @@ const translations = {
     'edu-higher-educational-institutions': 'Mga Institusyon ng Mas Mataas na Edukasyon',
     'edu-home': 'Tahanan',
     'edu-infrastructure': 'Imprastraktura',
-    'edu-isaiah-christian-academy-of-solano-inc': 'Isaiah Christian Academy of Solano, Inc.',
+    'edu-isaiah-christian-academy-of-malolos-inc': 'Isaiah Christian Academy of Malolos, Inc.',
     'edu-kids-workshop-learning-center': 'Kids Workshop Learning Center',
     'edu-lactawan-elementary-school': 'Lactawan Elementary School',
-    'edu-lgu-solano-facebook': 'LGU Solano Facebook',
+    'edu-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'edu-nio-jesus-de-praga-learning': 'Niño Jesus de Praga Learning',
-    'edu-nueva-vizcaya-caregiver-academy': 'Nueva Vizcaya Caregiver Academy',
-    'edu-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'edu-bulacan-caregiver-academy': 'Bulacan Caregiver Academy',
+    'edu-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'edu-open-data-philippines': 'Open Data Philippines',
     'edu-ordinance-framework': 'Balangkas ng Ordinansa',
     'edu-pilar-d-galima-elementary-school': 'Pilar D. Galima Elementary School',
@@ -8395,7 +8395,7 @@ const translations = {
     'edu-quick-links': 'Mga Mabilisang Link',
     'edu-resolution-framework': 'Balangkas ng Resolusyon',
     'edu-resources': 'Mga Mapagkukunan',
-    'edu-saint-louis-college-of-solano-inc': 'Saint Louis College of Solano Inc',
+    'edu-saint-louis-college-of-malolos-inc': 'Saint Louis College of Malolos Inc',
     'edu-saint-louis-school-elementary-department': 'Saint Louis School - Elementary Kagawaran',
     'edu-saint-louis-school-high-school-department': 'Saint Louis School - Mataas School Kagawaran',
     'edu-san-juan-elementary-school': 'San Juan Elementary School',
@@ -8406,12 +8406,12 @@ const translations = {
     'edu-sitemap': 'Mapa ng Site',
     'edu-skip-to-main-content': 'Lumaktaw sa pangunahing nilalaman',
     'edu-social-services': 'Serbisyong Panlipunan',
-    'edu-solano-east-central-school': 'Solano East Central School',
-    'edu-solano-high-school': 'Solano Mataas School',
-    'edu-solano-institute-of-technology': 'Solano Institute of Technology',
-    'edu-solano-north-elementary-school': 'Solano North Elementary School',
-    'edu-solano-south-central-school': 'Solano South Central School',
-    'edu-solano-west-elementary-school': 'Solano West Elementary School',
+    'edu-malolos-east-central-school': 'Malolos East Central School',
+    'edu-malolos-high-school': 'Malolos Mataas School',
+    'edu-malolos-institute-of-technology': 'Malolos Institute of Technology',
+    'edu-malolos-north-elementary-school': 'Malolos North Elementary School',
+    'edu-malolos-south-central-school': 'Malolos South Central School',
+    'edu-malolos-west-elementary-school': 'Malolos West Elementary School',
     'edu-tax-payments': 'Pagbabayad ng Buwis',
     'edu-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'edu-tucal-elementary-school': 'Tucal Elementary School',
@@ -8456,8 +8456,8 @@ const translations = {
     'eng-electrical-plans': 'Mga Plano ng Elektrikal',
     'eng-electronics-permit': 'Permiso sa Elektroniks',
     'eng-electronics-plans': 'Mga Plano ng Elektroniks',
-    'eng-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'eng-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'eng-engineer-iii': 'Inhinyero III',
     'eng-engineering': 'Inhinyeriya',
     'eng-engineering-aide': 'Katulong sa Inhinyeriya',
@@ -8483,17 +8483,17 @@ const translations = {
       'Key tauhan handling gusali permiso mga aplikasyon',
     'eng-latest-real-property-tax-receipt': 'Latest Buwis sa Ari-arian Resibo',
     'eng-legislative': 'Lehislatura',
-    'eng-lgu-solano-facebook': 'LGU Solano Facebook',
+    'eng-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'eng-mechanical-permit': 'Permit sa Mekanikal',
     'eng-mun-engineering': 'Mun. Inhinyeriya',
     'eng-municipal-engineer': 'Inhinyero ng Munisipalidad',
     'eng-municipal-engineering-office': 'Opisina ng Inhinyero ng Munisipalidad',
-    'eng-municipal-engineering-office-municipal-hall-solano':
-      'Pangmunisipyo Opisina ng Inhinyero, Munisipyo, Solano',
+    'eng-municipal-engineering-office-municipal-hall-malolos':
+      'Pangmunisipyo Opisina ng Inhinyero, Munisipyo, Malolos',
     'eng-office': 'Opisina',
     'eng-office-information': 'Impormasyon ng Opisina',
     'eng-office-personnel': 'Mga Tauhan ng Opisina',
-    'eng-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'eng-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'eng-open-data-philippines': 'Open Data Philippines',
     'eng-ordinance-framework': 'Balangkas ng Ordinansa',
     'eng-pay-building-permit-fee-and-other-fees-at-the':
@@ -8559,8 +8559,8 @@ const translations = {
       'Pagbuo ng komprehensibong plano ng sistema upang mapagaan ang pagbaha at protektahan ang kalusugan ng publiko.',
     'env-drainage-sewerage-management': 'Pamamahala ng Drainage at Alkantarilya',
     'env-education': 'Edukasyon',
-    'env-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'env-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'env-environment': 'Kapaligiran',
     'env-fee': 'Bayad:',
     'env-flood-control-mitigation': 'Flood Control at Pagpapagaan',
@@ -8575,8 +8575,8 @@ const translations = {
     'env-infrastructure': 'Imprastraktura',
     'env-key-environmental-services-and-initiatives':
       'Mga Pangunahing Serbisyo at Inisyatiba sa Kapaligiran',
-    'env-lgu-solano-facebook': 'LGU Solano Facebook',
-    'env-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'env-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'env-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'env-open-data-philippines': 'Open Data Philippines',
     'env-ordinance-framework': 'Balangkas ng Ordinansa',
     'env-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -8610,15 +8610,15 @@ const translations = {
     'err403-contact-us': 'Makipag-ugnayan sa Amin',
     'err403-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'err403-education': 'Edukasyon',
-    'err403-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'err403-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'err403-environment': 'Kapaligiran',
     'err403-freedom-of-information': 'Kalayaan sa Impormasyon',
     'err403-go-to-homepage': 'Pumunta sa Homepage',
     'err403-health': 'Kalusugan',
     'err403-infrastructure': 'Imprastraktura',
-    'err403-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err403-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'err403-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err403-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'err403-open-data-philippines': 'Open Data Philippines',
     'err403-ordinance-framework': 'Balangkas ng Ordinansa',
     'err403-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -8645,15 +8645,15 @@ const translations = {
     'err404-cmci-dti-portal': 'CMCI DTI Portal',
     'err404-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'err404-education': 'Edukasyon',
-    'err404-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'err404-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'err404-environment': 'Kapaligiran',
     'err404-freedom-of-information': 'Kalayaan sa Impormasyon',
     'err404-go-to-homepage': 'Pumunta sa Homepage',
     'err404-health': 'Kalusugan',
     'err404-infrastructure': 'Imprastraktura',
-    'err404-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err404-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'err404-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err404-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'err404-open-data-philippines': 'Open Data Philippines',
     'err404-ordinance-framework': 'Balangkas ng Ordinansa',
     'err404-page-not-found': 'Hindi Nahanap ang Pahina',
@@ -8681,15 +8681,15 @@ const translations = {
     'err500-contact-us': 'Makipag-ugnayan sa Amin',
     'err500-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'err500-education': 'Edukasyon',
-    'err500-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'err500-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'err500-environment': 'Kapaligiran',
     'err500-freedom-of-information': 'Kalayaan sa Impormasyon',
     'err500-go-to-homepage': 'Pumunta sa Homepage',
     'err500-health': 'Kalusugan',
     'err500-infrastructure': 'Imprastraktura',
-    'err500-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err500-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'err500-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err500-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'err500-open-data-philippines': 'Open Data Philippines',
     'err500-ordinance-framework': 'Balangkas ng Ordinansa',
     'err500-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -8739,11 +8739,11 @@ const translations = {
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (para sa sole proprietorship) o SEC Registration (para sa korporasyon)',
     'faq-education': 'Edukasyon',
-    'faq-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'faq-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'faq-environment': 'Kapaligiran',
-    'faq-for-birth-certificates-registered-in-solano-it':
-      'For kapanganakan mga sertipiko registered in Solano, it typically takes 15-30 minutes while you maghintay, provided the rekord is readily magagamit.',
+    'faq-for-birth-certificates-registered-in-malolos-it':
+      'For kapanganakan mga sertipiko registered in Malolos, it typically takes 15-30 minutes while you maghintay, provided the rekord is readily magagamit.',
     'faq-freedom-of-information': 'Kalayaan sa Impormasyon',
     'faq-go-to-the-municipal-social-welfare-and':
       'Pumunta sa Opisina ng Kagalingang Panlipunan at Pagpapaunlad ng Munisipyo (MSWDO) na may dalang:',
@@ -8761,9 +8761,9 @@ const translations = {
       'I found a broken link or error on this website. How do I ulat it?',
     'faq-infrastructure': 'Imprastraktura',
     'faq-is-this-website-mobilefriendly': 'Ang website ba na ito ay mobile-friendly?',
-    'faq-lgu-solano-facebook': 'LGU Solano Facebook',
+    'faq-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'faq-location-sketchmap': 'Sketch/Mapa ng Lokasyon',
-    'faq-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'faq-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'faq-open-data-philippines': 'Open Data Philippines',
     'faq-openjs-foundation': 'OpenJS Foundation',
     'faq-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -8771,8 +8771,8 @@ const translations = {
     'faq-privacy-policy': 'Patakaran sa Pagkapribado',
     'faq-public-safety': 'Kaligtasang Pampubliko',
     'faq-quick-links': 'Mga Mabilisang Link',
-    'faq-ramon-has-made-the-solano-project-open-source':
-      'Ramon has made the Solano Project bukas source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, datos researcher, designer, content writer, translator, or a concerned mamamayan of Solano, your participation helps shape the project for all.',
+    'faq-ramon-has-made-the-malolos-project-open-source':
+      'Ramon has made the Malolos Project bukas source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, datos researcher, designer, content writer, translator, or a concerned mamamayan of Malolos, your participation helps shape the project for all.',
     'faq-ramon-logan-jr': 'Ramon Logan Jr.',
     'faq-resolution-framework': 'Balangkas ng Resolusyon',
     'faq-resources': 'Mga Mapagkukunan',
@@ -8792,32 +8792,32 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bumisita sa Opisina ng Ingat-Yaman ng Munisipyo sa Munisipyo na may iyong Tax Declaration o pinakabagong Opisyal na Resibo. Ang pagbabayad ay sa cash. Ang mga buwis sa ari-arian ay dapat bayaran quarterly, ngunit maaari kang magbayad taun-taon upang makakuha ng diskwento.',
     'faq-volunteer-with-us': 'Mag-volunteer sa amin',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ang office hours ng ang Munisipyo?',
     'faq-what-benefits-do-senior-citizens-receive':
       'What benefits do nakatatanda mga mamamayan tanggapin?',
-    'faq-what-do-i-need-to-start-a-new-business-in-solano':
-      'What do I kailangan to simulan a bago business in Solano?',
+    'faq-what-do-i-need-to-start-a-new-business-in-malolos':
+      'What do I kailangan to simulan a bago business in Malolos?',
     'faq-what-is-the-difference-between-psa-and-local':
       'What ay ang difference sa pagitan ng PSA sa lokal na civil registrar mga sertipiko?',
     'faq-what-payment-methods-are-accepted': 'What pagbabayad mga pamamaraan ay accepted?',
     'faq-when-should-i-renew-my-business-permit':
       'Kailan ko dapat i-renew ang aking permiso sa negosyo?',
-    'faq-who-developed-better-solano': 'Sino ang gumawa ng Better Solano?',
-    'faq-yes-better-solano-is-fully-responsive-and':
-      'Yes! Better Solano is fully tumutugon and optimized for mobile phones, tablets, and desktop computers.',
+    'faq-who-developed-better-malolos': 'Sino ang gumawa ng Better Malolos?',
+    'faq-yes-better-malolos-is-fully-responsive-and':
+      'Yes! Better Malolos is fully tumutugon and optimized for mobile phones, tablets, and desktop computers.',
     'faq-yes-but-they-must-bring': 'Yes, ngunit sila dapat bring:',
     'gov-accessibility': 'Aksesibilidad',
-    'gov-accountingsolanogovph': 'accounting@solano.gov.ph',
+    'gov-accountingmalolosgovph': 'accounting@malolos.gov.ph',
     'gov-aggub': 'Aggub',
     'gov-agricultural-loans-crop-insurance-fertilizer':
       'Mga pautang sa agrikultura, seguro sa pananim, tulong sa pataba',
     'gov-agriculture': 'Agrikultura',
     'gov-agriculture-aquaculture-food-security-overseas':
       'Agrikultura, Akwakultura at Seguridad sa Pagkain, Mga Usapin ng mga Overseas Filipino Worker',
-    'gov-agrisolanogovph': 'agri@solano.gov.ph',
-    'gov-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'gov-agrimalolosgovph': 'agri@malolos.gov.ph',
+    'gov-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'gov-bagahabag': 'Bagahabag',
     'gov-bangaan': 'Bangaan',
     'gov-bangar': 'Bangar',
@@ -8827,10 +8827,10 @@ const translations = {
     'gov-birth-death-marriage-certificates-cenomar':
       'Kapanganakan, kamatayan, kasal mga sertipiko, CENOMAR',
     'gov-blgf-portal': 'BLGF Portal',
-    'gov-bplssolanogovph': 'bpls@solano.gov.ph',
+    'gov-bplsmalolosgovph': 'bpls@malolos.gov.ph',
     'gov-budget-preparation-appropriations-fiscal':
       'Paghahanda ng badyet, mga appropriasyon, pamamahala ng piskal',
-    'gov-budgetsolanogovph': 'budget@solano.gov.ph',
+    'gov-budgetmalolosgovph': 'budget@malolos.gov.ph',
     'gov-building-permits-construction-permits':
       'Gusali mga permiso, construction mga permiso, infrastructure',
     'gov-business': 'Negosyo',
@@ -8839,7 +8839,7 @@ const translations = {
       'Mga permiso sa negosyo, clearance ng Alkalde, paglilisensya',
     'gov-certificates': 'Mga Sertipiko',
     'gov-citizens-charter': "Citizen's Charter",
-    'gov-civilregsolanogovph': 'civilreg@solano.gov.ph',
+    'gov-civilregmalolosgovph': 'civilreg@malolos.gov.ph',
     'gov-cmci-dti-portal': 'CMCI DTI Portal',
     'gov-communal': 'Communal',
     'gov-concepcion': 'Concepcion',
@@ -8855,9 +8855,9 @@ const translations = {
     'gov-education': 'Edukasyon',
     'gov-education-science-technology-transportation':
       'Edukasyon, Agham at Teknolohiya, Transportasyon, Komersyo, Kalakalan at Industriya',
-    'gov-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
-    'gov-engineersolanogovph': 'engineer@solano.gov.ph',
+    'gov-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
+    'gov-engineermalolosgovph': 'engineer@malolos.gov.ph',
     'gov-entrepreneurship-economic-development-historical':
       'Entrepreneurship & Economic Development, Historical Mga rekord & Preservation of Heritage, Culture and the Arts',
     'gov-environment': 'Kapaligiran',
@@ -8868,7 +8868,7 @@ const translations = {
     'gov-games-entertainment-amusement-internal-affairs':
       'Mga Laro, Libangan at Aliwan, Panloob na Usapin',
     'gov-government': 'Pamahalaan',
-    'gov-gsosolanogovph': 'gso@solano.gov.ph',
+    'gov-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gov-health': 'Kalusugan',
     'gov-health-sanitation-finance-appropriation-and-budget':
       'Kalusugan at Kalinisan, Paglalaan ng Pananalapi at Badyet',
@@ -8888,7 +8888,7 @@ const translations = {
     'gov-hon-roland-m-carub-jd': 'Hon. Roland M. Carub, J.D.',
     'gov-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'gov-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
-    'gov-hrmosolanogovph': 'hrmo@solano.gov.ph',
+    'gov-hrmomalolosgovph': 'hrmo@malolos.gov.ph',
     'gov-human-resource-management': 'Pamamahala ng Yamang Tao',
     'gov-indigenous-people-affairs': 'Indigenous Mga tao Affairs',
     'gov-infrastructure': 'Imprastraktura',
@@ -8920,15 +8920,15 @@ const translations = {
     'gov-legal-good-governance-justice-human-rights':
       'Legal, Mabuting Pamamahala, Hustisya, Karapatang Pantao, Pamamahala ng Kapaligiran',
     'gov-legislative-branch': 'Sangay ng Lehislatura',
-    'gov-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gov-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gov-liga-ng-mga-barangay-president': 'Liga ng mga Barangay President',
     'gov-market-clearance-entrance-fees-vendor-services-ctc':
       'Market clearance, mga bayad sa pagpasok, mga serbisyo sa vendor, CTC',
-    'gov-mayorsolanogovph': 'mayor@solano.gov.ph',
-    'gov-mdrrmosolanogovph': 'mdrrmo@solano.gov.ph',
-    'gov-mhosolanogovph': 'mho@solano.gov.ph',
-    'gov-mpdosolanogovph': 'mpdo@solano.gov.ph',
-    'gov-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'gov-mayormalolosgovph': 'mayor@malolos.gov.ph',
+    'gov-mdrrmomalolosgovph': 'mdrrmo@malolos.gov.ph',
+    'gov-mhomalolosgovph': 'mho@malolos.gov.ph',
+    'gov-mpdomalolosgovph': 'mpdo@malolos.gov.ph',
+    'gov-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'gov-municipal-accounting-office': 'Opisina ng Accounting ng Munisipalidad',
     'gov-municipal-agriculture-office': 'Opisina ng Agrikultura ng Munisipalidad',
     'gov-municipal-assessors-office': 'Opisina ng Tagapagtasa ng Munisipalidad',
@@ -8940,7 +8940,7 @@ const translations = {
     'gov-municipal-offices': 'Mga Opisina ng Munisipyo',
     'gov-municipal-planning-development': 'Pangmunisipyo Planning & Development',
     'gov-municipal-treasurers-office': 'Opisina ng Ingat-yaman ng Munisipalidad',
-    'gov-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'gov-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'gov-open-data-philippines': 'Open Data Philippines',
     'gov-ordinance-framework': 'Balangkas ng Ordinansa',
     'gov-osmea': 'Osmeña',
@@ -8979,14 +8979,14 @@ const translations = {
     'gov-tax-payments-real-property-tax-revenue-collection':
       'Tax mga pagbabayad, buwis sa tunay na ari-arian, revenue koleksyon',
     'gov-terms-of-use': 'Mga Tuntunin ng Paggamit',
-    'gov-the-executive-officials-leading-solanos-governance':
-      "The executive mga opisyal leading Solano's governance",
-    'gov-treasurersolanogovph': 'treasurer@solano.gov.ph',
+    'gov-the-executive-officials-leading-maloloss-governance':
+      "The executive mga opisyal leading Malolos's governance",
+    'gov-treasurermalolosgovph': 'treasurer@malolos.gov.ph',
     'gov-tucal': 'Tucal',
     'gov-uddiawan': 'Uddiawan',
     'gov-vaccination-health-certificates-medical-assistance':
       'Vaccination, health mga sertipiko, tulong medikal',
-    'gov-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'gov-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'gov-view-job-vacancies': 'Tingnan Job Vacancies',
     'gov-view-services': 'Tingnan ang mga Serbisyo',
     'gov-volunteer-with-us': 'Mag-volunteer sa amin',
@@ -9045,8 +9045,8 @@ const translations = {
     'gs-education': 'Edukasyon',
     'gs-email': 'Email',
     'gs-emergency-medical-services': 'Emergency Medical Mga serbisyo',
-    'gs-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'gs-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'gs-emtdriver': 'EMT/Driver',
     'gs-environment': 'Kapaligiran',
     'gs-equipment': 'Kagamitan',
@@ -9064,7 +9064,7 @@ const translations = {
     'gs-gso-head': 'GSO Pinuno',
     'gs-gso-personnel': 'GSO Tauhan',
     'gs-gso-staff': 'GSO Kawani',
-    'gs-gsosolanogovph': 'gso@solano.gov.ph',
+    'gs-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gs-health': 'Kalusugan',
     'gs-heavy-duty': 'Mabigat na Trabaho',
     'gs-heavy-equipment-operator': 'Operator ng Mabigat na Kagamitan',
@@ -9074,7 +9074,7 @@ const translations = {
     'gs-industrial': 'Industriyal',
     'gs-infrastructure': 'Imprastraktura',
     'gs-issuance-of-purchase-order-po': 'Pagbibigay ng Purchase Order (PO)',
-    'gs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gs-light-vehicle-driver': 'Driver ng Magaan na Sasakyan',
     'gs-location': 'Lokasyon',
     'gs-mayors-office': 'Opisina ng Punong Bayan',
@@ -9084,8 +9084,8 @@ const translations = {
     'gs-municipal-accounting': 'Accounting ng Munisipyo',
     'gs-municipal-engineering': 'Inhinyeriya ng Munisipyo',
     'gs-municipal-general-services-office': 'Opisina ng Pangkalahatang Serbisyo ng Munisipalidad',
-    'gs-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipyo, Unang Palapag, Solano, Nueva Vizcaya 3708',
+    'gs-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipyo, Unang Palapag, Malolos, Bulacan 3708',
     'gs-municipal-treasurer': 'Ingat-yaman ng Munisipalidad',
     'gs-municipal-vehicles-available-for-official-use-and':
       'Pangmunisipyo vehicles magagamit for opisyal gamitin and pampubliko rental',
@@ -9094,7 +9094,7 @@ const translations = {
     'gs-office-hours': 'Oras ng Opisina',
     'gs-office-personnel': 'Mga Tauhan ng Opisina',
     'gs-office-staff-and-service-personnel': 'Opisina kawani and serbisyo tauhan',
-    'gs-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'gs-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'gs-official-receipt-approved-request': 'Opisyal Resibo, Naaprubahan Humiling',
     'gs-open-data-philippines': 'Open Data Philippines',
     'gs-operator': 'Operator',
@@ -9189,21 +9189,21 @@ const translations = {
     'health-curifang-bhs': 'Curifang BHS',
     'health-dadap-bhs': 'Dadap BHS',
     'health-education': 'Edukasyon',
-    'health-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'health-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'health-environment': 'Kapaligiran',
     'health-freedom-of-information': 'Kalayaan sa Impormasyon',
     'health-health': 'Kalusugan',
     'health-home': 'Tahanan',
     'health-infrastructure': 'Imprastraktura',
     'health-lactawan-bhs': 'Lactawan BHS',
-    'health-lgu-solano-facebook': 'LGU Solano Facebook',
+    'health-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'health-medical-mission-group-hospital-health-services':
       'Medical Mission Group Hospital & Health Mga serbisyo Cooperative',
     'health-nangalisan-bhs': 'Nangalisan BHS',
-    'health-national-highway-solano': 'Pambansa Highway, Solano',
+    'health-national-highway-malolos': 'Pambansa Highway, Malolos',
     'health-ocapon-bhs': 'Ocapon BHS',
-    'health-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'health-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'health-open-data-philippines': 'Open Data Philippines',
     'health-ordinance-framework': 'Balangkas ng Ordinansa',
     'health-osmea-bhs': 'Osmeña BHS',
@@ -9254,7 +9254,7 @@ const translations = {
     'home-bintauan': 'Bintauan',
     'home-birth-certificate': 'Sertipiko ng Kapanganakan',
     'home-blgf-portal': 'BLGF Portal',
-    'home-brief-history-of-solano': 'Maikling Kasaysayan ng Solano',
+    'home-brief-history-of-malolos': 'Maikling Kasaysayan ng Malolos',
     'home-browse-complete-directory': 'Browse kumpleto directory',
     'home-browse-services': 'Mag-browse ng mga Serbisyo',
     'home-business': 'Negosyo',
@@ -9265,11 +9265,11 @@ const translations = {
     'home-contact-us': 'Makipag-ugnayan sa Amin',
     'home-create-account': 'Gumawa ng Account',
     'home-education': 'Edukasyon',
-    'home-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'home-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'home-environment': 'Kapaligiran',
     'home-father-alejandro-vidal': 'Padre Alejandro Vidal',
-    'home-fetching-the-latest-news-from-solano': 'Kinukuha ang pinakabagong balita mula sa Solano.',
+    'home-fetching-the-latest-news-from-malolos': 'Kinukuha ang pinakabagong balita mula sa Malolos.',
     'home-find-a-service': 'Find a Serbisyo',
     'home-freedom-of-information': 'Kalayaan sa Impormasyon',
     'home-governor-general-antonio-urbiztondo-declared':
@@ -9286,26 +9286,26 @@ const translations = {
     'home-history-1853':
       'Dumating ang mga unang Ilocano, dinala ni Don Diego Lumicao, isang dating gobernadorcillo.',
     'home-history-1889':
-      'Pinalitan ang pangalan sa Solano bilang parangal kay Gobernador Heneral Ramon Solano y Llanderal. Ang bayan ay muling binuo ni Padre Juan Villaverde na may 14 na magkakahanay na malapad na kalye, bawat isa ay 20 metro ang lapad, na bumubuo ng 100 parisukat na bloke.',
+      'Pinalitan ang pangalan sa Malolos bilang parangal kay Gobernador Heneral Ramon Malolos y Llanderal. Ang bayan ay muling binuo ni Padre Juan Villaverde na may 14 na magkakahanay na malapad na kalye, bawat isa ay 20 metro ang lapad, na bumubuo ng 100 parisukat na bloke.',
     'home-history-1957':
-      'Ang mga baryo ng Ibung at Bintawan ay pinaghiwalay upang bumuo ng bayan ng Ibung, na kalaunan ay pinalitan ng pangalang Villaverde. Ang lawak ng lupa ng Solano ay nabawasan sa 13,980 ektarya.',
+      'Ang mga baryo ng Ibung at Bintawan ay pinaghiwalay upang bumuo ng bayan ng Ibung, na kalaunan ay pinalitan ng pangalang Villaverde. Ang lawak ng lupa ng Malolos ay nabawasan sa 13,980 ektarya.',
     'home-ilocanos-arrived': 'Dumating ang mga Ilocano',
     'home-income-classification': 'Klasipikasyon ng Kita',
     'home-infrastructure': 'Imprastraktura',
-    'home-interactive-map-showing-the-location-of-solano':
-      'Interactive mapa showing the location of Solano Munisipyo in Nueva Vizcaya, Philippines. The mapa is centered at coordinates 16.5167°N, 121.1833 °E. Gamitin the plus and minus buttons or keyboard arrows to navigate the mapa.',
+    'home-interactive-map-showing-the-location-of-malolos':
+      'Interactive mapa showing the location of Malolos Munisipyo in Bulacan, Philippines. The mapa is centered at coordinates 16.5167°N, 121.1833 °E. Gamitin the plus and minus buttons or keyboard arrows to navigate the mapa.',
     'home-javascript-is-required-to-view-the-interactive-map':
       'JavaScript is kinakailangan to tingnan the interactive mapa.',
     'home-land-area': 'Lawak ng Lupa',
-    'home-lgu-solano-facebook': 'LGU Solano Facebook',
-    'home-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'home-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'home-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'home-loading': 'Naglo-load',
     'home-loading-updates': 'Naglo-load ng mga update...',
     'home-lungab': 'lungab',
     'home-lungabang': 'Lungabang',
-    'home-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'home-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'home-municipality': 'Munisipalidad',
-    'home-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'home-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'home-once-the-largest': 'Dating Pinakamalaki',
     'home-open-data-philippines': 'Open Data Philippines',
     'home-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -9316,7 +9316,7 @@ const translations = {
     'home-quick-access-to-frequently-requested-municipal':
       'Quick i-access to frequently requested pangmunisipyo mga serbisyo',
     'home-quick-links': 'Mga Mabilisang Link',
-    'home-ramon-solano-y-llanderal': 'Ramon Solano y Llanderal',
+    'home-ramon-malolos-y-llanderal': 'Ramon Malolos y Llanderal',
     'home-real-property-tax': 'Buwis sa Tunay na Ari-arian',
     'home-resolution-framework': 'Balangkas ng Resolusyon',
     'home-resources': 'Mga Mapagkukunan',
@@ -9325,26 +9325,26 @@ const translations = {
     'home-sitemap': 'Mapa ng Site',
     'home-skip-to-main-content': 'Lumaktaw sa pangunahing nilalaman',
     'home-social-services': 'Serbisyong Panlipunan',
-    'home-solano': 'Solano',
-    'home-solano-at-a-glance': 'Solano sa Isang Tingin',
-    'home-solano-municipal-hall-nueva-vizcaya-3708':
-      'Solano Pangmunisipyo Hall, Nueva Vizcaya 3708',
-    'home-solano-nueva-vizcaya-3708': 'Solano, Nueva Vizcaya 3708',
-    'home-solano-was-the-largest-municipality-in-the':
-      'Ang Solano ang pinakamalaking munisipalidad sa probinsya hanggang sa pinaghiwalay ang Caliat at Bintawan upang maging Quezon at Villaverde.',
+    'home-malolos': 'Malolos',
+    'home-malolos-at-a-glance': 'Malolos sa Isang Tingin',
+    'home-malolos-municipal-hall-bulacan-3708':
+      'Malolos Pangmunisipyo Hall, Bulacan 3708',
+    'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
+    'home-malolos-was-the-largest-municipality-in-the':
+      'Ang Malolos ang pinakamalaking munisipalidad sa probinsya hanggang sa pinaghiwalay ang Caliat at Bintawan upang maging Quezon at Villaverde.',
     'home-tax-payments': 'Pagbabayad ng Buwis',
     'home-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'home-the-1889-redevelopment-created-a-grid-of-100':
       'Ang muling pagbuo noong 1889 ay lumikha ng grid na may 100 parisukat na bloke, bawat isa ay may kabuuang lawak na isang ektarya, na may mga kalye na patungo sa hilaga-timog at silangan-kanluran.',
     'home-total-municipal-area': 'Kabuuang Lawak ng Munisipalidad',
     'home-urban-planning': 'Pagpaplano ng Lungsod',
-    'home-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'home-view-all': 'Tingnan Lahat',
     'home-view-all-officials': 'Tingnan All Mga opisyal',
-    'home-view-solano-on-openstreetmap': 'Tingnan Solano on OpenStreetMap',
+    'home-view-malolos-on-openstreetmap': 'Tingnan Malolos on OpenStreetMap',
     'home-view-statistics': 'Tingnan ang mga Estadistika',
     'home-villaverde': 'Villaverde',
-    'home-weather-and-map-of-solano': 'Weather and Mapa of Solano',
+    'home-weather-and-map-of-malolos': 'Weather and Mapa of Malolos',
     'hrm-10-minutes': '10 minuto',
     'hrm-105-days-for-female-employees': '105 araw para sa mga babaeng empleyado',
     'hrm-12-days': '1-2 araw',
@@ -9389,8 +9389,8 @@ const translations = {
     'hrm-education': 'Edukasyon',
     'hrm-employee-id': 'Empleyado ID',
     'hrm-employee-id-for-current-employees': 'Empleyado ID (for kasalukuyang mga empleyado)',
-    'hrm-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'hrm-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'hrm-environment': 'Kapaligiran',
     'hrm-fee-free': 'Bayad: Libre',
     'hrm-fee-free-for-current-employees': 'Bayad: Libre for kasalukuyang mga empleyado',
@@ -9411,7 +9411,7 @@ const translations = {
     'hrm-hrmo-staff': 'HRMO Kawani',
     'hrm-human-resource-management-section': 'Pamamahala ng Yamang Tao Seksyon',
     'hrm-human-resource-management-section-mayors-office':
-      'Pamamahala ng Yamang Tao Seksyon, Opisina ng Punong Bayan, Munisipyo, Solano, Nueva Vizcaya',
+      'Pamamahala ng Yamang Tao Seksyon, Opisina ng Punong Bayan, Munisipyo, Malolos, Bulacan',
     'hrm-important-notes': 'Mahahalagang Paalala',
     'hrm-infrastructure': 'Imprastraktura',
     'hrm-issuance-of-certificate-of-employment': 'Pagbibigay ng Sertipiko ng Trabaho',
@@ -9427,7 +9427,7 @@ const translations = {
     'hrm-leave-processing': 'Pagproseso ng Leave',
     'hrm-leave-type': 'Uri ng Leave',
     'hrm-legislative': 'Lehislatura',
-    'hrm-lgu-solano-facebook': 'LGU Solano Facebook',
+    'hrm-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'hrm-location': 'Lokasyon',
     'hrm-maternity-leave': 'Maternity Leave',
     'hrm-mayors-office': 'Opisina ng Punong Bayan',
@@ -9442,7 +9442,7 @@ const translations = {
     'hrm-office-personnel': 'Mga Tauhan ng Opisina',
     'hrm-official-certification-of-current-or-previous':
       'Opisyal certification of kasalukuyang or nakaraang employment status',
-    'hrm-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'hrm-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'hrm-official-record-of-employment-history-for-lgu':
       'Opisyal na rekord ng kasaysayan ng trabaho para sa mga empleyado ng LGU',
     'hrm-official-statement-of-accumulated-leave-credits':
@@ -9524,8 +9524,8 @@ const translations = {
     'infra-cmci-dti-portal': 'CMCI DTI Portal',
     'infra-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'infra-education': 'Edukasyon',
-    'infra-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'infra-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'infra-engineering-services': 'Mga Serbisyo sa Inhinyeriya',
     'infra-environment': 'Kapaligiran',
     'infra-fee': 'Bayad:',
@@ -9533,13 +9533,13 @@ const translations = {
     'infra-health': 'Kalusugan',
     'infra-home': 'Tahanan',
     'infra-infrastructure': 'Imprastraktura',
-    'infra-lgu-solano-facebook': 'LGU Solano Facebook',
+    'infra-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'infra-municipal-engineering-office': 'Opisina ng Inhinyero ng Munisipalidad',
     'infra-municipal-general-services-office':
       'Opisina ng Pangkalahatang Serbisyo ng Munisipalidad',
     'infra-municipal-planning-development': 'Pangmunisipyo Planning & Development',
     'infra-occupancy-permit': 'Permit sa Paninirahan',
-    'infra-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'infra-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'infra-open-data-philippines': 'Open Data Philippines',
     'infra-ordinance-framework': 'Balangkas ng Ordinansa',
     'infra-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -9589,8 +9589,8 @@ const translations = {
     'leg-detailed-discussion-and-debate-on-the-proposed':
       'Detalyadong talakayan at debate sa iminumungkahing ordinansa',
     'leg-education': 'Edukasyon',
-    'leg-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'leg-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'leg-environment': 'Kapaligiran',
     'leg-expressions-of-the-legislative-bodys-will-or':
       "Expressions ng ang legislative body's ay o opinion sa tiyak na mga usapin, often used para sa commendations, mga kahilingan, o patakaran positions.",
@@ -9629,7 +9629,7 @@ const translations = {
       'Ang ordinansa ay nagkakabisa at ipinapatupad sa loob ng munisipyo',
     'leg-ordinances': 'Mga Ordinansa',
     'leg-ordinances-and-resolutions-of-the-sangguniang':
-      'Mga ordinansa at resolusyon ng Sangguniang Bayan ng Solano',
+      'Mga ordinansa at resolusyon ng Sangguniang Bayan ng Malolos',
     'leg-posting-publication': 'Pag-post / Publikasyon',
     'leg-posting-transmittal': 'Pag-post / Transmittal',
     'leg-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -9711,7 +9711,7 @@ const translations = {
     'magri-certification-of-farm-location-and-area-cultivated':
       'Sertipikasyon ng lokasyon ng bukid at lugar na sinasaka',
     'magri-certification-that-individual-is-a-registered':
-      'Sertipikasyon na ang indibidwal ay isang rehistradong magsasaka sa Solano',
+      'Sertipikasyon na ang indibidwal ay isang rehistradong magsasaka sa Malolos',
     'magri-certifications': 'Mga Sertipikasyon',
     'magri-certified-seeds-distribution': 'Sertipikado Seeds Distribution',
     'magri-citizens-charter': "Citizen's Charter",
@@ -9740,13 +9740,13 @@ const translations = {
     'magri-distribution-of-tilapia-carp-and-other-fingerlings':
       'Pamamahagi ng mga tilapia, karpa, at iba pang fingerling',
     'magri-education': 'Edukasyon',
-    'magri-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'magri-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'magri-environment': 'Kapaligiran',
     'magri-farm-location-certification': 'Sertipikasyon ng Lokasyon ng Bukid',
     'magri-farm-machinery-services': 'Farm Machinery Mga serbisyo',
     'magri-farm-registration-certifications-and-agricultural':
-      'Pagpaparehistro ng bukid, mga sertipikasyon, at mga programang agrikultural para sa mga magsasaka ng Solano',
+      'Pagpaparehistro ng bukid, mga sertipikasyon, at mga programang agrikultural para sa mga magsasaka ng Malolos',
     'magri-farmer-certification': 'Sertipikasyon ng Magsasaka',
     'magri-farmers-field-school': 'Paaralan sa Bukid ng mga Magsasaka',
     'magri-farmers-organization': 'Organisasyon ng mga Magsasaka',
@@ -9781,7 +9781,7 @@ const translations = {
     'magri-land-title-tax-declaration-lease-contract':
       'Land Title / Tax Declaration / Kontrata ng Pag-upa',
     'magri-legislative': 'Lehislatura',
-    'magri-lgu-solano-facebook': 'LGU Solano Facebook',
+    'magri-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'magri-linkage-to-organic-markets-and-buyers':
       'Koneksyon sa mga organikong pamilihan at mamimili',
     'magri-livestock': 'Mga Hayop',
@@ -9798,14 +9798,14 @@ const translations = {
     'magri-mun-agriculture': 'Mun. Agrikultura',
     'magri-municipal-agriculture-office': 'Opisina ng Agrikultura ng Munisipalidad',
     'magri-municipal-agriculture-office-municipal-hall':
-      'Kagawaran ng Agrikultura ng Munisipyo Opisina, Munisipyo, Solano, Nueva Vizcaya',
+      'Kagawaran ng Agrikultura ng Munisipyo Opisina, Munisipyo, Malolos, Bulacan',
     'magri-municipal-hall': 'Munisipyo',
     'magri-no-payment-required': 'No Pagbabayad Kinakailangan',
     'magri-office': 'Opisina',
     'magri-office-information': 'Impormasyon ng Opisina',
     'magri-official-certifications-issued-by-the-municipal':
       'Mga opisyal na sertipikasyon na ibinibigay ng Opisina ng Agrikultura ng Munisipyo',
-    'magri-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'magri-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'magri-official-production-records-for-loan-and':
       'Mga opisyal na rekord ng produksyon para sa layunin ng pautang at seguro',
     'magri-old-rsbsa-form-reference-number': 'Luma RSBSA Form / Reference Number',
@@ -9872,8 +9872,8 @@ const translations = {
       'Suporta para sa mga kasanayan sa organikong pagsasaka at sertipikasyon',
     'magri-support-for-pgs-and-thirdparty-organic':
       'Suporta para sa PGS at third-party na organikong sertipikasyon',
-    'magri-support-programs-for-corn-farmers-in-solano':
-      'Mga programa ng suporta para sa mga magsasaka ng mais sa Solano',
+    'magri-support-programs-for-corn-farmers-in-malolos':
+      'Mga programa ng suporta para sa mga magsasaka ng mais sa Malolos',
     'magri-support-programs-for-rice-farmers-under-the-rice':
       'Mga programa ng suporta para sa mga magsasaka ng bigas sa ilalim ng Rice Competitiveness Enhancement Fund (RCEF)',
     'magri-support-services-for-fisherfolk-and-aquaculture':
@@ -9950,8 +9950,8 @@ const translations = {
     'market-duration': 'Tagal',
     'market-economic-enterprise-development-office': 'Economic Enterprise & Development Opisina',
     'market-education': 'Edukasyon',
-    'market-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'market-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'market-entrance-fees': 'Mga Bayad sa Pagpasok',
     'market-entrance-fees-are-based-on-goods-being-sold':
       'Ang mga bayad sa pagpasok ay batay sa mga kalakal na ibinebenta',
@@ -9995,7 +9995,7 @@ const translations = {
     'market-key-personnel-handling-public-market-services':
       'Key tauhan handling pampubliko market mga serbisyo',
     'market-legislative': 'Lehislatura',
-    'market-lgu-solano-facebook': 'LGU Solano Facebook',
+    'market-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'market-location': 'Lokasyon',
     'market-market-clearance': 'Clearance ng Pamilihan',
     'market-market-collector': 'Kolektor ng Pamilihan',
@@ -10007,7 +10007,7 @@ const translations = {
     'market-office-head': 'Pinuno ng Opisina',
     'market-office-information': 'Impormasyon ng Opisina',
     'market-office-personnel': 'Mga Tauhan ng Opisina',
-    'market-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'market-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'market-open-data-philippines': 'Open Data Philippines',
     'market-ordinance-framework': 'Balangkas ng Ordinansa',
     'market-other-merchandise': 'Iba pang Paninda',
@@ -10039,8 +10039,8 @@ const translations = {
     'market-secure-and-fill-out-public-market-complaint-form':
       'Ligtas and punan out Pamilihang Bayan reklamo form and isumite to the Market Supervisor',
     'market-seedo-head': 'SEEDO Pinuno',
-    'market-seedo-office-public-market-solano-nueva-vizcaya':
-      'SEEDO Opisina, Pamilihang Bayan, Solano, Nueva Vizcaya',
+    'market-seedo-office-public-market-malolos-bulacan':
+      'SEEDO Opisina, Pamilihang Bayan, Malolos, Bulacan',
     'market-seedo-public-market': 'SEEDO - Pamilihang Bayan',
     'market-select-a-service-to-view-the-detailed-process-and':
       'Pumili ng serbisyo upang makita ang detalyadong proseso at mga kinakailangan',
@@ -10114,8 +10114,8 @@ const translations = {
     'mbudget-documents-required': 'Mga Dokumentong Kinakailangan',
     'mbudget-duration': 'Tagal',
     'mbudget-education': 'Edukasyon',
-    'mbudget-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mbudget-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mbudget-ensure-all-documents-are-complete-before':
       'Ensure lahat ng mga dokumento ay kumpletong bago pagsusumite',
     'mbudget-environment': 'Kapaligiran',
@@ -10131,15 +10131,15 @@ const translations = {
     'mbudget-key-personnel-handling-budget-office-services':
       'Key tauhan handling budget opisina mga serbisyo',
     'mbudget-legislative': 'Lehislatura',
-    'mbudget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mbudget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mbudget-local-school-board-ordinance': 'Lokal School Lupon Ordinansa',
     'mbudget-location': 'Lokasyon',
     'mbudget-marcial-l-ramos-cpa': 'Marcial L. Ramos, CPA',
     'mbudget-melisa-claire-leal': 'Melisa Claire Leal',
     'mbudget-mun-budget': 'Mun. Badyet',
     'mbudget-municipal-budget-office': 'Opisina ng Badyet ng Munisipalidad',
-    'mbudget-municipal-budget-office-municipal-hall-solano':
-      'Pangmunisipyo Opisina ng Badyet, Munisipyo, Solano, Nueva Vizcaya',
+    'mbudget-municipal-budget-office-municipal-hall-malolos':
+      'Pangmunisipyo Opisina ng Badyet, Munisipyo, Malolos, Bulacan',
     'mbudget-municipal-budget-officer': 'Opisyal ng Badyet ng Munisipalidad',
     'mbudget-municipal-hall': 'Munisipyo',
     'mbudget-obligation-request': 'Kahilingan ng Obligasyon',
@@ -10151,7 +10151,7 @@ const translations = {
     'mbudget-office': 'Opisina',
     'mbudget-office-information': 'Impormasyon ng Opisina',
     'mbudget-office-personnel': 'Mga Tauhan ng Opisina',
-    'mbudget-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mbudget-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mbudget-official-receipt': 'Opisyal na Resibo',
     'mbudget-open-data-philippines': 'Open Data Philippines',
     'mbudget-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -10280,8 +10280,8 @@ const translations = {
     'mc-duration': 'Tagal',
     'mc-edgar-mc': 'Edgar Mc',
     'mc-education': 'Edukasyon',
-    'mc-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mc-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mc-environment': 'Kapaligiran',
     'mc-fee': 'Bayad',
     'mc-fifteen-15-days': 'labinlimang (15) araw',
@@ -10289,7 +10289,7 @@ const translations = {
       'Sundin these steps to magparehistro your kasal sertipiko',
     'mc-for-delayed-registration': 'For Naantalang Pagpaparehistro',
     'mc-for-engaged-couples-intending-to-get-married-in':
-      'Para sa mga magkasintahang nagbabalak magpakasal sa Solano',
+      'Para sa mga magkasintahang nagbabalak magpakasal sa Malolos',
     'mc-for-timely-registration-within-1530-days':
       'Para sa Napapanahong Pagpaparehistro (Sa Loob ng 15/30 Araw)',
     'mc-forms-for-marriage-license-application': 'Mga form for kasal lisensya aplikasyon',
@@ -10314,18 +10314,18 @@ const translations = {
     'mc-issuance-of-the-marriage-license': 'Issuance of the kasal lisensya',
     'mc-juvy': 'Juvy',
     'mc-legislative': 'Lehislatura',
-    'mc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mc-license-validity': 'Bisa ng Lisensya',
     'mc-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'mc-marriage-certificate-local-registration': 'Sertipiko ng Kasal (Local Registration)',
     'mc-mswdo-staff': 'MSWDO Kawani',
     'mc-mto-collection-officer': 'MTO Collection Opisyal',
-    'mc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipyo, Ikalawang Palapag Solano, Nueva Vizcaya',
+    'mc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipyo, Ikalawang Palapag Malolos, Bulacan',
     'mc-nationwide': 'Buong Bansa',
     'mc-need-help': 'Kailangan Tulong?',
     'mc-office-information': 'Impormasyon ng Opisina',
-    'mc-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mc-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mc-official-receipt': 'Opisyal na Resibo',
     'mc-oliver-receiving-officer': 'Oliver - Receiving Opisyal',
     'mc-open-data-philippines': 'Open Data Philippines',
@@ -10461,8 +10461,8 @@ const translations = {
       'I-download the kasal lisensya aplikasyon form',
     'mcr-duration': 'Tagal',
     'mcr-education': 'Edukasyon',
-    'mcr-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mcr-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mcr-environment': 'Kapaligiran',
     'mcr-fee': 'Bayad',
     'mcr-fee-per-copy': 'Bayad bawat Kopya',
@@ -10483,7 +10483,7 @@ const translations = {
     'mcr-legal-capacity-to-contract-marriage-from-embassy':
       'Legal na Kakayahang Mag-asawa mula sa Embahada',
     'mcr-legislative': 'Lehislatura',
-    'mcr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mcr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mcr-location': 'Lokasyon',
     'mcr-marriage-certificate': 'Sertipiko ng Kasal',
     'mcr-marriage-certificate-of-parents-if-legitimate':
@@ -10504,7 +10504,7 @@ const translations = {
     'mcr-municipal-civil-registrar': 'Tagapagrehistro Sibil ng Munisipalidad',
     'mcr-municipal-civil-registrars-office': 'Pangmunisipyo Opisina ng Tagapagrehistro Sibil',
     'mcr-municipal-civil-registrars-office-2nd-floor':
-      'Pangmunisipyo Opisina ng Tagapagrehistro Sibil, Ikalawang Palapag, Munisipyo, Solano, Nueva Vizcaya',
+      'Pangmunisipyo Opisina ng Tagapagrehistro Sibil, Ikalawang Palapag, Munisipyo, Malolos, Bulacan',
     'mcr-municipal-hall-2f': 'Pangmunisipyo Hall, 2F',
     'mcr-nbipolice-clearance': 'NBI/Police Clearance',
     'mcr-negative-certification-from-psa': 'Negatibong Sertipikasyon mula sa PSA',
@@ -10515,7 +10515,7 @@ const translations = {
     'mcr-office-head': 'Pinuno ng Opisina',
     'mcr-office-information': 'Impormasyon ng Opisina',
     'mcr-office-personnel': 'Mga Tauhan ng Opisina',
-    'mcr-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mcr-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mcr-official-receipt': 'Opisyal na Resibo',
     'mcr-open-data-philippines': 'Open Data Philippines',
     'mcr-order-of-payment': 'Order of Pagbabayad',
@@ -10542,11 +10542,11 @@ const translations = {
     'mcr-ra-9048-clerical-error-correction': 'RA 9048 - Pagwawasto ng Klerikal na Error',
     'mcr-register-births-and-deaths-within-30-days-to':
       'Irehistro ang mga kapanganakan at pagkamatay sa loob ng 30 araw upang maiwasan ang mga multa',
-    'mcr-registration-of-birth-for-children-born-in-solano':
-      'Pagpaparehistro ng kapanganakan para sa mga batang ipinanganak sa Solano, Nueva Vizcaya',
+    'mcr-registration-of-birth-for-children-born-in-malolos':
+      'Pagpaparehistro ng kapanganakan para sa mga batang ipinanganak sa Malolos, Bulacan',
     'mcr-registration-of-death': 'Registration of Kamatayan',
     'mcr-registration-of-death-for-persons-who-died-in':
-      'Pagpaparehistro ng pagkamatay para sa mga taong namatay sa Solano, Nueva Vizcaya',
+      'Pagpaparehistro ng pagkamatay para sa mga taong namatay sa Malolos, Bulacan',
     'mcr-registration-of-live-birth': 'Pagpaparehistro ng Kapanganakan',
     'mcr-registration-of-marriage': 'Registration of Kasal',
     'mcr-registration-officer': 'Opisyal ng Pagpaparehistro',
@@ -10555,7 +10555,7 @@ const translations = {
     'mcr-representatives-must-have-authorization-letter':
       'Ang mga kinatawan ay dapat may sulat ng awtorisasyon at mga balidong ID',
     'mcr-request-for-certified-true-copies-of-civil':
-      'Humiling for sertipikado totoo mga kopya of civil registry mga dokumento registered in Solano',
+      'Humiling for sertipikado totoo mga kopya of civil registry mga dokumento registered in Malolos',
     'mcr-requirements': 'Mga Kinakailangan',
     'mcr-resolution-framework': 'Balangkas ng Resolusyon',
     'mcr-resources': 'Mga Mapagkukunan',
@@ -10627,8 +10627,8 @@ const translations = {
     'mgs-duration': 'Tagal',
     'mgs-education': 'Edukasyon',
     'mgs-electricity': 'Kuryente',
-    'mgs-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mgs-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mgs-environment': 'Kapaligiran',
     'mgs-equipment-accountability-is-strictly-enforced':
       'Ang pananagutan sa kagamitan ay mahigpit na ipinapatupad',
@@ -10652,7 +10652,7 @@ const translations = {
     'mgs-key-personnel-handling-general-services-operations':
       'Key tauhan handling pangkalahatan mga serbisyo operations',
     'mgs-legislative': 'Lehislatura',
-    'mgs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mgs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mgs-light-vehicle': 'Magaan na Sasakyan',
     'mgs-light-vehicles': 'Mga Magaan na Sasakyan',
     'mgs-location': 'Lokasyon',
@@ -10666,13 +10666,13 @@ const translations = {
     'mgs-motorcycles': 'Mga Motorsiklo',
     'mgs-municipal-general-services-office': 'Opisina ng Pangkalahatang Serbisyo ng Munisipalidad',
     'mgs-municipal-general-services-office-municipal-hall':
-      'Pangmunisipyo Opisina ng Pangkalahatang Serbisyo, Munisipyo, Solano, Nueva Vizcaya',
+      'Pangmunisipyo Opisina ng Pangkalahatang Serbisyo, Munisipyo, Malolos, Bulacan',
     'mgs-municipal-hall': 'Munisipyo',
     'mgs-none': 'Wala',
     'mgs-office': 'Opisina',
     'mgs-office-information': 'Impormasyon ng Opisina',
     'mgs-office-personnel': 'Mga Tauhan ng Opisina',
-    'mgs-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mgs-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mgs-open-data-philippines': 'Open Data Philippines',
     'mgs-operators-pool': 'Pool ng mga Operator',
     'mgs-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -10749,8 +10749,8 @@ const translations = {
     'mgs-volunteer-with-us': 'Mag-volunteer sa amin',
     'mgs-water': 'Tubig',
     'mpdo-12-days': '1-2 Araw',
-    'mpdo-2nd-floor-municipal-hall-solano-nueva-vizcaya':
-      'Ikalawang Palapag, Munisipyo, Solano, Nueva Vizcaya',
+    'mpdo-2nd-floor-municipal-hall-malolos-bulacan':
+      'Ikalawang Palapag, Munisipyo, Malolos, Bulacan',
     'mpdo-30-days': '30+ Araw',
     'mpdo-510-days': '5-10 Araw',
     'mpdo-8am-5pm': '8AM - 5PM',
@@ -10798,8 +10798,8 @@ const translations = {
     'mpdo-downloadable-resources': 'Mga Nada-download na Mapagkukunan',
     'mpdo-duly-accomplished-application-form': 'Wastong napunang Application Form',
     'mpdo-education': 'Edukasyon',
-    'mpdo-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mpdo-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mpdo-environment': 'Kapaligiran',
     'mpdo-environmental-compliance-certificate-if-required':
       'Sertipiko ng Pagsunod sa Kapaligiran (if kinakailangan)',
@@ -10822,7 +10822,7 @@ const translations = {
     'mpdo-land-use-reclassification': 'Lupa Gamitin Reclassification',
     'mpdo-latest-real-property-tax-receipt': 'Latest Buwis sa Ari-arian Resibo',
     'mpdo-legislative': 'Lehislatura',
-    'mpdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mpdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mpdo-location': 'Lokasyon',
     'mpdo-locational-clearance': 'Locational Clearance',
     'mpdo-locational-clearance-is-required-before-building':
@@ -10833,7 +10833,7 @@ const translations = {
       'Opisina ng Pagpaplano at Pagpapaunlad ng Munisipalidad',
     'mpdo-office': 'Opisina',
     'mpdo-office-information': 'Impormasyon ng Opisina',
-    'mpdo-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mpdo-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mpdo-ongoing': 'Kasalukuyan',
     'mpdo-open-data-philippines': 'Open Data Philippines',
     'mpdo-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -10956,8 +10956,8 @@ const translations = {
     'mswdo-emergency-financial-assistance-for-various-needs':
       "Emergency na tulong pinansyal para sa iba't ibang pangangailangan",
     'mswdo-employment-facilitation-ef': 'Pagpapadali ng Trabaho (EF)',
-    'mswdo-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mswdo-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mswdo-enrollment-requirements': 'Mga Kinakailangan sa Pagpapatala',
     'mswdo-environment': 'Kapaligiran',
     'mswdo-families-in-crisis-situations': 'Mga pamilya sa mga sitwasyon ng krisis',
@@ -10997,7 +10997,7 @@ const translations = {
     'mswdo-infrastructure': 'Imprastraktura',
     'mswdo-interest': 'Interes',
     'mswdo-legal-assistance': 'Tulong Legal',
-    'mswdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdo-livelihood': 'Kabuhayan',
     'mswdo-loan-amount': 'Halaga ng Pautang',
     'mswdo-location': 'Lokasyon',
@@ -11007,7 +11007,7 @@ const translations = {
     'mswdo-medical-assistance': 'Tulong Medikal',
     'mswdo-microenterprise-development-md': 'Pagpapaunlad ng Microenterprise (MD)',
     'mswdo-mswdo-head': 'MSWDO Pinuno',
-    'mswdo-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'mswdo-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'mswdo-municipal-social-welfare-and-development-office':
       'Kagawaran ng Kapakanan ng Munisipyo and Development Opisina',
     'mswdo-municipal-social-welfare-officer': 'Opisyal ng Kagalingang Panlipunan ng Munisipalidad',
@@ -11023,7 +11023,7 @@ const translations = {
     'mswdo-nutritious-snacks-and-meals-during-day-care-hours':
       'Masustansyang meryenda at pagkain sa oras ng day care.',
     'mswdo-office-hours': 'Oras ng Opisina',
-    'mswdo-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mswdo-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mswdo-open-data-philippines': 'Open Data Philippines',
     'mswdo-ordinance-framework': 'Balangkas ng Ordinansa',
     'mswdo-parent-education-on-proper-nutrition-and-child':
@@ -11200,8 +11200,8 @@ const translations = {
     'mswdosvc-educational-assistance': 'Tulong Pang-edukasyon',
     'mswdosvc-emergency-cases-are-given-priority':
       'Ang mga kaso ng emergency ay binibigyan ng prayoridad',
-    'mswdosvc-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'mswdosvc-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'mswdosvc-encoding-and-processing-of-pwd-id': 'Pag-encode at pagproseso ng PWD ID',
     'mswdosvc-encoding-and-processing-of-senior-citizen-id':
       'Pag-encode at pagproseso ng Senior Citizen ID',
@@ -11244,7 +11244,7 @@ const translations = {
       'Mga pangunahing tauhan na humahawak ng mga serbisyo ng kagalingang panlipunan',
     'mswdosvc-legal-assistance-referral': 'Legal tulong referral',
     'mswdosvc-legislative': 'Lehislatura',
-    'mswdosvc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdosvc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdosvc-livelihood-assistance-programs': 'Livelihood tulong programs',
     'mswdosvc-location': 'Lokasyon',
     'mswdosvc-medical-certificate-indicating-type-of-disability':
@@ -11254,8 +11254,8 @@ const translations = {
     'mswdosvc-medical-certificatehospital-bill-for-medical':
       'Medical Certificate/Hospital Bill (for medical tulong)',
     'mswdosvc-mswdo-head': 'MSWDO Pinuno',
-    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-solano':
-      'MSWDO Opisina, Ikalawang Palapag, Munisipyo, Solano, Nueva Vizcaya',
+    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-malolos':
+      'MSWDO Opisina, Ikalawang Palapag, Munisipyo, Malolos, Bulacan',
     'mswdosvc-mswdo-services': 'Mga Serbisyo ng MSWDO',
     'mswdosvc-municipal-hall-2nd-floor': 'Pangmunisipyo Hall, Ikalawang Palapag',
     'mswdosvc-municipal-social-welfare-development-office':
@@ -11264,7 +11264,7 @@ const translations = {
     'mswdosvc-office-head-social-welfare-officer': 'Pinuno ng Opisina / Social Welfare Officer',
     'mswdosvc-office-information': 'Impormasyon ng Opisina',
     'mswdosvc-office-personnel': 'Mga Tauhan ng Opisina',
-    'mswdosvc-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'mswdosvc-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'mswdosvc-open-data-philippines': 'Open Data Philippines',
     'mswdosvc-ordinance-framework': 'Balangkas ng Ordinansa',
     'mswdosvc-osca-focal-person': 'OSCA Focal Tao',
@@ -11279,7 +11279,7 @@ const translations = {
     'mswdosvc-processing-information': 'Impormasyon sa Pagproseso',
     'mswdosvc-programs-and-services-for-womens-welfare-and':
       'Mga programa at serbisyo para sa kagalingan at proteksyon ng mga kababaihan',
-    'mswdosvc-proof-of-residence-in-solano': 'Patunay ng paninirahan sa Solano',
+    'mswdosvc-proof-of-residence-in-malolos': 'Patunay ng paninirahan sa Malolos',
     'mswdosvc-provision-of-immediate-interventionassistance':
       'Pagbibigay ng agarang interbensyon/tulong',
     'mswdosvc-public-safety': 'Kaligtasang Pampubliko',
@@ -11375,21 +11375,21 @@ const translations = {
     'news-cmci-dti-portal': 'CMCI DTI Portal',
     'news-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'news-education': 'Edukasyon',
-    'news-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'news-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'news-environment': 'Kapaligiran',
-    'news-fetching-news-and-updates-from-solano':
-      'Kinukuha ang mga balita at update mula sa Solano.',
+    'news-fetching-news-and-updates-from-malolos':
+      'Kinukuha ang mga balita at update mula sa Malolos.',
     'news-freedom-of-information': 'Kalayaan sa Impormasyon',
     'news-health': 'Kalusugan',
     'news-home': 'Tahanan',
     'news-infrastructure': 'Imprastraktura',
-    'news-lgu-solano-facebook': 'LGU Solano Facebook',
+    'news-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'news-loading': 'Naglo-load',
     'news-loading-news': 'Naglo-load ng balita...',
     'news-news': 'Balita',
     'news-news-updates': 'Balita at mga Update',
-    'news-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'news-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'news-open-data-philippines': 'Open Data Philippines',
     'news-ordinance-framework': 'Balangkas ng Ordinansa',
     'news-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -11402,7 +11402,7 @@ const translations = {
     'news-skip-to-main-content': 'Lumaktaw sa pangunahing nilalaman',
     'news-social-services': 'Serbisyong Panlipunan',
     'news-stay-informed-about-the-latest-happenings-in':
-      'Manatiling may kaalaman tungkol sa mga pinakabagong pangyayari sa Solano',
+      'Manatiling may kaalaman tungkol sa mga pinakabagong pangyayari sa Malolos',
     'news-tax-payments': 'Pagbabayad ng Buwis',
     'news-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'news-volunteer-with-us': 'Mag-volunteer sa amin',
@@ -11416,8 +11416,8 @@ const translations = {
     'officials-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'officials-education': 'Edukasyon',
     'officials-elected-officials': 'Mga Halal na Opisyal',
-    'officials-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'officials-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'officials-environment': 'Kapaligiran',
     'officials-executive-branch': 'Ehekutibong Sangay',
     'officials-freedom-of-information': 'Kalayaan sa Impormasyon',
@@ -11435,13 +11435,13 @@ const translations = {
     'officials-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'officials-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
     'officials-infrastructure': 'Imprastraktura',
-    'officials-lgu-solano-facebook': 'LGU Solano Facebook',
-    'officials-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'officials-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'officials-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'officials-meet-the-leaders-serving-the-municipality-of':
-      'Meet the leaders serving the Munisipyo of Solano',
+      'Meet the leaders serving the Munisipyo of Malolos',
     'officials-municipal-mayor': 'Punong Bayan',
     'officials-municipal-vice-mayor': 'Bise Punong Bayan',
-    'officials-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'officials-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'officials-open-data-philippines': 'Open Data Philippines',
     'officials-ordinance-framework': 'Balangkas ng Ordinansa',
     'officials-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -11457,10 +11457,10 @@ const translations = {
     'officials-social-services': 'Serbisyong Panlipunan',
     'officials-tax-payments': 'Pagbabayad ng Buwis',
     'officials-terms-of-use': 'Mga Tuntunin ng Paggamit',
-    'officials-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'officials-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'officials-volunteer-with-us': 'Mag-volunteer sa amin',
-    'offline-emergency-hotlines-solano-nueva-vizcaya':
-      'Mga Emergency Hotline - Solano, Nueva Vizcaya',
+    'offline-emergency-hotlines-malolos-bulacan':
+      'Mga Emergency Hotline - Malolos, Bulacan',
     'offline-fire-bfp': 'Sunog (BFP)',
     'offline-municipal-hall': 'Munisipyo',
     'offline-police-pnp': 'Pulis (PNP)',
@@ -11478,16 +11478,16 @@ const translations = {
     'ord-cmci-dti-portal': 'CMCI DTI Portal',
     'ord-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'ord-education': 'Edukasyon',
-    'ord-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'ord-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'ord-environment': 'Kapaligiran',
     'ord-freedom-of-information': 'Kalayaan sa Impormasyon',
     'ord-health': 'Kalusugan',
     'ord-home': 'Tahanan',
     'ord-infrastructure': 'Imprastraktura',
     'ord-legislative': 'Lehislatura',
-    'ord-lgu-solano-facebook': 'LGU Solano Facebook',
-    'ord-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'ord-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'ord-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'ord-open-data-philippines': 'Open Data Philippines',
     'ord-ordinance-framework': 'Balangkas ng Ordinansa',
     'ord-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -11508,10 +11508,10 @@ const translations = {
     'privacy-agriculture': 'Agrikultura',
     'privacy-analytics-cookies': 'Mga Analytics Cookie:',
     'privacy-analytics-data': 'Datos ng Analytics:',
-    'privacy-bettersolanoorg-is-a-general-audience-website':
-      'Ang BetterSolano.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon. Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata under 18 years ng age nang walang parental pahintulot.',
-    'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasyon. This Privacy Patakaran explains how we kolektahin, gamitin, ibunyag, and safeguard your impormasyon when you bisitahin our website.',
+    'privacy-bettermalolosorg-is-a-general-audience-website':
+      'Ang BetterMalolos.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon. Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata under 18 years ng age nang walang parental pahintulot.',
+    'privacy-bettermalolosorg-we-us-or-our-is-committed-to':
+      'BetterMalolos.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasyon. This Privacy Patakaran explains how we kolektahin, gamitin, ibunyag, and safeguard your impormasyon when you bisitahin our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Uri at bersyon ng browser',
     'privacy-business': 'Negosyo',
@@ -11542,8 +11542,8 @@ const translations = {
     'privacy-education': 'Edukasyon',
     'privacy-email-address-when-you-contact-us-or-submit':
       'Mag-email address (when you makipag-ugnayan us or isumite feedback)',
-    'privacy-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'privacy-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'privacy-environment': 'Kapaligiran',
     'privacy-essential-cookies': 'Mga Mahahalagang Cookie:',
     'privacy-exercising-your-rights': 'Paggamit ng Iyong mga Karapatan',
@@ -11576,7 +11576,7 @@ const translations = {
     'privacy-legal-requirements': 'Legal Mga kinakailangan:',
     'privacy-legislative': 'Lehislatura',
     'privacy-legitimate-interest': 'Legitimate Interes:',
-    'privacy-lgu-solano-facebook': 'LGU Solano Facebook',
+    'privacy-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'privacy-managing-cookies': 'Pamamahala ng mga Cookie',
     'privacy-material-changes-may-be-announced-on-our-website':
       'Ang mga mahahalagang pagbabago ay maaaring ianunsyo sa aming website',
@@ -11585,7 +11585,7 @@ const translations = {
     'privacy-national-privacy-commission': 'Pambansa Privacy Komisyon',
     'privacy-not': 'hindi',
     'privacy-number-of-visitors-and-page-views': 'Bilang ng mga bisita at page view',
-    'privacy-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'privacy-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'privacy-open-data-philippines': 'Open Data Philippines',
     'privacy-ordinance-framework': 'Balangkas ng Ordinansa',
     'privacy-our-website-may-contain-links-to-external':
@@ -11647,7 +11647,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ang Data Privacy Act ng 2012, ikaw ay maaari ang following mga karapatan regarding iyong personal na impormasyon:',
     'privacy-volunteer-with-us': 'Mag-volunteer sa amin',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektahin minimal impormasyon necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -11729,8 +11729,8 @@ const translations = {
     'propdec-education': 'Edukasyon',
     'propdec-effectivity-of-assessment': 'Effectivity of Pagtatasa',
     'propdec-effectivity-quarter-and-year': 'Quarter at Taon ng Bisa',
-    'propdec-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'propdec-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'propdec-environment': 'Kapaligiran',
     'propdec-estimated-economic-life': 'Tinatayang Buhay Pang-ekonomiya',
     'propdec-for-building-declaration': 'For Gusali Declaration',
@@ -11740,7 +11740,7 @@ const translations = {
     'propdec-freedom-of-information': 'Kalayaan sa Impormasyon',
     'propdec-full-name-of-owner': 'Buong Name of May-ari',
     'propdec-government': 'Pamahalaan',
-    'propdec-ground-floor-municipal-hall-solano': 'Unang Palapag, Munisipyo, Solano',
+    'propdec-ground-floor-municipal-hall-malolos': 'Unang Palapag, Munisipyo, Malolos',
     'propdec-handles-property-assessment-tax-declaration-and':
       'Handles ari-arian pagtatasa, buwis declaration, and real ari-arian mga rekord.',
     'propdec-health': 'Kalusugan',
@@ -11756,7 +11756,7 @@ const translations = {
     'propdec-land-declaration': 'Deklarasyon ng Lupa',
     'propdec-land-tax-declaration': 'Lupa Deklarasyon ng Buwis',
     'propdec-legislative': 'Lehislatura',
-    'propdec-lgu-solano-facebook': 'LGU Solano Facebook',
+    'propdec-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'propdec-list-of-machineries-with-specifications': 'Listahan ng mga Makinarya na may Detalye',
     'propdec-location': 'Lokasyon',
     'propdec-machinery-declaration': 'Deklarasyon ng Makinarya',
@@ -11769,7 +11769,7 @@ const translations = {
     'propdec-occupancy-permit': 'Permit sa Paninirahan',
     'propdec-octtctcloa-no': 'OCT/TCT/CLOA No.',
     'propdec-office': 'Opisina',
-    'propdec-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'propdec-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'propdec-open-data-philippines': 'Open Data Philippines',
     'propdec-ordinance-framework': 'Balangkas ng Ordinansa',
     'propdec-owner-information': 'Impormasyon ng May-ari',
@@ -11798,7 +11798,7 @@ const translations = {
     'propdec-tax-clearance-certificate': 'Tax Clearance Sertipiko',
     'propdec-tax-declaration': 'Deklarasyon ng Buwis',
     'propdec-tax-declaration-form-for-real-property-assessment':
-      'Form ng tax declaration para sa pagtatasa ng tunay na ari-arian sa Solano, Nueva Vizcaya',
+      'Form ng tax declaration para sa pagtatasa ng tunay na ari-arian sa Malolos, Bulacan',
     'propdec-tax-payments': 'Pagbabayad ng Buwis',
     'propdec-tax-payments-2': 'Buwis at Pagbabayad',
     'propdec-taxableexempt-status': 'Katayuang Buwisable/Exempt',
@@ -11819,16 +11819,16 @@ const translations = {
     'reso-cmci-dti-portal': 'CMCI DTI Portal',
     'reso-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'reso-education': 'Edukasyon',
-    'reso-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'reso-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'reso-environment': 'Kapaligiran',
     'reso-freedom-of-information': 'Kalayaan sa Impormasyon',
     'reso-health': 'Kalusugan',
     'reso-home': 'Tahanan',
     'reso-infrastructure': 'Imprastraktura',
     'reso-legislative': 'Lehislatura',
-    'reso-lgu-solano-facebook': 'LGU Solano Facebook',
-    'reso-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'reso-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'reso-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'reso-open-data-philippines': 'Open Data Philippines',
     'reso-ordinance-framework': 'Balangkas ng Ordinansa',
     'reso-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -11846,16 +11846,16 @@ const translations = {
     'reso-volunteer-with-us': 'Mag-volunteer sa amin',
     'safety-accessibility': 'Aksesibilidad',
     'safety-agriculture': 'Agrikultura',
-    'safety-bfp-solano': 'BFP Solano',
-    'safety-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'safety-bfp-malolos': 'BFP Malolos',
+    'safety-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'safety-blgf-portal': 'BLGF Portal',
     'safety-business': 'Negosyo',
     'safety-certificates': 'Mga Sertipiko',
     'safety-citizens-charter': "Citizen's Charter",
     'safety-cmci-dti-portal': 'CMCI DTI Portal',
     'safety-contribute-code-with-us': 'Mag-ambag ng code sa amin',
-    'safety-dilg-solano': 'DILG Solano',
-    'safety-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'safety-dilg-malolos': 'DILG Malolos',
+    'safety-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'safety-disaster-assistance': 'Tulong sa Sakuna',
     'safety-disaster-preparedness': 'Paghahanda sa Sakuna',
     'safety-education': 'Edukasyon',
@@ -11863,8 +11863,8 @@ const translations = {
     'safety-emergency-hotlines': 'Mga Emergency Hotline',
     'safety-emergency-response-and-disaster-preparedness':
       'Mga programa ng pagtugon sa emergency at paghahanda sa sakuna.',
-    'safety-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'safety-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'safety-environment': 'Kapaligiran',
     'safety-fee': 'Bayad:',
     'safety-for-emergencies-and-inquiries-contact-these':
@@ -11877,31 +11877,31 @@ const translations = {
     'safety-infrastructure': 'Imprastraktura',
     'safety-kabalikat-civicom': 'KABALIKAT Civicom',
     'safety-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'safety-lgu-solano-facebook': 'LGU Solano Facebook',
-    'safety-magro-solano': 'MAGRO Solano',
-    'safety-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'safety-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'safety-magro-malolos': 'MAGRO Malolos',
+    'safety-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'safety-mayors-office': 'Opisina ng Punong Bayan',
     'safety-mayors-office-0917-595-1931': 'Opisina ng Punong Bayan 0917 595 1931',
-    'safety-mdrrmo-solano': 'MDRRMO Solano',
-    'safety-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'safety-mdrrmo-malolos': 'MDRRMO Malolos',
+    'safety-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'safety-medical': 'Medikal',
     'safety-medical-emergency-hotlines': 'Mga Medikal na Emergency Hotline',
     'safety-mmg-hospital': 'MMG Hospital',
     'safety-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
-    'safety-mswdo-solano': 'MSWDO Solano',
-    'safety-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
-    'safety-nuvelco-solano': 'NUVELCO Solano',
-    'safety-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
+    'safety-mswdo-malolos': 'MSWDO Malolos',
+    'safety-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
+    'safety-nuvelco-malolos': 'NUVELCO Malolos',
+    'safety-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
     'safety-office': 'Opisina:',
-    'safety-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'safety-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'safety-open-data-philippines': 'Open Data Philippines',
     'safety-ordinance-framework': 'Balangkas ng Ordinansa',
     'safety-pdrrmo-n-vizcaya': 'PDRRMO N. Vizcaya',
     'safety-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'safety-plt-hospital': 'PLT Hospital',
     'safety-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'safety-pnp-solano': 'PNP Solano',
-    'safety-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'safety-pnp-malolos': 'PNP Malolos',
+    'safety-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'safety-privacy-policy': 'Patakaran sa Pagkapribado',
     'safety-public-safety': 'Kaligtasang Pampubliko',
     'safety-public-safety-services': 'Pampubliko Safety Mga serbisyo',
@@ -11913,8 +11913,8 @@ const translations = {
     'safety-relief-goods-and-evacuation-support': 'Mga relief goods at suporta sa ebakwasyon',
     'safety-resolution-framework': 'Balangkas ng Resolusyon',
     'safety-resources': 'Mga Mapagkukunan',
-    'safety-rhu-solano': 'RHU Solano',
-    'safety-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'safety-rhu-malolos': 'RHU Malolos',
+    'safety-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'safety-salubris-hospital': 'Salubris Hospital',
     'safety-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'safety-sangguniang-bayan': 'Sangguniang Bayan',
@@ -11949,8 +11949,8 @@ const translations = {
     'sitemap-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'sitemap-education': 'Edukasyon',
     'sitemap-elected-officials': 'Mga Halal na Opisyal',
-    'sitemap-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'sitemap-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'sitemap-engineering-office': 'Opisina ng Inhinyero',
     'sitemap-environment': 'Kapaligiran',
     'sitemap-external-resources': 'Mga Panlabas na Mapagkukunan',
@@ -11967,17 +11967,17 @@ const translations = {
     'sitemap-infrastructure': 'Imprastraktura',
     'sitemap-legislative': 'Lehislatura',
     'sitemap-legislative-documents': 'Mga Dokumentong Lehislatibo',
-    'sitemap-lgu-solano-facebook': 'LGU Solano Facebook',
+    'sitemap-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'sitemap-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'sitemap-main-navigation': 'Pangunahing Nabigasyon',
     'sitemap-municipal-offices': 'Mga Opisina ng Munisipyo',
-    'sitemap-navigate-all-pages-and-services-of-better-solano':
-      'Navigate all pages and mga serbisyo of Better Solano',
+    'sitemap-navigate-all-pages-and-services-of-better-malolos':
+      'Navigate all pages and mga serbisyo of Better Malolos',
     'sitemap-navigation': 'Nabigasyon',
     'sitemap-new-business-application': 'Bago Business Aplikasyon',
     'sitemap-news': 'Balita',
-    'sitemap-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
-    'sitemap-official-solano-website': 'Opisyal Solano Website',
+    'sitemap-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
+    'sitemap-official-malolos-website': 'Opisyal Malolos Website',
     'sitemap-online-payment-order': 'Online Pagbabayad Order',
     'sitemap-online-services': 'Mga Online na Serbisyo',
     'sitemap-open-data-philippines': 'Open Data Philippines',
@@ -12059,8 +12059,8 @@ const translations = {
     'slaughter-duration': 'Tagal',
     'slaughter-economic-enterprise-development-office': 'Economic Enterprise & Development Opisina',
     'slaughter-education': 'Edukasyon',
-    'slaughter-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'slaughter-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'slaughter-environment': 'Kapaligiran',
     'slaughter-facility-maintenance': 'Pagpapanatili ng Pasilidad',
     'slaughter-fee': 'Bayad',
@@ -12083,7 +12083,7 @@ const translations = {
     'slaughter-large': 'Malaki',
     'slaughter-large-cattle-registration-certificate': 'Malaki Cattle Registration Sertipiko',
     'slaughter-legislative': 'Lehislatura',
-    'slaughter-lgu-solano-facebook': 'LGU Solano Facebook',
+    'slaughter-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'slaughter-location': 'Lokasyon',
     'slaughter-meat-inspection-certificate-is-required-for-meat':
       'Meat Inspeksyon Sertipiko is kinakailangan for meat transport',
@@ -12094,7 +12094,7 @@ const translations = {
     'slaughter-office-head': 'Pinuno ng Opisina',
     'slaughter-office-information': 'Impormasyon ng Opisina',
     'slaughter-office-personnel': 'Mga Tauhan ng Opisina',
-    'slaughter-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'slaughter-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'slaughter-open-data-philippines': 'Open Data Philippines',
     'slaughter-operations-management': 'Pamamahala ng Operasyon',
     'slaughter-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -12121,7 +12121,7 @@ const translations = {
     'slaughter-see-fee-schedule': 'See bayad schedule',
     'slaughter-seedo-head': 'SEEDO Pinuno',
     'slaughter-seedo-slaughterhouse': 'SEEDO - Katayan',
-    'slaughter-seedo-slaughterhouse-solano-nueva-vizcaya': 'SEEDO Katayan, Solano, Nueva Vizcaya',
+    'slaughter-seedo-slaughterhouse-malolos-bulacan': 'SEEDO Katayan, Malolos, Bulacan',
     'slaughter-select-a-service-to-view-the-detailed-process':
       'Select a serbisyo to tingnan the detailed iproseso, mga kinakailangan, and mga bayad',
     'slaughter-services': 'Mga Serbisyo',
@@ -12171,17 +12171,17 @@ const translations = {
     'social-cmci-dti-portal': 'CMCI DTI Portal',
     'social-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'social-education': 'Edukasyon',
-    'social-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'social-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'social-environment': 'Kapaligiran',
     'social-fee': 'Bayad:',
     'social-freedom-of-information': 'Kalayaan sa Impormasyon',
     'social-health': 'Kalusugan',
     'social-home': 'Tahanan',
     'social-infrastructure': 'Imprastraktura',
-    'social-lgu-solano-facebook': 'LGU Solano Facebook',
+    'social-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'social-mswdo-services': 'Mga Serbisyo ng MSWDO',
-    'social-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'social-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'social-open-data-philippines': 'Open Data Philippines',
     'social-ordinance-framework': 'Balangkas ng Ordinansa',
     'social-privacy-policy': 'Patakaran sa Pagkapribado',
@@ -12238,8 +12238,8 @@ const translations = {
     'stats-economic-sectors': 'Mga Sektor ng Ekonomiya',
     'stats-economy': 'Ekonomiya',
     'stats-education': 'Edukasyon',
-    'stats-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'stats-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'stats-environment': 'Kapaligiran',
     'stats-finance': 'Pananalapi',
     'stats-financial-standing-for-fiscal-year-2023':
@@ -12264,11 +12264,11 @@ const translations = {
     'stats-key-economic-data-and-business-statistics': 'Key economic datos and business statistics',
     'stats-key-indicators-trend-20162024': 'Trend ng mga Pangunahing Tagapagpahiwatig (2016-2024)',
     'stats-lactawan': 'Lactawan',
-    'stats-lgu-solano-facebook': 'LGU Solano Facebook',
+    'stats-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'stats-local-4055': 'Lokal 40.55%',
     'stats-municipal-data': 'Datos ng Munisipyo',
     'stats-municipal-income': 'Kita ng Munisipalidad',
-    'stats-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'stats-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'stats-ordinance-framework': 'Balangkas ng Ordinansa',
     'stats-osmea': 'Osmeña',
     'stats-overview': 'Pangkalahatang-ideya',
@@ -12298,7 +12298,7 @@ const translations = {
     'stats-sitemap': 'Mapa ng Site',
     'stats-skip-to-main-content': 'Lumaktaw sa pangunahing nilalaman',
     'stats-social-services': 'Serbisyong Panlipunan',
-    'stats-solano-competitive-index': 'Competitive Index ng Solano',
+    'stats-malolos-competitive-index': 'Competitive Index ng Malolos',
     'stats-tax-payments': 'Pagbabayad ng Buwis',
     'stats-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'stats-trade-amp-commerce': 'Kalakalan at Komersyo',
@@ -12318,8 +12318,8 @@ const translations = {
     'svc-cmci-dti-portal': 'CMCI DTI Portal',
     'svc-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'svc-education': 'Edukasyon',
-    'svc-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'svc-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'svc-environment': 'Kapaligiran',
     'svc-freedom-of-information': 'Kalayaan sa Impormasyon',
     'svc-getting-married': 'Pagpapakasal',
@@ -12328,9 +12328,9 @@ const translations = {
     'svc-health': 'Kalusugan',
     'svc-home': 'Tahanan',
     'svc-infrastructure': 'Imprastraktura',
-    'svc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'svc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'svc-need-financial-help': 'Kailangan Financial Tulong',
-    'svc-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'svc-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'svc-open-data-philippines': 'Open Data Philippines',
     'svc-ordinance-framework': 'Balangkas ng Ordinansa',
     'svc-person-with-disability': 'Taong may Kapansanan',
@@ -12358,21 +12358,21 @@ const translations = {
     'tax-cmci-dti-portal': 'CMCI DTI Portal',
     'tax-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'tax-education': 'Edukasyon',
-    'tax-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'tax-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'tax-environment': 'Kapaligiran',
     'tax-freedom-of-information': 'Kalayaan sa Impormasyon',
     'tax-health': 'Kalusugan',
     'tax-home': 'Tahanan',
     'tax-infrastructure': 'Imprastraktura',
-    'tax-lgu-solano-facebook': 'LGU Solano Facebook',
+    'tax-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'tax-municipal-accounting-office': 'Opisina ng Accounting ng Munisipalidad',
     'tax-municipal-assessors-office': 'Opisina ng Tagapagtasa ng Munisipalidad',
     'tax-municipal-budget-office': 'Opisina ng Badyet ng Munisipalidad',
     'tax-municipal-treasurers-office': 'Opisina ng Ingat-yaman ng Munisipalidad',
     'tax-obligation-requests-barangay-budget-review-and':
       'Obligation mga kahilingan, barangay budget suriin, and SEF budget preparation',
-    'tax-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'tax-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'tax-online-payment-order': 'Online Pagbabayad Order',
     'tax-open-data-philippines': 'Open Data Philippines',
     'tax-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -12414,7 +12414,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'Ang lahat ng impormasyon sa website na ito ay ibinibigay \\\\\\"AS IS\\\\\\" nang walang warranty ng anumang uri, maging hayag o ipinahiwatig. Kabilang dito ngunit hindi limitado sa:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Bagaman naglalayong panatilihing accessible sa functional ang website ng mga boluntaryo, Hindi magagarantiya ng BetterSolano.org na ang website ay magiging:',
+      'Bagaman naglalayong panatilihing accessible sa functional ang website ng mga boluntaryo, Hindi magagarantiya ng BetterMalolos.org na ang website ay magiging:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or iba pang harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -12424,16 +12424,16 @@ const translations = {
     'terms-any-loss-corruption-or-disclosure-of-data-or':
       'Any loss, corruption, or disclosure of datos or impormasyon',
     'terms-as-a-volunteerrun-initiative-this-website-does':
-      'Bilang isang inisyatibang pinapatakbo ng mga boluntaryo, ang website na ito ay hindi pumapalit sa mga opisyal na channel ng pamahalaan. Residents sa stakeholders ay encouraged sa conduct kanilang own independent research sa beripikasyon ng lahat ng impormasyon found here sa sa consult opisyal na LGU Solano mga opisina sa government mga ahensya kapag making important decisions.',
+      'Bilang isang inisyatibang pinapatakbo ng mga boluntaryo, ang website na ito ay hindi pumapalit sa mga opisyal na channel ng pamahalaan. Residents sa stakeholders ay encouraged sa conduct kanilang own independent research sa beripikasyon ng lahat ng impormasyon found here sa sa consult opisyal na LGU Malolos mga opisina sa government mga ahensya kapag making important decisions.',
     'terms-as-is-disclaimer':
       '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"As Is\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Magagamit or naa-access at all times',
-    'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'Ang BetterSolano.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Solano sa pamamagitan ng pagbibigay ng transparent na access sa ang mga serbisyo, mga programa, sa pampublikong funds ng LGU Solano.',
-    'terms-bettersolanoorg-provides-public-domain':
-      'Ang BetterSolano.org ay nagbibigay ng impormasyon sa pampublikong domain upang suportahan ang civic engagement, transparency, sa maaari kaalamang pakikilahok sa lokal na governance.',
-    'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'Pinahahalagahan ng BetterSolano.org ang katumpakan, kaligtasan ng publiko, sa paggalang sa mga karapatan. Sa kabila ng mga pagsisikap na maaari mabuting layunin, ang ilang nilalaman ay maaaringcome outdated, incomplete, o raise legitimate mga alalahanin.',
+    'terms-bettermalolosorg-is-a-civic-platform-dedicated-to':
+      'Ang BetterMalolos.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Malolos sa pamamagitan ng pagbibigay ng transparent na access sa ang mga serbisyo, mga programa, sa pampublikong funds ng LGU Malolos.',
+    'terms-bettermalolosorg-provides-public-domain':
+      'Ang BetterMalolos.org ay nagbibigay ng impormasyon sa pampublikong domain upang suportahan ang civic engagement, transparency, sa maaari kaalamang pakikilahok sa lokal na governance.',
+    'terms-bettermalolosorg-values-accuracy-public-safety-and':
+      'Pinahahalagahan ng BetterMalolos.org ang katumpakan, kaligtasan ng publiko, sa paggalang sa mga karapatan. Sa kabila ng mga pagsisikap na maaari mabuting layunin, ang ilang nilalaman ay maaaringcome outdated, incomplete, o raise legitimate mga alalahanin.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Negosyo',
     'terms-by-accessing-and-using-this-website-you':
@@ -12470,8 +12470,8 @@ const translations = {
     'terms-editorial-decisions-about-content-rest-with-the':
       'Editorial decisions about content rest with the website team, guided by pampubliko interes and civic responsibility.',
     'terms-education': 'Edukasyon',
-    'terms-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'terms-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'terms-environment': 'Kapaligiran',
     'terms-errorfree-or-uninterrupted': 'Walang error o walang pagkaantala',
     'terms-external-references': 'Mga Panlabas na Sanggunian',
@@ -12489,7 +12489,7 @@ const translations = {
       'Ganap na tugma sa lahat ng device, browser, o assistive technology',
     'terms-governing-law': 'Namamahalang Batas',
     'terms-government': 'Pamahalaan',
-    'terms-guidelines-for-using-bettersolanoorg': 'Mga alituntunin for using BetterSolano.org',
+    'terms-guidelines-for-using-bettermalolosorg': 'Mga alituntunin for using BetterMalolos.org',
     'terms-health': 'Kalusugan',
     'terms-home': 'Tahanan',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -12511,13 +12511,13 @@ const translations = {
     'terms-legislative': 'Lehislatura',
     'terms-legitimate-concerns-will-be-reviewed-in-good':
       'Legitimate concerns will be reviewed in mabuti faith by volunteers.',
-    'terms-lgu-solano-facebook': 'LGU Solano Facebook',
+    'terms-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'terms-limitation-of-liability': 'Limitasyon ng Pananagutan',
     'terms-modifications': 'Mga Pagbabago',
     'terms-no-professional-advice': 'Walang Propesyonal na Payo',
     'terms-noninfringement-of-intellectual-property-rights':
       'Non-infringement of intellectual ari-arian rights',
-    'terms-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'terms-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'terms-open-data-philippines': 'Open Data Philippines',
     'terms-ordinance-framework': 'Balangkas ng Ordinansa',
     'terms-our-response-process': 'Our Response Iproseso',
@@ -12527,7 +12527,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Pampubliko Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Pampubliko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Pampubliko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterMalolos.org and LGU Malolos is encouraged as a civic courtesy.',
     'terms-public-safety': 'Kaligtasang Pampubliko',
     'terms-quick-links': 'Mga Mabilisang Link',
     'terms-resolution-framework': 'Balangkas ng Resolusyon',
@@ -12585,12 +12585,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasyon directly mula sa original sa opisyal na sources',
     'terms-volunteer-with-us': 'Mag-volunteer sa amin',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Mga garantiya ng kakayahang ibenta',
     'terms-website-availability': 'Pagkakaroon ng Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly isama:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterSolano.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.',
+      'Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterMalolos.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.',
     'terms-you-are-strongly-encouraged-to': 'Lubos kang hinihikayat na:',
     'terms-your-contact-information-for-followup': 'Your makipag-ugnayan impormasyon for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':
@@ -12645,8 +12645,8 @@ const translations = {
     'treas-discount': 'Diskwento:',
     'treas-discountpenalty': 'Diskwento/Multa',
     'treas-education': 'Edukasyon',
-    'treas-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'treas-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'treas-environment': 'Kapaligiran',
     'treas-fee': 'Bayad:',
     'treas-fee-collection': 'Koleksyon ng Bayad',
@@ -12655,8 +12655,8 @@ const translations = {
     'treas-free': 'Libre',
     'treas-freedom-of-information': 'Kalayaan sa Impormasyon',
     'treas-government': 'Pamahalaan',
-    'treas-ground-floor-municipal-hall-solano-nueva-vizcaya':
-      'Unang Palapag, Munisipyo, Solano, Nueva Vizcaya',
+    'treas-ground-floor-municipal-hall-malolos-bulacan':
+      'Unang Palapag, Munisipyo, Malolos, Bulacan',
     'treas-health': 'Kalusugan',
     'treas-home': 'Tahanan',
     'treas-hours': 'Oras',
@@ -12676,7 +12676,7 @@ const translations = {
     'treas-keep-all-official-receipts-for-records': 'Itago all opisyal mga resibo for mga rekord',
     'treas-late-payment': 'Huling Pagbabayad',
     'treas-legislative': 'Lehislatura',
-    'treas-lgu-solano-facebook': 'LGU Solano Facebook',
+    'treas-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'treas-location': 'Lokasyon',
     'treas-march-31': 'Marso 31',
     'treas-maximum-72-36-months': 'Pinakamataas na 72% (36 buwan)',
@@ -12687,7 +12687,7 @@ const translations = {
     'treas-no-discountpenalty': 'Walang diskwento/multa',
     'treas-office': 'Opisina',
     'treas-office-information': 'Impormasyon ng Opisina',
-    'treas-official-lgu-solano-portal': 'Opisyal na Portal ng LGU Solano',
+    'treas-official-lgu-malolos-portal': 'Opisyal na Portal ng LGU Malolos',
     'treas-official-receipt': 'Opisyal na Resibo',
     'treas-open-data-philippines': 'Open Data Philippines',
     'treas-ordinance-framework': 'Balangkas ng Ordinansa',
@@ -12727,7 +12727,7 @@ const translations = {
     'treas-tax-assessment-inquiry': 'Buwis Pagtatasa Pagtatanong',
     'treas-tax-clearance': 'Tax Clearance',
     'treas-tax-collection-fee-payments-and-financial':
-      'Tax koleksyon, fee mga pagbabayad, sa financial mga serbisyo para sa Solano mga residente',
+      'Tax koleksyon, fee mga pagbabayad, sa financial mga serbisyo para sa Malolos mga residente',
     'treas-tax-declaration-assessment': 'Deklarasyon ng Buwis / Pagtatasa',
     'treas-tax-payments': 'Pagbabayad ng Buwis',
     'treas-tax-payments-2': 'Buwis at Pagbabayad',
@@ -12770,8 +12770,8 @@ const translations = {
     'tricycle-contact': 'Makipag-ugnayan',
     'tricycle-contribute-code-with-us': 'Mag-ambag ng code sa amin',
     'tricycle-education': 'Edukasyon',
-    'tricycle-empowering-the-people-of-solano-with-transparent':
-      'Pagbibigay-kapangyarihan sa mga mamamayan ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+    'tricycle-empowering-the-people-of-malolos-with-transparent':
+      'Pagbibigay-kapangyarihan sa mga mamamayan ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'tricycle-encoding-of-application': 'Encoding of Aplikasyon',
     'tricycle-environment': 'Kapaligiran',
     'tricycle-franchise-steps': 'Mga Hakbang sa Prangkisa',
@@ -12791,7 +12791,7 @@ const translations = {
     'tricycle-inspection-of-tricycle-unit': 'Inspeksyon of Tricycle Yunit',
     'tricycle-legislative': 'Lehislatura',
     'tricycle-mayors-approval': "Mayor's Pag-apruba",
-    'tricycle-municipal-hall-solano-nueva-vizcaya': 'Munisipyo, Solano, Nueva Vizcaya',
+    'tricycle-municipal-hall-malolos-bulacan': 'Munisipyo, Malolos, Bulacan',
     'tricycle-municipal-mayor-approves-the-application-form':
       'Punong Bayan approves the aplikasyon form',
     'tricycle-municipal-treasurers-office-collects-the-fees':
@@ -12879,62 +12879,62 @@ const translations = {
     'tax-property': 'Buwis sa Ari-arian',
     'tax-property-desc': 'Taunang buwis sa lupa at mga pagpapabuti',
 
-    // Solano Quiz
-    'accessibility-solano-quiz': 'Solano Quiz',
-    'acct-solano-quiz': 'Solano Quiz',
-    'agri-solano-quiz': 'Solano Quiz',
-    'assessor-solano-quiz': 'Solano Quiz',
-    'birth-solano-quiz': 'Solano Quiz',
-    'biz-solano-quiz': 'Solano Quiz',
-    'bpls-solano-quiz': 'Solano Quiz',
-    'budget-solano-quiz': 'Solano Quiz',
-    'cert-solano-quiz': 'Solano Quiz',
-    'civil-solano-quiz': 'Solano Quiz',
-    'contact-solano-quiz': 'Solano Quiz',
-    'death-solano-quiz': 'Solano Quiz',
-    'edu-solano-quiz': 'Solano Quiz',
-    'eng-solano-quiz': 'Solano Quiz',
-    'env-solano-quiz': 'Solano Quiz',
-    'err403-solano-quiz': 'Solano Quiz',
-    'err404-solano-quiz': 'Solano Quiz',
-    'err500-solano-quiz': 'Solano Quiz',
-    'faq-solano-quiz': 'Solano Quiz',
-    'gensvc-solano-quiz': 'Solano Quiz',
-    'gov-solano-quiz': 'Solano Quiz',
-    'health-solano-quiz': 'Solano Quiz',
-    'home-solano-quiz': 'Solano Quiz',
-    'hr-solano-quiz': 'Solano Quiz',
-    'infra-solano-quiz': 'Solano Quiz',
-    'legis-solano-quiz': 'Solano Quiz',
-    'magri-solano-quiz': 'Solano Quiz',
-    'market-solano-quiz': 'Solano Quiz',
-    'marriage-solano-quiz': 'Solano Quiz',
-    'mbudget-solano-quiz': 'Solano Quiz',
-    'mcivil-solano-quiz': 'Solano Quiz',
-    'mgensvc-solano-quiz': 'Solano Quiz',
-    'mswdo-solano-quiz': 'Solano Quiz',
-    'mswdo-svc-solano-quiz': 'Solano Quiz',
-    'news-solano-quiz': 'Solano Quiz',
-    'officials-solano-quiz': 'Solano Quiz',
-    'ord-solano-quiz': 'Solano Quiz',
-    'plan-solano-quiz': 'Solano Quiz',
-    'privacy-solano-quiz': 'Solano Quiz',
-    'propdec-solano-quiz': 'Solano Quiz',
-    'reso-solano-quiz': 'Solano Quiz',
-    'safety-solano-quiz': 'Solano Quiz',
-    'sitemap-solano-quiz': 'Solano Quiz',
-    'slaughter-solano-quiz': 'Solano Quiz',
-    'social-solano-quiz': 'Solano Quiz',
-    'stats-solano-quiz': 'Solano Quiz',
-    'svc-solano-quiz': 'Solano Quiz',
-    'tax-solano-quiz': 'Solano Quiz',
-    'terms-solano-quiz': 'Solano Quiz',
-    'treas-solano-quiz': 'Solano Quiz',
-    'tricycle-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya':
-      'Gaano mo kakilala ang Solano, Nueva Vizcaya?',
+    // Malolos Quiz
+    'accessibility-malolos-quiz': 'Malolos Quiz',
+    'acct-malolos-quiz': 'Malolos Quiz',
+    'agri-malolos-quiz': 'Malolos Quiz',
+    'assessor-malolos-quiz': 'Malolos Quiz',
+    'birth-malolos-quiz': 'Malolos Quiz',
+    'biz-malolos-quiz': 'Malolos Quiz',
+    'bpls-malolos-quiz': 'Malolos Quiz',
+    'budget-malolos-quiz': 'Malolos Quiz',
+    'cert-malolos-quiz': 'Malolos Quiz',
+    'civil-malolos-quiz': 'Malolos Quiz',
+    'contact-malolos-quiz': 'Malolos Quiz',
+    'death-malolos-quiz': 'Malolos Quiz',
+    'edu-malolos-quiz': 'Malolos Quiz',
+    'eng-malolos-quiz': 'Malolos Quiz',
+    'env-malolos-quiz': 'Malolos Quiz',
+    'err403-malolos-quiz': 'Malolos Quiz',
+    'err404-malolos-quiz': 'Malolos Quiz',
+    'err500-malolos-quiz': 'Malolos Quiz',
+    'faq-malolos-quiz': 'Malolos Quiz',
+    'gensvc-malolos-quiz': 'Malolos Quiz',
+    'gov-malolos-quiz': 'Malolos Quiz',
+    'health-malolos-quiz': 'Malolos Quiz',
+    'home-malolos-quiz': 'Malolos Quiz',
+    'hr-malolos-quiz': 'Malolos Quiz',
+    'infra-malolos-quiz': 'Malolos Quiz',
+    'legis-malolos-quiz': 'Malolos Quiz',
+    'magri-malolos-quiz': 'Malolos Quiz',
+    'market-malolos-quiz': 'Malolos Quiz',
+    'marriage-malolos-quiz': 'Malolos Quiz',
+    'mbudget-malolos-quiz': 'Malolos Quiz',
+    'mcivil-malolos-quiz': 'Malolos Quiz',
+    'mgensvc-malolos-quiz': 'Malolos Quiz',
+    'mswdo-malolos-quiz': 'Malolos Quiz',
+    'mswdo-svc-malolos-quiz': 'Malolos Quiz',
+    'news-malolos-quiz': 'Malolos Quiz',
+    'officials-malolos-quiz': 'Malolos Quiz',
+    'ord-malolos-quiz': 'Malolos Quiz',
+    'plan-malolos-quiz': 'Malolos Quiz',
+    'privacy-malolos-quiz': 'Malolos Quiz',
+    'propdec-malolos-quiz': 'Malolos Quiz',
+    'reso-malolos-quiz': 'Malolos Quiz',
+    'safety-malolos-quiz': 'Malolos Quiz',
+    'sitemap-malolos-quiz': 'Malolos Quiz',
+    'slaughter-malolos-quiz': 'Malolos Quiz',
+    'social-malolos-quiz': 'Malolos Quiz',
+    'stats-malolos-quiz': 'Malolos Quiz',
+    'svc-malolos-quiz': 'Malolos Quiz',
+    'tax-malolos-quiz': 'Malolos Quiz',
+    'terms-malolos-quiz': 'Malolos Quiz',
+    'treas-malolos-quiz': 'Malolos Quiz',
+    'tricycle-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan':
+      'Gaano mo kakilala ang Malolos, Bulacan?',
     'home-evaluate-your-familiarity-with-the-municipalitys':
-      'Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Nueva Vizcaya.',
+      'Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Bulacan.',
     'home-take-the-quiz': 'Subukin ang Quiz',
   },
 
@@ -12954,7 +12954,7 @@ const translations = {
     'nav-terms': 'Dagiti Kondision',
     'nav-accessibility': 'Aksesibilidad',
     'stats-title': 'Estadistika ti Munisipalidad',
-    'stats-subtitle': 'Datos ken estadistika maipapan iti Solano, Nueva Vizcaya',
+    'stats-subtitle': 'Datos ken estadistika maipapan iti Malolos, Bulacan',
     'stats-demographics': 'Pakabuklan ti Demograpiya',
     'stats-economic': 'Dagiti Pagilasinan ti Ekonomiya',
     'stats-barangay': 'Populasion Sigun iti Barangay',
@@ -12976,15 +12976,15 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ti Site',
     'breadcrumb-privacy': 'Pagannurotan ti Pagkapribado',
     'breadcrumb-terms': 'Dagiti Kondision ti Panagusar',
-    'hero-welcome': 'Naragsak a Panangyawat iti BetterSolano.org',
+    'hero-welcome': 'Naragsak a Panangyawat iti BetterMalolos.org',
     'hero-subtitle':
-      'Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Solano, Nueva Vizcaya.',
+      'Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Malolos, Bulacan.',
     'hero-browse': 'Kitaen dagiti Serbisio',
     'hero-contact': 'Kontaken Dakami',
     'hero-search-placeholder': 'Agsapul ti serbisio...',
     'hero-find-service': 'Agsapul ti Serbisio',
     'appointment-cta-heading':
-      'Panagpasayaat ti Serbisio ti Appointment ti Opisina ti Alkalde ti LGU Solano',
+      'Panagpasayaat ti Serbisio ti Appointment ti Opisina ti Alkalde ti LGU Malolos',
     'appointment-cta-subtitle': 'Awan pila. Awan agpapasubli. Nasayaat nga appointment laeng.',
     'appointment-schedule-btn': 'Ag-iskedyul ti Appointment',
     'appointment-create-btn': 'Agaramid ti Account',
@@ -13025,16 +13025,16 @@ const translations = {
     'contact-municipal-hall': 'Munisipio',
     'contact-location': 'Lokasion',
     'contact-directions': 'Alaen ti Direksion',
-    'footer-title': 'Better Solano',
+    'footer-title': 'Better Malolos',
     'footer-desc':
-      'Maysa a portal ti impormasion a mangipangpangruna ti serbisio para iti Munisipalidad ti Solano, Nueva Vizcaya.',
+      'Maysa a portal ti impormasion a mangipangpangruna ti serbisio para iti Munisipalidad ti Malolos, Bulacan.',
     'footer-quick-links': 'Dagiti Napartak a Silpo',
     'footer-all-services': 'Amin a Serbisio',
     'footer-officials': 'Dagiti Opisial',
     'footer-contact-us': 'Kontaken Dakami',
     'footer-faq': 'Masansan a Maisaludsod',
     'footer-contact': 'Kontak',
-    'footer-copyright': 'Better Solano. Amin a karbengan ket naireserbado.',
+    'footer-copyright': 'Better Malolos. Amin a karbengan ket naireserbado.',
     'accessibility-statement': 'Pahayag ti Aksesibilidad',
     'footer-privacy': 'Pagannurotan ti Pagkapribado',
     'footer-terms': 'Dagiti Kondision ti Panagusar',
@@ -13042,7 +13042,7 @@ const translations = {
     'footer-volunteer': 'Ag-volunteer kadakami',
     'footer-contribute': 'Ag-ambag ti code kadakami',
     'services-title': 'Direktorio ti Serbisio ti Munisipalidad',
-    'services-subtitle': 'Kitaen amin a serbisio nga i-alok ti Munisipalidad ti Solano',
+    'services-subtitle': 'Kitaen amin a serbisio nga i-alok ti Munisipalidad ti Malolos',
     'search-placeholder': 'Agsapul ti serbisio...',
     'search-no-results': 'Awan ti nasarakan a serbisio',
     'search-try-different': 'Padasem ti sabali a keyword wenno kitaem dagiti kategorya iti baba',
@@ -13121,7 +13121,7 @@ const translations = {
     'cert-page-badge': 'Dagiti Sertipiko',
     'cert-birth': 'Sertipiko ti Pannakayanak',
     'cert-birth-desc':
-      'Mangala ti certified copy ti sertipiko ti pannakayanak a nakarehistro idiay Solano',
+      'Mangala ti certified copy ti sertipiko ti pannakayanak a nakarehistro idiay Malolos',
     'cert-marriage': 'Sertipiko ti Kasar',
     'cert-marriage-desc': 'Agrehistro wenno agkiddaw ti certified true copy ti sertipiko ti kasar',
     'cert-death': 'Sertipiko ti Ipapatay',
@@ -13169,12 +13169,12 @@ const translations = {
     'health-stat-hospitals': 'Dagiti Kangrunaan nga Ospital',
     'health-stat-bhs': 'Dagiti Barangay Health Station',
     'health-stat-mho': 'Opisina ti Salun-at ti Munisipalidad',
-    'health-section-hospitals': 'Dagiti Ospital idiay Solano',
+    'health-section-hospitals': 'Dagiti Ospital idiay Malolos',
     'health-section-mho': 'Opisina ti Salun-at ti Munisipalidad',
     'health-section-bhs': 'Dagiti Barangay Health Station',
     'health-bhs-subtitle':
-      '22 a Barangay Health Stations/Centers a mangserserbisio iti amin a barangay ti Solano',
-    'health-mho-title': 'Opisina ti Salun-at ti Munisipalidad ti Solano',
+      '22 a Barangay Health Stations/Centers a mangserserbisio iti amin a barangay ti Malolos',
+    'health-mho-title': 'Opisina ti Salun-at ti Munisipalidad ti Malolos',
     'health-mho-desc':
       'Ti Municipal Health Office ket mangted ti kangrunaan a serbisio ti salun-at a mairaman ti lying-in facility ken serbisio ti laboratorio. Daytoy ti kangrunaan a public health center ti munisipalidad.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -13196,7 +13196,7 @@ const translations = {
     'agri-office-mao-desc':
       'Panagrehistro iti RSBSA, sertipikasion, programa ti irik/mais, livestock, serbisio ti panagkalap',
     'ord-page-title': 'Balangkas ti Ordinansa',
-    'ord-page-desc': 'Dagiti ordinansa a naipasa ti Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Dagiti ordinansa a naipasa ti Sangguniang Bayan ng Malolos',
     'ord-page-badge': 'Lehislatura',
     'ord-what-is': 'Ania ti Ordinansa?',
     'ord-what-is-p1':
@@ -13212,13 +13212,13 @@ const translations = {
     'ord-cat-zoning': 'Zoning ken Panagusar ti Daga',
     'ord-2025-title': 'Dagiti Ordinansa ti 2025',
     'ord-2025-subtitle':
-      'Dagiti opisial nga ordinansa a naipasa ti Sangguniang Bayan ng Solano iti 2025',
+      'Dagiti opisial nga ordinansa a naipasa ti Sangguniang Bayan ng Malolos iti 2025',
     'ord-table-number': 'Numero ti Ordinansa',
     'ord-table-title': 'Titulo',
     'ord-table-date': 'Petsa ti Sesion',
     'ord-view-all': 'Kitaen Amin nga Ordinansa iti SB Website',
     'reso-page-title': 'Balangkas ti Resolusion',
-    'reso-page-desc': 'Dagiti resolusion a naipasa ti Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Dagiti resolusion a naipasa ti Sangguniang Bayan ng Malolos',
     'reso-page-badge': 'Lehislatura',
     'reso-what-is': 'Ania ti Resolusion?',
     'reso-what-is-p1':
@@ -13234,16 +13234,16 @@ const translations = {
     'reso-type-appropriation': 'Apropriyasion',
     'reso-2026-title': 'Dagiti Resolusion ti 2026',
     'reso-2026-subtitle':
-      'Dagiti opisial a resolusion a naipasa ti Sangguniang Bayan ng Solano iti 2026',
+      'Dagiti opisial a resolusion a naipasa ti Sangguniang Bayan ng Malolos iti 2026',
     'reso-2025-title': 'Dagiti Resolusion ti 2025',
     'reso-2025-subtitle':
-      'Dagiti opisial a resolusion a naipasa ti Sangguniang Bayan ng Solano iti 2025',
+      'Dagiti opisial a resolusion a naipasa ti Sangguniang Bayan ng Malolos iti 2025',
     'reso-table-number': 'Numero ti Resolusion',
     'reso-table-title': 'Titulo',
     'reso-table-date': 'Petsa ti Sesion',
     'reso-view-all': 'Kitaen Amin a Resolusion iti SB Website',
     'biz-page-title': 'Serbisio ti Negosio',
-    'biz-page-desc': 'Dagiti permit, lisensya, ken suporta para kadagiti negosio idiay Solano',
+    'biz-page-desc': 'Dagiti permit, lisensya, ken suporta para kadagiti negosio idiay Malolos',
     'biz-page-badge': 'Negosio',
     'biz-permit-new': 'Permit ti Negosio (Baro)',
     'biz-permit-new-desc': "Agaplikar ti baro a mayor's permit para iti negosio",
@@ -13332,13 +13332,13 @@ const translations = {
     'env-tree-desc': 'Permit para iti panagputol ken panagikkat ti kayo',
     'section-responsible-offices': 'Dagiti Responsable nga Opisina',
     'gov-title': 'Estruktura ken Opisial ti Gobierno',
-    'gov-subtitle': 'Ammoen dagiti lider ken opisina a mangserserbisio iti Solano',
+    'gov-subtitle': 'Ammoen dagiti lider ken opisina a mangserserbisio iti Malolos',
     'gov-executive': 'Ehekutibo a Sanga',
     'gov-sb-members': 'Dagiti Kameng ti Sangguniang Bayan',
-    'gov-sb-subtitle': 'Dagiti Konsehal a mangserserbisio kadagiti umili ti Solano',
+    'gov-sb-subtitle': 'Dagiti Konsehal a mangserserbisio kadagiti umili ti Malolos',
     'gov-departments': 'Dagiti Ulo ti Departamento ken Kangrunaan nga Opisina',
     'gov-dept-subtitle': 'Dagiti opisina ti munisipalidad a mangted ti serbisio kadagiti umili',
-    'gov-barangays': 'Dagiti Barangay ti Solano',
+    'gov-barangays': 'Dagiti Barangay ti Malolos',
     'gov-barangays-count': '22 a Barangay a mangserserbisio iti komunidad tayo',
     'gov-organizational-chart': 'Tsart ti Organisasion',
     'gov-term': 'Termino',
@@ -13429,7 +13429,7 @@ const translations = {
     'legislative-approved': 'Naaprubaran',
     'legislative-enacted': 'Naisabatas',
     'news-title': 'Damag ken Anunsiasion',
-    'news-subtitle': 'Kabarbaro a damag manipud iti Munisipalidad ti Solano',
+    'news-subtitle': 'Kabarbaro a damag manipud iti Munisipalidad ti Malolos',
     'news-latest': 'Kabarbaro a Damag',
     'news-announcements': 'Dagiti Anunsiasion',
     'news-events': 'Dagiti Pasamak',
@@ -13528,10 +13528,10 @@ const translations = {
       'Amin a functionality ket magun-od babaen laeng ti keyboard.',
     'a11y-all-images-have-descriptive-alt-text':
       'Amin a ladawan ket addaan ti deskripsion nga alt text.',
-    'a11y-better-solano-is-committed-to-ensuring-digital':
-      'Ti Better Solano ay nakatuon iti pagtiyak ti digital na accessibility para iti dagiti taong maaari kapansanan. Patuloy naming pinapabuti ti karanasan ti gumagamit para iti lahat iti inilalapat ti dagiti kaugnay na pamantayan ti accessibility.',
-    'a11y-better-solano-is-committed-to-ensuring-that-our':
-      'Ti Better Solano ay nakatuon iti pagtiyak na ti aming dagiti digital na serbisio ay naa-access ti lahat ti umili, anuman ti kakayahan. Kami view accessibility saan as isang feature, ngunit as isang fundamental right.',
+    'a11y-better-malolos-is-committed-to-ensuring-digital':
+      'Ti Better Malolos ay nakatuon iti pagtiyak ti digital na accessibility para iti dagiti taong maaari kapansanan. Patuloy naming pinapabuti ti karanasan ti gumagamit para iti lahat iti inilalapat ti dagiti kaugnay na pamantayan ti accessibility.',
+    'a11y-better-malolos-is-committed-to-ensuring-that-our':
+      'Ti Better Malolos ay nakatuon iti pagtiyak na ti aming dagiti digital na serbisio ay naa-access ti lahat ti umili, anuman ti kakayahan. Kami view accessibility saan as isang feature, ngunit as isang fundamental right.',
     'a11y-blgf-portal': 'BLGF Portal',
     'a11y-business': 'Negosio',
     'a11y-certificates': 'Dagiti Sertipiko',
@@ -13542,8 +13542,8 @@ const translations = {
     'a11y-conformant': 'Sumurot',
     'a11y-css3': 'CSS3',
     'a11y-education': 'Edukasion',
-    'a11y-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'a11y-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'a11y-environment': 'Aglawlaw',
     'a11y-freedom-of-information': 'Wayawaya ti Impormasion',
     'a11y-health': 'Salun-at',
@@ -13555,13 +13555,13 @@ const translations = {
     'a11y-javascript': 'JavaScript',
     'a11y-keyboard-navigation': 'Nabigasion ti Keyboard',
     'a11y-last-updated-november-29-2025': 'Naudi na-update: November 29, 2025',
-    'a11y-lgu-solano-facebook': 'LGU Solano Facebook',
+    'a11y-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'a11y-meets-wcag-aa-contrast-requirements':
       'Matungpal dagiti kasapulan ti kontraste ti WCAG AA.',
     'a11y-no-time-limits': 'Awan Limitasion ti Tiempo',
     'a11y-no-time-limits-on-reading-or-interacting':
       'Awan limitasion ti tiempo iti panagbasa wenno panakipaset.',
-    'a11y-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'a11y-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'a11y-open-data-philippines': 'Open Data Philippines',
     'a11y-ordinance-framework': 'Balangkas ti Ordinansa',
     'a11y-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -13585,7 +13585,7 @@ const translations = {
     'a11y-text-alternatives': 'Dagiti Alternatibo a Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Ag-volunteer kadakami',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes':
       'Agtrabtrabaho iti amin a device ken kadakkel ti screen.',
@@ -13643,8 +13643,8 @@ const translations = {
     'acct-dtr-leave-forms-ot-authorization': 'DTR, dagiti form ti Leave, awtorisasyon ti OT',
     'acct-duration': 'Kaatiddog',
     'acct-education': 'Edukasion',
-    'acct-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'acct-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'acct-environment': 'Aglawlaw',
     'acct-evangeline-b-ramos': 'Evangeline B. Ramos',
     'acct-financial-reports-are-submitted-monthly-to-coa':
@@ -13670,20 +13670,20 @@ const translations = {
     'acct-key-personnel-handling-accounting-services':
       'Key dagiti tauhan humahawak ti dagiti serbisio ti accounting',
     'acct-legislative': 'Lehislatura',
-    'acct-lgu-solano-facebook': 'LGU Solano Facebook',
+    'acct-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'acct-location': 'Lokasion',
     'acct-mary-jane-c-salvador': 'Mary Jane C. Salvador',
     'acct-mun-accounting': 'Mun. Accounting',
     'acct-municipal-accountant': 'Accountant ti Munisipalidad',
     'acct-municipal-accounting-office': 'Opisina ti Accounting ti Munisipalidad',
-    'acct-municipal-accounting-office-municipal-hall-solano':
-      'Munisipal Opisina ti Accounting, Munisipalidad, Solano, Nueva Vizcaya',
+    'acct-municipal-accounting-office-municipal-hall-malolos':
+      'Munisipal Opisina ti Accounting, Munisipalidad, Malolos, Bulacan',
     'acct-municipal-hall': 'Munisipio',
     'acct-obligation-request-obr': 'Kiddaw ti Obligasyon (ObR)',
     'acct-office': 'Opisina',
     'acct-office-information': 'Impormasion ti Opisina',
     'acct-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'acct-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'acct-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'acct-ongoing': 'Agtultuloy',
     'acct-open-data-philippines': 'Open Data Philippines',
     'acct-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -13779,15 +13779,15 @@ const translations = {
     'agri-cmci-dti-portal': 'CMCI DTI Portal',
     'agri-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'agri-education': 'Edukasion',
-    'agri-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'agri-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'agri-environment': 'Aglawlaw',
     'agri-freedom-of-information': 'Wayawaya ti Impormasion',
     'agri-health': 'Salun-at',
     'agri-home': 'Pagtaengan',
     'agri-infrastructure': 'Imprastraktura',
-    'agri-lgu-solano-facebook': 'LGU Solano Facebook',
-    'agri-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'agri-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'agri-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'agri-open-data-philippines': 'Open Data Philippines',
     'agri-ordinance-framework': 'Balangkas ti Ordinansa',
     'agri-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -13822,7 +13822,7 @@ const translations = {
       'Panagpatasa ken pagpapahalaga ti dagiti tunay na kukua para iti layunin ti pagbubuwis',
     'assessor-assessors-staff-will-conduct-onsite-inspection':
       'Ti kawani ti Assessor ay magsasagawa ti on-site na inspeksyon ken pagsukat ti kukua.',
-    'assessor-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'assessor-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'assessor-availability': 'Pannakagun-od',
     'assessor-blgf-portal': 'BLGF Portal',
     'assessor-bring-original-documents': 'Iyeg orihinal dagiti dokumento',
@@ -13836,7 +13836,7 @@ const translations = {
     'assessor-certification-of-the-total-land-area-based-on-tax':
       'Certification of the dagup daga lugar based on buwis dagiti rekord.',
     'assessor-certification-that-a-person-has-no-declared':
-      'Sertipikasion na ti isang tao ay walang idineklaang kukua iti Solano.',
+      'Sertipikasion na ti isang tao ay walang idineklaang kukua iti Malolos.',
     'assessor-certifications': 'Dagiti Sertipikasion',
     'assessor-certified-true-copy-of-tax-declaration':
       'Nasertipikaran a Pudno a Kopia of Deklarasion ti Buwis',
@@ -13850,8 +13850,8 @@ const translations = {
     'assessor-duplicate-copy': 'Duplikadong Kopya',
     'assessor-education': 'Edukasion',
     'assessor-email': 'Email',
-    'assessor-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'assessor-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'assessor-environment': 'Aglawlaw',
     'assessor-fee': 'Bayad',
     'assessor-fee-2': 'Bayad:',
@@ -13878,15 +13878,15 @@ const translations = {
     'assessor-land-reclassification': 'Reklasipikasyon ti Daga',
     'assessor-land-reclassification-changes-the-category-of':
       'Land reclassification dagiti pagbabago ti category ti daga para iti panagpatasa dagiti layunin, na affects ti naaangkop panagpatasa level iti tax rate.',
-    'assessor-lgu-solano-facebook': 'LGU Solano Facebook',
+    'assessor-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'assessor-lis-pendens': 'Lis Pendens',
     'assessor-list-of-all-properties-declared-under-a-persons':
       'Listahan ti lahat ti ari-ariang idineklara iti pangalan ti isang tao.',
     'assessor-location': 'Lokasion',
     'assessor-mortgage-annotation': 'Anotasyon ti Mortgage',
     'assessor-municipal-assessors-office': 'Opisina ti Assessor ti Munisipalidad',
-    'assessor-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Umuna a Kadsaaran, Solano, Nueva Vizcaya 3708',
+    'assessor-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipalidad, Umuna a Kadsaaran, Malolos, Bulacan 3708',
     'assessor-new-owner': 'Baro a Akinkukua',
     'assessor-new-tax-declaration': 'Baro Deklarasion ti Buwis',
     'assessor-new-tax-declaration-is-issued-reflecting-the':
@@ -13898,7 +13898,7 @@ const translations = {
     'assessor-office-hours': 'Oras ti Opisina',
     'assessor-official-copy-of-tax-declaration-for-legal-and':
       'Opisyal na kopya ti tax declaration para iti legal ken layuning pangbangko.',
-    'assessor-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'assessor-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'assessor-open-data-philippines': 'Open Data Philippines',
     'assessor-ordinance-framework': 'Balangkas ti Ordinansa',
     'assessor-ownercreditor': 'Akinkukua/Pinagkakautangan',
@@ -14000,8 +14000,8 @@ const translations = {
     'bc-documents-needed-for-your-application':
       'Dagiti dokumento a kasapulan para iti aplikasionmo',
     'bc-education': 'Edukasion',
-    'bc-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'bc-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'bc-environment': 'Aglawlaw',
     'bc-fee': 'Bayad',
     'bc-fill-out-request-form': 'Punnuam ti Form ti Dawat',
@@ -14020,13 +14020,13 @@ const translations = {
     'bc-legislative': 'Lehislatura',
     'bc-local-civil-registrar': 'Lokal a Civil Registrar',
     'bc-marriage-certificate': 'Sertipiko ti Kasar',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Maikadua a Kadsaaran Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipalidad, Maikadua a Kadsaaran Malolos, Bulacan',
     'bc-need-help': 'Kasapulan Tulong?',
     'bc-office-information': 'Impormasion ti Opisina',
     'bc-official-certified-copy-of-birth-certificate':
-      'Opisial a sertipikado a kopia ti sertipiko ti pannakayanak a nakarehistro idiay Solano',
-    'bc-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+      'Opisial a sertipikado a kopia ti sertipiko ti pannakayanak a nakarehistro idiay Malolos',
+    'bc-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'bc-open-data-philippines': 'Open Data Philippines',
     'bc-ordinance-framework': 'Balangkas ti Ordinansa',
     'bc-ownerrepresentative': 'Akinkukua/Pannakabagi',
@@ -14086,8 +14086,8 @@ const translations = {
     'biz-cmci-dti-portal': 'CMCI DTI Portal',
     'biz-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'biz-education': 'Edukasion',
-    'biz-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'biz-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'biz-environment': 'Aglawlaw',
     'biz-freedom-of-information': 'Wayawaya ti Impormasion',
     'biz-health': 'Salun-at',
@@ -14095,13 +14095,13 @@ const translations = {
       'Panagparti ti baboy, baka, kambing, ken kalabaw na may dagiti serbisio ti inspeksyon ti karne',
     'biz-home': 'Pagtaengan',
     'biz-infrastructure': 'Imprastraktura',
-    'biz-lgu-solano-facebook': 'LGU Solano Facebook',
+    'biz-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'biz-market-clearance-entrance-fees-vendor-services':
       'Market clearance, dagiti bayad iti pagpasok, dagiti serbisio iti vendor, ken panagipaay ti CTC',
     'biz-new-business-application': 'Baro Business Aplikasion',
     'biz-new-permits-renewals-mayors-clearance-and-other':
       "Baro a dagiti permiso, dagiti pag-renew, Mayor's clearance, iti iba pang permiso iti negosyos",
-    'biz-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'biz-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'biz-open-data-philippines': 'Open Data Philippines',
     'biz-ordinance-framework': 'Balangkas ti Ordinansa',
     'biz-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -14144,7 +14144,7 @@ const translations = {
     'bpl-annual-renewal-of-existing-business-permit':
       'Taunang panagpabaro ti umiiral na permiso iti negosio (Enero 1-20 nang walang karagdagang singil)',
     'bpl-application-for-new-business-permit-for':
-      'Aplikasyon para iti baro a permiso iti negosio para iti dagiti negosyong nag-ooperate iti Solano',
+      'Aplikasyon para iti baro a permiso iti negosio para iti dagiti negosyong nag-ooperate iti Malolos',
     'bpl-application-form-all-requirements': 'Aplikasion form, all dagiti kasapulan',
     'bpl-assessment-sheet': 'Panagpatasa sheet',
     'bpl-barangay-business-clearance': 'Business Clearance ti Barangay',
@@ -14165,7 +14165,7 @@ const translations = {
     'bpl-business-permit-services': 'Permiso ti Negosio Dagiti serbisio',
     'bpl-business-permits-licensing-section': 'Business Dagiti permiso & Licensing Seksion',
     'bpl-business-permits-licensing-section-municipal-hall':
-      'Business Dagiti permiso & Licensing Seksion, Munisipalidad, Solano, Nueva Vizcaya',
+      'Business Dagiti permiso & Licensing Seksion, Munisipalidad, Malolos, Bulacan',
     'bpl-cda-registration-for-cooperatives': 'CDA Registration (para iti dagiti kooperatiba)',
     'bpl-certificates': 'Dagiti Sertipiko',
     'bpl-citizens-charter': "Citizen's Charter",
@@ -14186,8 +14186,8 @@ const translations = {
     'bpl-duly-accomplished-application-form': 'Wastong napunang Application Form',
     'bpl-duration': 'Kaatiddog',
     'bpl-education': 'Edukasion',
-    'bpl-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'bpl-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'bpl-environment': 'Aglawlaw',
     'bpl-fee': 'Bayad',
     'bpl-fees-vary-based-on-business-type-capitalization':
@@ -14222,7 +14222,7 @@ const translations = {
       'Late renewal incurs 25% karagdagan a singir + 2% binulan interes',
     'bpl-legislative': 'Lehislatura',
     'bpl-letter-of-intent': 'Surat of Intent',
-    'bpl-lgu-solano-facebook': 'LGU Solano Facebook',
+    'bpl-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'bpl-licensing-officer': 'Opisyal ti Lisensia',
     'bpl-list-of-activitiesprogram': 'Listahan ti dagiti aktibidad/programa',
     'bpl-location': 'Lokasion',
@@ -14244,7 +14244,7 @@ const translations = {
     'bpl-office': 'Opisina',
     'bpl-office-information': 'Impormasion ti Opisina',
     'bpl-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'bpl-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'bpl-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'bpl-official-receipt': 'Opisial a Resibo',
     'bpl-open-data-philippines': 'Open Data Philippines',
     'bpl-order-of-payment': 'Order of Panagbayad',
@@ -14340,14 +14340,14 @@ const translations = {
     'budget-contractor': 'Kontratista',
     'budget-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'budget-debt-service': 'Serbisio iti Utang',
-    'budget-dpwh-infrastructure-projects-in-solano':
-      'Dagiti Proyekto ti Imprastraktura ti DPWH iti Solano',
+    'budget-dpwh-infrastructure-projects-in-malolos':
+      'Dagiti Proyekto ti Imprastraktura ti DPWH iti Malolos',
     'budget-dpwh-transparency-portal': 'DPWH Transparency Portal',
     'budget-economic-services': 'Dagiti Serbisio a Pang-ekonomiya',
     'budget-education': 'Edukasion',
     'budget-egb-construction-corporation': 'EGB Construction Corporation',
-    'budget-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'budget-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'budget-environment': 'Aglawlaw',
     'budget-expenditure-allocation': 'Alokasion ti Gastos',
     'budget-external-sources': 'Dagiti Akinruar a Pagtaudan',
@@ -14363,8 +14363,8 @@ const translations = {
     'budget-health': 'Salun-at',
     'budget-health-education-welfare': 'Salun-ken, Edukasyon, Kagalingan',
     'budget-home': 'Pagtaengan',
-    'budget-implementing-agency-nueva-vizcaya-district':
-      'Implementing Agency: Nueva Vizcaya Distrito Opisina ti Inhinyero',
+    'budget-implementing-agency-bulacan-district':
+      'Implementing Agency: Bulacan Distrito Opisina ti Inhinyero',
     'budget-income-sources': 'Dagiti Pagtaudan ti Kita',
     'budget-infrastructure': 'Imprastraktura',
     'budget-infrastructure-development': 'Imprastraktura ken Panagrang-ay',
@@ -14372,14 +14372,14 @@ const translations = {
     'budget-interest-charges': 'Interes & Dagiti singir',
     'budget-jan-mar': 'Ene - Mar',
     'budget-legislative': 'Lehislatura',
-    'budget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'budget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'budget-local-sources': 'Dagiti Lokal a Pagtaudan',
-    'budget-magat-river-bagahabag-section-solano-nueva-vizcaya':
-      'Ilog Magat, Seksyon ti Bagahabag, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-1-brgy-bangar-solano':
-      'Magat River, Bangar Seksion 1, Brgy. Bangar, Solano, Nueva Vizcaya',
-    'budget-magat-river-bangar-section-2-brgy-bangar-solano':
-      'Magat River, Bangar Seksion 2, Brgy. Bangar, Solano, Nueva Vizcaya',
+    'budget-magat-river-bagahabag-section-malolos-bulacan':
+      'Ilog Magat, Seksyon ti Bagahabag, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-1-brgy-bangar-malolos':
+      'Magat River, Bangar Seksion 1, Brgy. Bangar, Malolos, Bulacan',
+    'budget-magat-river-bangar-section-2-brgy-bangar-malolos':
+      'Magat River, Bangar Seksion 2, Brgy. Bangar, Malolos, Bulacan',
     'budget-major-development-projects-serving-the-community':
       'Dagiti kangrunaan a proyekto ti panagrang-ay na nagsisilbi iti komunidad',
     'budget-national-government-projects': 'Nailian Gobierno Projects',
@@ -14427,15 +14427,15 @@ const translations = {
     'cert-cmci-dti-portal': 'CMCI DTI Portal',
     'cert-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'cert-education': 'Edukasion',
-    'cert-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'cert-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'cert-environment': 'Aglawlaw',
     'cert-freedom-of-information': 'Wayawaya ti Impormasion',
     'cert-health': 'Salun-at',
     'cert-home': 'Pagtaengan',
     'cert-infrastructure': 'Imprastraktura',
-    'cert-lgu-solano-facebook': 'LGU Solano Facebook',
-    'cert-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'cert-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'cert-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'cert-open-data-philippines': 'Open Data Philippines',
     'cert-ordinance-framework': 'Balangkas ti Ordinansa',
     'cert-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -14453,8 +14453,8 @@ const translations = {
     'cert-volunteer-with-us': 'Ag-volunteer kadakami',
     'contact-accessibility': 'Aksesibilidad',
     'contact-agriculture': 'Agrikultura',
-    'contact-bfp-solano': 'BFP Solano',
-    'contact-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'contact-bfp-malolos': 'BFP Malolos',
+    'contact-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'contact-blgf-portal': 'BLGF Portal',
     'contact-break': 'Inana',
     'contact-business': 'Negosio',
@@ -14462,11 +14462,11 @@ const translations = {
     'contact-citizens-charter': "Citizen's Charter",
     'contact-cmci-dti-portal': 'CMCI DTI Portal',
     'contact-contact': 'Kontaken',
-    'contact-dilg-solano': 'DILG Solano',
-    'contact-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'contact-dilg-malolos': 'DILG Malolos',
+    'contact-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'contact-education': 'Edukasion',
-    'contact-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'contact-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'contact-environment': 'Aglawlaw',
     'contact-for-medical-emergencies-and-hospital-inquiries':
       'For medical emergencies and hospital dagiti panagsaludsod.',
@@ -14476,25 +14476,25 @@ const translations = {
     'contact-infrastructure': 'Imprastraktura',
     'contact-kabalikat-civicom': 'KABALIKAT Civicom',
     'contact-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'contact-lgu-solano-facebook': 'LGU Solano Facebook',
-    'contact-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'contact-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'contact-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'contact-lunch-break': 'Tanghalian',
-    'contact-magro-solano': 'MAGRO Solano',
-    'contact-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'contact-magro-malolos': 'MAGRO Malolos',
+    'contact-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'contact-mayors-office': 'Opisina ti Mayor',
     'contact-mayors-office-0917-595-1931': 'Opisina ti Mayor 0917 595 1931',
-    'contact-mdrrmo-solano': 'MDRRMO Solano',
-    'contact-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'contact-mdrrmo-malolos': 'MDRRMO Malolos',
+    'contact-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'contact-medical-emergency-hotlines': 'Dagiti Medikal na Emergency Hotline',
     'contact-mmg-hospital': 'MMG Hospital',
     'contact-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
     'contact-mobile': 'Mobile',
-    'contact-mswdo-solano': 'MSWDO Solano',
-    'contact-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
+    'contact-mswdo-malolos': 'MSWDO Malolos',
+    'contact-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
     'contact-national-local-holidays': 'Nailian & Lokal Holidays',
-    'contact-nuvelco-solano': 'NUVELCO Solano',
-    'contact-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
-    'contact-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'contact-nuvelco-malolos': 'NUVELCO Malolos',
+    'contact-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
+    'contact-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'contact-open': 'Ilukatan',
     'contact-open-data-philippines': 'Open Data Philippines',
     'contact-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -14502,8 +14502,8 @@ const translations = {
     'contact-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'contact-plt-hospital': 'PLT Hospital',
     'contact-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'contact-pnp-solano': 'PNP Solano',
-    'contact-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'contact-pnp-malolos': 'PNP Malolos',
+    'contact-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'contact-privacy-policy': 'Pagannurotan ti Pagkapribado',
     'contact-public-safety': 'Kaligtasan Pampubliko',
     'contact-quick-links': 'Dagiti Napartak a Silpo',
@@ -14513,8 +14513,8 @@ const translations = {
     'contact-red-cross-0917-507-9950': 'Red Cross 0917 507 9950',
     'contact-resolution-framework': 'Balangkas ti Resolusion',
     'contact-resources': 'Dagiti Rekurso',
-    'contact-rhu-solano': 'RHU Solano',
-    'contact-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'contact-rhu-malolos': 'RHU Malolos',
+    'contact-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'contact-salubris-hospital': 'Salubris Hospital',
     'contact-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'contact-sangguniang-bayan': 'Sangguniang Bayan',
@@ -14587,8 +14587,8 @@ const translations = {
     'cr-document-owner': 'Akinkukua ti Dokumento',
     'cr-education': 'Edukasion',
     'cr-email': 'Email',
-    'cr-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'cr-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'cr-environment': 'Aglawlaw',
     'cr-fee': 'Bayad',
     'cr-fees': 'Dagiti Bayad',
@@ -14608,14 +14608,14 @@ const translations = {
       'Issuance of kasar dagiti sertipiko and kasar lisensia',
     'cr-late-registration-of-birth-marriage-or-death':
       'Late registration of pannakayanak, kasar, or ipapatay',
-    'cr-lcrsolanogovph': 'lcr@solano.gov.ph',
+    'cr-lcrmalolosgovph': 'lcr@malolos.gov.ph',
     'cr-legal-process-to-legitimize-children-born-out-of':
       'Legal na proseso upang gawing lehitimo ti dagiti batang ipinanganak iti labas ti kasal',
     'cr-legitimation': 'Lehitimasion',
     'cr-legitimation-annotation': 'Anotasyon ti Lehitimasyon',
     'cr-legitimation-is-the-legal-process-by-which':
       "Legitimation is the legal iproseso by which dagiti ubbing born out of wedlock are legitimized by the subsequent kasar of their dagiti nagannak. This is annotated on the child's pannakayanak sertipiko.",
-    'cr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'cr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'cr-license-waiting': 'Paghihintay ti Lisensia',
     'cr-local-civil-registrar': 'Lokal a Civil Registrar',
     'cr-location': 'Lokasion',
@@ -14625,10 +14625,10 @@ const translations = {
     'cr-marriage-license-requirements': 'Lisensia ti Panagkasar Dagiti kasapulan',
     'cr-municipal-civil-registrar': 'Civil Registrar ti Munisipalidad',
     'cr-municipal-civil-registrars-office': 'Munisipal Opisina ti Sibil a Rehistrador',
-    'cr-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Umuna a Kadsaaran, Solano, Nueva Vizcaya 3708',
+    'cr-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipalidad, Umuna a Kadsaaran, Malolos, Bulacan 3708',
     'cr-office-hours': 'Oras ti Opisina',
-    'cr-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'cr-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'cr-open-data-philippines': 'Open Data Philippines',
     'cr-ordinance-framework': 'Balangkas ti Ordinansa',
     'cr-ownerrelative': 'Akinkukua/Kabagian',
@@ -14660,9 +14660,9 @@ const translations = {
     'cr-the-certificate-of-no-marriage-record-cenomar-is':
       'Ti Certificate ti No Marriage Record (CENOMAR) ay isang sertipikasion issued iti pamamagitan ti PSA stating na isang person ay maaari walang record ti marriage. Itong ay commonly kasapulan para iti lisensia iti kasal dagiti aplikasyon, visa dagiti aplikasyon, iti iba pang legal dagiti layunin.',
     'cr-the-local-civil-registrar-handles-the':
-      'Ti Local Civil Registrar handles ti panagparehistro ti deaths iti panagipaay ti dagiti sertipikadong tunay na kopya ti sertipiko ti pagkamatays para iti deaths na occurred iti Solano.',
+      'Ti Local Civil Registrar handles ti panagparehistro ti deaths iti panagipaay ti dagiti sertipikadong tunay na kopya ti sertipiko ti pagkamatays para iti deaths na occurred iti Malolos.',
     'cr-the-local-civil-registrar-issues-certified-true':
-      'Ti Local Civil Registrar dagiti isyu dagiti sertipikadong tunay na kopya ti sertipiko ti kapanganakans para iti dagiti indibidwal whose births ay registered iti Solano, Nueva Vizcaya.',
+      'Ti Local Civil Registrar dagiti isyu dagiti sertipikadong tunay na kopya ti sertipiko ti kapanganakans para iti dagiti indibidwal whose births ay registered iti Malolos, Bulacan.',
     'cr-the-local-civil-registrar-processes-petitions-for':
       'The Lokal Sibil a Rehistrador processes petitions for correction of clerical or typographical errors and baliwan of umuna name in civil registry dagiti dokumento under RA 9048 and RA 10172.',
     'cr-the-local-civil-registrar-provides':
@@ -14728,8 +14728,8 @@ const translations = {
     'dc-education': 'Edukasion',
     'dc-embalmer': 'Embalmer',
     'dc-embalmers-certification': 'Sertipikasion ti Embalmer',
-    'dc-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'dc-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'dc-environment': 'Aglawlaw',
     'dc-fee': 'Bayad',
     'dc-fee-summary': 'Buod ti Bayad',
@@ -14758,17 +14758,17 @@ const translations = {
       'Is there a bayad for ipapatay sertipiko registration?',
     'dc-juvy': 'Juvy',
     'dc-legislative': 'Lehislatura',
-    'dc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'dc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'dc-local-civil-registrar': 'Lokal a Civil Registrar',
     'dc-marriage-certificate': 'Sertipiko ti Kasar',
     'dc-mho-certification-of-cause-of-death': 'Sertipikasion ti MHO ti Sanhi ti Pagkamatay',
     'dc-mto-collection-officer': 'MTO Collection Opisyal',
-    'dc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Maikadua a Kadsaaran Solano, Nueva Vizcaya',
+    'dc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipalidad, Maikadua a Kadsaaran Malolos, Bulacan',
     'dc-municipal-health-officer': 'Opisial ti Salun-at ti Munisipalidad',
     'dc-need-help': 'Kasapulan Tulong?',
     'dc-office-information': 'Impormasion ti Opisina',
-    'dc-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'dc-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'dc-oliver': 'Oliver',
     'dc-oliver-receiving-officer': 'Oliver - Receiving Opisyal',
     'dc-open-data-philippines': 'Open Data Philippines',
@@ -14847,8 +14847,8 @@ const translations = {
     'edu-education': 'Edukasion',
     'edu-empowering-filipino-students-and-educators-with':
       'Empowering Filipino students and educators with 1,000+ libre and open-source productivity tools across 18 categories — from dokumento processing and design to AI and development.',
-    'edu-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'edu-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'edu-environment': 'Aglawlaw',
     'edu-free-tools-for-education': 'Libreng Tools para iti Education',
     'edu-freedom-of-information': 'Wayawaya ti Impormasion',
@@ -14858,13 +14858,13 @@ const translations = {
     'edu-higher-educational-institutions': 'Dagiti Institusyon ti Mas Mataas na Edukasyon',
     'edu-home': 'Pagtaengan',
     'edu-infrastructure': 'Imprastraktura',
-    'edu-isaiah-christian-academy-of-solano-inc': 'Isaiah Christian Academy of Solano, Inc.',
+    'edu-isaiah-christian-academy-of-malolos-inc': 'Isaiah Christian Academy of Malolos, Inc.',
     'edu-kids-workshop-learning-center': 'Kids Workshop Learning Center',
     'edu-lactawan-elementary-school': 'Lactawan Elementary School',
-    'edu-lgu-solano-facebook': 'LGU Solano Facebook',
+    'edu-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'edu-nio-jesus-de-praga-learning': 'Niño Jesus de Praga Learning',
-    'edu-nueva-vizcaya-caregiver-academy': 'Nueva Vizcaya Caregiver Academy',
-    'edu-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'edu-bulacan-caregiver-academy': 'Bulacan Caregiver Academy',
+    'edu-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'edu-open-data-philippines': 'Open Data Philippines',
     'edu-ordinance-framework': 'Balangkas ti Ordinansa',
     'edu-pilar-d-galima-elementary-school': 'Pilar D. Galima Elementary School',
@@ -14875,7 +14875,7 @@ const translations = {
     'edu-quick-links': 'Dagiti Napartak a Silpo',
     'edu-resolution-framework': 'Balangkas ti Resolusion',
     'edu-resources': 'Dagiti Rekurso',
-    'edu-saint-louis-college-of-solano-inc': 'Saint Louis College of Solano Inc',
+    'edu-saint-louis-college-of-malolos-inc': 'Saint Louis College of Malolos Inc',
     'edu-saint-louis-school-elementary-department': 'Saint Louis School - Elementary Departamento',
     'edu-saint-louis-school-high-school-department':
       'Saint Louis School - Nangato School Departamento',
@@ -14887,12 +14887,12 @@ const translations = {
     'edu-sitemap': 'Mapa ti Site',
     'edu-skip-to-main-content': 'Lumaktaw iti kangrunaan a linaon',
     'edu-social-services': 'Serbisio Sosyal',
-    'edu-solano-east-central-school': 'Solano East Central School',
-    'edu-solano-high-school': 'Solano Nangato School',
-    'edu-solano-institute-of-technology': 'Solano Institute of Technology',
-    'edu-solano-north-elementary-school': 'Solano North Elementary School',
-    'edu-solano-south-central-school': 'Solano South Central School',
-    'edu-solano-west-elementary-school': 'Solano West Elementary School',
+    'edu-malolos-east-central-school': 'Malolos East Central School',
+    'edu-malolos-high-school': 'Malolos Nangato School',
+    'edu-malolos-institute-of-technology': 'Malolos Institute of Technology',
+    'edu-malolos-north-elementary-school': 'Malolos North Elementary School',
+    'edu-malolos-south-central-school': 'Malolos South Central School',
+    'edu-malolos-west-elementary-school': 'Malolos West Elementary School',
     'edu-tax-payments': 'Panagbayad ti Buwis',
     'edu-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'edu-tucal-elementary-school': 'Tucal Elementary School',
@@ -14938,8 +14938,8 @@ const translations = {
     'eng-electrical-plans': 'Dagiti Plano ti Elektrikal',
     'eng-electronics-permit': 'Permiso iti Elektroniks',
     'eng-electronics-plans': 'Dagiti Plano ti Elektroniks',
-    'eng-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'eng-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'eng-engineer-iii': 'Inhinyero III',
     'eng-engineering': 'Inhinyeria',
     'eng-engineering-aide': 'Katulong iti Inhinyeria',
@@ -14965,17 +14965,17 @@ const translations = {
       'Key tauhan handling pasdek permiso dagiti aplikasion',
     'eng-latest-real-property-tax-receipt': 'Latest Buwis ti Kukua Resibo',
     'eng-legislative': 'Lehislatura',
-    'eng-lgu-solano-facebook': 'LGU Solano Facebook',
+    'eng-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'eng-mechanical-permit': 'Permit ti Mekanikal',
     'eng-mun-engineering': 'Mun. Inhinyeria',
     'eng-municipal-engineer': 'Inhinyero ti Munisipalidad',
     'eng-municipal-engineering-office': 'Opisina ti Inhinyero ti Munisipalidad',
-    'eng-municipal-engineering-office-municipal-hall-solano':
-      'Munisipal Opisina ti Inhinyero, Munisipalidad, Solano',
+    'eng-municipal-engineering-office-municipal-hall-malolos':
+      'Munisipal Opisina ti Inhinyero, Munisipalidad, Malolos',
     'eng-office': 'Opisina',
     'eng-office-information': 'Impormasion ti Opisina',
     'eng-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'eng-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'eng-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'eng-open-data-philippines': 'Open Data Philippines',
     'eng-ordinance-framework': 'Balangkas ti Ordinansa',
     'eng-pay-building-permit-fee-and-other-fees-at-the':
@@ -15041,8 +15041,8 @@ const translations = {
       'Pagbuo ti komprehensibong plano ti sistema upang mapagaan ti pagbaha ken protektahan ti kalusugan ti publiko.',
     'env-drainage-sewerage-management': 'Panagtaripato ti Drainage ken Alkantarilya',
     'env-education': 'Edukasion',
-    'env-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'env-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'env-environment': 'Aglawlaw',
     'env-fee': 'Bayad:',
     'env-flood-control-mitigation': 'Flood Control ken Pagpapagaan',
@@ -15057,8 +15057,8 @@ const translations = {
     'env-infrastructure': 'Imprastraktura',
     'env-key-environmental-services-and-initiatives':
       'Dagiti Kangrunaan a Serbisio ken Inisyatiba iti Aglawlaw',
-    'env-lgu-solano-facebook': 'LGU Solano Facebook',
-    'env-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'env-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'env-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'env-open-data-philippines': 'Open Data Philippines',
     'env-ordinance-framework': 'Balangkas ti Ordinansa',
     'env-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -15093,15 +15093,15 @@ const translations = {
     'err403-contact-us': 'Kontaken Dakami',
     'err403-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'err403-education': 'Edukasion',
-    'err403-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'err403-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'err403-environment': 'Aglawlaw',
     'err403-freedom-of-information': 'Wayawaya ti Impormasion',
     'err403-go-to-homepage': 'Mapan iti Homepage',
     'err403-health': 'Salun-at',
     'err403-infrastructure': 'Imprastraktura',
-    'err403-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err403-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'err403-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err403-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'err403-open-data-philippines': 'Open Data Philippines',
     'err403-ordinance-framework': 'Balangkas ti Ordinansa',
     'err403-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -15128,15 +15128,15 @@ const translations = {
     'err404-cmci-dti-portal': 'CMCI DTI Portal',
     'err404-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'err404-education': 'Edukasion',
-    'err404-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'err404-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'err404-environment': 'Aglawlaw',
     'err404-freedom-of-information': 'Wayawaya ti Impormasion',
     'err404-go-to-homepage': 'Mapan iti Homepage',
     'err404-health': 'Salun-at',
     'err404-infrastructure': 'Imprastraktura',
-    'err404-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err404-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'err404-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err404-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'err404-open-data-philippines': 'Open Data Philippines',
     'err404-ordinance-framework': 'Balangkas ti Ordinansa',
     'err404-page-not-found': 'Saan a Nasarakan ti Panid',
@@ -15164,15 +15164,15 @@ const translations = {
     'err500-contact-us': 'Kontaken Dakami',
     'err500-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'err500-education': 'Edukasion',
-    'err500-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'err500-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'err500-environment': 'Aglawlaw',
     'err500-freedom-of-information': 'Wayawaya ti Impormasion',
     'err500-go-to-homepage': 'Mapan iti Homepage',
     'err500-health': 'Salun-at',
     'err500-infrastructure': 'Imprastraktura',
-    'err500-lgu-solano-facebook': 'LGU Solano Facebook',
-    'err500-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'err500-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'err500-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'err500-open-data-philippines': 'Open Data Philippines',
     'err500-ordinance-framework': 'Balangkas ti Ordinansa',
     'err500-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -15222,11 +15222,11 @@ const translations = {
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (para iti sole proprietorship) wenno SEC Registration (para iti korporasyon)',
     'faq-education': 'Edukasion',
-    'faq-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'faq-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'faq-environment': 'Aglawlaw',
-    'faq-for-birth-certificates-registered-in-solano-it':
-      'For pannakayanak dagiti sertipiko registered in Solano, it typically takes 15-30 minutes while you aguray, provided the rekord is readily magun-od.',
+    'faq-for-birth-certificates-registered-in-malolos-it':
+      'For pannakayanak dagiti sertipiko registered in Malolos, it typically takes 15-30 minutes while you aguray, provided the rekord is readily magun-od.',
     'faq-freedom-of-information': 'Wayawaya ti Impormasion',
     'faq-go-to-the-municipal-social-welfare-and':
       'Mapan iti Opisina ti Kagalingang Panlipunan ken Pagpapaunlad ti Munisipalidad (MSWDO) na may dalang:',
@@ -15244,9 +15244,9 @@ const translations = {
       'I found a broken link or error on this website. How do I report it?',
     'faq-infrastructure': 'Imprastraktura',
     'faq-is-this-website-mobilefriendly': 'Ti website ba na ito ay mobile-friendly?',
-    'faq-lgu-solano-facebook': 'LGU Solano Facebook',
+    'faq-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'faq-location-sketchmap': 'Sketch/Mapa ti Lokasion',
-    'faq-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'faq-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'faq-open-data-philippines': 'Open Data Philippines',
     'faq-openjs-foundation': 'OpenJS Foundation',
     'faq-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -15254,8 +15254,8 @@ const translations = {
     'faq-privacy-policy': 'Pagannurotan ti Pagkapribado',
     'faq-public-safety': 'Kaligtasan Pampubliko',
     'faq-quick-links': 'Dagiti Napartak a Silpo',
-    'faq-ramon-has-made-the-solano-project-open-source':
-      'Ramon has made the Solano Project nakalukat source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, datos researcher, designer, content writer, translator, or a concerned umili of Solano, your participation helps shape the project for all.',
+    'faq-ramon-has-made-the-malolos-project-open-source':
+      'Ramon has made the Malolos Project nakalukat source under MIT | CC BY 4.0 to empower community-driven development, and contributions are warmly welcomed from everyone; whether you are a developer, datos researcher, designer, content writer, translator, or a concerned umili of Malolos, your participation helps shape the project for all.',
     'faq-ramon-logan-jr': 'Ramon Logan Jr.',
     'faq-resolution-framework': 'Balangkas ti Resolusion',
     'faq-resources': 'Dagiti Rekurso',
@@ -15275,32 +15275,32 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bisitaen ti Opisina ti Tesorero ti Munisipalidad iti Munisipalidad nga addaan iti Tax Declaration wenno kaudian nga Opisyal a Resibo. Ti panagbayad ket cash. Dagiti buwis iti kukua ket masapul a bayadan quarterly, ngem mabalinmo ti agbayad iti tinawen tapno magun-od ti diskwento.',
     'faq-volunteer-with-us': 'Ag-volunteer kadakami',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ti office hours ti ti Munisipalidad?',
     'faq-what-benefits-do-senior-citizens-receive':
       'What benefits do nataengan dagiti umili awaten?',
-    'faq-what-do-i-need-to-start-a-new-business-in-solano':
-      'What do I kasapulan to rugian a baro business in Solano?',
+    'faq-what-do-i-need-to-start-a-new-business-in-malolos':
+      'What do I kasapulan to rugian a baro business in Malolos?',
     'faq-what-is-the-difference-between-psa-and-local':
       'What ay ti difference iti pagitan ti PSA iti lokal na civil registrar dagiti sertipiko?',
     'faq-what-payment-methods-are-accepted': 'What panagbayad dagiti pamamaraan ay accepted?',
     'faq-when-should-i-renew-my-business-permit':
       'Kailan ko dapat i-renew ti aking permiso iti negosio?',
-    'faq-who-developed-better-solano': 'Sino ti gumawa ti Better Solano?',
-    'faq-yes-better-solano-is-fully-responsive-and':
-      'Yes! Better Solano is fully responsibo and optimized for mobile phones, tablets, and desktop computers.',
+    'faq-who-developed-better-malolos': 'Sino ti gumawa ti Better Malolos?',
+    'faq-yes-better-malolos-is-fully-responsive-and':
+      'Yes! Better Malolos is fully responsibo and optimized for mobile phones, tablets, and desktop computers.',
     'faq-yes-but-they-must-bring': 'Yes, ngunit sila dapat bring:',
     'gov-accessibility': 'Aksesibilidad',
-    'gov-accountingsolanogovph': 'accounting@solano.gov.ph',
+    'gov-accountingmalolosgovph': 'accounting@malolos.gov.ph',
     'gov-aggub': 'Aggub',
     'gov-agricultural-loans-crop-insurance-fertilizer':
       'Dagiti pautang iti agrikultura, seguro iti pananim, tulong iti pataba',
     'gov-agriculture': 'Agrikultura',
     'gov-agriculture-aquaculture-food-security-overseas':
       'Agrikultura, Akwakultura ken Seguridad iti Makan, Dagiti Usapin ti dagiti Overseas Filipino Worker',
-    'gov-agrisolanogovph': 'agri@solano.gov.ph',
-    'gov-assessorsolanogovph': 'assessor@solano.gov.ph',
+    'gov-agrimalolosgovph': 'agri@malolos.gov.ph',
+    'gov-assessormalolosgovph': 'assessor@malolos.gov.ph',
     'gov-bagahabag': 'Bagahabag',
     'gov-bangaan': 'Bangaan',
     'gov-bangar': 'Bangar',
@@ -15310,10 +15310,10 @@ const translations = {
     'gov-birth-death-marriage-certificates-cenomar':
       'Pannakayanak, ipapatay, kasar dagiti sertipiko, CENOMAR',
     'gov-blgf-portal': 'BLGF Portal',
-    'gov-bplssolanogovph': 'bpls@solano.gov.ph',
+    'gov-bplsmalolosgovph': 'bpls@malolos.gov.ph',
     'gov-budget-preparation-appropriations-fiscal':
       'Panagisagana ti badyet, dagiti appropriasyon, panagtaripato ti piskal',
-    'gov-budgetsolanogovph': 'budget@solano.gov.ph',
+    'gov-budgetmalolosgovph': 'budget@malolos.gov.ph',
     'gov-building-permits-construction-permits':
       'Pasdek dagiti permiso, construction dagiti permiso, infrastructure',
     'gov-business': 'Negosio',
@@ -15322,7 +15322,7 @@ const translations = {
       'Dagiti permiso iti negosio, clearance ti Mayor, paglilisensya',
     'gov-certificates': 'Dagiti Sertipiko',
     'gov-citizens-charter': "Citizen's Charter",
-    'gov-civilregsolanogovph': 'civilreg@solano.gov.ph',
+    'gov-civilregmalolosgovph': 'civilreg@malolos.gov.ph',
     'gov-cmci-dti-portal': 'CMCI DTI Portal',
     'gov-communal': 'Communal',
     'gov-concepcion': 'Concepcion',
@@ -15338,9 +15338,9 @@ const translations = {
     'gov-education': 'Edukasion',
     'gov-education-science-technology-transportation':
       'Edukasyon, Agham ken Teknolohiya, Transportasyon, Komersyo, Kalakalan ken Industriya',
-    'gov-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
-    'gov-engineersolanogovph': 'engineer@solano.gov.ph',
+    'gov-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
+    'gov-engineermalolosgovph': 'engineer@malolos.gov.ph',
     'gov-entrepreneurship-economic-development-historical':
       'Entrepreneurship & Economic Development, Historical Dagiti rekord & Preservation of Heritage, Culture and the Arts',
     'gov-environment': 'Aglawlaw',
@@ -15351,7 +15351,7 @@ const translations = {
     'gov-games-entertainment-amusement-internal-affairs':
       'Dagiti Laro, Libangan ken Aliwan, Panloob na Usapin',
     'gov-government': 'Gobierno',
-    'gov-gsosolanogovph': 'gso@solano.gov.ph',
+    'gov-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gov-health': 'Salun-at',
     'gov-health-sanitation-finance-appropriation-and-budget':
       'Salun-ken ken Kalinisan, Paglalaan ti Pananalapi ken Badyet',
@@ -15371,7 +15371,7 @@ const translations = {
     'gov-hon-roland-m-carub-jd': 'Hon. Roland M. Carub, J.D.',
     'gov-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'gov-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
-    'gov-hrmosolanogovph': 'hrmo@solano.gov.ph',
+    'gov-hrmomalolosgovph': 'hrmo@malolos.gov.ph',
     'gov-human-resource-management': 'Panagtaripato ti Tao a Rekurso',
     'gov-indigenous-people-affairs': 'Indigenous Dagiti tao Affairs',
     'gov-infrastructure': 'Imprastraktura',
@@ -15403,15 +15403,15 @@ const translations = {
     'gov-legal-good-governance-justice-human-rights':
       'Legal, Mabuting Panagtaripato, Hustisya, Karapatang Pantao, Panagtaripato ti Aglawlaw',
     'gov-legislative-branch': 'Sanga ti Lehislatura',
-    'gov-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gov-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gov-liga-ng-mga-barangay-president': 'Liga ti dagiti Barangay President',
     'gov-market-clearance-entrance-fees-vendor-services-ctc':
       'Market clearance, dagiti bayad iti pagpasok, dagiti serbisio iti vendor, CTC',
-    'gov-mayorsolanogovph': 'mayor@solano.gov.ph',
-    'gov-mdrrmosolanogovph': 'mdrrmo@solano.gov.ph',
-    'gov-mhosolanogovph': 'mho@solano.gov.ph',
-    'gov-mpdosolanogovph': 'mpdo@solano.gov.ph',
-    'gov-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'gov-mayormalolosgovph': 'mayor@malolos.gov.ph',
+    'gov-mdrrmomalolosgovph': 'mdrrmo@malolos.gov.ph',
+    'gov-mhomalolosgovph': 'mho@malolos.gov.ph',
+    'gov-mpdomalolosgovph': 'mpdo@malolos.gov.ph',
+    'gov-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'gov-municipal-accounting-office': 'Opisina ti Accounting ti Munisipalidad',
     'gov-municipal-agriculture-office': 'Opisina ti Agrikultura ti Munisipalidad',
     'gov-municipal-assessors-office': 'Opisina ti Assessor ti Munisipalidad',
@@ -15423,7 +15423,7 @@ const translations = {
     'gov-municipal-offices': 'Dagiti Opisina ti Munisipalidad',
     'gov-municipal-planning-development': 'Munisipal Planning & Development',
     'gov-municipal-treasurers-office': 'Opisina ti Tesorero ti Munisipalidad',
-    'gov-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'gov-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'gov-open-data-philippines': 'Open Data Philippines',
     'gov-ordinance-framework': 'Balangkas ti Ordinansa',
     'gov-osmea': 'Osmeña',
@@ -15462,14 +15462,14 @@ const translations = {
     'gov-tax-payments-real-property-tax-revenue-collection':
       'Tax dagiti panagbayad, buwis iti tunay na kukua, revenue koleksyon',
     'gov-terms-of-use': 'Dagiti Kondision ti Panagusar',
-    'gov-the-executive-officials-leading-solanos-governance':
-      "The executive dagiti opisyal leading Solano's governance",
-    'gov-treasurersolanogovph': 'treasurer@solano.gov.ph',
+    'gov-the-executive-officials-leading-maloloss-governance':
+      "The executive dagiti opisyal leading Malolos's governance",
+    'gov-treasurermalolosgovph': 'treasurer@malolos.gov.ph',
     'gov-tucal': 'Tucal',
     'gov-uddiawan': 'Uddiawan',
     'gov-vaccination-health-certificates-medical-assistance':
       'Vaccination, health dagiti sertipiko, tulong medikal',
-    'gov-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'gov-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'gov-view-job-vacancies': 'Kitaen Job Vacancies',
     'gov-view-services': 'Kitaen ti dagiti Serbisio',
     'gov-volunteer-with-us': 'Ag-volunteer kadakami',
@@ -15528,8 +15528,8 @@ const translations = {
     'gs-education': 'Edukasion',
     'gs-email': 'Email',
     'gs-emergency-medical-services': 'Emergency Medical Dagiti serbisio',
-    'gs-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'gs-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'gs-emtdriver': 'EMT/Driver',
     'gs-environment': 'Aglawlaw',
     'gs-equipment': 'Ramit',
@@ -15547,7 +15547,7 @@ const translations = {
     'gs-gso-head': 'GSO Puno',
     'gs-gso-personnel': 'GSO Tauhan',
     'gs-gso-staff': 'GSO Kawani',
-    'gs-gsosolanogovph': 'gso@solano.gov.ph',
+    'gs-gsomalolosgovph': 'gso@malolos.gov.ph',
     'gs-health': 'Salun-at',
     'gs-heavy-duty': 'Mabigat na Trabaho',
     'gs-heavy-equipment-operator': 'Operator ti Mabigat na Ramit',
@@ -15557,7 +15557,7 @@ const translations = {
     'gs-industrial': 'Industriyal',
     'gs-infrastructure': 'Imprastraktura',
     'gs-issuance-of-purchase-order-po': 'Panagipaay ti Purchase Order (PO)',
-    'gs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'gs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'gs-light-vehicle-driver': 'Driver ti Magaan na Lugan',
     'gs-location': 'Lokasion',
     'gs-mayors-office': 'Opisina ti Mayor',
@@ -15567,8 +15567,8 @@ const translations = {
     'gs-municipal-accounting': 'Accounting ti Munisipalidad',
     'gs-municipal-engineering': 'Inhinyeria ti Munisipalidad',
     'gs-municipal-general-services-office': 'Opisina ti Sapasap a Serbisio ti Munisipalidad',
-    'gs-municipal-hall-ground-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Umuna a Kadsaaran, Solano, Nueva Vizcaya 3708',
+    'gs-municipal-hall-ground-floor-malolos-bulacan':
+      'Munisipalidad, Umuna a Kadsaaran, Malolos, Bulacan 3708',
     'gs-municipal-treasurer': 'Tesorero ti Munisipalidad',
     'gs-municipal-vehicles-available-for-official-use-and':
       'Munisipal vehicles magun-od for opisial usaren and publiko rental',
@@ -15577,7 +15577,7 @@ const translations = {
     'gs-office-hours': 'Oras ti Opisina',
     'gs-office-personnel': 'Dagiti Tauhan ti Opisina',
     'gs-office-staff-and-service-personnel': 'Opisina kawani and serbisio tauhan',
-    'gs-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'gs-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'gs-official-receipt-approved-request': 'Opisial Resibo, Naaprubaran Agkiddaw',
     'gs-open-data-philippines': 'Open Data Philippines',
     'gs-operator': 'Operator',
@@ -15672,21 +15672,21 @@ const translations = {
     'health-curifang-bhs': 'Curifang BHS',
     'health-dadap-bhs': 'Dadap BHS',
     'health-education': 'Edukasion',
-    'health-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'health-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'health-environment': 'Aglawlaw',
     'health-freedom-of-information': 'Wayawaya ti Impormasion',
     'health-health': 'Salun-at',
     'health-home': 'Pagtaengan',
     'health-infrastructure': 'Imprastraktura',
     'health-lactawan-bhs': 'Lactawan BHS',
-    'health-lgu-solano-facebook': 'LGU Solano Facebook',
+    'health-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'health-medical-mission-group-hospital-health-services':
       'Medical Mission Group Hospital & Health Dagiti serbisio Cooperative',
     'health-nangalisan-bhs': 'Nangalisan BHS',
-    'health-national-highway-solano': 'Nailian Highway, Solano',
+    'health-national-highway-malolos': 'Nailian Highway, Malolos',
     'health-ocapon-bhs': 'Ocapon BHS',
-    'health-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'health-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'health-open-data-philippines': 'Open Data Philippines',
     'health-ordinance-framework': 'Balangkas ti Ordinansa',
     'health-osmea-bhs': 'Osmeña BHS',
@@ -15738,7 +15738,7 @@ const translations = {
     'home-bintauan': 'Bintauan',
     'home-birth-certificate': 'Sertipiko ti Pannakayanak',
     'home-blgf-portal': 'BLGF Portal',
-    'home-brief-history-of-solano': 'Ababa a Pakasaritaan ti Solano',
+    'home-brief-history-of-malolos': 'Ababa a Pakasaritaan ti Malolos',
     'home-browse-complete-directory': 'Browse kompleto directory',
     'home-browse-services': 'Ag-browse kadagiti Serbisio',
     'home-business': 'Negosio',
@@ -15749,12 +15749,12 @@ const translations = {
     'home-contact-us': 'Kontaken Dakami',
     'home-create-account': 'Gumawa ti Account',
     'home-education': 'Edukasion',
-    'home-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'home-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'home-environment': 'Aglawlaw',
     'home-father-alejandro-vidal': 'Padre Alejandro Vidal',
-    'home-fetching-the-latest-news-from-solano':
-      'Kinukuha ti pinakabagong damag manipud iti Solano.',
+    'home-fetching-the-latest-news-from-malolos':
+      'Kinukuha ti pinakabagong damag manipud iti Malolos.',
     'home-find-a-service': 'Find a Serbisio',
     'home-freedom-of-information': 'Wayawaya ti Impormasion',
     'home-governor-general-antonio-urbiztondo-declared':
@@ -15771,26 +15771,26 @@ const translations = {
     'home-history-1853':
       'Dimteng dagiti umuna nga Ilocano, inyeg ni Don Diego Lumicao, maysa a dati a gobernadorcillo.',
     'home-history-1889':
-      'Nabaliwan ti nagan iti Solano tapno padayawan ni Gobernador Heneral Ramon Solano y Llanderal. Ti ili ket naipasayaat manen babaen ni Padre Juan Villaverde nga addaan 14 a magkakahanay a nalawa a kalsada, tunggal maysa ket 20 metro ti kalawa na, a mangbukel iti 100 a kuadrado a bloke.',
+      'Nabaliwan ti nagan iti Malolos tapno padayawan ni Gobernador Heneral Ramon Malolos y Llanderal. Ti ili ket naipasayaat manen babaen ni Padre Juan Villaverde nga addaan 14 a magkakahanay a nalawa a kalsada, tunggal maysa ket 20 metro ti kalawa na, a mangbukel iti 100 a kuadrado a bloke.',
     'home-history-1957':
-      'Dagiti baryo ti Ibung ken Bintawan ket naisina tapno mangbukel iti ili ti Ibung, a nabaliwan ti nagan iti Villaverde. Ti kalawa ti daga ti Solano ket nabassitan iti 13,980 ektarya.',
+      'Dagiti baryo ti Ibung ken Bintawan ket naisina tapno mangbukel iti ili ti Ibung, a nabaliwan ti nagan iti Villaverde. Ti kalawa ti daga ti Malolos ket nabassitan iti 13,980 ektarya.',
     'home-ilocanos-arrived': 'Dimteng dagiti Ilocano',
     'home-income-classification': 'Klasipikasion ti Kita',
     'home-infrastructure': 'Imprastraktura',
-    'home-interactive-map-showing-the-location-of-solano':
-      'Interactive mapa showing the location of Solano Munisipalidad in Nueva Vizcaya, Philippines. The mapa is centered at coordinates 16.5167°N, 121.1833 °E. Usaren the plus and minus buttons or keyboard arrows to navigate the mapa.',
+    'home-interactive-map-showing-the-location-of-malolos':
+      'Interactive mapa showing the location of Malolos Munisipalidad in Bulacan, Philippines. The mapa is centered at coordinates 16.5167°N, 121.1833 °E. Usaren the plus and minus buttons or keyboard arrows to navigate the mapa.',
     'home-javascript-is-required-to-view-the-interactive-map':
       'JavaScript is kasapulan to kitaen the interactive mapa.',
     'home-land-area': 'Kalawa ti Daga',
-    'home-lgu-solano-facebook': 'LGU Solano Facebook',
-    'home-lgusolanonvgmailcom': 'lgusolanonv@gmail.com',
+    'home-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'home-lgumalolosnvgmailcom': 'lgumalolosnv@gmail.com',
     'home-loading': 'Agkarkarga',
     'home-loading-updates': 'Naglo-load ti dagiti update...',
     'home-lungab': 'lungab',
     'home-lungabang': 'Lungabang',
-    'home-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'home-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'home-municipality': 'Munisipalidad',
-    'home-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'home-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'home-once-the-largest': 'Idi Kadakkelan',
     'home-open-data-philippines': 'Open Data Philippines',
     'home-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -15801,7 +15801,7 @@ const translations = {
     'home-quick-access-to-frequently-requested-municipal':
       'Quick ag-access to frequently requested munisipal dagiti serbisio',
     'home-quick-links': 'Dagiti Napartak a Silpo',
-    'home-ramon-solano-y-llanderal': 'Ramon Solano y Llanderal',
+    'home-ramon-malolos-y-llanderal': 'Ramon Malolos y Llanderal',
     'home-real-property-tax': 'Buwis ti Pudno a Sanikua',
     'home-resolution-framework': 'Balangkas ti Resolusion',
     'home-resources': 'Dagiti Rekurso',
@@ -15810,25 +15810,25 @@ const translations = {
     'home-sitemap': 'Mapa ti Site',
     'home-skip-to-main-content': 'Lumaktaw iti kangrunaan a linaon',
     'home-social-services': 'Serbisio Sosyal',
-    'home-solano': 'Solano',
-    'home-solano-at-a-glance': 'Solano iti Isang Tingin',
-    'home-solano-municipal-hall-nueva-vizcaya-3708': 'Solano Munisipal Hall, Nueva Vizcaya 3708',
-    'home-solano-nueva-vizcaya-3708': 'Solano, Nueva Vizcaya 3708',
-    'home-solano-was-the-largest-municipality-in-the':
-      'Ti Solano ti kadakkelan a munisipalidad iti probinsia agingga a naisina ti Caliat ken Bintawan tapno agbalin a Quezon ken Villaverde.',
+    'home-malolos': 'Malolos',
+    'home-malolos-at-a-glance': 'Malolos iti Isang Tingin',
+    'home-malolos-municipal-hall-bulacan-3708': 'Malolos Munisipal Hall, Bulacan 3708',
+    'home-malolos-bulacan-3708': 'Malolos, Bulacan 3708',
+    'home-malolos-was-the-largest-municipality-in-the':
+      'Ti Malolos ti kadakkelan a munisipalidad iti probinsia agingga a naisina ti Caliat ken Bintawan tapno agbalin a Quezon ken Villaverde.',
     'home-tax-payments': 'Panagbayad ti Buwis',
     'home-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'home-the-1889-redevelopment-created-a-grid-of-100':
       'Ti panagpasayaat idi 1889 ket nangaramid iti grid a 100 a kuadrado a bloke, tunggal maysa ket addaan dagup a kalawa a maysa nga ektarya, nga addaan kadagiti kalsada a mapan iti amianan-abagatan ken daya-laud.',
     'home-total-municipal-area': 'Dagup a Kalawa ti Munisipalidad',
     'home-urban-planning': 'Panagplano ti Ili',
-    'home-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'home-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'home-view-all': 'Kitaen Amin',
     'home-view-all-officials': 'Kitaen All Dagiti opisyal',
-    'home-view-solano-on-openstreetmap': 'Kitaen Solano on OpenStreetMap',
+    'home-view-malolos-on-openstreetmap': 'Kitaen Malolos on OpenStreetMap',
     'home-view-statistics': 'Kitaen ti dagiti Estadistika',
     'home-villaverde': 'Villaverde',
-    'home-weather-and-map-of-solano': 'Weather and Mapa of Solano',
+    'home-weather-and-map-of-malolos': 'Weather and Mapa of Malolos',
     'hrm-10-minutes': '10 minuto',
     'hrm-105-days-for-female-employees': '105 aldaw para iti dagiti babaeng empleyado',
     'hrm-12-days': '1-2 aldaw',
@@ -15873,8 +15873,8 @@ const translations = {
     'hrm-education': 'Edukasion',
     'hrm-employee-id': 'Empleado ID',
     'hrm-employee-id-for-current-employees': 'Empleado ID (for agdama dagiti empleado)',
-    'hrm-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'hrm-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'hrm-environment': 'Aglawlaw',
     'hrm-fee-free': 'Bayad: Libre',
     'hrm-fee-free-for-current-employees': 'Bayad: Libre for agdama dagiti empleado',
@@ -15896,7 +15896,7 @@ const translations = {
     'hrm-hrmo-staff': 'HRMO Kawani',
     'hrm-human-resource-management-section': 'Panagtaripato ti Tao a Rekurso Seksion',
     'hrm-human-resource-management-section-mayors-office':
-      'Panagtaripato ti Tao a Rekurso Seksion, Opisina ti Mayor, Munisipalidad, Solano, Nueva Vizcaya',
+      'Panagtaripato ti Tao a Rekurso Seksion, Opisina ti Mayor, Munisipalidad, Malolos, Bulacan',
     'hrm-important-notes': 'Napateg a Paammo',
     'hrm-infrastructure': 'Imprastraktura',
     'hrm-issuance-of-certificate-of-employment': 'Panagipaay ti Sertipiko ti Trabaho',
@@ -15912,7 +15912,7 @@ const translations = {
     'hrm-leave-processing': 'Panagproseso ti Leave',
     'hrm-leave-type': 'Uri ti Leave',
     'hrm-legislative': 'Lehislatura',
-    'hrm-lgu-solano-facebook': 'LGU Solano Facebook',
+    'hrm-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'hrm-location': 'Lokasion',
     'hrm-maternity-leave': 'Maternity Leave',
     'hrm-mayors-office': 'Opisina ti Mayor',
@@ -15927,7 +15927,7 @@ const translations = {
     'hrm-office-personnel': 'Dagiti Tauhan ti Opisina',
     'hrm-official-certification-of-current-or-previous':
       'Opisial certification of agdama or napalabas employment status',
-    'hrm-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'hrm-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'hrm-official-record-of-employment-history-for-lgu':
       'Opisyal na rekord ti kasaysayan ti trabaho para iti dagiti empleyado ti LGU',
     'hrm-official-statement-of-accumulated-leave-credits':
@@ -16009,8 +16009,8 @@ const translations = {
     'infra-cmci-dti-portal': 'CMCI DTI Portal',
     'infra-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'infra-education': 'Edukasion',
-    'infra-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'infra-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'infra-engineering-services': 'Dagiti Serbisio iti Inhinyeria',
     'infra-environment': 'Aglawlaw',
     'infra-fee': 'Bayad:',
@@ -16018,12 +16018,12 @@ const translations = {
     'infra-health': 'Salun-at',
     'infra-home': 'Pagtaengan',
     'infra-infrastructure': 'Imprastraktura',
-    'infra-lgu-solano-facebook': 'LGU Solano Facebook',
+    'infra-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'infra-municipal-engineering-office': 'Opisina ti Inhinyero ti Munisipalidad',
     'infra-municipal-general-services-office': 'Opisina ti Sapasap a Serbisio ti Munisipalidad',
     'infra-municipal-planning-development': 'Munisipal Planning & Development',
     'infra-occupancy-permit': 'Permit ti Panagnaed',
-    'infra-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'infra-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'infra-open-data-philippines': 'Open Data Philippines',
     'infra-ordinance-framework': 'Balangkas ti Ordinansa',
     'infra-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -16073,8 +16073,8 @@ const translations = {
     'leg-detailed-discussion-and-debate-on-the-proposed':
       'Detalyadong talakayan ken debate iti iminumungkahing ordinansa',
     'leg-education': 'Edukasion',
-    'leg-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'leg-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'leg-environment': 'Aglawlaw',
     'leg-expressions-of-the-legislative-bodys-will-or':
       "Expressions ti ti legislative body's ay wenno opinion iti tiyak na dagiti usapin, often used para iti commendations, dagiti kiddaw, wenno patakaran positions.",
@@ -16113,7 +16113,7 @@ const translations = {
       'Ti ordinansa ay nagkakabisa ken ipinapatupad iti loob ti munisipyo',
     'leg-ordinances': 'Dagiti Ordinansa',
     'leg-ordinances-and-resolutions-of-the-sangguniang':
-      'Dagiti ordinansa ken resolusion ti Sangguniang Bayan ti Solano',
+      'Dagiti ordinansa ken resolusion ti Sangguniang Bayan ti Malolos',
     'leg-posting-publication': 'Panag-post / Publikasyon',
     'leg-posting-transmittal': 'Panag-post / Transmittal',
     'leg-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -16195,7 +16195,7 @@ const translations = {
     'magri-certification-of-farm-location-and-area-cultivated':
       'Sertipikasion ti lokasion ti bukid ken lugar na sinasaka',
     'magri-certification-that-individual-is-a-registered':
-      'Sertipikasion na ti indibidwal ay isang rehistradong mannalon iti Solano',
+      'Sertipikasion na ti indibidwal ay isang rehistradong mannalon iti Malolos',
     'magri-certifications': 'Dagiti Sertipikasion',
     'magri-certified-seeds-distribution': 'Nasertipikaran Seeds Distribution',
     'magri-citizens-charter': "Citizen's Charter",
@@ -16224,13 +16224,13 @@ const translations = {
     'magri-distribution-of-tilapia-carp-and-other-fingerlings':
       'Panagipakat ti dagiti tilapia, karpa, ken iba pang fingerling',
     'magri-education': 'Edukasion',
-    'magri-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'magri-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'magri-environment': 'Aglawlaw',
     'magri-farm-location-certification': 'Sertipikasion ti Lokasion ti Bukid',
     'magri-farm-machinery-services': 'Farm Machinery Dagiti serbisio',
     'magri-farm-registration-certifications-and-agricultural':
-      'Panagparehistro ti bukid, dagiti sertipikasion, ken dagiti programang agrikultural para iti dagiti mannalon ti Solano',
+      'Panagparehistro ti bukid, dagiti sertipikasion, ken dagiti programang agrikultural para iti dagiti mannalon ti Malolos',
     'magri-farmer-certification': 'Sertipikasion ti Mannalon',
     'magri-farmers-field-school': 'Eskuelaan iti Bukid ti dagiti Mannalon',
     'magri-farmers-organization': 'Organisasyon ti dagiti Mannalon',
@@ -16264,7 +16264,7 @@ const translations = {
     'magri-land-title-tax-declaration-lease-contract':
       'Land Title / Tax Declaration / Kontrata ti Panagabang',
     'magri-legislative': 'Lehislatura',
-    'magri-lgu-solano-facebook': 'LGU Solano Facebook',
+    'magri-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'magri-linkage-to-organic-markets-and-buyers':
       'Koneksyon iti dagiti organikong tiendaan ken mamimili',
     'magri-livestock': 'Dagiti Hayop',
@@ -16281,14 +16281,14 @@ const translations = {
     'magri-mun-agriculture': 'Mun. Agrikultura',
     'magri-municipal-agriculture-office': 'Opisina ti Agrikultura ti Munisipalidad',
     'magri-municipal-agriculture-office-municipal-hall':
-      'Departamento ti Agrikultura ti Munisipalidad Opisina, Munisipalidad, Solano, Nueva Vizcaya',
+      'Departamento ti Agrikultura ti Munisipalidad Opisina, Munisipalidad, Malolos, Bulacan',
     'magri-municipal-hall': 'Munisipio',
     'magri-no-payment-required': 'No Panagbayad Kasapulan',
     'magri-office': 'Opisina',
     'magri-office-information': 'Impormasion ti Opisina',
     'magri-official-certifications-issued-by-the-municipal':
       'Dagiti opisyal na sertipikasyon na ibinibigay ti Opisina ti Agrikultura ti Munisipalidad',
-    'magri-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'magri-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'magri-official-production-records-for-loan-and':
       'Dagiti opisyal na rekord ti produksyon para iti layunin ti pautang ken seguro',
     'magri-old-rsbsa-form-reference-number': 'Daan RSBSA Form / Reference Number',
@@ -16355,8 +16355,8 @@ const translations = {
       'Suporta para iti dagiti kasanayan iti organikong pagsasaka ken sertipikasion',
     'magri-support-for-pgs-and-thirdparty-organic':
       'Suporta para iti PGS ken third-party na organikong sertipikasion',
-    'magri-support-programs-for-corn-farmers-in-solano':
-      'Dagiti programa ti suporta para iti dagiti mannalon ti mais iti Solano',
+    'magri-support-programs-for-corn-farmers-in-malolos':
+      'Dagiti programa ti suporta para iti dagiti mannalon ti mais iti Malolos',
     'magri-support-programs-for-rice-farmers-under-the-rice':
       'Dagiti programa ti suporta para iti dagiti mannalon ti bigas iti ilalim ti Rice Competitiveness Enhancement Fund (RCEF)',
     'magri-support-services-for-fisherfolk-and-aquaculture':
@@ -16432,8 +16432,8 @@ const translations = {
     'market-duration': 'Kaatiddog',
     'market-economic-enterprise-development-office': 'Economic Enterprise & Development Opisina',
     'market-education': 'Edukasion',
-    'market-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'market-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'market-entrance-fees': 'Dagiti Bayad iti Pagpasok',
     'market-entrance-fees-are-based-on-goods-being-sold':
       'Ti dagiti bayad iti pagpasok ay batay iti dagiti kalakal na ibinebenta',
@@ -16477,7 +16477,7 @@ const translations = {
     'market-key-personnel-handling-public-market-services':
       'Key tauhan handling publiko market dagiti serbisio',
     'market-legislative': 'Lehislatura',
-    'market-lgu-solano-facebook': 'LGU Solano Facebook',
+    'market-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'market-location': 'Lokasion',
     'market-market-clearance': 'Clearance ti Tiendaan',
     'market-market-collector': 'Kolektor ti Tiendaan',
@@ -16489,7 +16489,7 @@ const translations = {
     'market-office-head': 'Pinuno ti Opisina',
     'market-office-information': 'Impormasion ti Opisina',
     'market-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'market-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'market-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'market-open-data-philippines': 'Open Data Philippines',
     'market-ordinance-framework': 'Balangkas ti Ordinansa',
     'market-other-merchandise': 'Iba pang Paninda',
@@ -16521,8 +16521,8 @@ const translations = {
     'market-secure-and-fill-out-public-market-complaint-form':
       'Natalged and punuan out Publiko a Tiendaan reklamo form and isumite to the Market Supervisor',
     'market-seedo-head': 'SEEDO Puno',
-    'market-seedo-office-public-market-solano-nueva-vizcaya':
-      'SEEDO Opisina, Publiko a Tiendaan, Solano, Nueva Vizcaya',
+    'market-seedo-office-public-market-malolos-bulacan':
+      'SEEDO Opisina, Publiko a Tiendaan, Malolos, Bulacan',
     'market-seedo-public-market': 'SEEDO - Publiko a Tiendaan',
     'market-select-a-service-to-view-the-detailed-process-and':
       'Agpili ti serbisio tapno makita ti detalyado a proseso ken dagiti kasapulan',
@@ -16595,8 +16595,8 @@ const translations = {
     'mbudget-documents-required': 'Dagiti Dokumento a Kasapulan',
     'mbudget-duration': 'Kaatiddog',
     'mbudget-education': 'Edukasion',
-    'mbudget-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mbudget-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mbudget-ensure-all-documents-are-complete-before':
       'Ensure lahat ti dagiti dokumento ay kumpletong baro panagisumite',
     'mbudget-environment': 'Aglawlaw',
@@ -16612,15 +16612,15 @@ const translations = {
     'mbudget-key-personnel-handling-budget-office-services':
       'Key tauhan handling budget opisina dagiti serbisio',
     'mbudget-legislative': 'Lehislatura',
-    'mbudget-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mbudget-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mbudget-local-school-board-ordinance': 'Lokal School Lupon Ordinansa',
     'mbudget-location': 'Lokasion',
     'mbudget-marcial-l-ramos-cpa': 'Marcial L. Ramos, CPA',
     'mbudget-melisa-claire-leal': 'Melisa Claire Leal',
     'mbudget-mun-budget': 'Mun. Badyet',
     'mbudget-municipal-budget-office': 'Opisina ti Badyet ti Munisipalidad',
-    'mbudget-municipal-budget-office-municipal-hall-solano':
-      'Munisipal Opisina ti Badyet, Munisipalidad, Solano, Nueva Vizcaya',
+    'mbudget-municipal-budget-office-municipal-hall-malolos':
+      'Munisipal Opisina ti Badyet, Munisipalidad, Malolos, Bulacan',
     'mbudget-municipal-budget-officer': 'Opisial ti Badyet ti Munisipalidad',
     'mbudget-municipal-hall': 'Munisipio',
     'mbudget-obligation-request': 'Kiddaw ti Obligasyon',
@@ -16632,7 +16632,7 @@ const translations = {
     'mbudget-office': 'Opisina',
     'mbudget-office-information': 'Impormasion ti Opisina',
     'mbudget-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'mbudget-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mbudget-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mbudget-official-receipt': 'Opisial a Resibo',
     'mbudget-open-data-philippines': 'Open Data Philippines',
     'mbudget-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -16761,8 +16761,8 @@ const translations = {
     'mc-duration': 'Kaatiddog',
     'mc-edgar-mc': 'Edgar Mc',
     'mc-education': 'Edukasion',
-    'mc-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mc-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mc-environment': 'Aglawlaw',
     'mc-fee': 'Bayad',
     'mc-fifteen-15-days': 'labinlimang (15) aldaw',
@@ -16770,7 +16770,7 @@ const translations = {
       'Suroten these steps to agparehistro your kasar sertipiko',
     'mc-for-delayed-registration': 'For Nailadaw a Panagparehistro',
     'mc-for-engaged-couples-intending-to-get-married-in':
-      'Para iti dagiti magkasintahang nagbabalak magpakasal iti Solano',
+      'Para iti dagiti magkasintahang nagbabalak magpakasal iti Malolos',
     'mc-for-timely-registration-within-1530-days':
       'Para iti Napapanahong Panagparehistro (Sa Loob ti 15/30 Aldaw)',
     'mc-forms-for-marriage-license-application': 'Dagiti form for kasar lisensia aplikasion',
@@ -16795,18 +16795,18 @@ const translations = {
     'mc-issuance-of-the-marriage-license': 'Issuance of the kasar lisensia',
     'mc-juvy': 'Juvy',
     'mc-legislative': 'Lehislatura',
-    'mc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mc-license-validity': 'Bisa ti Lisensia',
     'mc-local-civil-registrar': 'Lokal a Civil Registrar',
     'mc-marriage-certificate-local-registration': 'Sertipiko ti Panagkasar (Local Registration)',
     'mc-mswdo-staff': 'MSWDO Kawani',
     'mc-mto-collection-officer': 'MTO Collection Opisyal',
-    'mc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Maikadua a Kadsaaran Solano, Nueva Vizcaya',
+    'mc-municipal-hall-2nd-floor-malolos-bulacan':
+      'Munisipalidad, Maikadua a Kadsaaran Malolos, Bulacan',
     'mc-nationwide': 'Buong Bansa',
     'mc-need-help': 'Kasapulan Tulong?',
     'mc-office-information': 'Impormasion ti Opisina',
-    'mc-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mc-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mc-official-receipt': 'Opisial a Resibo',
     'mc-oliver-receiving-officer': 'Oliver - Receiving Opisyal',
     'mc-open-data-philippines': 'Open Data Philippines',
@@ -16943,8 +16943,8 @@ const translations = {
       'I-download the kasar lisensia aplikasion form',
     'mcr-duration': 'Kaatiddog',
     'mcr-education': 'Edukasion',
-    'mcr-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mcr-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mcr-environment': 'Aglawlaw',
     'mcr-fee': 'Bayad',
     'mcr-fee-per-copy': 'Bayad tunggal Kopia',
@@ -16965,7 +16965,7 @@ const translations = {
     'mcr-legal-capacity-to-contract-marriage-from-embassy':
       'Legal na Kakayahang Mag-asawa manipud iti Embahada',
     'mcr-legislative': 'Lehislatura',
-    'mcr-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mcr-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mcr-location': 'Lokasion',
     'mcr-marriage-certificate': 'Sertipiko ti Kasar',
     'mcr-marriage-certificate-of-parents-if-legitimate':
@@ -16986,7 +16986,7 @@ const translations = {
     'mcr-municipal-civil-registrar': 'Civil Registrar ti Munisipalidad',
     'mcr-municipal-civil-registrars-office': 'Munisipal Opisina ti Sibil a Rehistrador',
     'mcr-municipal-civil-registrars-office-2nd-floor':
-      'Munisipal Opisina ti Sibil a Rehistrador, Maikadua a Kadsaaran, Munisipalidad, Solano, Nueva Vizcaya',
+      'Munisipal Opisina ti Sibil a Rehistrador, Maikadua a Kadsaaran, Munisipalidad, Malolos, Bulacan',
     'mcr-municipal-hall-2f': 'Munisipal Hall, 2F',
     'mcr-nbipolice-clearance': 'NBI/Police Clearance',
     'mcr-negative-certification-from-psa': 'Negatibong Sertipikasion manipud iti PSA',
@@ -16997,7 +16997,7 @@ const translations = {
     'mcr-office-head': 'Pinuno ti Opisina',
     'mcr-office-information': 'Impormasion ti Opisina',
     'mcr-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'mcr-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mcr-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mcr-official-receipt': 'Opisial a Resibo',
     'mcr-open-data-philippines': 'Open Data Philippines',
     'mcr-order-of-payment': 'Order of Panagbayad',
@@ -17024,11 +17024,11 @@ const translations = {
     'mcr-ra-9048-clerical-error-correction': 'RA 9048 - Panagkorehir ti Klerikal na Error',
     'mcr-register-births-and-deaths-within-30-days-to':
       'Irehistro ti dagiti kapanganakan ken pagkamatay iti loob ti 30 aldaw upang maiwasan ti dagiti multa',
-    'mcr-registration-of-birth-for-children-born-in-solano':
-      'Panagparehistro ti kapanganakan para iti dagiti batang ipinanganak iti Solano, Nueva Vizcaya',
+    'mcr-registration-of-birth-for-children-born-in-malolos':
+      'Panagparehistro ti kapanganakan para iti dagiti batang ipinanganak iti Malolos, Bulacan',
     'mcr-registration-of-death': 'Registration of Ipapatay',
     'mcr-registration-of-death-for-persons-who-died-in':
-      'Panagparehistro ti pagkamatay para iti dagiti taong namatay iti Solano, Nueva Vizcaya',
+      'Panagparehistro ti pagkamatay para iti dagiti taong namatay iti Malolos, Bulacan',
     'mcr-registration-of-live-birth': 'Panagparehistro ti Kapanganakan',
     'mcr-registration-of-marriage': 'Registration of Kasar',
     'mcr-registration-officer': 'Opisyal ti Panagparehistro',
@@ -17037,7 +17037,7 @@ const translations = {
     'mcr-representatives-must-have-authorization-letter':
       'Ti dagiti pannakabagi ay dapat may sulat ti awtorisasyon ken dagiti balidong ID',
     'mcr-request-for-certified-true-copies-of-civil':
-      'Agkiddaw for nasertipikaran pudno dagiti kopia of civil registry dagiti dokumento registered in Solano',
+      'Agkiddaw for nasertipikaran pudno dagiti kopia of civil registry dagiti dokumento registered in Malolos',
     'mcr-requirements': 'Dagiti Kasapulan',
     'mcr-resolution-framework': 'Balangkas ti Resolusion',
     'mcr-resources': 'Dagiti Rekurso',
@@ -17110,8 +17110,8 @@ const translations = {
     'mgs-duration': 'Kaatiddog',
     'mgs-education': 'Edukasion',
     'mgs-electricity': 'Koriente',
-    'mgs-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mgs-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mgs-environment': 'Aglawlaw',
     'mgs-equipment-accountability-is-strictly-enforced':
       'Ti pananagutan iti ramit ay mahigpit na ipinapatupad',
@@ -17135,7 +17135,7 @@ const translations = {
     'mgs-key-personnel-handling-general-services-operations':
       'Key tauhan handling sapasap dagiti serbisio operations',
     'mgs-legislative': 'Lehislatura',
-    'mgs-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mgs-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mgs-light-vehicle': 'Magaan na Lugan',
     'mgs-light-vehicles': 'Dagiti Magaan na Lugan',
     'mgs-location': 'Lokasion',
@@ -17149,13 +17149,13 @@ const translations = {
     'mgs-motorcycles': 'Dagiti Motorsiklo',
     'mgs-municipal-general-services-office': 'Opisina ti Sapasap a Serbisio ti Munisipalidad',
     'mgs-municipal-general-services-office-municipal-hall':
-      'Munisipal Opisina ti Sapasap a Serbisio, Munisipalidad, Solano, Nueva Vizcaya',
+      'Munisipal Opisina ti Sapasap a Serbisio, Munisipalidad, Malolos, Bulacan',
     'mgs-municipal-hall': 'Munisipio',
     'mgs-none': 'Awan',
     'mgs-office': 'Opisina',
     'mgs-office-information': 'Impormasion ti Opisina',
     'mgs-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'mgs-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mgs-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mgs-open-data-philippines': 'Open Data Philippines',
     'mgs-operators-pool': 'Pool ti dagiti Operator',
     'mgs-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -17231,8 +17231,8 @@ const translations = {
     'mgs-volunteer-with-us': 'Ag-volunteer kadakami',
     'mgs-water': 'Danum',
     'mpdo-12-days': '1-2 Aldaw',
-    'mpdo-2nd-floor-municipal-hall-solano-nueva-vizcaya':
-      'Maikadua a Kadsaaran, Munisipalidad, Solano, Nueva Vizcaya',
+    'mpdo-2nd-floor-municipal-hall-malolos-bulacan':
+      'Maikadua a Kadsaaran, Munisipalidad, Malolos, Bulacan',
     'mpdo-30-days': '30+ Aldaw',
     'mpdo-510-days': '5-10 Aldaw',
     'mpdo-8am-5pm': '8AM - 5PM',
@@ -17280,8 +17280,8 @@ const translations = {
     'mpdo-downloadable-resources': 'Dagiti Mai-download a Rekurso',
     'mpdo-duly-accomplished-application-form': 'Wastong napunang Application Form',
     'mpdo-education': 'Edukasion',
-    'mpdo-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mpdo-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mpdo-environment': 'Aglawlaw',
     'mpdo-environmental-compliance-certificate-if-required':
       'Sertipiko ti Panagtungpal iti Aglawlaw (if kasapulan)',
@@ -17304,7 +17304,7 @@ const translations = {
     'mpdo-land-use-reclassification': 'Daga Usaren Reclassification',
     'mpdo-latest-real-property-tax-receipt': 'Latest Buwis ti Kukua Resibo',
     'mpdo-legislative': 'Lehislatura',
-    'mpdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mpdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mpdo-location': 'Lokasion',
     'mpdo-locational-clearance': 'Locational Clearance',
     'mpdo-locational-clearance-is-required-before-building':
@@ -17315,7 +17315,7 @@ const translations = {
       'Opisina ti Panagplano ken Panagrang-ay ti Munisipalidad',
     'mpdo-office': 'Opisina',
     'mpdo-office-information': 'Impormasion ti Opisina',
-    'mpdo-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mpdo-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mpdo-ongoing': 'Agtultuloy',
     'mpdo-open-data-philippines': 'Open Data Philippines',
     'mpdo-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -17438,8 +17438,8 @@ const translations = {
     'mswdo-emergency-financial-assistance-for-various-needs':
       "Emergency na tulong pinansyal para iti iba't ibang pangangailangan",
     'mswdo-employment-facilitation-ef': 'Panagpasimple ti Trabaho (EF)',
-    'mswdo-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mswdo-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mswdo-enrollment-requirements': 'Dagiti Kasapulan iti Pagpapatala',
     'mswdo-environment': 'Aglawlaw',
     'mswdo-families-in-crisis-situations': 'Dagiti pamilya iti dagiti sitwasyon ti krisis',
@@ -17479,7 +17479,7 @@ const translations = {
     'mswdo-infrastructure': 'Imprastraktura',
     'mswdo-interest': 'Interes',
     'mswdo-legal-assistance': 'Tulong Legal',
-    'mswdo-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdo-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdo-livelihood': 'Kabuhayan',
     'mswdo-loan-amount': 'Halaga ti Pautang',
     'mswdo-location': 'Lokasion',
@@ -17489,7 +17489,7 @@ const translations = {
     'mswdo-medical-assistance': 'Tulong Medikal',
     'mswdo-microenterprise-development-md': 'Panagrang-ay ti Microenterprise (MD)',
     'mswdo-mswdo-head': 'MSWDO Puno',
-    'mswdo-mswdosolanogovph': 'mswdo@solano.gov.ph',
+    'mswdo-mswdomalolosgovph': 'mswdo@malolos.gov.ph',
     'mswdo-municipal-social-welfare-and-development-office':
       'Departamento ti Pakasaritaan ti Munisipalidad and Development Opisina',
     'mswdo-municipal-social-welfare-officer': 'Opisial ti Welfare Sosyal ti Munisipalidad',
@@ -17505,7 +17505,7 @@ const translations = {
     'mswdo-nutritious-snacks-and-meals-during-day-care-hours':
       'Masustansyang meryenda ken makan iti oras ti day care.',
     'mswdo-office-hours': 'Oras ti Opisina',
-    'mswdo-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mswdo-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mswdo-open-data-philippines': 'Open Data Philippines',
     'mswdo-ordinance-framework': 'Balangkas ti Ordinansa',
     'mswdo-parent-education-on-proper-nutrition-and-child':
@@ -17683,8 +17683,8 @@ const translations = {
     'mswdosvc-educational-assistance': 'Tulong Pang-edukasion',
     'mswdosvc-emergency-cases-are-given-priority':
       'Ti dagiti kaso ti emergency ay binibigyan ti prayoridad',
-    'mswdosvc-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'mswdosvc-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'mswdosvc-encoding-and-processing-of-pwd-id': 'Pag-encode ken panagproseso ti PWD ID',
     'mswdosvc-encoding-and-processing-of-senior-citizen-id':
       'Pag-encode ken panagproseso ti Senior Citizen ID',
@@ -17727,7 +17727,7 @@ const translations = {
       'Dagiti kangrunaan a tauhan na humahawak ti dagiti serbisio ti kagalingang panlipunan',
     'mswdosvc-legal-assistance-referral': 'Legal tulong referral',
     'mswdosvc-legislative': 'Lehislatura',
-    'mswdosvc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'mswdosvc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'mswdosvc-livelihood-assistance-programs': 'Livelihood tulong programs',
     'mswdosvc-location': 'Lokasion',
     'mswdosvc-medical-certificate-indicating-type-of-disability':
@@ -17737,8 +17737,8 @@ const translations = {
     'mswdosvc-medical-certificatehospital-bill-for-medical':
       'Medical Certificate/Hospital Bill (for medical tulong)',
     'mswdosvc-mswdo-head': 'MSWDO Puno',
-    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-solano':
-      'MSWDO Opisina, Maikadua a Kadsaaran, Munisipalidad, Solano, Nueva Vizcaya',
+    'mswdosvc-mswdo-office-2nd-floor-municipal-hall-malolos':
+      'MSWDO Opisina, Maikadua a Kadsaaran, Munisipalidad, Malolos, Bulacan',
     'mswdosvc-mswdo-services': 'Dagiti Serbisio ti MSWDO',
     'mswdosvc-municipal-hall-2nd-floor': 'Munisipal Hall, Maikadua a Kadsaaran',
     'mswdosvc-municipal-social-welfare-development-office':
@@ -17747,7 +17747,7 @@ const translations = {
     'mswdosvc-office-head-social-welfare-officer': 'Pinuno ti Opisina / Social Welfare Officer',
     'mswdosvc-office-information': 'Impormasion ti Opisina',
     'mswdosvc-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'mswdosvc-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'mswdosvc-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'mswdosvc-open-data-philippines': 'Open Data Philippines',
     'mswdosvc-ordinance-framework': 'Balangkas ti Ordinansa',
     'mswdosvc-osca-focal-person': 'OSCA Focal Tao',
@@ -17763,7 +17763,7 @@ const translations = {
     'mswdosvc-processing-information': 'Impormasion ti Panagproseso',
     'mswdosvc-programs-and-services-for-womens-welfare-and':
       'Dagiti programa ken serbisio para iti kagalingan ken proteksyon ti dagiti kababaihan',
-    'mswdosvc-proof-of-residence-in-solano': 'Patunay ti paninirahan iti Solano',
+    'mswdosvc-proof-of-residence-in-malolos': 'Patunay ti paninirahan iti Malolos',
     'mswdosvc-provision-of-immediate-interventionassistance':
       'Panagipaay ti agarang interbensyon/tulong',
     'mswdosvc-public-safety': 'Kaligtasan Pampubliko',
@@ -17859,21 +17859,21 @@ const translations = {
     'news-cmci-dti-portal': 'CMCI DTI Portal',
     'news-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'news-education': 'Edukasion',
-    'news-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'news-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'news-environment': 'Aglawlaw',
-    'news-fetching-news-and-updates-from-solano':
-      'Kinukuha ti dagiti damag ken update manipud iti Solano.',
+    'news-fetching-news-and-updates-from-malolos':
+      'Kinukuha ti dagiti damag ken update manipud iti Malolos.',
     'news-freedom-of-information': 'Wayawaya ti Impormasion',
     'news-health': 'Salun-at',
     'news-home': 'Pagtaengan',
     'news-infrastructure': 'Imprastraktura',
-    'news-lgu-solano-facebook': 'LGU Solano Facebook',
+    'news-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'news-loading': 'Agkarkarga',
     'news-loading-news': 'Naglo-load ti damag...',
     'news-news': 'Damag',
     'news-news-updates': 'Damag ken dagiti Update',
-    'news-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'news-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'news-open-data-philippines': 'Open Data Philippines',
     'news-ordinance-framework': 'Balangkas ti Ordinansa',
     'news-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -17886,7 +17886,7 @@ const translations = {
     'news-skip-to-main-content': 'Lumaktaw iti kangrunaan a linaon',
     'news-social-services': 'Serbisio Sosyal',
     'news-stay-informed-about-the-latest-happenings-in':
-      'Agtalinaed a may kaalaman tungkol iti dagiti pinakabagong pangyayari iti Solano',
+      'Agtalinaed a may kaalaman tungkol iti dagiti pinakabagong pangyayari iti Malolos',
     'news-tax-payments': 'Panagbayad ti Buwis',
     'news-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'news-volunteer-with-us': 'Ag-volunteer kadakami',
@@ -17900,8 +17900,8 @@ const translations = {
     'officials-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'officials-education': 'Edukasion',
     'officials-elected-officials': 'Dagiti Nahalal nga Opisial',
-    'officials-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'officials-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'officials-environment': 'Aglawlaw',
     'officials-executive-branch': 'Ehekutibo a Sanga',
     'officials-freedom-of-information': 'Wayawaya ti Impormasion',
@@ -17919,13 +17919,13 @@ const translations = {
     'officials-hon-thomas-dave-c-santos': 'Hon. Thomas Dave C. Santos',
     'officials-hon-walter-d-savedra-sr': 'Hon. Walter D. Savedra, Sr.',
     'officials-infrastructure': 'Imprastraktura',
-    'officials-lgu-solano-facebook': 'LGU Solano Facebook',
-    'officials-mayorsolanogovph': 'mayor@solano.gov.ph',
+    'officials-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'officials-mayormalolosgovph': 'mayor@malolos.gov.ph',
     'officials-meet-the-leaders-serving-the-municipality-of':
-      'Meet the leaders serving the Munisipalidad of Solano',
+      'Meet the leaders serving the Munisipalidad of Malolos',
     'officials-municipal-mayor': 'Mayor ti Munisipalidad',
     'officials-municipal-vice-mayor': 'Bise Mayor ti Munisipalidad',
-    'officials-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'officials-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'officials-open-data-philippines': 'Open Data Philippines',
     'officials-ordinance-framework': 'Balangkas ti Ordinansa',
     'officials-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -17941,10 +17941,10 @@ const translations = {
     'officials-social-services': 'Serbisio Sosyal',
     'officials-tax-payments': 'Panagbayad ti Buwis',
     'officials-terms-of-use': 'Dagiti Kondision ti Panagusar',
-    'officials-vicemayorsolanogovph': 'vicemayor@solano.gov.ph',
+    'officials-vicemayormalolosgovph': 'vicemayor@malolos.gov.ph',
     'officials-volunteer-with-us': 'Ag-volunteer kadakami',
-    'offline-emergency-hotlines-solano-nueva-vizcaya':
-      'Dagiti Emergency Hotline - Solano, Nueva Vizcaya',
+    'offline-emergency-hotlines-malolos-bulacan':
+      'Dagiti Emergency Hotline - Malolos, Bulacan',
     'offline-fire-bfp': 'Apuy (BFP)',
     'offline-municipal-hall': 'Munisipio',
     'offline-police-pnp': 'Polis (PNP)',
@@ -17962,16 +17962,16 @@ const translations = {
     'ord-cmci-dti-portal': 'CMCI DTI Portal',
     'ord-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'ord-education': 'Edukasion',
-    'ord-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'ord-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'ord-environment': 'Aglawlaw',
     'ord-freedom-of-information': 'Wayawaya ti Impormasion',
     'ord-health': 'Salun-at',
     'ord-home': 'Pagtaengan',
     'ord-infrastructure': 'Imprastraktura',
     'ord-legislative': 'Lehislatura',
-    'ord-lgu-solano-facebook': 'LGU Solano Facebook',
-    'ord-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'ord-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'ord-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'ord-open-data-philippines': 'Open Data Philippines',
     'ord-ordinance-framework': 'Balangkas ti Ordinansa',
     'ord-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -17993,10 +17993,10 @@ const translations = {
     'privacy-agriculture': 'Agrikultura',
     'privacy-analytics-cookies': 'Dagiti Analytics Cookie:',
     'privacy-analytics-data': 'Datos ti Analytics:',
-    'privacy-bettersolanoorg-is-a-general-audience-website':
-      'Ti BetterSolano.org ay isang website para iti pangkalahatang madla na nagbibigay ti civic na impormasion. Saan namin sinasadyang kinokolekta ti personal na impormasion manipud iti dagiti bata under 18 years ti age nang walang parental pahintulot.',
-    'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasion. This Privacy Patakaran explains how we kolektaen, usaren, ipalgak, and safeguard your impormasion when you bisitaen our website.',
+    'privacy-bettermalolosorg-is-a-general-audience-website':
+      'Ti BetterMalolos.org ay isang website para iti pangkalahatang madla na nagbibigay ti civic na impormasion. Saan namin sinasadyang kinokolekta ti personal na impormasion manipud iti dagiti bata under 18 years ti age nang walang parental pahintulot.',
+    'privacy-bettermalolosorg-we-us-or-our-is-committed-to':
+      'BetterMalolos.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasion. This Privacy Patakaran explains how we kolektaen, usaren, ipalgak, and safeguard your impormasion when you bisitaen our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Uri ken bersyon ti browser',
     'privacy-business': 'Negosio',
@@ -18027,8 +18027,8 @@ const translations = {
     'privacy-education': 'Edukasion',
     'privacy-email-address-when-you-contact-us-or-submit':
       'Ag-email address (when you kontaken us or isumite feedback)',
-    'privacy-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'privacy-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'privacy-environment': 'Aglawlaw',
     'privacy-essential-cookies': 'Dagiti Mahahalagang Cookie:',
     'privacy-exercising-your-rights': 'Paggamit ti Iyong dagiti Karapatan',
@@ -18061,7 +18061,7 @@ const translations = {
     'privacy-legal-requirements': 'Legal Dagiti kasapulan:',
     'privacy-legislative': 'Lehislatura',
     'privacy-legitimate-interest': 'Legitimate Interes:',
-    'privacy-lgu-solano-facebook': 'LGU Solano Facebook',
+    'privacy-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'privacy-managing-cookies': 'Panagtaripato ti dagiti Cookie',
     'privacy-material-changes-may-be-announced-on-our-website':
       'Ti dagiti mahahalagang pagbabago ay maaaring ianunsyo iti aming website',
@@ -18070,7 +18070,7 @@ const translations = {
     'privacy-national-privacy-commission': 'Nailian Privacy Komisyon',
     'privacy-not': 'saan',
     'privacy-number-of-visitors-and-page-views': 'Bilang ti dagiti bisita ken page view',
-    'privacy-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'privacy-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'privacy-open-data-philippines': 'Open Data Philippines',
     'privacy-ordinance-framework': 'Balangkas ti Ordinansa',
     'privacy-our-website-may-contain-links-to-external':
@@ -18132,7 +18132,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ti Data Privacy Act ti 2012, ikaw ay maaari ti following dagiti karapatan regarding iyong personal na impormasion:',
     'privacy-volunteer-with-us': 'Ag-volunteer kadakami',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektaen minimal impormasion necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -18214,8 +18214,8 @@ const translations = {
     'propdec-education': 'Edukasion',
     'propdec-effectivity-of-assessment': 'Effectivity of Panagpatasa',
     'propdec-effectivity-quarter-and-year': 'Quarter ken Tawen ti Bisa',
-    'propdec-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'propdec-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'propdec-environment': 'Aglawlaw',
     'propdec-estimated-economic-life': 'Tinatayang Buhay Pang-ekonomiya',
     'propdec-for-building-declaration': 'For Pasdek Declaration',
@@ -18225,7 +18225,7 @@ const translations = {
     'propdec-freedom-of-information': 'Wayawaya ti Impormasion',
     'propdec-full-name-of-owner': 'Naan-anay Name of Akinkukua',
     'propdec-government': 'Gobierno',
-    'propdec-ground-floor-municipal-hall-solano': 'Umuna a Kadsaaran, Munisipalidad, Solano',
+    'propdec-ground-floor-municipal-hall-malolos': 'Umuna a Kadsaaran, Munisipalidad, Malolos',
     'propdec-handles-property-assessment-tax-declaration-and':
       'Handles kukua panagpatasa, buwis declaration, and real kukua dagiti rekord.',
     'propdec-health': 'Salun-at',
@@ -18241,7 +18241,7 @@ const translations = {
     'propdec-land-declaration': 'Deklarasyon ti Daga',
     'propdec-land-tax-declaration': 'Daga Deklarasion ti Buwis',
     'propdec-legislative': 'Lehislatura',
-    'propdec-lgu-solano-facebook': 'LGU Solano Facebook',
+    'propdec-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'propdec-list-of-machineries-with-specifications':
       'Listahan ti dagiti Makinarya na may Detalye',
     'propdec-location': 'Lokasion',
@@ -18255,7 +18255,7 @@ const translations = {
     'propdec-occupancy-permit': 'Permit ti Panagnaed',
     'propdec-octtctcloa-no': 'OCT/TCT/CLOA No.',
     'propdec-office': 'Opisina',
-    'propdec-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'propdec-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'propdec-open-data-philippines': 'Open Data Philippines',
     'propdec-ordinance-framework': 'Balangkas ti Ordinansa',
     'propdec-owner-information': 'Impormasion ti Akinkukua',
@@ -18284,7 +18284,7 @@ const translations = {
     'propdec-tax-clearance-certificate': 'Tax Clearance Sertipiko',
     'propdec-tax-declaration': 'Deklarasion ti Buwis',
     'propdec-tax-declaration-form-for-real-property-assessment':
-      'Form ti tax declaration para iti panagpatasa ti tunay na kukua iti Solano, Nueva Vizcaya',
+      'Form ti tax declaration para iti panagpatasa ti tunay na kukua iti Malolos, Bulacan',
     'propdec-tax-payments': 'Panagbayad ti Buwis',
     'propdec-tax-payments-2': 'Buwis ken Panagbayad',
     'propdec-taxableexempt-status': 'Katayuang Buwisable/Exempt',
@@ -18305,16 +18305,16 @@ const translations = {
     'reso-cmci-dti-portal': 'CMCI DTI Portal',
     'reso-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'reso-education': 'Edukasion',
-    'reso-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'reso-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'reso-environment': 'Aglawlaw',
     'reso-freedom-of-information': 'Wayawaya ti Impormasion',
     'reso-health': 'Salun-at',
     'reso-home': 'Pagtaengan',
     'reso-infrastructure': 'Imprastraktura',
     'reso-legislative': 'Lehislatura',
-    'reso-lgu-solano-facebook': 'LGU Solano Facebook',
-    'reso-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'reso-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'reso-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'reso-open-data-philippines': 'Open Data Philippines',
     'reso-ordinance-framework': 'Balangkas ti Ordinansa',
     'reso-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -18332,16 +18332,16 @@ const translations = {
     'reso-volunteer-with-us': 'Ag-volunteer kadakami',
     'safety-accessibility': 'Aksesibilidad',
     'safety-agriculture': 'Agrikultura',
-    'safety-bfp-solano': 'BFP Solano',
-    'safety-bfp-solano-0936-062-0305': 'BFP Solano 0936 062 0305',
+    'safety-bfp-malolos': 'BFP Malolos',
+    'safety-bfp-malolos-0936-062-0305': 'BFP Malolos 0936 062 0305',
     'safety-blgf-portal': 'BLGF Portal',
     'safety-business': 'Negosio',
     'safety-certificates': 'Dagiti Sertipiko',
     'safety-citizens-charter': "Citizen's Charter",
     'safety-cmci-dti-portal': 'CMCI DTI Portal',
     'safety-contribute-code-with-us': 'Ag-ambag ti code kadakami',
-    'safety-dilg-solano': 'DILG Solano',
-    'safety-dilg-solano-0906-188-0868': 'DILG Solano 0906 188 0868',
+    'safety-dilg-malolos': 'DILG Malolos',
+    'safety-dilg-malolos-0906-188-0868': 'DILG Malolos 0906 188 0868',
     'safety-disaster-assistance': 'Tulong iti Didigra',
     'safety-disaster-preparedness': 'Panagisagana iti Kalamidad',
     'safety-education': 'Edukasion',
@@ -18349,8 +18349,8 @@ const translations = {
     'safety-emergency-hotlines': 'Dagiti Emergency Hotline',
     'safety-emergency-response-and-disaster-preparedness':
       'Dagiti programa ti pagtugon iti emergency ken panagisagana iti didigra.',
-    'safety-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'safety-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'safety-environment': 'Aglawlaw',
     'safety-fee': 'Bayad:',
     'safety-for-emergencies-and-inquiries-contact-these':
@@ -18363,31 +18363,31 @@ const translations = {
     'safety-infrastructure': 'Imprastraktura',
     'safety-kabalikat-civicom': 'KABALIKAT Civicom',
     'safety-kabalikat-civicom-0905-447-1061': 'KABALIKAT Civicom 0905 447 1061',
-    'safety-lgu-solano-facebook': 'LGU Solano Facebook',
-    'safety-magro-solano': 'MAGRO Solano',
-    'safety-magro-solano-0916-174-4979': 'MAGRO Solano 0916 174 4979',
+    'safety-lgu-malolos-facebook': 'LGU Malolos Facebook',
+    'safety-magro-malolos': 'MAGRO Malolos',
+    'safety-magro-malolos-0916-174-4979': 'MAGRO Malolos 0916 174 4979',
     'safety-mayors-office': 'Opisina ti Mayor',
     'safety-mayors-office-0917-595-1931': 'Opisina ti Mayor 0917 595 1931',
-    'safety-mdrrmo-solano': 'MDRRMO Solano',
-    'safety-mdrrmo-solano-0926-383-3744': 'MDRRMO Solano 0926 383 3744',
+    'safety-mdrrmo-malolos': 'MDRRMO Malolos',
+    'safety-mdrrmo-malolos-0926-383-3744': 'MDRRMO Malolos 0926 383 3744',
     'safety-medical': 'Medikal',
     'safety-medical-emergency-hotlines': 'Dagiti Medikal na Emergency Hotline',
     'safety-mmg-hospital': 'MMG Hospital',
     'safety-mmg-hospital-0947-498-1746': 'MMG Hospital 0947 498 1746',
-    'safety-mswdo-solano': 'MSWDO Solano',
-    'safety-mswdo-solano-0916-284-0885': 'MSWDO Solano 0916 284 0885',
-    'safety-nuvelco-solano': 'NUVELCO Solano',
-    'safety-nuvelco-solano-0935-812-1081': 'NUVELCO Solano 0935 812 1081',
+    'safety-mswdo-malolos': 'MSWDO Malolos',
+    'safety-mswdo-malolos-0916-284-0885': 'MSWDO Malolos 0916 284 0885',
+    'safety-nuvelco-malolos': 'NUVELCO Malolos',
+    'safety-nuvelco-malolos-0935-812-1081': 'NUVELCO Malolos 0935 812 1081',
     'safety-office': 'Opisina:',
-    'safety-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'safety-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'safety-open-data-philippines': 'Open Data Philippines',
     'safety-ordinance-framework': 'Balangkas ti Ordinansa',
     'safety-pdrrmo-n-vizcaya': 'PDRRMO N. Vizcaya',
     'safety-pdrrmo-n-vizcaya-0917-122-7150': 'PDRRMO N. Vizcaya 0917 122 7150',
     'safety-plt-hospital': 'PLT Hospital',
     'safety-plt-hospital-0920-833-5766': 'PLT Hospital 0920 833 5766',
-    'safety-pnp-solano': 'PNP Solano',
-    'safety-pnp-solano-0927-400-8033': 'PNP Solano 0927 400 8033',
+    'safety-pnp-malolos': 'PNP Malolos',
+    'safety-pnp-malolos-0927-400-8033': 'PNP Malolos 0927 400 8033',
     'safety-privacy-policy': 'Pagannurotan ti Pagkapribado',
     'safety-public-safety': 'Kaligtasan Pampubliko',
     'safety-public-safety-services': 'Publiko Safety Dagiti serbisio',
@@ -18399,8 +18399,8 @@ const translations = {
     'safety-relief-goods-and-evacuation-support': 'Dagiti relief goods ken suporta iti ebakwasyon',
     'safety-resolution-framework': 'Balangkas ti Resolusion',
     'safety-resources': 'Dagiti Rekurso',
-    'safety-rhu-solano': 'RHU Solano',
-    'safety-rhu-solano-0967-910-3054': 'RHU Solano 0967 910 3054',
+    'safety-rhu-malolos': 'RHU Malolos',
+    'safety-rhu-malolos-0967-910-3054': 'RHU Malolos 0967 910 3054',
     'safety-salubris-hospital': 'Salubris Hospital',
     'safety-salubris-hospital-0917-108-0452': 'Salubris Hospital 0917 108 0452',
     'safety-sangguniang-bayan': 'Sangguniang Bayan',
@@ -18435,8 +18435,8 @@ const translations = {
     'sitemap-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'sitemap-education': 'Edukasion',
     'sitemap-elected-officials': 'Dagiti Nahalal nga Opisial',
-    'sitemap-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'sitemap-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'sitemap-engineering-office': 'Opisina ti Inhinyero',
     'sitemap-environment': 'Aglawlaw',
     'sitemap-external-resources': 'Dagiti Panlabas na Mapagkukunan',
@@ -18453,17 +18453,17 @@ const translations = {
     'sitemap-infrastructure': 'Imprastraktura',
     'sitemap-legislative': 'Lehislatura',
     'sitemap-legislative-documents': 'Dagiti Dokumentong Lehislatibo',
-    'sitemap-lgu-solano-facebook': 'LGU Solano Facebook',
+    'sitemap-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'sitemap-local-civil-registrar': 'Lokal a Civil Registrar',
     'sitemap-main-navigation': 'Kangrunaan a Nabigasyon',
     'sitemap-municipal-offices': 'Dagiti Opisina ti Munisipalidad',
-    'sitemap-navigate-all-pages-and-services-of-better-solano':
-      'Navigate all pages and dagiti serbisio of Better Solano',
+    'sitemap-navigate-all-pages-and-services-of-better-malolos':
+      'Navigate all pages and dagiti serbisio of Better Malolos',
     'sitemap-navigation': 'Nabigasyon',
     'sitemap-new-business-application': 'Baro Business Aplikasion',
     'sitemap-news': 'Damag',
-    'sitemap-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
-    'sitemap-official-solano-website': 'Opisial Solano Website',
+    'sitemap-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
+    'sitemap-official-malolos-website': 'Opisial Malolos Website',
     'sitemap-online-payment-order': 'Online Panagbayad Order',
     'sitemap-online-services': 'Dagiti Online na Serbisio',
     'sitemap-open-data-philippines': 'Open Data Philippines',
@@ -18545,8 +18545,8 @@ const translations = {
     'slaughter-duration': 'Kaatiddog',
     'slaughter-economic-enterprise-development-office': 'Economic Enterprise & Development Opisina',
     'slaughter-education': 'Edukasion',
-    'slaughter-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'slaughter-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'slaughter-environment': 'Aglawlaw',
     'slaughter-facility-maintenance': 'Panagtaginayon ti Pasilidad',
     'slaughter-fee': 'Bayad',
@@ -18569,7 +18569,7 @@ const translations = {
     'slaughter-large': 'Dakkel',
     'slaughter-large-cattle-registration-certificate': 'Dakkel Cattle Registration Sertipiko',
     'slaughter-legislative': 'Lehislatura',
-    'slaughter-lgu-solano-facebook': 'LGU Solano Facebook',
+    'slaughter-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'slaughter-location': 'Lokasion',
     'slaughter-meat-inspection-certificate-is-required-for-meat':
       'Meat Inspeksion Sertipiko is kasapulan for meat transport',
@@ -18580,7 +18580,7 @@ const translations = {
     'slaughter-office-head': 'Pinuno ti Opisina',
     'slaughter-office-information': 'Impormasion ti Opisina',
     'slaughter-office-personnel': 'Dagiti Tauhan ti Opisina',
-    'slaughter-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'slaughter-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'slaughter-open-data-philippines': 'Open Data Philippines',
     'slaughter-operations-management': 'Panagtaripato ti Operasyon',
     'slaughter-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -18607,8 +18607,8 @@ const translations = {
     'slaughter-see-fee-schedule': 'See bayad schedule',
     'slaughter-seedo-head': 'SEEDO Puno',
     'slaughter-seedo-slaughterhouse': 'SEEDO - Pagpartian',
-    'slaughter-seedo-slaughterhouse-solano-nueva-vizcaya':
-      'SEEDO Pagpartian, Solano, Nueva Vizcaya',
+    'slaughter-seedo-slaughterhouse-malolos-bulacan':
+      'SEEDO Pagpartian, Malolos, Bulacan',
     'slaughter-select-a-service-to-view-the-detailed-process':
       'Select a serbisio to kitaen the detailed iproseso, dagiti kasapulan, and dagiti bayad',
     'slaughter-services': 'Dagiti Serbisio',
@@ -18658,17 +18658,17 @@ const translations = {
     'social-cmci-dti-portal': 'CMCI DTI Portal',
     'social-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'social-education': 'Edukasion',
-    'social-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'social-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'social-environment': 'Aglawlaw',
     'social-fee': 'Bayad:',
     'social-freedom-of-information': 'Wayawaya ti Impormasion',
     'social-health': 'Salun-at',
     'social-home': 'Pagtaengan',
     'social-infrastructure': 'Imprastraktura',
-    'social-lgu-solano-facebook': 'LGU Solano Facebook',
+    'social-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'social-mswdo-services': 'Dagiti Serbisio ti MSWDO',
-    'social-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'social-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'social-open-data-philippines': 'Open Data Philippines',
     'social-ordinance-framework': 'Balangkas ti Ordinansa',
     'social-privacy-policy': 'Pagannurotan ti Pagkapribado',
@@ -18725,8 +18725,8 @@ const translations = {
     'stats-economic-sectors': 'Dagiti Sektor ti Ekonomiya',
     'stats-economy': 'Ekonomiya',
     'stats-education': 'Edukasion',
-    'stats-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'stats-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'stats-environment': 'Aglawlaw',
     'stats-finance': 'Pananalapi',
     'stats-financial-standing-for-fiscal-year-2023':
@@ -18752,11 +18752,11 @@ const translations = {
     'stats-key-indicators-trend-20162024':
       'Trend ti dagiti Kangrunaan a Tagapagpahiwatig (2016-2024)',
     'stats-lactawan': 'Lactawan',
-    'stats-lgu-solano-facebook': 'LGU Solano Facebook',
+    'stats-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'stats-local-4055': 'Lokal 40.55%',
     'stats-municipal-data': 'Datos ti Munisipalidad',
     'stats-municipal-income': 'Kita ti Munisipalidad',
-    'stats-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'stats-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'stats-ordinance-framework': 'Balangkas ti Ordinansa',
     'stats-osmea': 'Osmeña',
     'stats-overview': 'Pangkabuklan',
@@ -18786,7 +18786,7 @@ const translations = {
     'stats-sitemap': 'Mapa ti Site',
     'stats-skip-to-main-content': 'Lumaktaw iti kangrunaan a linaon',
     'stats-social-services': 'Serbisio Sosyal',
-    'stats-solano-competitive-index': 'Competitive Index ti Solano',
+    'stats-malolos-competitive-index': 'Competitive Index ti Malolos',
     'stats-tax-payments': 'Panagbayad ti Buwis',
     'stats-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'stats-trade-amp-commerce': 'Kalakalan ken Komersyo',
@@ -18806,8 +18806,8 @@ const translations = {
     'svc-cmci-dti-portal': 'CMCI DTI Portal',
     'svc-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'svc-education': 'Edukasion',
-    'svc-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'svc-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'svc-environment': 'Aglawlaw',
     'svc-freedom-of-information': 'Wayawaya ti Impormasion',
     'svc-getting-married': 'Pagpapakasal',
@@ -18816,9 +18816,9 @@ const translations = {
     'svc-health': 'Salun-at',
     'svc-home': 'Pagtaengan',
     'svc-infrastructure': 'Imprastraktura',
-    'svc-lgu-solano-facebook': 'LGU Solano Facebook',
+    'svc-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'svc-need-financial-help': 'Kasapulan Financial Tulong',
-    'svc-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'svc-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'svc-open-data-philippines': 'Open Data Philippines',
     'svc-ordinance-framework': 'Balangkas ti Ordinansa',
     'svc-person-with-disability': 'Tao nga Addaan Kapansanan',
@@ -18846,21 +18846,21 @@ const translations = {
     'tax-cmci-dti-portal': 'CMCI DTI Portal',
     'tax-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'tax-education': 'Edukasion',
-    'tax-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'tax-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'tax-environment': 'Aglawlaw',
     'tax-freedom-of-information': 'Wayawaya ti Impormasion',
     'tax-health': 'Salun-at',
     'tax-home': 'Pagtaengan',
     'tax-infrastructure': 'Imprastraktura',
-    'tax-lgu-solano-facebook': 'LGU Solano Facebook',
+    'tax-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'tax-municipal-accounting-office': 'Opisina ti Accounting ti Munisipalidad',
     'tax-municipal-assessors-office': 'Opisina ti Assessor ti Munisipalidad',
     'tax-municipal-budget-office': 'Opisina ti Badyet ti Munisipalidad',
     'tax-municipal-treasurers-office': 'Opisina ti Tesorero ti Munisipalidad',
     'tax-obligation-requests-barangay-budget-review-and':
       'Obligation dagiti kiddaw, barangay budget repasuen, and SEF budget preparation',
-    'tax-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'tax-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'tax-online-payment-order': 'Online Panagbayad Order',
     'tax-open-data-philippines': 'Open Data Philippines',
     'tax-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -18901,7 +18901,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'Ti amin nga impormasion iti daytoy a website ket maipaay a \\\\\\"AS IS\\\\\\" nga awan ti warranty ti aniaman a kita, hayag man wenno ipinahiwatig. Karaman ditoy ngem saan a limitado iti:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Bagaman naglalayong panatilihing accessible iti functional ti website ti dagiti boluntaryo, Saan magagarantiya ti BetterSolano.org na ti website ay magiging:',
+      'Bagaman naglalayong panatilihing accessible iti functional ti website ti dagiti boluntaryo, Saan magagarantiya ti BetterMalolos.org na ti website ay magiging:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or sabali harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -18911,16 +18911,16 @@ const translations = {
     'terms-any-loss-corruption-or-disclosure-of-data-or':
       'Any loss, corruption, or disclosure of datos or impormasion',
     'terms-as-a-volunteerrun-initiative-this-website-does':
-      'Bilang isang inisyatibang pinapatakbo ti dagiti boluntaryo, ti website na ito ay saan pumapalit iti dagiti opisyal na channel ti pamahalaan. Residents iti stakeholders ay encouraged iti conduct kanilang own independent research iti beripikasyon ti lahat ti impormasion found here iti iti consult opisyal na LGU Solano dagiti opisina iti government dagiti ahensya kapag making important decisions.',
+      'Bilang isang inisyatibang pinapatakbo ti dagiti boluntaryo, ti website na ito ay saan pumapalit iti dagiti opisyal na channel ti pamahalaan. Residents iti stakeholders ay encouraged iti conduct kanilang own independent research iti beripikasyon ti lahat ti impormasion found here iti iti consult opisyal na LGU Malolos dagiti opisina iti government dagiti ahensya kapag making important decisions.',
     'terms-as-is-disclaimer':
       '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"As Is\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Magun-od or magun-od at all times',
-    'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'Ti BetterSolano.org ay isang civic platform na nakatuon iti panagipaay-kapangyarihan iti dagiti tao ti Solano iti pamamagitan ti panagipaay ti transparent na access iti ti dagiti serbisio, dagiti programa, iti pampublikong funds ti LGU Solano.',
-    'terms-bettersolanoorg-provides-public-domain':
-      'Ti BetterSolano.org ay nagbibigay ti impormasion iti pampublikong domain upang suportahan ti civic engagement, transparency, iti maaari kaalamang pakikilahok iti lokal na governance.',
-    'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'Pinahahalagahan ti BetterSolano.org ti katumpakan, kaligtasan ti publiko, iti paggalang iti dagiti karapatan. Sa kabila ti dagiti pagsisikap na maaari mabuting layunin, ti ilang nilalaman ay maaaringcome outdated, incomplete, wenno raise legitimate dagiti alalahanin.',
+    'terms-bettermalolosorg-is-a-civic-platform-dedicated-to':
+      'Ti BetterMalolos.org ay isang civic platform na nakatuon iti panagipaay-kapangyarihan iti dagiti tao ti Malolos iti pamamagitan ti panagipaay ti transparent na access iti ti dagiti serbisio, dagiti programa, iti pampublikong funds ti LGU Malolos.',
+    'terms-bettermalolosorg-provides-public-domain':
+      'Ti BetterMalolos.org ay nagbibigay ti impormasion iti pampublikong domain upang suportahan ti civic engagement, transparency, iti maaari kaalamang pakikilahok iti lokal na governance.',
+    'terms-bettermalolosorg-values-accuracy-public-safety-and':
+      'Pinahahalagahan ti BetterMalolos.org ti katumpakan, kaligtasan ti publiko, iti paggalang iti dagiti karapatan. Sa kabila ti dagiti pagsisikap na maaari mabuting layunin, ti ilang nilalaman ay maaaringcome outdated, incomplete, wenno raise legitimate dagiti alalahanin.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Negosio',
     'terms-by-accessing-and-using-this-website-you':
@@ -18957,8 +18957,8 @@ const translations = {
     'terms-editorial-decisions-about-content-rest-with-the':
       'Editorial decisions about content rest with the website team, guided by publiko interes and civic responsibility.',
     'terms-education': 'Edukasion',
-    'terms-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'terms-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'terms-environment': 'Aglawlaw',
     'terms-errorfree-or-uninterrupted': 'Awan ti error wenno walang pagkaantala',
     'terms-external-references': 'Dagiti Panlabas na Sanggunian',
@@ -18976,7 +18976,7 @@ const translations = {
       'Ganap na tugma iti lahat ti device, browser, wenno assistive technology',
     'terms-governing-law': 'Mangituray a Linteg',
     'terms-government': 'Gobierno',
-    'terms-guidelines-for-using-bettersolanoorg': 'Dagiti giya for using BetterSolano.org',
+    'terms-guidelines-for-using-bettermalolosorg': 'Dagiti giya for using BetterMalolos.org',
     'terms-health': 'Salun-at',
     'terms-home': 'Pagtaengan',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -18998,13 +18998,13 @@ const translations = {
     'terms-legislative': 'Lehislatura',
     'terms-legitimate-concerns-will-be-reviewed-in-good':
       'Legitimate concerns will be reviewed in nasayaat faith by volunteers.',
-    'terms-lgu-solano-facebook': 'LGU Solano Facebook',
+    'terms-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'terms-limitation-of-liability': 'Limitasion ti Responsabilidad',
     'terms-modifications': 'Dagiti Pagbabago',
     'terms-no-professional-advice': 'Awan ti Propesyonal na Payo',
     'terms-noninfringement-of-intellectual-property-rights':
       'Non-infringement of intellectual kukua rights',
-    'terms-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'terms-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'terms-open-data-philippines': 'Open Data Philippines',
     'terms-ordinance-framework': 'Balangkas ti Ordinansa',
     'terms-our-response-process': 'Our Response Iproseso',
@@ -19014,7 +19014,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Publiko Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Publiko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Publiko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterMalolos.org and LGU Malolos is encouraged as a civic courtesy.',
     'terms-public-safety': 'Kaligtasan Pampubliko',
     'terms-quick-links': 'Dagiti Napartak a Silpo',
     'terms-resolution-framework': 'Balangkas ti Resolusion',
@@ -19072,12 +19072,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasion directly manipud iti original iti opisyal na sources',
     'terms-volunteer-with-us': 'Ag-volunteer kadakami',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettermalolosorg': 'volunteer@bettermalolos.org',
     'terms-warranties-of-merchantability': 'Dagiti garantiya ti kakayahang ibenta',
     'terms-website-availability': 'Pannakagun-od ti Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly iraman:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'Nupay ti dagiti boluntaryo ay nagsusumikap na pangalagaan ti BetterSolano.org manipud iti dagiti online na banta ken panatilihing tumpak ti impormasion, walang sistema ti maaaring garantiyahan na perpektong ligtas, walang error, wenno ganap na napapanahon iti lahat ti oras.',
+      'Nupay ti dagiti boluntaryo ay nagsusumikap na pangalagaan ti BetterMalolos.org manipud iti dagiti online na banta ken panatilihing tumpak ti impormasion, walang sistema ti maaaring garantiyahan na perpektong ligtas, walang error, wenno ganap na napapanahon iti lahat ti oras.',
     'terms-you-are-strongly-encouraged-to': 'Lubos kang hinihikayat na:',
     'terms-your-contact-information-for-followup': 'Your kontaken impormasion for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':
@@ -19132,8 +19132,8 @@ const translations = {
     'treas-discount': 'Diskuento:',
     'treas-discountpenalty': 'Diskwento/Multa',
     'treas-education': 'Edukasion',
-    'treas-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'treas-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'treas-environment': 'Aglawlaw',
     'treas-fee': 'Bayad:',
     'treas-fee-collection': 'Koleksyon ti Bayad',
@@ -19142,8 +19142,8 @@ const translations = {
     'treas-free': 'Libre',
     'treas-freedom-of-information': 'Wayawaya ti Impormasion',
     'treas-government': 'Gobierno',
-    'treas-ground-floor-municipal-hall-solano-nueva-vizcaya':
-      'Umuna a Kadsaaran, Munisipalidad, Solano, Nueva Vizcaya',
+    'treas-ground-floor-municipal-hall-malolos-bulacan':
+      'Umuna a Kadsaaran, Munisipalidad, Malolos, Bulacan',
     'treas-health': 'Salun-at',
     'treas-home': 'Pagtaengan',
     'treas-hours': 'Oras',
@@ -19164,7 +19164,7 @@ const translations = {
       'Itago all opisial dagiti resibo for dagiti rekord',
     'treas-late-payment': 'Huling Panagbayad',
     'treas-legislative': 'Lehislatura',
-    'treas-lgu-solano-facebook': 'LGU Solano Facebook',
+    'treas-lgu-malolos-facebook': 'LGU Malolos Facebook',
     'treas-location': 'Lokasion',
     'treas-march-31': 'Marso 31',
     'treas-maximum-72-36-months': 'Pinakamataas na 72% (36 bulan)',
@@ -19175,7 +19175,7 @@ const translations = {
     'treas-no-discountpenalty': 'Awan ti diskwento/multa',
     'treas-office': 'Opisina',
     'treas-office-information': 'Impormasion ti Opisina',
-    'treas-official-lgu-solano-portal': 'Opisial a Portal ti LGU Solano',
+    'treas-official-lgu-malolos-portal': 'Opisial a Portal ti LGU Malolos',
     'treas-official-receipt': 'Opisial a Resibo',
     'treas-open-data-philippines': 'Open Data Philippines',
     'treas-ordinance-framework': 'Balangkas ti Ordinansa',
@@ -19215,7 +19215,7 @@ const translations = {
     'treas-tax-assessment-inquiry': 'Buwis Panagpatasa Panagsaludsod',
     'treas-tax-clearance': 'Tax Clearance',
     'treas-tax-collection-fee-payments-and-financial':
-      'Tax koleksyon, fee dagiti panagbayad, iti financial dagiti serbisio para iti Solano dagiti residente',
+      'Tax koleksyon, fee dagiti panagbayad, iti financial dagiti serbisio para iti Malolos dagiti residente',
     'treas-tax-declaration-assessment': 'Deklarasion ti Buwis / Panagpatasa',
     'treas-tax-payments': 'Panagbayad ti Buwis',
     'treas-tax-payments-2': 'Buwis ken Panagbayad',
@@ -19258,8 +19258,8 @@ const translations = {
     'tricycle-contact': 'Kontaken',
     'tricycle-contribute-code-with-us': 'Ag-ambag ti code kadakami',
     'tricycle-education': 'Edukasion',
-    'tricycle-empowering-the-people-of-solano-with-transparent':
-      'Panangted ti bileg kadagiti umili ti Solano nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Solano.',
+    'tricycle-empowering-the-people-of-malolos-with-transparent':
+      'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'tricycle-encoding-of-application': 'Encoding of Aplikasion',
     'tricycle-environment': 'Aglawlaw',
     'tricycle-franchise-steps': 'Dagiti Hakbang iti Prangkisa',
@@ -19279,7 +19279,7 @@ const translations = {
     'tricycle-inspection-of-tricycle-unit': 'Inspeksion of Tricycle Yunit',
     'tricycle-legislative': 'Lehislatura',
     'tricycle-mayors-approval': "Mayor's Panag-apruba",
-    'tricycle-municipal-hall-solano-nueva-vizcaya': 'Munisipalidad, Solano, Nueva Vizcaya',
+    'tricycle-municipal-hall-malolos-bulacan': 'Munisipalidad, Malolos, Bulacan',
     'tricycle-municipal-mayor-approves-the-application-form':
       'Mayor ti Munisipalidad approves the aplikasion form',
     'tricycle-municipal-treasurers-office-collects-the-fees':
@@ -19367,62 +19367,62 @@ const translations = {
     'tax-property': 'Buwis ti Kukua',
     'tax-property-desc': 'Tawenantawen a buwis ti daga ken dagiti pagpasayaat',
 
-    // Solano Quiz
-    'accessibility-solano-quiz': 'Solano Quiz',
-    'acct-solano-quiz': 'Solano Quiz',
-    'agri-solano-quiz': 'Solano Quiz',
-    'assessor-solano-quiz': 'Solano Quiz',
-    'birth-solano-quiz': 'Solano Quiz',
-    'biz-solano-quiz': 'Solano Quiz',
-    'bpls-solano-quiz': 'Solano Quiz',
-    'budget-solano-quiz': 'Solano Quiz',
-    'cert-solano-quiz': 'Solano Quiz',
-    'civil-solano-quiz': 'Solano Quiz',
-    'contact-solano-quiz': 'Solano Quiz',
-    'death-solano-quiz': 'Solano Quiz',
-    'edu-solano-quiz': 'Solano Quiz',
-    'eng-solano-quiz': 'Solano Quiz',
-    'env-solano-quiz': 'Solano Quiz',
-    'err403-solano-quiz': 'Solano Quiz',
-    'err404-solano-quiz': 'Solano Quiz',
-    'err500-solano-quiz': 'Solano Quiz',
-    'faq-solano-quiz': 'Solano Quiz',
-    'gensvc-solano-quiz': 'Solano Quiz',
-    'gov-solano-quiz': 'Solano Quiz',
-    'health-solano-quiz': 'Solano Quiz',
-    'home-solano-quiz': 'Solano Quiz',
-    'hr-solano-quiz': 'Solano Quiz',
-    'infra-solano-quiz': 'Solano Quiz',
-    'legis-solano-quiz': 'Solano Quiz',
-    'magri-solano-quiz': 'Solano Quiz',
-    'market-solano-quiz': 'Solano Quiz',
-    'marriage-solano-quiz': 'Solano Quiz',
-    'mbudget-solano-quiz': 'Solano Quiz',
-    'mcivil-solano-quiz': 'Solano Quiz',
-    'mgensvc-solano-quiz': 'Solano Quiz',
-    'mswdo-solano-quiz': 'Solano Quiz',
-    'mswdo-svc-solano-quiz': 'Solano Quiz',
-    'news-solano-quiz': 'Solano Quiz',
-    'officials-solano-quiz': 'Solano Quiz',
-    'ord-solano-quiz': 'Solano Quiz',
-    'plan-solano-quiz': 'Solano Quiz',
-    'privacy-solano-quiz': 'Solano Quiz',
-    'propdec-solano-quiz': 'Solano Quiz',
-    'reso-solano-quiz': 'Solano Quiz',
-    'safety-solano-quiz': 'Solano Quiz',
-    'sitemap-solano-quiz': 'Solano Quiz',
-    'slaughter-solano-quiz': 'Solano Quiz',
-    'social-solano-quiz': 'Solano Quiz',
-    'stats-solano-quiz': 'Solano Quiz',
-    'svc-solano-quiz': 'Solano Quiz',
-    'tax-solano-quiz': 'Solano Quiz',
-    'terms-solano-quiz': 'Solano Quiz',
-    'treas-solano-quiz': 'Solano Quiz',
-    'tricycle-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya':
-      'Kasano ti pannakaammom iti Solano, Nueva Vizcaya?',
+    // Malolos Quiz
+    'accessibility-malolos-quiz': 'Malolos Quiz',
+    'acct-malolos-quiz': 'Malolos Quiz',
+    'agri-malolos-quiz': 'Malolos Quiz',
+    'assessor-malolos-quiz': 'Malolos Quiz',
+    'birth-malolos-quiz': 'Malolos Quiz',
+    'biz-malolos-quiz': 'Malolos Quiz',
+    'bpls-malolos-quiz': 'Malolos Quiz',
+    'budget-malolos-quiz': 'Malolos Quiz',
+    'cert-malolos-quiz': 'Malolos Quiz',
+    'civil-malolos-quiz': 'Malolos Quiz',
+    'contact-malolos-quiz': 'Malolos Quiz',
+    'death-malolos-quiz': 'Malolos Quiz',
+    'edu-malolos-quiz': 'Malolos Quiz',
+    'eng-malolos-quiz': 'Malolos Quiz',
+    'env-malolos-quiz': 'Malolos Quiz',
+    'err403-malolos-quiz': 'Malolos Quiz',
+    'err404-malolos-quiz': 'Malolos Quiz',
+    'err500-malolos-quiz': 'Malolos Quiz',
+    'faq-malolos-quiz': 'Malolos Quiz',
+    'gensvc-malolos-quiz': 'Malolos Quiz',
+    'gov-malolos-quiz': 'Malolos Quiz',
+    'health-malolos-quiz': 'Malolos Quiz',
+    'home-malolos-quiz': 'Malolos Quiz',
+    'hr-malolos-quiz': 'Malolos Quiz',
+    'infra-malolos-quiz': 'Malolos Quiz',
+    'legis-malolos-quiz': 'Malolos Quiz',
+    'magri-malolos-quiz': 'Malolos Quiz',
+    'market-malolos-quiz': 'Malolos Quiz',
+    'marriage-malolos-quiz': 'Malolos Quiz',
+    'mbudget-malolos-quiz': 'Malolos Quiz',
+    'mcivil-malolos-quiz': 'Malolos Quiz',
+    'mgensvc-malolos-quiz': 'Malolos Quiz',
+    'mswdo-malolos-quiz': 'Malolos Quiz',
+    'mswdo-svc-malolos-quiz': 'Malolos Quiz',
+    'news-malolos-quiz': 'Malolos Quiz',
+    'officials-malolos-quiz': 'Malolos Quiz',
+    'ord-malolos-quiz': 'Malolos Quiz',
+    'plan-malolos-quiz': 'Malolos Quiz',
+    'privacy-malolos-quiz': 'Malolos Quiz',
+    'propdec-malolos-quiz': 'Malolos Quiz',
+    'reso-malolos-quiz': 'Malolos Quiz',
+    'safety-malolos-quiz': 'Malolos Quiz',
+    'sitemap-malolos-quiz': 'Malolos Quiz',
+    'slaughter-malolos-quiz': 'Malolos Quiz',
+    'social-malolos-quiz': 'Malolos Quiz',
+    'stats-malolos-quiz': 'Malolos Quiz',
+    'svc-malolos-quiz': 'Malolos Quiz',
+    'tax-malolos-quiz': 'Malolos Quiz',
+    'terms-malolos-quiz': 'Malolos Quiz',
+    'treas-malolos-quiz': 'Malolos Quiz',
+    'tricycle-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan':
+      'Kasano ti pannakaammom iti Malolos, Bulacan?',
     'home-evaluate-your-familiarity-with-the-municipalitys':
-      'Evaluaren ti pannakaammom iti tawid, kultural a pagbigbigan, ken heograpiko a kapatgan ti munisipalidad babaen ti maysa nga interactive a panagsubok ti pannakaammo a naidisinio tapno ipakita ti maysa kadagiti kalatakan a lokalidad ti Nueva Vizcaya.',
+      'Evaluaren ti pannakaammom iti tawid, kultural a pagbigbigan, ken heograpiko a kapatgan ti munisipalidad babaen ti maysa nga interactive a panagsubok ti pannakaammo a naidisinio tapno ipakita ti maysa kadagiti kalatakan a lokalidad ti Bulacan.',
     'home-take-the-quiz': 'Subokan ti Quiz',
   },
 };

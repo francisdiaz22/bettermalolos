@@ -1,5 +1,5 @@
 /**
- * Better Solano - Services Data Validator
+ * Better Malolos - Services Data Validator
  * Validates the structure and content of services.json
  */
 

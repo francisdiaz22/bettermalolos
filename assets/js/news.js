@@ -124,7 +124,7 @@
       grid.innerHTML =
         '<article class="news-card"><div class="news-card-body">' +
         '<h3 class="news-card-title">No updates yet</h3>' +
-        '<p class="news-card-desc">Check back soon for the latest news and advisories from Solano.</p>' +
+        '<p class="news-card-desc">Check back soon for the latest news and advisories from Malolos.</p>' +
         '</div></article>';
       return;
     }

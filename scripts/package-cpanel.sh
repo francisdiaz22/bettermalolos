@@ -1,5 +1,5 @@
 #!/bin/bash
-# BetterSolano — cPanel release packager
+# BetterMalolos — cPanel release packager
 #
 # Packages dist/ into a single archive whose contents sit at the archive ROOT,
 # so extracting it inside public_html/ drops the site straight into place with
@@ -26,7 +26,7 @@ done
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   BetterSolano — cPanel Release Package  ║"
+echo "║   BetterMalolos — cPanel Release Package  ║"
 echo "╚══════════════════════════════════════════╝"
 
 if [ "$RUN_BUILD" = true ]; then
@@ -42,7 +42,7 @@ fi
 
 VERSION=$(node -e "console.log(require('./version.json').version)")
 STAMP=$(date +%Y%m%d)
-ARCHIVE="bettersolano-v${VERSION}-cpanel-${STAMP}.zip"
+ARCHIVE="bettermalolos-v${VERSION}-cpanel-${STAMP}.zip"
 
 # ── 1. Scrub OS and editor droppings ─────────────────────────────────────────
 echo ""

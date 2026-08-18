@@ -1,7 +1,7 @@
 {
   "name": "bs-web",
   "version": "1.1.19",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "description": "BetterMalolos.org - Official Portal for LGU Malolos",
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "build": "bash build.sh",
@@ -23,8 +23,8 @@
     "package:only": "bash scripts/package-cpanel.sh"
   },
   "keywords": [
-    "solano",
-    "nueva-vizcaya",
+    "malolos",
+    "bulacan",
     "government",
     "lgu"
   ],

@@ -1,11 +1,11 @@
 /**
- * BetterSolano Service Worker
+ * BetterMalolos Service Worker
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
 var CACHE_VERSION = 'v3';
-var STATIC_CACHE = 'bettersolano-static-' + CACHE_VERSION;
-var RUNTIME_CACHE = 'bettersolano-runtime-' + CACHE_VERSION;
+var STATIC_CACHE = 'bettermalolos-static-' + CACHE_VERSION;
+var RUNTIME_CACHE = 'bettermalolos-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
 
 // Core shell: precached on install for instant offline load
@@ -19,8 +19,8 @@ var PRECACHE_URLS = [
   '/assets/js/main.js',
   '/assets/js/translations.js',
   '/assets/js/info-bar.js',
-  '/assets/images/logo/better-solano-logo.svg',
-  '/assets/images/logo/better-solano-logo-white.svg',
+  '/assets/images/logo/better-malolos-logo.svg',
+  '/assets/images/logo/better-malolos-logo-white.svg',
   '/assets/images/logo/favicon.svg',
   '/assets/images/logo/favicon.ico',
   '/manifest.webmanifest',
@@ -236,11 +236,11 @@ self.addEventListener('push', function (event) {
   if (!event.data) return;
   var data = event.data.json();
   event.waitUntil(
-    self.registration.showNotification(data.title || 'BetterSolano', {
+    self.registration.showNotification(data.title || 'BetterMalolos', {
       body: data.body || '',
       icon: '/assets/images/logo/favicon.svg',
       badge: '/assets/images/logo/favicon.svg',
-      tag: data.tag || 'bettersolano-notification',
+      tag: data.tag || 'bettermalolos-notification',
       data: { url: data.url || '/' },
     })
   );

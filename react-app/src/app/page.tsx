@@ -74,7 +74,7 @@ export default function HomePage() {
               <p className="appointment-cta-subtitle">{t('appointment-cta-subtitle')}</p>
               <div className="appointment-cta-actions">
                 <a
-                  href="https://solanomayorsoffice-oasys.com/user/auth/login.php"
+                  href="https://malolosmayorsoffice-oasys.com/user/auth/login.php"
                   className="appointment-cta-btn appointment-cta-btn--primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,7 +83,7 @@ export default function HomePage() {
                   {t('appointment-schedule-btn')}
                 </a>
                 <a
-                  href="https://solanomayorsoffice-oasys.com/user/auth/register.php"
+                  href="https://malolosmayorsoffice-oasys.com/user/auth/register.php"
                   className="appointment-cta-btn appointment-cta-btn--outline"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -235,7 +235,7 @@ export default function HomePage() {
                 <div
                   className="weather-widget"
                   role="region"
-                  aria-label="Current weather in Solano"
+                  aria-label="Current weather in Malolos"
                 >
                   <div className="weather-current">
                     <div className="weather-current-icon">
@@ -267,19 +267,19 @@ export default function HomePage() {
                 <div
                   id="map-container"
                   role="application"
-                  aria-label="Interactive map of Solano, Nueva Vizcaya"
+                  aria-label="Interactive map of Malolos, Bulacan"
                   data-map-loaded="iframe"
                 >
                   <iframe
                     src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
                     className="map-iframe"
-                    title="Map of Solano, Nueva Vizcaya"
-                    aria-label="OpenStreetMap showing Solano Municipal Hall, Nueva Vizcaya"
+                    title="Map of Malolos, Bulacan"
+                    aria-label="OpenStreetMap showing Malolos Municipal Hall, Bulacan"
                     loading="lazy"
                   ></iframe>
                 </div>
                 <p className="map-attribution">
-                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Solano Municipal Hall, Nueva
+                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Malolos Municipal Hall, Nueva
                   Vizcaya 3708
                 </p>
               </div>
@@ -288,7 +288,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brief History of Solano */}
+      {/* Brief History of Malolos */}
       <section className="section history-section">
         <div className="container">
           <div className="home-stats-v2-header">
@@ -638,8 +638,8 @@ export default function HomePage() {
               <div className="home-leader-badge">{t('title-mayor')}</div>
               <h3>Hon. Philip A. Dacayo</h3>
               <div className="home-leader-contacts">
-                <a href="mailto:mayor@solano.gov.ph">
-                  <i className="bi bi-envelope"></i> mayor@solano.gov.ph
+                <a href="mailto:mayor@malolos.gov.ph">
+                  <i className="bi bi-envelope"></i> mayor@malolos.gov.ph
                 </a>
                 <a href="tel:0783265002">
                   <i className="bi bi-telephone"></i> (078) 326-5002
@@ -650,8 +650,8 @@ export default function HomePage() {
               <div className="home-leader-badge">{t('title-vice-mayor')}</div>
               <h3>Hon. Eduardo D. Tiongson</h3>
               <div className="home-leader-contacts">
-                <a href="mailto:vicemayor@solano.gov.ph">
-                  <i className="bi bi-envelope"></i> vicemayor@solano.gov.ph
+                <a href="mailto:vicemayor@malolos.gov.ph">
+                  <i className="bi bi-envelope"></i> vicemayor@malolos.gov.ph
                 </a>
                 <a href="tel:0783265003">
                   <i className="bi bi-telephone"></i> (078) 326-5003
@@ -682,13 +682,13 @@ export default function HomePage() {
                 <span className="home-contact-v2-note">{t('contact-hours')}</span>
               </div>
             </a>
-            <a href="mailto:lgusolanonv@gmail.com" className="home-contact-v2-card">
+            <a href="mailto:lgumalolosnv@gmail.com" className="home-contact-v2-card">
               <div className="home-contact-v2-icon">
                 <i className="bi bi-envelope-fill"></i>
               </div>
               <div className="home-contact-v2-content">
                 <h3>{t('contact-email')}</h3>
-                <p className="home-contact-v2-value">lgusolanonv@gmail.com</p>
+                <p className="home-contact-v2-value">lgumalolosnv@gmail.com</p>
                 <span className="home-contact-v2-note">{t('contact-response')}</span>
               </div>
             </a>
@@ -699,15 +699,15 @@ export default function HomePage() {
               <div className="home-contact-v2-content">
                 <h3>{t('contact-address')}</h3>
                 <p className="home-contact-v2-value">{t('contact-municipal-hall')}</p>
-                <span className="home-contact-v2-note">Solano, Nueva Vizcaya 3708</span>
+                <span className="home-contact-v2-note">Malolos, Bulacan 3708</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solano Quiz CTA */}
-      <section className="quiz-cta-section" aria-label="Solano Quiz">
+      {/* Malolos Quiz CTA */}
+      <section className="quiz-cta-section" aria-label="Malolos Quiz">
         <div className="container">
           <div className="quiz-cta-inner">
             <div className="quiz-cta-animation" aria-hidden="true">
@@ -724,7 +724,7 @@ export default function HomePage() {
               <p className="quiz-cta-subtitle">{t('quiz-subtitle')}</p>
               <p className="quiz-cta-description">{t('quiz-description')}</p>
               <a
-                href="https://quiz.bettersolano.org/"
+                href="https://quiz.bettermalolos.org/"
                 className="quiz-cta-btn"
                 target="_blank"
                 rel="noopener noreferrer"

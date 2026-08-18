@@ -2,7 +2,7 @@
 
 ## Summary
 
-We are pleased to announce that a React + TypeScript version of BetterSolano.org is now available on the `react-typescript` branch. This modernized version offers improved developer experience, type safety, and component-based architecture while maintaining full feature parity with the static HTML version.
+We are pleased to announce that a React + TypeScript version of BetterMalolos.org is now available on the `react-typescript` branch. This modernized version offers improved developer experience, type safety, and component-based architecture while maintaining full feature parity with the static HTML version.
 
 ## Open Source Availability
 
@@ -12,7 +12,7 @@ We encourage other municipalities to adopt and customize this project in support
 
 ## Background
 
-BetterSolano.org was originally built with static HTML, CSS, and vanilla JavaScript to ensure maximum accessibility and simplicity. As the project has grown and more contributors have joined, we received feedback requesting modern tooling support.
+BetterMalolos.org was originally built with static HTML, CSS, and vanilla JavaScript to ensure maximum accessibility and simplicity. As the project has grown and more contributors have joined, we received feedback requesting modern tooling support.
 
 The React + TypeScript version addresses these requests while preserving the static HTML version for contributors who prefer the original approach.
 
@@ -62,11 +62,11 @@ We welcome feedback on both versions. Please:
 
 - Open an issue with the `react` label for React-specific feedback
 - Join the discussion in our Discord community
-- Email volunteer@bettersolano.org with questions
+- Email volunteer@bettermalolos.org with questions
 
 ## Acknowledgments
 
-## Thank you to all contributors who have helped build BetterSolano.org. Your continued participation, regardless of which version you prefer, is valued and appreciated. Shout out to Gat. @jasontorres for the support!
+## Thank you to all contributors who have helped build BetterMalolos.org. Your continued participation, regardless of which version you prefer, is valued and appreciated. Shout out to Gat. @jasontorres for the support!
 
 Ramon Logan Jr.
-BetterSolano.org
+BetterMalolos.org

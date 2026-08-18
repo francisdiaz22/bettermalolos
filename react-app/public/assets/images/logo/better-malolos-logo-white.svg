@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
+  <title id="title">Better Malolos</title>
+  <desc id="desc">Temporary Better Malolos civic portal logo</desc>
+  <rect width="520" height="120" rx="18" fill="#0032a0"/>
+  <path d="M28 86c72-42 128-42 200 0s128 42 264-10" fill="none" stroke="#fdbd18" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="64" cy="42" r="20" fill="#fdbd18"/>
+  <path d="M52 42h24M64 30v24" stroke="#0032a0" stroke-width="5" stroke-linecap="round"/>
+  <text x="98" y="57" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700">Better</text>
+  <text x="258" y="57" fill="#fdbd18" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700">Malolos</text>
+</svg>

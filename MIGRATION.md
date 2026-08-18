@@ -1,10 +1,10 @@
 # Migration Guide: Static HTML to React + TypeScript
 
-This document provides guidance for contributors migrating from the static HTML version to the React + TypeScript version of BetterSolano.org.
+This document provides guidance for contributors migrating from the static HTML version to the React + TypeScript version of BetterMalolos.org.
 
 ## Overview
 
-BetterSolano.org now has two versions:
+BetterMalolos.org now has two versions:
 
 | Version            | Branch             | Status             | Technology                       |
 | ------------------ | ------------------ | ------------------ | -------------------------------- |
@@ -64,8 +64,8 @@ BetterSolano.org now has two versions:
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
+git clone https://github.com/BetterMalolos/bettermalolos.git
+cd bettermalolos
 
 # Switch to React branch
 git checkout react-typescript
@@ -87,7 +87,7 @@ Open http://localhost:3000 in your browser.
 ### Static HTML
 
 ```
-bettersolano/
+bettermalolos/
 ├── index.html
 ├── services/
 ├── government/
@@ -101,7 +101,7 @@ bettersolano/
 ### React + TypeScript
 
 ```
-bettersolano/
+bettermalolos/
 ├── react-app/
 │   ├── src/
 │   │   ├── app/           # Next.js App Router pages
@@ -231,7 +231,7 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 - Open an issue on GitHub with the `react` label
 - Join our Discord community for real-time discussion
-- Email: volunteer@bettersolano.org
+- Email: volunteer@bettermalolos.org
 
 ---
 

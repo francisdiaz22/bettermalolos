@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version Management Script for BetterSolano
+# Version Management Script for BetterMalolos
 # Delegates to the cross-platform Node.js script which handles:
 #   - version.json (master source of truth)
 #   - package.json sync

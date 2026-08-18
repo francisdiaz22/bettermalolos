@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Add missing Solano Quiz and Quiz CTA translation keys to translations.js.
+Add missing Malolos Quiz and Quiz CTA translation keys to translations.js.
 """
 
 import re
@@ -8,7 +8,7 @@ import re
 with open('assets/js/translations.js', 'r', encoding='utf-8') as f:
     content = f.read()
 
-# All the page-prefix variants for "Solano Quiz" footer link
+# All the page-prefix variants for "Malolos Quiz" footer link
 prefixes = [
     'accessibility', 'acct', 'agri', 'assessor', 'birth', 'biz', 'bpls',
     'budget', 'cert', 'civil', 'contact', 'death', 'edu', 'eng', 'env',
@@ -21,23 +21,23 @@ prefixes = [
 
 # Quiz CTA keys (homepage only)
 quiz_cta_en = {
-    'home-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya': 'How well do you know Solano, Nueva Vizcaya?',
-    'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluate your familiarity with the municipality's heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Nueva Vizcaya's most prominent localities.",
+    'home-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan': 'How well do you know Malolos, Bulacan?',
+    'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluate your familiarity with the municipality's heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Bulacan's most prominent localities.",
     'home-take-the-quiz': 'Take the Quiz',
 }
 
 quiz_cta_fil = {
-    'home-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya': 'Gaano mo kakilala ang Solano, Nueva Vizcaya?',
-    'home-evaluate-your-familiarity-with-the-municipalitys': "Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Nueva Vizcaya.",
+    'home-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan': 'Gaano mo kakilala ang Malolos, Bulacan?',
+    'home-evaluate-your-familiarity-with-the-municipalitys': "Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Bulacan.",
     'home-take-the-quiz': 'Subukin ang Quiz',
 }
 
 quiz_cta_ilo = {
-    'home-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya': 'Kasano ti pannakaammom iti Solano, Nueva Vizcaya?',
-    'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluaren ti pannakaammom iti tawid, kultural a pagbigbigan, ken heograpiko a kapatgan ti munisipalidad babaen ti maysa nga interactive a panagsubok ti pannakaammo a naidisinio tapno ipakita ti maysa kadagiti kalatakan a lokalidad ti Nueva Vizcaya.",
+    'home-malolos-quiz': 'Malolos Quiz',
+    'home-how-well-do-you-know-malolos-bulacan': 'Kasano ti pannakaammom iti Malolos, Bulacan?',
+    'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluaren ti pannakaammom iti tawid, kultural a pagbigbigan, ken heograpiko a kapatgan ti munisipalidad babaen ti maysa nga interactive a panagsubok ti pannakaammo a naidisinio tapno ipakita ti maysa kadagiti kalatakan a lokalidad ti Bulacan.",
     'home-take-the-quiz': 'Subokan ti Quiz',
 }
 
@@ -45,29 +45,29 @@ def build_entries(lang):
     """Build all new key-value entries for a language."""
     entries = []
     
-    # Page-prefix Solano Quiz keys
+    # Page-prefix Malolos Quiz keys
     for prefix in prefixes:
-        key = f'{prefix}-solano-quiz'
-        # "Solano Quiz" stays the same in all languages (it's a proper name)
-        entries.append(f'        "{key}": "Solano Quiz"')
+        key = f'{prefix}-malolos-quiz'
+        # "Malolos Quiz" stays the same in all languages (it's a proper name)
+        entries.append(f'        "{key}": "Malolos Quiz"')
     
     # Quiz CTA keys
     if lang == 'en':
         for k, v in quiz_cta_en.items():
-            # Skip home-solano-quiz since it's already in the prefix list
-            if k == 'home-solano-quiz':
+            # Skip home-malolos-quiz since it's already in the prefix list
+            if k == 'home-malolos-quiz':
                 continue
             v_escaped = v.replace("'", "\\'").replace('"', '\\"')
             entries.append(f'        "{k}": "{v_escaped}"')
     elif lang == 'fil':
         for k, v in quiz_cta_fil.items():
-            if k == 'home-solano-quiz':
+            if k == 'home-malolos-quiz':
                 continue
             v_escaped = v.replace("'", "\\'").replace('"', '\\"')
             entries.append(f'        "{k}": "{v_escaped}"')
     elif lang == 'ilo':
         for k, v in quiz_cta_ilo.items():
-            if k == 'home-solano-quiz':
+            if k == 'home-malolos-quiz':
                 continue
             v_escaped = v.replace("'", "\\'").replace('"', '\\"')
             entries.append(f'        "{k}": "{v_escaped}"')
@@ -117,7 +117,7 @@ for lang in ['en', 'fil', 'ilo']:
     new_entries = build_entries(lang)
     
     # Add comma after last existing entry, then new entries
-    content = content[:insert_pos] + ',\n\n        // Solano Quiz\n' + new_entries + '\n    ' + content[block_end:]
+    content = content[:insert_pos] + ',\n\n        // Malolos Quiz\n' + new_entries + '\n    ' + content[block_end:]
     
     print(f"Added entries to {lang} block")
 
@@ -131,10 +131,10 @@ with open('assets/js/translations.js', 'r', encoding='utf-8') as f:
     verify = f.read()
 
 for prefix in prefixes[:3]:
-    key = f'{prefix}-solano-quiz'
+    key = f'{prefix}-malolos-quiz'
     count = verify.count(f'"{key}"')
     print(f'  "{key}" appears {count} times (expect 3)')
 
-for k in ['home-take-the-quiz', 'home-how-well-do-you-know-solano-nueva-vizcaya']:
+for k in ['home-take-the-quiz', 'home-how-well-do-you-know-malolos-bulacan']:
     count = verify.count(f'"{k}"')
     print(f'  "{k}" appears {count} times (expect 3)')

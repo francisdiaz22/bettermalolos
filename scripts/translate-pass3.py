@@ -108,8 +108,8 @@ FIL2 = {
 
     # Civil Registry / Certificates
     "Registration of Live Birth": "Pagpaparehistro ng Kapanganakan",
-    "Registration of birth for children born in Solano, Nueva Vizcaya": "Pagpaparehistro ng kapanganakan para sa mga batang ipinanganak sa Solano, Nueva Vizcaya",
-    "Registration of death for persons who died in Solano, Nueva Vizcaya": "Pagpaparehistro ng pagkamatay para sa mga taong namatay sa Solano, Nueva Vizcaya",
+    "Registration of birth for children born in Malolos, Bulacan": "Pagpaparehistro ng kapanganakan para sa mga batang ipinanganak sa Malolos, Bulacan",
+    "Registration of death for persons who died in Malolos, Bulacan": "Pagpaparehistro ng pagkamatay para sa mga taong namatay sa Malolos, Bulacan",
     "Registration and issuance of death certificates": "Pagpaparehistro at pagbibigay ng mga sertipiko ng pagkamatay",
     "Register births and deaths within 30 days to avoid penalties": "Irehistro ang mga kapanganakan at pagkamatay sa loob ng 30 araw upang maiwasan ang mga multa",
     "Issuance of certified true copies and registration of births": "Pagbibigay ng mga sertipikadong tunay na kopya at pagpaparehistro ng mga kapanganakan",
@@ -135,7 +135,7 @@ FIL2 = {
     "Certificate of occupancy for completed buildings": "Sertipiko ng paninirahan para sa mga natapos na gusali",
     "Certification of crops planted and production data": "Sertipikasyon ng mga pananim na itinanim at datos ng produksyon",
     "Certification of farm location and area cultivated": "Sertipikasyon ng lokasyon ng bukid at lugar na sinasaka",
-    "Certification that a person has no declared property in Solano.": "Sertipikasyon na ang isang tao ay walang idineklaang ari-arian sa Solano.",
+    "Certification that a person has no declared property in Malolos.": "Sertipikasyon na ang isang tao ay walang idineklaang ari-arian sa Malolos.",
     "Certification that employee has no pending administrative case": "Sertipikasyon na ang empleyado ay walang nakabinbing kasong administratibo",
     "Clerical error corrections and change of first name": "Mga pagwawasto ng klerikal na error at pagbabago ng unang pangalan",
     "Correction of Day/Month of Birth (RA 10172)": "Pagwawasto ng Araw/Buwan ng Kapanganakan (RA 10172)",
@@ -148,7 +148,7 @@ FIL2 = {
     "Affidavit of the solemnizing officer or the person reporting or presenting the marriage certificate": "Sinumpaang Salaysay ng opisyal na nagkasal o ng taong nag-uulat o nagpapakita ng sertipiko ng kasal",
     "Application for Marriage License duly signed by the couple and the MCR": "Aplikasyon para sa Lisensya sa Kasal na wastong nilagdaan ng mag-asawa at ng MCR",
     "Marriage license is valid for 120 days from issuance": "Ang lisensya sa kasal ay balido sa loob ng 120 araw mula sa pagbibigay",
-    "For engaged couples intending to get married in Solano": "Para sa mga magkasintahang nagbabalak magpakasal sa Solano",
+    "For engaged couples intending to get married in Malolos": "Para sa mga magkasintahang nagbabalak magpakasal sa Malolos",
     "After the PMC, go back to MCRO": "Pagkatapos ng PMC, bumalik sa MCRO",
     "MHO Certification of Cause of Death": "Sertipikasyon ng MHO ng Sanhi ng Pagkamatay",
     "For Death at Home (Unattended)": "Para sa Pagkamatay sa Bahay (Walang Dumalo)",
@@ -193,7 +193,7 @@ FIL2 = {
 
 FIL3 = {
     # Business/Permits
-    "Application for new business permit for businesses operating in Solano": "Aplikasyon para sa bagong permiso sa negosyo para sa mga negosyong nag-ooperate sa Solano",
+    "Application for new business permit for businesses operating in Malolos": "Aplikasyon para sa bagong permiso sa negosyo para sa mga negosyong nag-ooperate sa Malolos",
     "Annual business tax based on gross sales/receipts": "Taunang buwis sa negosyo batay sa kabuuang benta/resibo",
     "Annual renewal of existing business permit (January 1-20 without surcharge)": "Taunang pag-renew ng umiiral na permiso sa negosyo (Enero 1-20 nang walang karagdagang singil)",
     "Business permit renewal deadline: January 20": "Deadline ng pag-renew ng permiso sa negosyo: Enero 20",
@@ -210,7 +210,7 @@ FIL3 = {
     "Transfer of Business Location": "Paglipat ng Lokasyon ng Negosyo",
     "View and pay your business tax bills online": "Tingnan at bayaran ang iyong mga bill ng buwis sa negosyo online",
     "When should I renew my business permit?": "Kailan ko dapat i-renew ang aking permiso sa negosyo?",
-    "What do I need to start a new business in Solano?": "Ano ang kailangan ko upang magsimula ng bagong negosyo sa Solano?",
+    "What do I need to start a new business in Malolos?": "Ano ang kailangan ko upang magsimula ng bagong negosyo sa Malolos?",
     "Secure zoning clearance before applying for business permit": "Kumuha ng zoning clearance bago mag-apply ng permiso sa negosyo",
     "DTI Certificate of Business Name Registration (for sole proprietorship)": "DTI Certificate ng Pagpaparehistro ng Pangalan ng Negosyo (para sa sole proprietorship)",
     "Contract of Lease (if applicable)": "Kontrata ng Pag-upa (kung naaangkop)",
@@ -232,7 +232,7 @@ FIL3 = {
     "Declaration must be filed within 60 days of acquisition": "Ang deklarasyon ay dapat ihain sa loob ng 60 araw mula sa pagkuha",
     "Declaration of Land, Building and Machineries": "Deklarasyon ng Lupa, Gusali at Makinarya",
     "Tax Declaration is an official document showing the assessed value of a property. It is used as basis for real property tax computation": "Ang Tax Declaration ay isang opisyal na dokumento na nagpapakita ng tinasang halaga ng ari-arian. Ito ay ginagamit bilang batayan para sa pagkalkula ng buwis sa tunay na ari-arian",
-    "Tax declaration form for real property assessment in Solano, Nueva Vizcaya": "Form ng tax declaration para sa pagtatasa ng tunay na ari-arian sa Solano, Nueva Vizcaya",
+    "Tax declaration form for real property assessment in Malolos, Bulacan": "Form ng tax declaration para sa pagtatasa ng tunay na ari-arian sa Malolos, Bulacan",
     "Assessor's staff will conduct on-site inspection and measurement of the property.": "Ang kawani ng Tagapagtasa ay magsasagawa ng on-site na inspeksyon at pagsukat ng ari-arian.",
     "For changes in property details, corrections, or general revision updates.": "Para sa mga pagbabago sa detalye ng ari-arian, mga pagwawasto, o mga update sa pangkalahatang rebisyon.",
     "For newly constructed buildings, improvements, or newly discovered properties.": "Para sa mga bagong itinayong gusali, mga pagpapabuti, o mga bagong natuklasang ari-arian.",
@@ -347,7 +347,7 @@ FIL4 = {
     "Job placement, employment assistance, career guidance": "Paglalagay sa trabaho, tulong sa trabaho, gabay sa karera",
     "Unemployed or underemployed residents": "Mga walang trabaho o kulang ang trabaho na mga residente",
     "For medical, educational, burial, and other assistance programs": "Para sa mga programa ng tulong medikal, pang-edukasyon, libing, at iba pa",
-    "Proof of residence in Solano": "Patunay ng paninirahan sa Solano",
+    "Proof of residence in Malolos": "Patunay ng paninirahan sa Malolos",
     "Proof of Income (if employed)": "Patunay ng Kita (kung may trabaho)",
     "All information is treated with confidentiality": "Ang lahat ng impormasyon ay tinatrato nang may pagiging kumpidensyal",
     "All information is treated with strict confidentiality": "Ang lahat ng impormasyon ay tinatrato nang may mahigpit na pagiging kumpidensyal",
@@ -367,7 +367,7 @@ FIL5 = {
     "Distribution of certified corn seeds (OPV and hybrid varieties)": "Pamamahagi ng mga sertipikadong binhi ng mais (OPV at hybrid na mga uri)",
     "Distribution of tilapia, carp, and other fingerlings": "Pamamahagi ng mga tilapia, karpa, at iba pang fingerling",
     "Distribution to requesting offices": "Pamamahagi sa mga humihiling na opisina",
-    "Farm registration, certifications, and agricultural programs for Solano farmers": "Pagpaparehistro ng bukid, mga sertipikasyon, at mga programang agrikultural para sa mga magsasaka ng Solano",
+    "Farm registration, certifications, and agricultural programs for Malolos farmers": "Pagpaparehistro ng bukid, mga sertipikasyon, at mga programang agrikultural para sa mga magsasaka ng Malolos",
     "Fish feeds and pond supplies support": "Suporta sa pagkain ng isda at mga suplay ng palaisdaan",
     "Free certified inbred rice seeds for registered farmers": "Libreng sertipikadong inbred na binhi ng bigas para sa mga rehistradong magsasaka",
     "Free of charge for all farmers": "Libre para sa lahat ng magsasaka",
@@ -380,7 +380,7 @@ FIL5 = {
     "Support for organic farmers' groups and cooperatives": "Suporta para sa mga grupo ng organikong magsasaka at kooperatiba",
     "Support for organic farming practices and certification": "Suporta para sa mga kasanayan sa organikong pagsasaka at sertipikasyon",
     "Support for PGS and third-party organic certification": "Suporta para sa PGS at third-party na organikong sertipikasyon",
-    "Support programs for corn farmers in Solano": "Mga programa ng suporta para sa mga magsasaka ng mais sa Solano",
+    "Support programs for corn farmers in Malolos": "Mga programa ng suporta para sa mga magsasaka ng mais sa Malolos",
     "Support programs for rice farmers under the Rice Competitiveness Enhancement Fund (RCEF)": "Mga programa ng suporta para sa mga magsasaka ng bigas sa ilalim ng Rice Competitiveness Enhancement Fund (RCEF)",
     "Support services for fisherfolk and aquaculture operators": "Mga serbisyong suporta para sa mga mangingisda at operator ng akwakultura",
     "Support services for livestock and poultry raisers": "Mga serbisyong suporta para sa mga nag-aalaga ng livestock at manok",
@@ -542,7 +542,7 @@ FIL6 = {
 
 FIL7 = {
     # Privacy Policy
-    "This Privacy Policy explains how BetterSolano.org collects, uses, and protects your information": "Ang Patakaran sa Privacy na ito ay nagpapaliwanag kung paano kinokolekta, ginagamit, at pinoprotektahan ng BetterSolano.org ang iyong impormasyon",
+    "This Privacy Policy explains how BetterMalolos.org collects, uses, and protects your information": "Ang Patakaran sa Privacy na ito ay nagpapaliwanag kung paano kinokolekta, ginagamit, at pinoprotektahan ng BetterMalolos.org ang iyong impormasyon",
     "We are committed to protecting your privacy and ensuring the security of your personal information": "Kami ay nakatuon sa pagprotekta ng iyong privacy at pagtiyak ng seguridad ng iyong personal na impormasyon",
     "We do not sell, trade, or rent your personal information to third parties": "Hindi namin ibinebenta, ipinagpapalit, o ipinapaupa ang iyong personal na impormasyon sa mga third party",
     "We may update this Privacy Policy from time to time": "Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan",
@@ -575,13 +575,13 @@ FIL7 = {
 
     # Terms of Use
     "By accessing and using this website, you agree to be bound by these Terms of Use": "Sa pag-access at paggamit ng website na ito, sumasang-ayon ka na sumunod sa mga Tuntunin ng Paggamit na ito",
-    "These Terms of Use govern your access to and use of the BetterSolano.org website": "Ang mga Tuntunin ng Paggamit na ito ay namamahala sa iyong pag-access at paggamit ng website ng BetterSolano.org",
+    "These Terms of Use govern your access to and use of the BetterMalolos.org website": "Ang mga Tuntunin ng Paggamit na ito ay namamahala sa iyong pag-access at paggamit ng website ng BetterMalolos.org",
     "We reserve the right to modify these terms at any time": "Inilalaan namin ang karapatan na baguhin ang mga tuntuning ito sa anumang oras",
     "The content on this website is provided for general informational purposes only": "Ang nilalaman sa website na ito ay ibinibigay para sa pangkalahatang layunin ng impormasyon lamang",
     "We make no warranties or representations about the accuracy or completeness of the content": "Wala kaming mga garantiya o representasyon tungkol sa katumpakan o pagkakumpleto ng nilalaman",
     "This website is not intended to provide professional, legal, or financial advice": "Ang website na ito ay hindi nilalayong magbigay ng propesyonal, legal, o pinansiyal na payo",
     "We shall not be liable for any damages arising from the use of this website": "Hindi kami mananagot para sa anumang pinsala na nagmumula sa paggamit ng website na ito",
-    "All content on this website is the property of BetterSolano.org unless otherwise stated": "Ang lahat ng nilalaman sa website na ito ay pag-aari ng BetterSolano.org maliban kung iba ang nakasaad",
+    "All content on this website is the property of BetterMalolos.org unless otherwise stated": "Ang lahat ng nilalaman sa website na ito ay pag-aari ng BetterMalolos.org maliban kung iba ang nakasaad",
     "Links to third-party websites are provided for convenience only": "Ang mga link sa mga third-party na website ay ibinibigay para sa kaginhawahan lamang",
     "We do not endorse or assume responsibility for third-party content": "Hindi namin ineendorso o inaako ang responsibilidad para sa nilalaman ng third-party",
     "If any provision of these terms is found to be unenforceable, the remaining provisions shall continue in effect": "Kung ang anumang probisyon ng mga tuntuning ito ay matuklasang hindi maipapatupad, ang mga natitirang probisyon ay mananatiling may bisa",
@@ -599,9 +599,9 @@ FIL7 = {
 
     # FAQ
     "Frequently Asked Questions": "Mga Madalas Itanong",
-    "Find answers to common questions about Solano municipal services": "Maghanap ng mga sagot sa mga karaniwang tanong tungkol sa mga serbisyo ng munisipyo ng Solano",
+    "Find answers to common questions about Malolos municipal services": "Maghanap ng mga sagot sa mga karaniwang tanong tungkol sa mga serbisyo ng munisipyo ng Malolos",
     "Is this website mobile-friendly?": "Ang website ba na ito ay mobile-friendly?",
-    "Who developed Better Solano?": "Sino ang gumawa ng Better Solano?",
+    "Who developed Better Malolos?": "Sino ang gumawa ng Better Malolos?",
     "What if I missed the registration deadline?": "Paano kung napalampas ko ang deadline ng pagpaparehistro?",
     "Select the scenario that applies to your situation": "Piliin ang senaryo na naaangkop sa iyong sitwasyon",
     "Response times may vary due to the volunteer nature of this initiative.": "Ang oras ng pagtugon ay maaaring mag-iba dahil sa boluntaryong katangian ng inisyatibang ito.",
@@ -623,23 +623,23 @@ FIL7 = {
 
     # Statistics
     "Municipal Statistics": "Estadistika ng Munisipyo",
-    "Data and statistics about Solano, Nueva Vizcaya": "Datos at estadistika tungkol sa Solano, Nueva Vizcaya",
+    "Data and statistics about Malolos, Bulacan": "Datos at estadistika tungkol sa Malolos, Bulacan",
     "Demographics Overview": "Pangkalahatang Demograpiya",
     "Economic Indicators": "Mga Tagapagpahiwatig ng Ekonomiya",
     "Population by Barangay": "Populasyon ayon sa Barangay",
     "Historical growth from 1990 to 2024": "Makasaysayang paglago mula 1990 hanggang 2024",
     "Cities and Municipalities Competitiveness Index (CMCI) Performance 2016-2024": "Pagganap ng Cities and Municipalities Competitiveness Index (CMCI) 2016-2024",
-    "Solano at a Glance": "Solano sa Isang Tingin",
-    "Brief History of Solano": "Maikling Kasaysayan ng Solano",
+    "Malolos at a Glance": "Malolos sa Isang Tingin",
+    "Brief History of Malolos": "Maikling Kasaysayan ng Malolos",
     "Major development projects serving the community": "Mga pangunahing proyekto ng pagpapaunlad na nagsisilbi sa komunidad",
-    "DPWH Infrastructure Projects in Solano": "Mga Proyekto ng Imprastraktura ng DPWH sa Solano",
+    "DPWH Infrastructure Projects in Malolos": "Mga Proyekto ng Imprastraktura ng DPWH sa Malolos",
 
     # Home page
-    "Welcome to Better Solano": "Maligayang Pagdating sa Better Solano",
-    "Your gateway to Solano municipal services and information": "Ang iyong daan patungo sa mga serbisyo at impormasyon ng munisipyo ng Solano",
-    "Fetching news and updates from Solano.": "Kinukuha ang mga balita at update mula sa Solano.",
-    "Fetching the latest news from Solano.": "Kinukuha ang pinakabagong balita mula sa Solano.",
-    "Stay informed about the latest happenings in Solano": "Manatiling may kaalaman tungkol sa mga pinakabagong pangyayari sa Solano",
+    "Welcome to Better Malolos": "Maligayang Pagdating sa Better Malolos",
+    "Your gateway to Malolos municipal services and information": "Ang iyong daan patungo sa mga serbisyo at impormasyon ng munisipyo ng Malolos",
+    "Fetching news and updates from Malolos.": "Kinukuha ang mga balita at update mula sa Malolos.",
+    "Fetching the latest news from Malolos.": "Kinukuha ang pinakabagong balita mula sa Malolos.",
+    "Stay informed about the latest happenings in Malolos": "Manatiling may kaalaman tungkol sa mga pinakabagong pangyayari sa Malolos",
     "Loading news...": "Naglo-load ng balita...",
     "Loading updates...": "Naglo-load ng mga update...",
     "Schedule Appointment": "Mag-iskedyul ng Appointment",
@@ -657,7 +657,7 @@ FIL7 = {
 
     # Contact
     "Contact the Municipal Government": "Makipag-ugnayan sa Pamahalaang Munisipal",
-    "Get in touch with the municipal government of Solano": "Makipag-ugnayan sa pamahalaang munisipal ng Solano",
+    "Get in touch with the municipal government of Malolos": "Makipag-ugnayan sa pamahalaang munisipal ng Malolos",
     "Office Hours": "Oras ng Opisina",
     "Municipal Hall Address": "Adres ng Munisipyo",
 
@@ -871,14 +871,14 @@ def build_ilo_from_fil(fil_dict):
 # ============================================================
 
 KEEP_AS_IS = {
-    'BLGF Portal', 'CMCI DTI Portal', 'LGU Solano Facebook',
+    'BLGF Portal', 'CMCI DTI Portal', 'LGU Malolos Facebook',
     'PhilHealth', 'GSIS', 'SSS', 'Pag-IBIG', 'BFP', 'PNP', 'DILG',
     'MDRRMO', 'MSWDO', 'SEEDO', 'MPDO', 'BIR', 'DTI', 'SEC', 'DENR',
     'DPWH', 'DSWD', 'PSA', 'NBI', 'COA', 'CSC', 'DBM', 'DOH',
     'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA', 'Filipizen',
-    'BetterSolano.org', 'Better Solano', 'Abakada.org',
+    'BetterMalolos.org', 'Better Malolos', 'Abakada.org',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',
-    'Nueva Vizcaya', 'Solano', 'Bayombong', 'Facebook', 'Google',
+    'Bulacan', 'Malolos', 'Bayombong', 'Facebook', 'Google',
 }
 
 KEEP_PATTERNS = [

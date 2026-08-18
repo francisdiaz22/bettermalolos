@@ -6,7 +6,7 @@
 
 ## Overview
 
-This release introduces a React + TypeScript version of BetterSolano.org, providing modern tooling and component-based architecture for contributors who prefer this development approach.
+This release introduces a React + TypeScript version of BetterMalolos.org, providing modern tooling and component-based architecture for contributors who prefer this development approach.
 
 ## Technology Stack
 
@@ -76,7 +76,7 @@ Report issues or provide feedback:
 
 - GitHub Issues with `react` label
 - Discord community
-- Email: volunteer@bettersolano.org
+- Email: volunteer@bettermalolos.org
 
 ## Contributors
 
@@ -85,4 +85,4 @@ Thank you to all contributors who helped develop this version.
 ---
 
 Ramon Logan Jr.
-BetterSolano.org
+BetterMalolos.org

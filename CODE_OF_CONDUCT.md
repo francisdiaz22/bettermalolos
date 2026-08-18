@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-BetterSolano.org is a civic-tech project built for the people of Solano, Nueva Vizcaya. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+BetterMalolos.org is a civic-tech project built for the people of Malolos, Bulacan. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 
@@ -11,7 +11,7 @@ BetterSolano.org is a civic-tech project built for the people of Solano, Nueva V
 - Be respectful and considerate in all interactions
 - Use welcoming and inclusive language
 - Accept constructive criticism gracefully
-- Focus on what is best for the community and the people of Solano
+- Focus on what is best for the community and the people of Malolos
 - Show empathy towards other community members
 - Respect differing viewpoints and experiences
 - Prioritize accuracy when contributing public government data
@@ -40,7 +40,7 @@ This Code of Conduct applies to all project spaces, including:
 
 Instances of unacceptable behavior may be reported to:
 
-- Email: volunteer@bettersolano.org
+- Email: volunteer@bettermalolos.org
 - Discord: Contact a moderator
 
 All complaints will be reviewed and investigated promptly and fairly. The project team is obligated to maintain confidentiality regarding the reporter.
@@ -57,4 +57,4 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ---
 
-By participating in BetterSolano.org, you agree to abide by this Code of Conduct.
+By participating in BetterMalolos.org, you agree to abide by this Code of Conduct.

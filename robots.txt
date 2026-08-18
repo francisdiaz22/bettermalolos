@@ -1,13 +1,13 @@
-# Better Solano - Robots.txt
+# Better Malolos - Robots.txt
 # Author: Ramon Logan Jr
 # This file tells search engine crawlers which pages to index
 
 User-agent: *
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 # Sitemap location
-Sitemap: https://bettersolano.org/sitemap.xml
+Sitemap: https://bettermalolos.org/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
@@ -19,28 +19,28 @@ Crawl-delay: 1
 # Allow all major search engines
 User-agent: Googlebot
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: Bingbot
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: Slurp
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: DuckDuckBot
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: facebookexternalhit
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: Twitterbot
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png
 
 User-agent: LinkedInBot
 Allow: /
-Allow: /assets/images/banners/opengraph.png
+Allow: /assets/images/banners/opengraph-malos.png

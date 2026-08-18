@@ -1,5 +1,5 @@
 #!/bin/bash
-# BetterSolano — Production Build Script
+# BetterMalolos — Production Build Script
 # Usage:
 #   bash build.sh            — bump patch, build everything
 #   bash build.sh --no-bump  — keep current version, build everything
@@ -22,7 +22,7 @@ done
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   BetterSolano — Production Build        ║"
+echo "║   BetterMalolos — Production Build        ║"
 echo "╚══════════════════════════════════════════╝"
 
 # ── 0. Build-time configuration (optional .env, see .env.example) ────────────

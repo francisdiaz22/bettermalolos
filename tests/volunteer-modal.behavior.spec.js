@@ -12,7 +12,7 @@ test.describe('Volunteer modal — display & content', () => {
     await expect(page.locator(SEL.roles)).toHaveCount(5);
     await expect(page.locator(SEL.cta)).toHaveAttribute(
       'href',
-      'mailto:volunteer@bettersolano.org'
+      'mailto:volunteer@bettermalolos.org'
     );
     await expect(page.locator(SEL.close)).toBeVisible();
     await expect(page.locator(SEL.skip)).toBeVisible();

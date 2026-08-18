@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Cross-platform version bump script for BetterSolano.
+ * Cross-platform version bump script for BetterMalolos.
  *
  * Usage:
  *   node scripts/bump-version.js patch   (default)

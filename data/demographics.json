@@ -2,9 +2,9 @@
   "_schema_version": "1.0",
   "_status": "draft",
   "_source": "Philippine Statistics Authority (PSA)",
-  "_note": "Awaiting official data from PSA / LGU Solano planning office",
-  "municipality": "Solano",
-  "province": "Nueva Vizcaya",
+  "_note": "Awaiting official data from PSA / LGU Malolos planning office",
+  "municipality": "Malolos",
+  "province": "Bulacan",
   "region": "Region II - Cagayan Valley",
   "population": {
     "total": 69296,

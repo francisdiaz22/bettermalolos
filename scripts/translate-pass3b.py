@@ -46,16 +46,16 @@ def extract_lang_dict(content, lang):
 
 PHRASES_FIL = {
     # Complete sentence starters
-    "Better Solano is committed to ensuring digital accessibility for people with disabilities": "Ang Better Solano ay nakatuon sa pagtiyak ng digital na accessibility para sa mga taong may kapansanan",
-    "Better Solano is committed to ensuring that our digital services are accessible to all citizens, regardless of ability": "Ang Better Solano ay nakatuon sa pagtiyak na ang aming mga digital na serbisyo ay naa-access ng lahat ng mamamayan, anuman ang kakayahan",
+    "Better Malolos is committed to ensuring digital accessibility for people with disabilities": "Ang Better Malolos ay nakatuon sa pagtiyak ng digital na accessibility para sa mga taong may kapansanan",
+    "Better Malolos is committed to ensuring that our digital services are accessible to all citizens, regardless of ability": "Ang Better Malolos ay nakatuon sa pagtiyak na ang aming mga digital na serbisyo ay naa-access ng lahat ng mamamayan, anuman ang kakayahan",
     "We are continually improving the user experience for everyone and applying the relevant accessibility standards": "Patuloy naming pinapabuti ang karanasan ng gumagamit para sa lahat at inilalapat ang mga kaugnay na pamantayan ng accessibility",
-    "BetterSolano.org is a civic platform dedicated to empowering the people of Solano by providing transparent access to": "Ang BetterSolano.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Solano sa pamamagitan ng pagbibigay ng transparent na access sa",
-    "BetterSolano.org is a general audience website providing civic information": "Ang BetterSolano.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon",
-    "BetterSolano.org provides public domain information to support civic engagement, transparency, and informed participation": "Ang BetterSolano.org ay nagbibigay ng impormasyon sa public domain upang suportahan ang civic engagement, transparency, at may kaalamang pakikilahok",
-    "BetterSolano.org values accuracy, public safety, and respect for rights": "Pinahahalagahan ng BetterSolano.org ang katumpakan, kaligtasan ng publiko, at paggalang sa mga karapatan",
+    "BetterMalolos.org is a civic platform dedicated to empowering the people of Malolos by providing transparent access to": "Ang BetterMalolos.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Malolos sa pamamagitan ng pagbibigay ng transparent na access sa",
+    "BetterMalolos.org is a general audience website providing civic information": "Ang BetterMalolos.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon",
+    "BetterMalolos.org provides public domain information to support civic engagement, transparency, and informed participation": "Ang BetterMalolos.org ay nagbibigay ng impormasyon sa public domain upang suportahan ang civic engagement, transparency, at may kaalamang pakikilahok",
+    "BetterMalolos.org values accuracy, public safety, and respect for rights": "Pinahahalagahan ng BetterMalolos.org ang katumpakan, kaligtasan ng publiko, at paggalang sa mga karapatan",
     "As a volunteer-run initiative, this website does not replace official government channels": "Bilang isang inisyatibang pinapatakbo ng mga boluntaryo, ang website na ito ay hindi pumapalit sa mga opisyal na channel ng pamahalaan",
     "Although volunteers aim to keep the website accessible and functional": "Bagaman naglalayong panatilihing accessible at functional ang website ng mga boluntaryo",
-    "BetterSolano.org cannot guarantee that the website will be": "Hindi magagarantiya ng BetterSolano.org na ang website ay magiging",
+    "BetterMalolos.org cannot guarantee that the website will be": "Hindi magagarantiya ng BetterMalolos.org na ang website ay magiging",
     "We do not knowingly collect personal information from children": "Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata",
     "Despite good-faith efforts, some content may be": "Sa kabila ng mga pagsisikap na may mabuting layunin, ang ilang nilalaman ay maaaring",
     "Residents and stakeholders are encouraged to verify information through official LGU channels": "Ang mga residente at stakeholder ay hinihikayat na i-verify ang impormasyon sa pamamagitan ng mga opisyal na channel ng LGU",
@@ -90,7 +90,7 @@ PHRASES_FIL = {
     "does not replace": "ay hindi pumapalit sa",
 
     # Government/service phrases
-    "Official LGU Solano Portal": "Opisyal na Portal ng LGU Solano",
+    "Official LGU Malolos Portal": "Opisyal na Portal ng LGU Malolos",
     "Municipal Hall": "Munisipyo",
     "Municipal Mayor": "Punong Bayan",
     "Municipal Accounting Office": "Opisina ng Accounting ng Munisipyo",

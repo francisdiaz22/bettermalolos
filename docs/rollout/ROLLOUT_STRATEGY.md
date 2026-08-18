@@ -2,11 +2,11 @@
 
 **Document Status:** Draft 1.0
 **Target Audience:** Technical Leads, Frontend Developers, LGU Data Custodians
-**Reference Implementation:** BetterSolano (GitHub)
+**Reference Implementation:** BetterMalolos (GitHub)
 
 ## Executive Summary
 
-This document serves as the authoritative "Source of Truth" for deploying the BetterLGU transparency platform. It outlines the mandatory design standards, data synchronization protocols, and architectural decisions required to scale the BetterSolano template to other Local Government Units (LGUs). All contributors must adhere to the "Kapwa" design values and the data normalization standards defined herein to ensure the platform remains accessible, maintainable, and civic-centric.
+This document serves as the authoritative "Source of Truth" for deploying the BetterLGU transparency platform. It outlines the mandatory design standards, data synchronization protocols, and architectural decisions required to scale the BetterMalolos template to other Local Government Units (LGUs). All contributors must adhere to the "Kapwa" design values and the data normalization standards defined herein to ensure the platform remains accessible, maintainable, and civic-centric.
 
 ---
 
@@ -74,7 +74,7 @@ This section defines the architectural modularity required to allow LGUs to sele
 
 ### 3.1 Stack Comparison Matrix
 
-| Feature         | **BetterSolano A (Lightweight)** | **BetterSolano B (React/TS)**              |
+| Feature         | **BetterMalolos A (Lightweight)** | **BetterMalolos B (React/TS)**              |
 | :-------------- | :------------------------------- | :----------------------------------------- |
 | **Core Tech**   | Vanilla JS, Bootstrap 5, Leaflet | React, TypeScript, Tailwind                |
 | **Data Store**  | Static JSON Fetching             | Typed JSON Imports / Context API           |

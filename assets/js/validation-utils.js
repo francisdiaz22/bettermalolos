@@ -1,5 +1,5 @@
 /**
- * Better Solano - Validation Utilities
+ * Better Malolos - Validation Utilities
  * Utility functions for validating service pages, links, and data
  */
 

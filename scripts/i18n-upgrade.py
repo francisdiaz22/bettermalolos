@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enterprise-grade i18n upgrade script for BetterSolano.
+Enterprise-grade i18n upgrade script for BetterMalolos.
 Phase 1: Scans all HTML files, adds data-i18n attributes to untranslated elements.
 Phase 2: Generates Filipino (fil) and Ilocano (ilo) translation entries.
 Phase 3: Updates translations.js with all new keys.
@@ -285,7 +285,7 @@ FIL_TRANSLATIONS = {
     "Resources": "Mga Mapagkukunan",
     "Volunteer with us": "Mag-volunteer sa amin",
     "Contribute code with us": "Mag-ambag ng code sa amin",
-    "Solano Quiz": "Solano Quiz",
+    "Malolos Quiz": "Malolos Quiz",
 
     # Common descriptive text
     "Phone": "Telepono",
@@ -495,7 +495,7 @@ ILO_TRANSLATIONS = {
     "Resources": "Dagiti Rekurso",
     "Volunteer with us": "Ag-volunteer kadakami",
     "Contribute code with us": "Ag-ambag ti code kadakami",
-    "Solano Quiz": "Solano Quiz",
+    "Malolos Quiz": "Malolos Quiz",
 
     # Common descriptive text
     "Phone": "Telepono",
@@ -851,7 +851,7 @@ def update_translations_js(translations_js_path, new_translations, existing):
 def main():
     """Main entry point."""
     print("=" * 60)
-    print("BetterSolano i18n Upgrade Script")
+    print("BetterMalolos i18n Upgrade Script")
     print("=" * 60)
 
     # Phase 0: Load existing translations

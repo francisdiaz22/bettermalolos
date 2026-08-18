@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Fix footer across all HTML files:
-1. Add Solano Quiz link before Sitemap in Quick Links
+1. Add Malolos Quiz link before Sitemap in Quick Links
 2. Update copyright to 3-span format with 2026 year
-3. Add Solano Quiz entry to sitemap page
+3. Add Malolos Quiz entry to sitemap page
 4. Add Quiz CTA section to index.html (before closing </> after contact section)
 """
 
@@ -124,9 +124,9 @@ def get_page_prefix(filepath):
 
 
 def fix_footer_quiz_link(content, filepath):
-    """Add Solano Quiz link before Sitemap in footer Quick Links."""
+    """Add Malolos Quiz link before Sitemap in footer Quick Links."""
     # Check if quiz link already exists
-    if 'quiz.bettersolano.org' in content:
+    if 'quiz.bettermalolos.org' in content:
         return content, False
     
     prefix = get_page_prefix(filepath)
@@ -141,7 +141,7 @@ def fix_footer_quiz_link(content, filepath):
     # Pattern: <li><a href="...sitemap..." ...>Sitemap</a></li>
     sitemap_pattern = r'(<li><a href="' + re.escape(rel) + r'sitemap/[^"]*"[^>]*>)'
     
-    quiz_link = f'<li><a href="https://quiz.bettersolano.org/" target="_blank" rel="noopener noreferrer" data-i18n="{prefix}-solano-quiz">Solano Quiz</a></li>\n                        '
+    quiz_link = f'<li><a href="https://quiz.bettermalolos.org/" target="_blank" rel="noopener noreferrer" data-i18n="{prefix}-malolos-quiz">Malolos Quiz</a></li>\n                        '
     
     match = re.search(sitemap_pattern, content)
     if match:
@@ -166,7 +166,7 @@ def fix_copyright(content, filepath):
     old_pattern1 = r'<div class="footer-copyright">\s*<span[^>]*>&copy;.*?</span>\s*<span class="footer-version">'
     
     new_copyright = '''<div class="footer-copyright">
-                    <span class="footer-copyright-text">&copy; 2026 BetterSolano.org.</span>
+                    <span class="footer-copyright-text">&copy; 2026 BetterMalolos.org.</span>
                     <span class="footer-copyright-license">MIT | CC BY 4.0</span>
                     <span class="footer-copyright-disclaimer">All public information sourced from official government portals.</span>
                     <span class="footer-version">'''
@@ -181,17 +181,17 @@ def fix_copyright(content, filepath):
         content = content.replace('id="copyright-year">2025<', 'id="copyright-year">2026<')
         changed = True
     
-    # Update "Better Solano" to "BetterSolano.org" in copyright if still old
-    if 'Better Solano. MIT' in content:
-        content = content.replace('Better Solano. MIT', 'BetterSolano.org. MIT')
+    # Update "Better Malolos" to "BetterMalolos.org" in copyright if still old
+    if 'Better Malolos. MIT' in content:
+        content = content.replace('Better Malolos. MIT', 'BetterMalolos.org. MIT')
         changed = True
     
     return content, changed
 
 
 def add_quiz_to_sitemap(content):
-    """Add Solano Quiz entry to sitemap page content."""
-    if 'quiz.bettersolano.org' in content:
+    """Add Malolos Quiz entry to sitemap page content."""
+    if 'quiz.bettermalolos.org' in content:
         return content, False
     
     # Find the External Resources section and add quiz there
@@ -206,7 +206,7 @@ def add_quiz_to_sitemap(content):
     news_pattern = r'(<a href="\.\./news/"[^>]*>.*?News.*?</a>)'
     match = re.search(news_pattern, content)
     if match:
-        quiz_entry = '\n                        <a href="https://quiz.bettersolano.org/" target="_blank" rel="noopener noreferrer" class="sitemap-link-item sitemap-link-item--external"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="sitemap-solano-quiz">Solano Quiz</span></a>'
+        quiz_entry = '\n                        <a href="https://quiz.bettermalolos.org/" target="_blank" rel="noopener noreferrer" class="sitemap-link-item sitemap-link-item--external"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="sitemap-malolos-quiz">Malolos Quiz</span></a>'
         insert_pos = match.end()
         content = content[:insert_pos] + quiz_entry + content[insert_pos:]
         return content, True
@@ -234,7 +234,7 @@ for filepath in html_files:
     
     original = content
     
-    # Fix 1: Add Solano Quiz footer link
+    # Fix 1: Add Malolos Quiz footer link
     content, quiz_changed = fix_footer_quiz_link(content, filepath)
     if quiz_changed:
         quiz_count += 1

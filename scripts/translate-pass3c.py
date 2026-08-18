@@ -50,8 +50,8 @@ FIXES_FIL = {
         "Kunin ang iyong kopya ng COM na wastong nairehistro at nilagdaan ng Receiving Officer at MCR o sinumang awtorisadong lumagda. Punan ang Client Feedback Form at ihulog sa itinalagang suggestion box.",
     "Submit the accomplished Certificate of Marriage (COM) for review. The COM must be duly signed by the contracting parties, solemnizing officer, and at least two witnesses.":
         "Isumite ang napunang Sertipiko ng Kasal (COM) para sa pagsusuri. Ang COM ay dapat wastong nilagdaan ng mga partido sa kontrata, opisyal na nagkasal, at hindi bababa sa dalawang saksi.",
-    "While volunteers make every effort to secure BetterSolano.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.":
-        "Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterSolano.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.",
+    "While volunteers make every effort to secure BetterMalolos.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.":
+        "Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterMalolos.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.",
 }
 
 def build_ilo_from_fil(fil_val):

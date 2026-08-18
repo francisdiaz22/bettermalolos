@@ -5,7 +5,7 @@
       "title": "Birth Certificate",
       "category": "Certificates & Vital Records",
       "categoryId": "certificates",
-      "description": "Get a certified copy of birth certificate registered in Solano",
+      "description": "Get a certified copy of birth certificate registered in Malolos",
       "keywords": [
         "birth",
         "certificate",
@@ -94,7 +94,7 @@
       "keywords": ["police", "clearance", "nbi", "criminal", "record"],
       "fee": "Varies",
       "processingTime": "3-5 days",
-      "office": "PNP Solano",
+      "office": "PNP Malolos",
       "url": "certificates.html"
     },
     {
@@ -746,7 +746,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/billing"
+      "url": "#TODO-add-malolos-filipizen-partnerbpls/billing"
     },
     {
       "id": "online-new-business",
@@ -758,7 +758,7 @@
       "fee": "Varies",
       "processingTime": "3-5 days",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/newbusiness"
+      "url": "#TODO-add-malolos-filipizen-partnerbpls/newbusiness"
     },
     {
       "id": "online-business-renewal",
@@ -770,7 +770,7 @@
       "fee": "Varies",
       "processingTime": "Same day",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/renewbusiness"
+      "url": "#TODO-add-malolos-filipizen-partnerbpls/renewbusiness"
     },
     {
       "id": "online-rpt-billing",
@@ -782,7 +782,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/rptis/billing"
+      "url": "#TODO-add-malolos-filipizen-partnerrptis/billing"
     },
     {
       "id": "online-payment-order",
@@ -794,7 +794,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/po/billing"
+      "url": "#TODO-add-malolos-filipizen-partnerpo/billing"
     }
   ]
 }

@@ -4,13 +4,13 @@
     "totalCost": 409494730.55,
     "completedProjects": 60,
     "ongoingProjects": 3,
-    "implementingAgency": "Nueva Vizcaya District Engineering Office"
+    "implementingAgency": "Bulacan District Engineering Office"
   },
   "projects": [
     {
       "id": "17BI0035",
       "name": "Rehabilitation/Improvement of Curifang Flood Control (Sta. 0+000 - Sta. 0+948)",
-      "location": "Brgy. Curifang, Solano, Nueva Vizcaya",
+      "location": "Brgy. Curifang, Malolos, Bulacan",
       "category": "Flood Control and Drainage",
       "contractor": "Jann-Norris Construction and Supplies Inc.",
       "contractorId": "35880",
@@ -21,7 +21,7 @@
     {
       "id": "17BI0037",
       "name": "Rehabilitation/Improvement of Bangar Flood Control (Sta. 0+000 - Sta. 0+948)",
-      "location": "Brgy. Bangar, Solano, Nueva Vizcaya",
+      "location": "Brgy. Bangar, Malolos, Bulacan",
       "category": "Flood Control and Drainage",
       "contractor": "Jann-Norris Construction and Supplies Inc.",
       "contractorId": "35880",
@@ -32,7 +32,7 @@
     {
       "id": "17BI0036",
       "name": "Rehabilitation/Improvement of Dadap Flood Control (Sta. 0+000 - Sta. 0+848)",
-      "location": "Brgy. Dadap, Solano, Nueva Vizcaya",
+      "location": "Brgy. Dadap, Malolos, Bulacan",
       "category": "Flood Control and Drainage",
       "contractor": "Jann-Norris Construction and Supplies Inc.",
       "contractorId": "35880",
@@ -43,7 +43,7 @@
     {
       "id": "18BI0068",
       "name": "Organizational Outcome 1: Ensure Safe and Reliable National Road System - Network Development - Road Widening - Primary Roads - Daang Maharlika - K0272+381-K0273+006",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Roads",
       "contractor": "R.O. Builders & Development Corporation",
       "contractorId": "22083",
@@ -55,7 +55,7 @@
     {
       "id": "18BI0028",
       "name": "Construction of Multi-Purpose Building (Pasalubong Center-Phase II)",
-      "location": "Brgy. Poblacion, Solano, Nueva Vizcaya",
+      "location": "Brgy. Poblacion, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -66,7 +66,7 @@
     {
       "id": "19BI0028",
       "name": "Construction of Multi-Purpose Building (Completion)",
-      "location": "Brgy. Quezon, Solano, Nueva Vizcaya",
+      "location": "Brgy. Quezon, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -77,7 +77,7 @@
     {
       "id": "16BI0006",
       "name": "Bascaran Nat'l High School",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -88,7 +88,7 @@
     {
       "id": "16BI0007",
       "name": "Uddiawan Nat'l High School",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "BRG Construction",
       "contractorId": "21931",
@@ -98,8 +98,8 @@
     },
     {
       "id": "17BI0117",
-      "name": "Solano North ES",
-      "location": "Solano, Nueva Vizcaya",
+      "name": "Malolos North ES",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Jovic Construction and Supply",
       "contractorId": "35703",
@@ -110,7 +110,7 @@
     {
       "id": "17BI0057",
       "name": "Construction of Multi-Purpose Bldg. (Pasalubong and Training Center)",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -122,7 +122,7 @@
     {
       "id": "17BI0088",
       "name": "Improvement of Tomas Dacayo Community Center",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -133,7 +133,7 @@
     {
       "id": "17BI0044",
       "name": "Construction of Multi-Purpose Building, Curifang",
-      "location": "Brgy. Curifang, Solano, Nueva Vizcaya",
+      "location": "Brgy. Curifang, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -144,7 +144,7 @@
     {
       "id": "17BI0010",
       "name": "Construction of Multi-Purpose Building, San Luis",
-      "location": "San Luis, Lone District, Solano, Nueva Vizcaya",
+      "location": "San Luis, Lone District, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -155,7 +155,7 @@
     {
       "id": "17BI0001",
       "name": "Construction of Multi-Purpose Building PD Galima",
-      "location": "Lone District, Solano, Nueva Vizcaya",
+      "location": "Lone District, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Jovic Construction and Supply",
       "contractorId": "35703",
@@ -166,7 +166,7 @@
     {
       "id": "16BI0043",
       "name": "Construction of Multi-Purpose Building Wacal",
-      "location": "Wacal, Lone District, Solano, Nueva Vizcaya",
+      "location": "Wacal, Lone District, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E.M. Bayatan Construction",
       "contractorId": "21332",
@@ -177,7 +177,7 @@
     {
       "id": "19BI0032",
       "name": "Construction (Completion) of Multi-Purpose Building (Pasalubong Center)",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E S De Guzman Construction",
       "contractorId": "17494",
@@ -189,7 +189,7 @@
     {
       "id": "22BI0076",
       "name": "Construction of Multi-Purpose Bldg., Poblacion South",
-      "location": "Poblacion South, Solano, Nueva Vizcaya",
+      "location": "Poblacion South, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -200,7 +200,7 @@
     {
       "id": "18BI0005",
       "name": "Construction of Multi-Purpose Building, San Juan",
-      "location": "Brgy. San Juan, Solano, Nueva Vizcaya",
+      "location": "Brgy. San Juan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -211,7 +211,7 @@
     {
       "id": "19BI0004",
       "name": "Construction of Elementary and Secondary School Buildings at Bascaran E/S, 1STY2CL",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Framada Construction and Material Supplies",
       "contractorId": "45435",
@@ -221,8 +221,8 @@
     },
     {
       "id": "18BI0007",
-      "name": "Construction of Multi-Purpose Building, Solano West Elementary School",
-      "location": "Solano, Nueva Vizcaya",
+      "name": "Construction of Multi-Purpose Building, Malolos West Elementary School",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E.M. Bayatan Construction",
       "contractorId": "21332",
@@ -233,7 +233,7 @@
     {
       "id": "20BI0029",
       "name": "Construction (Completion) of Multi-Purpose Building, Bagahabag",
-      "location": "Brgy. Bagahabag, Solano, Nueva Vizcaya",
+      "location": "Brgy. Bagahabag, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "N-J Construction",
       "contractorId": "43941",
@@ -244,7 +244,7 @@
     {
       "id": "20BI0041",
       "name": "Construction of Multi-Purpose Building, PD Galima",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Denisse-John Construction and Supplies",
       "contractorId": "37550",
@@ -256,7 +256,7 @@
     {
       "id": "22BI0039",
       "name": "Completion of Multi-Purpose Bldg., Lactawan",
-      "location": "Brgy. Lactawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Lactawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Mt. Land Construction",
       "contractorId": "48738",
@@ -267,7 +267,7 @@
     {
       "id": "19BI0017",
       "name": "Construction of Multi-Purpose Building (Stage)",
-      "location": "Brgy. Quezon, Solano, Nueva Vizcaya",
+      "location": "Brgy. Quezon, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Virile Construction and Supply",
       "contractorId": "34081",
@@ -278,7 +278,7 @@
     {
       "id": "19BI0011",
       "name": "Construction/Completion of Multi-Purpose Building, Uddiawan",
-      "location": "Brgy. Uddiawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Uddiawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Mighty Construction & Supply",
       "contractorId": "34278",
@@ -289,7 +289,7 @@
     {
       "id": "15BI0105",
       "name": "Const'n, Ubbog-Camanggaan-Pedro Gambol, Purok 5 Rd., Lactawan",
-      "location": "Brgy. Lactawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Lactawan, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Eric Van P. Sesbreno Construction",
       "contractorId": "26243",
@@ -300,7 +300,7 @@
     {
       "id": "15BI0106",
       "name": "Const'n, Upper and Lower, Purok 1 Brgy. Rd., Commonal",
-      "location": "Brgy. Commonal, Solano, Nueva Vizcaya",
+      "location": "Brgy. Commonal, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Eric Van P. Sesbreno Construction",
       "contractorId": "26243",
@@ -311,7 +311,7 @@
     {
       "id": "16BI0016",
       "name": "Construction of Nampayakan FMR",
-      "location": "Brgy. Quezon, Solano, Nueva Vizcaya",
+      "location": "Brgy. Quezon, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -323,7 +323,7 @@
     {
       "id": "16BI0020",
       "name": "Const'n of Acio FMR",
-      "location": "Brgy. Aggub, Solano, Nueva Vizcaya",
+      "location": "Brgy. Aggub, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -334,7 +334,7 @@
     {
       "id": "16BI0021",
       "name": "Const'n of Purok 2 Kasantolan FMR",
-      "location": "Brgy. Bascaran, Solano, Nueva Vizcaya",
+      "location": "Brgy. Bascaran, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Edwin Erwin Sison Construction",
       "contractorId": "20162",
@@ -345,7 +345,7 @@
     {
       "id": "15BI0107",
       "name": "Concreting, Purok 1-Mongkol (Purok 4) Rd.",
-      "location": "Brgy. Bangar, Solano, Nueva Vizcaya",
+      "location": "Brgy. Bangar, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Eric Van P. Sesbreno Construction",
       "contractorId": "26243",
@@ -356,7 +356,7 @@
     {
       "id": "22BI0078",
       "name": "Concreting of Brgy. Communal FMR",
-      "location": "Brgy. Communal, Solano, Nueva Vizcaya",
+      "location": "Brgy. Communal, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Dricholiu Construction",
       "contractorId": "65421",
@@ -367,7 +367,7 @@
     {
       "id": "21BI0004",
       "name": "Concreting of Wacal-Bangaan Road Along Ortiz Road",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Framada Construction and Material Supplies",
       "contractorId": "45435",
@@ -378,7 +378,7 @@
     {
       "id": "21BI0013",
       "name": "Concreting of Road in Purok 5, Bagahabag",
-      "location": "Barangay Bagahabag, Solano, Nueva Vizcaya",
+      "location": "Barangay Bagahabag, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Q.C.D. Construction and Supply",
       "contractorId": "37537",
@@ -390,7 +390,7 @@
     {
       "id": "21BI0006",
       "name": "Concreting of Sadang Road Along Purok 3, Wacal",
-      "location": "Barangay Wacal, Solano, Nueva Vizcaya",
+      "location": "Barangay Wacal, Malolos, Bulacan",
       "category": "Roads",
       "contractor": "Q.C.D. Construction and Supply",
       "contractorId": "37537",
@@ -401,7 +401,7 @@
     {
       "id": "18BI0040",
       "name": "Construction of Multi-Purpose Building (Phase III), Aggub",
-      "location": "Aggub, Solano, Nueva Vizcaya",
+      "location": "Aggub, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Jovic Construction and Supply",
       "contractorId": "35703",
@@ -412,7 +412,7 @@
     {
       "id": "18BI0012",
       "name": "Construction of Multi-Purpose Building, Tucal",
-      "location": "Brgy. Tucal, Solano, Nueva Vizcaya",
+      "location": "Brgy. Tucal, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Jovic Construction and Supply",
       "contractorId": "35703",
@@ -423,7 +423,7 @@
     {
       "id": "19BI0003",
       "name": "Construction of Multi-Purpose Building, Curifang",
-      "location": "Brgy. Curifang, Solano, Nueva Vizcaya",
+      "location": "Brgy. Curifang, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Triple P Construction",
       "contractorId": "31616",
@@ -434,7 +434,7 @@
     {
       "id": "18BI0073",
       "name": "Construction of Multi-Purpose Building, Commonal",
-      "location": "Brgy. Commonal, Solano, Nueva Vizcaya",
+      "location": "Brgy. Commonal, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -445,7 +445,7 @@
     {
       "id": "18BI0008",
       "name": "Construction of Multi-Purpose Building, Quirino",
-      "location": "Brgy. Quirino, Solano, Nueva Vizcaya",
+      "location": "Brgy. Quirino, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Jovic Construction and Supply",
       "contractorId": "35703",
@@ -457,7 +457,7 @@
     {
       "id": "19BI0045",
       "name": "Construction of Multi-Purpose Building (Public Market)",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Mighty Construction & Supply",
       "contractorId": "34278",
@@ -468,7 +468,7 @@
     {
       "id": "20BI0046",
       "name": "Construction of Multi-Purpose Building, Concepcion",
-      "location": "Brgy. Concepcion, Solano, Nueva Vizcaya",
+      "location": "Brgy. Concepcion, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Reasons Construction & Supplies",
       "contractorId": "63034",
@@ -479,7 +479,7 @@
     {
       "id": "23BI0038",
       "name": "Completion of Multi-Purpose Bldg., Poblacion South",
-      "location": "Brgy. Poblacion South, Solano, Nueva Vizcaya",
+      "location": "Brgy. Poblacion South, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -489,8 +489,8 @@
     },
     {
       "id": "19BI0008",
-      "name": "Construction of Multi-Purpose Building, Solano South Central",
-      "location": "Barangay Solano South Central, Solano, Nueva Vizcaya",
+      "name": "Construction of Multi-Purpose Building, Malolos South Central",
+      "location": "Barangay Malolos South Central, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "JDTS Const. Corporation",
       "contractorId": "39430",
@@ -501,7 +501,7 @@
     {
       "id": "23BI0054",
       "name": "Construction of Multi-Purpose Building, Quezon",
-      "location": "Barangay Quezon, Solano, Nueva Vizcaya",
+      "location": "Barangay Quezon, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Mighty Construction & Supply",
       "contractorId": "34278",
@@ -512,7 +512,7 @@
     {
       "id": "22BI0002",
       "name": "Construction (Completion) of Multi-Purpose Building, Concepcion",
-      "location": "Barangay Concepcion, Solano, Nueva Vizcaya",
+      "location": "Barangay Concepcion, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Reasons Construction & Supplies",
       "contractorId": "63034",
@@ -524,7 +524,7 @@
     {
       "id": "21BI0058",
       "name": "Construction of Multi-Purpose Building",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "John-Jann Const. and Supplies Corp.",
       "contractorId": "47191",
@@ -535,7 +535,7 @@
     {
       "id": "21BI0025",
       "name": "Construction (Completion) of Multi-Purpose Building",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -546,7 +546,7 @@
     {
       "id": "23BI0044",
       "name": "Construction of Multi-Purpose Building, Uddiawan National High School",
-      "location": "Brgy. Uddiawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Uddiawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "BRG Construction",
       "contractorId": "21931",
@@ -557,7 +557,7 @@
     {
       "id": "21BI0037",
       "name": "Construction/Improvement of Multi-Purpose Building, Aggub",
-      "location": "Barangay Aggub, Solano, Nueva Vizcaya",
+      "location": "Barangay Aggub, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "4Kids Builders and Construction Supply",
       "contractorId": "41980",
@@ -568,7 +568,7 @@
     {
       "id": "20BI0022",
       "name": "Construction/Improvement of Multi-Purpose Building, Dadap",
-      "location": "Barangay Dadap, Solano, Nueva Vizcaya",
+      "location": "Barangay Dadap, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -579,7 +579,7 @@
     {
       "id": "19BI0009",
       "name": "Construction of Multi-Purpose Building, Bascaran",
-      "location": "Brgy. Bascaran, Solano, Nueva Vizcaya",
+      "location": "Brgy. Bascaran, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Denisse-John Construction and Supplies",
       "contractorId": "37550",
@@ -591,7 +591,7 @@
     {
       "id": "18BI0043",
       "name": "Construction of Multi-Purpose Building, Bascaran",
-      "location": "Bascaran, Solano, Nueva Vizcaya",
+      "location": "Bascaran, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Monte Construction & Supply",
       "contractorId": "19474",
@@ -602,7 +602,7 @@
     {
       "id": "23BI0006",
       "name": "Construction/Rehabilitation of Water Supply/Septage and Sewerage/Rain Water Collectors/Other Water Supply System - Construction of Solar Water System",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Water Supply",
       "contractor": "Mighty Construction & Supply",
       "contractorId": "34278",
@@ -613,7 +613,7 @@
     {
       "id": "23BI0005",
       "name": "Construction (Completion) of Multi-Purpose Building, Aggub",
-      "location": "Barangay Aggub, Solano, Nueva Vizcaya",
+      "location": "Barangay Aggub, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "E.M. Bayatan Construction",
       "contractorId": "21332",
@@ -624,7 +624,7 @@
     {
       "id": "16BI0044",
       "name": "Construction of Multi-Purpose Building, Lactawan",
-      "location": "Lactawan, Solano, Nueva Vizcaya",
+      "location": "Lactawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "G.M. Pajarillaga Construction & Supply",
       "contractorId": "21760",
@@ -635,7 +635,7 @@
     {
       "id": "20BI0051",
       "name": "Construction of Multi-Purpose Building",
-      "location": "Solano, Nueva Vizcaya",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -646,7 +646,7 @@
     {
       "id": "23BI0037",
       "name": "Completion of Multi-Purpose Bldg. (Health Facility), Uddiawan",
-      "location": "Brgy. Uddiawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Uddiawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Tamrhey Construction",
       "contractorId": "53202",
@@ -658,7 +658,7 @@
     {
       "id": "23BI0034",
       "name": "Construction of Multi-Purpose Bldg. and Public Market, Poblacion South",
-      "location": "Poblacion South, Solano, Nueva Vizcaya",
+      "location": "Poblacion South, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Aces Construction Materials Trading",
       "contractorId": "46890",
@@ -669,7 +669,7 @@
     {
       "id": "25BI0058",
       "name": "Construction of Multi-Purpose Building, San Luis",
-      "location": "Brgy. San Luis, Solano, Nueva Vizcaya",
+      "location": "Brgy. San Luis, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Tamrhey Construction",
       "contractorId": "53202",
@@ -680,7 +680,7 @@
     {
       "id": "18BI0001",
       "name": "Construction of Multi-Purpose Building, Poblacion North",
-      "location": "Brgy. Poblacion North, Solano, Nueva Vizcaya",
+      "location": "Brgy. Poblacion North, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Mighty Construction & Supply",
       "contractorId": "34278",
@@ -691,7 +691,7 @@
     {
       "id": "25BI0071",
       "name": "Completion of Multi-Purpose Building, Uddiawan",
-      "location": "Brgy. Uddiawan, Solano, Nueva Vizcaya",
+      "location": "Brgy. Uddiawan, Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Tamrhey Construction",
       "contractorId": "53202",
@@ -701,8 +701,8 @@
     },
     {
       "id": "19BI0070",
-      "name": "Construction (Completion) of Multi-Purpose Building, Solano National High School",
-      "location": "Solano, Nueva Vizcaya",
+      "name": "Construction (Completion) of Multi-Purpose Building, Malolos National High School",
+      "location": "Malolos, Bulacan",
       "category": "Buildings and Facilities",
       "contractor": "Regal Design & Construction",
       "contractorId": "63400",

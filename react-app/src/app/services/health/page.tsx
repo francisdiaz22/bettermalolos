@@ -143,7 +143,7 @@ export default function HealthPage() {
               <div className="health-facility-meta">
                 <span>
                   <i className="bi bi-geo-alt"></i>
-                  <span>{t('health-national-highway-solano')}</span>
+                  <span>{t('health-national-highway-malolos')}</span>
                 </span>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function HealthPage() {
               <div className="health-facility-meta">
                 <span>
                   <i className="bi bi-geo-alt"></i>
-                  <span>{t('health-national-highway-solano')}</span>
+                  <span>{t('health-national-highway-malolos')}</span>
                 </span>
               </div>
             </div>
