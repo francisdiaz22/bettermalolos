@@ -1,173 +1,82 @@
 {
   "title": "Malolos Competitive Index",
-  "description": "Annual competitiveness indicators measuring local economic performance",
-  "source": "Cities and Municipalities Competitiveness Index (CMCI)",
+  "description": "Official CMCI overall and pillar performance for the City of Malolos",
+  "source": "DTI Cities and Municipalities Competitiveness Index (CMCI)",
+  "sourceUrl": "https://cmci.dti.gov.ph/lgu-profile.php?lgu=Malolos&year=2024",
   "years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "overall": {
+    "scores": [29.27, 38.16, 36.98, 32.07, 43.08, 38.38, 36.72, 39.62, 41.43],
+    "ranks": [82, 68, 104, 107, 33, 29, 38, 27, 28]
+  },
   "pillars": [
     {
       "id": "economic-dynamism",
       "name": "Economic Dynamism",
-      "icon": "bi-graph-up-arrow",
-      "indicators": [
-        {
-          "name": "Local Economy Size",
-          "values": [0.4353, 0.1829, 0.1004, 0.042, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259]
-        },
-        {
-          "name": "Local Economy Growth",
-          "values": [0.0847, 0.003, 0.0081, 0.0028, 0.3297, 0.0026, 0.0, 0.0005, 0.0318]
-        },
-        {
-          "name": "Active Establishments",
-          "values": [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994]
-        },
-        {
-          "name": "Safety Compliant Business",
-          "values": [null, 0.2991, 0.3683, 0.2471, 0.247, 0.2629, 0.0, 0.248, 0.2235]
-        },
-        {
-          "name": "Employment Generation",
-          "values": [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835]
-        }
-      ]
+      "scores": [8.6149, 5.2478, 4.4756, 4.896, 6.8844, 7.005, 4.9146, 4.0515, 3.409],
+      "ranks": [63, 49, 90, 56, 36, 24, 32, 39, 87]
     },
     {
       "id": "government-efficiency",
       "name": "Government Efficiency",
-      "icon": "bi-building-check",
-      "indicators": [
-        {
-          "name": "Cost of Living",
-          "values": [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919]
-        },
-        {
-          "name": "Cost of Doing Business",
-          "values": [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.546, 1.5599]
-        },
-        {
-          "name": "Financial Deepening",
-          "values": [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288]
-        },
-        {
-          "name": "Productivity",
-          "values": [0.0062, 0.0339, 0.0083, 0.004, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297]
-        },
-        {
-          "name": "Compliance to National Directives",
-          "values": [3.0994, 2.1474, 0.0, 2.45, 2.5, 2.381, 1.8929, 1.9565, 1.96]
-        }
-      ]
+      "scores": [9.8593, 8.4357, 9.0068, 8.6344, 10.6755, 10.0308, 9.3361, 9.8032, 11.3715],
+      "ranks": [91, 102, 108, 98, 43, 43, 45, 36, 17]
     },
     {
       "id": "infrastructure",
       "name": "Infrastructure",
-      "icon": "bi-building-gear",
-      "indicators": [
-        {
-          "name": "Road Network",
-          "values": [0.0019, 0.0003, 0.0, 0.009, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016]
-        },
-        {
-          "name": "Distance to Ports",
-          "values": [2.3543, 1.8319, 0.0, 1.6595, 2.4576, 2.4658, 1.3088, 1.562, 1.5281]
-        },
-        {
-          "name": "Availability of Basic Utilities",
-          "values": [3.3333, 2.5, 0.0, 1.8498, 2.475, 2.4714, 0.0037, 0.6363, 0.356]
-        },
-        {
-          "name": "Transportation Vehicles",
-          "values": [0.4063, 0.2816, 0.0, 0.0343, 0.0221, 0.0153, 0.023, 0.0636, 0.0959]
-        },
-        {
-          "name": "Information Technology Capacity",
-          "values": [1.4638, 0.4, 0.0, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155]
-        }
-      ]
+      "scores": [10.7959, 7.8156, 8.0545, 7.6722, 7.876, 7.7326, 5.3883, 5.5482, 5.6172],
+      "ranks": [41, 44, 52, 33, 28, 31, 20, 27, 20]
     },
     {
       "id": "resiliency",
       "name": "Resiliency",
-      "icon": "bi-shield-check",
-      "indicators": [
-        {
-          "name": "Disaster Risk Reduction Plan",
-          "values": [null, 2.5, 0.0, 2.4537, 2.5, 2.4474, 1.9995, 1.9583, 1.9783]
-        },
-        {
-          "name": "Annual Disaster Drill",
-          "values": [null, 2.5, 0.0, 2.25, 2.5, 1.2583, 1.002, 1.0016, 1.0023]
-        },
-        {
-          "name": "Early Warning System",
-          "values": [null, 2.5, 0.0, 2.5, 2.5, 1.2573, 1.0062, 1.0033, 1.0397]
-        },
-        {
-          "name": "Budget for DRRMP",
-          "values": [null, 0.0022, 0.0, 0.2655, 0.1649, 0.0183, 0.0, 0.0699, 0.002]
-        },
-        {
-          "name": "Local Risk Assessments",
-          "values": [null, 2.5, 0.0, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0]
-        },
-        {
-          "name": "Emergency Infrastructure",
-          "values": [null, 0.8921, 0.0, 0.5495, 0.5883, 0.3314, 0.4282, 0.4363, 0.4754]
-        }
-      ]
+      "scores": [null, 16.663, 15.4399, 10.8638, 17.6427, 13.613, 11.6349, 11.5328, 12.1106],
+      "ranks": [null, 30, 108, 110, 23, 52, 28, 53, 19]
     },
     {
       "id": "innovation",
       "name": "Innovation",
-      "icon": "bi-lightbulb",
-      "indicators": [
-        {
-          "name": "ICT Plan",
-          "values": [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001]
-        },
-        {
-          "name": "R&D Expenditures Allotment",
-          "values": [null, null, null, null, null, null, 0.0, 0.0, 0.0006]
-        },
-        {
-          "name": "ICT Use: E-BPLS Software",
-          "values": [null, null, null, null, null, null, 2.0, 0.0, 2.0]
-        },
-        {
-          "name": "Online Payment Facilities",
-          "values": [null, null, null, null, null, null, 0.0, 0.0, 0.0]
-        },
-        {
-          "name": "STEM Graduates",
-          "values": [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181]
-        },
-        {
-          "name": "Start Up and Innovation Facilities",
-          "values": [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227]
-        }
-      ]
+      "scores": [null, null, null, null, null, null, 5.4465, 8.6849, 8.9204],
+      "ranks": [null, null, null, null, null, null, 63, 18, 17]
     }
   ],
-  "keyIndicators": [
-    {
-      "name": "Health",
-      "values": [0.7476, 0.5608, 0.0, 0.3946, 0.3941, 0.469, 0.3219, 0.2037, 0.2995]
+  "latestIndicators": {
+    "year": 2024,
+    "economic-dynamism": {
+      "Local Economy Size": 0.0989,
+      "Local Economy Growth": 0.0113,
+      "Active Establishments in the Locality": 0.5756,
+      "Safety Compliant Business": 0.4683,
+      "Employment Generation": 0.0381
     },
-    {
-      "name": "Education",
-      "values": [0.0605, 0.0992, 0.0, 0.0348, 0.1006, 0.0231, 0.1263, 0.0764, 0.1341]
+    "government-efficiency": {
+      "Compliance to National Directives": 1.9643,
+      "Presence of Investment Promotion Unit": 1.9524,
+      "Compliance to ARTA Citizens Charter": 2.0,
+      "Getting Business Permits": 2.0,
+      "Social Protection": 1.9198
     },
-    {
-      "name": "Social Protection",
-      "values": [0.2988, 0.2421, 0.0, 0.2778, 0.2845, 0.4097, 0.0011, 0.2567, 0.4923]
+    "infrastructure": {
+      "Road Network": 0.0042,
+      "Distance to Ports": 1.7339,
+      "Availability of Basic Utilities": 1.5875,
+      "Transportation Vehicles": 0.1975,
+      "Information Technology Capacity": 0.4413
     },
-    {
-      "name": "Peace and Order",
-      "values": [0.0638, 0.408, 0.0, 0.0395, 0.0347, 0.0649, 0.0, 0.2571, 0.1031]
+    "resiliency": {
+      "Disaster Risk Reduction Plan": 1.9091,
+      "Annual Disaster Drill": 1.3282,
+      "Early Warning System": 1.006,
+      "Budget for DRRMP": 0.0658,
+      "Local Risk Assessments": 2.0
     },
-    {
-      "name": "LGU Investment",
-      "values": [2.4381, 0.2859, 0.0, 0.2648, 0.1597, 0.0191, 0.0, 0.0016, 0.0108]
+    "innovation": {
+      "ICT Plan": 2.0001,
+      "Innovation Financing: R&D Expenditures Allotment": 0.0909,
+      "ICT Use: E-BPLS Software": 2.0,
+      "STEM graduates": 0.5344,
+      "Start Up and Innovation Facilities": 0.4904
     }
-  ]
+  },
+  "methodologyNote": "DTI published three pillars in 2016, four in 2017-2021, and five beginning in 2022."
 }

@@ -220,6 +220,15 @@
   color: var(--color-text-light);
 }
 
+.finance-note {
+  max-width: 760px;
+  margin: 10px auto 0;
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* Income Breakdown */
 .income-breakdown {
   background: white;
@@ -362,7 +371,7 @@
 }
 
 .chart-wrapper-bar {
-  height: 600px;
+  height: 1250px;
 }
 
 /* Distribution Section */
@@ -465,6 +474,21 @@
 }
 
 /* Economy Section */
+.economy-period {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -16px auto 24px;
+  padding: 7px 12px;
+  border: 1px solid rgba(0, 50, 160, 0.12);
+  border-radius: 999px;
+  background: rgba(0, 50, 160, 0.05);
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
 .economy-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -510,17 +534,18 @@
 
 .economy-label {
   font-size: 0.875rem;
-  color: var(--color-text-light);
+  font-weight: 600;
+  color: var(--color-text);
   margin-bottom: 8px;
 }
 
-.economy-trend {
+.economy-detail {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   font-size: 0.75rem;
-  color: var(--color-success);
-  background: rgba(6, 167, 125, 0.1);
+  color: var(--color-text-light);
+  background: var(--color-bg-alt);
   padding: 4px 10px;
   border-radius: 50px;
 }
@@ -538,6 +563,37 @@
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 16px;
+}
+
+.economy-chart-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.economy-chart-heading h4 {
+  margin-bottom: 4px;
+}
+
+.economy-chart-heading p,
+.economy-chart-note {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.economy-chart-total {
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.economy-chart-note {
+  margin-top: 16px;
 }
 
 .sc-bars {
@@ -631,23 +687,21 @@
     box-shadow 0.2s ease;
 }
 
-/* Sector color classes */
-.sc-color-agri {
-  background-color: #10b981;
+/* Income composition color classes */
+.sc-color-local {
+  background-color: #0f766e;
 }
-.sc-color-trade {
-  background-color: #3b82f6;
-}
-.sc-color-services {
-  background-color: #8b5cf6;
-}
-.sc-color-industry {
-  background-color: #f59e0b;
+.sc-color-other {
+  background-color: #2563eb;
 }
 
 @media (max-width: 575px) {
   .sc-row {
     padding: 12px 14px;
+  }
+
+  .economy-chart-heading {
+    gap: 12px;
   }
 }
 
@@ -670,7 +724,7 @@
   position: relative;
 }
 
-.poverty-card-2021 {
+.poverty-card-latest {
   border-color: var(--color-success);
   box-shadow: 0 4px 20px rgba(6, 167, 125, 0.15);
 }
@@ -686,7 +740,7 @@
   margin-bottom: 16px;
 }
 
-.poverty-card-2021 .poverty-year {
+.poverty-card-latest .poverty-year {
   background: rgba(6, 167, 125, 0.1);
   color: var(--color-success);
 }
@@ -728,7 +782,7 @@
   transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.poverty-card-2021 .poverty-fill {
+.poverty-card-latest .poverty-fill {
   background: var(--color-success);
 }
 
@@ -862,7 +916,7 @@
   }
 
   .chart-wrapper-bar {
-    height: 500px;
+    height: 1100px;
   }
 
   .barangay-row {
@@ -1059,7 +1113,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.pillar-rank {
+  margin-bottom: 8px;
+  color: var(--color-text-light);
+  font-size: 0.6875rem;
+  font-weight: 600;
 }
 
 .pillar-trend {
@@ -1170,6 +1231,10 @@
 
 .cmci-chart-container h4 i {
   color: var(--color-primary);
+}
+
+.cmci-methodology-note {
+  color: var(--color-text-light);
 }
 
 /* Responsive */

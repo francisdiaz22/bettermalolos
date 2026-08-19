@@ -1,54 +1,74 @@
 {
   "mayor": {
-    "name": "Hon. Philip A. Dacayo",
-    "title": "Municipal Mayor",
+    "name": "Hon. Atty. Christian D. Natividad",
+    "title": "City Mayor",
     "image": "assets/images/officials/mayor.jpg"
   },
   "vice_mayor": {
-    "name": "Hon. Eduardo D. Tiongson",
-    "title": "Municipal Vice Mayor",
+    "name": "Hon. Engr. Gilbert T. Gatchalian",
+    "title": "Vice Mayor",
     "image": "assets/images/officials/vice-mayor.jpg"
   },
   "councilors": [
     {
-      "name": "Hon. Councilor One",
-      "title": "SB Member",
+      "name": "Hon. John Vincent G. Vitug III",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb1.jpg"
     },
     {
-      "name": "Hon. Councilor Two",
-      "title": "SB Member",
+      "name": "Hon. Atty. Dennis D. San Diego",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb2.jpg"
     },
     {
-      "name": "Hon. Councilor Three",
-      "title": "SB Member",
+      "name": "Hon. Meri Ann Geli Bulaong",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb3.jpg"
     },
     {
-      "name": "Hon. Councilor Four",
-      "title": "SB Member",
+      "name": "Hon. Edgardo F. Domingo",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb4.jpg"
     },
     {
-      "name": "Hon. Councilor Five",
-      "title": "SB Member",
+      "name": "Hon. Victorino M. Aldaba III",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb5.jpg"
     },
     {
-      "name": "Hon. Councilor Six",
-      "title": "SB Member",
+      "name": "Hon. Luis Alfonso M. Arcega",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb6.jpg"
     },
     {
-      "name": "Hon. Councilor Seven",
-      "title": "SB Member",
+      "name": "Hon. Miel Arthem B. Agustin",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb7.jpg"
     },
     {
-      "name": "Hon. Councilor Eight",
-      "title": "SB Member",
+      "name": "Hon. Miguel Carlos B. Sotto",
+      "title": "City Councilor",
       "image": "assets/images/officials/sb8.jpg"
+    },
+    {
+      "name": "Hon. Noel G. Pineda",
+      "title": "City Councilor",
+      "image": "assets/images/officials/sb9.jpg"
+    },
+    {
+      "name": "Hon. Christian Peter C. Bautista",
+      "title": "City Councilor",
+      "image": "assets/images/officials/sb10.jpg"
+    },
+    {
+      "name": "Hon. Cesar S. Bartolome",
+      "title": "ABC President",
+      "image": "assets/images/officials/abc-president.jpg"
+    },
+    {
+      "name": "Hon. Rian Maclyn L. Dela Cruz",
+      "title": "SK President",
+      "image": "assets/images/officials/sk-president.jpg"
     }
   ]
 }

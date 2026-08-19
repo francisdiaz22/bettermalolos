@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v3';
+var CACHE_VERSION = 'v7';
 var STATIC_CACHE = 'bettermalolos-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'bettermalolos-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -19,9 +19,11 @@ var PRECACHE_URLS = [
   '/assets/js/main.js',
   '/assets/js/translations.js',
   '/assets/js/info-bar.js',
-  '/assets/images/logo/better-malolos-logo.png',
-  '/assets/images/logo/better-malolos-logo-white.svg',
-  '/assets/images/logo/favicon.svg',
+  '/assets/images/logo/better-malolos-main.png',
+  '/assets/images/logo/better-malolos-bw.png',
+  '/assets/images/logo/favicon.png',
+  '/assets/images/logo/favicon-192.png',
+  '/assets/images/logo/apple-touch-icon.png',
   '/assets/images/logo/favicon.ico',
   '/manifest.webmanifest',
 ];
@@ -238,8 +240,8 @@ self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification(data.title || 'BetterMalolos', {
       body: data.body || '',
-      icon: '/assets/images/logo/favicon.svg',
-      badge: '/assets/images/logo/favicon.svg',
+      icon: '/assets/images/logo/favicon.png',
+      badge: '/assets/images/logo/favicon.png',
       tag: data.tag || 'bettermalolos-notification',
       data: { url: data.url || '/' },
     })

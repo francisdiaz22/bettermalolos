@@ -17,36 +17,66 @@ const COLORS = {
   info: getThemeColor('--color-info'),
 };
 
-// Barangay data (2024 Census)
+// Barangay population data (2024 POPCEN)
+// Source: PSA PSGC, City of Malolos (PSGC code 0301410000)
 const barangayData = [
-  { name: 'Roxas', pop: 9088 },
-  { name: 'Quirino', pop: 6572 },
-  { name: 'Osmeña', pop: 6403 },
-  { name: 'Quezon', pop: 5758 },
-  { name: 'Curifang', pop: 4885 },
-  { name: 'Bagahabag', pop: 4731 },
-  { name: 'Uddiawan', pop: 4217 },
-  { name: 'Bascaran', pop: 3845 },
-  { name: 'Aggub', pop: 3101 },
-  { name: 'San Luis', pop: 2668 },
-  { name: 'Communal', pop: 2586 },
-  { name: 'Lactawan', pop: 2109 },
-  { name: 'San Juan', pop: 1965 },
-  { name: 'Concepcion', pop: 1954 },
-  { name: 'Dadap', pop: 1409 },
-  { name: 'Wacal', pop: 1398 },
-  { name: 'Bangaan', pop: 1284 },
-  { name: 'Tucal', pop: 1244 },
-  { name: 'Bangar', pop: 1146 },
-  { name: 'Pilar D. Galima', pop: 1146 },
-  { name: 'Poblacion North', pop: 970 },
-  { name: 'Poblacion South', pop: 817 },
+  { name: 'Longos', pop: 17863 },
+  { name: 'Mojon', pop: 16706 },
+  { name: 'Bulihan', pop: 16224 },
+  { name: 'Tikay', pop: 13359 },
+  { name: 'Bangkal', pop: 12935 },
+  { name: 'Look 1st', pop: 9937 },
+  { name: 'Panasahan', pop: 9664 },
+  { name: 'Sumapang Matanda', pop: 9166 },
+  { name: 'Santor', pop: 8745 },
+  { name: 'Pinagbakahan', pop: 7947 },
+  { name: 'Caingin', pop: 7375 },
+  { name: 'Dakila', pop: 7215 },
+  { name: 'Santisima Trinidad', pop: 6797 },
+  { name: 'Matimbo', pop: 6699 },
+  { name: 'Ligas', pop: 6684 },
+  { name: 'Santo Rosario', pop: 6509 },
+  { name: 'Mabolo', pop: 6309 },
+  { name: 'Barihan', pop: 5869 },
+  { name: 'Caniogan', pop: 5297 },
+  { name: 'San Pablo', pop: 5106 },
+  { name: 'Bagna', pop: 4944 },
+  { name: 'Lugam', pop: 4871 },
+  { name: 'Atlag', pop: 4778 },
+  { name: 'Cofradia', pop: 4725 },
+  { name: 'Balayong', pop: 4618 },
+  { name: 'San Juan', pop: 4618 },
+  { name: 'Guinhawa', pop: 4335 },
+  { name: 'Canalate', pop: 3710 },
+  { name: 'Balite', pop: 3556 },
+  { name: 'Look 2nd', pop: 3364 },
+  { name: 'Bungahan', pop: 3354 },
+  { name: 'Bagong Bayan', pop: 3206 },
+  { name: 'Mambog', pop: 3101 },
+  { name: 'Anilao', pop: 3019 },
+  { name: 'Pamarawan', pop: 2741 },
+  { name: 'Sumapang Bata', pop: 2577 },
+  { name: 'San Vicente', pop: 2475 },
+  { name: 'Catmon', pop: 2357 },
+  { name: 'San Gabriel', pop: 2177 },
+  { name: 'San Agustin', pop: 2072 },
+  { name: 'Santo Cristo', pop: 2044 },
+  { name: 'Taal', pop: 1799 },
+  { name: 'Santiago', pop: 1786 },
+  { name: 'Liang', pop: 1403 },
+  { name: 'Calero', pop: 1347 },
+  { name: 'Babatnin', pop: 1002 },
+  { name: 'Masile', pop: 788 },
+  { name: 'Niugan', pop: 781 },
+  { name: 'Namayan', pop: 664 },
+  { name: 'Santo Niño', pop: 661 },
+  { name: 'Caliligawan', pop: 530 },
 ];
 
-// Historical data
+// City of Malolos census population (PSA, various census years)
 const historicalData = {
   years: [1990, 1995, 2000, 2007, 2010, 2015, 2020, 2024],
-  populations: [38006, 42857, 47288, 53004, 56831, 62649, 65896, 69296],
+  populations: [125178, 147414, 175291, 225244, 234945, 252074, 261189, 269809],
 };
 
 // Chart instances
@@ -158,6 +188,50 @@ function animateBars(container) {
 }
 
 /**
+ * Render the ranked barangay lists from the same data used by the charts.
+ */
+function renderBarangayLists() {
+  const topList = document.getElementById('barangayTopList');
+  const remainingList = document.getElementById('barangayRemainingList');
+  if (!topList || !remainingList) return;
+
+  const highestPopulation = barangayData[0].pop;
+
+  const createRow = (barangay, index) => {
+    const row = document.createElement('div');
+    row.className = 'barangay-row';
+    row.dataset.rank = String(index + 1);
+
+    const rank = document.createElement('span');
+    rank.className = 'rank';
+    rank.textContent = `#${index + 1}`;
+
+    const name = document.createElement('span');
+    name.className = 'name';
+    name.textContent = barangay.name;
+
+    const barWrap = document.createElement('div');
+    barWrap.className = 'bar-wrap';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.dataset.width = ((barangay.pop / highestPopulation) * 100).toFixed(1);
+    barWrap.appendChild(bar);
+
+    const population = document.createElement('span');
+    population.className = 'pop';
+    population.textContent = barangay.pop.toLocaleString('en-PH');
+
+    row.append(rank, name, barWrap, population);
+    return row;
+  };
+
+  barangayData.forEach((barangay, index) => {
+    const target = index < 10 ? topList : remainingList;
+    target.appendChild(createRow(barangay, index));
+  });
+}
+
+/**
  * Create Historical Line Chart
  */
 function createHistoricalChart() {
@@ -240,6 +314,10 @@ function createDistributionChart() {
   if (!ctx) return;
 
   const top10 = barangayData.slice(0, 10);
+  const otherPopulation = barangayData
+    .slice(10)
+    .reduce((total, barangay) => total + barangay.pop, 0);
+  const distributionData = [...top10, { name: 'Other 41 barangays', pop: otherPopulation }];
   const colors = [
     COLORS.primary,
     COLORS.accent,
@@ -251,15 +329,16 @@ function createDistributionChart() {
     '#F59E0B',
     '#6366F1',
     COLORS.secondary,
+    '#94A3B8',
   ];
 
   charts.distribution = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: top10.map((d) => d.name),
+      labels: distributionData.map((d) => d.name),
       datasets: [
         {
-          data: top10.map((d) => d.pop),
+          data: distributionData.map((d) => d.pop),
           backgroundColor: colors,
           borderColor: '#fff',
           borderWidth: 3,
@@ -326,7 +405,7 @@ function createBarChart() {
           label: 'Population',
           data: sorted.map((d) => d.pop),
           backgroundColor: sorted.map((_, i) => {
-            const opacity = 1 - i * 0.03;
+            const opacity = Math.max(0.25, 1 - i * 0.015);
             return `rgba(0, 50, 160, ${opacity})`;
           }),
           borderRadius: 4,
@@ -435,91 +514,36 @@ function initEconomyCounters() {
  */
 const cmciData = {
   years: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+  overall: {
+    scores: [29.27, 38.16, 36.98, 32.07, 43.08, 38.38, 36.72, 39.62, 41.43],
+    ranks: [82, 68, 104, 107, 33, 29, 38, 27, 28],
+  },
   pillars: {
     economicDynamism: {
-      labels: [
-        'Local Economy Size',
-        'Economy Growth',
-        'Active Establishments',
-        'Safety Compliant',
-        'Employment',
-      ],
-      data: [
-        [0.4353, 0.1829, 0.1004, 0.042, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259],
-        [0.0847, 0.003, 0.0081, 0.0028, 0.3297, 0.0026, 0.0, 0.0005, 0.0318],
-        [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994],
-        [null, 0.2991, 0.3683, 0.2471, 0.247, 0.2629, 0.0, 0.248, 0.2235],
-        [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835],
-      ],
+      label: 'Economic Dynamism',
+      scores: [8.6149, 5.2478, 4.4756, 4.896, 6.8844, 7.005, 4.9146, 4.0515, 3.409],
+      ranks: [63, 49, 90, 56, 36, 24, 32, 39, 87],
     },
     governmentEfficiency: {
-      labels: [
-        'Cost of Living',
-        'Cost of Business',
-        'Financial Deepening',
-        'Productivity',
-        'Compliance',
-      ],
-      data: [
-        [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919],
-        [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.546, 1.5599],
-        [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288],
-        [0.0062, 0.0339, 0.0083, 0.004, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297],
-        [3.0994, 2.1474, 0.0, 2.45, 2.5, 2.381, 1.8929, 1.9565, 1.96],
-      ],
+      label: 'Government Efficiency',
+      scores: [9.8593, 8.4357, 9.0068, 8.6344, 10.6755, 10.0308, 9.3361, 9.8032, 11.3715],
+      ranks: [91, 102, 108, 98, 43, 43, 45, 36, 17],
     },
     infrastructure: {
-      labels: [
-        'Road Network',
-        'Distance to Ports',
-        'Basic Utilities',
-        'Transportation',
-        'IT Capacity',
-      ],
-      data: [
-        [0.0019, 0.0003, 0.0, 0.009, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016],
-        [2.3543, 1.8319, 0.0, 1.6595, 2.4576, 2.4658, 1.3088, 1.562, 1.5281],
-        [3.3333, 2.5, 0.0, 1.8498, 2.475, 2.4714, 0.0037, 0.6363, 0.356],
-        [0.4063, 0.2816, 0.0, 0.0343, 0.0221, 0.0153, 0.023, 0.0636, 0.0959],
-        [1.4638, 0.4, 0.0, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155],
-      ],
+      label: 'Infrastructure',
+      scores: [10.7959, 7.8156, 8.0545, 7.6722, 7.876, 7.7326, 5.3883, 5.5482, 5.6172],
+      ranks: [41, 44, 52, 33, 28, 31, 20, 27, 20],
     },
     resiliency: {
-      labels: ['DRR Plan', 'Disaster Drill', 'Early Warning', 'DRRMP Budget', 'Risk Assessments'],
-      data: [
-        [null, 2.5, 0.0, 2.4537, 2.5, 2.4474, 1.9995, 1.9583, 1.9783],
-        [null, 2.5, 0.0, 2.25, 2.5, 1.2583, 1.002, 1.0016, 1.0023],
-        [null, 2.5, 0.0, 2.5, 2.5, 1.2573, 1.0062, 1.0033, 1.0397],
-        [null, 0.0022, 0.0, 0.2655, 0.1649, 0.0183, 0.0, 0.0699, 0.002],
-        [null, 2.5, 0.0, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0],
-      ],
+      label: 'Resiliency',
+      scores: [null, 16.663, 15.4399, 10.8638, 17.6427, 13.613, 11.6349, 11.5328, 12.1106],
+      ranks: [null, 30, 108, 110, 23, 52, 28, 53, 19],
     },
     innovation: {
-      labels: [
-        'ICT Plan',
-        'R&D Expenditures',
-        'E-BPLS Software',
-        'STEM Graduates',
-        'Innovation Facilities',
-      ],
-      data: [
-        [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001],
-        [null, null, null, null, null, null, 0.0, 0.0, 0.0006],
-        [null, null, null, null, null, null, 2.0, 0.0, 2.0],
-        [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181],
-        [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227],
-      ],
+      label: 'Innovation',
+      scores: [null, null, null, null, null, null, 5.4465, 8.6849, 8.9204],
+      ranks: [null, null, null, null, null, null, 63, 18, 17],
     },
-  },
-  keyIndicators: {
-    labels: ['Health', 'Education', 'Social Protection', 'Peace & Order', 'LGU Investment'],
-    data: [
-      [0.7476, 0.5608, 0.0, 0.3946, 0.3941, 0.469, 0.3219, 0.2037, 0.2995],
-      [0.0605, 0.0992, 0.0, 0.0348, 0.1006, 0.0231, 0.1263, 0.0764, 0.1341],
-      [0.2988, 0.2421, 0.0, 0.2778, 0.2845, 0.4097, 0.0011, 0.2567, 0.4923],
-      [0.0638, 0.408, 0.0, 0.0395, 0.0347, 0.0649, 0.0, 0.2571, 0.1031],
-      [2.4381, 0.2859, 0.0, 0.2648, 0.1597, 0.0191, 0.0, 0.0016, 0.0108],
-    ],
   },
 };
 
@@ -530,23 +554,37 @@ function createCMCIOverviewChart() {
   const ctx = document.getElementById('cmciOverviewChart');
   if (!ctx || charts.cmciOverview) return;
 
-  const chartColors = [COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6'];
-
   charts.cmciOverview = new Chart(ctx, {
     type: 'line',
     data: {
       labels: cmciData.years,
-      datasets: cmciData.keyIndicators.labels.map((label, i) => ({
-        label: label,
-        data: cmciData.keyIndicators.data[i],
-        borderColor: chartColors[i],
-        backgroundColor: chartColors[i] + '20',
-        fill: false,
-        tension: 0.4,
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        borderWidth: 2,
-      })),
+      datasets: [
+        {
+          label: 'Overall Score',
+          data: cmciData.overall.scores,
+          borderColor: COLORS.primary,
+          backgroundColor: COLORS.primary + '18',
+          yAxisID: 'yScore',
+          fill: true,
+          tension: 0.35,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          borderWidth: 3,
+        },
+        {
+          label: 'Component-City Rank',
+          data: cmciData.overall.ranks,
+          borderColor: COLORS.accent,
+          backgroundColor: COLORS.accent + '20',
+          yAxisID: 'yRank',
+          fill: false,
+          tension: 0.35,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          borderWidth: 2,
+          borderDash: [6, 4],
+        },
+      ],
     },
     options: {
       responsive: true,
@@ -564,18 +602,28 @@ function createCMCIOverviewChart() {
           cornerRadius: 8,
           callbacks: {
             label: (ctx) =>
-              ctx.raw !== null
-                ? `${ctx.dataset.label}: ${ctx.raw.toFixed(4)}`
-                : `${ctx.dataset.label}: N/A`,
+              ctx.dataset.yAxisID === 'yRank'
+                ? `${ctx.dataset.label}: #${ctx.raw}`
+                : `${ctx.dataset.label}: ${ctx.raw.toFixed(2)}`,
           },
         },
       },
       scales: {
         x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: {
+        yScore: {
+          position: 'left',
           beginAtZero: true,
           grid: { color: 'rgba(0,0,0,0.05)' },
-          ticks: { font: { size: 11 } },
+          ticks: { font: { size: 11 }, color: COLORS.primary },
+          title: { display: true, text: 'Score' },
+        },
+        yRank: {
+          position: 'right',
+          reverse: true,
+          beginAtZero: false,
+          grid: { drawOnChartArea: false },
+          ticks: { precision: 0, font: { size: 11 }, color: COLORS.accent },
+          title: { display: true, text: 'Rank (lower is better)' },
         },
       },
     },
@@ -592,23 +640,24 @@ function createCMCIPillarChart(pillarKey, canvasId) {
   const pillarData = cmciData.pillars[pillarKey];
   if (!pillarData) return;
 
-  const chartColors = [COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6'];
-
   charts[canvasId] = new Chart(ctx, {
     type: 'line',
     data: {
       labels: cmciData.years,
-      datasets: pillarData.labels.map((label, i) => ({
-        label: label,
-        data: pillarData.data[i],
-        borderColor: chartColors[i],
-        backgroundColor: chartColors[i] + '20',
-        fill: false,
-        tension: 0.4,
-        pointRadius: 3,
-        pointHoverRadius: 5,
-        borderWidth: 2,
-      })),
+      datasets: [
+        {
+          label: `${pillarData.label} Score`,
+          data: pillarData.scores,
+          borderColor: COLORS.primary,
+          backgroundColor: COLORS.primary + '18',
+          fill: true,
+          spanGaps: false,
+          tension: 0.35,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          borderWidth: 3,
+        },
+      ],
     },
     options: {
       responsive: true,
@@ -628,7 +677,11 @@ function createCMCIPillarChart(pillarKey, canvasId) {
             label: (ctx) =>
               ctx.raw !== null
                 ? `${ctx.dataset.label}: ${ctx.raw.toFixed(4)}`
-                : `${ctx.dataset.label}: N/A`,
+                : `${ctx.dataset.label}: Not yet a CMCI pillar`,
+            afterLabel: (ctx) => {
+              const rank = pillarData.ranks[ctx.dataIndex];
+              return rank !== null ? `Rank: #${rank}` : '';
+            },
           },
         },
       },
@@ -730,6 +783,7 @@ function initCMCISection() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
+  renderBarangayLists();
   initScrollAnimations();
   initCharts();
   initEconomyCounters();

@@ -1,14 +1,14 @@
 {
   "name": "bs-web",
-  "version": "1.1.19",
+  "version": "1.0.0",
   "description": "BetterMalolos.org - Official Portal for LGU Malolos",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
+    "dev": "python3 serve.py -p 8000 -d .",
     "build": "bash build.sh",
     "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
-    "serve": "python3 -m http.server 8000",
-    "serve:dist": "cd dist && python3 -m http.server 8080",
+    "serve": "python3 serve.py -p 8000 -d .",
+    "serve:dist": "python3 serve.py -p 8080 -d dist",
     "version:major": "node scripts/bump-version.js major",
     "version:minor": "node scripts/bump-version.js minor",
     "version:patch": "node scripts/bump-version.js patch",

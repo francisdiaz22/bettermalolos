@@ -22,6 +22,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Hero Section
     'hero-welcome': 'Welcome to BetterMalolos.org',
+    'hero-welcome-prefix': 'Welcome to',
     'hero-subtitle':
       'Access government services, information, and resources for the people of Malolos, Bulacan.',
     'hero-find-service': 'Find a Service',
@@ -45,9 +46,9 @@ const translations: Record<string, Record<string, string>> = {
     'btn-view-all': 'View All',
 
     // Municipal Leadership
-    'section-leadership': 'Municipal Leadership',
-    'title-mayor': 'Municipal Mayor',
-    'title-vice-mayor': 'Municipal Vice Mayor',
+    'section-leadership': 'City Leadership',
+    'title-mayor': 'City Mayor',
+    'title-vice-mayor': 'Vice Mayor',
     'btn-view-officials': 'View All Officials',
 
     // Contact Section
@@ -58,6 +59,12 @@ const translations: Record<string, Record<string, string>> = {
     'contact-hours': 'Mon-Fri: 8:00 AM - 5:00 PM',
     'contact-response': "We'll respond within 24 hours",
     'contact-municipal-hall': 'Municipal Hall',
+    'home-contact-hours': 'Mon-Fri: 8:00 AM - 5:00 PM (except holidays)',
+    'home-contact-website': 'Official Website',
+    'home-contact-official-portal': 'City Government portal',
+    'home-contact-city-hall': 'New City Hall Building',
+    'home-contact-city-hall-address':
+      'Government Center, Brgy. Bulihan, City of Malolos, Bulacan 3000',
 
     // Services Page
     'services-title': 'Municipal Services Directory',
@@ -383,13 +390,14 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Malolos at a Glance',
     'stats-view-statistics': 'View Statistics',
     'stats-population-label': 'Population',
-    'stats-population-source': '2024 Census',
+    'stats-population-source': '2024 POPCEN',
     'stats-barangays-label': 'Barangays',
     'stats-barangays-source': 'Administrative Units',
-    'stats-municipality-label': 'Municipality',
-    'stats-municipality-source': 'Income Classification',
+    'stats-municipality-label': 'Local Government Type',
+    'stats-municipality-source': '1st Income Class',
     'stats-land-area-label': 'Land Area',
-    'stats-land-area-source': 'Total Municipal Area',
+    'stats-land-area-source': 'Total City Area',
+    'stats-land-area-trivia': 'Trivia: About 14% larger than Manhattan (59.1 km²).',
 
     // Homepage - Weather & Map
     'weather-map-title': 'Weather and Map of Malolos',
@@ -398,6 +406,54 @@ const translations: Record<string, Record<string, string>> = {
 
     // Homepage - History
     'history-title': 'Brief History of Malolos',
+    'history-1225-title': 'The Ancient Port of Li-Han',
+    'history-1225-brief':
+      'Pre-colonial Malolos thrives as an important maritime trading post.',
+    'history-1571-title': 'Spanish Conquest and Encomienda',
+    'history-1571-brief':
+      'Spanish forces take control and establish the area as an encomienda.',
+    'history-1580-title': 'Official Founding of the Town',
+    'history-1580-brief':
+      'Augustinian friars officially establish Malolos as a civil town.',
+    'history-1888-title': 'Petition of the Women of Malolos',
+    'history-1888-brief':
+      'Twenty prominent local women successfully petition for educational rights.',
+    'history-1892-title': 'Manila-Dagupan Railway Opening',
+    'history-1892-brief':
+      'The new railway system connects Malolos to Manila, boosting trade.',
+    'history-1898-title': 'The Historic Malolos Congress',
+    'history-1898-brief':
+      'Revolutionary delegates meet at Barasoain Church to draft a constitution.',
+    'history-1899-title': 'First Philippine Republic Inaugurated',
+    'history-1899-brief':
+      "Malolos becomes Asia's first democratic republican capital under President Aguinaldo.",
+    'history-1901-title': 'Provincial Capital of Bulacan',
+    'history-1901-brief':
+      'The administrative center of Bulacan province officially shifts to Malolos.',
+    'history-1904-title': 'Territorial Expansion and Mergers',
+    'history-1904-brief':
+      'Nearby Barasoain and Santa Isabel municipalities merge into Malolos.',
+    'history-1945-title': 'Liberation of the Town',
+    'history-1945-brief':
+      'Allied forces and local Filipino guerrillas successfully secure the town.',
+    'history-1998-title': 'Centennial Presidential Inauguration',
+    'history-1998-brief':
+      'President Joseph Estrada holds his inaugural oath-taking at Barasoain Church.',
+    'history-2001-title': 'National Heritage Landmark Declaration',
+    'history-2001-brief':
+      'The historic downtown area gains official designation as a heritage zone.',
+    'history-2002-title': 'Official Ratification of Cityhood',
+    'history-2002-brief':
+      'Malolos officially transitions from a municipality into a component city.',
+    'history-2010-title': 'Annual Cityhood Day Ordinance',
+    'history-2010-brief':
+      'The local government permanently declares December 18 as Cityhood Day.',
+    'history-2024-title': 'Regional Economic Outperformance',
+    'history-2024-brief':
+      'The city hits a 7.8% GDP growth rate, exceeding regional averages.',
+    'history-2026-title': '127th Republic Anniversary and Modern Hub',
+    'history-2026-brief':
+      'Malolos celebrates its rich history while growing as a top regional center.',
     'history-1760':
       'The original name of the town was Bintauan, then a Gaddang settlement that is now a barangay of Villaverde.',
     'history-1767':
@@ -444,7 +500,7 @@ const translations: Record<string, Record<string, string>> = {
       'Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos.',
     'footer-quick-links': 'Quick Links',
     'footer-resources': 'Resources',
-    'footer-malolos-quiz': 'Malolos Quiz',
+    'footer-malolos-quiz': 'Malolos Quiz (coming soon)',
     'footer-sitemap': 'Sitemap',
     'footer-citizens-charter': "Citizen's Charter",
     'footer-terms': 'Terms of Use',
@@ -453,9 +509,7 @@ const translations: Record<string, Record<string, string>> = {
     'footer-faq': 'FAQ',
     'footer-open-data': 'Open Data Philippines',
     'footer-foi': 'Freedom of Information',
-    'footer-lgu-portal': 'Official LGU Malolos Portal',
-    'footer-sb': 'Sangguniang Bayan',
-    'footer-lgu-facebook': 'LGU Malolos Facebook',
+    'footer-lgu-facebook': 'CIO Malolos Facebook',
     'footer-blgf': 'BLGF Portal',
     'footer-cmci': 'CMCI DTI Portal',
     'footer-cost': 'Cost to the People of Malolos =',
@@ -485,6 +539,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Hero Section
     'hero-welcome': 'Maligayang Pagdating sa BetterMalolos.org',
+    'hero-welcome-prefix': 'Maligayang Pagdating sa',
     'hero-subtitle':
       'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Malolos, Bulacan.',
     'hero-find-service': 'Maghanap ng Serbisyo',
@@ -508,9 +563,9 @@ const translations: Record<string, Record<string, string>> = {
     'btn-view-all': 'Tingnan Lahat',
 
     // Municipal Leadership
-    'section-leadership': 'Pamunuan ng Munisipalidad',
-    'title-mayor': 'Punong Bayan',
-    'title-vice-mayor': 'Bise Punong Bayan',
+    'section-leadership': 'Pamunuan ng Lungsod',
+    'title-mayor': 'Punong Lungsod',
+    'title-vice-mayor': 'Pangalawang Punong Lungsod',
     'btn-view-officials': 'Tingnan Lahat ng Opisyal',
 
     // Contact Section
@@ -521,6 +576,12 @@ const translations: Record<string, Record<string, string>> = {
     'contact-hours': 'Lunes-Biyernes: 8:00 AM - 5:00 PM',
     'contact-response': 'Sasagutin namin sa loob ng 24 na oras',
     'contact-municipal-hall': 'Munisipyo',
+    'home-contact-hours': 'Lunes-Biyernes: 8:00 AM - 5:00 PM (maliban sa mga holiday)',
+    'home-contact-website': 'Opisyal na Website',
+    'home-contact-official-portal': 'Portal ng Pamahalaang Lungsod',
+    'home-contact-city-hall': 'Bagong Gusali ng Pamahalaang Lungsod',
+    'home-contact-city-hall-address':
+      'Government Center, Brgy. Bulihan, Lungsod ng Malolos, Bulacan 3000',
 
     // Services Page
     'services-title': 'Direktoryo ng Serbisyong Munisipal',
@@ -857,13 +918,14 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Isang Tingin sa Malolos',
     'stats-view-statistics': 'Tingnan ang Estadistika',
     'stats-population-label': 'Populasyon',
-    'stats-population-source': '2024 Senso',
+    'stats-population-source': '2024 POPCEN',
     'stats-barangays-label': 'Mga Barangay',
     'stats-barangays-source': 'Mga Yunit Administratibo',
-    'stats-municipality-label': 'Munisipalidad',
-    'stats-municipality-source': 'Klasipikasyon ng Kita',
+    'stats-municipality-label': 'Uri ng Lokal na Pamahalaan',
+    'stats-municipality-source': 'Unang Klase ng Kita',
     'stats-land-area-label': 'Lawak ng Lupa',
-    'stats-land-area-source': 'Kabuuang Lawak ng Munisipalidad',
+    'stats-land-area-source': 'Kabuuang Lawak ng Lungsod',
+    'stats-land-area-trivia': 'Trivia: Humigit-kumulang 14% na mas malaki sa Manhattan (59.1 km²).',
 
     // Homepage - Weather & Map
     'weather-map-title': 'Panahon at Mapa ng Malolos',
@@ -872,6 +934,54 @@ const translations: Record<string, Record<string, string>> = {
 
     // Homepage - History
     'history-title': 'Maikling Kasaysayan ng Malolos',
+    'history-1225-title': 'Ang Sinaunang Daungan ng Li-Han',
+    'history-1225-brief':
+      'Umunlad ang Malolos bago dumating ang mga mananakop bilang mahalagang himpilang pangkalakalan sa dagat.',
+    'history-1571-title': 'Pananakop ng Espanya at Encomienda',
+    'history-1571-brief':
+      'Sinakop ng mga puwersang Espanyol ang lugar at itinatag ito bilang isang encomienda.',
+    'history-1580-title': 'Opisyal na Pagkakatatag ng Bayan',
+    'history-1580-brief':
+      'Opisyal na itinatag ng mga prayleng Agustino ang Malolos bilang isang bayang sibil.',
+    'history-1888-title': 'Petisyon ng Kababaihan ng Malolos',
+    'history-1888-brief':
+      'Matagumpay na nagpetisyon ang dalawampung kilalang kababaihan para sa karapatan sa edukasyon.',
+    'history-1892-title': 'Pagbubukas ng Riles ng Manila-Dagupan',
+    'history-1892-brief':
+      'Ikinonekta ng bagong sistema ng riles ang Malolos sa Maynila at pinasigla ang kalakalan.',
+    'history-1898-title': 'Ang Makasaysayang Kongreso ng Malolos',
+    'history-1898-brief':
+      'Nagtipon ang mga rebolusyonaryong delegado sa Simbahan ng Barasoain upang bumalangkas ng konstitusyon.',
+    'history-1899-title': 'Pinasinayaan ang Unang Republika ng Pilipinas',
+    'history-1899-brief':
+      'Naging unang demokratikong republikang kabisera sa Asya ang Malolos sa ilalim ni Pangulong Aguinaldo.',
+    'history-1901-title': 'Kabisera ng Lalawigan ng Bulacan',
+    'history-1901-brief':
+      'Opisyal na inilipat sa Malolos ang sentrong administratibo ng lalawigan ng Bulacan.',
+    'history-1904-title': 'Paglawak at Pagsasanib ng Teritoryo',
+    'history-1904-brief':
+      'Isinanib sa Malolos ang mga kalapit na munisipalidad ng Barasoain at Santa Isabel.',
+    'history-1945-title': 'Pagpapalaya sa Bayan',
+    'history-1945-brief':
+      'Matagumpay na napalaya ng mga puwersang Alyado at lokal na gerilyang Pilipino ang bayan.',
+    'history-1998-title': 'Sentenaryong Inagurasyon ng Pangulo',
+    'history-1998-brief':
+      'Idinaos ni Pangulong Joseph Estrada ang kanyang panunumpa sa Simbahan ng Barasoain.',
+    'history-2001-title': 'Deklarasyon bilang Pambansang Pamanang Palatandaan',
+    'history-2001-brief':
+      'Opisyal na itinalaga bilang sonang pamanang pangkasaysayan ang lumang sentro ng lungsod.',
+    'history-2002-title': 'Opisyal na Ratipikasyon ng Pagkalungsod',
+    'history-2002-brief':
+      'Opisyal na naging isang komponent na lungsod ang Malolos mula sa pagiging munisipalidad.',
+    'history-2010-title': 'Ordinansa sa Taunang Araw ng Lungsod',
+    'history-2010-brief':
+      'Permanenteng idineklara ng lokal na pamahalaan ang Disyembre 18 bilang Araw ng Lungsod.',
+    'history-2024-title': 'Nangungunang Paglago ng Ekonomiya sa Rehiyon',
+    'history-2024-brief':
+      'Umabot sa 7.8% ang paglago ng GDP ng lungsod, na higit sa mga panrehiyong average.',
+    'history-2026-title': 'Ika-127 Anibersaryo ng Republika at Makabagong Sentro',
+    'history-2026-brief':
+      'Ipinagdiriwang ng Malolos ang mayamang kasaysayan nito habang umuunlad bilang pangunahing sentro ng rehiyon.',
     'history-1760':
       'Ang orihinal na pangalan ng bayan ay Bintauan, isang pamayanan ng Gaddang na ngayon ay barangay ng Villaverde.',
     'history-1767':
@@ -919,7 +1029,7 @@ const translations: Record<string, Record<string, string>> = {
       'Pagbibigay-kapangyarihan sa mga tao ng Malolos na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Malolos.',
     'footer-quick-links': 'Mga Mabilisang Link',
     'footer-resources': 'Mga Mapagkukunan',
-    'footer-malolos-quiz': 'Malolos Quiz',
+    'footer-malolos-quiz': 'Malolos Quiz (coming soon)',
     'footer-sitemap': 'Mapa ng Site',
     'footer-citizens-charter': "Citizen's Charter",
     'footer-terms': 'Mga Tuntunin ng Paggamit',
@@ -928,9 +1038,7 @@ const translations: Record<string, Record<string, string>> = {
     'footer-faq': 'FAQ',
     'footer-open-data': 'Open Data Philippines',
     'footer-foi': 'Kalayaan sa Impormasyon',
-    'footer-lgu-portal': 'Opisyal na Portal ng LGU Malolos',
-    'footer-sb': 'Sangguniang Bayan',
-    'footer-lgu-facebook': 'LGU Malolos Facebook',
+    'footer-lgu-facebook': 'CIO Malolos Facebook',
     'footer-blgf': 'BLGF Portal',
     'footer-cmci': 'CMCI DTI Portal',
     'footer-cost': 'Gastos sa mga Tao ng Malolos =',
@@ -960,6 +1068,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Hero Section
     'hero-welcome': 'Naragsak nga Isasangbay iti BetterMalolos.org',
+    'hero-welcome-prefix': 'Naragsak nga Isasangbay iti',
     'hero-subtitle':
       'Aksesen dagiti serbisyo ti gobierno, impormasyon, ken dagiti resources para kadagiti umili ti Malolos, Bulacan.',
     'hero-find-service': 'Agsapul ti Serbisyo',
@@ -983,9 +1092,9 @@ const translations: Record<string, Record<string, string>> = {
     'btn-view-all': 'Kitaen Amin',
 
     // Municipal Leadership
-    'section-leadership': 'Panguluan ti Munisipalidad',
-    'title-mayor': 'Mayor ti Munisipalidad',
-    'title-vice-mayor': 'Bise Mayor ti Munisipalidad',
+    'section-leadership': 'Panguluan ti Siudad',
+    'title-mayor': 'Mayor ti Siudad',
+    'title-vice-mayor': 'Bise Mayor',
     'btn-view-officials': 'Kitaen Amin nga Opisyal',
 
     // Contact Section
@@ -996,6 +1105,12 @@ const translations: Record<string, Record<string, string>> = {
     'contact-hours': 'Lunes-Biernes: 8:00 AM - 5:00 PM',
     'contact-response': 'Sumungbat kami iti uneg ti 24 nga oras',
     'contact-municipal-hall': 'Munisipio',
+    'home-contact-hours': 'Lunes-Biernes: 8:00 AM - 5:00 PM (malaksid kadagiti holiday)',
+    'home-contact-website': 'Opisial a Website',
+    'home-contact-official-portal': 'Portal ti Gobierno ti Siudad',
+    'home-contact-city-hall': 'Baro a Pasdek ti City Hall',
+    'home-contact-city-hall-address':
+      'Government Center, Brgy. Bulihan, Siudad ti Malolos, Bulacan 3000',
 
     // Services Page
     'services-title': 'Direktorio ti Serbisyo ti Munisipalidad',
@@ -1336,13 +1451,14 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Maysa a Panagkita iti Malolos',
     'stats-view-statistics': 'Kitaen ti Estadistika',
     'stats-population-label': 'Populasion',
-    'stats-population-source': '2024 a Senso',
+    'stats-population-source': '2024 POPCEN',
     'stats-barangays-label': 'Dagiti Barangay',
     'stats-barangays-source': 'Dagiti Yunit Administratibo',
-    'stats-municipality-label': 'Munisipalidad',
-    'stats-municipality-source': 'Klasipikasion ti Sapul',
+    'stats-municipality-label': 'Kita ti Lokal a Gobyerno',
+    'stats-municipality-source': 'Umuna a Klase ti Sapul',
     'stats-land-area-label': 'Kalawa ti Daga',
-    'stats-land-area-source': 'Dagup a Kalawa ti Munisipalidad',
+    'stats-land-area-source': 'Dagup a Kalawa ti Siudad',
+    'stats-land-area-trivia': 'Trivia: Agarup 14% a dakdakkel ngem ti Manhattan (59.1 km²).',
 
     // Homepage - Weather & Map
     'weather-map-title': 'Tiempo ken Mapa ti Malolos',
@@ -1398,7 +1514,7 @@ const translations: Record<string, Record<string, string>> = {
       'Panangted ti bileg kadagiti umili ti Malolos nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Malolos.',
     'footer-quick-links': 'Dagiti Napartak a Silpo',
     'footer-resources': 'Dagiti Rekurso',
-    'footer-malolos-quiz': 'Malolos Quiz',
+    'footer-malolos-quiz': 'Malolos Quiz (coming soon)',
     'footer-sitemap': 'Mapa ti Site',
     'footer-citizens-charter': "Citizen's Charter",
     'footer-terms': 'Dagiti Kondision ti Panagusar',
@@ -1407,9 +1523,7 @@ const translations: Record<string, Record<string, string>> = {
     'footer-faq': 'FAQ',
     'footer-open-data': 'Open Data Philippines',
     'footer-foi': 'Wayawaya ti Impormasion',
-    'footer-lgu-portal': 'Opisial a Portal ti LGU Malolos',
-    'footer-sb': 'Sangguniang Bayan',
-    'footer-lgu-facebook': 'LGU Malolos Facebook',
+    'footer-lgu-facebook': 'CIO Malolos Facebook',
     'footer-blgf': 'BLGF Portal',
     'footer-cmci': 'CMCI DTI Portal',
     'footer-cost': 'Gastos kadagiti Umili ti Malolos =',

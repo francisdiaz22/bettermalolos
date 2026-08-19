@@ -1,31 +1,34 @@
 {
   "news": [
     {
-      "id": "business-permit-renewal-2025",
-      "title": "Business Permit Renewal 2025",
-      "date": "2025-11-28",
-      "category": "Announcement",
-      "badge": "info",
-      "summary": "Deadline for business permit renewal is set for January 20, 2025. Early renewal is encouraged to avoid penalties.",
-      "url": null
-    },
-    {
-      "id": "new-public-market-wing",
-      "title": "New Public Market Wing Opens",
-      "date": "2025-11-15",
-      "category": "Project",
+      "id": "malolos-advanced-rescue-training-2026",
+      "title": "Malolos Responders Complete Advanced Rope and High-Angle Rescue Training",
+      "date": "2026-08-11",
+      "category": "Public Safety",
       "badge": "success",
-      "summary": "The renovated wing of the Malolos Public Market is now open to vendors and the public.",
-      "url": null
+      "summary": "Malolos responders completed four days of hands-on training in rope systems, safety procedures, and high-angle rescue, strengthening coordination among the CDRRMO, barangays, BFP, and PNP for difficult emergency operations.",
+      "url": "https://maloloscity.gov.ph/malolenews-malolos-pinatatatag-ang-rescue-capability-sa-advanced-rope-at-high-angle-rescue-training/",
+      "source": "Read on City Government of Malolos"
     },
     {
-      "id": "scheduled-power-interruption",
-      "title": "Scheduled Power Interruption",
-      "date": "2025-11-10",
-      "category": "Advisory",
-      "badge": "warning",
-      "summary": "Maintenance scheduled for Barangay Osme\u00f1a on Dec 1, 8:00 AM - 5:00 PM.",
-      "url": null
+      "id": "malolos-rice-assistance-2026",
+      "title": "Malolos Begins Rice Assistance for Vulnerable Families",
+      "date": "2026-07-23",
+      "category": "Community",
+      "badge": "success",
+      "summary": "The city began distributing 10-kilogram rice packs to indigent Malole\u00f1os, with 19,125 packs allocated through November. The program supports food security while sourcing rice directly from local farmers.",
+      "url": "https://maloloscity.gov.ph/malolenews-pamamahagi-ng-10kg-sako-ng-bigas-para-sa-mga-indigent-malolenos-sinimulan-na/",
+      "source": "Read on City Government of Malolos"
+    },
+    {
+      "id": "tara-basa-malolos-2026",
+      "title": "Tara, Basa! Brings Reading Support to 13,188 Young Learners",
+      "date": "2026-06-18",
+      "category": "Education",
+      "badge": "info",
+      "summary": "Malolos launched Tara, Basa! with 1,319 Bulacan State University students tutoring 13,188 incoming Grade 2 learners. The program also provides parent sessions and cash-for-work support for participating low-income college students and families.",
+      "url": "https://maloloscity.gov.ph/tara-basa-tutorial-program-umarangkada-na-sa-lungsod-ng-malolos-ngayong-ika-18-ng-hunyo/",
+      "source": "Read on City Government of Malolos"
     }
   ]
 }

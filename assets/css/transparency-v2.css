@@ -301,6 +301,9 @@
 .sre-indicator-external {
   background: #0ea5e9;
 }
+.sre-indicator-nonincome {
+  background: #64748b;
+}
 .sre-indicator-gps {
   background: #3b82f6;
 }
@@ -1126,6 +1129,11 @@
 .dpwh-badge.ongoing {
   background: #fef3c7;
   color: #92400e;
+}
+
+.dpwh-badge.not-started {
+  background: #e2e8f0;
+  color: #475569;
 }
 
 /* Date Cell */

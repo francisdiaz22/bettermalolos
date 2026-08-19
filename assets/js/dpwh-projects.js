@@ -19,7 +19,7 @@
     if (!container) return;
 
     try {
-      const response = await fetch('../data/dpwh-projects.json');
+      const response = await fetch('../data/dpwh-projects.json?v=2025-verified-20260819');
       const data = await response.json();
       allProjects = data.projects;
       filteredProjects = [...allProjects];
@@ -30,6 +30,7 @@
   }
 
   function formatCurrency(amount) {
+    if (amount === null || amount === undefined) return '—';
     return (
       '₱' + amount.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
     );
@@ -47,6 +48,7 @@
   }
 
   function getCategoryClass(category) {
+    if (category.includes('Bridge')) return 'roads';
     if (category.includes('Flood')) return 'flood';
     if (category.includes('Road')) return 'roads';
     if (category.includes('Water')) return 'water';
@@ -54,6 +56,7 @@
   }
 
   function getCategoryLabel(category) {
+    if (category.includes('Bridge')) return 'Bridges';
     if (category.includes('Flood')) return 'Flood Control';
     if (category.includes('Road')) return 'Roads';
     if (category.includes('Water')) return 'Water';
@@ -62,6 +65,7 @@
 
   function getStatusBadge(status) {
     if (status === 100) return '<span class="dpwh-badge complete">Completed</span>';
+    if (status === 0) return '<span class="dpwh-badge not-started">Not started</span>';
     return `<span class="dpwh-badge ongoing">${status.toFixed(0)}%</span>`;
   }
 
@@ -95,25 +99,23 @@
 
   function renderSection(container, data) {
     const counts = getCategoryCounts(allProjects);
-    const completedCount = allProjects.filter((p) => p.status === 100).length;
-
     const html = `
             <div class="dpwh-summary-bar">
                 <div class="dpwh-summary-item">
                     <span class="dpwh-summary-value">${data.summary.totalProjects}</span>
-                    <span class="dpwh-summary-label">Projects</span>
+                    <span class="dpwh-summary-label">Major FY ${data.summary.fiscalYear} contracts</span>
                 </div>
                 <div class="dpwh-summary-item">
                     <span class="dpwh-summary-value">₱${(data.summary.totalCost / 1000000).toFixed(1)}M</span>
-                    <span class="dpwh-summary-label">Total Investment</span>
+                    <span class="dpwh-summary-label">Awarded contract value</span>
                 </div>
                 <div class="dpwh-summary-item">
-                    <span class="dpwh-summary-value">${completedCount}</span>
-                    <span class="dpwh-summary-label">Completed</span>
-                </div>
-                <div class="dpwh-summary-item">
-                    <span class="dpwh-summary-value">${data.summary.totalProjects - completedCount}</span>
+                    <span class="dpwh-summary-value">${data.summary.ongoingProjects}</span>
                     <span class="dpwh-summary-label">Ongoing</span>
+                </div>
+                <div class="dpwh-summary-item">
+                    <span class="dpwh-summary-value">${data.summary.notStartedProjects}</span>
+                    <span class="dpwh-summary-label">Not started</span>
                 </div>
             </div>
 
@@ -167,8 +169,8 @@
                         <span class="dpwh-proj-location"><i class="bi bi-geo-alt"></i>${p.location}</span>
                     </td>
                     <td class="col-contractor">
-                        <span class="dpwh-contractor">${p.contractor}</span>
-                        <span class="dpwh-contractor-id">#${p.contractorId}</span>
+                        <span class="dpwh-contractor">${p.contractor || 'For procurement'}</span>
+                        ${p.contractorId ? `<span class="dpwh-contractor-id">#${p.contractorId}</span>` : ''}
                     </td>
                     <td class="col-cost">${formatCurrency(p.cost)}</td>
                     <td class="col-status">${getStatusBadge(p.status)}</td>

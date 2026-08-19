@@ -123,7 +123,7 @@ export default function Header() {
         <div className="logo-container">
           <Link href="/">
             <img
-              src="/assets/images/logo/better-malolos-logo.svg"
+              src="/assets/images/logo/better-malolos-main.png"
               alt="Better Malolos Logo"
               className="logo-img"
             />
@@ -189,7 +189,9 @@ export default function Header() {
             <li>
               <Link href="/statistics">{t('nav-statistics')}</Link>
             </li>
-            <li className={`has-dropdown ${openDropdown === 1 ? 'dropdown-open' : ''}`}>
+            <li
+              className={`has-dropdown wip-hidden ${openDropdown === 1 ? 'dropdown-open' : ''}`}
+            >
               <Link
                 href="/legislative"
                 aria-haspopup="true"
@@ -237,14 +239,6 @@ export default function Header() {
               aria-label="Switch to Filipino"
             >
               FIL
-            </button>
-            <button
-              type="button"
-              className={`btn btn-secondary btn-sm lang-btn ${language === 'ilo' ? 'active' : ''}`}
-              onClick={() => setLanguage('ilo')}
-              aria-label="Switch to Ilocano"
-            >
-              ILO
             </button>
           </div>
         </div>

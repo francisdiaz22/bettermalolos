@@ -1,18 +1,19 @@
 {
   "_schema_version": "1.0",
-  "_status": "draft",
-  "_source": "Philippine Statistics Authority (PSA)",
-  "_note": "Awaiting official data from PSA / LGU Malolos planning office",
-  "municipality": "Malolos",
+  "_status": "verified",
+  "_source": "Philippine Statistics Authority (2024 POPCEN) and Provincial Government of Bulacan PDPFP 2024-2036",
+  "_note": "Population and barangay count verified against the PSA PSGC; land area verified against the Bulacan PDPFP 2024-2036.",
+  "municipality": "City of Malolos",
   "province": "Bulacan",
-  "region": "Region II - Cagayan Valley",
+  "region": "Region III - Central Luzon",
   "population": {
-    "total": 69296,
+    "total": 269809,
     "year": 2024,
-    "source": "PSA Census"
+    "source": "PSA 2024 Census of Population (POPCEN)"
   },
-  "land_area_km2": 162.7,
-  "barangay_count": 22,
+  "land_area_km2": 67.25,
+  "barangay_count": 51,
+  "local_government_type": "Component City",
   "income_class": "1st",
   "barangays": []
 }

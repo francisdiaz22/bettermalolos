@@ -47,7 +47,7 @@ export default function InfoBar() {
       .catch(() => {});
 
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=16.5167&longitude=121.1833&current_weather=true'
+      'https://api.open-meteo.com/v1/forecast?latitude=14.86085&longitude=120.8102&current_weather=true'
     )
       .then((r) => r.json())
       .then((data) => {
@@ -59,6 +59,7 @@ export default function InfoBar() {
   }, []);
 
   return (
+    // Utilities Banner — temporarily hidden via .info-bar in the shared stylesheet.
     <div className="info-bar" role="complementary" aria-label="Real-time information">
       <div className="container">
         <div className="info-bar-inner" aria-live="polite" aria-atomic="false">

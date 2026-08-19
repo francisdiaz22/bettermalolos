@@ -60,10 +60,10 @@
   // Weather Service - Handles fetching, caching, and providing weather data
   // ============================================================================
   const WeatherService = {
-    CACHE_KEY: 'malolos_weather_cache',
+    CACHE_KEY: 'malolos_weather_cache_v2',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 16.5167, lon: 121.1833 },
+    COORDINATES: { lat: 14.86085, lon: 120.8102 },
 
     mapWeatherCode(code) {
       const mappings = {
@@ -336,7 +336,7 @@
   // Map Component - Initializes and manages the Leaflet map
   // ============================================================================
   const MapComponent = {
-    malolos_CENTER: [16.5167, 121.1833],
+    malolos_CENTER: [14.86085, 120.8102],
     DEFAULT_ZOOM: 14,
     map: null,
 
@@ -390,7 +390,7 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.7902%2C14.84585%2C120.8302%2C14.87585&layer=mapnik&marker=14.86085%2C120.81020"
                 style="border:0;display:block;"
                 title="Map of Malolos, Bulacan"
                 loading="lazy">
@@ -464,7 +464,9 @@
 
         // Add marker
         const marker = L.marker(this.malolos_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Malolos Municipal Hall</strong><br>Bulacan 3708');
+        marker.bindPopup(
+          '<strong>New Malolos City Hall</strong><br>Brgy. Bulihan, Bulacan 3000'
+        );
 
         container.setAttribute('data-map-loaded', 'leaflet');
 

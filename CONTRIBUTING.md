@@ -117,7 +117,7 @@ Types:
 | Bug Fixes          | Fix reported issues                  |
 | Features           | Implement new functionality          |
 | Content            | Update municipal service information |
-| Translations       | Translate to Filipino or Ilocano     |
+| Translations       | Translate to Filipino                |
 | Design             | Improve UI/UX and accessibility      |
 | Data               | Verify and update statistics         |
 | Documentation      | Improve guides and comments          |

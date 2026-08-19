@@ -1,11 +1,81 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SearchAutocomplete from '@/components/SearchAutocomplete';
 
+const HISTORY_EVENTS = [
+  { year: '1225', key: 'history-1225' },
+  { year: '1571', key: 'history-1571' },
+  { year: '1580', key: 'history-1580' },
+  { year: '1888', key: 'history-1888' },
+  { year: '1892', key: 'history-1892' },
+  { year: '1898', key: 'history-1898' },
+  { year: '1899', key: 'history-1899' },
+  { year: '1901', key: 'history-1901' },
+  { year: '1904', key: 'history-1904' },
+  { year: '1945', key: 'history-1945' },
+  { year: '1998', key: 'history-1998' },
+  { year: '2001', key: 'history-2001' },
+  { year: '2002', key: 'history-2002' },
+  { year: '2010', key: 'history-2010' },
+  { year: '2024', key: 'history-2024' },
+  { year: '2026', key: 'history-2026' },
+] as const;
+
+type CurrentWeather = {
+  temperature: number;
+  humidity: number;
+  windSpeed: number;
+  weatherCode: number;
+};
+
+const weatherCondition = (code: number) => {
+  if (code === 0) return 'Clear sky';
+  if (code <= 2) return 'Partly cloudy';
+  if (code === 3) return 'Overcast';
+  if (code === 45 || code === 48) return 'Foggy';
+  if (code >= 51 && code <= 67) return 'Rain';
+  if (code >= 80 && code <= 82) return 'Rain showers';
+  if (code >= 95) return 'Thunderstorm';
+  return 'Current conditions';
+};
+
 export default function HomePage() {
   const { t } = useLanguage();
+  const [weather, setWeather] = useState<CurrentWeather | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const params = new URLSearchParams({
+      latitude: '14.86085',
+      longitude: '120.8102',
+      current: 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m',
+      timezone: 'Asia/Manila',
+    });
+
+    fetch(`https://api.open-meteo.com/v1/forecast?${params}`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Weather API error: ${response.status}`);
+        return response.json();
+      })
+      .then((data) => {
+        const current = data?.current;
+        if (!current) return;
+        setWeather({
+          temperature: Math.round(current.temperature_2m),
+          humidity: Math.round(current.relative_humidity_2m),
+          windSpeed: Math.round(current.wind_speed_10m),
+          weatherCode: current.weather_code,
+        });
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') console.warn('Unable to load Malolos weather', error);
+      });
+
+    return () => controller.abort();
+  }, []);
 
   return (
     <>
@@ -14,7 +84,10 @@ export default function HomePage() {
         <div className="container">
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
-              <h1>{t('hero-welcome')}</h1>
+              <h1>
+                {t('hero-welcome-prefix')}{' '}
+                <span className="brand-wordmark">BetterMalolos</span>.org
+              </h1>
               <p>{t('hero-subtitle')}</p>
               <div className="home-hero-v2-actions">
                 <Link href="/services" className="btn btn-primary">
@@ -56,18 +129,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Appointment Services CTA */}
-      <section className="appointment-cta-section" aria-label="Mayor's Office Appointment Services">
+      {/* Appointment Services CTA — temporarily hidden while this feature is in progress. */}
+      <section
+        className="appointment-cta-section"
+        aria-label="Mayor's Office Appointment Services"
+        hidden
+      >
         <div className="container">
           <div className="appointment-cta-inner">
             <div className="appointment-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="/assets/animation/ramonloganjr-booking.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
+              <img
+                src="/assets/images/undraw_schedule-cleanup_1xs7.svg"
+                alt=""
+                width="960"
+                height="543"
+              />
             </div>
             <div className="appointment-cta-content">
               <h2 className="appointment-cta-heading">{t('appointment-cta-heading')}</h2>
@@ -184,7 +260,7 @@ export default function HomePage() {
                 <i className="bi bi-people-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">69,296</span>
+                <span className="home-stat-card-value">269,809</span>
                 <span className="home-stat-card-label">{t('stats-population-label')}</span>
                 <span className="home-stat-card-source">{t('stats-population-source')}</span>
               </div>
@@ -194,7 +270,7 @@ export default function HomePage() {
                 <i className="bi bi-geo-alt-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">22</span>
+                <span className="home-stat-card-value">51</span>
                 <span className="home-stat-card-label">{t('stats-barangays-label')}</span>
                 <span className="home-stat-card-source">{t('stats-barangays-source')}</span>
               </div>
@@ -204,7 +280,7 @@ export default function HomePage() {
                 <i className="bi bi-award-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">1st Class</span>
+                <span className="home-stat-card-value">Component City</span>
                 <span className="home-stat-card-label">{t('stats-municipality-label')}</span>
                 <span className="home-stat-card-source">{t('stats-municipality-source')}</span>
               </div>
@@ -214,9 +290,10 @@ export default function HomePage() {
                 <i className="bi bi-rulers"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">162.70 km²</span>
+                <span className="home-stat-card-value">67.25 km²</span>
                 <span className="home-stat-card-label">{t('stats-land-area-label')}</span>
                 <span className="home-stat-card-source">{t('stats-land-area-source')}</span>
+                <span className="home-stat-card-trivia">{t('stats-land-area-trivia')}</span>
               </div>
             </Link>
           </div>
@@ -242,8 +319,12 @@ export default function HomePage() {
                       <i className="bi bi-cloud-sun-fill"></i>
                     </div>
                     <div className="weather-current-info">
-                      <div className="weather-current-temp">29°C</div>
-                      <div className="weather-current-condition">{t('weather-mainly-clear')}</div>
+                      <div className="weather-current-temp">
+                        {weather ? `${weather.temperature}°C` : '--°C'}
+                      </div>
+                      <div className="weather-current-condition">
+                        {weather ? weatherCondition(weather.weatherCode) : 'Loading weather…'}
+                      </div>
                       <div className="weather-current-location">
                         <i className="bi bi-geo-alt"></i> {t('weather-location')}
                       </div>
@@ -252,11 +333,11 @@ export default function HomePage() {
                   <div className="weather-stats">
                     <div className="weather-stat">
                       <i className="bi bi-droplet"></i>
-                      <span>65%</span>
+                      <span>{weather ? `${weather.humidity}%` : '--%'}</span>
                     </div>
                     <div className="weather-stat">
                       <i className="bi bi-wind"></i>
-                      <span>12 km/h</span>
+                      <span>{weather ? `${weather.windSpeed} km/h` : '-- km/h'}</span>
                     </div>
                   </div>
                 </div>
@@ -271,16 +352,16 @@ export default function HomePage() {
                   data-map-loaded="iframe"
                 >
                   <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=120.7902%2C14.84585%2C120.8302%2C14.87585&layer=mapnik&marker=14.86085%2C120.81020"
                     className="map-iframe"
                     title="Map of Malolos, Bulacan"
-                    aria-label="OpenStreetMap showing Malolos Municipal Hall, Bulacan"
+                    aria-label="OpenStreetMap showing New Malolos City Hall, Bulacan"
                     loading="lazy"
                   ></iframe>
                 </div>
                 <p className="map-attribution">
-                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Malolos Municipal Hall, Nueva
-                  Vizcaya 3708
+                  <i className="bi bi-geo-alt" aria-hidden="true"></i> New Malolos City Hall, Brgy.
+                  Bulihan, Bulacan 3000
                 </p>
               </div>
             </div>
@@ -298,55 +379,16 @@ export default function HomePage() {
           </div>
           <div className="history-content">
             <div className="history-timeline">
-              <div className="timeline-item" data-year="1760">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1760</span>
-                  <p>{t('history-1760')}</p>
+              {HISTORY_EVENTS.map(({ year, key }) => (
+                <div className="timeline-item" data-year={year} key={year}>
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <span className="timeline-year">{year}</span>
+                    <h3>{t(`${key}-title`)}</h3>
+                    <p>{t(`${key}-brief`)}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="timeline-item" data-year="1767">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1767</span>
-                  <p>{t('history-1767')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1768">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1768</span>
-                  <p>{t('history-1768')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1851">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1851</span>
-                  <p>{t('history-1851')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1853">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1853</span>
-                  <p>{t('history-1853')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1889">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1889</span>
-                  <p>{t('history-1889')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1957">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1957</span>
-                  <p>{t('history-1957')}</p>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="history-summary">
               <div className="history-card">
@@ -480,6 +522,13 @@ export default function HomePage() {
             color: var(--color-text);
             margin: 0;
             line-height: 1.6;
+          }
+          .timeline-content h3 {
+            color: var(--color-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0 0 4px;
           }
           .timeline-content p strong {
             color: var(--color-primary);
@@ -624,7 +673,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Municipal Leadership */}
+      {/* City Leadership */}
       <section className="section home-leadership-section">
         <div className="container">
           <div className="home-section-header">
@@ -636,7 +685,7 @@ export default function HomePage() {
           <div className="home-leadership-grid">
             <div className="home-leader-card">
               <div className="home-leader-badge">{t('title-mayor')}</div>
-              <h3>Hon. Philip A. Dacayo</h3>
+              <h3>Hon. Atty. Christian D. Natividad</h3>
               <div className="home-leader-contacts">
                 <a href="mailto:mayor@malolos.gov.ph">
                   <i className="bi bi-envelope"></i> mayor@malolos.gov.ph
@@ -648,7 +697,7 @@ export default function HomePage() {
             </div>
             <div className="home-leader-card">
               <div className="home-leader-badge">{t('title-vice-mayor')}</div>
-              <h3>Hon. Eduardo D. Tiongson</h3>
+              <h3>Hon. Engr. Gilbert T. Gatchalian</h3>
               <div className="home-leader-contacts">
                 <a href="mailto:vicemayor@malolos.gov.ph">
                   <i className="bi bi-envelope"></i> vicemayor@malolos.gov.ph
@@ -672,24 +721,29 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="home-contact-v2-grid">
-            <a href="tel:0788053581" className="home-contact-v2-card">
+            <a href="tel:0449318888" className="home-contact-v2-card">
               <div className="home-contact-v2-icon">
                 <i className="bi bi-telephone-fill"></i>
               </div>
               <div className="home-contact-v2-content">
                 <h3>{t('contact-phone')}</h3>
-                <p className="home-contact-v2-value">(078) 805-3581</p>
-                <span className="home-contact-v2-note">{t('contact-hours')}</span>
+                <p className="home-contact-v2-value">(044) 931-8888</p>
+                <span className="home-contact-v2-note">{t('home-contact-hours')}</span>
               </div>
             </a>
-            <a href="mailto:lgumalolosnv@gmail.com" className="home-contact-v2-card">
+            <a
+              href="https://maloloscity.gov.ph/"
+              className="home-contact-v2-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="home-contact-v2-icon">
-                <i className="bi bi-envelope-fill"></i>
+                <i className="bi bi-globe2"></i>
               </div>
               <div className="home-contact-v2-content">
-                <h3>{t('contact-email')}</h3>
-                <p className="home-contact-v2-value">lgumalolosnv@gmail.com</p>
-                <span className="home-contact-v2-note">{t('contact-response')}</span>
+                <h3>{t('home-contact-website')}</h3>
+                <p className="home-contact-v2-value">maloloscity.gov.ph</p>
+                <span className="home-contact-v2-note">{t('home-contact-official-portal')}</span>
               </div>
             </a>
             <div className="home-contact-v2-card">
@@ -698,8 +752,10 @@ export default function HomePage() {
               </div>
               <div className="home-contact-v2-content">
                 <h3>{t('contact-address')}</h3>
-                <p className="home-contact-v2-value">{t('contact-municipal-hall')}</p>
-                <span className="home-contact-v2-note">Malolos, Bulacan 3708</span>
+                <p className="home-contact-v2-value">{t('home-contact-city-hall')}</p>
+                <span className="home-contact-v2-note">
+                  {t('home-contact-city-hall-address')}
+                </span>
               </div>
             </div>
           </div>
@@ -711,13 +767,12 @@ export default function HomePage() {
         <div className="container">
           <div className="quiz-cta-inner">
             <div className="quiz-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="/assets/animation/ramonloganjr-exam.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
+              <img
+                src="/assets/images/undraw_questions_52ic.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="quiz-cta-content">
               <h2 className="quiz-cta-heading">{t('quiz-title')}</h2>

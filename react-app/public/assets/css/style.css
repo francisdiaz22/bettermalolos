@@ -1,18 +1,26 @@
 /* Better Malolos - Complete Main Stylesheet */
 :root {
-  --color-primary: #0032a0;
-  --color-primary-dark: #002170;
-  --color-secondary: #003d82;
-  --color-accent: #f77f00;
-  --color-success: #06a77d;
-  --color-danger: #d62828;
-  --color-info: #0077be;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8f9fa;
-  --color-text: #1a1a1a;
-  --color-text-light: #666666;
-  --color-white: #ffffff;
+  /* 1997 Philippine ₱10 note palette — update brand colours only here. */
+  --color-primary: #713b4a;
+  --color-primary-dark: #542633;
+  --color-secondary: #3d7772;
+  --color-accent: #b96d5b;
+  --color-success: #4d786a;
+  --color-danger: #8b3345;
+  --color-info: #4c7e7c;
+  --color-bg: #fffdf9;
+  --color-bg-alt: #f7eee5;
+  --color-text: #332832;
+  --color-text-light: #6e6264;
+  --color-white: #fffdf9;
+  --color-border: #dfc8bd;
+  --color-primary-soft: #f3e5e1;
+  --color-secondary-soft: #e2efeb;
+  --color-primary-rgb: 113, 59, 74;
+  --color-secondary-rgb: 61, 119, 114;
+  --color-accent-rgb: 185, 109, 91;
   --font-main: 'Inter', sans-serif;
+  --font-brand: 'Montserrat', var(--font-main);
   --line-height-body: 1.6;
   --line-height-heading: 1.2;
   --spacing-xs: 8px;
@@ -297,6 +305,12 @@ p {
 /* Dropdown Menu Styles */
 .main-nav > ul > li {
   position: relative;
+}
+
+/* Temporarily hide the Legislative menu while the feature is in progress. */
+.main-nav > ul > li.wip-hidden,
+.main-nav > ul > li:has(> a[data-i18n$='legislative']) {
+  display: none;
 }
 
 .main-nav .has-dropdown > a::after {
@@ -6139,6 +6153,11 @@ cklist with Icons - Proper Indentation */
   line-height: 1.2;
 }
 
+.brand-wordmark {
+  font-family: var(--font-brand);
+  font-weight: 800;
+}
+
 .home-hero-v2-text p {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);
@@ -6207,7 +6226,8 @@ cklist with Icons - Proper Indentation */
   max-width: 420px;
 }
 
-.appointment-cta-animation dotlottie-player {
+.appointment-cta-animation img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -6429,7 +6449,8 @@ cklist with Icons - Proper Indentation */
   justify-self: center;
 }
 
-.quiz-cta-animation dotlottie-player {
+.quiz-cta-animation img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -6472,20 +6493,20 @@ cklist with Icons - Proper Indentation */
   transition: all 0.2s ease;
   background: var(--color-primary);
   color: white;
-  box-shadow: 0 2px 8px rgba(0, 50, 160, 0.25);
+  box-shadow: 0 2px 8px rgba(var(--color-primary-rgb), 0.25);
 }
 
 .quiz-cta-btn:hover {
-  background: #002a88;
-  box-shadow: 0 4px 16px rgba(0, 50, 160, 0.35);
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.35);
   transform: translateY(-1px);
   color: white;
   text-decoration: none;
 }
 
 .quiz-cta-btn:focus {
-  background: #002a88;
-  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.4);
+  background: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.4);
   outline: none;
   color: white;
   text-decoration: none;
@@ -6493,7 +6514,7 @@ cklist with Icons - Proper Indentation */
 
 .quiz-cta-btn:active {
   transform: translateY(0);
-  box-shadow: 0 1px 4px rgba(0, 50, 160, 0.2);
+  box-shadow: 0 1px 4px rgba(var(--color-primary-rgb), 0.2);
 }
 
 @media (max-width: 1199px) and (min-width: 993px) {
@@ -6639,7 +6660,7 @@ cklist with Icons - Proper Indentation */
 .search-submit-btn {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, #0044cc 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -6649,13 +6670,13 @@ cklist with Icons - Proper Indentation */
   justify-content: center;
   font-size: 1.125rem;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 50, 160, 0.3);
+  box-shadow: 0 2px 8px rgba(var(--color-primary-rgb), 0.3);
 }
 
 .search-submit-btn:hover {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #003399 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 50, 160, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.4);
 }
 
 .search-submit-btn:active {
@@ -7619,6 +7640,17 @@ a.a11y-contact-item:hover i {
   margin-top: 2px;
 }
 
+.home-stat-card-trivia {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 /* Home Stats V2 Responsive */
 @media (max-width: 992px) {
   .home-stats-v2-grid {
@@ -7638,9 +7670,10 @@ a.a11y-contact-item:hover i {
   }
 }
 
-/* Real-Time Info Bar */
+/* Utilities Banner — temporarily hidden until its utilities are ready. */
 .info-bar {
-  background-color: #00184d;
+  display: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: #ffffff;
   padding: 6px 0;
   font-size: 0.6875rem;
@@ -7666,7 +7699,7 @@ a.a11y-contact-item:hover i {
 
 .info-bar-item i {
   font-size: 0.75rem;
-  color: #ffff00;
+  color: var(--color-accent);
 }
 
 /* Exchange Rates - Rotating Display */
@@ -9335,4 +9368,3 @@ a.a11y-contact-item:hover i {
     padding: 14px 24px;
   }
 }
-

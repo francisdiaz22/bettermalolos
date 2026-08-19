@@ -25,14 +25,31 @@ export const metadata: Metadata = {
     description: 'Empowering the people of Malolos with transparent access to services.',
     images: [
       {
-        url: 'https://bettermalolos.org/assets/images/banners/opengraph-malos.png',
+        url: 'https://bettermalolos.org/assets/images/banners/bettermalolos-social-preview-2026.png',
         width: 1200,
         height: 630,
       },
     ],
   },
-  twitter: { card: 'summary_large_image' },
-  icons: { icon: '/assets/images/logo/favicon.svg', apple: '/assets/images/logo/favicon.svg' },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      'https://bettermalolos.org/assets/images/banners/bettermalolos-social-preview-2026.png',
+    ],
+  },
+  icons: {
+    icon: [
+      { url: '/assets/images/logo/favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/assets/images/logo/favicon.ico', type: 'image/x-icon', sizes: '128x128' },
+    ],
+    apple: [
+      {
+        url: '/assets/images/logo/apple-touch-icon.png',
+        type: 'image/png',
+        sizes: '180x180',
+      },
+    ],
+  },
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
@@ -48,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap"
           rel="stylesheet"
         />
         <link

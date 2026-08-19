@@ -220,12 +220,12 @@ const CONFIG = {
   EXCHANGE_RATE_TTL: 30 * 60 * 1000, // 30 minutes
   WEATHER_TTL: 15 * 60 * 1000, // 15 minutes
   TIME_UPDATE_INTERVAL: 1000, // 1 second
-  malolos_LAT: 16.5167,
-  malolos_LON: 121.1833,
+  malolos_LAT: 14.86085,
+  malolos_LON: 120.8102,
   CURRENCIES: ['USD', 'GBP', 'SAR', 'AED', 'JPY', 'CAD', 'AUD'],
   CACHE_KEYS: {
     EXCHANGE_RATES: 'infobar_exchange_rates',
-    WEATHER: 'infobar_weather',
+    WEATHER: 'infobar_weather_v2',
   },
 };
 

@@ -3,56 +3,43 @@
  * Modern, minimal design with smooth animations
  */
 
-// Financial data for FY 2025
+// FY 2025 actual data from DBM/BLGF Table F.14 (in million pesos).
+// Source: https://www.dbm.gov.ph/wp-content/uploads/BESF/BESF2026/F14.pdf
 const FINANCIAL_DATA = {
-  q1: {
-    period: 'Q1 2025',
-    periodLabel: 'Jan - Mar',
-    income: {
-      local: 88.85,
-      external: 69.62,
-      total: 158.47,
+  fy2025: {
+    period: 'FY 2025',
+    periodLabel: 'Jan - Dec',
+    receipts: {
+      local: 633.56,
+      external: 1198.22,
+      nonIncome: 5.79,
+      total: 1837.57,
     },
     expenditures: {
-      gps: 42.76,
-      social: 13.33,
-      economic: 11.07,
-      debt: 0.35,
-      total: 67.51,
+      gps: 1036.29,
+      social: 343.77,
+      economic: 149.77,
+      debtAndNonOperating: 277.39,
+      total: 1807.22,
     },
-    netIncome: 90.96,
-    fundBalance: 283.29,
-  },
-  q2: {
-    period: 'Q2 2025',
-    periodLabel: 'Apr - Jun',
-    income: {
-      local: 114.15,
-      external: 139.25,
-      total: 253.4,
-    },
-    expenditures: {
-      gps: 88.31,
-      social: 30.56,
-      economic: 20.32,
-      debt: 1.29,
-      total: 140.48,
-    },
-    netIncome: 112.92,
-    fundBalance: 275.2,
+    receiptsLessExpenditures: 30.35,
+    endingCashBalance: 573.72,
   },
 };
 
 // Chart instances
 let incomeChart = null;
 let expenditureChart = null;
-let currentQuarter = 'q1';
+let currentPeriod = 'fy2025';
 
 /**
  * Format number as Philippine Peso in millions
  */
 function formatPeso(value) {
-  return `₱${value.toFixed(2)} M`;
+  return `₱${value.toLocaleString('en-PH', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })} M`;
 }
 
 /**
@@ -74,28 +61,41 @@ function animateValue(element, newValue) {
 }
 
 /**
- * Update all displayed values for selected quarter
+ * Update all displayed values for the selected reporting period
  */
-function updateDisplay(quarter) {
-  const data = FINANCIAL_DATA[quarter];
+function updateDisplay(period) {
+  const data = FINANCIAL_DATA[period];
 
   // Update metrics
-  animateValue(document.getElementById('sre-total-income'), formatPeso(data.income.total));
+  animateValue(document.getElementById('sre-total-receipts'), formatPeso(data.receipts.total));
   animateValue(document.getElementById('sre-total-expense'), formatPeso(data.expenditures.total));
-  animateValue(document.getElementById('sre-net-income'), formatPeso(data.netIncome));
-  animateValue(document.getElementById('sre-fund-balance'), formatPeso(data.fundBalance));
-
-  // Update income breakdown
-  const incomeTotal = data.income.total;
-  document.getElementById('sre-income-local').textContent = formatPeso(data.income.local);
-  document.getElementById('sre-income-local-pct').textContent = calcPercent(
-    data.income.local,
-    incomeTotal
+  animateValue(
+    document.getElementById('sre-receipts-less-expenditures'),
+    formatPeso(data.receiptsLessExpenditures)
   );
-  document.getElementById('sre-income-external').textContent = formatPeso(data.income.external);
+  animateValue(
+    document.getElementById('sre-ending-cash-balance'),
+    formatPeso(data.endingCashBalance)
+  );
+
+  // Update receipt breakdown
+  const receiptsTotal = data.receipts.total;
+  document.getElementById('sre-income-local').textContent = formatPeso(data.receipts.local);
+  document.getElementById('sre-income-local-pct').textContent = calcPercent(
+    data.receipts.local,
+    receiptsTotal
+  );
+  document.getElementById('sre-income-external').textContent = formatPeso(data.receipts.external);
   document.getElementById('sre-income-external-pct').textContent = calcPercent(
-    data.income.external,
-    incomeTotal
+    data.receipts.external,
+    receiptsTotal
+  );
+  document.getElementById('sre-income-nonincome').textContent = formatPeso(
+    data.receipts.nonIncome
+  );
+  document.getElementById('sre-income-nonincome-pct').textContent = calcPercent(
+    data.receipts.nonIncome,
+    receiptsTotal
   );
 
   // Update expenditure breakdown
@@ -115,15 +115,21 @@ function updateDisplay(quarter) {
     data.expenditures.economic,
     expTotal
   );
-  document.getElementById('sre-exp-debt').textContent = formatPeso(data.expenditures.debt);
+  document.getElementById('sre-exp-debt').textContent = formatPeso(
+    data.expenditures.debtAndNonOperating
+  );
   document.getElementById('sre-exp-debt-pct').textContent = calcPercent(
-    data.expenditures.debt,
+    data.expenditures.debtAndNonOperating,
     expTotal
   );
 
   // Update charts
   if (incomeChart) {
-    incomeChart.data.datasets[0].data = [data.income.local, data.income.external];
+    incomeChart.data.datasets[0].data = [
+      data.receipts.local,
+      data.receipts.external,
+      data.receipts.nonIncome,
+    ];
     incomeChart.update('active');
   }
 
@@ -132,7 +138,7 @@ function updateDisplay(quarter) {
       data.expenditures.gps,
       data.expenditures.social,
       data.expenditures.economic,
-      data.expenditures.debt,
+      data.expenditures.debtAndNonOperating,
     ];
     expenditureChart.update('active');
   }
@@ -147,7 +153,7 @@ function initCharts() {
 
   if (!incomeCtx || !expenditureCtx || typeof Chart === 'undefined') return;
 
-  const data = FINANCIAL_DATA[currentQuarter];
+  const data = FINANCIAL_DATA[currentPeriod];
 
   // Chart.js default options
   const chartOptions = {
@@ -184,11 +190,11 @@ function initCharts() {
   incomeChart = new Chart(incomeCtx, {
     type: 'doughnut',
     data: {
-      labels: ['Local Sources', 'External Sources'],
+      labels: ['Local Sources', 'External Sources', 'Non-Income Receipts'],
       datasets: [
         {
-          data: [data.income.local, data.income.external],
-          backgroundColor: ['#10b981', '#0ea5e9'],
+          data: [data.receipts.local, data.receipts.external, data.receipts.nonIncome],
+          backgroundColor: ['#10b981', '#0ea5e9', '#64748b'],
           borderWidth: 2,
           borderColor: '#ffffff',
           hoverOffset: 0,
@@ -201,20 +207,25 @@ function initCharts() {
   });
 
   // Store original colors for highlight/restore
-  incomeChart._originalColors = ['#10b981', '#0ea5e9'];
+  incomeChart._originalColors = ['#10b981', '#0ea5e9', '#64748b'];
 
   // Expenditure Chart
   expenditureChart = new Chart(expenditureCtx, {
     type: 'doughnut',
     data: {
-      labels: ['General Public Services', 'Social Services', 'Economic Services', 'Debt Service'],
+      labels: [
+        'General Public Services',
+        'Social Services',
+        'Economic Services',
+        'Debt & Other Non-Operating',
+      ],
       datasets: [
         {
           data: [
             data.expenditures.gps,
             data.expenditures.social,
             data.expenditures.economic,
-            data.expenditures.debt,
+            data.expenditures.debtAndNonOperating,
           ],
           backgroundColor: ['#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444'],
           borderWidth: 2,
@@ -233,15 +244,15 @@ function initCharts() {
 }
 
 /**
- * Initialize period toggle buttons
+ * Initialize reporting-period buttons
  */
 function initPeriodToggle() {
   const buttons = document.querySelectorAll('.sre-period-btn');
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', function () {
-      const quarter = this.dataset.quarter;
-      if (quarter === currentQuarter) return;
+      const period = this.dataset.period;
+      if (period === currentPeriod) return;
 
       // Update button states
       buttons.forEach((b) => {
@@ -252,8 +263,8 @@ function initPeriodToggle() {
       this.setAttribute('aria-selected', 'true');
 
       // Update data
-      currentQuarter = quarter;
-      updateDisplay(quarter);
+      currentPeriod = period;
+      updateDisplay(period);
     });
   });
 }
@@ -310,7 +321,7 @@ function initBreakdownInteractions() {
  * Highlight chart segment on hover
  */
 function highlightChartSegment(type, highlight) {
-  const incomeTypes = ['local', 'external'];
+  const incomeTypes = ['local', 'external', 'nonincome'];
   const expTypes = ['gps', 'social', 'economic', 'debt'];
 
   let chart = null;

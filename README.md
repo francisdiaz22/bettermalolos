@@ -106,13 +106,20 @@ When the palette is revised, change the token values in `assets/css/style.css` (
 | **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
 | **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                |
+| **Multi-language Support**       | Full i18n coverage in English and Filipino                                                                                                                                                                        |
 | **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Malolos**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                               |
+| **Brief History of Malolos**      | Interactive timeline (1225–2026) with 16 fully translated milestone cards in both languages                                                                                                                       |
 | **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
 | **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
 | **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
 | **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                              |
+
+### Temporarily Hidden (Work in Progress)
+
+The following features remain in the codebase but are hidden from the public interface until they are ready:
+
+- **Enhancing Appointment Services** homepage section (Mayor's Office/OASYS appointment CTA)
+- **Legislative** main navigation menu and its dropdown links
 
 ## Quick Start
 
@@ -213,13 +220,12 @@ npm run build
 
 ## Multi-language Support (i18n)
 
-The site supports three languages with full translation coverage:
+The site supports two languages with full translation coverage:
 
-| Language | Code  | Status                |
-| -------- | ----- | --------------------- |
-| English  | `en`  | Complete (5,546 keys) |
-| Filipino | `fil` | Complete (5,546 keys) |
-| Ilocano  | `ilo` | Complete (5,546 keys) |
+| Language | Code  | Status   |
+| -------- | ----- | -------- |
+| English  | `en`  | Complete |
+| Filipino | `fil` | Complete |
 
 The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
 
@@ -364,10 +370,9 @@ bettermalolos/
 
 ### Internationalization (i18n)
 
-- Upgraded translation engine to 5,546 keys per language with perfect en/fil/ilo parity
+- Upgraded the English and Filipino translation engine with complete key parity
 - Fixed Brief History timeline cards — full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
 - Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
-- Corrected Ilocano translations: proper Ilocano vocabulary ("Ababa a Pakasaritaan" not Filipino "Maikling Kasaysayan", "Dimteng" not "Dumating", "Ili" not "Lungsod"), fully translated paragraphs
 - Added 54 translation keys for Malolos Quiz footer link across all page contexts
 
 ### Footer & Copyright
@@ -424,7 +429,7 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 | **Bug Fixes**          | Report issues or submit fixes for existing bugs               |
 | **Features**           | Propose or implement new functionality                        |
 | **Content**            | Update service information, add missing municipal data        |
-| **Translations**       | Help translate content to Filipino or Ilocano                 |
+| **Translations**       | Help translate content to Filipino                            |
 | **Design**             | Improve UI/UX, accessibility, and visual consistency          |
 | **Data**               | Verify and update municipal statistics and records            |
 | **Documentation**      | Enhance README, code comments, and guides                     |

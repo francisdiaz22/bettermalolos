@@ -23,14 +23,14 @@ export default function Footer() {
         <div className="footer-main-new">
           <div className="footer-brand">
             <img
-              src="/assets/images/logo/better-malolos-logo-white.svg"
+              src="/assets/images/logo/better-malolos-bw.png"
               alt="Better Malolos logo"
               className="footer-logo"
             />
             <p className="footer-tagline">{t('footer-tagline')}</p>
             <div className="footer-social-new">
               <a
-                href="https://www.facebook.com/MalolosCIOPage"
+                href="https://www.facebook.com/bettermalolos.org"
                 className="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export default function Footer() {
                 <i className="bi bi-linkedin"></i>
               </a>
               <a
-                href="https://discord.com/invite/qeSu7RJkjQ"
+                href="https://discord.gg/bettergovph"
                 className="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,20 +103,6 @@ export default function Footer() {
               <li>
                 <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">
                   {t('footer-foi')}
-                </a>
-              </li>
-              <li>
-                <a href="#TODO-add-official-malolos-portal" target="_blank" rel="noopener noreferrer">
-                  {t('footer-lgu-portal')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#TODO-add-malolos-legislative-portal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer-sb')}
                 </a>
               </li>
               <li>
