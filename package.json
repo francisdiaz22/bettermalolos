@@ -44,8 +44,11 @@
     "terser": "^5.44.1"
   },
   "overrides": {
+    "body-parser": "1.20.6",
+    "brace-expansion": "1.1.18",
+    "ip-address": "10.3.1",
     "tmp": "0.2.7",
-    "js-yaml": "^4.2.0",
+    "js-yaml": "4.3.1",
     "uuid": "^11.1.1"
   }
 }
