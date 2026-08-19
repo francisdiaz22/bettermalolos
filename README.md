@@ -47,72 +47,72 @@ Visit the live website: [https://bettermalolos.org](https://bettermalolos.org)
 
 ## Technology Stack
 
-| Category            | Technologies                                                           |
-| ------------------- | ---------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                         |
-| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design        |
-| **Icons**           | Bootstrap Icons (CDN)                                                  |
-| **Fonts**           | Google Fonts (Inter)                                                   |
-| **Maps**            | Leaflet.js, OpenStreetMap                                              |
-| **Charts**          | Chart.js (Canvas-based)                                                |
-| **Animations**      | Lottie (dotlottie-player web component)                                |
-| **Data Format**     | JSON                                                                   |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                      |
-| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                          |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                            |
-| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)               |
-| **Version Control** | Git, GitHub                                                            |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                           |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                  |
+| Category            | Technologies                                                                                             |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                           |
+| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                          |
+| **Icons**           | Bootstrap Icons (CDN)                                                                                    |
+| **Fonts**           | Google Fonts (Inter)                                                                                     |
+| **Maps**            | Leaflet.js, OpenStreetMap                                                                                |
+| **Charts**          | Chart.js (Canvas-based)                                                                                  |
+| **Animations**      | Lottie (dotlottie-player web component)                                                                  |
+| **Data Format**     | JSON                                                                                                     |
+| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
+| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                            |
+| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                              |
+| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)                                                 |
+| **Version Control** | Git, GitHub                                                                                              |
+| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                             |
+| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                    |
 | **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
-| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                     |
-| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                              |
-| **Analytics**       | Google Analytics (gtag.js)                                             |
-| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                          |
-| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                  |
+| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                       |
+| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                |
+| **Analytics**       | Google Analytics (gtag.js)                                                                               |
+| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                            |
+| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                                                    |
 
 ## Global Colorway
 
 The site uses the 1997 Philippine ₱10 note as its visual reference: warm security-paper neutrals, engraved maroon, muted teal, and restrained terracotta. The palette is defined once in [`assets/css/style.css`](assets/css/style.css) under `:root`; pages and component styles must use these CSS custom properties rather than adding page-specific brand hex values.
 
-| Token | Hex | Role |
-| ----- | --- | ---- |
-| `--color-primary` | `#713B4A` | Engraved maroon; primary actions and headings |
-| `--color-primary-dark` | `#542633` | Hover and strong contrast state |
-| `--color-secondary` | `#3D7772` | Security-print teal; secondary UI |
-| `--color-accent` | `#B96D5B` | Terracotta; limited emphasis |
-| `--color-success` | `#4D786A` | Muted green status state |
-| `--color-danger` | `#8B3345` | Deep red status state |
-| `--color-info` | `#4C7E7C` | Informational teal state |
-| `--color-bg` | `#FFFDF9` | Note-paper page surface |
-| `--color-bg-alt` | `#F7EEE5` | Warm alternate surface |
-| `--color-text` | `#332832` | Primary ink text |
-| `--color-text-light` | `#6E6264` | Secondary ink text |
+| Token                  | Hex       | Role                                          |
+| ---------------------- | --------- | --------------------------------------------- |
+| `--color-primary`      | `#713B4A` | Engraved maroon; primary actions and headings |
+| `--color-primary-dark` | `#542633` | Hover and strong contrast state               |
+| `--color-secondary`    | `#3D7772` | Security-print teal; secondary UI             |
+| `--color-accent`       | `#B96D5B` | Terracotta; limited emphasis                  |
+| `--color-success`      | `#4D786A` | Muted green status state                      |
+| `--color-danger`       | `#8B3345` | Deep red status state                         |
+| `--color-info`         | `#4C7E7C` | Informational teal state                      |
+| `--color-bg`           | `#FFFDF9` | Note-paper page surface                       |
+| `--color-bg-alt`       | `#F7EEE5` | Warm alternate surface                        |
+| `--color-text`         | `#332832` | Primary ink text                              |
+| `--color-text-light`   | `#6E6264` | Secondary ink text                            |
 
 When the palette is revised, change the token values in `assets/css/style.css` (and the PWA `theme_color` in `manifest.webmanifest`) rather than editing individual pages. Keep the RGB companion tokens aligned with their matching hex values when changing a color used in translucent effects.
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                             |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                      |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                     |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                          |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                       |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                     |
-| **Malolos Quiz**                  | Interactive quiz about Malolos history and culture, linked from homepage CTA and footer across all pages                                                                                                           |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
+| Feature                          | Description                                                                                                                                                                                                                            |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
+| **Malolos Quiz**                 | Interactive quiz about Malolos history and culture, linked from homepage CTA and footer across all pages                                                                                                                               |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
+| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                             |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English and Filipino                                                                                                                                                                        |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Malolos**      | Interactive timeline (1225–2026) with 16 fully translated milestone cards in both languages                                                                                                                       |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                              |
+| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                                      |
+| **Multi-language Support**       | Full i18n coverage in English and Filipino                                                                                                                                                                                             |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                            |
+| **Brief History of Malolos**     | Interactive timeline (1225–2026) with 16 fully translated milestone cards in both languages                                                                                                                                            |
+| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
+| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                                   |
 
 ### Temporarily Hidden (Work in Progress)
 
@@ -292,6 +292,12 @@ bettermalolos/
 
 ## Recent Changes
 
+### Unreleased — Mobile Header & Volunteer Popup Fixes
+
+- Moved the mobile menu toggle into the header actions group and standardized it to a 44 × 44 px touch target for more reliable alignment and accessibility
+- Updated the volunteer popup to use the main BetterMalolos logo with the correct aspect ratio
+- Corrected the volunteer call-to-action demonym from “Solaneños” to “Maloleños”
+
 ### v1.1.15 — Header, PWA, Version Automation & Code Quality
 
 #### PWA Install Prompt & Seamless Updates
@@ -455,13 +461,13 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 All public information is sourced from official government portals:
 
-| Source                             | URL                                                                       | Data Type                 |
-| ---------------------------------- | ------------------------------------------------------------------------- | ------------------------- |
-| LGU Malolos Official Website        | [malolos.gov.ph](#TODO-add-official-malolos-portal)                                   | Services, Officials       |
-| Sangguniang Bayan ng Malolos        | [sangguniangbayan.malolos.gov.ph](#TODO-add-malolos-legislative-portal) | Ordinances, Resolutions   |
-| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                       | Budget, Financial Reports |
-| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                         | Demographics, Census      |
-| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                               | Competitive Index         |
+| Source                             | URL                                                                     | Data Type                 |
+| ---------------------------------- | ----------------------------------------------------------------------- | ------------------------- |
+| LGU Malolos Official Website       | [malolos.gov.ph](#TODO-add-official-malolos-portal)                     | Services, Officials       |
+| Sangguniang Bayan ng Malolos       | [sangguniangbayan.malolos.gov.ph](#TODO-add-malolos-legislative-portal) | Ordinances, Resolutions   |
+| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                     | Budget, Financial Reports |
+| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                       | Demographics, Census      |
+| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                             | Competitive Index         |
 
 ## License
 
@@ -476,13 +482,13 @@ See [LICENSE](LICENSE) for full details.
 
 ## Contact
 
-| Channel  | Link                                                                      |
-| -------- | ------------------------------------------------------------------------- |
-| Website  | [bettermalolos.org](https://bettermalolos.org)                              |
-| Email    | info@bettermalolos.org                                                |
-| Facebook | [@bettermalolos.org](https://www.facebook.com/MalolosCIOPage)            |
-| LinkedIn | [BetterMalolos](https://www.linkedin.com/company/bettermalolos/)            |
-| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
+| Channel  | Link                                                                          |
+| -------- | ----------------------------------------------------------------------------- |
+| Website  | [bettermalolos.org](https://bettermalolos.org)                                |
+| Email    | info@bettermalolos.org                                                        |
+| Facebook | [@bettermalolos.org](https://www.facebook.com/MalolosCIOPage)                 |
+| LinkedIn | [BetterMalolos](https://www.linkedin.com/company/bettermalolos/)              |
+| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                       |
 | GitHub   | [francisdiaz22/bettermalolos](https://github.com/francisdiaz22/bettermalolos) |
 
 ## Acknowledgments
