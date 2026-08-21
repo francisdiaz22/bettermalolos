@@ -22,6 +22,105 @@ const translations = {
     'nav-terms': 'Terms',
     'nav-accessibility': 'Accessibility',
 
+    // Community tools and ideas
+    'home-hero-eyebrow': 'Independent. Community-built. For Malolos.',
+    'home-community-hero-title': 'Better tools and information for a better Malolos.',
+    'home-community-hero-subtitle':
+      'BetterMalolos is an independent, citizen-built civic technology project that makes useful local information easier to find, understand, and use.',
+    'home-explore-community-tools': 'Explore Community Tools',
+    'home-suggest-an-idea': 'Suggest an Idea',
+    'home-volunteer': 'Volunteer',
+    'home-find-government-service': 'Find a Government Service',
+    'home-service-search-placeholder': 'e.g., birth certificate, business permit',
+    'home-service-search-label': 'Search government services',
+    'home-service-search-submit': 'Search government services',
+    'home-top-citizen-tools-eyebrow': 'Community roadmap',
+    'home-top-citizen-tools-title': 'What can BetterMalolos help you with?',
+    'home-top-citizen-tools-subtitle':
+      "These are the community's first proposed priorities. They are not live tools yet—help us research and build them responsibly.",
+    'home-community-input-eyebrow': 'Community input',
+    'home-community-input-title': 'May problema o idea para sa Malolos?',
+    'home-community-input-copy':
+      'Tell us about a local problem, useful dataset, feature idea, or solution—and whether you want to help make it happen.',
+    'home-share-your-idea': 'Share your idea',
+    'home-barangay-hub-title': 'Explore your Barangay',
+    'home-barangay-hub-copy':
+      'We want to make useful local information, services, projects, advisories, and community updates easier to find for every barangay. Individual barangay pages are not live yet.',
+    'home-help-shape-barangay-hub': 'Help shape the Barangay Hub',
+    'home-project-tracker-title': 'Know what’s being built',
+    'home-project-tracker-copy':
+      'The proposed Project Tracker aims to make sourced information about publicly funded infrastructure and civic projects easier to understand. No project records are being presented as tracked here yet.',
+    'home-help-shape-project-tracker': 'Help shape Project Tracker',
+    'home-more-community-tools-eyebrow': 'More priorities',
+    'home-more-community-tools-title': 'More Community Tools',
+    'home-more-community-tools-copy':
+      'Explore the next priorities in the BetterMalolos community roadmap.',
+    'home-find-government-services-title': 'Find Government Services',
+    'home-find-government-services-copy':
+      'Quick access to frequently requested services and the complete directory.',
+    'home-contribute-eyebrow': 'Built with the community',
+    'home-contribute-title': 'Help build BetterMalolos',
+    'home-contribute-copy':
+      'BetterMalolos is built by volunteers. Developers, designers, researchers, data and GIS contributors, writers, students, organizers, and accessibility advocates can all help make local information more useful.',
+    'home-contribute-role-build': 'Build and design tools',
+    'home-contribute-role-research': 'Research and verify information',
+    'home-contribute-role-community': 'Connect with communities',
+    'home-community-footer-tagline':
+      'Independent, community-built tools and information for everyday life in Malolos.',
+    'home-volunteer-modal-title': 'Help build BetterMalolos',
+    'home-volunteer-modal-subtitle':
+      'Help build independent, practical civic tools with the Malolos community.',
+    'home-volunteer-modal-lead':
+      'We are looking for Maloleños who want to contribute their skills to useful local tools and trustworthy information.',
+    'community-tools-title': 'Community tools for everyday needs',
+    'community-tools-subtitle':
+      'Explore the tools the BetterMalolos community wants to research and build.',
+    'community-tools-priority-label': 'Priority',
+    'community-tools-status-label': 'Status:',
+    'community-tools-status-proposed': 'Proposed',
+    'community-tools-status-researching': 'Researching',
+    'community-tools-status-in-development': 'In Development',
+    'community-tools-status-beta': 'Beta',
+    'community-tools-status-live': 'Live',
+    'community-tools-help-shape': 'Help shape this tool',
+    'community-tools-empty': 'No community tools to show.',
+    'community-tools-load-error': 'Community tools could not be loaded. Please try again later.',
+    'community-tools-bantay-baha-name': 'Bantay Baha',
+    'community-tools-bantay-baha-summary':
+      'Flood conditions, evacuation information, passable roads, and flood-control projects.',
+    'community-tools-bantay-baha-availability-note': 'Help us research and build this tool.',
+    'community-tools-roadwatch-name': 'RoadWatch',
+    'community-tools-roadwatch-summary':
+      'Roadworks, closures, traffic disruptions, and project timelines.',
+    'community-tools-roadwatch-availability-note': 'Help us research and build this tool.',
+    'community-tools-saan-ako-lalapit-name': 'Saan Ako Lalapit?',
+    'community-tools-saan-ako-lalapit-summary':
+      'Find the right office, agency, utility, or organization for your concern.',
+    'community-tools-saan-ako-lalapit-availability-note': 'Help us research and build this tool.',
+    'community-tools-tubig-malolos-name': 'Tubig Malolos',
+    'community-tools-tubig-malolos-summary': 'Check and report water conditions in your barangay.',
+    'community-tools-tubig-malolos-availability-note': 'Help us research and build this tool.',
+    'community-tools-barangay-hub-name': 'Barangay Hub',
+    'community-tools-barangay-hub-summary':
+      'Find useful local information, services, projects, advisories, and updates for your barangay.',
+    'community-tools-barangay-hub-availability-note': 'Help us research and build this tool.',
+    'community-tools-project-tracker-name': 'Project Tracker',
+    'community-tools-project-tracker-summary':
+      'Understand and monitor publicly funded infrastructure and civic projects.',
+    'community-tools-project-tracker-availability-note': 'Help us research and build this tool.',
+    'community-tools-commute-guide-name': 'Commute Guide',
+    'community-tools-commute-guide-summary':
+      'Find clearer information about local fares, routes, terminals, and transport advisories.',
+    'community-tools-commute-guide-availability-note': 'Help us research and build this tool.',
+    'community-tools-opportunities-hub-name': 'Opportunities Hub',
+    'community-tools-opportunities-hub-summary':
+      'Discover local jobs, scholarships, training, internships, and volunteer opportunities.',
+    'community-tools-opportunities-hub-availability-note': 'Help us research and build this tool.',
+    'ideas-form-submit': 'Submit your idea',
+    'ideas-form-submitting': 'Submitting…',
+    'ideas-form-success': 'Your submission was received. Thank you for helping BetterMalolos.',
+    'ideas-form-error': 'Your submission could not be sent. Please review the form and try again.',
+
     // Statistics Page
     'stats-title': 'Municipal Statistics',
     'stats-subtitle': 'Data and statistics about Malolos, Bulacan',
@@ -6585,6 +6684,115 @@ const translations = {
   },
 
   fil: {
+    // Community tools and ideas
+    'home-hero-eyebrow': 'Malaya. Binuo ng komunidad. Para sa Malolos.',
+    'home-community-hero-title':
+      'Mas mahusay na mga tool at impormasyon para sa mas magandang Malolos.',
+    'home-community-hero-subtitle':
+      'Ang BetterMalolos ay isang malaya at mamamayang bumubuong civic technology project na ginagawang mas madaling hanapin, unawain, at gamitin ang kapaki-pakinabang na lokal na impormasyon.',
+    'home-explore-community-tools': 'Tuklasin ang mga Community Tool',
+    'home-suggest-an-idea': 'Magmungkahi ng Ideya',
+    'home-volunteer': 'Magboluntaryo',
+    'home-find-government-service': 'Maghanap ng Serbisyo ng Pamahalaan',
+    'home-service-search-placeholder': 'hal., birth certificate, business permit',
+    'home-service-search-label': 'Maghanap ng mga serbisyo ng pamahalaan',
+    'home-service-search-submit': 'Hanapin ang mga serbisyo ng pamahalaan',
+    'home-top-citizen-tools-eyebrow': 'Roadmap ng komunidad',
+    'home-top-citizen-tools-title': 'Paano makatutulong ang BetterMalolos sa iyo?',
+    'home-top-citizen-tools-subtitle':
+      'Ito ang mga unang iminungkahing prayoridad ng komunidad. Hindi pa gumagana ang mga tool na ito—tulungan kaming saliksikin at buuin ang mga ito nang responsable.',
+    'home-community-input-eyebrow': 'Ambag ng komunidad',
+    'home-community-input-title': 'May problema o idea para sa Malolos?',
+    'home-community-input-copy':
+      'Ibahagi ang isang lokal na problema, kapaki-pakinabang na dataset, ideya para sa feature, o solusyon—at sabihin kung nais mong tumulong na maisakatuparan ito.',
+    'home-share-your-idea': 'Ibahagi ang iyong ideya',
+    'home-barangay-hub-title': 'Tuklasin ang iyong Barangay',
+    'home-barangay-hub-copy':
+      'Nais naming gawing mas madaling hanapin ang kapaki-pakinabang na lokal na impormasyon, serbisyo, proyekto, abiso, at balita para sa bawat barangay. Hindi pa gumagana ang mga indibidwal na pahina ng barangay.',
+    'home-help-shape-barangay-hub': 'Tumulong hubugin ang Barangay Hub',
+    'home-project-tracker-title': 'Alamin kung ano ang itinatayo',
+    'home-project-tracker-copy':
+      'Layunin ng iminungkahing Project Tracker na gawing mas madaling unawain ang impormasyong may sanggunian tungkol sa mga imprastraktura at proyektong sibiko na pinondohan ng publiko. Wala pang proyektong ipinapakitang sinusubaybayan dito.',
+    'home-help-shape-project-tracker': 'Tumulong hubugin ang Project Tracker',
+    'home-more-community-tools-eyebrow': 'Iba pang prayoridad',
+    'home-more-community-tools-title': 'Iba Pang Community Tool',
+    'home-more-community-tools-copy':
+      'Tuklasin ang mga susunod na prayoridad sa roadmap ng komunidad ng BetterMalolos.',
+    'home-find-government-services-title': 'Maghanap ng mga Serbisyo ng Pamahalaan',
+    'home-find-government-services-copy':
+      'Mabilis na access sa mga madalas hanaping serbisyo at sa kumpletong direktoryo.',
+    'home-contribute-eyebrow': 'Binuo kasama ang komunidad',
+    'home-contribute-title': 'Tumulong buuin ang BetterMalolos',
+    'home-contribute-copy':
+      'Ang BetterMalolos ay binubuo ng mga boluntaryo. Maaaring tumulong ang mga developer, designer, researcher, data at GIS contributor, manunulat, estudyante, organizer, at accessibility advocate upang gawing mas kapaki-pakinabang ang lokal na impormasyon.',
+    'home-contribute-role-build': 'Bumuo at magdisenyo ng mga tool',
+    'home-contribute-role-research': 'Magsaliksik at magberipika ng impormasyon',
+    'home-contribute-role-community': 'Makipag-ugnayan sa mga komunidad',
+    'home-community-footer-tagline':
+      'Malaya at binuo ng komunidad na mga tool at impormasyon para sa pang-araw-araw na buhay sa Malolos.',
+    'home-volunteer-modal-title': 'Tumulong buuin ang BetterMalolos',
+    'home-volunteer-modal-subtitle':
+      'Tumulong gumawa ng malaya at praktikal na civic tools kasama ang komunidad ng Malolos.',
+    'home-volunteer-modal-lead':
+      'Naghahanap kami ng mga Maloleño na gustong mag-ambag ng kanilang kakayahan sa kapaki-pakinabang na lokal na mga tool at mapagkakatiwalaang impormasyon.',
+    'community-tools-title': 'Mga community tool para sa pang-araw-araw na pangangailangan',
+    'community-tools-subtitle':
+      'Tingnan ang mga tool na nais saliksikin at buuin ng komunidad ng BetterMalolos.',
+    'community-tools-priority-label': 'Prayoridad',
+    'community-tools-status-label': 'Katayuan:',
+    'community-tools-status-proposed': 'Iminumungkahi',
+    'community-tools-status-researching': 'Sinisiyasat',
+    'community-tools-status-in-development': 'Ginagawa',
+    'community-tools-status-beta': 'Beta',
+    'community-tools-status-live': 'Gumagana na',
+    'community-tools-help-shape': 'Tumulong na hubugin ang tool na ito',
+    'community-tools-empty': 'Walang community tool na maipapakita.',
+    'community-tools-load-error': 'Hindi ma-load ang mga community tool. Pakisubukang muli mamaya.',
+    'community-tools-bantay-baha-name': 'Bantay Baha',
+    'community-tools-bantay-baha-summary':
+      'Kalagayan ng baha, impormasyon sa paglikas, mga madaraanan, at mga proyektong pangkontrol ng baha.',
+    'community-tools-bantay-baha-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-roadwatch-name': 'RoadWatch',
+    'community-tools-roadwatch-summary':
+      'Mga ginagawang kalsada, pagsasara, abala sa trapiko, at iskedyul ng mga proyekto.',
+    'community-tools-roadwatch-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-saan-ako-lalapit-name': 'Saan Ako Lalapit?',
+    'community-tools-saan-ako-lalapit-summary':
+      'Hanapin ang tamang opisina, ahensya, utility, o organisasyon para sa iyong alalahanin.',
+    'community-tools-saan-ako-lalapit-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-tubig-malolos-name': 'Tubig Malolos',
+    'community-tools-tubig-malolos-summary':
+      'Alamin at iulat ang kalagayan ng tubig sa iyong barangay.',
+    'community-tools-tubig-malolos-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-barangay-hub-name': 'Barangay Hub',
+    'community-tools-barangay-hub-summary':
+      'Hanapin ang kapaki-pakinabang na lokal na impormasyon, serbisyo, proyekto, abiso, at balita para sa iyong barangay.',
+    'community-tools-barangay-hub-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-project-tracker-name': 'Project Tracker',
+    'community-tools-project-tracker-summary':
+      'Unawain at subaybayan ang mga imprastraktura at proyektong sibiko na pinondohan ng publiko.',
+    'community-tools-project-tracker-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-commute-guide-name': 'Commute Guide',
+    'community-tools-commute-guide-summary':
+      'Humanap ng mas malinaw na impormasyon tungkol sa pamasahe, ruta, terminal, at mga abiso sa transportasyon.',
+    'community-tools-commute-guide-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'community-tools-opportunities-hub-name': 'Opportunities Hub',
+    'community-tools-opportunities-hub-summary':
+      'Tuklasin ang mga lokal na trabaho, scholarship, pagsasanay, internship, at pagkakataong magboluntaryo.',
+    'community-tools-opportunities-hub-availability-note':
+      'Tulungan kaming saliksikin at buuin ang tool na ito.',
+    'ideas-form-submit': 'Ipadala ang iyong ideya',
+    'ideas-form-submitting': 'Ipinapadala…',
+    'ideas-form-success': 'Natanggap ang iyong isinumite. Salamat sa pagtulong sa BetterMalolos.',
+    'ideas-form-error': 'Hindi maipadala ang iyong isinumite. Pakisuri ang form at subukang muli.',
+
     'nav-home': 'Tahanan',
     'nav-services': 'Mga Serbisyo',
     'nav-government': 'Pamahalaan',

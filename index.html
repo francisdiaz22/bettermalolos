@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BetterMalolos.org - Your digital gateway to LGU Malolos services. Access municipal services, online transactions via Filipizen, emergency hotlines, government information, and transparency data for Malolos, Bulacan."
+      content="BetterMalolos is an independent, community-built civic platform making useful local tools, information, government services, and public data easier to find and understand."
     />
 
     <!-- SEO Meta Tags -->
@@ -36,10 +36,10 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bettermalolos.org/" />
-    <meta property="og:title" content="BetterMalolos.org | Official Portal" />
+    <meta property="og:title" content="BetterMalolos.org | Community-built civic tools" />
     <meta
       property="og:description"
-      content="Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos."
+      content="Independent, community-built tools and information for everyday life in Malolos."
     />
     <meta
       property="og:image"
@@ -54,10 +54,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://bettermalolos.org/" />
-    <meta name="twitter:title" content="BetterMalolos.org | Official Portal" />
+    <meta name="twitter:title" content="BetterMalolos.org | Community-built civic tools" />
     <meta
       name="twitter:description"
-      content="Empowering the people of Malolos with transparent access to the services, programs, and public funds of LGU Malolos."
+      content="Independent, community-built tools and information for everyday life in Malolos."
     />
     <meta
       name="twitter:image"
@@ -83,7 +83,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="BetterMalolos" />
 
-    <title>BetterMalolos.org | Official Portal</title>
+    <title>BetterMalolos.org | Community-built civic tools</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
@@ -113,39 +113,26 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.3" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "GovernmentOrganization",
-        "name": "Municipality of Malolos",
-        "alternateName": "Better Malolos",
+        "@type": "Organization",
+        "name": "BetterMalolos",
         "url": "https://bettermalolos.org",
         "logo": "https://bettermalolos.org/assets/images/logo/better-malolos-brand-2026.png",
-        "description": "Official portal of the Municipality of Malolos, Bulacan. Access municipal services, government information, and community updates.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "New City Hall Building, Government Center, Brgy. Bulihan",
-          "addressLocality": "Malolos",
-          "addressRegion": "Bulacan",
-          "postalCode": "3000",
-          "addressCountry": "PH"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "14.86085",
-          "longitude": "120.81020"
-        },
-        "telephone": "(078) 326-5000",
-        "email": "services@malolos.gov.ph",
-        "openingHours": "Mo-Fr 08:00-17:00",
+        "description": "BetterMalolos is an independent, community-built civic technology project making useful local information easier to find, understand, and use.",
+        "email": "info@bettermalolos.org",
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "Malolos, Bulacan"
         },
-        "sameAs": ["https://www.facebook.com/bettermalolos.org", "https://malolos.gov.ph"]
+        "sameAs": [
+          "https://www.facebook.com/bettermalolos.org",
+          "https://github.com/francisdiaz22/bettermalolos"
+        ]
       }
     </script>
     <script type="application/ld+json">
@@ -340,29 +327,36 @@
         <div class="container">
           <div class="home-hero-v2-inner">
             <div class="home-hero-v2-text">
-              <h1>
-                <span data-i18n="hero-welcome-prefix">Welcome to</span>
-                <span class="brand-wordmark">BetterMalolos</span>.org
+              <p class="home-hero-v2-eyebrow" data-i18n="home-hero-eyebrow">
+                Independent. Community-built. For Malolos.
+              </p>
+              <h1 data-i18n="home-community-hero-title">
+                Better tools and information for a better Malolos.
               </h1>
-              <p data-i18n="hero-subtitle">
-                Access government services, information, and resources for the people of Malolos,
-                Bulacan.
+              <p data-i18n="home-community-hero-subtitle">
+                BetterMalolos is an independent, citizen-built civic technology project that makes
+                useful local information easier to find, understand, and use.
               </p>
               <div class="home-hero-v2-actions">
-                <a href="services/" class="btn btn-primary"
-                  ><i class="bi bi-arrow-right"></i>
-                  <span data-i18n="home-browse-services">Browse Services</span></a
+                <a href="#community-tools" class="btn btn-primary"
+                  ><i class="bi bi-compass" aria-hidden="true"></i>
+                  <span data-i18n="home-explore-community-tools">Explore Community Tools</span></a
                 >
-                <a href="contact/" class="btn btn-outline" data-i18n="home-contact-us"
-                  >Contact Us</a
-                >
+                <a href="/ideas" class="btn btn-outline">
+                  <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                  <span data-i18n="home-suggest-an-idea">Suggest an Idea</span>
+                </a>
+                <a href="mailto:info@bettermalolos.org" class="home-hero-volunteer-link">
+                  <i class="bi bi-people" aria-hidden="true"></i>
+                  <span data-i18n="home-volunteer">Volunteer</span>
+                </a>
               </div>
             </div>
             <div class="home-hero-v2-search">
               <div class="home-search-box">
                 <h2>
-                  <i class="bi bi-search"></i>
-                  <span data-i18n="home-find-a-service">Find a Service</span>
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <span data-i18n="home-find-government-service">Find a Government Service</span>
                 </h2>
                 <form class="search-form" role="search">
                   <div class="search-input-wrapper">
@@ -372,10 +366,17 @@
                       class="service-search-input"
                       placeholder="e.g., birth certificate, business permit"
                       aria-label="Search services"
+                      data-i18n-placeholder="home-service-search-placeholder"
+                      data-i18n-aria="home-service-search-label"
                       autocomplete="off"
                     />
-                    <button type="submit" class="search-submit-btn" aria-label="Search">
-                      <i class="bi bi-arrow-right"></i>
+                    <button
+                      type="submit"
+                      class="search-submit-btn"
+                      aria-label="Search government services"
+                      data-i18n-aria="home-service-search-submit"
+                    >
+                      <i class="bi bi-arrow-right" aria-hidden="true"></i>
                     </button>
                   </div>
                 </form>
@@ -399,59 +400,129 @@
         </div>
       </section>
 
-      <!-- Appointment Services CTA — temporarily hidden while this feature is in progress. -->
-      <section
-        class="appointment-cta-section"
-        aria-label="Mayor's Office Appointment Services"
-        hidden
-      >
+      <!-- Top Citizen Tools -->
+      <section id="community-tools" class="section community-tools-section">
         <div class="container">
-          <div class="appointment-cta-inner">
-            <div class="appointment-cta-animation" aria-hidden="true">
-              <img
-                src="assets/images/undraw_schedule-cleanup_1xs7.svg"
-                alt=""
-                width="960"
-                height="543"
-              />
+          <div class="home-community-section-header">
+            <p class="home-community-eyebrow" data-i18n="home-top-citizen-tools-eyebrow">
+              Community roadmap
+            </p>
+            <h2 data-i18n="home-top-citizen-tools-title">What can BetterMalolos help you with?</h2>
+            <p data-i18n="home-top-citizen-tools-subtitle">
+              These are the community's first proposed priorities. They are not live tools yet—help
+              us research and build them responsibly.
+            </p>
+          </div>
+          <div class="community-tools-grid" data-community-tools data-priorities="1,2,3,4"></div>
+        </div>
+      </section>
+
+      <!-- Suggest an Idea -->
+      <section class="section home-suggestion-section">
+        <div class="container">
+          <div class="home-feature-panel home-feature-panel--idea">
+            <div class="home-feature-panel__icon" aria-hidden="true">
+              <i class="bi bi-chat-heart"></i>
             </div>
-            <div class="appointment-cta-content">
-              <h2 class="appointment-cta-heading" data-i18n="appointment-cta-heading">
-                Enhancing Appointment Services of LGU Malolos Mayor's Office
-              </h2>
-              <p class="appointment-cta-subtitle" data-i18n="appointment-cta-subtitle">
-                No lines. No back-and-forth. Just efficient appointments.
+            <div class="home-feature-panel__content">
+              <p class="home-community-eyebrow" data-i18n="home-community-input-eyebrow">
+                Community input
               </p>
-              <div class="appointment-cta-actions">
-                <a
-                  href="https://malolosmayorsoffice-oasys.com/user/auth/login.php"
-                  class="appointment-cta-btn appointment-cta-btn--primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-calendar-check" aria-hidden="true"></i>
-                  <span data-i18n="home-schedule-appointment">Schedule Appointment</span></a
+              <h2 data-i18n="home-community-input-title">May problema o idea para sa Malolos?</h2>
+              <p data-i18n="home-community-input-copy">
+                Tell us about a local problem, useful dataset, feature idea, or solution—and whether
+                you want to help make it happen.
+              </p>
+            </div>
+            <a href="/ideas" class="btn btn-primary">
+              <span data-i18n="home-share-your-idea">Share your idea</span>
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Barangay Hub Teaser -->
+      <section class="section home-roadmap-teaser-section">
+        <div class="container">
+          <div class="home-roadmap-teaser">
+            <div class="home-roadmap-teaser__content">
+              <span class="community-status community-status--proposed">
+                <span class="community-status__label" data-i18n="community-tools-status-label"
+                  >Status:</span
                 >
-                <a
-                  href="https://malolosmayorsoffice-oasys.com/user/auth/register.php"
-                  class="appointment-cta-btn appointment-cta-btn--outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-person-plus" aria-hidden="true"></i>
-                  <span data-i18n="home-create-account">Create Account</span></a
-                >
-              </div>
+                <span data-i18n="community-tools-status-proposed">Proposed</span>
+              </span>
+              <h2 data-i18n="home-barangay-hub-title">Explore your Barangay</h2>
+              <p data-i18n="home-barangay-hub-copy">
+                We want to make useful local information, services, projects, advisories, and
+                community updates easier to find for every barangay. Individual barangay pages are
+                not live yet.
+              </p>
+              <a href="/ideas" class="home-inline-link">
+                <span data-i18n="home-help-shape-barangay-hub">Help shape the Barangay Hub</span>
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="home-roadmap-teaser__icon" aria-hidden="true">
+              <i class="bi bi-geo-alt"></i>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Quick Access Services -->
-      <section class="section">
+      <!-- Project Transparency Teaser -->
+      <section class="section home-roadmap-teaser-section home-roadmap-teaser-section--alt">
+        <div class="container">
+          <div class="home-roadmap-teaser home-roadmap-teaser--reverse">
+            <div class="home-roadmap-teaser__content">
+              <span class="community-status community-status--proposed">
+                <span class="community-status__label" data-i18n="community-tools-status-label"
+                  >Status:</span
+                >
+                <span data-i18n="community-tools-status-proposed">Proposed</span>
+              </span>
+              <h2 data-i18n="home-project-tracker-title">Know what’s being built</h2>
+              <p data-i18n="home-project-tracker-copy">
+                The proposed Project Tracker aims to make sourced information about publicly funded
+                infrastructure and civic projects easier to understand. No project records are being
+                presented as tracked here yet.
+              </p>
+              <a href="/ideas" class="home-inline-link">
+                <span data-i18n="home-help-shape-project-tracker">Help shape Project Tracker</span>
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="home-roadmap-teaser__icon" aria-hidden="true">
+              <i class="bi bi-buildings"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Community Tools -->
+      <section class="section community-tools-section community-tools-section--more">
+        <div class="container">
+          <div class="home-community-section-header">
+            <p class="home-community-eyebrow" data-i18n="home-more-community-tools-eyebrow">
+              More priorities
+            </p>
+            <h2 data-i18n="home-more-community-tools-title">More Community Tools</h2>
+            <p data-i18n="home-more-community-tools-copy">
+              Explore the next priorities in the BetterMalolos community roadmap.
+            </p>
+          </div>
+          <div class="community-tools-grid" data-community-tools data-priorities="5,6,7,8"></div>
+        </div>
+      </section>
+
+      <!-- Government Services -->
+      <section id="government-services" class="section home-government-services-section">
         <div class="container">
           <div class="home-section-header">
-            <h2 data-i18n="section-popular">Popular Services</h2>
-            <p data-i18n="home-quick-access-to-frequently-requested-municipal">
-              Quick access to frequently requested municipal services
+            <h2 data-i18n="home-find-government-services-title">Find Government Services</h2>
+            <p data-i18n="home-find-government-services-copy">
+              Quick access to frequently requested services and the complete directory.
             </p>
           </div>
           <div class="home-services-grid">
@@ -502,6 +573,34 @@
                 <p data-i18n="home-browse-complete-directory">Browse complete directory</p>
               </div>
               <i class="bi bi-arrow-right home-service-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Volunteer and Contribute -->
+      <section class="section home-volunteer-section">
+        <div class="container">
+          <div class="home-volunteer-panel">
+            <div class="home-volunteer-panel__content">
+              <p class="home-community-eyebrow" data-i18n="home-contribute-eyebrow">
+                Built with the community
+              </p>
+              <h2 data-i18n="home-contribute-title">Help build BetterMalolos</h2>
+              <p data-i18n="home-contribute-copy">
+                BetterMalolos is built by volunteers. Developers, designers, researchers, data and
+                GIS contributors, writers, students, organizers, and accessibility advocates can all
+                help make local information more useful.
+              </p>
+              <ul class="home-volunteer-roles" aria-label="Volunteer roles">
+                <li data-i18n="home-contribute-role-build">Build and design tools</li>
+                <li data-i18n="home-contribute-role-research">Research and verify information</li>
+                <li data-i18n="home-contribute-role-community">Connect with communities</li>
+              </ul>
+            </div>
+            <a href="mailto:info@bettermalolos.org" class="btn btn-primary">
+              <i class="bi bi-envelope-heart" aria-hidden="true"></i>
+              <span data-i18n="home-volunteer-with-us">Volunteer with us</span>
             </a>
           </div>
         </div>
@@ -1249,12 +1348,8 @@
               alt="Better Malolos logo"
               class="footer-logo"
             />
-            <p
-              class="footer-tagline"
-              data-i18n="home-empowering-the-people-of-malolos-with-transparent"
-            >
-              Empowering the people of Malolos with transparent access to the services, programs,
-              and public funds of LGU Malolos.
+            <p class="footer-tagline" data-i18n="home-community-footer-tagline">
+              Independent, community-built tools and information for everyday life in Malolos.
             </p>
             <div class="footer-social-new">
               <a
@@ -1433,15 +1528,17 @@
             loading="eager"
             draggable="false"
           />
-          <h2 id="vol-popup-title" class="vol-popup-title">Be Part of Something Greater</h2>
-          <p class="vol-popup-header-sub">
-            Malolos, Bulacan deserves a world-class digital government. Help us build it.
+          <h2 id="vol-popup-title" class="vol-popup-title" data-i18n="home-volunteer-modal-title">
+            Help build BetterMalolos
+          </h2>
+          <p class="vol-popup-header-sub" data-i18n="home-volunteer-modal-subtitle">
+            Help build independent, practical civic tools with the Malolos community.
           </p>
         </div>
         <div class="vol-popup-body">
-          <p class="vol-popup-lead">
-            We are looking for passionate <strong>Maloleños</strong> who want to serve their
-            community through their craft.
+          <p class="vol-popup-lead" data-i18n="home-volunteer-modal-lead">
+            We are looking for Maloleños who want to contribute their skills to useful local tools
+            and trustworthy information.
           </p>
           <div class="vol-popup-roles" role="list">
             <div class="vol-popup-role" role="listitem">
@@ -1480,7 +1577,8 @@
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"
     ></script>
-    <script defer src="assets/js/translations.js"></script>
+    <script defer src="assets/js/translations.js?v=1.0.3"></script>
+    <script defer src="assets/js/community-tools.js?v=1.0.3"></script>
     <script defer src="assets/js/info-bar.js?v=1.0.1"></script>
     <script defer src="assets/js/main.js"></script>
     <script defer src="assets/js/version.js"></script>

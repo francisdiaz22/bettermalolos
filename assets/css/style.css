@@ -525,6 +525,338 @@ body.mobile-menu-open {
   color: var(--color-primary);
 }
 
+/* Community roadmap cards and maturity statuses */
+.community-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.community-tool-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.community-tool-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.community-tool-card__priority {
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.community-tool-card__title {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.community-tool-card__summary {
+  flex-grow: 1;
+  color: var(--color-text);
+}
+
+.community-tool-card__availability {
+  margin: auto 0 0;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.community-tool-card-link {
+  display: block;
+  border-radius: var(--border-radius);
+  color: inherit;
+  text-decoration: none;
+}
+
+.community-tool-card-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.community-tool-card-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.community-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 4px 8px;
+  border: 1px solid var(--color-border);
+  border-left-width: 4px;
+  border-radius: 999px;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.community-status__label {
+  font-weight: 500;
+}
+
+.community-status--proposed {
+  border-left-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+}
+
+.community-status--researching {
+  border-left-color: var(--color-info);
+  background-color: var(--color-secondary-soft);
+}
+
+.community-status--in-development {
+  border-left-color: var(--color-accent);
+  background-color: var(--color-bg-alt);
+}
+
+.community-status--beta {
+  border-left-color: var(--color-secondary);
+  background-color: var(--color-secondary-soft);
+}
+
+.community-status--live {
+  border-left-color: var(--color-success);
+  background-color: var(--color-secondary-soft);
+}
+
+.community-tools-message {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.community-tools-message--error {
+  border-left: 4px solid var(--color-danger);
+}
+
+/* Community-first homepage sections */
+.community-tools-section {
+  background-color: var(--color-bg-alt);
+}
+
+.community-tools-section--more,
+.home-government-services-section {
+  background-color: var(--color-white);
+}
+
+.home-community-section-header {
+  max-width: 760px;
+  margin: 0 auto var(--spacing-xl);
+  text-align: center;
+}
+
+.home-community-section-header h2 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+}
+
+.home-community-section-header > p:last-child {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 1.0625rem;
+}
+
+.home-community-eyebrow {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-suggestion-section {
+  padding-top: 0;
+  background-color: var(--color-bg-alt);
+}
+
+.home-feature-panel,
+.home-volunteer-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--spacing-lg);
+  align-items: center;
+  padding: clamp(var(--spacing-lg), 5vw, var(--spacing-xl));
+  border-radius: calc(var(--border-radius) * 2);
+  background-color: var(--color-primary-soft);
+  border: 1px solid var(--color-border);
+}
+
+.home-feature-panel__icon,
+.home-roadmap-teaser__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.home-feature-panel__content h2,
+.home-volunteer-panel__content h2,
+.home-roadmap-teaser__content h2 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.home-feature-panel__content > p:last-child,
+.home-volunteer-panel__content > p,
+.home-roadmap-teaser__content > p {
+  margin: 0;
+}
+
+.home-feature-panel .btn,
+.home-volunteer-panel .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+.home-roadmap-teaser-section {
+  background-color: var(--color-white);
+}
+
+.home-roadmap-teaser-section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.home-roadmap-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--spacing-xl);
+  align-items: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.home-roadmap-teaser--reverse {
+  direction: rtl;
+}
+
+.home-roadmap-teaser--reverse > * {
+  direction: ltr;
+}
+
+.home-roadmap-teaser__content .community-status {
+  margin-bottom: var(--spacing-sm);
+}
+
+.home-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.home-inline-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.home-volunteer-section {
+  background-color: var(--color-primary);
+}
+
+.home-volunteer-panel {
+  grid-template-columns: minmax(0, 1fr) auto;
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--color-white);
+}
+
+.home-volunteer-panel__content {
+  max-width: 780px;
+}
+
+.home-volunteer-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-lg);
+  margin: var(--spacing-md) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-volunteer-roles li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.home-volunteer-roles li::before {
+  content: '\2713';
+  color: var(--color-success);
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .home-feature-panel,
+  .home-volunteer-panel {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: center;
+  }
+
+  .home-feature-panel__icon {
+    margin: 0 auto;
+  }
+
+  .home-feature-panel .btn,
+  .home-volunteer-panel .btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .home-roadmap-teaser,
+  .home-roadmap-teaser--reverse {
+    grid-template-columns: minmax(0, 1fr);
+    direction: ltr;
+    text-align: center;
+  }
+
+  .home-roadmap-teaser__icon {
+    grid-row: 1;
+    margin: 0 auto;
+  }
+
+  .home-volunteer-roles {
+    justify-content: center;
+  }
+}
+
 /* News Page - Card Grid */
 .news-card-grid {
   display: grid;
@@ -6054,7 +6386,9 @@ cklist with Icons - Proper Indentation */
   padding: 12px 22px;
   border-radius: var(--border-radius);
   text-decoration: none;
-  transition: background 0.18s ease, transform 0.15s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.15s ease;
 }
 
 .home-fb-cta:hover,
@@ -6142,12 +6476,26 @@ cklist with Icons - Proper Indentation */
   animation: skeleton-shimmer 1.4s infinite ease-in-out;
 }
 
-.fb-skel-bar--title { height: 13px; width: 72%; margin-bottom: 8px; }
-.fb-skel-bar--100   { width: 100%; }
-.fb-skel-bar--80    { width: 80%; }
-.fb-skel-bar--60    { width: 60%; }
-.fb-skel-bar--45    { width: 45%; }
-.fb-skel-bar--sm    { height: 8px; }
+.fb-skel-bar--title {
+  height: 13px;
+  width: 72%;
+  margin-bottom: 8px;
+}
+.fb-skel-bar--100 {
+  width: 100%;
+}
+.fb-skel-bar--80 {
+  width: 80%;
+}
+.fb-skel-bar--60 {
+  width: 60%;
+}
+.fb-skel-bar--45 {
+  width: 45%;
+}
+.fb-skel-bar--sm {
+  height: 8px;
+}
 
 /* ── Post cards ── */
 .fb-feed-local {
@@ -6550,6 +6898,15 @@ cklist with Icons - Proper Indentation */
   line-height: 1.2;
 }
 
+.home-hero-v2-text .home-hero-v2-eyebrow {
+  margin-bottom: var(--spacing-sm);
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .brand-wordmark {
   font-family: var(--font-brand);
   font-weight: 800;
@@ -6582,6 +6939,28 @@ cklist with Icons - Proper Indentation */
 .home-hero-v2-actions .btn-primary:hover {
   background: var(--color-bg-alt);
   color: var(--color-primary);
+}
+
+.home-hero-volunteer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 4px;
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.home-hero-volunteer-link:hover {
+  color: white;
+  text-decoration-thickness: 2px;
+}
+
+.home-hero-volunteer-link:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+  border-radius: var(--border-radius);
 }
 
 .btn-outline {
@@ -9823,7 +10202,9 @@ a.a11y-contact-item:hover i {
   pointer-events: none;
   /* Visibility flips only after the fade-out finishes, so the close animation
      stays visible; opacity still carries the motion. */
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
   /* Pre-promote the overlay to its own persistent GPU compositing layer at page
      load — even while hidden (opacity:0). This forces the backdrop-filter layer
      to be established ONCE up front, so toggling opacity 0->1 on reveal can no
@@ -9903,7 +10284,9 @@ a.a11y-contact-item:hover i {
   justify-content: center;
   font-size: 1rem;
   z-index: 2;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
 }
 
 /* Expand the pointer target to ~46px without growing the 36px visual circle,
@@ -9932,7 +10315,12 @@ a.a11y-contact-item:hover i {
 .vol-popup-header {
   position: relative;
   padding: 38px 32px 30px;
-  background: linear-gradient(140deg, var(--color-primary) 0%, var(--color-secondary) 55%, var(--color-primary-dark) 100%);
+  background: linear-gradient(
+    140deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 55%,
+    var(--color-primary-dark) 100%
+  );
   text-align: center;
   overflow: hidden;
 }
@@ -10063,7 +10451,9 @@ a.a11y-contact-item:hover i {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.32);
   font-family: var(--font-main);
 }

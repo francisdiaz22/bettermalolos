@@ -18,7 +18,7 @@ test.describe('Volunteer modal — semantics', () => {
     await gotoFresh(page);
     await waitForOpen(page);
 
-    await expect(page.getByRole('dialog')).toHaveAccessibleName('Be Part of Something Greater');
+    await expect(page.getByRole('dialog')).toHaveAccessibleName('Help build BetterMalolos');
   });
 
   test('close button and CTA have discernible names', async ({ page }) => {
