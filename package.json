@@ -45,7 +45,7 @@
   },
   "overrides": {
     "body-parser": "1.20.6",
-    "brace-expansion": "1.1.18",
+    "brace-expansion": "5.0.8",
     "dunder-proto": "1.0.1",
     "es-define-property": "1.0.1",
     "events-universal": "1.0.1",
