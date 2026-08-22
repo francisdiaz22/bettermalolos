@@ -140,6 +140,16 @@
     return card;
   }
 
+  function addCardCta(card, container) {
+    if (container.dataset.cardCta !== 'shape') return;
+
+    const cta = document.createElement('a');
+    cta.className = 'community-tool-card__cta';
+    cta.href = '/ideas/?submissionType=feature#submission-type';
+    setTranslatedText(cta, 'community-tools-help-shape', 'Help shape this tool');
+    card.append(cta);
+  }
+
   function requestedPriorities(container) {
     const value = container.dataset.priorities;
     if (!value) return null;
@@ -174,7 +184,9 @@
 
     const fragment = document.createDocumentFragment();
     tools.forEach(function (tool) {
-      fragment.append(createCard(tool));
+      const card = createCard(tool);
+      addCardCta(card, container);
+      fragment.append(card);
     });
     container.append(fragment);
   }

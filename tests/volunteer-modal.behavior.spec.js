@@ -8,12 +8,9 @@ test.describe('Volunteer modal — display & content', () => {
     const overlay = await waitForOpen(page);
 
     await expect(overlay).toBeVisible();
-    await expect(page.locator(SEL.title)).toHaveText('Be Part of Something Greater');
+    await expect(page.locator(SEL.title)).toHaveText('Help build BetterMalolos');
     await expect(page.locator(SEL.roles)).toHaveCount(5);
-    await expect(page.locator(SEL.cta)).toHaveAttribute(
-      'href',
-      'mailto:info@bettermalolos.org'
-    );
+    await expect(page.locator(SEL.cta)).toHaveAttribute('href', 'mailto:info@bettermalolos.org');
     await expect(page.locator(SEL.close)).toBeVisible();
     await expect(page.locator(SEL.skip)).toBeVisible();
   });

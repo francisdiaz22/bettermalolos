@@ -134,6 +134,43 @@ function showUpdateBanner(worker) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Keep one navigation template usable across root, nested, and clean URLs.
+  // Breadcrumbs identify the exact page; the header identifies its resident-facing section.
+  const markCurrentNavigation = () => {
+    const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+    const sectionByPrefix = [
+      { prefixes: ['/budget'], section: 'projects-budget' },
+      { prefixes: ['/services', '/service-details'], section: 'services' },
+      {
+        prefixes: ['/government', '/statistics', '/news', '/legislative'],
+        section: 'city-information',
+      },
+      { prefixes: ['/ideas', '/contact'], section: 'get-involved' },
+    ];
+    const current = sectionByPrefix.find(({ prefixes }) =>
+      prefixes.some((prefix) => path === prefix || path.startsWith(prefix + '/'))
+    );
+
+    if (!current) return;
+
+    const section = document.querySelector(`[data-nav-section="${current.section}"]`);
+    const sectionLink = section && section.querySelector(':scope > a');
+    if (!sectionLink) return;
+
+    const sectionPath = sectionLink.pathname.replace(/\/$/, '') || '/';
+    sectionLink.classList.add('active');
+    sectionLink.setAttribute('aria-current', sectionPath === path ? 'page' : 'location');
+
+    section.querySelectorAll('.dropdown-menu a[href]').forEach((link) => {
+      const linkPath = link.pathname.replace(/\/$/, '') || '/';
+      if (link.origin === window.location.origin && linkPath === path && sectionPath !== path) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  };
+
+  markCurrentNavigation();
+
   // Prevent double-click on navigation and header links from causing unintended behavior
   const headerLinks = document.querySelectorAll('.site-header a, .main-nav a, .logo-container a');
   headerLinks.forEach((link) => {
@@ -251,7 +288,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get focusable elements within menu for focus trap
     var getFocusableElements = function () {
-      return nav.querySelectorAll('a[href], button:not([disabled])');
+      return Array.prototype.filter.call(
+        nav.querySelectorAll('a[href], button:not([disabled])'),
+        function (element) {
+          return (
+            element.getClientRects().length > 0 && getComputedStyle(element).visibility !== 'hidden'
+          );
+        }
+      );
     };
 
     var closeAllDropdowns = function () {
@@ -401,6 +445,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       var menuLinks = menu.querySelectorAll('a');
 
+      var focusFirstMenuLink = function () {
+        if (!menuLinks[0]) return;
+        window.requestAnimationFrame(function () {
+          menuLinks[0].focus();
+        });
+      };
+
       var openDropdown = function () {
         // Close sibling dropdowns first
         var siblings = item.parentElement.querySelectorAll('.has-dropdown.dropdown-open');
@@ -448,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowDown' || e.key === 'Down') {
           e.preventDefault();
           openDropdown();
-          if (menuLinks[0]) menuLinks[0].focus();
+          focusFirstMenuLink();
         } else if (e.key === 'Enter' || e.key === ' ') {
           if (isMobileNav()) {
             e.preventDefault();
@@ -456,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
               closeDropdown();
             } else {
               openDropdown();
-              if (menuLinks[0]) menuLinks[0].focus();
+              focusFirstMenuLink();
             }
           }
         }

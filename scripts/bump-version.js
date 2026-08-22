@@ -87,6 +87,7 @@ const htmlDirs = [
   'contact',
   'faq',
   'government',
+  'ideas',
   'legislative',
   'news',
   'privacy',
@@ -99,7 +100,8 @@ const htmlDirs = [
 ];
 
 let filesUpdated = 0;
-const versionPattern = new RegExp('Ver\\. ' + oldVersion.replace(/\./g, '\\.'), 'g');
+// Normalize stale copied footers when applying the current release version.
+const versionPattern = /Ver\. \d+\.\d+\.\d+/g;
 
 htmlDirs.forEach(function (dir) {
   const dirPath = path.join(__dirname, '..', dir);

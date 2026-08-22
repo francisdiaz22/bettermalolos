@@ -121,64 +121,170 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
-          <a href="../"
-            ><img
-              src="../assets/images/logo/better-malolos-main.png"
-              alt="Municipality of Malolos Logo"
+          <a href="/">
+            <img
+              src="/assets/images/logo/better-malolos-main.png"
+              alt="Better Malolos Logo"
               class="logo-img"
-          /></a>
+            />
+          </a>
         </div>
+
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="../" data-i18n="nav-home">Home</a></li>
-            <li class="has-dropdown">
-              <a href="./" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
-              <ul class="dropdown-menu">
-                <li><a href="certificates" data-i18n="safety-certificates">Certificates</a></li>
-                <li><a href="business" data-i18n="safety-business">Business</a></li>
-                <li><a href="tax-payments" data-i18n="safety-tax-payments">Tax Payments</a></li>
-                <li>
-                  <a href="social-services" data-i18n="safety-social-services">Social Services</a>
-                </li>
-                <li><a href="health" data-i18n="safety-health">Health</a></li>
-                <li><a href="agriculture" data-i18n="safety-agriculture">Agriculture</a></li>
-                <li>
-                  <a href="infrastructure" data-i18n="safety-infrastructure">Infrastructure</a>
-                </li>
-                <li><a href="education" data-i18n="safety-education">Education</a></li>
-                <li><a href="public-safety" data-i18n="safety-public-safety">Public Safety</a></li>
-                <li><a href="environment" data-i18n="safety-environment">Environment</a></li>
-              </ul>
-            </li>
-            <li><a href="../government/" data-i18n="nav-government">Government</a></li>
-            <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
-            <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+            <li class="has-dropdown nav-community-tools" data-nav-section="community-tools">
+              <a
+                href="/#community-tools"
+                data-i18n="nav-community-tools"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Community Tools</a
+              >
               <ul class="dropdown-menu">
                 <li>
-                  <a
-                    href="../legislative/ordinance-framework"
-                    data-i18n="safety-ordinance-framework"
-                    >Ordinance Framework</a
+                  <a href="/ideas/#community-roadmap" data-i18n="nav-bantay-baha-proposed"
+                    >Bantay Baha — Proposed</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="../legislative/resolution-framework"
-                    data-i18n="safety-resolution-framework"
-                    >Resolution Framework</a
+                  <a href="/ideas/#community-roadmap" data-i18n="nav-roadwatch-proposed"
+                    >RoadWatch — Proposed</a
+                  >
+                </li>
+                <li>
+                  <a href="/ideas/#community-roadmap" data-i18n="nav-saan-ako-lalapit-proposed"
+                    >Saan Ako Lalapit? — Proposed</a
+                  >
+                </li>
+                <li>
+                  <a href="/ideas/#community-roadmap" data-i18n="nav-tubig-malolos-proposed"
+                    >Tubig Malolos — Proposed</a
+                  >
+                </li>
+                <li>
+                  <a href="/#community-tools" data-i18n="nav-all-community-tools"
+                    >All Community Tools</a
                   >
                 </li>
               </ul>
             </li>
-            <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
-            <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
+            <li class="has-dropdown nav-barangays" data-nav-section="barangays">
+              <a
+                href="/#barangay-hub"
+                data-i18n="nav-barangays"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Barangays</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/#barangay-hub" data-i18n="nav-barangay-hub-proposed"
+                    >Barangay Hub — Proposed</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/ideas/?submissionType=feature#community-roadmap"
+                    data-i18n="nav-help-shape-barangays"
+                    >Help shape Barangay Hub</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="has-dropdown nav-projects-budget" data-nav-section="projects-budget">
+              <a
+                href="/budget/"
+                data-i18n="nav-projects-budget"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Projects &amp; Budget</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/#project-tracker" data-i18n="nav-project-tracker-proposed"
+                    >Project Tracker — Proposed</a
+                  >
+                </li>
+                <li>
+                  <a href="/budget/" data-i18n="nav-infrastructure-projects"
+                    >Infrastructure Projects</a
+                  >
+                </li>
+                <li>
+                  <a href="/budget/" data-i18n="nav-city-budget">City Budget &amp; Transparency</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-services" data-nav-section="services">
+              <a href="/services/" data-i18n="nav-services">Services</a>
+            </li>
+            <li class="has-dropdown nav-city-information" data-nav-section="city-information">
+              <a
+                href="/government/"
+                data-i18n="nav-city-information"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >City Information</a
+              >
+              <ul class="dropdown-menu dropdown-menu--end">
+                <li>
+                  <a href="/government/" data-i18n="nav-government-officials"
+                    >Government &amp; Officials</a
+                  >
+                </li>
+                <li>
+                  <a href="/statistics/" data-i18n="nav-malolos-statistics">Malolos Statistics</a>
+                </li>
+                <li><a href="/news/" data-i18n="nav-news">News</a></li>
+                <li>
+                  <a href="/legislative/" data-i18n="nav-ordinances-resolutions"
+                    >Ordinances &amp; Resolutions</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="has-dropdown nav-get-involved" data-nav-section="get-involved">
+              <a
+                href="/ideas/"
+                data-i18n="nav-get-involved"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Get Involved</a
+              >
+              <ul class="dropdown-menu dropdown-menu--end">
+                <li><a href="/ideas/" data-i18n="nav-suggest-idea">Suggest an Idea</a></li>
+                <li>
+                  <a href="mailto:info@bettermalolos.org" data-i18n="nav-volunteer">Volunteer</a>
+                </li>
+                <li>
+                  <a href="/ideas/?submissionType=source#idea-form" data-i18n="nav-share-source"
+                    >Share Data or a Source</a
+                  >
+                </li>
+                <li><a href="/contact/" data-i18n="nav-contact-us">Contact Us</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
+
         <div class="header-actions">
           <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="en"
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="fil"
+              aria-label="Switch to Filipino"
+            >
+              FIL
+            </button>
           </div>
         </div>
       </div>
@@ -350,7 +456,9 @@
             >
             <a href="tel:09061880868" class="hotline-card"
               ><i class="bi bi-building"></i>
-              <span data-i18n="safety-dilg-malolos-0906-188-0868">DILG Malolos 0906 188 0868</span></a
+              <span data-i18n="safety-dilg-malolos-0906-188-0868"
+                >DILG Malolos 0906 188 0868</span
+              ></a
             >
             <a href="tel:09171345511" class="hotline-card"
               ><i class="bi bi-shop"></i>
@@ -443,8 +551,8 @@
               class="footer-tagline"
               data-i18n="safety-empowering-the-people-of-malolos-with-transparent"
             >
-              Empowering the people of Malolos with transparent access to the services, programs, and
-              public funds of LGU Malolos.
+              Empowering the people of Malolos with transparent access to the services, programs,
+              and public funds of LGU Malolos.
             </p>
             <div class="footer-social-new">
               <a
@@ -523,7 +631,8 @@
                   data-i18n="safety-freedom-of-information"
                   >Freedom of Information</a
                 >
-              </li><li>
+              </li>
+              <li>
                 <a
                   href="https://www.facebook.com/bettermalolos.org"
                   target="_blank"
@@ -596,7 +705,7 @@
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.0.0</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.0.3</span>
           </div>
         </div>
       </div>

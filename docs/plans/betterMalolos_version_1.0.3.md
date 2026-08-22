@@ -472,7 +472,7 @@ This should become the main community intake system for BetterMalolos.
 
 ## Suggested landing copy
 
-> **May problema o idea para sa Malolos?**
+> **Have a problem or an idea for Malolos?**
 
 > BetterMalolos is built with the community. Tell us what information, tool, dataset, or solution would help make life in Malolos better.
 

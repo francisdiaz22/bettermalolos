@@ -119,12 +119,42 @@
     gap: 0;
   }
 
+  .main-nav .nav-community-tools {
+    order: 1;
+  }
+
+  .main-nav .nav-barangays {
+    order: 2;
+  }
+
+  .main-nav .nav-get-involved {
+    order: 3;
+  }
+
+  .main-nav .nav-projects-budget {
+    order: 4;
+  }
+
+  .main-nav .nav-services {
+    order: 5;
+  }
+
+  .main-nav .nav-city-information {
+    order: 6;
+  }
+
   .main-nav a {
     display: block;
     padding: 12px 16px;
     border-radius: 6px;
     transition: background-color 0.15s ease;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .main-nav .nav-get-involved > a {
+    margin: 4px 8px;
+    padding: 10px 8px;
+    text-align: center;
   }
 
   .main-nav a:hover,

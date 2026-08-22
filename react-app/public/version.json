@@ -1,11 +1,12 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.3",
   "major": 1,
   "minor": 0,
-  "patch": 1,
-  "lastUpdated": "2026-08-19",
+  "patch": 3,
+  "lastUpdated": "2026-08-22",
   "changelog": {
     "1.0.0": "Initial release",
+    "1.0.3": "Community-first homepage, ideas portal, roadmap, and resident-focused navigation",
     "1.1.0": "Added version management system"
   }
 }
