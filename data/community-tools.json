@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "allowedStatuses": ["Proposed", "Researching", "In Development", "Beta", "Live"],
+  "tools": [
+    {
+      "id": "bantay-baha",
+      "name": "Bantay Baha",
+      "route": "/bantay-baha",
+      "summary": "Flood conditions, evacuation information, passable roads, and flood-control projects.",
+      "status": "Proposed",
+      "priority": 1,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "roadwatch",
+      "name": "RoadWatch",
+      "route": "/roadwatch",
+      "summary": "Roadworks, closures, traffic disruptions, and project timelines.",
+      "status": "Proposed",
+      "priority": 2,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "saan-ako-lalapit",
+      "name": "Saan Ako Lalapit?",
+      "route": "/saan-ako-lalapit",
+      "summary": "Find the right office, agency, utility, or organization for your concern.",
+      "status": "Proposed",
+      "priority": 3,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "tubig-malolos",
+      "name": "Tubig Malolos",
+      "route": "/tubig",
+      "summary": "Check and report water conditions in your barangay.",
+      "status": "Proposed",
+      "priority": 4,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "barangay-hub",
+      "name": "Barangay Hub",
+      "route": "/barangay",
+      "summary": "Find useful local information, services, projects, advisories, and updates for your barangay.",
+      "status": "Proposed",
+      "priority": 5,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "project-tracker",
+      "name": "Project Tracker",
+      "route": "/projects",
+      "summary": "Understand and monitor publicly funded infrastructure and civic projects.",
+      "status": "Proposed",
+      "priority": 6,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "commute-guide",
+      "name": "Commute Guide",
+      "route": "/commute",
+      "summary": "Find clearer information about local fares, routes, terminals, and transport advisories.",
+      "status": "Proposed",
+      "priority": 7,
+      "availabilityNote": "Help us research and build this tool."
+    },
+    {
+      "id": "opportunities-hub",
+      "name": "Opportunities Hub",
+      "route": "/opportunities",
+      "summary": "Discover local jobs, scholarships, training, internships, and volunteer opportunities.",
+      "status": "Proposed",
+      "priority": 8,
+      "availabilityNote": "Help us research and build this tool."
+    }
+  ]
+}

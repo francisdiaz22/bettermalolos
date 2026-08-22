@@ -8,6 +8,9 @@
 
 set -e
 
+# Refuse to package a partial navigation migration.
+node scripts/sync-navigation.js --check
+
 BUMP_TYPE="patch"
 SKIP_BUMP=false
 REACT_BUILD=true

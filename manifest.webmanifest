@@ -1,7 +1,7 @@
 {
-  "name": "BetterMalolos.org - LGU Malolos Portal",
+  "name": "BetterMalolos.org - Community-built civic tools",
   "short_name": "BetterMalolos",
-  "description": "Access government services, emergency hotlines, and transparency data for Malolos, Bulacan.",
+  "description": "Independent, community-built tools, local information, government services, and public data for Malolos.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
@@ -10,7 +10,7 @@
   "theme_color": "#713b4a",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["government", "utilities"],
+  "categories": ["utilities", "productivity"],
   "icons": [
     {
       "src": "/assets/images/logo/favicon-192.png",
@@ -31,6 +31,12 @@
     }
   ],
   "shortcuts": [
+    {
+      "name": "Community Ideas",
+      "short_name": "Ideas",
+      "url": "/ideas/?source=pwa",
+      "icons": [{ "src": "/assets/images/logo/favicon-192.png", "sizes": "192x192" }]
+    },
     {
       "name": "Services",
       "short_name": "Services",

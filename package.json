@@ -1,7 +1,7 @@
 {
   "name": "bs-web",
-  "version": "1.0.0",
-  "description": "BetterMalolos.org - Official Portal for LGU Malolos",
+  "version": "1.0.3",
+  "description": "BetterMalolos.org - Independent, community-built civic tools for Malolos",
   "scripts": {
     "dev": "python3 serve.py -p 8000 -d .",
     "build": "bash build.sh",
@@ -16,6 +16,8 @@
     "test": "playwright test",
     "test:chrome": "playwright test --project=chrome",
     "test:report": "playwright show-report",
+    "sync:navigation": "node scripts/sync-navigation.js",
+    "check:navigation": "node scripts/sync-navigation.js --check",
     "lighthouse": "lhci autorun",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -45,7 +47,7 @@
   },
   "overrides": {
     "body-parser": "1.20.6",
-    "brace-expansion": "1.1.18",
+    "brace-expansion": "5.0.8",
     "dunder-proto": "1.0.1",
     "es-define-property": "1.0.1",
     "events-universal": "1.0.1",
