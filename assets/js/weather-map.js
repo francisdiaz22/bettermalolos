@@ -451,7 +451,9 @@
           if (!tileLoadedOnce) {
             tileErrorCount++;
             if (tileErrorCount >= 3) {
-              console.warn('Map: Tiles blocked (likely CSP or network), falling back to OSM embed iframe');
+              console.warn(
+                'Map: Tiles blocked (likely CSP or network), falling back to OSM embed iframe'
+              );
               const map = this.map;
               this.map = null;
               if (map) map.remove();
@@ -464,9 +466,7 @@
 
         // Add marker
         const marker = L.marker(this.malolos_CENTER).addTo(this.map);
-        marker.bindPopup(
-          '<strong>New Malolos City Hall</strong><br>Brgy. Bulihan, Bulacan 3000'
-        );
+        marker.bindPopup('<strong>New Malolos City Hall</strong><br>Brgy. Bulihan, Bulacan 3000');
 
         container.setAttribute('data-map-loaded', 'leaflet');
 

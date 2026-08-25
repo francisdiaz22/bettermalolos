@@ -189,9 +189,7 @@ export default function Header() {
             <li>
               <Link href="/statistics">{t('nav-statistics')}</Link>
             </li>
-            <li
-              className={`has-dropdown wip-hidden ${openDropdown === 1 ? 'dropdown-open' : ''}`}
-            >
+            <li className={`has-dropdown wip-hidden ${openDropdown === 1 ? 'dropdown-open' : ''}`}>
               <Link
                 href="/legislative"
                 aria-haspopup="true"

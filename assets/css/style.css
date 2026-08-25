@@ -1293,6 +1293,7 @@ body.mobile-menu-open {
     opacity: 0;
     transform: translateY(100%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1304,6 +1305,7 @@ body.mobile-menu-open {
     opacity: 0;
     transform: translateX(-50%) translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
@@ -1365,7 +1367,7 @@ body.mobile-menu-open {
 }
 
 /* Tablet + Mobile: Hotline marquee */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .hotline-bar {
     padding: 0;
     overflow: hidden;
@@ -1429,6 +1431,7 @@ body.mobile-menu-open {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -3240,6 +3243,7 @@ h6 {
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -4339,64 +4343,82 @@ cklist with Icons - Proper Indentation */
 }
 
 .barangay-item-row[data-width] .barangay-bar {
-  width: attr(data-width %);
+  width: attr(data-width);
 }
 
 /* Set bar widths via CSS */
 .barangay-bar[data-width='100'] {
   width: 100%;
 }
+
 .barangay-bar[data-width='72'] {
   width: 72%;
 }
+
 .barangay-bar[data-width='70'] {
   width: 70%;
 }
+
 .barangay-bar[data-width='63'] {
   width: 63%;
 }
+
 .barangay-bar[data-width='54'] {
   width: 54%;
 }
+
 .barangay-bar[data-width='52'] {
   width: 52%;
 }
+
 .barangay-bar[data-width='46'] {
   width: 46%;
 }
+
 .barangay-bar[data-width='42'] {
   width: 42%;
 }
+
 .barangay-bar[data-width='34'] {
   width: 34%;
 }
+
 .barangay-bar[data-width='29'] {
   width: 29%;
 }
+
 .barangay-bar[data-width='28'] {
   width: 28%;
 }
+
 .barangay-bar[data-width='23'] {
   width: 23%;
 }
+
 .barangay-bar[data-width='22'] {
   width: 22%;
 }
+
 .barangay-bar[data-width='21'] {
   width: 21%;
 }
+
 .barangay-bar[data-width='15'] {
   width: 15%;
 }
+
 .barangay-bar[data-width='14'] {
   width: 14%;
 }
+
 .barangay-bar[data-width='13'] {
   width: 13%;
 }
+
 .barangay-bar[data-width='11'] {
   width: 11%;
 }
+
 .barangay-bar[data-width='9'] {
   width: 9%;
 }
@@ -4642,9 +4664,11 @@ cklist with Icons - Proper Indentation */
 .demo-stat-ring-accent .demo-stat-number {
   color: var(--color-accent);
 }
+
 .demo-stat-ring-info .demo-stat-number {
   color: var(--color-info);
 }
+
 .demo-stat-ring-success .demo-stat-number {
   color: var(--color-success);
 }
@@ -4906,24 +4930,31 @@ cklist with Icons - Proper Indentation */
 .milestone-bar[data-percent='55'] {
   width: 55%;
 }
+
 .milestone-bar[data-percent='62'] {
   width: 62%;
 }
+
 .milestone-bar[data-percent='68'] {
   width: 68%;
 }
+
 .milestone-bar[data-percent='77'] {
   width: 77%;
 }
+
 .milestone-bar[data-percent='82'] {
   width: 82%;
 }
+
 .milestone-bar[data-percent='90'] {
   width: 90%;
 }
+
 .milestone-bar[data-percent='95'] {
   width: 95%;
 }
+
 .milestone-bar[data-percent='100'] {
   width: 100%;
 }
@@ -6515,18 +6546,23 @@ cklist with Icons - Proper Indentation */
   width: 72%;
   margin-bottom: 8px;
 }
+
 .fb-skel-bar--100 {
   width: 100%;
 }
+
 .fb-skel-bar--80 {
   width: 80%;
 }
+
 .fb-skel-bar--60 {
   width: 60%;
 }
+
 .fb-skel-bar--45 {
   width: 45%;
 }
+
 .fb-skel-bar--sm {
   height: 8px;
 }
@@ -8705,6 +8741,7 @@ a.a11y-contact-item:hover i {
     opacity: 0;
     transform: translateY(-4px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -8759,7 +8796,7 @@ a.a11y-contact-item:hover i {
 }
 
 /* Info Bar Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .info-bar-inner {
     justify-content: center;
   }
@@ -9133,6 +9170,7 @@ a.a11y-contact-item:hover i {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -9236,9 +9274,11 @@ a.a11y-contact-item:hover i {
 .leaflet-tile-pane {
   z-index: 200;
 }
+
 .leaflet-marker-pane {
   z-index: 600;
 }
+
 .leaflet-popup-pane {
   z-index: 700;
 }
@@ -10194,6 +10234,7 @@ a.a11y-contact-item:hover i {
     opacity: 0;
     transform: scale(0.93) translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -10205,6 +10246,7 @@ a.a11y-contact-item:hover i {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+
   to {
     opacity: 0;
     transform: scale(0.96) translateY(10px);
