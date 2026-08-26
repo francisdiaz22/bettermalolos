@@ -1739,6 +1739,18 @@ const translations = {
     'budget-dpwh-major-projects-scope':
       ". Shows the 12 highest-cost awarded FY 2025 contracts located in Malolos, verified August 19, 2026. Values are awarded contract amounts, not the City Government's full infrastructure budget.",
     'budget-national-government-projects': 'National Government Projects',
+    'budget-national-government-allocation': 'National Government Allocation',
+    'budget-bulacan-first-district-gaa': 'Bulacan First District GAA Allocation',
+    'budget-bulacan-first-district-gaa-description':
+      'Capital outlays under the Bulacan 1st District Engineering Office',
+    'budget-gaa-table-caption':
+      'General Appropriations Act allocations for Bulacan First District, FY 2023 to FY 2025',
+    'budget-fiscal-year': 'Fiscal Year',
+    'budget-gaa-amount': 'GAA Amount',
+    'budget-gaa-context':
+      'These are DPWH national-government capital-outlay allocations for the legislative district, not City Government of Malolos receipts, expenditures, or awarded contract values. Amounts are shown in billions of Philippine pesos, rounded to three decimal places.',
+    'budget-gaa-source':
+      'Source: DPWH, Budget Distribution by DEO/LD for FY 2023–2025 Based on GAA, Bulacan First District row. Capital Outlays (Operations excluding FAPs).',
     'budget-national-tax-allotment': 'National Tax Allotment',
     'budget-net-operating-income': 'Net Operating Income',
     'budget-ordinance-framework': 'Ordinance Framework',
@@ -8481,6 +8493,18 @@ const translations = {
     'budget-dpwh-major-projects-scope':
       '. Ipinapakita ang 12 pinakamalalaking iginawad na kontrata para sa FY 2025 na nasa Malolos, na beripikado noong Agosto 19, 2026. Ang mga halaga ay halaga ng iginawad na kontrata at hindi ang buong badyet sa imprastraktura ng Pamahalaang Lungsod.',
     'budget-national-government-projects': 'Pambansa Pamahalaan Projects',
+    'budget-national-government-allocation': 'Alokasyon ng Pambansang Pamahalaan',
+    'budget-bulacan-first-district-gaa': 'Alokasyon ng GAA para sa Unang Distrito ng Bulacan',
+    'budget-bulacan-first-district-gaa-description':
+      'Mga capital outlay sa ilalim ng Bulacan 1st District Engineering Office',
+    'budget-gaa-table-caption':
+      'Mga alokasyon ng General Appropriations Act para sa Unang Distrito ng Bulacan, FY 2023 hanggang FY 2025',
+    'budget-fiscal-year': 'Taong Piskal',
+    'budget-gaa-amount': 'Halaga ng GAA',
+    'budget-gaa-context':
+      'Ito ay mga alokasyon ng pambansang pamahalaan para sa capital outlay ng DPWH sa distritong lehislatibo, at hindi mga resibo, gastusin, o halaga ng iginawad na kontrata ng Pamahalaang Lungsod ng Malolos. Ang mga halaga ay ipinapakita sa bilyong piso at ni-round sa tatlong decimal place.',
+    'budget-gaa-source':
+      'Pinagmulan: DPWH, Budget Distribution by DEO/LD for FY 2023–2025 Based on GAA, hanay ng Unang Distrito ng Bulacan. Capital Outlays (Operations excluding FAPs).',
     'budget-national-tax-allotment': 'Pambansa Buwis Allotment',
     'budget-net-operating-income': 'Netong Kita sa Operasyon',
     'budget-ordinance-framework': 'Balangkas ng Ordinansa',

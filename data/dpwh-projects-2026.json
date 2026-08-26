@@ -1,0 +1,337 @@
+{
+  "summary": {
+    "totalProjects": 32,
+    "totalCost": 724905000,
+    "implementingAgency": "Bulacan 1st District Engineering Office / DPWH Regional Office III",
+    "fiscalYear": 2026,
+    "scope": "FY 2026 GAA infrastructure program line items explicitly located in or spanning the City of Malolos",
+    "source": "FY 2026 DPWH Infrastructure Program, Region III",
+    "sourceUrl": "https://www.dpwh.gov.ph/dpwh/references/infra_program",
+    "sourcePages": "16-20",
+    "basis": "GAA, R.A. 12314",
+    "verifiedOn": "2026-08-26",
+    "allowCitizenReports": true
+  },
+  "projects": [
+    {
+      "id": "2026-B1-BRIDGE-01",
+      "name": "Replacement of Malolos Flyover (B01650LZ) along Malolos Flyover",
+      "location": "Malolos Flyover, City of Malolos, Bulacan",
+      "category": "Bridges",
+      "program": "Replacement of Permanent Weak Bridges",
+      "implementingOffice": "DPWH Regional Office III",
+      "cost": 97864000,
+      "sourcePage": 16
+    },
+    {
+      "id": "2026-B1-SIPAG-01",
+      "name": "Construction of Malolos Diversion Road, Sta. 0+000 - Sta. 1+782",
+      "location": "City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 94143000,
+      "sourcePage": 16
+    },
+    {
+      "id": "2026-B1-SIPAG-02",
+      "name": "Construction of Road and Drainage, Barangay Mojon",
+      "location": "Barangay Mojon, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 16
+    },
+    {
+      "id": "2026-B1-SIPAG-03",
+      "name": "Construction of Road at Barangay Panasahan, Sta. 0+000 - Sta. 0+094",
+      "location": "Barangay Panasahan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-04",
+      "name": "Improvement of Road at Barangay Barihan, Sta. 0+000 - Sta. 0+405",
+      "location": "Barangay Barihan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9414000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-05",
+      "name": "Rehabilitation of Malolos-Paombong-Hagonoy-Calumpit Road, Sta. 0+000 - Sta. 2+285",
+      "location": "Multi-city corridor including Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 55069000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-06",
+      "name": "Rehabilitation of Mambog Bridge (B01725LZ), Sta. 0+000 - Sta. 0+015",
+      "location": "City of Malolos, Bulacan",
+      "category": "Bridges",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 49000000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-07",
+      "name": "Rehabilitation of Ople Road, Sta. 0+000 - Sta. 2+653",
+      "location": "City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 61193000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-08",
+      "name": "Rehabilitation of Road at Barangay Atlag, Sta. 0+000 - Sta. 1+231",
+      "location": "Barangay Atlag, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 28243000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-09",
+      "name": "Rehabilitation of Road at Barangay Dakila, Sta. 0+000 - Sta. 0+438",
+      "location": "Barangay Dakila, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-10",
+      "name": "Rehabilitation of Road at Barangays Lugam and Look 1st, Sta. 0+000 - Sta. 0+421",
+      "location": "Barangays Lugam and Look 1st, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9414000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-11",
+      "name": "Rehabilitation of Road at Barangay Matimbo, Sta. 0+000 - Sta. 0+201",
+      "location": "Barangay Matimbo, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 4707000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-12",
+      "name": "Rehabilitation of Road at Barangay Namayan, Sta. 0+000 - Sta. 0+126",
+      "location": "Barangay Namayan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 10780000,
+      "sourcePage": 17
+    },
+    {
+      "id": "2026-B1-SIPAG-13",
+      "name": "Rehabilitation of Road at Barangay San Juan, Sta. 0+000 - Sta. 0+164 and Sta. 0+000 - Sta. 0+082",
+      "location": "Barangay San Juan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 11760000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-SIPAG-14",
+      "name": "Rehabilitation of Road at Maunlad Homes Subdivision, Barangay Mojon, Sta. 0+000 - Sta. 0+586",
+      "location": "Barangay Mojon, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 14121000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-SIPAG-15",
+      "name": "Rehabilitation of Road at San Felipe Subdivision, Barangay Mojon, Sta. 0+000 - Sta. 0+398",
+      "location": "Barangay Mojon, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9414000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-SIPAG-16",
+      "name": "Rehabilitation of Road at San Gabriel, Sta. 0+000 - Sta. 0+144",
+      "location": "San Gabriel, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "SIPAG - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-SIPAG-BLDG-01",
+      "name": "Construction of Bulacan State University Hospital",
+      "location": "City of Malolos, Bulacan (14.863231, 120.813182)",
+      "category": "Buildings and Facilities",
+      "program": "SIPAG - Major/Strategic Public Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 50000000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-SIPAG-WATER-01",
+      "name": "Construction of Solar Water System at Barangay Bulihan",
+      "location": "Barangay Bulihan, City of Malolos, Bulacan",
+      "category": "Water Systems",
+      "program": "SIPAG - Public Water Supply System",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-01",
+      "name": "Construction of Road and Drainage System at Barangay Panasahan, Sta. 0+000 - Sta. 0+193.50",
+      "location": "Barangay Panasahan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-02",
+      "name": "Construction of Road including drainage at Barangay Sumapang Matanda",
+      "location": "Barangay Sumapang Matanda, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 10000000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-03",
+      "name": "Construction of Road, Barangay Anilao, Sta. 0+000 - Sta. 0+096",
+      "location": "Barangay Anilao, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 5649000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-04",
+      "name": "Rehabilitation of Barangay Catmon-Barangay Bulihan Road, Sta. 0+000 - Sta. 1+012",
+      "location": "Barangays Catmon and Bulihan, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 22594000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-05",
+      "name": "Rehabilitation of Road and Drainage Canal at Barangay Bangkal, Sta. 0+000 - Sta. 0+192",
+      "location": "Barangay Bangkal, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 18
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-06",
+      "name": "Rehabilitation of Road at Barangay Mojon, Sta. 0+000 - Sta. 0+508",
+      "location": "Barangay Mojon, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 12740000,
+      "sourcePage": 19
+    },
+    {
+      "id": "2026-B1-BIP-ROAD-07",
+      "name": "Rehabilitation of Road at Humel Heritage Homes, Barangay Longos, Sta. 0+000 - Sta. 0+198",
+      "location": "Barangay Longos, City of Malolos, Bulacan",
+      "category": "Roads and Drainage",
+      "program": "BIP - Access Roads and/or Bridges",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 9800000,
+      "sourcePage": 19
+    },
+    {
+      "id": "2026-B1-BIP-HEALTH-01",
+      "name": "Construction of Public Health Facility (Super Health Center), Barangay Matimbo",
+      "location": "Barangay Matimbo, City of Malolos, Bulacan",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Evacuation Centers/Public Health Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 19
+    },
+    {
+      "id": "2026-B1-BIP-BLDG-01",
+      "name": "Construction of Multi-Purpose Building (Barangay Hall), Barangay Bagna",
+      "location": "Barangay Bagna, City of Malolos, Bulacan (14.825175, 120.822579)",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Multi-Purpose Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 19
+    },
+    {
+      "id": "2026-B1-BIP-BLDG-02",
+      "name": "Construction of Multi-Purpose Building at Barangay Cofradia",
+      "location": "Barangay Cofradia, City of Malolos, Bulacan (14.842827, 120.828383)",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Multi-Purpose Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 5000000,
+      "sourcePage": 20
+    },
+    {
+      "id": "2026-B1-BIP-BLDG-03",
+      "name": "Construction of Multi-Purpose Building at Barangay Mambog",
+      "location": "Barangay Mambog, City of Malolos, Bulacan (14.810600, 120.849617)",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Multi-Purpose Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 20
+    },
+    {
+      "id": "2026-B1-BIP-BLDG-04",
+      "name": "Construction of Multi-Purpose Building at Barangay Taal",
+      "location": "Barangay Taal, City of Malolos, Bulacan (14.817809, 120.857842)",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Multi-Purpose Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 20
+    },
+    {
+      "id": "2026-B1-BIP-BLDG-05",
+      "name": "Construction of Multi-Purpose Building at Felecisima Village, Barangay Mojon",
+      "location": "Barangay Mojon, City of Malolos, Bulacan (14.867819, 120.813957)",
+      "category": "Buildings and Facilities",
+      "program": "BIP - Multi-Purpose Buildings/Facilities",
+      "implementingOffice": "Bulacan 1st DEO",
+      "cost": 15000000,
+      "sourcePage": 20
+    }
+  ]
+}

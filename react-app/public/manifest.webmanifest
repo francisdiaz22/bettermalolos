@@ -13,19 +13,19 @@
   "categories": ["government", "utilities"],
   "icons": [
     {
-      "src": "/assets/images/logo/favicon-192.png",
+      "src": "/assets/images/logo/favicon-192.png?v=20260825",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/images/logo/favicon.png",
+      "src": "/assets/images/logo/favicon.png?v=20260825",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/assets/images/logo/favicon.ico",
+      "src": "/assets/images/logo/favicon.ico?v=20260825",
       "sizes": "128x128",
       "type": "image/x-icon"
     }
@@ -35,25 +35,25 @@
       "name": "Services",
       "short_name": "Services",
       "url": "/services/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/assets/images/logo/favicon-192.png?v=20260825", "sizes": "192x192" }]
     },
     {
       "name": "Contact & Hotlines",
       "short_name": "Contact",
       "url": "/contact/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/assets/images/logo/favicon-192.png?v=20260825", "sizes": "192x192" }]
     },
     {
       "name": "Government",
       "short_name": "Government",
       "url": "/government/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/assets/images/logo/favicon-192.png?v=20260825", "sizes": "192x192" }]
     },
     {
       "name": "Transparency",
       "short_name": "Budget",
       "url": "/budget/?source=pwa",
-      "icons": [{ "src": "/assets/images/logo/favicon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/assets/images/logo/favicon-192.png?v=20260825", "sizes": "192x192" }]
     }
   ],
   "prefer_related_applications": false

@@ -236,8 +236,8 @@ test.describe('Volunteer modal — contrast & motion preferences', () => {
         };
       };
 
-      // Header sits on a known gradient; sample its darkest published stop.
-      const headerBg = [0, 31, 107];
+      // Header sits on a known light gradient; sample its darkest published stop.
+      const headerBg = [243, 229, 225];
       return [
         check('.vol-popup-title', headerBg),
         check('.vol-popup-header-sub', headerBg),
