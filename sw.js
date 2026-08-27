@@ -18,7 +18,7 @@ var PRECACHE_URLS = [
   '/assets/css/responsive.css',
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
-  '/assets/css/saan-ako-lalapit.css',
+  '/assets/css/comm-tools-styles/saan-ako-lalapit.css',
   '/assets/css/ideas.css',
   '/assets/js/main.js',
   '/assets/js/translations.js',

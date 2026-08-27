@@ -1,6 +1,6 @@
 {
   "name": "bs-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "BetterMalolos.org - Independent, community-built civic tools for Malolos",
   "scripts": {
     "dev": "python3 serve.py -p 8000 -d .",
