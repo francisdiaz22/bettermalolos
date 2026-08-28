@@ -25,9 +25,9 @@
       "name": "Saan Ako Lalapit?",
       "route": "/saan-ako-lalapit",
       "summary": "Find the right office, agency, utility, or organization for your concern.",
-      "status": "Proposed",
+      "status": "Beta",
       "priority": 3,
-      "availabilityNote": "Help us research and build this tool."
+      "availabilityNote": "Explore the civic concern routing directory."
     },
     {
       "id": "tubig-malolos",

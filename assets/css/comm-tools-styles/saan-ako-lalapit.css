@@ -1,0 +1,732 @@
+/* Better Malolos - Saan Ako Lalapit? Stylesheet */
+/* Follows the 1997 Philippine ₱10 note design system tokens from style.css */
+
+.sal-hero {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  background: var(--color-primary-soft);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sal-hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sal-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.sal-hero-badge i {
+  color: var(--color-secondary);
+}
+
+.sal-hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.02em;
+}
+
+.sal-hero-desc {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Search Card in Hero */
+.sal-search-container {
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sal-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: 50px;
+  padding: 6px 18px;
+  box-shadow: 0 8px 24px rgba(113, 59, 74, 0.08);
+  transition: all 0.25s ease;
+}
+
+.sal-search-box:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(113, 59, 74, 0.16);
+  outline: none;
+}
+
+.sal-search-icon {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.sal-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.05rem;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  padding: 10px 0;
+  outline: none;
+}
+
+.sal-search-input::placeholder {
+  color: #9c8e93;
+}
+
+.sal-clear-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 1.15rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.sal-clear-btn:hover {
+  color: var(--color-danger);
+  background: var(--color-primary-soft);
+}
+
+/* Quick search suggestion pills */
+.sal-quick-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--spacing-sm);
+}
+
+.sal-quick-label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.sal-tag-btn {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-main);
+}
+
+.sal-tag-btn:hover {
+  background: var(--color-secondary-soft);
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+/* Main Content Area */
+.sal-main {
+  padding: var(--spacing-lg) 0 var(--spacing-xl);
+  background: var(--color-bg);
+}
+
+.sal-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+/* Category Sidebar / Filter */
+.sal-sidebar {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 90px;
+}
+
+.sal-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sal-sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.sal-reset-filter {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sal-reset-filter:hover {
+  text-decoration: underline;
+}
+
+.sal-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sal-cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sal-cat-btn i {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.sal-cat-btn .sal-cat-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.sal-cat-btn:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.sal-cat-btn.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sal-cat-btn.active i {
+  color: #ffffff;
+}
+
+.sal-cat-btn.active .sal-cat-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Results Section */
+.sal-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.sal-results-title {
+  font-size: 1.35rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.sal-results-count {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.sal-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Concern Card */
+.sal-concern-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.sal-concern-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.sal-concern-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sal-concern-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.sal-concern-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.sal-concern-steps {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.55;
+  margin-bottom: var(--spacing-sm);
+  background: var(--color-bg-alt);
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.sal-concern-steps strong {
+  color: var(--color-primary);
+}
+
+.sal-concern-note {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sal-concern-note i {
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Offices List inside a Concern Card */
+.sal-offices-group {
+  margin-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--spacing-sm);
+}
+
+.sal-offices-heading {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sal-office-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sal-office-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sal-office-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.sal-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.sal-badge--lgu {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.sal-badge--national {
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+}
+
+.sal-badge--emergency {
+  background: #fde8e8;
+  color: var(--color-danger);
+}
+
+.sal-badge--utility {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.sal-office-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.sal-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sal-info-item i {
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.sal-info-item a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.sal-office-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(223, 200, 189, 0.4);
+}
+
+.sal-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-primary);
+  color: #ffffff !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sal-guide-btn:hover {
+  background: var(--color-primary-dark);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.sal-empty-state {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: var(--color-white);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.sal-empty-icon {
+  font-size: 3rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sal-empty-state h3 {
+  font-size: 1.35rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.sal-empty-state p {
+  color: var(--color-text-light);
+  max-width: 500px;
+  margin: 0 auto var(--spacing-md);
+  line-height: 1.5;
+}
+
+/* Community Contribution Banner */
+.sal-contribute-card {
+  margin-top: var(--spacing-xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-soft) 0%,
+    var(--color-secondary-soft) 100%
+  );
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.sal-contribute-text h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.sal-contribute-text p {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.sal-contribute-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.sal-contribute-btn:hover {
+  background: var(--color-primary-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Collapsible Category Toggle (mobile) */
+.sal-sidebar-toggle {
+  display: none;
+  width: 100%;
+  background: var(--color-primary-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.sal-sidebar-toggle i {
+  transition: transform 0.25s ease;
+}
+
+.sal-sidebar-toggle[aria-expanded='true'] i {
+  transform: rotate(180deg);
+}
+
+.sal-sidebar-toggle:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Back to Top Button */
+.sal-back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(113, 59, 74, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+}
+
+.sal-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sal-back-to-top:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(113, 59, 74, 0.35);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .sal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sal-sidebar {
+    position: static;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .sal-sidebar-toggle {
+    display: flex;
+  }
+
+  .sal-sidebar-header {
+    display: none;
+  }
+
+  .sal-category-list {
+    display: none;
+  }
+
+  .sal-category-list.sal-expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 6px;
+    margin-top: var(--spacing-sm);
+    animation: sal-slide-down 0.25s ease;
+  }
+}
+
+@keyframes sal-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .sal-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .sal-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .sal-search-box {
+    padding: 4px 12px;
+  }
+
+  .sal-search-input {
+    font-size: 0.95rem;
+  }
+
+  .sal-category-list.sal-expanded {
+    grid-template-columns: 1fr;
+  }
+
+  .sal-concern-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sal-contribute-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .sal-office-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sal-back-to-top {
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}

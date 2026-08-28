@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v8';
+var CACHE_VERSION = 'v9';
 var STATIC_CACHE = 'bettermalolos-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'bettermalolos-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -11,18 +11,22 @@ var OFFLINE_URL = '/offline.html';
 // Core shell: precached on install for instant offline load
 var PRECACHE_URLS = [
   '/',
+  '/saan-ako-lalapit/',
   '/ideas/',
   '/offline.html',
   '/assets/css/style.css',
   '/assets/css/responsive.css',
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
+  '/assets/css/comm-tools-styles/saan-ako-lalapit.css',
   '/assets/css/ideas.css',
   '/assets/js/main.js',
   '/assets/js/translations.js',
   '/assets/js/info-bar.js',
+  '/assets/js/saan-ako-lalapit.js',
   '/assets/js/community-tools.js',
   '/assets/js/ideas.js',
+  '/data/saan-ako-lalapit.json',
   '/data/community-tools.json',
   '/assets/images/logo/better-malolos-main.png',
   '/assets/images/logo/better-malolos-bw.png',

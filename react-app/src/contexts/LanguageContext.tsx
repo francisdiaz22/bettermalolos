@@ -407,20 +407,16 @@ const translations: Record<string, Record<string, string>> = {
     // Homepage - History
     'history-title': 'Brief History of Malolos',
     'history-1225-title': 'The Ancient Port of Li-Han',
-    'history-1225-brief':
-      'Pre-colonial Malolos thrives as an important maritime trading post.',
+    'history-1225-brief': 'Pre-colonial Malolos thrives as an important maritime trading post.',
     'history-1571-title': 'Spanish Conquest and Encomienda',
-    'history-1571-brief':
-      'Spanish forces take control and establish the area as an encomienda.',
+    'history-1571-brief': 'Spanish forces take control and establish the area as an encomienda.',
     'history-1580-title': 'Official Founding of the Town',
-    'history-1580-brief':
-      'Augustinian friars officially establish Malolos as a civil town.',
+    'history-1580-brief': 'Augustinian friars officially establish Malolos as a civil town.',
     'history-1888-title': 'Petition of the Women of Malolos',
     'history-1888-brief':
       'Twenty prominent local women successfully petition for educational rights.',
     'history-1892-title': 'Manila-Dagupan Railway Opening',
-    'history-1892-brief':
-      'The new railway system connects Malolos to Manila, boosting trade.',
+    'history-1892-brief': 'The new railway system connects Malolos to Manila, boosting trade.',
     'history-1898-title': 'The Historic Malolos Congress',
     'history-1898-brief':
       'Revolutionary delegates meet at Barasoain Church to draft a constitution.',
@@ -431,8 +427,7 @@ const translations: Record<string, Record<string, string>> = {
     'history-1901-brief':
       'The administrative center of Bulacan province officially shifts to Malolos.',
     'history-1904-title': 'Territorial Expansion and Mergers',
-    'history-1904-brief':
-      'Nearby Barasoain and Santa Isabel municipalities merge into Malolos.',
+    'history-1904-brief': 'Nearby Barasoain and Santa Isabel municipalities merge into Malolos.',
     'history-1945-title': 'Liberation of the Town',
     'history-1945-brief':
       'Allied forces and local Filipino guerrillas successfully secure the town.',
@@ -446,11 +441,9 @@ const translations: Record<string, Record<string, string>> = {
     'history-2002-brief':
       'Malolos officially transitions from a municipality into a component city.',
     'history-2010-title': 'Annual Cityhood Day Ordinance',
-    'history-2010-brief':
-      'The local government permanently declares December 18 as Cityhood Day.',
+    'history-2010-brief': 'The local government permanently declares December 18 as Cityhood Day.',
     'history-2024-title': 'Regional Economic Outperformance',
-    'history-2024-brief':
-      'The city hits a 7.8% GDP growth rate, exceeding regional averages.',
+    'history-2024-brief': 'The city hits a 7.8% GDP growth rate, exceeding regional averages.',
     'history-2026-title': '127th Republic Anniversary and Modern Hub',
     'history-2026-brief':
       'Malolos celebrates its rich history while growing as a top regional center.',

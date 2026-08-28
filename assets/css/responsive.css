@@ -35,7 +35,7 @@
 }
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   :root {
     --header-height: 56px;
   }
@@ -613,7 +613,7 @@
   border-radius: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .mobile-menu-toggle {
     display: flex;
     align-items: center;

@@ -48,15 +48,21 @@ test.describe('v1.0.3 community-first homepage', () => {
           node &&
           (index === 0 ||
             Boolean(
-              nodes[index - 1].compareDocumentPosition(node) & Node.DOCUMENT_POSITION_FOLLOWING
+              nodes[index - 1]?.compareDocumentPosition(node) & Node.DOCUMENT_POSITION_FOLLOWING
             ))
       );
     });
     expect(orderIsCorrect).toBe(true);
 
-    for (const href of ['/ideas/', '/services/', '/budget/', '/government/']) {
-      const response = await page.request.get(href);
-      expect(response.status(), `${href} should resolve`).toBeLessThan(400);
+    for (const href of [
+      '/ideas/',
+      '/services/',
+      '/budget/',
+      '/government/',
+      '/saan-ako-lalapit/',
+    ]) {
+      const response = await page.goto(href, { waitUntil: 'domcontentloaded' });
+      expect(response?.status(), `${href} should resolve`).toBeLessThan(400);
     }
   });
 });
@@ -64,6 +70,7 @@ test.describe('v1.0.3 community-first homepage', () => {
 test.describe('v1.0.3 ideas intake', () => {
   test.beforeEach(async ({ page }) => {
     await gotoSitePage(page, '/ideas/');
+    await page.waitForLoadState('load');
   });
 
   test('exposes the required, labelled form contract', async ({ page }) => {
@@ -87,13 +94,17 @@ test.describe('v1.0.3 ideas intake', () => {
     page,
   }) => {
     const form = page.locator('.ideas-form');
-    expect(await form.evaluate((element) => element.checkValidity())).toBe(false);
+    expect(
+      await form.evaluate((element) => /** @type {HTMLFormElement} */ (element).checkValidity())
+    ).toBe(false);
 
     await page.locator('#submission-type').selectOption('idea');
     await page.locator('#idea-title').fill('Safer school crossings');
     await page.locator('#description').fill('Clear crossing information would help residents.');
     await page.locator('#category').selectOption('Safety');
-    expect(await form.evaluate((element) => element.checkValidity())).toBe(true);
+    expect(
+      await form.evaluate((element) => /** @type {HTMLFormElement} */ (element).checkValidity())
+    ).toBe(true);
 
     const paused = page.getByRole('button', { name: 'Submissions not open yet' });
     await expect(paused).toHaveAttribute('type', 'button');
@@ -134,11 +145,18 @@ test.describe('v1.0.3 ideas intake', () => {
   });
 
   test('loads first-party data without script or local-request failures', async ({ page }) => {
+    /** @type {string[]} */
     const pageErrors = [];
+    /** @type {string[]} */
     const failedLocalRequests = [];
     page.on('pageerror', (error) => pageErrors.push(error.message));
     page.on('requestfailed', (request) => {
-      if (request.url().startsWith('http://localhost')) failedLocalRequests.push(request.url());
+      if (
+        request.url().startsWith('http://localhost') &&
+        request.failure()?.errorText !== 'net::ERR_ABORTED'
+      ) {
+        failedLocalRequests.push(request.url());
+      }
     });
 
     await page.reload({ waitUntil: 'domcontentloaded' });

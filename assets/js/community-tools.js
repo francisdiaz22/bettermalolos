@@ -143,10 +143,19 @@
   function addCardCta(card, container) {
     if (container.dataset.cardCta !== 'shape') return;
 
+    const toolRoute = card.dataset.communityToolRoute;
+    const isReady = card.querySelector('.community-status--beta, .community-status--live');
+
     const cta = document.createElement('a');
     cta.className = 'community-tool-card__cta';
-    cta.href = '/ideas/?submissionType=feature#submission-type';
-    setTranslatedText(cta, 'community-tools-help-shape', 'Help shape this tool');
+
+    if (isReady && toolRoute) {
+      cta.href = toolRoute;
+      setTranslatedText(cta, 'community-tools-open-tool', 'Open tool');
+    } else {
+      cta.href = '/ideas/?submissionType=feature#submission-type';
+      setTranslatedText(cta, 'community-tools-help-shape', 'Help shape this tool');
+    }
     card.append(cta);
   }
 

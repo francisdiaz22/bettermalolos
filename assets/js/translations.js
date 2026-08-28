@@ -22,6 +22,7 @@ const translations = {
     'nav-terms': 'Terms',
     'nav-accessibility': 'Accessibility',
     'nav-community-tools': 'Community Tools',
+    'nav-saan-ako-lalapit': 'Saan Ako Lalapit?',
     'nav-bantay-baha-proposed': 'Bantay Baha — Proposed',
     'nav-roadwatch-proposed': 'RoadWatch — Proposed',
     'nav-saan-ako-lalapit-proposed': 'Saan Ako Lalapit? — Proposed',
@@ -105,6 +106,7 @@ const translations = {
     'community-tools-status-beta': 'Beta',
     'community-tools-status-live': 'Live',
     'community-tools-help-shape': 'Help shape this tool',
+    'community-tools-open-tool': 'Open tool',
     'community-tools-empty': 'No community tools to show.',
     'community-tools-load-error': 'Community tools could not be loaded. Please try again later.',
     'community-tools-bantay-baha-name': 'Bantay Baha',
@@ -222,6 +224,23 @@ const translations = {
     'ideas-roadmap-principles':
       'Prioritisation considers resident impact, feasibility, urgency, available evidence, and underserved communities—not only popularity.',
     'ideas-roadmap-share-source': 'Share data or a source',
+
+    // Saan Ako Lalapit?
+    'sal-skip-link': 'Skip to main content',
+    'sal-hero-badge': 'Civic Concern Routing Guide',
+    'sal-hero-title': 'Saan Ako Lalapit?',
+    'sal-hero-desc':
+      'Find the exact government office, agency, public utility, or local service for your need in Malolos City.',
+    'sal-search-placeholder':
+      'Type your concern (e.g., birth certificate, business permit, amilyar, PWD ID)...',
+    'sal-popular-label': 'Popular:',
+    'sal-categories-title': 'Categories',
+    'sal-reset-all': 'Reset',
+    'sal-results-heading': 'Offices & Recommended Steps',
+    'sal-contribute-title': 'Missing an office or have updated info?',
+    'sal-contribute-desc':
+      'Help us keep this community routing guide complete and accurate for all Maloleños.',
+    'sal-contribute-cta': 'Suggest an Addition',
 
     // Statistics Page
     'stats-title': 'Municipal Statistics',
@@ -6848,6 +6867,7 @@ const translations = {
     'community-tools-status-beta': 'Beta',
     'community-tools-status-live': 'Gumagana na',
     'community-tools-help-shape': 'Tumulong na hubugin ang tool na ito',
+    'community-tools-open-tool': 'Buksan ang tool',
     'community-tools-empty': 'Walang community tool na maipapakita.',
     'community-tools-load-error': 'Hindi ma-load ang mga community tool. Pakisubukang muli mamaya.',
     'community-tools-bantay-baha-name': 'Bantay Baha',
@@ -6976,6 +6996,23 @@ const translations = {
       'Isinasaalang-alang sa pag-prayoridad ang epekto sa residente, pagiging posible, pagkaapurahan, available na ebidensya, at mga komunidad na kulang sa serbisyo—hindi lamang kasikatan.',
     'ideas-roadmap-share-source': 'Magbahagi ng data o source',
 
+    // Saan Ako Lalapit?
+    'sal-skip-link': 'Laktawan patungo sa nilalaman',
+    'sal-hero-badge': 'Gabay sa Pagdulog ng Concern',
+    'sal-hero-title': 'Saan Ako Lalapit?',
+    'sal-hero-desc':
+      'Hanapin ang tamang tanggapan ng gobyerno, ahensya, serbisyong publiko, o utility para sa iyong pangangailangan sa Lungsod ng Malolos.',
+    'sal-search-placeholder':
+      'I-type ang iyong kailangan (hal., birth certificate, business permit, amilyar, PWD ID)...',
+    'sal-popular-label': 'Madalas Hanapin:',
+    'sal-categories-title': 'Mga Kategorya',
+    'sal-reset-all': 'I-reset',
+    'sal-results-heading': 'Mga Opisina at Hakbang na Gagawin',
+    'sal-contribute-title': 'May kulang na opisina o may bagong impormasyon?',
+    'sal-contribute-desc':
+      'Tulungan kaming panatilihing kumpleto at wasto ang gabay na ito para sa lahat ng Maloleño.',
+    'sal-contribute-cta': 'Magmungkahi ng Karagdagan',
+
     'nav-home': 'Tahanan',
     'nav-services': 'Mga Serbisyo',
     'nav-government': 'Pamahalaan',
@@ -6991,6 +7028,7 @@ const translations = {
     'nav-terms': 'Mga Tuntunin',
     'nav-accessibility': 'Aksesibilidad',
     'nav-community-tools': 'Mga Tool ng Komunidad',
+    'nav-saan-ako-lalapit': 'Saan Ako Lalapit?',
     'nav-bantay-baha-proposed': 'Bantay Baha — Iminumungkahi',
     'nav-roadwatch-proposed': 'RoadWatch — Iminumungkahi',
     'nav-saan-ako-lalapit-proposed': 'Saan Ako Lalapit? — Iminumungkahi',

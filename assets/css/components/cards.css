@@ -1,0 +1,301 @@
+/**
+ * BetterMalolos - Reusable Card Components Stylesheet
+ * Standardized design tokens & components for Service Cards, Office Cards, Official Cards, and Metric Cards.
+ */
+
+/* ─── Base Card & Transitions ─── */
+.card,
+.service-item-card,
+.office-card,
+.official-card,
+.councilor-card,
+.executive-card,
+.metric-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+/* ─── Service Item Card ─── */
+.service-item-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb, 113, 59, 74), 0.12);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.service-item-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.service-item-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-item-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  line-height: 1.3;
+}
+
+.service-item-title i {
+  color: var(--color-primary);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.service-item-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.service-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  padding-top: 0.875rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: auto;
+}
+
+.service-item-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.service-item-meta strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.service-badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--color-primary-soft, #f3e5e1);
+  color: var(--color-primary, #713b4a);
+}
+
+/* ─── Office Cards ─── */
+.office-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-md, 1.5rem);
+}
+
+.office-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+}
+
+.office-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 20px rgba(var(--color-primary-rgb, 113, 59, 74), 0.1);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.office-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.office-card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-primary-soft, #f3e5e1) 0%, var(--color-secondary-soft, #e2efeb) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.office-card-icon i {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+}
+
+.office-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.office-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.office-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.office-card-arrow {
+  width: 32px;
+  height: 32px;
+  background: var(--color-bg-alt, #f7eee5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.office-card-arrow i {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+}
+
+.office-card:hover .office-card-arrow {
+  background: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.office-card:hover .office-card-arrow i {
+  color: #ffffff;
+}
+
+/* ─── Official & Councilor Cards ─── */
+.official-card,
+.councilor-card,
+.executive-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+  position: relative;
+}
+
+.official-card:hover,
+.councilor-card:hover,
+.executive-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(var(--color-primary-rgb, 113, 59, 74), 0.1);
+  transform: translateY(-2px);
+}
+
+.official-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: var(--color-primary-soft, #f3e5e1);
+  border: 2px solid var(--color-border, #dfc8bd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.official-avatar i {
+  font-size: 2.75rem;
+  color: var(--color-primary);
+}
+
+.official-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.official-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.official-role-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-secondary-soft, #e2efeb);
+  color: var(--color-secondary, #3d7772);
+  margin-bottom: 0.75rem;
+}
+
+/* ─── Empty & Loading States for Dynamic Containers ─── */
+.component-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-light);
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.component-loading .spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(var(--color-primary-rgb, 113, 59, 74), 0.2);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .office-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

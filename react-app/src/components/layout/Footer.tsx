@@ -70,11 +70,7 @@ export default function Footer() {
                 <a href="/sitemap-page">{t('footer-sitemap')}</a>
               </li>
               <li>
-                <a
-                  href="#TODO-add-malolos-budget-source"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="#TODO-add-malolos-budget-source" target="_blank" rel="noopener noreferrer">
                   {t('footer-citizens-charter')}
                 </a>
               </li>

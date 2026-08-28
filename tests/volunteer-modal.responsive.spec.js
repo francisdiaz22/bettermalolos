@@ -79,8 +79,8 @@ test.describe('Volunteer modal — responsive layout', () => {
           expect(
             reach.cardScrolls || reach.overlayScrolls,
             `card overflows the viewport (top ${Math.round(reach.top)}, ` +
-              `bottom ${Math.round(reach.bottom)} of ${reach.viewportH}) ` +
-              `with no scrollable container — content is unreachable`
+            `bottom ${Math.round(reach.bottom)} of ${reach.viewportH}) ` +
+            `with no scrollable container — content is unreachable`
           ).toBe(true);
         }
       });
@@ -247,7 +247,7 @@ test.describe('Volunteer modal — visual consistency', () => {
       return {
         opacity: c.opacity,
         bg: c.backgroundColor,
-        blur: c.backdropFilter || c.webkitBackdropFilter,
+        blur: c.backdropFilter || c.backdropFilter,
       };
     });
 
