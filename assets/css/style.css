@@ -10308,7 +10308,7 @@ a.a11y-contact-item:hover i {
   position: relative;
   width: 100%;
   max-width: 460px;
-  background: var(--color-bg);
+  background: #ffffff;
   border-radius: 20px;
   /* Cap the card to the viewport at EVERY size and let it scroll internally.
      Previously this only applied under 500px wide, so landscape phones and

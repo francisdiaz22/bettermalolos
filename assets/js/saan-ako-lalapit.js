@@ -570,8 +570,13 @@
     if (cat) activeCategory = cat;
   }
 
+  let listenersInitialized = false;
+
   // Setup DOM Event Listeners
   function setupEventListeners() {
+    if (listenersInitialized) return;
+    listenersInitialized = true;
+
     const searchInput = document.getElementById('sal-search-input');
     const clearBtn = document.getElementById('sal-clear-btn');
     const resetFilterBtn = document.getElementById('sal-reset-filter');
@@ -614,9 +619,11 @@
         const val = e.target.value;
         if (clearBtn) clearBtn.hidden = val.length === 0;
         activeQuery = val;
-        renderCategories();
-        renderResults();
-        updateUrlParams();
+        if (rawData) {
+          renderCategories();
+          renderResults();
+          updateUrlParams();
+        }
       });
 
       searchInput.addEventListener('keydown', (e) => {
@@ -624,12 +631,14 @@
           setQuery('');
         } else if (e.key === 'Enter') {
           activeQuery = e.target.value;
-          renderCategories();
-          renderResults();
-          updateUrlParams();
-          const resultsHeader = document.querySelector('.sal-results-header');
-          if (resultsHeader) {
-            resultsHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (rawData) {
+            renderCategories();
+            renderResults();
+            updateUrlParams();
+            const resultsHeader = document.querySelector('.sal-results-header');
+            if (resultsHeader) {
+              resultsHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           }
         }
       });
@@ -648,9 +657,11 @@
         activeCategory = 'all';
         if (searchInput) searchInput.value = '';
         if (clearBtn) clearBtn.hidden = true;
-        renderCategories();
-        renderResults();
-        updateUrlParams();
+        if (rawData) {
+          renderCategories();
+          renderResults();
+          updateUrlParams();
+        }
       });
     }
 
@@ -664,27 +675,37 @@
 
     // Listen for language changes via TranslationEngine if available
     window.addEventListener('languageChanged', () => {
-      renderCategories();
-      renderResults();
+      if (rawData) {
+        renderCategories();
+        renderResults();
+      }
     });
   }
 
   // Initialization
   async function init() {
     parseUrlParams();
+    const searchInput = document.getElementById('sal-search-input');
+    const clearBtn = document.getElementById('sal-clear-btn');
+    if (searchInput && searchInput.value) {
+      activeQuery = searchInput.value;
+    }
+    if (searchInput && activeQuery) {
+      searchInput.value = activeQuery;
+    }
+    if (clearBtn && activeQuery) {
+      clearBtn.hidden = false;
+    }
+    setupEventListeners();
+
     try {
       await loadData();
+      // Re-read current input value in case the user typed while loading
+      if (searchInput && searchInput.value) {
+        activeQuery = searchInput.value;
+      }
       renderCategories();
-      const searchInput = document.getElementById('sal-search-input');
-      const clearBtn = document.getElementById('sal-clear-btn');
-      if (searchInput && activeQuery) {
-        searchInput.value = activeQuery;
-      }
-      if (clearBtn && activeQuery) {
-        clearBtn.hidden = false;
-      }
       renderResults();
-      setupEventListeners();
     } catch (err) {
       const listContainer = document.getElementById('sal-results-list');
       if (listContainer) {

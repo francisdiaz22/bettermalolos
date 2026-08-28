@@ -1,0 +1,100 @@
+/**
+ * BetterMalolos - Reusable Accordion Component Stylesheet
+ * Accessible, smoothly animated accordions for FAQ, service requirements, and detail guides.
+ */
+
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.accordion-item,
+.faq-item {
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-item:hover,
+.faq-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+}
+
+.accordion-trigger,
+.faq-question,
+.edu-category-header {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-trigger:hover,
+.faq-question:hover,
+.edu-category-header:hover {
+  background-color: var(--color-bg-alt, #f7eee5);
+}
+
+.accordion-trigger:focus-visible,
+.faq-question:focus-visible,
+.edu-category-header:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.accordion-title-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accordion-title-text i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.accordion-icon {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.accordion-item.active .accordion-icon,
+.accordion-item[aria-expanded="true"] .accordion-icon,
+.faq-item.active .accordion-icon,
+.faq-item.active .faq-question i,
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content,
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 0.875rem;
+}
+
+.accordion-content[hidden],
+.faq-answer[hidden] {
+  display: none;
+}
