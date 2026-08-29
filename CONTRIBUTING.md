@@ -2,31 +2,16 @@
 
 Thank you for your interest in contributing to BetterMalolos.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Malolos, your contributions are welcome.
 
-## Choosing a Version
-
-BetterMalolos.org has two versions. Choose based on your preference:
-
-| Version            | Branch             | Best For                                                          |
-| ------------------ | ------------------ | ----------------------------------------------------------------- |
-| Static HTML        | `main`             | Quick fixes, content updates, contributors new to web development |
-| React + TypeScript | `react-typescript` | New features, complex UI, contributors familiar with React        |
-
-Both versions are actively maintained and contributions to either are welcome.
-
-For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md).
-
 ## Getting Started
 
-### Static HTML Version
-
-#### Prerequisites
+### Prerequisites
 
 - Node.js v16 or higher
 - npm v8 or higher
 - Python 3 (for local development server)
 - Git
 
-#### Setup
+### Setup
 
 ```bash
 git clone https://github.com/francisdiaz22/bettermalolos.git
@@ -36,27 +21,6 @@ npm run dev
 ```
 
 Open http://localhost:8000 in your browser.
-
-### React + TypeScript Version
-
-#### Prerequisites
-
-- Node.js v18 or higher
-- npm v9 or higher
-- Git
-
-#### Setup
-
-```bash
-git clone https://github.com/francisdiaz22/bettermalolos.git
-cd bettermalolos
-git checkout react-typescript
-cd react-app
-npm install
-npm run dev
-```
-
-Open http://localhost:3000 in your browser.
 
 ## How to Contribute
 

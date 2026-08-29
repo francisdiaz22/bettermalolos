@@ -2,38 +2,12 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Malolos, Bulacan, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.1.15-green)
+![Version](https://img.shields.io/badge/version-1.0.3-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-
-## Version Notice
-
-A **React + TypeScript** version of BetterMalolos.org is now available for contributors who prefer modern tooling and component-based architecture.
-
-| Version            | Branch             | Status             | Documentation                |
-| ------------------ | ------------------ | ------------------ | ---------------------------- |
-| Static HTML        | `main`             | Stable             | This README                  |
-| React + TypeScript | `react-typescript` | Active Development | [MIGRATION.md](MIGRATION.md) |
-
-Both versions are actively maintained. New contributors may choose either version based on their preference. For migration guidance, see [MIGRATION.md](MIGRATION.md).
-
-## Open Source for LGUs
-
-This repository is open source under the **MIT License** and **CC BY 4.0** and is freely available for use, modification, redistribution, and publication by any individual or organization that wishes to implement it in their respective local government unit (LGU) across the Philippines.
-
-We encourage adoption by other municipalities in support of:
-
-- **Transparency** - Making government information accessible to citizens
-- **Accessibility** - Ensuring services are available to all, including persons with disabilities
-- **Modernization** - Bringing local government services to digital platforms
-- **Public Service** - Improving the delivery of government services to the community
-
-To adapt this project for your LGU, fork the repository and customize the content, styling, and data sources to match your municipality's requirements.
 
 ## About
 
@@ -41,7 +15,7 @@ BetterMalolos.org is a volunteer-driven, open-source project that empowers the p
 
 **Cost to the People of Malolos = ₱0**
 
-## Live Demo
+## Live Site
 
 Visit the live website: [https://bettermalolos.org](https://bettermalolos.org)
 
@@ -57,10 +31,11 @@ Visit the live website: [https://bettermalolos.org](https://bettermalolos.org)
 | **Charts**          | Chart.js (Canvas-based)                                                                                  |
 | **Animations**      | Lottie (dotlottie-player web component)                                                                  |
 | **Data Format**     | JSON                                                                                                     |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
+| **APIs**            | Open-Meteo (weather), exchangerate.host and ExchangeRate-API (currency)                                  |
 | **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                            |
 | **Minification**    | html-minifier-terser, clean-css-cli, terser                                                              |
 | **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)                                                 |
+| **Testing**         | Playwright (browser, responsive, accessibility, and navigation tests), Lighthouse CI                     |
 | **Version Control** | Git, GitHub                                                                                              |
 | **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                             |
 | **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                    |
@@ -93,26 +68,22 @@ When the palette is revised, change the token values in `assets/css/style.css` (
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                                            |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
-| **Malolos Quiz**                 | Interactive quiz about Malolos history and culture, linked from homepage CTA and footer across all pages                                                                                                                               |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                             |
-| **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                                      |
-| **Multi-language Support**       | Full i18n coverage in English and Filipino                                                                                                                                                                                             |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                            |
-| **Brief History of Malolos**     | Interactive timeline (1225–2026) with 16 fully translated milestone cards in both languages                                                                                                                                            |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                                   |
+| Feature                           | Description                                                                                                                   |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory**  | Guides to city services, offices, requirements, fees, and processing times                                                    |
+| **Government Directory**          | Elected officials, departments, barangays, and public contact information                                                     |
+| **Budget & Project Transparency** | City budget data, fiscal reports, and sourced DPWH infrastructure-project information for Malolos                             |
+| **Legislative Records**           | Searchable ordinances and resolutions with source links                                                                       |
+| **City Statistics**               | Population, demographics, economic indicators, and competitiveness data                                                       |
+| **News & Public Information**     | Community-focused news and announcements, with tooling to support sourced updates                                             |
+| **Ideas & Community Roadmap**     | A public form for suggesting problems, features, datasets, corrections, and sources, plus a roadmap of proposed civic tools   |
+| **Proposed Community Tools**      | Bantay Baha, RoadWatch, Saan Ako Lalapit?, Tubig Malolos, Barangay Hub, Project Tracker, Commute Guide, and Opportunities Hub |
+| **Real-time Information**         | Weather, currency exchange rates, Philippine time, and emergency contact information                                          |
+| **Malolos History & Quiz**        | A bilingual historical timeline and an interactive quiz about Malolos history and culture                                     |
+| **Progressive Web App**           | Installable experience, service-worker caching, seamless updates, and an offline page with emergency hotlines                 |
+| **English & Filipino**            | Site-wide language switching with English fallback                                                                            |
+| **Accessible, Responsive UI**     | Semantic HTML, ARIA, keyboard support, responsive navigation, and mobile-friendly layouts                                     |
+| **Search, Clean URLs & SEO**      | Service autocomplete, extension-free URLs, metadata, structured data, sitemap, and social sharing cards                       |
 
 ### Temporarily Hidden (Work in Progress)
 
@@ -134,7 +105,7 @@ cd bettermalolos
 npm install
 
 # Start development server (with clean URL support)
-py serve.py --port 8000 --directory .
+npm run dev
 
 # Open in browser
 # http://localhost:8000
@@ -227,19 +198,18 @@ The site supports two languages with full translation coverage:
 | English  | `en`  | Complete |
 | Filipino | `fil` | Complete |
 
-The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
+The site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements and falls back to English for missing keys.
 
-## Three-Version Architecture
+## Project Architecture
 
-The project maintains three synchronized versions:
+The repository keeps editable static source files separate from the generated production build:
 
-| Version                | Location        | Purpose                              |
-| ---------------------- | --------------- | ------------------------------------ |
-| **Static Legacy**      | Root HTML files | Source of truth for all 52 pages     |
-| **React + TypeScript** | `react-app/`    | Modern component-based homepage      |
-| **Production Dist**    | `dist/`         | Minified build for cPanel deployment |
+| Layer                | Location        | Purpose                              |
+| -------------------- | --------------- | ------------------------------------ |
+| **Static Source**    | Root HTML files | Source of truth for the website      |
+| **Production Build** | `dist/`         | Minified build for cPanel deployment |
 
-All CSS, images, animations, and translations are kept in sync across all three versions. The build script (`build.sh`) generates the dist from the static legacy source.
+The build script (`build.sh`) generates `dist/` from the static source.
 
 ## Project Structure
 
@@ -256,12 +226,6 @@ bettermalolos/
 │   ├── news.json         # News and announcements
 │   ├── ordinances.json   # Legislative ordinances
 │   └── resolutions.json  # Legislative resolutions
-├── react-app/            # React + TypeScript version
-│   ├── src/
-│   │   ├── app/          # Next.js app router (layout, page)
-│   │   ├── components/   # React components (Header, Footer, HotlineBar, InfoBar, SearchAutocomplete, PWAManager)
-│   │   └── contexts/     # LanguageContext (i18n provider)
-│   └── public/           # Static assets, manifest, version.json (synced with root)
 ├── services/             # Service category pages (11 pages)
 ├── service-details/      # Individual service pages (22 pages)
 ├── government/           # Government directory pages
@@ -269,10 +233,12 @@ bettermalolos/
 ├── budget/               # Budget transparency page
 ├── statistics/           # Municipal statistics page
 ├── news/                 # News and announcements page
+├── ideas/                 # Community ideas form and proposed-tools roadmap
 ├── contact/              # Contact information page
 ├── faq/                  # Frequently asked questions
 ├── sitemap/              # HTML sitemap page
-├── scripts/              # Build, version, and translation scripts
+├── tests/                # Playwright browser and accessibility tests
+├── scripts/              # Build, version, navigation, and translation scripts
 │   └── bump-version.js   # Cross-platform Node.js version bump script
 ├── dist/                 # Production build output (gitignored)
 ├── index.html            # Homepage
@@ -290,172 +256,9 @@ bettermalolos/
 └── README.md             # Project documentation
 ```
 
-## Recent Changes
-
-### Unreleased — Mobile Header & Volunteer Popup Fixes
-
-- Moved the mobile menu toggle into the header actions group and standardized it to a 44 × 44 px touch target for more reliable alignment and accessibility
-- Updated the volunteer popup to use the main BetterMalolos logo with the correct aspect ratio
-- Corrected the volunteer call-to-action demonym from “Solaneños” to “Maloleños”
-
-### v1.1.15 — Header, PWA, Version Automation & Code Quality
-
-#### PWA Install Prompt & Seamless Updates
-
-- Added "Install App" prompt banner using the `beforeinstallprompt` API with Install/Dismiss buttons, respecting standalone mode and session dismissal
-- Replaced manual-refresh update flow with seamless `skipWaiting` + `controllerchange` auto-reload pattern
-- Service worker now accepts `SKIP_WAITING` message from clients to activate waiting worker on demand
-- Install banner goes full-width (no border-radius, no margins) on mobile viewports (<=575px) with slide-up animation
-- Created `PWAManager.tsx` React component handling both install prompt and SW update lifecycle
-- Added `.pwa-install-banner` CSS styles to both static and React versions
-
-#### Footer Mobile Alignment
-
-- Added `text-align: center` for `.footer-tagline` in the <=575px mobile breakpoint, overriding the tablet `text-align: left` rule
-- Synced footer CSS fix to React version
-
-#### CI/CD Cleanup
-
-- Removed CodeQL Advanced workflow (`.github/workflows/codeql.yml`) as it is no longer required
-
-#### Responsive Header & Hotline Marquee
-
-- Standardized header vertical spacing (padding, min-height, logo size) across desktop (12px/48px), tablet (10px/40px), mobile (8px/36px), and small mobile (6px/32px) breakpoints
-- Raised tablet breakpoint from 991px to 1024px to properly capture iPad Pro portrait (1024px) and iPad Air landscape
-- Converted emergency hotline bar into a clickable scrolling marquee on all tablet and mobile viewports (≤1024px) with pause-on-hover/focus for accessibility
-- Centered hamburger menu icon between logo and language toggle on tablet viewports using flexbox ordering (logo → hamburger → lang toggle)
-- Tablet footer: left-aligned BetterMalolos logo, tagline, and social icons to match the visual hierarchy of the brand column
-
-#### Progressive Web App (PWA)
-
-- Rewrote `sw.js` with dual-cache architecture: `STATIC_CACHE` (precached app shell) and `RUNTIME_CACHE` (dynamic content, 80-item FIFO, 7-day TTL)
-- Navigation uses network-first with offline fallback; static assets use stale-while-revalidate; data/API uses network-first with cache fallback
-- Added push notification and background sync foundations
-- Enhanced SW registration with 30-minute update polling and non-intrusive refresh banner on new version activation
-- Upgraded `manifest.webmanifest` with maskable icons, app shortcuts (Services, Contact, Government, Transparency), and `orientation: any`
-- Added iOS PWA meta tags (`apple-mobile-web-app-capable`, `apple-mobile-web-app-status-bar-style`, `apple-mobile-web-app-title`)
-- Fixed theme-color from old green (#1a5f2a) to brand blue (#0032a0) across all files
-- Updated offline fallback page colors to match brand
-
-#### Automatic Version Management
-
-- Created cross-platform `scripts/bump-version.js` (Node.js) replacing the bash-only `version.sh` for Windows compatibility
-- Version bump updates `version.json`, `package.json`, all 51+ HTML files, and syncs to `react-app/public/version.json`
-- Git pre-commit hook auto-bumps patch version on every commit (skips version-only commits to prevent loops)
-- Footer version displayed dynamically at runtime via `version.js` fetching from `version.json`
-
-#### React App Sync
-
-- Created `HotlineBar.tsx` component with tablet/mobile marquee matching static site behavior
-- Created `InfoBar.tsx` component with live exchange rates, weather, and Philippine time
-- Created `SearchAutocomplete.tsx` component with service search dropdown
-- Created `PWAManager.tsx` component handling install prompt and seamless SW updates
-- Updated `Footer.tsx` to dynamically fetch version from `/version.json` instead of hardcoded value
-- Updated `Header.tsx` breakpoint from 991px to 1024px, fixed ARIA attribute string values
-- Updated `layout.tsx` with corrected theme-color, manifest link, Apple PWA meta tags, and PWAManager integration
-- Synced `manifest.webmanifest`, `version.json`, `sw.js`, and all CSS to react-app
-
-#### Code Quality & Tooling
-
-- Installed Prettier as dev dependency with project-wide configuration (`.prettierrc`, `.prettierignore`)
-- Formatted entire codebase (120+ files) for consistent code style
-- Git pre-commit hook auto-formats staged files with Prettier before each commit
-- Fixed `privacy/index.html` malformed HTML (duplicate `</body></html>` closing tags)
-- Resolved all npm vulnerabilities: upgraded `@lhci/cli` to ^0.15.1, added `tmp` override to 0.2.5 (0 vulnerabilities)
-- Added `npm run format` and `npm run format:check` scripts
-
-### Previous Changes
-
-### Content & Features
-
-- Added Malolos Quiz CTA section on homepage with branded Lottie animation (brand blue `#0032A0`)
-- Added Malolos Quiz link to footer Quick Links across all 51 HTML pages and React Footer
-- Added Brief History of Malolos interactive timeline section on homepage (1760–1957)
-- Added quiz entry to HTML sitemap page
-- Added Abakada education tools CTA on services/education page with local SVG logo
-
-### Internationalization (i18n)
-
-- Upgraded the English and Filipino translation engine with complete key parity
-- Fixed Brief History timeline cards — full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
-- Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
-- Added 54 translation keys for Malolos Quiz footer link across all page contexts
-
-### Footer & Copyright
-
-- Standardized copyright across all 51 HTML files and React Footer: three styled spans (`footer-copyright-text`, `footer-copyright-license`, `footer-copyright-disclaimer`)
-- Updated copyright year to 2026, name to "BetterMalolos.org"
-- Footer copyright uses `flex-wrap: wrap; gap: 6px` layout with version badge right-aligned via `margin-left: auto`
-- Removed trailing period after "BetterMalolos.org" from all pages and all 3 translation languages
-
-### Clean URLs
-
-- Removed `.html` extensions from 621 navigation links across 48 HTML files
-- Apache `.htaccess` rewrite rules handle clean URL resolution on cPanel
-
-### Build & Deployment
-
-- Updated `build.sh` rsync excludes to filter out dev artifacts (`.backup`, `.md`, `package*.json`, `scripts/`, `docs/`, etc.)
-- Production dist: 52 HTML pages, 106 total files, 3.9MB, zero dev artifacts
-- Updated CSP headers: added `worker-src 'self' blob:`, `blob:` to `connect-src`, CDN domains to `connect-src` for dotlottie-player and Bootstrap Icons compatibility
-
-### Cross-Version Sync
-
-- All CSS files synced between legacy and React: `footer.css`, `style.css`, `responsive.css`, `accessibility.css`
-- All image and animation assets synced between legacy and React
-- React LanguageContext updated with matching translation keys for homepage sections
-
 ## Contributing
 
-We welcome contributions from everyone! Whether you're a developer, designer, data researcher, content writer, translator, or a concerned citizen of Malolos, your participation helps shape this project for all.
-
-### How to Contribute
-
-1. **Fork** the repository
-2. **Create** a feature branch
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **Make** your changes
-4. **Test** thoroughly on multiple browsers
-5. **Commit** with a descriptive message
-   ```bash
-   git commit -m "Add: description of your changes"
-   ```
-6. **Push** to your fork
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-7. **Open** a Pull Request with detailed description
-
-### Contribution Areas
-
-| Area                   | Description                                                   |
-| ---------------------- | ------------------------------------------------------------- |
-| **Bug Fixes**          | Report issues or submit fixes for existing bugs               |
-| **Features**           | Propose or implement new functionality                        |
-| **Content**            | Update service information, add missing municipal data        |
-| **Translations**       | Help translate content to Filipino                            |
-| **Design**             | Improve UI/UX, accessibility, and visual consistency          |
-| **Data**               | Verify and update municipal statistics and records            |
-| **Documentation**      | Enhance README, code comments, and guides                     |
-| **API Integration**    | Propose or implement API connections for real-time data feeds |
-| **Data Visualization** | Enhance charts, graphs, and interactive presentations         |
-
-### Code Style Guidelines
-
-| Guideline         | Description                                                              |
-| ----------------- | ------------------------------------------------------------------------ |
-| **Formatting**    | Prettier auto-formats on commit; run `npm run format` to format manually |
-| **HTML**          | Use semantic HTML5 elements; validate before committing                  |
-| **CSS**           | Follow BEM naming conventions; use CSS custom properties                 |
-| **JavaScript**    | Keep vanilla JS unless proposing framework for data visualization        |
-| **Naming**        | Use meaningful, descriptive variable and function names                  |
-| **Comments**      | Add comments for complex logic and non-obvious implementations           |
-| **Accessibility** | Ensure WCAG 2.1 compliance (alt text, ARIA, keyboard navigation)         |
-| **Performance**   | Optimize images; minimize DOM manipulation                               |
-| **Testing**       | Test on Chrome, Firefox, Safari, Edge; test mobile responsiveness        |
-| **Validation**    | Validate HTML/CSS before pull requests                                   |
+Contributions from developers, designers, researchers, writers, translators, and Malolos residents are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions, contribution areas, coding guidelines, and the pull request process.
 
 ## Data Sources
 
@@ -486,7 +289,7 @@ See [LICENSE](LICENSE) for full details.
 | -------- | ----------------------------------------------------------------------------- |
 | Website  | [bettermalolos.org](https://bettermalolos.org)                                |
 | Email    | info@bettermalolos.org                                                        |
-| Facebook | [@bettermalolos.org](https://www.facebook.com/MalolosCIOPage)                 |
+| Facebook | [@bettermalolos.org](https://www.facebook.com/BetterMalolos.org)              |
 | LinkedIn | [BetterMalolos](https://www.linkedin.com/company/bettermalolos/)              |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                       |
 | GitHub   | [francisdiaz22/bettermalolos](https://github.com/francisdiaz22/bettermalolos) |
@@ -494,7 +297,6 @@ See [LICENSE](LICENSE) for full details.
 ## Acknowledgments
 
 - [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
-- [Abakada.org](https://abakada.org) for supporting civic technology efforts
 - LGU Malolos for public data availability and transparency
 - All volunteers and contributors who dedicate their time
 - Open-source community for the tools and libraries used
@@ -503,7 +305,3 @@ See [LICENSE](LICENSE) for full details.
 ---
 
 Made for the people of Malolos, Bulacan
-
-## Developer
-
-[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterMalolos.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
