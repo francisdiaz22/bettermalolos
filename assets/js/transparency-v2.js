@@ -90,9 +90,7 @@ function updateDisplay(period) {
     data.receipts.external,
     receiptsTotal
   );
-  document.getElementById('sre-income-nonincome').textContent = formatPeso(
-    data.receipts.nonIncome
-  );
+  document.getElementById('sre-income-nonincome').textContent = formatPeso(data.receipts.nonIncome);
   document.getElementById('sre-income-nonincome-pct').textContent = calcPercent(
     data.receipts.nonIncome,
     receiptsTotal

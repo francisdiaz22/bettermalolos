@@ -134,6 +134,10 @@ test.describe('v1.0.3 ideas intake', () => {
   });
 
   test('loads first-party data without script or local-request failures', async ({ page }) => {
+    // Let requests from beforeEach settle so the reload does not report an
+    // intentionally cancelled favicon request from the initial navigation.
+    await page.waitForLoadState('load');
+
     const pageErrors = [];
     const failedLocalRequests = [];
     page.on('pageerror', (error) => pageErrors.push(error.message));

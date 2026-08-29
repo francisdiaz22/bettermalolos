@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v8';
+var CACHE_VERSION = 'v9';
 var STATIC_CACHE = 'bettermalolos-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'bettermalolos-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -13,7 +13,7 @@ var PRECACHE_URLS = [
   '/',
   '/ideas/',
   '/offline.html',
-  '/assets/css/style.css',
+  '/assets/css/style.css?v=20260825',
   '/assets/css/responsive.css',
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
@@ -26,10 +26,10 @@ var PRECACHE_URLS = [
   '/data/community-tools.json',
   '/assets/images/logo/better-malolos-main.png',
   '/assets/images/logo/better-malolos-bw.png',
-  '/assets/images/logo/favicon.png',
-  '/assets/images/logo/favicon-192.png',
-  '/assets/images/logo/apple-touch-icon.png',
-  '/assets/images/logo/favicon.ico',
+  '/assets/images/logo/favicon.png?v=20260825',
+  '/assets/images/logo/favicon-192.png?v=20260825',
+  '/assets/images/logo/apple-touch-icon.png?v=20260825',
+  '/assets/images/logo/favicon.ico?v=20260825',
   '/manifest.webmanifest',
 ];
 
@@ -245,8 +245,8 @@ self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification(data.title || 'BetterMalolos', {
       body: data.body || '',
-      icon: '/assets/images/logo/favicon.png',
-      badge: '/assets/images/logo/favicon.png',
+      icon: '/assets/images/logo/favicon.png?v=20260825',
+      badge: '/assets/images/logo/favicon.png?v=20260825',
       tag: data.tag || 'bettermalolos-notification',
       data: { url: data.url || '/' },
     })

@@ -205,7 +205,7 @@ test.describe('Volunteer modal — visual consistency', () => {
 
     expect(style.width).toBe(460); // max-width from the spec
     expect(style.radius).toBe('20px');
-    expect(style.bg).toBe('rgb(255, 255, 255)');
+    expect(style.bg).toBe('rgb(255, 253, 249)'); // --color-white from the site palette
   });
 
   test('the card is optically centred', async ({ page }) => {

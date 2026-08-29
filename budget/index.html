@@ -59,9 +59,9 @@
     <meta name="theme-color" content="#1a5f2a" />
 
     <title>Budget & Financial Transparency | BetterMalolos.org</title>
-    <link rel="icon" type="image/png" href="../assets/images/logo/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/images/logo/favicon.png?v=20260825" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico?v=20260825" />
+    <link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png?v=20260825" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -550,6 +550,79 @@
         </div>
       </section>
 
+      <section class="gaa-section animate-on-scroll" aria-labelledby="gaa-allocation-title">
+        <div class="container">
+          <div class="infra-header-v5">
+            <span class="infra-label-v5"
+              ><i class="bi bi-bank"></i>
+              <span data-i18n="budget-national-government-allocation"
+                >National Government Allocation</span
+              ></span
+            >
+            <h2 id="gaa-allocation-title" data-i18n="budget-bulacan-first-district-gaa">
+              Bulacan First District GAA Allocation
+            </h2>
+            <p data-i18n="budget-bulacan-first-district-gaa-description">
+              Capital outlays under the Bulacan 1st District Engineering Office
+            </p>
+          </div>
+
+          <div class="gaa-allocation-card">
+            <div class="gaa-table-wrap">
+              <table class="gaa-table">
+                <caption data-i18n="budget-gaa-table-caption">
+                  General Appropriations Act allocations for Bulacan First District, FY 2023 to FY
+                  2025
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" data-i18n="budget-fiscal-year">Fiscal Year</th>
+                    <th scope="col" data-i18n="budget-gaa-amount">GAA Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">FY 2023</th>
+                    <td>₱8.389 B</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">FY 2024</th>
+                    <td>₱9.652 B</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">FY 2025</th>
+                    <td>₱8.191 B</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="gaa-context" data-i18n="budget-gaa-context">
+              These are DPWH national-government capital-outlay allocations for the legislative
+              district, not City Government of Malolos receipts, expenditures, or awarded contract
+              values. Amounts are shown in billions of Philippine pesos, rounded to three decimal
+              places.
+            </p>
+          </div>
+
+          <p class="sre-source gaa-source">
+            <i class="bi bi-info-circle"></i>
+            <span data-i18n="budget-source-label">Source:</span>
+            <a
+              href="https://pcij.org/2026/08/26/dpwh-budget-2023-to-2026/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="budget-gaa-source"
+              >Philippine Center for Investigative Journalism (PCIJ), “DOCUMENTS: DPWH budget data
+              from 2023 to 2026” (August 26, 2026)</a
+            >
+            <span data-i18n="budget-gaa-source-note"
+              >. Figures shown are from the Bulacan First District row of the FY 2023–2025 GAA
+              budget-distribution table for Capital Outlays (Operations excluding FAPs).</span
+            >
+          </p>
+        </div>
+      </section>
+
       <section class="infra-section-v5 animate-on-scroll">
         <div class="container">
           <div class="infra-header-v5">
@@ -789,6 +862,39 @@
           </p>
         </div>
       </section>
+
+      <section class="infra-section-v5 animate-on-scroll" aria-labelledby="dpwh-2026-title">
+        <div class="container">
+          <div class="infra-header-v5">
+            <span class="infra-label-v5"
+              ><i class="bi bi-building" aria-hidden="true"></i>
+              <span>National Government Projects</span></span
+            >
+            <h2 id="dpwh-2026-title">FY 2026 DPWH Infrastructure Program in Malolos</h2>
+            <p>
+              Programmed under GAA 2026 · Primarily implemented by Bulacan 1st District Engineering
+              Office
+            </p>
+          </div>
+
+          <div id="dpwh-projects-2026-container"></div>
+
+          <p class="sre-source dpwh-source-margin">
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            Source:
+            <a
+              href="https://www.dpwh.gov.ph/dpwh/references/infra_program"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DPWH Infrastructure Program</a
+            >. Extracted from “FY 2026 DPWH Infrastructure Program - Region III,” pages 16-20, based
+            on GAA, R.A. 12314; reviewed August 26, 2026. Amounts are programmed appropriations, not
+            awarded contract values. The list includes line items explicitly located in Malolos and
+            one multi-city road corridor that includes Malolos. Project implementation and
+            completion status have not yet been independently verified.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -961,5 +1067,6 @@
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/transparency-v2.js"></script>
     <script defer src="../assets/js/dpwh-projects.js"></script>
+    <script defer src="../assets/js/dpwh-projects-2026.js"></script>
   </body>
 </html>

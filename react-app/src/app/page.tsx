@@ -85,8 +85,7 @@ export default function HomePage() {
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
               <h1>
-                {t('hero-welcome-prefix')}{' '}
-                <span className="brand-wordmark">BetterMalolos</span>.org
+                {t('hero-welcome-prefix')} <span className="brand-wordmark">BetterMalolos</span>.org
               </h1>
               <p>{t('hero-subtitle')}</p>
               <div className="home-hero-v2-actions">
@@ -753,9 +752,7 @@ export default function HomePage() {
               <div className="home-contact-v2-content">
                 <h3>{t('contact-address')}</h3>
                 <p className="home-contact-v2-value">{t('home-contact-city-hall')}</p>
-                <span className="home-contact-v2-note">
-                  {t('home-contact-city-hall-address')}
-                </span>
+                <span className="home-contact-v2-note">{t('home-contact-city-hall-address')}</span>
               </div>
             </div>
           </div>

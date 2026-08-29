@@ -1,9 +1,38 @@
 {
   "_schema_version": "1.0",
-  "_status": "draft",
-  "_source": "Bureau of Local Government Finance (BLGF) / LGU Malolos Budget Office",
-  "_note": "Awaiting official fiscal data",
+  "_status": "partial",
+  "_source": "Bureau of Local Government Finance (BLGF), LGU Malolos Budget Office, and Department of Public Works and Highways (DPWH)",
+  "_note": "Local fiscal-year records are awaiting official data. The national government allocation below covers only the Bulacan First District row requested from the DPWH GAA budget distribution table.",
   "municipality": "Malolos",
   "province": "Bulacan",
-  "fiscal_years": []
+  "fiscal_years": [],
+  "national_government_allocations": [
+    {
+      "agency": "Department of Public Works and Highways",
+      "implementing_office": "Bulacan 1st District Engineering Office",
+      "legislative_district": "Bulacan First District",
+      "appropriation_basis": "General Appropriations Act",
+      "appropriation_category": "Capital Outlays (Operations excluding FAPs)",
+      "source_table": "Budget Distribution by DEO/LD for FY 2023-2025 Based on GAA",
+      "source_publisher": "Philippine Center for Investigative Journalism",
+      "source_title": "DOCUMENTS: DPWH budget data from 2023 to 2026",
+      "source_date": "2026-08-26",
+      "source_url": "https://pcij.org/2026/08/26/dpwh-budget-2023-to-2026/",
+      "amount_unit": "PHP thousands",
+      "fiscal_years": [
+        {
+          "fiscal_year": 2023,
+          "gaa_amount": 8388675
+        },
+        {
+          "fiscal_year": 2024,
+          "gaa_amount": 9652225
+        },
+        {
+          "fiscal_year": 2025,
+          "gaa_amount": 8190732
+        }
+      ]
+    }
+  ]
 }
