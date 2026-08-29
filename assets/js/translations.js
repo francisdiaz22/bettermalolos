@@ -1750,7 +1750,10 @@ const translations = {
     'budget-gaa-context':
       'These are DPWH national-government capital-outlay allocations for the legislative district, not City Government of Malolos receipts, expenditures, or awarded contract values. Amounts are shown in billions of Philippine pesos, rounded to three decimal places.',
     'budget-gaa-source':
-      'Source: DPWH, Budget Distribution by DEO/LD for FY 2023–2025 Based on GAA, Bulacan First District row. Capital Outlays (Operations excluding FAPs).',
+      'Philippine Center for Investigative Journalism (PCIJ), “DOCUMENTS: DPWH budget data from 2023 to 2026” (August 26, 2026)',
+    'budget-gaa-source-note':
+      '. Figures shown are from the Bulacan First District row of the FY 2023–2025 GAA budget-distribution table for Capital Outlays (Operations excluding FAPs).',
+    'budget-source-label': 'Source:',
     'budget-national-tax-allotment': 'National Tax Allotment',
     'budget-net-operating-income': 'Net Operating Income',
     'budget-ordinance-framework': 'Ordinance Framework',
@@ -8504,7 +8507,10 @@ const translations = {
     'budget-gaa-context':
       'Ito ay mga alokasyon ng pambansang pamahalaan para sa capital outlay ng DPWH sa distritong lehislatibo, at hindi mga resibo, gastusin, o halaga ng iginawad na kontrata ng Pamahalaang Lungsod ng Malolos. Ang mga halaga ay ipinapakita sa bilyong piso at ni-round sa tatlong decimal place.',
     'budget-gaa-source':
-      'Pinagmulan: DPWH, Budget Distribution by DEO/LD for FY 2023–2025 Based on GAA, hanay ng Unang Distrito ng Bulacan. Capital Outlays (Operations excluding FAPs).',
+      'Philippine Center for Investigative Journalism (PCIJ), “DOCUMENTS: DPWH budget data from 2023 to 2026” (Agosto 26, 2026)',
+    'budget-gaa-source-note':
+      '. Ang mga halagang ipinapakita ay mula sa hanay ng Unang Distrito ng Bulacan sa talahanayan ng pamamahagi ng badyet sa GAA para sa FY 2023–2025, Capital Outlays (Operations excluding FAPs).',
+    'budget-source-label': 'Pinagmulan:',
     'budget-national-tax-allotment': 'Pambansa Buwis Allotment',
     'budget-net-operating-income': 'Netong Kita sa Operasyon',
     'budget-ordinance-framework': 'Balangkas ng Ordinansa',
