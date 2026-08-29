@@ -74,13 +74,13 @@ This section defines the architectural modularity required to allow LGUs to sele
 
 ### 3.1 Stack Comparison Matrix
 
-| Feature         | **BetterMalolos A (Lightweight)** | **BetterMalolos B (React/TS)**              |
-| :-------------- | :------------------------------- | :----------------------------------------- |
-| **Core Tech**   | Vanilla JS, Bootstrap 5, Leaflet | React, TypeScript, Tailwind                |
-| **Data Store**  | Static JSON Fetching             | Typed JSON Imports / Context API           |
-| **Hosting**     | GitHub Pages (Zero Config)       | Vercel / Netlify / GitHub Actions          |
-| **Maintenance** | Low (Accessible to novice devs)  | Medium (Requires build pipeline knowledge) |
-| **Use Case**    | 4th-6th Class Municipalities     | Cities and 1st Class Municipalities        |
+| Feature         | **BetterMalolos A (Lightweight)** | **BetterMalolos B (React/TS)**             |
+| :-------------- | :-------------------------------- | :----------------------------------------- |
+| **Core Tech**   | Vanilla JS, Bootstrap 5, Leaflet  | React, TypeScript, Tailwind                |
+| **Data Store**  | Static JSON Fetching              | Typed JSON Imports / Context API           |
+| **Hosting**     | GitHub Pages (Zero Config)        | Vercel / Netlify / GitHub Actions          |
+| **Maintenance** | Low (Accessible to novice devs)   | Medium (Requires build pipeline knowledge) |
+| **Use Case**    | 4th-6th Class Municipalities      | Cities and 1st Class Municipalities        |
 
 ### 3.2 Core Reusable Modules
 

@@ -1,5 +1,18 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+const { existsSync } = require('node:fs');
+
+const edgeExecutables = [
+  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+  '/usr/bin/microsoft-edge',
+  '/usr/bin/microsoft-edge-stable',
+  process.env.PROGRAMFILES &&
+    `${process.env.PROGRAMFILES}\\Microsoft\\Edge\\Application\\msedge.exe`,
+  process.env['PROGRAMFILES(X86)'] &&
+    `${process.env['PROGRAMFILES(X86)']}\\Microsoft\\Edge\\Application\\msedge.exe`,
+].filter(Boolean);
+
+const hasEdge = edgeExecutables.some((executable) => existsSync(executable));
 
 /**
  * Cross-browser validation harness.
@@ -11,6 +24,7 @@ const { defineConfig, devices } = require('@playwright/test');
 module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: true,
+  workers: process.env.CI ? undefined : 1,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [['github'], ['html', { open: 'never' }]] : [['list']],
@@ -30,7 +44,7 @@ module.exports = defineConfig({
 
   projects: [
     { name: 'chrome', use: { ...devices['Desktop Chrome'], channel: 'chrome' } },
-    { name: 'edge', use: { ...devices['Desktop Edge'], channel: 'msedge' } },
+    ...(hasEdge ? [{ name: 'edge', use: { ...devices['Desktop Edge'], channel: 'msedge' } }] : []),
     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
     { name: 'safari', use: { ...devices['Desktop Safari'] } },
     { name: 'mobile-safari', use: { ...devices['iPhone 13'] } },

@@ -301,7 +301,10 @@ export default function HealthPage() {
       </section>
 
       {/* HIV Care Philippines CTA */}
-      <section className="section hivcare-cta-section" aria-label="HIV Care Philippines facility directory">
+      <section
+        className="section hivcare-cta-section"
+        aria-label="HIV Care Philippines facility directory"
+      >
         <div className="container">
           <div className="hivcare-cta-card">
             <span className="hivcare-cta-eyebrow">

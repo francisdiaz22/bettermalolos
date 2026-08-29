@@ -45,7 +45,7 @@ To auto-deploy the updated file to the live cPanel site, also add:
 
 | Name              | Type         | Value                                               |
 | ----------------- | ------------ | --------------------------------------------------- |
-| `FTP_SERVER`      | Secret       | cPanel FTP host (e.g. `ftp.bettermalolos.org`)       |
+| `FTP_SERVER`      | Secret       | cPanel FTP host (e.g. `ftp.bettermalolos.org`)      |
 | `FTP_USERNAME`    | Secret       | FTP account username                                |
 | `FTP_PASSWORD`    | Secret       | FTP account password                                |
 | `FTP_REMOTE_PATH` | **Variable** | Path to the file, e.g. `public_html/data/news.json` |
