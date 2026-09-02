@@ -1,4 +1,3 @@
-import { pathToFileURL } from "node:url";
 import cors from "@fastify/cors";
 import Fastify from "fastify";
 
@@ -49,17 +48,6 @@ async function start() {
   }
 }
 
-const isDirectEntry =
-  process.argv[1] &&
-  import.meta.url === pathToFileURL(process.argv[1]).href;
-
-const isLiteSpeedEntry = Boolean(
-  globalThis.LitespeedNodeJS || process.env.LSNODE_STARTUP_FILE,
-);
-
-if (isDirectEntry || isLiteSpeedEntry) {
-  void start().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+if (import.meta.url === `file://${process.argv[1]}`) {
+  await start();
 }
