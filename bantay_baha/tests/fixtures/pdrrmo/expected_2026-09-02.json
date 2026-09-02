@@ -1,0 +1,137 @@
+{
+  "parser_version": "1.0.0",
+  "tides": [
+    {
+      "label": "Tomorrow",
+      "date": "09/03/2026",
+      "time": "01:33",
+      "height_m": "1.03",
+      "height_ft": "3.38",
+      "observed_at": "2026-09-02T17:33:00+00:00"
+    },
+    {
+      "label": "Today",
+      "date": "09/02/2026",
+      "time": "01:03",
+      "height_m": "0.92",
+      "height_ft": "3.02",
+      "observed_at": "2026-09-01T17:03:00+00:00"
+    },
+    {
+      "label": "Yesterday",
+      "date": "09/01/2026",
+      "time": "12:42",
+      "height_m": "0.8",
+      "height_ft": "2.62",
+      "observed_at": "2026-09-01T04:42:00+00:00"
+    }
+  ],
+  "dams": [
+    {
+      "dam": "Angat Dam",
+      "current_level": "201.33",
+      "normal_level": "212.00",
+      "spilling_level": null,
+      "date": "09/01/2026",
+      "observed_at": "2026-08-31T16:00:00+00:00"
+    },
+    {
+      "dam": "Bustos Dam",
+      "current_level": "15.68",
+      "normal_level": null,
+      "spilling_level": "17.70",
+      "date": "09/01/2026",
+      "observed_at": "2026-08-31T16:00:00+00:00"
+    },
+    {
+      "dam": "Ipo Dam",
+      "current_level": "100.93",
+      "normal_level": null,
+      "spilling_level": "101.00",
+      "date": "09/01/2026",
+      "observed_at": "2026-08-31T16:00:00+00:00"
+    }
+  ],
+  "rainfall": [
+    {
+      "station": "Barangay Look 1st",
+      "rainfall_mm": "0.0",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Kakawati High School, City of SJDM",
+      "rainfall_mm": "0.0",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    }
+  ],
+  "flooding": [],
+  "rivers": [
+    {
+      "station": "Alejo Bridge, Bustos",
+      "actual": "1.0",
+      "alert": "2.0",
+      "alarm": "3.0",
+      "critical": "4.0",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Bulusan River Bank",
+      "actual": "0.90",
+      "alert": "0.30",
+      "alarm": "0.60",
+      "critical": "0.90",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Caniogan River, Calumpit",
+      "actual": "3.0",
+      "alert": "1.20",
+      "alarm": "1.80",
+      "critical": "2.30",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Paralaya, Candaba, Pampanga",
+      "actual": "6.55",
+      "alert": "3.50",
+      "alarm": "4.50",
+      "critical": "5.0",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Poblacion Bridge, Sta. Maria",
+      "actual": "0.0",
+      "alert": "1.50",
+      "alarm": "2.50",
+      "critical": "4.0",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "San Agustin Bridge, Arayat, Pampanga",
+      "actual": "8.10",
+      "alert": "5.0",
+      "alarm": "6.0",
+      "critical": "8.50",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    },
+    {
+      "station": "Sulipan Bridge PAGASA",
+      "actual": "4.10",
+      "alert": "2.60",
+      "alarm": "3.20",
+      "critical": "3.80",
+      "date": "09/02/2026",
+      "observed_at": "2026-09-01T16:00:00+00:00"
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

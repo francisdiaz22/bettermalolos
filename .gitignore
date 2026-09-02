@@ -15,3 +15,18 @@ blob-report/
 # Build-time config (see .env.example) and release archives
 .env
 release/
+
+# Bantay Baha — Python service (Phase A)
+bantay_baha/.env
+bantay_baha_node/.env
+bantay_baha.db
+bantay_baha/bantay_baha.db
+storage/
+bantay_baha/storage/
+bantay_baha/.venv/
+bantay_baha/__pycache__/
+bantay_baha/app/__pycache__/
+.tmp/
+*.db
+*.sqlite
+*.sqlite3

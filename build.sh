@@ -71,6 +71,8 @@ if command -v rsync &>/dev/null; then
         --exclude='.DS_Store' \
         --exclude='react-app' \
         --exclude='admin' \
+        --exclude='bantay_baha' \
+        --exclude='bantay_baha_node' \
         --exclude='backup-restore-point-*' \
         --exclude='package*.json' \
         --exclude='build.sh' \
