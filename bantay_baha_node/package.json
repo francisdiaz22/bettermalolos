@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node src/server.js",
     "seed:sources": "node src/jobs/seed-sources.js",
+    "collect:fixture": "node src/jobs/collect-fixture.js",
     "test": "node --test",
     "lint": "eslint ."
   },

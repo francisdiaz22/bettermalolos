@@ -13,7 +13,23 @@ const environmentSchema = z
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
     APP_ENV: z.enum(["development", "test", "staging", "production"]).optional(),
     PORT: z.coerce.number().int().min(0).max(65535).default(3000),
-    DATABASE_URL: z.string().url().optional(),
+    DATABASE_URL: z.string().url().superRefine((value, context) => {
+      let url;
+      try {
+        url = new URL(value);
+      } catch {
+        return;
+      }
+      if (url.protocol !== "mysql:") {
+        context.addIssue({ code: "custom", message: "DATABASE_URL must use the mysql:// protocol" });
+      }
+      if (url.search || url.hash) {
+        context.addIssue({
+          code: "custom",
+          message: "DATABASE_URL must not contain a query string or fragment; percent-encode reserved credential characters",
+        });
+      }
+    }).optional(),
     OPS_API_TOKEN: z.string().min(1).optional(),
     CORS_ALLOW_ORIGINS: z.string().default("https://bettermalolos.org"),
     PDRRMO_URL: z.string().url().default("https://pdrrmo.bulacan.gov.ph/"),

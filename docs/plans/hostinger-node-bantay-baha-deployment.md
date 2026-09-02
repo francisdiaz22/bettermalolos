@@ -251,15 +251,18 @@ HTTP 503 until the schema is imported.
 2. Import `bantay_baha/scripts/mariadb_schema.sql` through phpMyAdmin. This
    script is for an empty database and is not an overwrite/upgrade script.
 3. Run `bantay_baha/scripts/mariadb_verify.sql` in phpMyAdmin.
-4. Trigger the Node equivalent of `seed-sources` once. Verify that `pdrrmo`
-   is present and remains `enabled = 0` with approval fields pending.
+4. From the Hostinger Web App terminal, run `npm run seed:sources` once. Verify
+   that `pdrrmo` is present and remains `enabled = 0` with approval fields
+   pending.
 5. Call `GET /readiness`; expect database, migration/schema, and snapshot
    storage checks to report `ok`.
-6. Run exactly one fixture collection while live retrieval is still disabled.
-   Confirm one gzip snapshot, station rows, parsed observations, and audit
-   records in phpMyAdmin.
-7. Run the fixture a second time and verify idempotence: no duplicate active
-   observation is created.
+6. From the Hostinger Web App terminal, run `npm run collect:fixture` exactly
+   once while live retrieval is still disabled. This CLI-only command reads the
+   bundled synthetic fixture and never performs an HTTP request. Confirm one
+   gzip snapshot, station rows, parsed observations, and audit records in
+   phpMyAdmin.
+7. Run `npm run collect:fixture` a second time and verify idempotence: it should
+   report `observations_written: 0`, with no duplicate active observation.
 
 Exit gate: `mariadb_verify.sql` passes and the Node app connects via
 `localhost`; Hostinger Remote MySQL remains disabled.
@@ -334,4 +337,3 @@ Monitor:
 - [ ] Source seeded but disabled.
 - [ ] Source acceptance completed before `enabled = 1`.
 - [ ] Cron configured only after the authenticated manual run succeeds.
-
