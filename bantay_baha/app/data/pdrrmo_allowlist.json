@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "source": "pdrrmo.bulacan.gov.ph — reviewed 2026-09-02; second reviewer pending",
+  "rainfall": [
+    "Barangay Look 1st",
+    "Kakawati High School, City of SJDM"
+  ],
+  "dam": [
+    "Angat Dam",
+    "Bustos Dam",
+    "Ipo Dam"
+  ],
+  "river": [
+    "Alejo Bridge, Bustos",
+    "Bulusan River Bank",
+    "Caniogan River, Calumpit",
+    "Paralaya, Candaba, Pampanga",
+    "Poblacion Bridge, Sta. Maria",
+    "San Agustin Bridge, Arayat, Pampanga",
+    "Sulipan Bridge PAGASA"
+  ],
+  "flooding_municipalities_are_dynamic": true,
+  "notes": "Flooding municipalities vary; allow any municipality but keep audit. Tide schedule is a single virtual station — not allowlisted per name."
+}

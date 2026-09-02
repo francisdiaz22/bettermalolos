@@ -15,6 +15,8 @@ const EXCLUDED = new Set([
   '.DS_Store',
   'react-app',
   'admin',
+  'bantay_baha',
+  'bantay_baha_node',
   'build.sh',
   'babel.config.json',
   'serve.py',

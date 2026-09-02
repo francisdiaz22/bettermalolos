@@ -1,0 +1,95 @@
+name: Bantay Baha — Scheduled Collection (Phase A)
+
+on:
+  schedule:
+    # Every 30 minutes; GitHub Actions minimum granularity is 5 min. Keep cadence configurable per source via cadence_minutes.
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Source name"
+        required: false
+        default: "pdrrmo"
+
+concurrency:
+  group: bantay-baha-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    # Only run schedule on main; allow manual dispatch on any branch
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    defaults:
+      run:
+        working-directory: bantay_baha
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify durable storage secrets (fail closed)
+        env:
+          BANTAY_BAHA_DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
+        run: |
+          echo "Checking durable storage configuration..."
+          if [ -z "$BANTAY_BAHA_DATABASE_URL" ]; then
+            echo "::error::BANTAY_BAHA_DATABASE_URL secret is not set — scheduled collection requires a durable database. Failing closed."
+            echo "Set BANTAY_BAHA_DATABASE_URL to the persistent Hostinger MariaDB URL (mysql+pymysql://...)."
+            exit 1
+          fi
+          case "$BANTAY_BAHA_DATABASE_URL" in
+            mysql+pymysql://*|mariadb+pymysql://*) ;;
+            *)
+              echo "::error::BANTAY_BAHA_DATABASE_URL must be a persistent MariaDB/MySQL PyMySQL URL; SQLite and runner-local databases are not allowed."
+              exit 1
+              ;;
+          esac
+          echo "Durable storage check passed."
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e "."
+          pip install alembic PyMySQL
+
+      - name: Verify imported schema revision (no scheduler DDL)
+        env:
+          DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
+        run: |
+          python -c "from sqlalchemy import create_engine,text; from app.config import get_settings; e=create_engine(get_settings().database_url); actual=e.connect().execute(text('SELECT version_num FROM alembic_version')).scalar_one(); expected='004_mariadb_snapshots'; assert actual == expected, f'database schema revision {actual!r} != {expected!r}'; print('schema revision verified')"
+
+      - name: Seed source_registry (no auto-enable)
+        env:
+          DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
+        run: python -m app.jobs.seed_sources
+
+      - name: Collect (scheduled) — fail closed, do not hide errors
+        env:
+          DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
+          STORAGE_BACKEND: database
+          SNAPSHOT_MAX_RAW_BYTES: ${{ vars.SNAPSHOT_MAX_RAW_BYTES || '2000000' }}
+          SNAPSHOT_MAX_COMPRESSED_BYTES: ${{ vars.SNAPSHOT_MAX_COMPRESSED_BYTES || '1000000' }}
+          SNAPSHOT_DATABASE_QUOTA_BYTES: ${{ vars.SNAPSHOT_DATABASE_QUOTA_BYTES || '250000000' }}
+          OPS_API_TOKEN: ${{ secrets.OPS_API_TOKEN }}
+        run: |
+          # Respect source cadence — collector internally rate-limits if called too frequently
+          # Do NOT append || echo — a failed collection must fail the job (snapshot/audit remain)
+          python -m app.jobs.collect --source ${{ github.event.inputs.source || 'pdrrmo' }} --once --json
+
+      - name: Health check (post-collect)
+        if: always()
+        env:
+          DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
+          OPS_API_TOKEN: ${{ secrets.OPS_API_TOKEN }}
+        run: |
+          python -c "from app.database import session_local; from app.collectors.pdrrmo import ensure_source; db=session_local()(); src=ensure_source(db); print(f'source enabled={src.enabled} terms_reviewed={src.terms_reviewed_at} approved_at={src.approved_at} second_reviewer={src.second_reviewer}'); db.close()"
+
+# Deployment notes:
+# - Durable storage REQUIRED: this workflow fails closed without a persistent MariaDB/MySQL URL.
+# - Snapshot durability: gzip bodies and metadata are stored together in Hostinger MariaDB; size/quota guards fail before parsing.
+# - For self-hosted production, you may replace this workflow with Render Cron / Cloud Scheduler invoking POST /v1/ops/collect via OPS_API_TOKEN — with the same durability requirements.
+# - During dry season, scheduler may reduce to daily health check if source has no material updates; cadence remains configurable per source (cadence_minutes).
+# - Every run persists raw snapshot before parsing; idempotent duplicate observations are deduped.
+# - TODO: 90m critical-feed staleness alert to ops@bettermalolos.org is not yet implemented — monitor via /v1/ops/health/sources freshness and add alert delivery before claiming coverage.
