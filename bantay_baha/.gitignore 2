@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+bantay_baha.db
+*.db
+storage/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
