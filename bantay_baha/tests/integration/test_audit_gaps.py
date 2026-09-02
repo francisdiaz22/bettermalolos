@@ -159,7 +159,10 @@ def test_freshness_endpoint_returns_distinct_tide():
     db = _db()
     try:
         collect_pdrrmo(db, content_override=FIXTURE.read_bytes())
-        r = client.get("/v1/ops/health/sources")
+        audit_now = datetime(2026, 9, 2, 12, 0, tzinfo=UTC)
+        with patch("app.api.internal.datetime", wraps=datetime) as mocked_datetime:
+            mocked_datetime.now.return_value = audit_now
+            r = client.get("/v1/ops/health/sources")
         assert r.status_code == 200
         body = r.json()
         assert "sources" in body
