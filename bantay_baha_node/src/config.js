@@ -23,10 +23,16 @@ const environmentSchema = z
       if (url.protocol !== "mysql:") {
         context.addIssue({ code: "custom", message: "DATABASE_URL must use the mysql:// protocol" });
       }
-      if (url.search || url.hash) {
+      if (!url.username || !url.hostname || !url.pathname.slice(1)) {
         context.addIssue({
           code: "custom",
-          message: "DATABASE_URL must not contain a query string or fragment; percent-encode reserved credential characters",
+          message: "DATABASE_URL must include a username, hostname, and database name",
+        });
+      }
+      if (url.hash) {
+        context.addIssue({
+          code: "custom",
+          message: "DATABASE_URL must not contain a fragment; percent-encode reserved credential characters",
         });
       }
     }).optional(),
