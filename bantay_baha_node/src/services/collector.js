@@ -33,12 +33,24 @@ async function persistBody(source, body, metadata, config, db) {
   } catch(error){await connection.rollback();await storeSnapshot(db,source,snap,{fetchedAt,status:metadata.status,contentType:metadata.contentType,error:error.message});throw error;} finally{connection.release();}
 }
 export async function collectSource(name, config, db = getPool(config)) {
-  if (name !== "pdrrmo") throw Object.assign(new Error("Only pdrrmo source is available"), { statusCode: 400 }); const source = await getApprovedSource(name, config, db);
-  if (!source) throw Object.assign(new Error("source is disabled or approval evidence is incomplete"), { statusCode: 409 });
-  const [recent] = await db.execute("SELECT fetched_at FROM source_snapshot WHERE source_id=? ORDER BY fetched_at DESC LIMIT 1", [source.id]); if (recent[0] && Date.now()-new Date(recent[0].fetched_at).valueOf()<source.cadence_minutes*60000) return {status:"skipped",reason:"cadence",source:name};
-  const fetchedAt=new Date(), controller=new AbortController(), timer=setTimeout(()=>controller.abort(),config.HTTP_TIMEOUT_SECONDS*1000); let response,body;
-  try { response=await fetchRetry(source.canonical_url,{headers:{"user-agent":config.COLLECTOR_USER_AGENT,...(source.last_etag?{"if-none-match":source.last_etag}:{}),...(source.last_modified?{"if-modified-since":source.last_modified}:{})},signal:controller.signal},config.HTTP_MAX_RETRIES); body=Buffer.from(await response.arrayBuffer()); } finally { clearTimeout(timer); }
-  return persistBody(source,body,{fetchedAt,status:response.status,contentType:response.headers.get("content-type"),error:response.ok||response.status===304?null:`HTTP ${response.status}`,updateValidators:true,etag:response.headers.get("etag"),lastModified:response.headers.get("last-modified")},config,db);
+  if (name !== "pdrrmo") throw Object.assign(new Error("Only pdrrmo source is available"), { statusCode: 400 });
+  const lockName = `bantay_baha:collect:${name}`, lockConnection = await db.getConnection(); let locked = false;
+  try {
+    const [lockRows] = await lockConnection.execute("SELECT GET_LOCK(?, 0) AS acquired", [lockName]);
+    const lockResult = Number(lockRows[0]?.acquired);
+    if (lockResult === 0) return {status:"skipped",reason:"overlap",source:name};
+    if (lockResult !== 1) throw new Error(`unable to acquire collection lock for ${name}`);
+    locked = true;
+    const source = await getApprovedSource(name, config, db);
+    if (!source) throw Object.assign(new Error("source is disabled or approval evidence is incomplete"), { statusCode: 409 });
+    const [recent] = await db.execute("SELECT fetched_at FROM source_snapshot WHERE source_id=? ORDER BY fetched_at DESC LIMIT 1", [source.id]); if (recent[0] && Date.now()-new Date(recent[0].fetched_at).valueOf()<source.cadence_minutes*60000) return {status:"skipped",reason:"cadence",source:name};
+    const fetchedAt=new Date(), controller=new AbortController(), timer=setTimeout(()=>controller.abort(),config.HTTP_TIMEOUT_SECONDS*1000); let response,body;
+    try { response=await fetchRetry(source.canonical_url,{headers:{"user-agent":config.COLLECTOR_USER_AGENT,...(source.last_etag?{"if-none-match":source.last_etag}:{}),...(source.last_modified?{"if-modified-since":source.last_modified}:{})},signal:controller.signal},config.HTTP_MAX_RETRIES); body=Buffer.from(await response.arrayBuffer()); } finally { clearTimeout(timer); }
+    return persistBody(source,body,{fetchedAt,status:response.status,contentType:response.headers.get("content-type"),error:response.ok||response.status===304?null:`HTTP ${response.status}`,updateValidators:true,etag:response.headers.get("etag"),lastModified:response.headers.get("last-modified")},config,db);
+  } finally {
+    try { if (locked) await lockConnection.execute("SELECT RELEASE_LOCK(?) AS released", [lockName]); }
+    finally { lockConnection.release(); }
+  }
 }
 
 // CLI-only synthetic collection for deployment verification. It deliberately
