@@ -12,7 +12,8 @@
 
 | Platform | Config | Invocation |
 |---|---|---|
-| **GitHub Actions (default for Phase A)** | `.github/workflows/bantay-baha-collect.yml` — `cron: "*/30 * * * *"` + `workflow_dispatch` | `python -m app.jobs.collect --once` with the persistent Hostinger MariaDB `DATABASE_URL`, `STORAGE_BACKEND=database`, and `OPS_API_TOKEN`. Source approval is stored in the database, not granted by environment variables. |
+| **Hostinger Cron (production owner)** | hPanel Cron invokes the deployed Node service every 30 minutes using the authenticated ops endpoint described in `docs/plans/hostinger-node-bantay-baha-deployment.md` Phase 6. | Keep the token in an HTTP header through a private wrapper; do not put it in the URL or Cron output. The service enforces database-backed cadence/overlap protection. |
+| **GitHub Actions (manual diagnostics only)** | `.github/workflows/bantay-baha-collect.yml` — `workflow_dispatch`; no recurring schedule | Runs the Python collector only when an operator explicitly dispatches it and has configured a reachable durable MariaDB secret. Do not enable this schedule alongside Hostinger Cron. |
 | **Render Cron** | Render dashboard → Cron Job → `python -m app.jobs.collect --once` every 30m | Same env vars; the Hostinger database must permit the job host's remote connection. |
 | **Cloud Scheduler (GCP)** / **EventBridge (AWS)** | HTTP target `POST https://api.bettermalolos.org/v1/ops/collect?source=pdrrmo` with `Authorization: Bearer $OPS_API_TOKEN` | Web handler triggers `collect_pdrrmo()`; respects internal rate limit and `terms_reviewed_at` gate. |
 
