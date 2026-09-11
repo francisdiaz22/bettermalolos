@@ -444,15 +444,18 @@ The **Phase B exit statement remains pending** until all of the following are co
 
 #### Phase B engineering checkpoint — 11 September 2026
 
-**Engineering checkpoint: complete for the current uncommitted Phase B implementation; operational exit remains pending.** The implementation was reviewed for whitespace errors and the staged Phase B change set remains internally coherent. No public Bantay Baha API or dashboard was enabled, both source registry entries remain disabled and unapproved, and no production mapping was added. The unrelated `docs/plans/community-wishlist-plan.md` file remains outside this checkpoint.
+**Engineering checkpoint: complete for the current uncommitted Phase B implementation; operational exit remains pending.** The implementation was reviewed for whitespace errors and the staged Phase B change set remains internally coherent. No public Bantay Baha API or dashboard was enabled; the only dashboard surface is an authenticated internal prototype. Both source registry entries remain disabled and unapproved, and no production mapping was added. The unrelated `docs/plans/community-wishlist-plan.md` file remains outside this checkpoint.
 
 Verification was rerun with the bundled Python `3.12.14` runtime in a fresh local virtual environment:
 
-- `pytest -q`: **49 passed**; only upstream FastAPI/Starlette `httpx`/AnyIO deprecation warnings were emitted.
-- `ruff check app tests migrations`: **passed**.
-- `mypy app --ignore-missing-imports`: **passed, 33 source files**.
+- `pytest -q`: **53 passed**; only upstream FastAPI/Starlette `httpx`/AnyIO deprecation warnings were emitted.
+- `ruff check app tests`: **passed**.
+- `mypy app --ignore-missing-imports`: **passed, 39 source files**.
 - Alembic SQLite smoke: revisions `001` through `005_phase_b_conditions` applied successfully.
 - Source-seed smoke: `pdrrmo` and `pagasa_flood` were created with `enabled=false`, `approved_at=NULL`, and `second_reviewer='pending'`.
+- Fixture-only milestone smoke: both source fixtures were collected twice with idempotent observations, gzip snapshot bodies, quota checks, and `network: not used` evidence.
+- Backup/restore smoke: SQLite online backup and restore round-tripped fixture data; MariaDB/MySQL CLI backup and restore helpers are available for disposable operational evidence.
+- Internal safety tooling: authenticated `/v1/ops/dashboard` prototype, synthetic CSV export, and synthetic-only moderation/retention transitions are implemented. No resident intake endpoint was added.
 
 This checkpoint confirms code and disposable-database behavior only. It does not approve PAGASA use, production deployment, live collection, source mappings, or public publication. The remaining Phase B gates below are unchanged.
 

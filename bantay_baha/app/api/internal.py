@@ -15,6 +15,15 @@ from app.services.freshness import compute_freshness, freshness_for_source
 router = APIRouter(prefix="/v1/ops", tags=["ops"])
 
 
+def _source_state(source: SourceRegistry, snapshot: SourceSnapshot | None) -> str:
+    """Small, fail-closed state vocabulary used by the internal prototype."""
+    if snapshot is None:
+        return "unavailable"
+    if snapshot.error or snapshot.http_status >= 400:
+        return "source_failure"
+    return "available"
+
+
 def _require_token(x_ops_token: str | None = Header(default=None), authorization: str | None = Header(default=None)):
     settings = get_settings()
     if not settings.ops_api_token:
@@ -221,4 +230,44 @@ def internal_status(
         "publication_state": assessment.publication_state,
         "computed_at": assessment.computed_at.isoformat(),
         "disclaimer": "Internal decision-support view — not an official forecast or emergency instruction.",
+    }
+
+
+@router.get("/dashboard")
+def internal_dashboard(db: Session = Depends(get_db), _auth=Depends(_require_token)):
+    """JSON backing for the non-public dashboard prototype.
+
+    The prototype intentionally exposes only synthetic/internal state labels;
+    it is not mounted under a public route and carries no source content.
+    """
+    now = datetime.now(UTC)
+    sources = []
+    for source in db.query(SourceRegistry).order_by(SourceRegistry.name).all():
+        snapshot = (
+            db.query(SourceSnapshot)
+            .filter(SourceSnapshot.source_id == source.id)
+            .order_by(desc(SourceSnapshot.fetched_at))
+            .first()
+        )
+        state = _source_state(source, snapshot)
+        if snapshot and state == "available":
+            age = now - snapshot.fetched_at.replace(tzinfo=snapshot.fetched_at.tzinfo or UTC)
+            if age >= timedelta(hours=54):
+                state = "stale"
+        sources.append(
+            {
+                "name": source.name,
+                "enabled": source.enabled,
+                "state": state,
+                "last_snapshot_at": snapshot.fetched_at.isoformat() if snapshot else None,
+                "last_error": snapshot.error if snapshot else None,
+            }
+        )
+    return {
+        "prototype": True,
+        "public": False,
+        "states": ["unknown", "stale", "unavailable", "source_failure", "available"],
+        "sources": sources,
+        "computed_at": now.isoformat(),
+        "disclaimer": "Internal prototype using source-health metadata only; not a public dashboard or forecast.",
     }

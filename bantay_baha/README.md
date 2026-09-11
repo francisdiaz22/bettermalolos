@@ -4,6 +4,12 @@
 
 This service is at Phase B: it contains internal-only PDRRMO and PAGASA collection paths, immutable raw snapshots, a reviewed-only condition-mapping and audit mechanism, and a fail-closed internal status view. No production mapping is seeded. Both live collectors are disabled until their separate source-acceptance and second-review gates are recorded. The public BetterMalolos site remains `Proposed`.
 
+The current engineering milestone is deployable internal infrastructure only:
+revision `005_phase_b_conditions`, disabled sources, fixture evidence,
+authenticated operations, quota checks, and tested backup/restore. Hostinger
+production migration, PAGASA follow-up, live collection, cron scheduling, and
+human approval records remain pending.
+
 ## Architecture (Phase B)
 
 ```
@@ -41,6 +47,12 @@ uvicorn app.main:app --reload --port 8001
 bantay-baha --once
 # A fixture can exercise the parser while a source is disabled:
 python -m app.jobs.collect --source pagasa_flood --fixture tests/fixtures/pagasa/sample_flood.html
+
+# Run the complete fixture-only milestone check against an already-migrated DB:
+python -m app.jobs.verify_internal_milestone --output /tmp/bantay-baha-evidence.json
+
+# Export synthetic situation-report evidence only:
+python -m app.jobs.synthetic_situation_report --output /tmp/synthetic-reports.csv
 ```
 
 Health checks:
@@ -50,8 +62,13 @@ Health checks:
 - `GET /v1/ops/health/sources` — per-source freshness & last run
 - `GET /v1/ops/snapshots?source=pdrrmo&limit=20`
 - `GET /v1/ops/status` — internal ruleset result and selection/calculation audit
+- `GET /v1/ops/dashboard` — authenticated, non-public dashboard-prototype JSON
 - `POST /v1/ops/collect?source=all` — independently attempt every collector (requires `OPS_API_TOKEN` if set)
 - `POST /v1/ops/collect?source=pagasa_flood` — attempt only the PAGASA collector
+
+The dashboard prototype uses the fail-closed state vocabulary `unknown`,
+`stale`, `unavailable`, `source_failure`, and `available`. A static synthetic
+visual reference is in [`docs/ops/internal-dashboard-prototype.html`](../docs/ops/internal-dashboard-prototype.html).
 
 ## Hostinger/phpMyAdmin deployment
 
@@ -63,6 +80,12 @@ phpMyAdmin creates/imports the schema; the Python service still connects directl
 4. Set the deployment secret to `mysql+pymysql://USER:PASSWORD@HOST:3306/DATABASE?charset=utf8mb4`. Percent-encode special characters in the username/password. Add provider-required TLS query options where applicable.
 5. Keep `STORAGE_BACKEND=database` and choose quota limits below the Hostinger database allocation.
 6. Run `python -m app.jobs.seed_sources`, then a fixture collection before any approved live collection.
+
+For a repeatable internal acceptance run after migration, use
+`python -m app.jobs.verify_internal_milestone`. It refuses to proceed when
+either source is enabled and records that no network was used. For database
+backup/restore, use `python -m app.jobs.backup_restore`; MariaDB uses
+`mysqldump`/`mysql`, while SQLite uses the native online backup API.
 
 The import is for a new/empty MariaDB schema. Do not import it over a partial schema. If command-line access is available, `alembic upgrade head` is the equivalent managed migration path. Scheduled collection intentionally has no DDL permission and only verifies the recorded schema revision.
 
@@ -86,7 +109,7 @@ app/
   api/           # health, readiness, internal ops routers
   collectors/    # one module per independently approved source
   parsers/       # pure snapshot → records transforms
-  services/      # freshness, snapshot storage, health
+  services/      # freshness, snapshot storage, backup, moderation, health
   models/        # ORM + enums
   jobs/          # collect, reparse, seed
 migrations/
@@ -130,6 +153,8 @@ Public responses must never claim to be an official forecast, issue evacuations,
 - `pagasa_flood` parses the published basin/sub-basin status and dam table only from persisted snapshots. It retains the source wording; a status link without a published issue/expiry time is stored for internal review, not treated as an active advisory or a scoring input.
 - `observation_mapping` is the only source-to-public-field allow-list. It requires documented scope, metric, units/datum, aggregation, timestamp/threshold semantics, rationale, named review, and an explicit version. There are no seeded mappings: PAGASA does not silently replace a PDRRMO station.
 - `GET /v1/ops/status` is authenticated outside development and always writes an internal `condition_selection` / `risk_assessment` audit trail. Any missing, stale, or unmapped required input returns `unknown`.
+- Synthetic resident-report moderation is deliberately restricted to IDs beginning with `SYN-`; there is no resident intake endpoint in this milestone. Retention transitions are tested without storing resident data.
+- Draft field mappings and role assignments are documented in [`docs/review/source-field-mappings.md`](../docs/review/source-field-mappings.md) and [`docs/review/approval-register.md`](../docs/review/approval-register.md). They remain pending and disabled.
 
 ## Testing
 
@@ -141,7 +166,7 @@ ruff check .
 mypy app
 ```
 
-Current verified result: 49 tests pass; Ruff and mypy pass. SQLite migrations apply through `005_phase_b_conditions`, and offline MySQL DDL generation succeeds. Live MariaDB and approved PAGASA collection evidence remain operational gates.
+Current verified result: 53 tests pass; Ruff and mypy pass. SQLite migrations apply through `005_phase_b_conditions`, and the fixture-only milestone command verifies disabled sources, repeated collection, gzip snapshot storage, idempotency, and quota state. Live Hostinger MariaDB migration, human approval, and approved PAGASA collection evidence remain operational gates.
 
 ## Environment
 

@@ -19,12 +19,23 @@
 
 Both collectors enforce their own database-backed cadence and conditional request state (`last_etag` / `last_modified`). A source must pass its own terms, approval, reviewer, and enabled gates before a live fetch. PDRRMO remains disabled while unavailable; schedule PAGASA directly once its separate acceptance is complete.
 
+## Current deployment boundary
+
+No recurring scheduler is authorized yet. The source registry entries remain
+disabled, and the milestone is fixture-only. Do not schedule a PAGASA cron job
+or use a live collection endpoint until the source-use response, cadence,
+freshness thresholds, named reviewers, and deployment roles are recorded in
+[`docs/review/approval-register.md`](../review/approval-register.md).
+
 ## Verification
 
 - PDRRMO fixture: `python -m app.jobs.collect --source pdrrmo --fixture tests/fixtures/pdrrmo/sample_2026-09-02.html --once`
 - PAGASA fixture: `python -m app.jobs.collect --source pagasa_flood --fixture tests/fixtures/pagasa/sample_flood.html --once`
 - Manual trigger: `POST /v1/ops/collect?source=pagasa_flood` (requires `OPS_API_TOKEN`) returns `counts`, `errors`, and `warnings`. `source=all` returns a keyed result for every collector.
 - Post-deploy: `GET /v1/ops/health/sources` shows `last_snapshot.fetched_at`, `freshness`, and thresholds `45m/90m` (hydrology), `30h/54h` (dam/rainfall), `36h/72h` (tide). **Durability required**: the schedule accepts only a persistent MariaDB/MySQL PyMySQL URL and stores gzip snapshot bodies in the same database. It has no ephemeral database/filesystem fallback.
+- Internal prototype: `GET /v1/ops/dashboard` is authenticated and non-public; it reports `unknown`, `stale`, `unavailable`, `source_failure`, and `available` states from internal metadata only.
+- Backup/restore: use `python -m app.jobs.backup_restore` and retain a non-secret manifest plus disposable restore comparison.
+- Fixture acceptance: use `python -m app.jobs.verify_internal_milestone` before any deployment handoff.
 - The scheduler verifies revision `005_phase_b_conditions` and performs no schema DDL. Import `bantay_baha/scripts/mariadb_schema.sql` into a new database, or run Alembic once against an existing revision-004 schema, before enabling it.
 - TODO — Alert delivery not yet implemented: repeated source failures, parser drift, and 90-minute critical-feed staleness must still be monitored manually via `GET /v1/ops/health/sources` freshness. Do not claim automated email to `ops@bettermalolos.org` until alert transport is implemented and tested.
 
