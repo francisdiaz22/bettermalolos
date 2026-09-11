@@ -1,0 +1,14 @@
+{
+  "version": "phase-b-internal-v1",
+  "required_fields": ["malolos_equivalent_river_level"],
+  "fields": {
+    "malolos_equivalent_river_level": {
+      "thresholds": [
+        {"gte": 0, "points": 0},
+        {"gte": 1, "points": 25},
+        {"gte": 2, "points": 50},
+        {"gte": 3, "points": 75}
+      ]
+    }
+  }
+}

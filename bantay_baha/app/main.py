@@ -16,7 +16,7 @@ if settings.app_env in ("staging", "production") and not settings.ops_api_token:
     raise RuntimeError("OPS_API_TOKEN must be set in staging/production — refusing to start with unauthenticated ops routes")
 
 app = FastAPI(
-    title="Bantay Baha — Internal Ops (Phase A)",
+    title="Bantay Baha — Internal Ops (Phase B)",
     description="Decision-support ingestion service. Not an official forecast.",
     version="0.1.0",
 )
@@ -37,7 +37,7 @@ app.include_router(ops_router)
 def root():
     return {
         "service": "bantay-baha",
-        "phase": "A — foundations (internal only)",
+        "phase": "B — official-source pipeline (internal only)",
         "docs": "/docs",
         "health": "/health",
         "readiness": "/readiness",

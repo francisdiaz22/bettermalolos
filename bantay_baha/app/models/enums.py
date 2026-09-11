@@ -40,3 +40,10 @@ class FreshnessState(enum.StrEnum):
     stale_warning = "stale_warning"
     stale_critical = "stale_critical"
     unknown = "unknown"
+
+
+class ConditionSelectionState(enum.StrEnum):
+    fresh_primary = "fresh_primary"
+    fresh_mapped_fallback = "fresh_mapped_fallback"
+    historical_stale = "historical_stale"
+    unknown = "unknown"

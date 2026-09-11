@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Bantay Baha internal dashboard prototype</title>
+<style>
+  body { font: 16px system-ui, sans-serif; max-width: 900px; margin: 2rem auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+  .card { border: 1px solid #bbb; border-radius: .5rem; padding: 1rem; }
+  .state { font-weight: 700; }
+</style>
+<h1>Internal dashboard prototype</h1>
+<p>This static fixture is synthetic and not connected to a live source or public route.</p>
+<div class="grid">
+  <div class="card"><div class="state">unknown</div><p>No reviewed mapping or usable observation.</p></div>
+  <div class="card"><div class="state">stale</div><p>Last usable observation exceeded its warning threshold.</p></div>
+  <div class="card"><div class="state">unavailable</div><p>No snapshot exists for the source.</p></div>
+  <div class="card"><div class="state">source_failure</div><p>Latest fetch or parse attempt failed.</p></div>
+</div>

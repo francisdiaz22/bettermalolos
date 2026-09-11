@@ -1,4 +1,4 @@
-name: Bantay Baha — Manual Collection Diagnostic (Phase A)
+name: Bantay Baha — Manual Collection Diagnostic (Phase B)
 
 on:
   # Production scheduling is owned by Hostinger Cron. Keep this workflow as a
@@ -57,7 +57,7 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.BANTAY_BAHA_DATABASE_URL }}
         run: |
-          python -c "from sqlalchemy import create_engine,text; from app.config import get_settings; e=create_engine(get_settings().database_url); actual=e.connect().execute(text('SELECT version_num FROM alembic_version')).scalar_one(); expected='004_mariadb_snapshots'; assert actual == expected, f'database schema revision {actual!r} != {expected!r}'; print('schema revision verified')"
+          python -c "from sqlalchemy import create_engine,text; from app.config import get_settings; e=create_engine(get_settings().database_url); actual=e.connect().execute(text('SELECT version_num FROM alembic_version')).scalar_one(); expected='005_phase_b_conditions'; assert actual == expected, f'database schema revision {actual!r} != {expected!r}'; print('schema revision verified')"
 
       - name: Seed source_registry (no auto-enable)
         env:

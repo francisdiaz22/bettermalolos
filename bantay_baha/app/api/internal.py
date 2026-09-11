@@ -9,9 +9,19 @@ from sqlalchemy.orm import Session
 from app.config import get_settings
 from app.database import get_db
 from app.models import Observation, SourceRegistry, SourceSnapshot, Station
+from app.services.conditions import compute_internal_assessment
 from app.services.freshness import compute_freshness, freshness_for_source
 
 router = APIRouter(prefix="/v1/ops", tags=["ops"])
+
+
+def _source_state(source: SourceRegistry, snapshot: SourceSnapshot | None) -> str:
+    """Small, fail-closed state vocabulary used by the internal prototype."""
+    if snapshot is None:
+        return "unavailable"
+    if snapshot.error or snapshot.http_status >= 400:
+        return "source_failure"
+    return "available"
 
 
 def _require_token(x_ops_token: str | None = Header(default=None), authorization: str | None = Header(default=None)):
@@ -192,10 +202,72 @@ def list_observations(
 
 
 @router.post("/collect")
-def trigger_collect(source: str = Query(default="pdrrmo"), db: Session = Depends(get_db), _auth=Depends(_require_token)):
-    if source != "pdrrmo":
-        raise HTTPException(status_code=400, detail="Only pdrrmo source is available in Phase A")
+def trigger_collect(source: str = Query(default="all"), db: Session = Depends(get_db), _auth=Depends(_require_token)):
+    from app.collectors.pagasa import collect_pagasa
     from app.collectors.pdrrmo import collect_pdrrmo
 
-    result = collect_pdrrmo(db)
-    return result
+    collectors = {"pdrrmo": collect_pdrrmo, "pagasa_flood": collect_pagasa}
+    if source == "all":
+        return {"sources": {name: collector(db) for name, collector in collectors.items()}}
+    if source not in collectors:
+        raise HTTPException(status_code=400, detail="choose pdrrmo, pagasa_flood, or all")
+    return collectors[source](db)
+
+
+@router.get("/status")
+def internal_status(
+    barangay: str | None = Query(default=None), db: Session = Depends(get_db), _auth=Depends(_require_token)
+):
+    """Internal-only scored state. Unmapped or stale core input is always unknown."""
+    assessment = compute_internal_assessment(db, barangay=barangay)
+    return {
+        "id": assessment.id,
+        "barangay": assessment.barangay,
+        "ruleset_version": assessment.ruleset_version,
+        "inputs": assessment.inputs_json,
+        "score": str(assessment.score) if assessment.score is not None else None,
+        "display_state": assessment.display_state,
+        "publication_state": assessment.publication_state,
+        "computed_at": assessment.computed_at.isoformat(),
+        "disclaimer": "Internal decision-support view — not an official forecast or emergency instruction.",
+    }
+
+
+@router.get("/dashboard")
+def internal_dashboard(db: Session = Depends(get_db), _auth=Depends(_require_token)):
+    """JSON backing for the non-public dashboard prototype.
+
+    The prototype intentionally exposes only synthetic/internal state labels;
+    it is not mounted under a public route and carries no source content.
+    """
+    now = datetime.now(UTC)
+    sources = []
+    for source in db.query(SourceRegistry).order_by(SourceRegistry.name).all():
+        snapshot = (
+            db.query(SourceSnapshot)
+            .filter(SourceSnapshot.source_id == source.id)
+            .order_by(desc(SourceSnapshot.fetched_at))
+            .first()
+        )
+        state = _source_state(source, snapshot)
+        if snapshot and state == "available":
+            age = now - snapshot.fetched_at.replace(tzinfo=snapshot.fetched_at.tzinfo or UTC)
+            if age >= timedelta(hours=54):
+                state = "stale"
+        sources.append(
+            {
+                "name": source.name,
+                "enabled": source.enabled,
+                "state": state,
+                "last_snapshot_at": snapshot.fetched_at.isoformat() if snapshot else None,
+                "last_error": snapshot.error if snapshot else None,
+            }
+        )
+    return {
+        "prototype": True,
+        "public": False,
+        "states": ["unknown", "stale", "unavailable", "source_failure", "available"],
+        "sources": sources,
+        "computed_at": now.isoformat(),
+        "disclaimer": "Internal prototype using source-health metadata only; not a public dashboard or forecast.",
+    }

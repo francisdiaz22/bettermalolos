@@ -13,6 +13,7 @@ import json
 import sys
 from pathlib import Path
 
+from app.collectors.pagasa import collect_pagasa
 from app.collectors.pdrrmo import collect_pdrrmo
 from app.database import Base, engine, session_local
 from app.logging_config import get_logger, setup_logging
@@ -20,17 +21,28 @@ from app.logging_config import get_logger, setup_logging
 logger = get_logger(__name__)
 
 
-def run_once(source: str = "pdrrmo", fixture: str | None = None) -> dict:
+def run_once(source: str = "all", fixture: str | None = None) -> dict:
     Base.metadata.create_all(bind=engine())
     db = session_local()()
     try:
         if fixture:
             content = Path(fixture).read_bytes()
-            result = collect_pdrrmo(db, content_override=content)
+            if source == "pagasa_flood":
+                result = collect_pagasa(db, content_override=content)
+            elif source == "pdrrmo":
+                result = collect_pdrrmo(db, content_override=content)
+            else:
+                raise ValueError("--fixture requires --source pdrrmo or pagasa_flood")
         else:
-            if source != "pdrrmo":
-                raise ValueError(f"Unknown source {source} — only pdrrmo is available in Phase A")
-            result = collect_pdrrmo(db)
+            collectors = {"pdrrmo": collect_pdrrmo, "pagasa_flood": collect_pagasa}
+            if source == "all":
+                # Run each source independently. A PDRRMO outage can never
+                # prevent PAGASA from receiving its own attempt and audit row.
+                results = {name: collector(db) for name, collector in collectors.items()}
+                return {"sources": results}
+            if source not in collectors:
+                raise ValueError(f"Unknown source {source}; choose pdrrmo, pagasa_flood, or all")
+            result = collectors[source](db)
         return result
     finally:
         db.close()
@@ -38,8 +50,8 @@ def run_once(source: str = "pdrrmo", fixture: str | None = None) -> dict:
 
 def main(argv: list[str] | None = None) -> None:
     setup_logging("INFO")
-    parser = argparse.ArgumentParser(description="Bantay Baha collector (Phase A)")
-    parser.add_argument("--source", default="pdrrmo", help="source name (default: pdrrmo)")
+    parser = argparse.ArgumentParser(description="Bantay Baha collector (Phase B internal)")
+    parser.add_argument("--source", default="all", help="pdrrmo, pagasa_flood, or all (default)")
     parser.add_argument("--once", action="store_true", help="run one collection cycle")
     parser.add_argument("--fixture", default=None, help="path to HTML fixture (skips HTTP fetch)")
     parser.add_argument("--json", action="store_true", help="output JSON")
@@ -51,6 +63,15 @@ def main(argv: list[str] | None = None) -> None:
         sys.exit(1)
 
     result = run_once(source=args.source, fixture=args.fixture)
+    if "sources" in result:
+        if args.json:
+            print(json.dumps(result, indent=2))
+        else:
+            for name, outcome in result["sources"].items():
+                print(f"{name}: status={outcome.get('status_code')} snapshot_id={outcome.get('snapshot_id')}")
+        if any(outcome.get("status_code") not in {200, 304} for outcome in result["sources"].values()):
+            sys.exit(2)
+        return
     if args.json:
         print(json.dumps(result, indent=2))
     else:

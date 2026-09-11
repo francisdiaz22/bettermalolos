@@ -87,7 +87,7 @@ jobs:
         run: pytest -v --tb=short
 
       - name: Collector dry-run with fixture (no network)
-        run: python -m app.jobs.collect --fixture tests/fixtures/pdrrmo/sample_2026-09-02.html --once
+        run: python -m app.jobs.collect --source pdrrmo --fixture tests/fixtures/pdrrmo/sample_2026-09-02.html --once
 
   docker:
     runs-on: ubuntu-latest
