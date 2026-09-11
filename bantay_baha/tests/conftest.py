@@ -19,9 +19,15 @@ def setup_db():
         tmp = tempfile.NamedTemporaryFile(suffix=".db", delete=False)
         tmp.close()
         db_url = f"sqlite:///{tmp.name}"
-    os.environ["DATABASE_URL"] = db_url
+        os.environ["DATABASE_URL"] = db_url
     os.environ["STORAGE_BACKEND"] = "database"
     os.environ["SNAPSHOT_DIR"] = tempfile.mkdtemp(prefix="bantay_snapshots_")
+    # Some API modules load settings during test collection. Clear that cache
+    # after selecting the isolated database so a local MariaDB .env cannot
+    # leak into the suite.
+    from app.config import get_settings
+
+    get_settings.cache_clear()
     # reset engine cache after env override
     from app.database import Base, engine, reset_engine
 

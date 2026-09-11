@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 from app.config import get_settings
 from app.database import get_db
 from app.models import Observation, SourceRegistry, SourceSnapshot, Station
+from app.services.conditions import compute_internal_assessment
 from app.services.freshness import compute_freshness, freshness_for_source
 
 router = APIRouter(prefix="/v1/ops", tags=["ops"])
@@ -192,10 +193,32 @@ def list_observations(
 
 
 @router.post("/collect")
-def trigger_collect(source: str = Query(default="pdrrmo"), db: Session = Depends(get_db), _auth=Depends(_require_token)):
-    if source != "pdrrmo":
-        raise HTTPException(status_code=400, detail="Only pdrrmo source is available in Phase A")
+def trigger_collect(source: str = Query(default="all"), db: Session = Depends(get_db), _auth=Depends(_require_token)):
+    from app.collectors.pagasa import collect_pagasa
     from app.collectors.pdrrmo import collect_pdrrmo
 
-    result = collect_pdrrmo(db)
-    return result
+    collectors = {"pdrrmo": collect_pdrrmo, "pagasa_flood": collect_pagasa}
+    if source == "all":
+        return {"sources": {name: collector(db) for name, collector in collectors.items()}}
+    if source not in collectors:
+        raise HTTPException(status_code=400, detail="choose pdrrmo, pagasa_flood, or all")
+    return collectors[source](db)
+
+
+@router.get("/status")
+def internal_status(
+    barangay: str | None = Query(default=None), db: Session = Depends(get_db), _auth=Depends(_require_token)
+):
+    """Internal-only scored state. Unmapped or stale core input is always unknown."""
+    assessment = compute_internal_assessment(db, barangay=barangay)
+    return {
+        "id": assessment.id,
+        "barangay": assessment.barangay,
+        "ruleset_version": assessment.ruleset_version,
+        "inputs": assessment.inputs_json,
+        "score": str(assessment.score) if assessment.score is not None else None,
+        "display_state": assessment.display_state,
+        "publication_state": assessment.publication_state,
+        "computed_at": assessment.computed_at.isoformat(),
+        "disclaimer": "Internal decision-support view — not an official forecast or emergency instruction.",
+    }

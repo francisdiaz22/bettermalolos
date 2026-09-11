@@ -12,7 +12,8 @@ FROM information_schema.tables
 WHERE table_schema = 'u735413447_bettermalolos'
   AND table_name IN (
     'source_registry', 'source_snapshot', 'station',
-    'observation', 'audit_log', 'alembic_version'
+    'observation', 'audit_log', 'observation_mapping', 'condition_selection',
+    'official_advisory', 'risk_assessment', 'alembic_version'
   )
 ORDER BY table_name;
 
@@ -24,6 +25,13 @@ WHERE table_schema = 'u735413447_bettermalolos'
     'content_hash', 'content_length', 'compressed_length',
     'compression', 'raw_body_gzip'
   )
+ORDER BY ordinal_position;
+
+SELECT column_name, column_type, is_nullable
+FROM information_schema.columns
+WHERE table_schema = 'u735413447_bettermalolos'
+  AND table_name = 'observation'
+  AND column_name IN ('observed_at', 'source_published_at', 'active_key')
 ORDER BY ordinal_position;
 
 SELECT index_name, non_unique, GROUP_CONCAT(column_name ORDER BY seq_in_index) AS indexed_columns
@@ -57,6 +65,12 @@ SELECT
   (SELECT COUNT(*) FROM `u735413447_bettermalolos`.observation) AS observation_count,
   (SELECT COUNT(*) FROM `u735413447_bettermalolos`.observation WHERE active_key IS NOT NULL) AS active_observation_count,
   (SELECT COUNT(*) FROM `u735413447_bettermalolos`.audit_log) AS audit_count;
+
+SELECT
+  (SELECT COUNT(*) FROM `u735413447_bettermalolos`.observation_mapping) AS mapping_count,
+  (SELECT COUNT(*) FROM `u735413447_bettermalolos`.condition_selection) AS selection_count,
+  (SELECT COUNT(*) FROM `u735413447_bettermalolos`.official_advisory) AS advisory_count,
+  (SELECT COUNT(*) FROM `u735413447_bettermalolos`.risk_assessment) AS assessment_count;
 
 -- Expect zero rows: the unique index also prevents this condition.
 SELECT active_key, COUNT(*) AS duplicate_count

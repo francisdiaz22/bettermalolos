@@ -2,9 +2,9 @@
 
 > Decision-support and information service. Not an official forecast or emergency-dispatch system.
 
-This service (Phase A) collects published hydrology data from Bulacan PDRRMO, persists immutable raw snapshots, parses them into typed observations, and exposes internal health/freshness endpoints. The public BetterMalolos site remains `Proposed` until later phases.
+This service is at Phase B: it contains internal-only PDRRMO and PAGASA collection paths, immutable raw snapshots, a reviewed-only condition-mapping and audit mechanism, and a fail-closed internal status view. No production mapping is seeded. Both live collectors are disabled until their separate source-acceptance and second-review gates are recorded. The public BetterMalolos site remains `Proposed`.
 
-## Architecture (Phase A)
+## Architecture (Phase B)
 
 ```
 Official pages → collectors → immutable gzip raw snapshots → parsers → MariaDB
@@ -36,10 +36,11 @@ python -m app.jobs.seed_sources
 # 5. Run API
 uvicorn app.main:app --reload --port 8001
 
-# 6. One-command collector (fetch → snapshot → parse → store)
-python -m app.jobs.collect --source pdrrmo --once
-# or
+# 6. One-command collector (runs each source independently)
+# Live collection remains blocked until each source is approved in source_registry.
 bantay-baha --once
+# A fixture can exercise the parser while a source is disabled:
+python -m app.jobs.collect --source pagasa_flood --fixture tests/fixtures/pagasa/sample_flood.html
 ```
 
 Health checks:
@@ -48,7 +49,9 @@ Health checks:
 - `GET /readiness` — DB + storage + migration state
 - `GET /v1/ops/health/sources` — per-source freshness & last run
 - `GET /v1/ops/snapshots?source=pdrrmo&limit=20`
-- `POST /v1/ops/collect` — trigger collector (requires `OPS_API_TOKEN` if set)
+- `GET /v1/ops/status` — internal ruleset result and selection/calculation audit
+- `POST /v1/ops/collect?source=all` — independently attempt every collector (requires `OPS_API_TOKEN` if set)
+- `POST /v1/ops/collect?source=pagasa_flood` — attempt only the PAGASA collector
 
 ## Hostinger/phpMyAdmin deployment
 
@@ -56,7 +59,7 @@ phpMyAdmin creates/imports the schema; the Python service still connects directl
 
 1. Back up the target database and confirm it does not already contain Bantay Baha tables.
 2. In Hostinger phpMyAdmin, select the intended database, choose **Import**, and import `scripts/mariadb_schema.sql`.
-3. Run `scripts/mariadb_verify.sql` and confirm the schema revision is `004_mariadb_snapshots`.
+3. Run `scripts/mariadb_verify.sql` and confirm the schema revision is `005_phase_b_conditions`.
 4. Set the deployment secret to `mysql+pymysql://USER:PASSWORD@HOST:3306/DATABASE?charset=utf8mb4`. Percent-encode special characters in the username/password. Add provider-required TLS query options where applicable.
 5. Keep `STORAGE_BACKEND=database` and choose quota limits below the Hostinger database allocation.
 6. Run `python -m app.jobs.seed_sources`, then a fixture collection before any approved live collection.
@@ -81,19 +84,20 @@ docker compose exec api python -m app.jobs.collect --once
 ```
 app/
   api/           # health, readiness, internal ops routers
-  collectors/    # one module per approved source (pdrrmo)
+  collectors/    # one module per independently approved source
   parsers/       # pure snapshot → records transforms
   services/      # freshness, snapshot storage, health
   models/        # ORM + enums
   jobs/          # collect, reparse, seed
 migrations/
 tests/
-  fixtures/pdrrmo  # de-identified HTML snapshots
+  fixtures/pdrrmo  # saved PDRRMO parser snapshots
+  fixtures/pagasa  # synthetic PAGASA parser snapshot
 ```
 
-## Source acceptance (pdrrmo.bulacan.gov.ph)
+## Source acceptance
 
-Recorded in `source_registry` seed. Before enabling:
+PDRRMO and PAGASA are independently recorded in `source_registry` as disabled. Before enabling either:
 
 - canonical_url, publisher, terms, robots, cadence, timezone, maintainer
 - written permission if terms unclear
@@ -102,7 +106,12 @@ Recorded in `source_registry` seed. Before enabling:
 - freshness/retry policy, units, expected range, parser_version, alert contact
 - second-person review before public exposure
 
-## Freshness defaults (Phase A)
+Review records:
+
+- `docs/plans/source-acceptance-pdrrmo.md`
+- `docs/plans/source-acceptance-pagasa.md`
+
+## Freshness defaults
 
 | Data type | warning | hide |
 |---|---|---|
@@ -116,14 +125,23 @@ API returns `observed_at`, `fetched_at`, `freshness_state`.
 
 Public responses must never claim to be an official forecast, issue evacuations, or promise real-time rescue. Stale/missing data → `unknown`, never `normal`.
 
+## Phase B safeguards
+
+- `pagasa_flood` parses the published basin/sub-basin status and dam table only from persisted snapshots. It retains the source wording; a status link without a published issue/expiry time is stored for internal review, not treated as an active advisory or a scoring input.
+- `observation_mapping` is the only source-to-public-field allow-list. It requires documented scope, metric, units/datum, aggregation, timestamp/threshold semantics, rationale, named review, and an explicit version. There are no seeded mappings: PAGASA does not silently replace a PDRRMO station.
+- `GET /v1/ops/status` is authenticated outside development and always writes an internal `condition_selection` / `risk_assessment` audit trail. Any missing, stale, or unmapped required input returns `unknown`.
+
 ## Testing
 
 ```bash
 pytest
 pytest tests/unit/test_pdrrmo_parsers.py -v
+pytest tests/unit/test_pagasa_parsers.py tests/integration/test_phase_b_conditions.py -v
 ruff check .
 mypy app
 ```
+
+Current verified result: 49 tests pass; Ruff and mypy pass. SQLite migrations apply through `005_phase_b_conditions`, and offline MySQL DDL generation succeeds. Live MariaDB and approved PAGASA collection evidence remain operational gates.
 
 ## Environment
 

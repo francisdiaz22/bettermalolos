@@ -133,7 +133,16 @@ def get_or_create_station(db: Session, source: SourceRegistry, source_station_id
     return station
 
 
-def persist_snapshot(db: Session, source: SourceRegistry, content: bytes, status_code: int, content_type: str | None, headers: dict, fetched_at: datetime) -> SourceSnapshot:
+def persist_snapshot(
+    db: Session,
+    source: SourceRegistry,
+    content: bytes,
+    status_code: int,
+    content_type: str | None,
+    headers: dict,
+    fetched_at: datetime,
+    parser_version: str = PDRRMO_PARSER_VERSION,
+) -> SourceSnapshot:
     chash = compute_hash(content)
     # deduplicate exact content hashes only when audit links remain intact — we still create snapshot record but skip duplicate parsing?
     # For Phase A, we store every fetch as a snapshot, but we note if hash already exists.
@@ -155,7 +164,7 @@ def persist_snapshot(db: Session, source: SourceRegistry, content: bytes, status
         content_hash=chash,
         object_key=object_key,
         content_type=content_type,
-        parser_version=PDRRMO_PARSER_VERSION,
+        parser_version=parser_version,
         content_length=len(content),
         compressed_length=len(compressed) if compressed is not None else None,
         compression="gzip" if compressed is not None else None,
@@ -180,6 +189,7 @@ def _upsert_observation(
     unit: str | None,
     observed_at: datetime | None,
     fetched_at: datetime,
+    source_published_at: datetime | None = None,
     thresholds: dict | None = None,
     raw_text: str | None = None,
     quality: str = ObservationQuality.valid.value,
@@ -203,6 +213,7 @@ def _upsert_observation(
             value=value,
             unit=unit,
             observed_at=None,
+            source_published_at=source_published_at,
             fetched_at=fetched_at,
             source_url=source.canonical_url,
             parser_version=PDRRMO_PARSER_VERSION,
@@ -266,6 +277,7 @@ def _upsert_observation(
         value=value,
         unit=unit,
         observed_at=observed_at,
+        source_published_at=source_published_at,
         fetched_at=fetched_at,
         source_url=source.canonical_url,
         parser_version=PDRRMO_PARSER_VERSION,

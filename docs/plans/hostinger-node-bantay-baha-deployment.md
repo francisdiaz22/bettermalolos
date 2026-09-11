@@ -1,5 +1,7 @@
 # Bantay Baha on Hostinger Unlimited — Node.js Deployment Plan
 
+> **Status on 11 September 2026:** Fastify/Node.js is the production runtime target because the Hostinger shared plan cannot run Python/FastAPI. The Python service remains the behavioral reference during the port. Do not deploy the Node service until it implements and tests the complete Phase B contract (including PAGASA, reviewed mappings, condition selections, advisories, risk assessment, and fail-closed publication) against schema revision `005_phase_b_conditions`.
+
 ## Decision and target architecture
 
 Deploy Bantay Baha as a **separate Node.js Web App** on the existing Hostinger
@@ -24,7 +26,7 @@ the Node app uses `localhost`, so port 3306 is not exposed to the internet.
 
 ## Scope and non-goals
 
-This is a runtime port of the Phase A service, not a feature expansion.
+This is now scoped as a full runtime port of the Python Phase B service, not a Phase A-only deployment.
 
 In scope:
 
@@ -166,6 +168,27 @@ Exit gate: fixture parser outputs and API response shapes match the Python
 reference, and a local disposable MariaDB test creates snapshot, station,
 observation, and audit records without duplicate active observations.
 
+## Phase B parity gate — current work
+
+The Node service must reach parity before Hostinger deployment. The required
+components are: PAGASA collector/parser and advisory retention; source approval
+and mapping gates; condition selection with fresh-primary, mapped-fallback,
+historical-stale, and unknown states; versioned internal risk assessment;
+MariaDB revision `005_phase_b_conditions`; authenticated internal status;
+snapshot/audit/rollback semantics; independent source execution; and fixture
+contract tests covering every fail-closed path. Until this gate is signed off,
+both live collectors remain disabled and no public endpoint is enabled.
+
+### Port status — 11 September 2026
+
+Implemented in Fastify: PAGASA fixture parser and source seed, PAGASA-aware
+collector persistence, low-confidence advisory retention, condition selection,
+internal ruleset assessment, and the authenticated `/v1/ops/status` route.
+Fastify lint and tests pass (18 tests). Remaining work is production-grade
+PAGASA live-fetch parity, complete mapping/selection contract tests, explicit
+independent-source batch execution, and deployment verification against the
+Hostinger MariaDB instance. Live sources and public publication remain disabled.
+
 ## Phase 3 — prepare the repository for deployment
 
 1. Add `package.json` scripts:
@@ -296,7 +319,7 @@ Before connecting any public webpage:
 - [ ] `/v1/ops/*` returns 401 without a token and 200 with a valid token.
 - [ ] CORS allows only the intended BetterMalolos origin.
 - [ ] The MySQL user connects through `localhost`; Remote MySQL is still empty.
-- [ ] Schema verification reports `004_mariadb_snapshots`.
+- [ ] Schema verification reports `005_phase_b_conditions`, and the Node model/route port covers every Phase B table and fail-closed rule before it is treated as equivalent to the Python service.
 - [ ] A fixture collection is stored and idempotent.
 - [ ] A live collection has written approval evidence and has been manually
       checked for reasonable results.

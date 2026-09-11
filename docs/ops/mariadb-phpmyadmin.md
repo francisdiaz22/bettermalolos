@@ -1,21 +1,22 @@
 # Bantay Baha — MariaDB migration through phpMyAdmin
 
-This runbook provisions the Phase A schema in the existing Hostinger MariaDB database. phpMyAdmin is used for schema administration only; FastAPI and scheduled collectors connect directly through SQLAlchemy/PyMySQL.
+This runbook provisions the Phase B internal schema in the existing Hostinger MariaDB database. phpMyAdmin is used for schema administration only; FastAPI and scheduled collectors connect directly through SQLAlchemy/PyMySQL.
 
 ## Before importing
 
 1. Export the selected database from phpMyAdmin and retain the backup outside the public web root.
 2. Confirm the database name shown in phpMyAdmin is the intended target.
-3. Confirm the target has no tables named `source_registry`, `source_snapshot`, `station`, `observation`, `audit_log`, or `alembic_version`. The import is intentionally not an overwrite script.
+3. Confirm the target has none of the Bantay Baha tables listed by `scripts/mariadb_verify.sql`, including `source_registry`, `source_snapshot`, `observation_mapping`, `condition_selection`, `official_advisory`, `risk_assessment`, and `alembic_version`. The import is intentionally not an overwrite script.
 4. Record the Hostinger database quota. Set `SNAPSHOT_DATABASE_QUOTA_BYTES` below it, leaving capacity for observations, indexes, backups, and other applications sharing the database.
 
 ## Import and verify
 
 1. Select the database, open **Import**, choose `bantay_baha/scripts/mariadb_schema.sql`, retain UTF-8, and run the import.
 2. Open **SQL**, paste/run `bantay_baha/scripts/mariadb_verify.sql`, and verify:
-   - six expected tables are present and use InnoDB;
-   - `schema_revision` is `004_mariadb_snapshots`;
+   - nine application/audit tables plus `alembic_version` are present and use InnoDB;
+   - `schema_revision` is `005_phase_b_conditions`;
    - `raw_body_gzip` is `MEDIUMBLOB`;
+   - `observation.source_published_at` exists;
    - `uq_observation_active_key` is unique (`non_unique = 0`).
 3. Do not add secrets to SQL files or screenshots. Configure `DATABASE_URL` only in the deployment secret store. URL-encode credential characters such as `@`, `:`, `/`, `?`, and `#`.
 
@@ -34,14 +35,15 @@ From the service environment:
 ```bash
 alembic current
 python -m app.jobs.seed_sources
-python -m app.jobs.collect --fixture tests/fixtures/pdrrmo/sample_2026-09-02.html --once --json
+python -m app.jobs.collect --source pdrrmo --fixture tests/fixtures/pdrrmo/sample_2026-09-02.html --once --json
+python -m app.jobs.collect --source pagasa_flood --fixture tests/fixtures/pagasa/sample_flood.html --once --json
 python -m app.jobs.reparse --source pdrrmo --limit 1 --dry-run
 ```
 
-Then rerun `mariadb_verify.sql`. Expect one snapshot with a non-null gzip body and parsed observations. The seeded source remains disabled/unapproved; fixture collection is synthetic and does not enable live scraping.
+Then rerun `mariadb_verify.sql`. Expect two snapshots with non-null gzip bodies, parsed observations, and internal PAGASA advisory rows. Both seeded sources remain disabled/unapproved; fixture collection is synthetic and does not enable live retrieval.
 
 ## Backup/restore evidence
 
-Export the six Bantay Baha tables plus `alembic_version` from phpMyAdmin. Restore them into a separate disposable MariaDB database, run `mariadb_verify.sql`, and compare table counts, `SUM(compressed_length)`, and representative `content_hash` values with the source database. Delete the disposable copy according to the approved retention policy after recording non-sensitive evidence.
+Export all Bantay Baha tables plus `alembic_version` from phpMyAdmin. Restore them into a separate disposable MariaDB database, run `mariadb_verify.sql`, and compare table counts, `SUM(compressed_length)`, and representative `content_hash` values with the source database. Delete the disposable copy according to the approved retention policy after recording non-sensitive evidence.
 
-Do not enable the live scheduled collector until the source acceptance record has real review/approval values and the MariaDB CI or equivalent disposable-server test has passed.
+Do not enable a live collector until that source's acceptance record has real review/approval values and the MariaDB CI or equivalent disposable-server test has passed. Do not enable a production mapping until its named second-person review is recorded.

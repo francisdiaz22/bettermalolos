@@ -1,6 +1,7 @@
 from app.database import Base
 from app.models.audit import AuditLog
 from app.models.enums import (
+    ConditionSelectionState,
     FreshnessState,
     Indicator,
     ObservationQuality,
@@ -8,6 +9,7 @@ from app.models.enums import (
     ReportStatus,
 )
 from app.models.observation import Observation
+from app.models.phase_b import ConditionSelection, ObservationMapping, OfficialAdvisory, RiskAssessment
 from app.models.source_registry import SourceRegistry
 from app.models.source_snapshot import SourceSnapshot
 from app.models.station import Station
@@ -24,4 +26,9 @@ __all__ = [
     "PublicationState",
     "Indicator",
     "FreshnessState",
+    "ConditionSelectionState",
+    "ObservationMapping",
+    "ConditionSelection",
+    "OfficialAdvisory",
+    "RiskAssessment",
 ]

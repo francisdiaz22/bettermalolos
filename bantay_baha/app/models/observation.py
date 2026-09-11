@@ -22,6 +22,7 @@ class Observation(Base, TimestampMixin):
     value: Mapped[Decimal | None] = mapped_column(Numeric(12, 3), nullable=True)
     unit: Mapped[str | None] = mapped_column(String(32), nullable=True)
     observed_at: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True, index=True)
+    source_published_at: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
     fetched_at: Mapped[datetime] = mapped_column(UTCDateTime(), nullable=False)
     source_url: Mapped[str | None] = mapped_column(Text, nullable=True)
     parser_version: Mapped[str] = mapped_column(String(32), nullable=False)

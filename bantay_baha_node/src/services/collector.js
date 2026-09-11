@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import { getPool } from "../db.js";
 import { parsePdrrmoSnapshot } from "../parsers/pdrrmo.js";
+import { parsePagasaSnapshot } from "../parsers/pagasa.js";
 import { prepareSnapshot, storeSnapshot } from "./snapshot-store.js";
 import { getApprovedSource, getSource } from "./source-registry.js";
 const activeKey = (station, metric, observed) => createHash("sha256").update(`${station}|${metric}|${observed ?? "none"}`).digest("hex");
@@ -17,23 +18,25 @@ async function persistObservation(db, source, snapshot, record, spec, fetchedAt)
   await db.execute(`INSERT INTO observation (id,created_at,updated_at,station_id,snapshot_id,metric,value,unit,observed_at,fetched_at,source_url,parser_version,quality_state,thresholds_json,raw_text,supersedes_id,active_key) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`, [id, fetchedAt, fetchedAt, station.id, snapshot, spec.metric, spec.value, spec.unit, record.observed_at ? new Date(record.observed_at) : null, fetchedAt, source.canonical_url, source.parser_version, record.observed_at ? "valid" : "parse_error", thresholds, serialized, old[0]?.id ?? null, key]);
   await db.execute("INSERT INTO audit_log (id,created_at,updated_at,actor,action,entity_type,entity_id,`before`,`after`,reason,`timestamp`) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [randomUUID(), fetchedAt, fetchedAt, "collector:pdrrmo", old[0] ? "correct" : "create", "observation", id, old[0] ? JSON.stringify(old[0]) : null, serialized, old[0] ? "source value changed" : "source observation ingested", fetchedAt]); return true;
 }
-function observations(p) { return [
+function observations(name, p) { if (name === "pagasa_flood") return p.dams.map((r) => ({ record:r,stationId:`dam:${r.name.toLowerCase()}`,name:r.name,kind:"dam",metric:"dam_level",value:r.reservoir_level_m,unit:"m",thresholds:{nhwl:r.nhwl_m}})); return [
   ...p.tides.flatMap((r) => [{ record:r,stationId:`tide:${r.label.toLowerCase()}`,name:r.label,kind:"tide",metric:"tide_height",value:r.height_m,unit:"m"},{ record:r,stationId:`tide:${r.label.toLowerCase()}`,name:r.label,kind:"tide",metric:"tide_height_ft",value:r.height_ft,unit:"ft"}]),
   ...p.dams.map((r)=>({record:r,stationId:`dam:${r.dam}`,name:r.dam,kind:"dam",metric:"dam_level",value:r.current_level,unit:"m",thresholds:{normal:r.normal_level,spilling:r.spilling_level}})),
   ...p.rainfall.map((r)=>({record:r,stationId:`rainfall:${r.station}`,name:r.station,kind:"rainfall_daily",metric:"rainfall",value:r.rainfall_mm,unit:"mm"})),
   ...p.flooding.map((r)=>({record:r,stationId:`flooding:${r.municipality}`,name:r.municipality,kind:"flooding",metric:"flood_level",value:null,unit:null,thresholds:{description:r.flood_level}})),
   ...p.rivers.map((r)=>({record:r,stationId:`river:${r.station}`,name:r.station,kind:"river",metric:"river_level",value:r.actual,unit:"m",thresholds:{alert:r.alert,alarm:r.alarm,critical:r.critical}})) ]; }
 async function fetchRetry(url, options, retries) { let last; for (let n=0;n<=retries;n++) try { const response=await fetch(url,options); if(response.status>=500&&n<retries) continue; return response; } catch(error){last=error;} throw last; }
+async function persistAdvisories(connection, source, snapshot, parsed, fetchedAt) { for (const advisory of parsed.advisories ?? []) await connection.execute("INSERT INTO official_advisory (id,created_at,updated_at,source_id,snapshot_id,source_url,issued_at,expires_at,reviewed_at,raw_text,level,areas_json,structured_json,extraction_confidence) VALUES (?,?,?,?,?,?,NULL,NULL,NULL,?,?,?,NULL,'low')", [randomUUID(), fetchedAt, fetchedAt, source.id, snapshot, advisory.source_url, advisory.raw_text, advisory.level, JSON.stringify([advisory.area])]); }
 async function persistBody(source, body, metadata, config, db) {
   const fetchedAt=metadata.fetchedAt??new Date(), snap=await prepareSnapshot(body,config,db), connection=await db.getConnection();
   try { await connection.beginTransaction(); await storeSnapshot(connection,source,snap,{fetchedAt,status:metadata.status,contentType:metadata.contentType,error:metadata.error});
-    if(metadata.status===304){await connection.commit();return{status:"not_modified",snapshot_id:snap.id};} if(metadata.status<200||metadata.status>=300)throw new Error(`HTTP ${metadata.status}`); const parsed=parsePdrrmoSnapshot(body); if(parsed.errors.length)throw new Error(`parser failed: ${parsed.errors.map(e=>e.message).join("; ")}`);
-    let inserted=0; for(const {record,...spec} of observations(parsed)) if(await persistObservation(connection,source,snap.id,record,spec,fetchedAt)) inserted++;
+    if(metadata.status===304){await connection.commit();return{status:"not_modified",snapshot_id:snap.id};} if(metadata.status<200||metadata.status>=300)throw new Error(`HTTP ${metadata.status}`); const parsed=source.name === "pagasa_flood" ? parsePagasaSnapshot(body, source.canonical_url) : parsePdrrmoSnapshot(body); if(parsed.errors.length)throw new Error(`parser failed: ${parsed.errors.map(e=>e.message).join("; ")}`);
+    let inserted=0; for(const {record,...spec} of observations(source.name, parsed)) if(await persistObservation(connection,source,snap.id,record,spec,fetchedAt)) inserted++;
+    if (source.name === "pagasa_flood") await persistAdvisories(connection, source, snap.id, parsed, fetchedAt);
     if(metadata.updateValidators) await connection.execute("UPDATE source_registry SET last_etag=?,last_modified=?,updated_at=? WHERE id=?",[metadata.etag,metadata.lastModified,fetchedAt,source.id]); await connection.commit(); return{status:"ok",source:source.name,snapshot_id:snap.id,observations_written:inserted,warnings:parsed.warnings.map(x=>x.message)};
   } catch(error){await connection.rollback();await storeSnapshot(db,source,snap,{fetchedAt,status:metadata.status,contentType:metadata.contentType,error:error.message});throw error;} finally{connection.release();}
 }
 export async function collectSource(name, config, db = getPool(config)) {
-  if (name !== "pdrrmo") throw Object.assign(new Error("Only pdrrmo source is available"), { statusCode: 400 });
+  if (!["pdrrmo", "pagasa_flood"].includes(name)) throw Object.assign(new Error("unsupported source"), { statusCode: 400 });
   const lockName = `bantay_baha:collect:${name}`, lockConnection = await db.getConnection(); let locked = false;
   try {
     const [lockRows] = await lockConnection.execute("SELECT GET_LOCK(?, 0) AS acquired", [lockName]);
@@ -56,7 +59,7 @@ export async function collectSource(name, config, db = getPool(config)) {
 // CLI-only synthetic collection for deployment verification. It deliberately
 // bypasses the live-source approval and cadence gates, but never performs HTTP.
 export async function collectFixture(name, content, config, db = getPool(config)) {
-  if (name !== "pdrrmo") throw Object.assign(new Error("Only pdrrmo source is available"), { statusCode: 400 });
+  if (!["pdrrmo", "pagasa_flood"].includes(name)) throw Object.assign(new Error("unsupported source"), { statusCode: 400 });
   const source = await getSource(name, config, db);
   if (!source) throw new Error("source is not seeded; run npm run seed:sources first");
   return persistBody(source,Buffer.from(content),{status:200,contentType:"text/html; charset=utf-8",error:null,updateValidators:false},config,db);

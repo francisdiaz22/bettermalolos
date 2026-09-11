@@ -12,7 +12,9 @@ The current BetterMalolos repository is a static HTML/CSS/JavaScript site. Keep 
 
 ## Confirmed source inventory
 
-As verified on 2 September 2026, the [Bulacan PDRRMO hydrological page](https://pdrrmo.bulacan.gov.ph/) publishes tide-schedule entries, dam levels, observed rainfall including **Barangay Look 1st**, flooding-situation status, and river-station actual/alert/alarm/critical levels. The [PAGASA flood page](https://www.pagasa.dost.gov.ph/flood) publishes basin flood status, including Pampanga and Angat sub-basin, and dam water-level updates. [PAGASA's flood-warning legend](https://www.pagasa.dost.gov.ph/learnings/legend) is the authority for any public warning-level explanation. [Malolos CDRRMO planning materials](https://maloloscity.gov.ph/cdrrmo-plan/) are the candidate source for hazard layers and contingency context.
+As verified on 2 September 2026, the [Bulacan PDRRMO hydrological page](https://pdrrmo.bulacan.gov.ph/) published tide-schedule entries, dam levels, observed rainfall including **Barangay Look 1st**, flooding-situation status, and river-station actual/alert/alarm/critical levels. The [PAGASA flood page](https://www.pagasa.dost.gov.ph/flood) publishes basin flood status, including Pampanga and Angat sub-basin, and dam water-level updates. [PAGASA's flood-warning legend](https://www.pagasa.dost.gov.ph/learnings/legend) is the authority for any public warning-level explanation. [Malolos CDRRMO planning materials](https://maloloscity.gov.ph/cdrrmo-plan/) are the candidate source for hazard layers and contingency context.
+
+The PDRRMO site is currently unavailable. Mark its registry entry disabled and do not make it a single point of failure: PDRRMO collection failure must neither stop approved PAGASA or other approved collectors nor produce a normal/safe public state. A PDRRMO-only field remains `unknown`; no similarly named measurement may replace it until the specific source/station/metric equivalence has been reviewed and approved.
 
 FloodCaster is a useful research input, but the current public application must be manually assessed for an approved, stable, machine-readable access method before it is collected. Do not scrape protected, authenticated, rate-limited, or terms-restricted sources. Prefer a documented API, official downloadable artifact, or written permission.
 
@@ -26,8 +28,25 @@ Complete this for every source before enabling its collector:
 - [ ] Identify the source's published timestamp separately from the fetch time.
 - [ ] Define freshness and retry policy, normal units, expected range, parser version, and source-specific alert contact.
 - [ ] Have a second person from the BetterMalolos project/organization review the source-to-field mapping before a field is public. This is an internal quality-control reviewer, not a PDRRMO official. If the project currently has only one maintainer, collection may remain internal while public publication waits for a second reviewer.
+- [ ] For every proposed fallback, complete an equivalence review that identifies the exact publisher, source station, metric, unit/datum, geographic scope, aggregation period, timestamp semantics, thresholds, and public field it may serve. Record why it is genuinely equivalent and why it is not merely nearby or similarly named.
 
 Do not treat a provincial station as a measurement for every Malolos barangay. Store and display its station identity, location, observed time, and geographic limitation.
+
+### Multi-source continuity and equivalence policy
+
+Availability is provided by independently collecting multiple approved publishers, not by relabelling one source's value as another's. The service must preserve every observation as published and resolve a *current display value* only through an explicit, versioned equivalence mapping. No implicit station-name matching, geographic-nearest lookup, unit conversion alone, or generic source priority may create a fallback.
+
+For each public condition, the resolver must:
+
+1. Fetch every enabled, approved source independently; one source run may fail without cancelling, delaying, or changing the result of another.
+2. Retain each observation's publisher, source/station identifier and name, authoritative location and geographic limitation, metric, units/datum, source-published timestamp, fetch timestamp, snapshot, and quality state.
+3. Consider only observations that are `valid`, fresh under their own approved policy, and listed in the reviewed mapping for that exact public field.
+4. Select the freshest eligible observation. Each mapping declares its designated `primary` or `fallback` role; use its explicit priority only as a deterministic tie-breaker, never to prefer a stale primary over a fresh mapped fallback.
+5. Return the selected fallback with its actual publisher, station, location, observation time, source URL, and a `selectionReason` of `fresh_mapped_fallback`. It must never be presented as PDRRMO data or as a continuation of a PDRRMO station unless that is the reviewed mapping's actual station identity.
+6. Keep the last valid primary observation separately as `historical_stale` once it is no longer fresh or the primary is disabled/unreachable. It may be displayed only with a prominent “last recorded / stale historical data” label and must not be used as the current condition or scoring input.
+7. Return `unknown`/unavailable for the field when no genuinely equivalent fresh mapped observation exists. If that field is a required scoring input, the affected indicator is `unknown` (or explicitly `limited` only where the approved ruleset says the field is non-core). A collector, parser, mapping, or source failure must never yield `normal`, “safe,” or an inferred absence of flooding.
+
+Disabling PDRRMO therefore does not block the service from showing a fresh, reviewed PAGASA (or other approved) equivalent, but it does leave uniquely local PDRRMO rainfall, river, flooding-situation, tide, or threshold fields `unknown` until an equivalent source is separately accepted.
 
 ## Required decisions before development
 
@@ -94,14 +113,16 @@ No production response, personal report, secret, or unredacted source snapshot b
 
 ## Data model and audit rules
 
-All tables include `id`, `created_at`, and `updated_at` as applicable. Retain `source_url`, `source_published_at`, `fetched_at`, `parser_version`, `snapshot_id`, and `quality_state` on every imported measurement. Use `Decimal` for measured values rather than binary float.
+All tables include `id`, `created_at`, and `updated_at` as applicable. Retain publisher, `source_url`, `source_published_at`, `fetched_at`, `parser_version`, `snapshot_id`, and `quality_state` on every imported measurement. Use `Decimal` for measured values rather than binary float.
 
 | Entity              | Required fields                                                                                         | Rules                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `source_registry`   | name, canonical_url, type, enabled, cadence_minutes, timezone, terms_reviewed_at                        | One owner and source-specific freshness threshold required.                                                         |
+| `source_registry`   | publisher, name, canonical_url, type, enabled, cadence_minutes, timezone, terms_reviewed_at             | One owner, source-specific freshness threshold, and independent-run health state required.                          |
 | `source_snapshot`   | source_id, fetched_at, HTTP status, content hash, object key, content type, parser version              | Append-only; deduplicate exact content hashes only when audit links remain intact.                                  |
-| `station`           | source_id, source_station_id, name, kind, latitude/longitude when authoritative, units                  | Never fabricate coordinates or claim a station covers a barangay.                                                   |
-| `observation`       | station_id, metric, value, unit, observed_at, thresholds, snapshot_id, quality state                    | Unique on station, metric, observed time, source. Corrections create a superseding record; never overwrite history. |
+| `station`           | source_id, source_station_id, name, kind, authoritative location/latitude/longitude when available, units | Never fabricate coordinates or claim a station covers a barangay.                                                   |
+| `observation`       | station_id, metric, value, unit/datum, observed_at, source_published_at, thresholds, snapshot_id, quality state | Unique on station, metric, observed time, source. Corrections create a superseding record; never overwrite history. |
+| `observation_mapping` | public field, source/station/metric identity, unit/datum, geographic scope, aggregation and timestamp semantics, role (`primary`/`fallback`), priority, reviewed-by/at, mapping version | Allow-list only. A mapping is valid only for documented equivalent observations; it records its rationale and approval. |
+| `condition_selection` | public field, selected observation or null, candidate observations, mapping version, selection reason, computed_at | Immutable audit record. `fresh_primary`, `fresh_mapped_fallback`, `historical_stale`, and `unknown` are distinct states. |
 | `official_advisory` | source, source URL, issued/expires/review times, raw text, level, areas, structured fields, snapshot ID | Preserve original text and clearly mark extraction confidence.                                                      |
 | `barangay_context`  | official barangay ID/name, hazard classification, geometry/layer version, reviewed date                 | Hazard context is static/planning context, not live flood confirmation.                                             |
 | `resident_report`   | private fields, public-safe fields, geometry precision, status, expiry/reconfirmed timestamps           | Split private contact from public projection. Default status is `pending`.                                          |
@@ -112,6 +133,7 @@ All tables include `id`, `created_at`, and `updated_at` as applicable. Retain `s
 ### Core enums
 
 - Observation quality: `valid`, `missing`, `stale`, `out_of_range`, `parse_error`, `superseded`.
+- Condition selection: `fresh_primary`, `fresh_mapped_fallback`, `historical_stale`, `unknown`.
 - Report status: `pending`, `needs_review`, `verified`, `rejected`, `expired`, `redacted`.
 - Publication state: `internal_only`, `public`, `suppressed`.
 - BetterMalolos indicator: `normal`, `monitor`, `alert`, `critical`, `unknown`.
@@ -134,6 +156,7 @@ Each collector must:
 4. Validate units, timestamps, finite values, known station names, and plausible ranges.
 5. Upsert exact duplicate observations idempotently; write changed/corrected values as new versions.
 6. Emit structured logs, metrics, and a success/failure run record. A failed run never deletes the last known good value.
+7. Operate independently of every other collector. Record its own run outcome and continue the batch/workflow after another source's timeout, HTTP failure, parser failure, or disabled state.
 
 Define initially conservative plausibility checks. For example, reject negative rainfall and impossible negative dam levels; flag large rate-of-change values for review rather than silently discarding a genuine extreme event. Threshold comparisons always use source-published threshold values from the same snapshot.
 
@@ -157,7 +180,7 @@ Report freshness separately from source timestamp. Initial defaults, to be appro
 | Official advisory                  |      Source expiry/review time |        Immediately after expiry |
 | Resident report                    | 2 hours without reconfirmation | 6 hours unless reviewer extends |
 
-The API must return `observed_at`, `fetched_at`, and `freshness_state`; the UI must render at least observed/source time and freshness. A stale official advisory is never shown as active.
+Freshness is evaluated from the source-published/observed time using the source-specific policy, not from a successful fetch alone. The API must return `publisher`, `station`, `location`, `observed_at`, `fetched_at`, `freshness_state`, `selection_state`, and `selection_reason`; the UI must render at least source identity, observed/source time, and freshness. A stale official advisory is never shown as active. A stale primary observation is exposed only in a distinct historical field, never as the current value.
 
 ## Official-advisory extraction
 
@@ -266,16 +289,22 @@ Example public status response:
   ],
   "sources": [
     {
-      "name": "Bulacan PDRRMO observed rainfall",
+      "publicField": "pampanga_basin_flood_status",
+      "publisher": "PAGASA",
+      "station": "Pampanga Basin",
+      "location": "Pampanga Basin (basin-wide; not barangay-specific)",
       "observedAt": "2026-09-02T00:00:00Z",
+      "fetchedAt": "2026-09-02T00:04:00Z",
       "freshness": "fresh",
-      "sourceUrl": "https://pdrrmo.bulacan.gov.ph/"
+      "selectionState": "fresh_primary",
+      "selectionReason": "fresh_primary",
+      "sourceUrl": "https://www.pagasa.dost.gov.ph/flood"
     }
   ]
 }
 ```
 
-Version the API and publish an OpenAPI contract. Validate client responses in the static site; if the API is unavailable or returns an unknown schema, show the source links and a clear unavailable state rather than stale cached conditions.
+`GET /v1/public/conditions` must return the selected current observation and, where present, a separately named `historicalPrimary` object. `historicalPrimary` is never a fallback for `current`, always includes its original source identity/time and `historical_stale` state, and may be omitted entirely. Version the API and publish an OpenAPI contract. Validate client responses in the static site; if the API is unavailable or returns an unknown schema, show the source links and a clear unavailable state rather than stale cached conditions.
 
 ## Dashboard integration
 
@@ -283,6 +312,7 @@ Do not add a live `/bantay-baha` route until the API launch gate is met. Once ap
 
 - Render a prominent status card with label, computed time, limited-data state, source links, and the non-official disclaimer.
 - Render observations in accessible HTML tables before enhancing with charts/maps. Status cannot rely on colour alone.
+- For every current observation, show its real publisher, station, location/geographic limitation, source time, freshness, and whether it is primary or a reviewed mapped fallback. Show last-known primary data only in a separate stale-history treatment; never place it in a current-condition card. Render `unknown` plainly for a PDRRMO-only or otherwise unmapped field.
 - Map only officially licensed layers. Provide a table/list equivalent, keyboard access, descriptive labels, and a no-JavaScript source/advisory fallback.
 - Display reports as aggregated, verified, time-bounded information; never place individual residences or raw submissions on the public map.
 - Keep original official advisory text/link separate from BetterMalolos analysis.
@@ -357,23 +387,86 @@ Verification updated on 2 September 2026 with the bundled Python 3.12 runtime:
 - Alembic SQLite compatibility smoke: migrations `001` through `004_mariadb_snapshots` applied successfully; offline MySQL SQL generation emits the portable active-key constraint and `MEDIUMBLOB` snapshot column.
 - Seed smoke: PDRRMO created with `enabled=false`, `terms_reviewed_at=None`, and no manufactured approval.
 - Fixture collector smoke: snapshot persisted and 15 observations parsed (`3` tide, `3` dam, `2` rainfall, `7` river) with zero errors.
-- Scheduled workflow validates a MariaDB/MySQL PyMySQL URL, checks schema revision `004_mariadb_snapshots`, stores snapshots in the database, and fails closed without durable credentials.
+- At the Phase A checkpoint, the scheduled workflow validated a MariaDB/MySQL PyMySQL URL and revision `004_mariadb_snapshots`; Phase B has since advanced the current workflow and schema gate to `005_phase_b_conditions`.
 
 The **Phase A exit statement remains pending** under the revised zero-budget deployment until these actions are completed:
 
 - [ ] A BetterMalolos owner completes and records the PDRRMO source-use review: terms/notices, robots result, attribution, conservative cadence, identifying User-Agent, and contact/escalation notes. Written PDRRMO permission is needed only if conditions are unclear/restrictive or an official partnership is claimed.
 - [ ] Record a named second BetterMalolos reviewer for the source-to-field mapping before publication. If no second person is currently available, keep collection and results internal; this does not require a PDRRMO employee to review the parser.
 - [x] Implement MariaDB compatibility, replacing the PostgreSQL partial index with a nullable active-row key and adding a gzip-compressed `MEDIUMBLOB` raw-body column with size/quota safeguards. A phpMyAdmin import artifact is included.
-- [ ] Complete the MariaDB CI/container run (or an equivalent disposable MariaDB run) and retain its result; this local workstation did not have a MariaDB server/container runtime available for the implementation verification.
+- [x] Complete an equivalent disposable MariaDB run and retain its result. On 6 September 2026, MariaDB 12.3.3 verified revision `005_phase_b_conditions`, both fixture collectors, gzip bodies, source timestamps, the fail-closed internal status view, and an exact dump/restore comparison; see `docs/review/phase-b-disposable-mariadb-2026-09-06.md`.
 - [ ] Configure the existing Hostinger MariaDB credentials as secrets, run one real scheduled/manual-dispatch collection, and retain evidence that both the raw snapshot body and parsed measurements persist and can be restored. No S3 or VPS is required for the text-only Phase A MVP.
 
 ### Phase B — Official sources and internal status
 
-- [ ] Add approved PAGASA basin/dam/advisory collectors and deterministic advisory extraction.
-- [ ] Add ruleset-configured scoring, completeness logic, calculation audit records, and internal status view.
-- [ ] Conduct source-mapping review and test normal, threshold breach, stale, missing, malformed, and correction cases.
+- [x] Add a separate PAGASA source-acceptance record, fixture, expected parser behavior, owner/contact placeholders, timestamp policy, and disabled-by-default registry entry.
+- [ ] Complete and approve the PAGASA terms/notices and robots review, cadence/freshness decision, canonical-artifact review, and named second-person field-mapping review before live collection is enabled. See `docs/plans/source-acceptance-pagasa.md`.
+- [x] Add the gated PAGASA basin/sub-basin status, dam-level, and advisory ingestion path. It persists the raw snapshot before parsing and retains source wording. Status links without a published issue/expiry time remain low-confidence internal records and are not treated as active or scored advisories.
+- [x] Run PDRRMO and PAGASA independently in the batch job and ops trigger. A disabled, unavailable, or failed PDRRMO run does not cancel the PAGASA attempt or manufacture a normal state.
+- [x] Add versioned source-equivalence mappings and immutable condition-selection audit records. Only enabled mappings with a named reviewer and review timestamp are eligible; no mapping is seeded automatically.
+- [ ] Approve concrete production mappings. Each fallback still requires an actual second-person review of publisher, station, metric, location/scope, unit/datum, aggregation, timestamp semantics, thresholds, and rationale.
+- [x] Add ruleset-configured scoring, completeness logic, calculation audit records, and the internal `GET /v1/ops/status` view. Missing, stale, disabled-source, or unmapped core inputs return `unknown`; stale primary observations are historical only.
+- [x] Add synthetic/fixture tests for normal and threshold states, fresh mapped fallback, stale primary exclusion, unknown unmapped input, malformed PAGASA markup, approval gating, snapshot persistence, and existing correction semantics.
 
-**Exit:** Staff can trace every internal status input back to a timestamped official snapshot, and the system displays `unknown` for inadequate data.
+**Exit:** Staff can trace every selected value and every fallback decision to a timestamped official snapshot and reviewed mapping. PDRRMO can remain disabled without blocking equivalent fresh approved data; uniquely local PDRRMO fields and all unmapped fields display `unknown`.
+
+#### Phase B implementation audit — 3 September 2026
+
+**Engineering status: implemented and verified for internal synthetic/fixture use. Operational exit remains pending.** The repository now contains the disabled-by-default `pagasa_flood` collector and parser, migration `005_phase_b_conditions`, reviewed-only observation mappings, condition-selection audits, ruleset-versioned internal assessments, independent multi-source execution, and an authenticated internal status endpoint. No public Bantay Baha API or dashboard was enabled.
+
+Repository evidence:
+
+- `bantay_baha/app/collectors/pagasa.py` implements the source-acceptance gate, cadence/conditional fetch, snapshot-first persistence, atomic fail-closed parsing, advisory storage, and audit events.
+- `bantay_baha/app/parsers/pagasa.py` parses the accepted basin/sub-basin and dam-table fixture without inferring missing advisory issue or expiry timestamps.
+- `bantay_baha/app/services/conditions.py` accepts only explicitly reviewed mappings, selects the freshest eligible value, distinguishes primary/fallback/historical/unknown states, and excludes stale history from scoring.
+- `bantay_baha/app/data/risk_ruleset.v1.json` and `GET /v1/ops/status` provide a versioned internal-only calculation path.
+- `bantay_baha/migrations/versions/005_phase_b_conditions.py` adds source-published timestamps, mappings, selections, official advisories, and risk assessments. The phpMyAdmin schema and verification script target the same revision.
+- `bantay_baha/tests/fixtures/pagasa/sample_flood.html`, `tests/unit/test_pagasa_parsers.py`, and `tests/integration/test_phase_b_conditions.py` provide synthetic parser, collector, fallback, stale, unknown, and scoring coverage.
+
+Verification on 3 September 2026 with the bundled Python 3.12 runtime:
+
+- `pytest -q`: **49 passed**; one upstream FastAPI/Starlette `httpx` deprecation warning.
+- `ruff check app tests migrations`: **passed**.
+- `mypy app --ignore-missing-imports`: **passed, 33 source files**.
+- Alembic SQLite smoke: migrations `001` through `005_phase_b_conditions` applied successfully.
+- Offline MySQL generation: emitted the `source_published_at`, mapping, selection, advisory, and assessment DDL successfully.
+- PAGASA fixture collection: one compressed snapshot, three basin/sub-basin statuses, two dam observations, and three internal advisory records, with zero parser errors.
+
+The **Phase B exit statement remains pending** until all of the following are complete:
+
+- [ ] Obtain written PAGASA clarification and owner approval for source use, fetch cadence/freshness thresholds, and attribution. The public terms/robots/canonical-artifact findings, conservative proposal, and escalation contacts were recorded on 4 September 2026 in `docs/plans/source-acceptance-pagasa.md`; the published hydrometeorological-data terms are restrictive/unclear and `robots.txt` returned HTTP 404, so research alone does not close this gate.
+- [ ] Name the second BetterMalolos reviewer and approve each production source-to-field mapping. There are intentionally no seeded production equivalences.
+- [x] Apply revision `005_phase_b_conditions` to a disposable MariaDB and retain migration, fixture, status, and restore evidence; see `docs/review/phase-b-disposable-mariadb-2026-09-06.md`.
+- [ ] Back up the intended Hostinger database, apply revision `005_phase_b_conditions` there, and run the production verification queries. The checked-in `.env` is intended for an app already running on Hostinger and was not used from this workstation.
+- [ ] Run and retain one approved live PAGASA collection showing restorable raw snapshot data, parsed records, source timestamps, and audit rows.
+- [x] Exercise the authenticated internal status view with no production mappings and confirm the required field remains `unknown` (`score=null`, `publication_state=internal_only`) on disposable MariaDB.
+- [ ] Exercise the internal status view against owner-approved production mappings after those mappings exist; uniquely local or unmapped PDRRMO fields must continue to remain `unknown`.
+
+#### Phase B engineering checkpoint — 11 September 2026
+
+**Engineering checkpoint: complete for the current uncommitted Phase B implementation; operational exit remains pending.** The implementation was reviewed for whitespace errors and the staged Phase B change set remains internally coherent. No public Bantay Baha API or dashboard was enabled, both source registry entries remain disabled and unapproved, and no production mapping was added. The unrelated `docs/plans/community-wishlist-plan.md` file remains outside this checkpoint.
+
+Verification was rerun with the bundled Python `3.12.14` runtime in a fresh local virtual environment:
+
+- `pytest -q`: **49 passed**; only upstream FastAPI/Starlette `httpx`/AnyIO deprecation warnings were emitted.
+- `ruff check app tests migrations`: **passed**.
+- `mypy app --ignore-missing-imports`: **passed, 33 source files**.
+- Alembic SQLite smoke: revisions `001` through `005_phase_b_conditions` applied successfully.
+- Source-seed smoke: `pdrrmo` and `pagasa_flood` were created with `enabled=false`, `approved_at=NULL`, and `second_reviewer='pending'`.
+
+This checkpoint confirms code and disposable-database behavior only. It does not approve PAGASA use, production deployment, live collection, source mappings, or public publication. The remaining Phase B gates below are unchanged.
+
+**Deployment decision (11 September 2026):** Hostinger shared hosting cannot run
+Python/FastAPI. Fastify/Node.js is therefore the production runtime target;
+this Python service is retained as the behavioral reference until the Node port
+passes the complete Phase B parity gate documented in
+`docs/plans/hostinger-node-bantay-baha-deployment.md`.
+
+The Fastify port has begun the Phase B parity work: PAGASA fixture parsing and
+disabled source registration, advisory persistence, condition selection,
+versioned internal assessment, and authenticated status routing are implemented
+and covered by Node tests. These additions do not change the Python reference
+service or authorize live collection/public publication.
 
 ### Phase C — Moderated reports (closed pilot)
 
@@ -404,8 +497,9 @@ The **Phase A exit statement remains pending** under the revised zero-budget dep
 | Area       | Minimum checks                                                                                                                          |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Parsers    | Fixtures for current and malformed pages; changed headings/tables fail closed; unit/time conversion; duplicate and correction semantics |
-| Jobs       | Retries, idempotency, rate limits, snapshot-before-parse, partial failure, stale transition, reparse from snapshot                      |
-| Scoring    | Every threshold boundary, missing input, stale input, advisory expiration, ruleset version, manual override audit                       |
+| Jobs       | Retries, idempotency, rate limits, snapshot-before-parse, independent multi-source partial failure, stale transition, reparse from snapshot |
+| Selection  | Only reviewed mappings are eligible; freshest eligible source wins; priority breaks ties; fallback attribution; stale primary is historical only; no equivalent fresh source is `unknown` |
+| Scoring    | Every threshold boundary, missing input, stale input, source failure, unmapped field, advisory expiration, ruleset version, manual override audit |
 | Reports    | Schema/enum/length validation, spam, XSS, rate limit, privacy projection, duplicate cluster, expiry, moderator actions                  |
 | API        | OpenAPI/contract, auth/role checks, CORS, no PII in public JSON/cache/logs, pagination and cache headers                                |
 | Dashboard  | Desktop/mobile, keyboard, screen reader, colour contrast, no-JS, loading/error/unknown/stale states, source links                       |
@@ -419,7 +513,9 @@ Do not mark Bantay Baha live until all are true:
 
 - [ ] Source-use reviews, mappings, update expectations, attribution, and owner contacts are documented; written publisher permission is recorded where published conditions are unclear/restrictive or a partnership is claimed.
 - [ ] Every public value has a source, source time, fetch time, units, and freshness state.
-- [ ] Parser/source failure yields `unknown` or unavailable, never false reassurance.
+- [ ] Every fallback is independently collected and is a documented, second-person-reviewed equivalent station/metric mapping; its real publisher, station, location, timestamps, and source link are public.
+- [ ] The freshest approved equivalent is selected; the last known primary is visibly stale historical data only and cannot affect the current display or score.
+- [ ] Parser/source/mapping failure yields `unknown` or unavailable, never `normal`, “safe,” or false reassurance.
 - [ ] Official advisories retain issuer, original wording/link, issue/expiry time, and visual separation from community analysis.
 - [ ] Risk scoring is deterministic, versioned, auditable, and explicitly non-official.
 - [ ] Resident reports are privacy-reviewed, moderated, aggregated, reversible, and never automatically published individually.

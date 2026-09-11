@@ -35,6 +35,10 @@ class Settings(BaseSettings):
     pdrrmo_enabled: bool = Field(default=False, alias="PDRRMO_ENABLED")
     pdrrmo_cadence_minutes: int = Field(default=30, alias="PDRRMO_CADENCE_MINUTES")
 
+    pagasa_flood_url: str = Field(default="https://www.pagasa.dost.gov.ph/flood", alias="PAGASA_FLOOD_URL")
+    pagasa_enabled: bool = Field(default=False, alias="PAGASA_ENABLED")
+    pagasa_cadence_minutes: int = Field(default=30, alias="PAGASA_CADENCE_MINUTES")
+
     collector_user_agent: str = Field(
         default="BantayBaha/0.1 (+https://bettermalolos.org/bantay-baha; contact: ops@bettermalolos.org)",
         alias="COLLECTOR_USER_AGENT",

@@ -1,4 +1,4 @@
--- Bantay Baha Phase A schema for MariaDB/MySQL via phpMyAdmin.
+-- Bantay Baha Phase B schema for MariaDB/MySQL via phpMyAdmin.
 -- Target: a new/empty database selected in phpMyAdmin.
 -- Runtime timestamps are normalized to UTC by the Python ORM.
 
@@ -89,6 +89,7 @@ CREATE TABLE observation (
   value DECIMAL(12,3) NULL,
   unit VARCHAR(32) NULL,
   observed_at DATETIME(6) NULL,
+  source_published_at DATETIME(6) NULL,
   fetched_at DATETIME(6) NOT NULL,
   source_url LONGTEXT NULL,
   parser_version VARCHAR(32) NOT NULL,
@@ -125,9 +126,90 @@ CREATE TABLE audit_log (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE observation_mapping (
+  id VARCHAR(36) NOT NULL,
+  created_at DATETIME(6) NOT NULL,
+  updated_at DATETIME(6) NOT NULL,
+  public_field VARCHAR(128) NOT NULL,
+  source_id VARCHAR(36) NOT NULL,
+  source_station_id VARCHAR(256) NOT NULL,
+  metric VARCHAR(64) NOT NULL,
+  unit_datum VARCHAR(128) NULL,
+  geographic_scope LONGTEXT NOT NULL,
+  aggregation_period VARCHAR(128) NOT NULL,
+  timestamp_semantics VARCHAR(256) NOT NULL,
+  threshold_semantics LONGTEXT NULL,
+  role VARCHAR(16) NOT NULL,
+  priority INT NOT NULL DEFAULT 100,
+  mapping_version VARCHAR(64) NOT NULL,
+  rationale LONGTEXT NOT NULL,
+  reviewed_by VARCHAR(128) NULL,
+  reviewed_at DATETIME(6) NULL,
+  enabled TINYINT(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (id),
+  KEY ix_observation_mapping_public_field (public_field),
+  CONSTRAINT fk_observation_mapping_source FOREIGN KEY (source_id) REFERENCES source_registry (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE condition_selection (
+  id VARCHAR(36) NOT NULL,
+  created_at DATETIME(6) NOT NULL,
+  updated_at DATETIME(6) NOT NULL,
+  public_field VARCHAR(128) NOT NULL,
+  selected_observation_id VARCHAR(36) NULL,
+  historical_observation_id VARCHAR(36) NULL,
+  candidate_observation_ids_json LONGTEXT NOT NULL,
+  mapping_version VARCHAR(64) NULL,
+  selection_state VARCHAR(32) NOT NULL,
+  selection_reason VARCHAR(64) NOT NULL,
+  computed_at DATETIME(6) NOT NULL,
+  PRIMARY KEY (id),
+  KEY ix_condition_selection_public_field (public_field),
+  CONSTRAINT fk_condition_selection_selected FOREIGN KEY (selected_observation_id) REFERENCES observation (id),
+  CONSTRAINT fk_condition_selection_historical FOREIGN KEY (historical_observation_id) REFERENCES observation (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE official_advisory (
+  id VARCHAR(36) NOT NULL,
+  created_at DATETIME(6) NOT NULL,
+  updated_at DATETIME(6) NOT NULL,
+  source_id VARCHAR(36) NOT NULL,
+  snapshot_id VARCHAR(36) NOT NULL,
+  source_url LONGTEXT NOT NULL,
+  issued_at DATETIME(6) NULL,
+  expires_at DATETIME(6) NULL,
+  reviewed_at DATETIME(6) NULL,
+  raw_text LONGTEXT NOT NULL,
+  level VARCHAR(64) NULL,
+  areas_json LONGTEXT NOT NULL,
+  structured_json LONGTEXT NULL,
+  extraction_confidence VARCHAR(16) NOT NULL,
+  PRIMARY KEY (id),
+  KEY ix_official_advisory_source_id (source_id),
+  KEY ix_official_advisory_snapshot_id (snapshot_id),
+  CONSTRAINT fk_official_advisory_source FOREIGN KEY (source_id) REFERENCES source_registry (id),
+  CONSTRAINT fk_official_advisory_snapshot FOREIGN KEY (snapshot_id) REFERENCES source_snapshot (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE risk_assessment (
+  id VARCHAR(36) NOT NULL,
+  created_at DATETIME(6) NOT NULL,
+  updated_at DATETIME(6) NOT NULL,
+  barangay VARCHAR(128) NULL,
+  ruleset_version VARCHAR(64) NOT NULL,
+  inputs_json LONGTEXT NOT NULL,
+  score DECIMAL(8,2) NULL,
+  display_state VARCHAR(32) NOT NULL,
+  publication_state VARCHAR(32) NOT NULL DEFAULT 'internal_only',
+  computed_at DATETIME(6) NOT NULL,
+  published_at DATETIME(6) NULL,
+  PRIMARY KEY (id),
+  KEY ix_risk_assessment_barangay (barangay)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE alembic_version (
   version_num VARCHAR(32) NOT NULL,
   PRIMARY KEY (version_num)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO alembic_version (version_num) VALUES ('004_mariadb_snapshots');
+INSERT INTO alembic_version (version_num) VALUES ('005_phase_b_conditions');

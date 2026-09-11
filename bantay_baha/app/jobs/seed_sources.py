@@ -1,10 +1,16 @@
 """Seed source_registry with approved sources."""
 from __future__ import annotations
 
+from app.collectors.pagasa import (
+    PAGASA_EXPECTED_UPDATE_FREQUENCY,
+    PAGASA_LICENSING_FINDING,
+    PAGASA_ROBOTS_FINDING,
+)
 from app.config import get_settings
 from app.database import Base, engine, session_local
 from app.logging_config import get_logger
 from app.models import SourceRegistry
+from app.parsers.pagasa import PAGASA_PARSER_VERSION
 
 logger = get_logger(__name__)
 
@@ -92,6 +98,51 @@ def seed():
             #   UPDATE source_registry SET enabled=true, terms_reviewed_at=now(), approved_at=now(), second_reviewer='<name>', licensing_terms='<confirmed>' WHERE name='pdrrmo';
             # The PDRRMO_ENABLED env is intentionally ignored here.
             logger.info("pdrrmo source already exists — updated URL/cadence (approval remains pending if not manually set)")
+        # PAGASA is a separate publisher and separate acceptance decision. The
+        # published page is not treated as permission for automation. Do not
+        # manufacture an approval date, reviewer, or mapping from proximity.
+        pagasa = existing.get("pagasa_flood")
+        pagasa_terms = PAGASA_LICENSING_FINDING
+        pagasa_robots = PAGASA_ROBOTS_FINDING
+        if pagasa is None:
+            db.add(
+                SourceRegistry(
+                    name="pagasa_flood",
+                    canonical_url=settings.pagasa_flood_url,
+                    type="hydrology_advisory",
+                    enabled=False,
+                    cadence_minutes=settings.pagasa_cadence_minutes,
+                    timezone="Asia/Manila",
+                    publisher="DOST-PAGASA",
+                    owner="Bantay Baha ops",
+                    freshness_warning_minutes=settings.freshness_warning_minutes,
+                    freshness_critical_minutes=settings.freshness_critical_minutes,
+                    parser_version=PAGASA_PARSER_VERSION,
+                    terms_url=settings.pagasa_flood_url,
+                    licensing_terms=pagasa_terms,
+                    robots_txt=pagasa_robots,
+                    expected_update_frequency=PAGASA_EXPECTED_UPDATE_FREQUENCY,
+                    maintainer_name="Bantay Baha ops",
+                    maintainer_contact="ops@bettermalolos.org",
+                    second_reviewer="pending",
+                    notes="Internal fixture-only PAGASA collector. Live collection needs completed source-use review and named mapping reviewer; no PAGASA value is a Malolos substitute without a reviewed mapping.",
+                )
+            )
+            logger.info("seeded pagasa_flood source (unapproved — manual approval required)")
+        else:
+            pagasa.canonical_url = settings.pagasa_flood_url
+            pagasa.cadence_minutes = settings.pagasa_cadence_minutes
+            pagasa.parser_version = PAGASA_PARSER_VERSION
+            pagasa.publisher = pagasa.publisher or "DOST-PAGASA"
+            if pagasa.licensing_terms is None or pagasa.licensing_terms.startswith("Pending source-use review"):
+                pagasa.licensing_terms = pagasa_terms
+            if pagasa.robots_txt is None or pagasa.robots_txt.startswith("Pending verification"):
+                pagasa.robots_txt = pagasa_robots
+            if pagasa.expected_update_frequency is None or pagasa.expected_update_frequency.startswith(
+                "Pending source acceptance"
+            ):
+                pagasa.expected_update_frequency = PAGASA_EXPECTED_UPDATE_FREQUENCY
+            pagasa.second_reviewer = pagasa.second_reviewer or "pending"
         db.commit()
         # print
         for r in db.query(SourceRegistry).all():
