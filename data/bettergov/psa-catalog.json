@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "psa-catalog-20260921124945",
+  "source_name": "Philippine Statistics Authority Statistical Classification API",
+  "source_url": "https://classification.psa.gov.ph/psgc/Q2_2024/all",
+  "parameters": {
+    "version": "Q2_2024",
+    "classification": "PSGC",
+    "coverage": "all"
+  },
+  "retrieved_at": "2026-09-21T12:49:45.634Z",
+  "source_release": "PSGC Q2 2024",
+  "scope_note": "PSA geographic reference context; not a locally curated service or demographic estimate.",
+  "review_status": "pending-review",
+  "checksum_sha256": "202500347a12cc050f4288bd33b15a93e8e3598fa0ab2c16e457683c774e6a63",
+  "data": [
+    {
+      "code": "03",
+      "name": "Region III (Central Luzon)",
+      "level": "region"
+    },
+    {
+      "code": "030000000",
+      "name": "Bulacan",
+      "level": "province"
+    },
+    {
+      "code": "030140000",
+      "name": "City of Malolos",
+      "level": "city"
+    }
+  ]
+}

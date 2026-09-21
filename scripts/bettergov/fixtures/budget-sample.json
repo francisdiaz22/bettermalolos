@@ -1,0 +1,7 @@
+{
+  "meta": { "dataset": "gaa", "year": 2026, "currency": "PHP", "scale": "pesos" },
+  "data": [
+    { "id": "fixture-flood-control-1", "program": "Flood Control and Drainage Infrastructure", "department": "Department of Public Works and Highways", "amount": 1250000000, "year": 2026, "stage": "GAA" },
+    { "id": "fixture-school-building-1", "program": "Basic Education Facilities", "department": "Department of Education", "amount": 875000000, "year": 2026, "stage": "GAA" }
+  ]
+}

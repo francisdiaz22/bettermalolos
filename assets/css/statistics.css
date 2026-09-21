@@ -1237,6 +1237,75 @@
   color: var(--color-text-light);
 }
 
+.psa-context-section {
+  background: var(--color-background-alt, #f6f8fb);
+}
+
+.psa-context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.psa-context-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 210px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.psa-context-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.psa-context-value {
+  color: var(--color-primary);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.psa-context-detail,
+.psa-context-scope,
+.psa-context-meta,
+.psa-context-note,
+.psa-context-card p,
+.psa-context-card a {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+}
+
+.psa-context-card p {
+  flex: 1;
+  margin: 4px 0 0;
+}
+
+.psa-context-card a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.psa-context-meta,
+.psa-context-note {
+  margin: 16px 0 0;
+}
+
+.psa-context-loading,
+.psa-context-unavailable {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .psa-context-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
   .cmci-overview-grid {

@@ -81,6 +81,7 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/statistics.css" />
+    <link rel="stylesheet" href="../assets/css/data-provenance.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="stats-skip-to-main-content"
@@ -335,6 +336,29 @@
             <h1 data-i18n="stats-title">Municipal Statistics</h1>
             <p data-i18n="stats-subtitle">Data and statistics about Malolos, Bulacan</p>
           </div>
+        </div>
+      </section>
+
+      <aside class="container data-provenance-note" aria-label="Data sources and freshness">
+        <strong><i class="bi bi-info-circle" aria-hidden="true"></i> Data sources and freshness</strong>
+        Figures on this page are labelled by source and period. City records and LGU-issued reports
+        remain the authority for Malolos services and finances; national or partner data is context.
+        We show retrieval dates for API-derived data and retain the last approved snapshot if a source
+        is unavailable. <a href="/docs/plans/bettergov-api-integration-roadmap.md">Read the data integration roadmap</a>.
+      </aside>
+
+      <section class="stats-section psa-context-section" data-psa-context data-snapshot="../data/psa-malolos-context.json" aria-labelledby="psa-context-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="bi bi-database" aria-hidden="true"></i> PSA context</span>
+            <h2 id="psa-context-title">Malolos data context</h2>
+            <p>Reviewed Philippine Statistics Authority context for placing Malolos in its provincial and regional geography.</p>
+          </div>
+          <div class="psa-context-grid" data-psa-indicators>
+            <p class="psa-context-loading">Loading the last approved snapshot…</p>
+          </div>
+          <p class="psa-context-meta" data-psa-meta></p>
+          <p class="psa-context-note"><strong>How to read this:</strong> These figures describe the stated dataset and period. They do not replace City Government records, and missing data is not treated as zero.</p>
         </div>
       </section>
 
@@ -1316,5 +1340,6 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/statistics-new.js?v=2024-popcen-51"></script>
+    <script defer src="../assets/js/psa-context.js?v=20260921"></script>
   </body>
 </html>

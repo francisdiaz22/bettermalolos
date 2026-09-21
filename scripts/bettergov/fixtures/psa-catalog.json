@@ -1,0 +1,8 @@
+{
+  "meta": { "classification": "PSGC", "version": "Q2_2024", "source": "Philippine Statistics Authority" },
+  "data": [
+    { "code": "03", "name": "Region III (Central Luzon)", "level": "region" },
+    { "code": "030000000", "name": "Bulacan", "level": "province" },
+    { "code": "030140000", "name": "City of Malolos", "level": "city" }
+  ]
+}
