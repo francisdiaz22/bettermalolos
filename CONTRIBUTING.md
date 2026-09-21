@@ -162,3 +162,6 @@ Feel free to open an issue or reach out on Discord. We're happy to help!
 ---
 
 Thank you for helping make government information accessible to the people of Malolos.
+## API-derived data checklist
+
+Before opening a change that adds external API data, include the exact source link and endpoint, query parameters, retrieval date, source release or dataset identifier, unit/currency, scope note, review status, and the maintainer who reviewed it. Keep the previous approved snapshot when a refresh fails; do not replace a local record automatically. See [the BetterGov data contract](docs/bettergov-data-contract.md).

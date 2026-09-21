@@ -32,4 +32,13 @@ test.describe('Statistics — 2024 population by barangay', () => {
 
     await expect(page.locator('.more-barangays summary')).toHaveText('View all 51 barangays');
   });
+
+  test('shows the reviewed PSA data context with provenance', async ({ page }) => {
+    const context = page.locator('[data-psa-context]');
+    await expect(context.locator('.psa-context-card')).toHaveCount(3);
+    await expect(context).toContainText('269,809');
+    await expect(context).toContainText('PSA-2024-POPCEN');
+    await expect(context).toContainText('PSGC-Q2_2024');
+    await expect(context).toContainText('Reviewed 2026-09-21');
+  });
 });

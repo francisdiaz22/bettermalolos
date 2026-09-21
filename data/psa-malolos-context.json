@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "psa-malolos-context-20260921",
+  "source_name": "Philippine Statistics Authority",
+  "source_url": "https://psa.gov.ph/statistics/population-and-housing",
+  "retrieved_at": "2026-09-21T12:49:45.634Z",
+  "source_release": "2024 Census of Population (POPCEN); PSGC Q2 2024",
+  "scope_note": "PSA statistical and geographic context for the City of Malolos; not an LGU service or financial record.",
+  "review_status": "reviewed",
+  "reviewed_at": "2026-09-21",
+  "reviewer": "BetterMalolos maintainer",
+  "psgc": {
+    "classification": "PSGC",
+    "version": "Q2_2024",
+    "region": { "code": "03", "name": "Region III (Central Luzon)" },
+    "province": { "code": "030000000", "name": "Bulacan" },
+    "city": { "code": "030140000", "name": "City of Malolos" }
+  },
+  "indicators": [
+    {
+      "id": "malolos-population-2024",
+      "topic": "Population",
+      "value": 269809,
+      "period": "2024",
+      "unit": "persons",
+      "dataset_id": "PSA-2024-POPCEN",
+      "source_url": "https://psa.gov.ph/statistics/population-and-housing",
+      "source_release": "2024 Census of Population (POPCEN)",
+      "scope": "City of Malolos",
+      "explanation": "The enumerated population in the 2024 POPCEN. It is not a current live estimate."
+    },
+    {
+      "id": "malolos-barangays-psgc",
+      "topic": "Barangays",
+      "value": 51,
+      "period": "Q2 2024",
+      "unit": "PSGC administrative units",
+      "dataset_id": "PSGC-Q2_2024",
+      "source_url": "https://classification.psa.gov.ph/psgc/Q2_2024/all",
+      "source_release": "PSGC Q2 2024",
+      "scope": "City of Malolos",
+      "explanation": "The reviewed PSGC reference used by BetterMalolos for the city's barangay-level context."
+    },
+    {
+      "id": "malolos-psgc-hierarchy",
+      "topic": "Geographic reference",
+      "value": "03 / 030000000 / 030140000",
+      "period": "Q2 2024",
+      "unit": "PSGC codes",
+      "dataset_id": "PSGC-Q2_2024",
+      "source_url": "https://classification.psa.gov.ph/psgc/Q2_2024/all",
+      "source_release": "PSGC Q2 2024",
+      "scope": "Region III / Bulacan / City of Malolos",
+      "explanation": "Codes identify the geographic levels used in this context module; they do not represent funding or service performance."
+    }
+  ]
+}

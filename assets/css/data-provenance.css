@@ -1,0 +1,21 @@
+.data-provenance-note {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 16px 18px;
+  border-left: 4px solid var(--color-primary, #1a5f2a);
+  border-radius: 8px;
+  background: #f4f8f4;
+  color: var(--color-text, #253238);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.data-provenance-note strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.data-provenance-note a {
+  color: var(--color-primary, #1a5f2a);
+  font-weight: 600;
+}

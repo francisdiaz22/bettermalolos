@@ -79,6 +79,8 @@
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/transparency-v2.css" />
+    <link rel="stylesheet" href="../assets/css/data-provenance.css" />
+    <link rel="stylesheet" href="../assets/css/national-budget-context.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="budget-skip-to-main-content"
@@ -328,6 +330,19 @@
           </div>
         </div>
       </section>
+      <aside class="container data-provenance-note" aria-label="Data sources and freshness">
+        <strong><i class="bi bi-info-circle" aria-hidden="true"></i> Data sources and freshness</strong>
+        City Government financial reports and local records remain the authority for Malolos
+        finances. National or partner data is shown separately as context only after review, with
+        its source, scope, release, and retrieval date. A source outage must never erase the last
+        approved snapshot.
+        <a
+          href="https://github.com/francisdiaz22/bettermalolos/blob/main/docs/plans/bettergov-api-integration-roadmap.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Read the data integration roadmap</a
+        >.
+      </aside>
       <section class="sre-section-v2 animate-on-scroll">
         <div class="container">
           <div class="sre-header-v2">
@@ -621,6 +636,32 @@
             >
           </p>
         </div>
+      </section>
+
+      <section
+        class="national-budget-context container animate-on-scroll"
+        data-national-budget-context
+        data-snapshot="../data/bettergov/budget-sample.json"
+        data-local-preview="true"
+        aria-labelledby="national-budget-context-title"
+      >
+        <div class="infra-header-v5">
+          <span class="infra-label-v5"
+            ><i class="bi bi-bank2"></i> National funding context</span
+          >
+          <h2 id="national-budget-context-title">National funding context</h2>
+          <p class="budget-context-intro">
+            Selected national programs that may affect Malolos residents, shown separately from
+            City Government revenues, expenditures, and appropriations. GAA means enacted General
+            Appropriations Act; NEP means proposed National Expenditure Program. These allocations
+            may cover a department or district and are not necessarily exclusive to Malolos.
+          </p>
+        </div>
+        <div class="budget-context-status" data-budget-status role="status">
+          <strong>Loading national funding context.</strong> Checking the last approved snapshot…
+        </div>
+        <div data-budget-results></div>
+        <p class="budget-context-metadata" data-budget-metadata></p>
       </section>
 
       <section class="infra-section-v5 animate-on-scroll">
@@ -1068,5 +1109,6 @@
     <script defer src="../assets/js/transparency-v2.js"></script>
     <script defer src="../assets/js/dpwh-projects.js"></script>
     <script defer src="../assets/js/dpwh-projects-2026.js"></script>
+    <script defer src="../assets/js/national-budget-context.js?v=20260921-phase3"></script>
   </body>
 </html>

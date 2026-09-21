@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "budget-sample-20260921124838",
+  "source_name": "Philippine Budget Data API",
+  "source_url": "https://budget.bettergov.ph/api/v1/gaa/search",
+  "parameters": {
+    "q": "flood control",
+    "year": 2026,
+    "limit": 5
+  },
+  "retrieved_at": "2026-09-21T12:48:38.294Z",
+  "source_release": "FY 2026 GAA",
+  "scope_note": "National-government context; not an LGU Malolos appropriation.",
+  "review_status": "pending-review",
+  "checksum_sha256": "23faf26ae193d7c8a88e13d8b0efb6070de2dc29116a73d83ad2d5b84c26d5ec",
+  "data": [
+    {
+      "id": "fixture-flood-control-1",
+      "program": "Flood Control and Drainage Infrastructure",
+      "department": "Department of Public Works and Highways",
+      "amount": 1250000000,
+      "year": 2026,
+      "stage": "GAA"
+    },
+    {
+      "id": "fixture-school-building-1",
+      "program": "Basic Education Facilities",
+      "department": "Department of Education",
+      "amount": 875000000,
+      "year": 2026,
+      "stage": "GAA"
+    }
+  ]
+}
