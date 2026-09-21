@@ -89,6 +89,7 @@ const header = `    <header class="site-header">
                 >Get Involved</a
               >
               <ul class="dropdown-menu dropdown-menu--end">
+                <li><a href="/community-wishlist/">Malolos Community Wishlist</a></li>
                 <li><a href="/ideas/" data-i18n="nav-suggest-idea">Suggest an Idea</a></li>
                 <li><a href="mailto:info@bettermalolos.org" data-i18n="nav-volunteer">Volunteer</a></li>
                 <li><a href="/ideas/?submissionType=source#idea-form" data-i18n="nav-share-source">Share Data or a Source</a></li>

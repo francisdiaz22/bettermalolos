@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS wishlist_items (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  public_id VARCHAR(24) NOT NULL,
+  slug VARCHAR(180) NOT NULL,
+  title VARCHAR(180) NOT NULL,
+  description TEXT NOT NULL,
+  category_id BIGINT UNSIGNED NOT NULL,
+  barangay VARCHAR(120) NOT NULL DEFAULT 'Whole City',
+  location_description VARCHAR(255) NULL,
+  beneficiary VARCHAR(255) NULL,
+  impact_statement TEXT NULL,
+  status VARCHAR(40) NOT NULL DEFAULT 'pending_review',
+  support_count INT UNSIGNED NOT NULL DEFAULT 0,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  published_at DATETIME(3) NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_wishlist_items_public_id (public_id),
+  UNIQUE KEY uq_wishlist_items_slug (slug),
+  KEY ix_wishlist_items_public_listing (status, category_id, barangay, support_count, created_at),
+  CONSTRAINT fk_wishlist_items_category FOREIGN KEY (category_id) REFERENCES wishlist_categories (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

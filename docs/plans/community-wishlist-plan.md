@@ -2,7 +2,97 @@
 
 ## Implementation Plan
 
-The **BetterMalolos Community Wishlist** is a positive civic participation feature where Maloleños can propose constructive ideas for improving the city, support ideas from other residents, and help surface community priorities that can eventually be formally forwarded to the Malolos City Government and relevant barangay offices.
+The **Malolos Community Wishlist**, facilitated by BetterMalolos, is a positive civic-participation feature where Maloleños can propose constructive ideas for improving their city, support ideas from other residents, and help surface priorities that can be formally presented to the Malolos City Government and relevant barangay offices.
+
+## Feature-branch status
+
+This branch has completed the static prototype, governance documentation, and
+the source-level MariaDB/read-API foundation. It has not deployed the Wishlist
+schema or implemented public submissions, accounts, support, or moderation.
+
+Completed on the feature branch:
+
+- distinct `/community-wishlist/` public route, separate from `/ideas/`;
+- responsive read-only prototype using `/data/community-wishlist.json`;
+- category, barangay, and popularity/newest filters;
+- prototype summary counts and resident-led/LGU disclaimer copy;
+- Wishlist CSS and JavaScript assets;
+- governance, moderation, privacy, methodology, lifecycle, LGU handoff, and
+  operations/retention documents under `docs/community-wishlist/`;
+- self-hosting and Hostinger integration decisions documented in this plan.
+- additive, checksum-ledgered MariaDB migrations, a read-only Wishlist
+  repository/API, and a frontend API fallback;
+
+Still to implement:
+
+- production migration rehearsal, backup verification, and deployment of the
+  MySQL-backed Wishlist persistence and API;
+- passwordless accounts, support, moderation, and resident account flows;
+- production API-backed frontend, detail pages, and deployment verification.
+
+Your Priorities is an inspiration reference only. We are building a focused,
+BetterMalolos-owned Wishlist with a custom mobile-first interface and a
+MySQL-compatible backend. We may adopt useful interaction patterns—idea-first
+participation, constructive debate, support signals, lifecycle stages,
+moderation, and transparent reporting—but we will not copy its code, branding,
+database requirements, or visual design.
+
+## Architecture and infrastructure boundary
+
+The Wishlist is a separate application boundary from Bantay Baha, designed
+for the current Hostinger infrastructure:
+
+```text
+bettermalolos.org/community-wishlist/
+    └── BetterMalolos landing page and custom Wishlist frontend
+         └── api.bettermalolos.org
+              └── separate Wishlist routes/services
+                   └── namespaced wishlist_* tables in Hostinger MySQL/MariaDB
+
+api.bettermalolos.org
+    └── Bantay Baha routes/services and existing tables
+```
+
+The public site and API remain separately deployable. Wishlist tables must be
+namespaced, migrations must be additive, and Wishlist data must never reuse or
+alter Bantay Baha tables. PostgreSQL, Redis, managed services, and an external
+Your Priorities deployment are out of scope.
+
+## Inspiration boundary
+
+| Inspired pattern | BetterMalolos implementation |
+| --- | --- |
+| Idea-first civic participation | Constructive Malolos improvement proposals, separate from `/ideas/` product feedback |
+| Support and prioritization | Verified-account support with transparent counts and published methodology |
+| Constructive debate | Optional pro/con points with strict moderation; no attack threads |
+| Lifecycle/status stages | Canonical statuses defined in this plan and `docs/community-wishlist/status-lifecycle.md` |
+| Community moderation | Pre-publication review, moderation audit trail, and resident-facing explanations |
+| Project/community organization | Categories, barangay context, and city-wide/local views designed for Malolos |
+
+Do not copy Your Priorities branding, UI assets, source code, or user data. The
+final implementation must feel native to BetterMalolos and clearly state that
+it is resident-led and not an LGU system.
+
+## MySQL-only implementation spike
+
+Before enabling public submissions:
+
+1. Define the minimal Wishlist schema and API boundary without modifying
+   Bantay Baha tables.
+2. Verify Hostinger MySQL version, database quota, Node application limits,
+   cron behavior, SMTP, and persistent-storage behavior.
+3. Implement MySQL-backed sessions and a leased job table for bounded Cron
+   maintenance; do not introduce Redis or PostgreSQL dependencies.
+4. Test submission, moderation, support, status transitions, account deletion,
+   retention, backups, restore, and quota behavior.
+5. Link the public submission flow only after the Phase 0 launch and privacy
+   gates pass.
+
+The prototype must remain read-only until the Phase 0 launch authority and
+privacy gates are complete.
+
+
+It is a community platform about Malolos—not a product-feedback channel for BetterMalolos.org. BetterMalolos operates the platform independently unless and until a written partnership says otherwise. It must never imply City endorsement, authority, funding, or approval before that exists.
 
 The goal is not to build another complaint board.
 
@@ -47,6 +137,13 @@ Residents should be able to:
 - see official responses when available
 - celebrate ideas that eventually become real improvements
 
+City and barangay officers should be able to:
+
+- see a concise, constructive, evidence-backed view of priorities relevant to their office
+- understand the methodology, moderation rules, and limits behind each reported number
+- verify the formal handoff record and respond through a documented channel
+- distinguish resident support from an election, petition, procurement request, or official City commitment
+
 Examples of suitable wishlist ideas:
 
 - More shaded waiting sheds near schools
@@ -80,9 +177,17 @@ The Community Wishlist should remain:
 
 The feature should avoid turning into a social network or public complaint board.
 
+It should make it easy for public servants to engage without creating an informal back channel: BetterMalolos records the office, method, date, reference, source document, and verified response for every formal handoff.
+
 A useful moderation principle is:
 
 > **Ideas, not attacks. Improvements, not accusations.**
+
+## Legal and privacy posture
+
+This is a product and operations plan, not legal advice. Before accepting public submissions, BetterMalolos should obtain Philippine legal/privacy review of the public terms, privacy notice, moderation policy, retention schedule, and incident-response process.
+
+The plan is designed to support the data-minimization and transparency principles in the [Data Privacy Act of 2012 (R.A. 10173)](https://privacy.gov.ph/data-privacy-act/). It should also use strict pre-publication moderation because Section 4(c)(4) of the [Cybercrime Prevention Act of 2012 (R.A. 10175)](https://lawphil.net/statutes/repacts/ra2012/ra_10175_2012.html) covers libel committed through a computer system. The [Local Government Code of 1991 (R.A. 7160)](https://lawphil.net/statutes/repacts/ra1991/ra_7160_1991.html) recognizes roles and linkages for people's and non-governmental organizations; it is context for constructive engagement, not a claim that the City has endorsed or partnered with this platform.
 
 ---
 
@@ -114,9 +219,13 @@ Not every idea must reach every stage.
 
 BetterMalolos must also avoid implying that forwarding an idea to the LGU means the idea has been officially approved.
 
+Use one canonical status vocabulary in the database and API. The initial states are `pending_review`, `published`, `gathering_support`, `community_priority`, `prepared_for_lgu`, `forwarded_to_lgu`, `lgu_acknowledged`, `under_consideration`, `planned`, `implemented`, `not_pursued`, `rejected`, `archived`, and `duplicate`. `not_pursued` requires evidence and an explanatory public note; `archived` is only for duplicate, stale, or withdrawn wishes. Public labels may be friendlier, but the status key must not vary between the form, API, timeline, or moderation console.
+
 ---
 
-# Phase 0: Governance and Rules
+# Phase 0: Governance, Officer Engagement, and Launch Authority
+
+**Status: engineering preparation complete; operational launch gate pending.**
 
 Before writing the backend, define the rules of the platform.
 
@@ -127,7 +236,10 @@ docs/community-wishlist/
 ├── README.md
 ├── moderation-policy.md
 ├── status-lifecycle.md
-└── privacy-model.md
+├── privacy-model.md
+├── methodology.md
+├── lgu-handoff.md
+└── operations-and-retention.md
 ```
 
 ## Define acceptable submissions
@@ -169,17 +281,42 @@ Before implementation begins, define:
 - what information becomes public
 - how BetterMalolos describes its relationship with the LGU
 - how moderation decisions are handled
+- the named platform owner, at least two moderators, an escalation contact, and the target review turnaround
+- the published methodology for supporter counts, barangay representation, duplicates, and Community Priority designation
+- the formal handoff protocol: intended LGU office, acceptable delivery methods, evidence retained, and who may record a response
+- an explicit disclaimer that the platform is resident-led and that a status is not an LGU commitment without a verifiable source
+- retention and deletion periods for contact data, abuse-prevention data, rejected submissions, and moderation records
+- the 48-business-hour review target, with plain wording that it is a target rather than a guarantee
+- that the private operational inbox for account and moderation messages, its SMTP credentials, and destination configuration live only in Hostinger environment variables, never in Git or public client code
+
+## Required privacy notice and consent
+
+Every account-registration and wish-submission screen must show a concise, linked privacy notice before personal data is sent. The notice states the data collected, purpose, recipients, retention, account rights/contact channel, and that the City receives only aggregate anonymous results unless a separate, explicit consent or lawful requirement applies.
+
+Submission requires an unchecked affirmative checkbox: “I have read and agree to the Privacy Policy and understand that my submission will be reviewed before publication.” The API stores the policy version, consent timestamp, and consent wording version with the submission. Do not precheck it or treat account creation as blanket consent for unrelated use.
+
+Collect only the email needed to verify and operate an account, an optional display name, an optional barangay, and the content needed for the wish. Do not collect full physical addresses, phone numbers, government IDs, precise map pins, demographic profiles, or sensitive personal information. Email addresses, account records, and raw submission contact data are never shared with LGU offices; reports use aggregate, anonymous figures only.
+
+## Officer engagement before public launch
+
+Before accepting public submissions, invite a small set of relevant City and barangay offices to a non-binding orientation. The purpose is to show the workflow, identify the correct receiving office for common categories, and agree on a reliable public contact channel. This is not approval for BetterMalolos to speak for the City.
+
+Record only verifiable outcomes: a published office contact, a written acknowledgement, meeting minutes, or an official correspondence reference. Do not label an office as a partner, participant, or responder solely because an individual viewed, liked, or informally discussed an idea.
 
 ---
 
-# Phase 1: Convert `/ideas/` Into the Wishlist Prototype
+# Phase 1: Create a Distinct City Wishlist Prototype
 
-Use the existing BetterMalolos ideas area instead of creating an entirely separate application.
+**Status: complete as a read-only static prototype.**
+
+Keep `/ideas/` as the existing BetterMalolos.org channel for product feedback, sources, volunteer offers, and proposed BetterMalolos tools. Do not mix those submissions with City improvement proposals.
+
+Create a distinct, prominently linked public area for the resident-led City Wishlist. Cross-link the two areas with plain-language explanations of their different purposes.
 
 Recommended public path:
 
 ```text
-/ideas/
+/community-wishlist/
 ```
 
 ## Hero Section
@@ -187,12 +324,12 @@ Recommended public path:
 Example:
 
 ```text
-Community Wishlist
+Malolos Community Wishlist
 
 What would make Malolos better?
 
-Discover ideas from fellow Maloleños, support the ones
-you believe in, or suggest something new.
+Residents' constructive ideas for a better Malolos.
+Explore community priorities, support an idea, or propose one.
 
 [ Suggest an Idea ]   [ Explore Ideas ]
 ```
@@ -287,13 +424,35 @@ The prototype should support:
 - idea details
 - zero backend dependency
 
+The current implementation satisfies this phase with:
+
+```text
+community-wishlist/index.html
+assets/css/community-wishlist.css
+assets/js/community-wishlist.js
+data/community-wishlist.json
+```
+
+It intentionally does not provide public submission, support, authentication,
+moderation, detail routes, or database-backed counts yet.
+
 ---
 
-# Phase 2: MariaDB Foundation
+# Phase 2: Shared MariaDB and Deployment Foundation
 
-Introduce persistence only after the frontend experience is clear.
+**Status: foundation migration, repository, read API, and frontend API fallback implemented; deployment pending.**
 
-The existing Node/Fastify backend can be extended instead of creating a new service.
+Implement the custom Wishlist backend as a separate module boundary within the
+existing BetterMalolos Node Web App/API, using namespaced tables in the
+existing Hostinger MariaDB database. Your Priorities is inspiration only and
+must not be added as a runtime dependency or source checkout.
+
+The existing Hostinger MariaDB database and Node app are already used by Bantay Baha. Wishlist work must be additive and independently reversible: no replacement SQL dump, no reuse of Bantay Baha tables, and no assumption that a health endpoint proves Wishlist migrations exist. Before writing a migration, reconcile the deployed Node revision with this repository, take a verified database backup, document quota headroom, and test the exact migration on a disposable MariaDB copy.
+
+Wishlist routes/services must remain isolated from the existing Bantay Baha
+routes/services. Keep migrations, repositories, authentication, moderation,
+and maintenance code in the Wishlist module; do not alter Bantay Baha tables
+or its existing contracts.
 
 Recommended structure:
 
@@ -325,6 +484,11 @@ wishlist_support
 wishlist_categories
 wishlist_status_history
 wishlist_moderation
+wishlist_submission_contact
+wishlist_lgu_handoff
+wishlist_account
+wishlist_magic_link
+wishlist_session
 ```
 
 ---
@@ -350,12 +514,12 @@ beneficiary
 impact_statement
 status
 support_count
-submitted_name
-submitted_email
 created_at
 updated_at
 published_at
 ```
+
+Do not store submitter names or email addresses in `wishlist_items`, which is the broadly queried content table. Store optional name and required moderation contact in `wishlist_submission_contact`, with a one-to-one foreign key, encrypted-at-rest support where Hostinger provides it, access limited to moderators, and a documented retention/deletion job.
 
 Use a public-facing ID separate from the database primary key.
 
@@ -409,12 +573,25 @@ Suggested fields:
 ```text
 id
 wishlist_id
-supporter_hash
-barangay
+account_id
 created_at
 ```
 
-Accounts should not be required for supporting an idea.
+Verified accounts are required for submissions and support in the first public release. They use passwordless magic links; no password is collected, stored, or reset. Enforce `UNIQUE (wishlist_id, account_id)` so one verified account supports a wish once. Rate limiting and Turnstile remain required because account creation alone does not prevent abuse.
+
+## `wishlist_account`, `wishlist_magic_link`, and `wishlist_session`
+
+Store the smallest viable account record: opaque account ID, verified email, optional display name, optional barangay, public-identity preference, consent version/timestamp, created/verified/deleted timestamps, and account state. Store only a hash of each single-use magic-link token, its expiry, a short-lived salted abuse-prevention signal where needed, and its consumed/revoked timestamps. Expire unverified accounts and unused links after 24 hours; do not log tokens, email addresses, magic-link URLs, or raw IP addresses. Retain account contact data only while the account is active and for no more than 90 days after deletion or final resolution, unless a documented legal preservation obligation applies.
+
+Public identity is opt-in per wish and per support. The default is anonymous. A user who opts in may expose only their chosen display name—never email, barangay, account ID, or support history.
+
+Never publish account IDs, email addresses, private barangay information, or support history. Any short-lived abuse-prevention signal must be access-controlled, rotated, and kept separate from public data.
+
+## Resident account area
+
+Provide an authenticated `/community-wishlist/account/` area from the first public-write release. It lets a resident view their own submitted wishes, current public lifecycle status, public timeline entries, private receipt/reference ID, and wishes they have supported. It does not reveal internal moderator notes, reporter details, abuse-prevention data, unapproved edits, or another resident's activity.
+
+For a pending, rejected, duplicate, archived, or `not_pursued` wish, show a plain-language resident-facing explanation where one is safe to share. Do not expose names of reviewers, internal deliberations, legal-risk assessments, or details about another person's submission. The account area is the primary place for a resident to check status; email notifications remain limited to account verification, submission receipt, and material status changes.
 
 ---
 
@@ -477,6 +654,8 @@ This provides accountability for moderation decisions.
 ---
 
 # Phase 3: Read-Only API
+
+**Status: read-only API implemented and covered by Node tests; MariaDB deployment pending.**
 
 Before enabling public submissions, expose the MariaDB content through a read-only API.
 
@@ -549,6 +728,8 @@ No public write operations yet.
 
 # Phase 4: Suggest an Idea
 
+**Status: not started; depends on Phase 0 launch authority and Phases 2–3.**
+
 Introduce the first write endpoint.
 
 ```text
@@ -590,22 +771,24 @@ Why would this improve the community?
 [ ................................. ]
 ```
 
-### Step 3: Contact
+### Step 3: Verified account and consent
 
 ```text
-Your name            Optional
-Email                Required, not public
+Sign in with your verified email
+Display name         Optional, not public by default
 
-☑ I understand that submissions are reviewed before
-  appearing publicly.
+☐ I have read and agree to the Privacy Policy and understand
+  that my submission will be reviewed before publication.
 ```
 
-The email can be used for:
+The verified email can be used for:
 
 - moderation questions
 - duplicate resolution
 - notifying the submitter
 - reducing abuse
+
+Send a non-sensitive receipt containing the public Wish ID to the verified email. The email must not contain unpublished content or a login token.
 
 ## Moderation First
 
@@ -630,6 +813,8 @@ Never auto-publish submissions during the first release.
 
 # Phase 5: Moderation Console
 
+**Status: not started; no public admin route exists on this branch.**
+
 Extend the existing BetterMalolos admin area.
 
 Recommended route:
@@ -646,6 +831,8 @@ Published
 Rejected
 Archived
 ```
+
+Moderation access is a distinct, least-privilege role. New moderators first express interest through the private operational inbox, are reviewed by the primary moderator, accept the moderation/privacy rules, and then receive only the in-app permissions needed to review content. They never receive Hostinger, database, deployment, SMTP, or source-control credentials. Every moderation action is audit logged and access can be revoked immediately.
 
 Example moderation card:
 
@@ -677,6 +864,10 @@ Insufficient information
 Other
 ```
 
+## Anti-defamation moderation rule
+
+The platform publishes proposals about services, infrastructure, places, and policies—not allegations about people. Reject or require a rewrite for names of private individuals, unverified accusations, attacks on public officials or employees, claims of criminality/corruption, calls to remove a named person, doxxing, or content that could reasonably identify a person through context. Direct emergencies and crime reports to the appropriate official channels rather than publishing them. Preserve the original privately only under the 90-day retention rule and do not republish it in a public explanation.
+
 ## Editorial Moderation
 
 Moderators may improve wording for clarity without changing the intent.
@@ -698,6 +889,8 @@ The original submission should remain available privately for auditability.
 ---
 
 # Phase 6: Community Support
+
+**Status: not started.**
 
 Introduce:
 
@@ -801,13 +994,13 @@ Each idea should have its own page.
 Preferred future format:
 
 ```text
-/ideas/more-shaded-waiting-sheds-near-bsu/
+/community-wishlist/more-shaded-waiting-sheds-near-bsu/
 ```
 
 Simpler initial format:
 
 ```text
-/ideas/view/?id=BM-I-000142
+/community-wishlist/view/?id=BM-I-000142
 ```
 
 Example detail page:
@@ -941,9 +1134,9 @@ Once enough data exists, introduce barangay-specific pages.
 Example routes:
 
 ```text
-/ideas/barangay/tikay/
-/ideas/barangay/longos/
-/ideas/barangay/guinhawa/
+/community-wishlist/barangay/tikay/
+/community-wishlist/barangay/longos/
+/community-wishlist/barangay/guinhawa/
 ```
 
 Example page:
@@ -1119,7 +1312,7 @@ Create a positive archive of implemented ideas.
 Recommended route:
 
 ```text
-/ideas/success/
+/community-wishlist/success/
 ```
 
 Example:
@@ -1255,17 +1448,24 @@ without maintaining traditional passwords.
 
 ---
 
-# Proposed Repository Structure
+# Target Repository Structure
+
+The following is the target structure after the backend phases are
+implemented. The current branch has only the static prototype and governance
+documents; do not create the future directories prematurely.
 
 ```text
 bettermalolos/
 │
-├── ideas/
+├── community-wishlist/
 │   ├── index.html
 │   ├── submit/
 │   │   └── index.html
 │   └── view/
 │       └── index.html
+│
+├── ideas/                         # BetterMalolos.org feedback and tool ideas
+│   └── index.html
 │
 ├── admin/
 │   └── wishlist/
@@ -1273,31 +1473,15 @@ bettermalolos/
 │
 ├── assets/
 │   ├── css/
-│   │   └── community-wishlist.css
-│   │
+│   │   └── community-wishlist.css       # exists in prototype
 │   └── js/
-│       └── wishlist/
-│           ├── api.js
-│           ├── list.js
-│           ├── detail.js
-│           ├── submit.js
-│           ├── support.js
-│           └── filters.js
+│       └── community-wishlist.js        # exists; static-data reader today
 │
 ├── bantay_baha_node/
 │   └── src/
-│       ├── db/
-│       │   ├── pool.js
-│       │   └── migrations/
-│       │
-│       └── modules/
-│           └── wishlist/
-│               ├── wishlist.routes.js
-│               ├── wishlist.controller.js
-│               ├── wishlist.service.js
-│               ├── wishlist.repository.js
-│               ├── wishlist.schema.js
-│               └── wishlist.constants.js
+│       ├── auth/                      # target shared account/session layer
+│       ├── routes/wishlist.js         # target route registration
+│       └── modules/wishlist/           # target Wishlist module
 │
 ├── tests/
 │   └── wishlist/
@@ -1308,12 +1492,13 @@ bettermalolos/
 │
 └── docs/
     └── community-wishlist/
-        ├── README.md
-        ├── architecture.md
-        ├── moderation-policy.md
-        ├── privacy-model.md
-        ├── status-lifecycle.md
-        └── lgu-handoff.md
+        ├── README.md                  # exists
+        ├── privacy-model.md           # exists
+        ├── moderation-policy.md       # exists
+        ├── status-lifecycle.md       # exists
+        ├── methodology.md             # exists
+        ├── lgu-handoff.md             # exists
+        └── operations-and-retention.md # exists
 ```
 
 The backend directory can eventually be renamed once it clearly supports more than Bantay Baha.
@@ -1322,32 +1507,33 @@ That refactor should not be part of the initial Community Wishlist work.
 
 ---
 
-# Proposed Public API
+# Target Public API
 
 Keep the public API small.
 
 ```text
-GET    /api/v1/wishlist
-GET    /api/v1/wishlist/stats
-GET    /api/v1/wishlist/categories
-GET    /api/v1/wishlist/:id
+GET    /v1/wishlist
+GET    /v1/wishlist/stats
+GET    /v1/wishlist/categories
+GET    /v1/wishlist/:publicIdOrSlug
 
-POST   /api/v1/wishlist
-POST   /api/v1/wishlist/:id/support
-DELETE /api/v1/wishlist/:id/support
+POST   /v1/wishlist
+POST   /v1/wishlist/:publicId/support
+DELETE /v1/wishlist/:publicId/support
 ```
 
 Administrative API:
 
 ```text
-GET    /api/v1/admin/wishlist
-PATCH  /api/v1/admin/wishlist/:id
-POST   /api/v1/admin/wishlist/:id/publish
-POST   /api/v1/admin/wishlist/:id/reject
-POST   /api/v1/admin/wishlist/:id/status
+GET    /v1/wishlist/moderation/queue
+GET    /v1/wishlist/moderation/:publicId
+PATCH  /v1/wishlist/moderation/:publicId
+POST   /v1/wishlist/moderation/:publicId/status
 ```
 
 Avoid exposing generic public update endpoints.
+
+Administrative routes are not an extension of the static `admin/` directory. Define and implement a real server-side authentication and authorization boundary before exposing them; until then, moderation remains an internal operational workflow and no admin route is deployed publicly.
 
 ---
 
@@ -1363,17 +1549,20 @@ Initial migrations:
 003_create_wishlist_support.sql
 004_create_wishlist_status_history.sql
 005_create_wishlist_moderation.sql
+006_create_wishlist_submission_contact.sql
+007_create_wishlist_lgu_handoff.sql
 ```
 
 Future migrations:
 
 ```text
-006_add_lgu_handoff.sql
-007_add_notification_subscriptions.sql
-008_add_support_context.sql
+008_add_notification_subscriptions.sql
+009_add_support_context.sql
 ```
 
 This makes deployments easier to reproduce and keeps the open-source repository easier to understand.
+
+Use a migration ledger separate from Bantay Baha's Alembic version table (for example, `wishlist_schema_migration`). Every production migration requires: a timestamped backup, a disposable-database rehearsal, an explicit forward verification query, a documented rollback or compensating migration, and a post-deploy check against the running Wishlist API. Do not treat the existing Bantay Baha `/readiness` result as evidence that Wishlist tables are present.
 
 ---
 
@@ -1390,10 +1579,13 @@ The feature should include:
 - HTML escaping
 - CSRF protection where relevant
 - admin authentication
+- verified-email passwordless authentication, single-use token hashing, session revocation, and account-deletion handling
 - moderation audit logs
 - upload validation if images are later supported
 - private handling of email addresses
 - limited retention of unnecessary identifying information
+- a verified, server-side Turnstile (or equivalent) decision before public writes are accepted
+- a separate moderator role from deployment/database credentials
 
 Avoid exposing private submission metadata publicly.
 
@@ -1411,6 +1603,8 @@ Test:
 - empty states
 - detail pages
 - submission form
+- registration, magic-link expiry, verified-session recovery, default anonymity, and explicit public-identity opt-in
+- resident account visibility: own wish status and public timeline only; no internal notes or another person's activity
 - validation
 - support interaction
 - responsive behavior
@@ -1429,6 +1623,7 @@ Test:
 - status transitions
 - malformed requests
 - authorization
+- account verification, session expiry/revocation, one-support-per-account enforcement, and consent-version recording
 
 ## Database
 
@@ -1474,7 +1669,6 @@ Admin marks idea forwarded to LGU
 Do not include the following in the first implementation:
 
 ```text
-❌ User accounts
 ❌ Public comments
 ❌ AI chatbot
 ❌ AI moderation
@@ -1497,26 +1691,27 @@ BetterMalolos should remain lightweight and easy to host and maintain.
 
 # Implementation Milestones
 
-| Milestone | Deliverable | Ship? |
-|---|---|---|
-| M0 | Governance and moderation rules | Internal |
-| M1 | Static Wishlist redesign under `/ideas/` | Yes |
-| M2 | MariaDB schema and migrations | Internal |
-| M3 | Read-only Fastify API | Internal |
-| M4 | Production DB-backed idea browsing | Yes |
-| M5 | Idea submission and moderation | Yes |
-| M6 | Community Support | Yes |
-| M7 | Idea details, map and timeline | Yes |
-| M8 | Duplicate detection | Yes |
-| M9 | Community Priority designation | Yes |
-| M10 | Barangay and category insights | Yes |
-| M11 | LGU forwarding workflow | Yes |
-| M12 | Quarterly Wishlist Report | Major Launch |
-| M13 | Verified LGU responses | Later |
-| M14 | Success stories | Later |
-| M15 | Analytics | Later |
-| M16 | Notifications | Later |
-| M17 | Optional user identity | Much Later |
+| Milestone | Deliverable                                                                                         | Branch status | Ship?        |
+| --------- | --------------------------------------------------------------------------------------------------- | ------------- | ------------ |
+| M0        | Governance and moderation rules                                                                     | Docs and launch register prepared; operational sign-off pending | Internal     |
+| M1        | Static City Wishlist prototype under `/community-wishlist/`; `/ideas/` stays BetterMalolos feedback | Complete      | Yes          |
+| M2        | MariaDB schema and migrations                                                                       | Implemented; deployment rehearsal pending | Internal     |
+| M3        | Read-only Fastify API                                                                               | Implemented; MariaDB deployment pending | Internal     |
+| M3A       | Verified-email passwordless accounts, mail delivery, sessions, and account privacy controls         | Not started   | Internal     |
+| M4        | Production DB-backed idea browsing                                                                  | Not started   | Yes          |
+| M5        | Authenticated idea submission and moderation                                                        | Not started   | Yes          |
+| M6        | Verified-account Community Support                                                                  | Not started   | Yes          |
+| M7        | Idea details, map and timeline                                                                      | Not started   | Yes          |
+| M8        | Duplicate detection                                                                                 | Not started   | Yes          |
+| M9        | Community Priority designation                                                                      | Not started   | Yes          |
+| M10       | Barangay and category insights                                                                      | Not started   | Yes          |
+| M11       | LGU forwarding workflow                                                                             | Not started   | Yes          |
+| M12       | Quarterly Wishlist Report                                                                           | Not started   | Major Launch |
+| M13       | Verified LGU responses                                                                              | Not started   | Later        |
+| M14       | Success stories                                                                                     | Not started   | Later        |
+| M15       | Analytics                                                                                           | Not started   | Later        |
+| M16       | Notifications                                                                                       | Not started   | Later        |
+| M17       | Optional identity features beyond the privacy-first account                                         | Not started   | Much Later   |
 
 ---
 
@@ -1529,6 +1724,8 @@ The MVP is:
 ```text
 Browse Ideas
 +
+Passwordless Accounts
++
 Submit Idea
 +
 Moderation
@@ -1537,6 +1734,23 @@ Support Idea
 +
 MariaDB
 ```
+
+## MVP launch gate
+
+M6 may be released only when all of the following are demonstrably complete:
+
+- Phase 0 documents are published and linked from the Wishlist.
+- The live route, API version, database migration ledger, and deployed source revision are reconciled.
+- A backup and disposable-MariaDB restore/migration rehearsal have succeeded.
+- The public API exposes only published data; pending content, contact details, moderation notes, fingerprints, and precise sensitive locations cannot be retrieved.
+- Submission, support, CAPTCHA verification, rate limiting, duplicate prevention, moderation, and status-transition tests pass against MariaDB.
+- Passwordless email delivery works from Hostinger using a private operational inbox; magic links are single-use, expire after 24 hours, and are not logged.
+- Residents can view the status of their own wishes and supports through the account area without exposing private moderation data or another resident's activity.
+- The privacy notice, unchecked consent checkbox, consent-version audit record, 90-day retention/deletion workflow, and account-data access/deletion contact process have been manually tested.
+- Moderation tests reject personal accusations, identifying information, and other content that violates the issues-not-people policy before anything is published.
+- Moderators have an authenticated operational path, an escalation contact, and a documented service level.
+- A pilot has been reviewed with representative residents and at least the intended receiving LGU/barangay office contacts.
+- The first handoff report has a methodology, accountable sender, target office, delivery record, and public wording that does not overstate LGU participation.
 
 This is enough to validate actual community interest before investing heavily in additional features.
 

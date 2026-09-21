@@ -1,0 +1,82 @@
+[
+  {
+    "id": "BM-I-001",
+    "title": "More shaded waiting areas near schools",
+    "description": "Plant shade trees and add covered waiting areas along busy school routes so students, commuters, and parents can wait more safely and comfortably.",
+    "category": "public-spaces",
+    "barangay": "Whole City",
+    "supportCount": 87,
+    "status": "gathering_support",
+    "submitted": "2026-09-02"
+  },
+  {
+    "id": "BM-I-002",
+    "title": "Safer pedestrian crossings near public markets",
+    "description": "Improve crosswalk markings, lighting, and pedestrian visibility near busy market approaches.",
+    "category": "transport-mobility",
+    "barangay": "Santo Rosario",
+    "supportCount": 64,
+    "status": "gathering_support",
+    "submitted": "2026-09-09"
+  },
+  {
+    "id": "BM-I-003",
+    "title": "More trees and pocket parks",
+    "description": "Identify small public spaces where additional trees, seating, and low-maintenance greenery could benefit nearby residents.",
+    "category": "environment",
+    "barangay": "San Gabriel",
+    "supportCount": 52,
+    "status": "published",
+    "submitted": "2026-08-18"
+  },
+  {
+    "id": "BM-I-004",
+    "title": "Public bike racks near civic destinations",
+    "description": "Install secure bicycle parking near public offices, schools, markets, and other frequently visited destinations.",
+    "category": "transport-mobility",
+    "barangay": "Dakila",
+    "supportCount": 41,
+    "status": "published",
+    "submitted": "2026-08-26"
+  },
+  {
+    "id": "BM-I-005",
+    "title": "Improve accessibility at public facilities",
+    "description": "Make entrances, paths, signs, and waiting areas easier to use for senior citizens and persons with disabilities.",
+    "category": "accessibility",
+    "barangay": "Whole City",
+    "supportCount": 39,
+    "status": "published",
+    "submitted": "2026-08-11"
+  },
+  {
+    "id": "BM-I-006",
+    "title": "Weekend community markets",
+    "description": "Create regular weekend spaces where local growers, makers, and small businesses can meet residents.",
+    "category": "livelihood",
+    "barangay": "Atlag",
+    "supportCount": 33,
+    "status": "published",
+    "submitted": "2026-07-30"
+  },
+  {
+    "id": "BM-I-007",
+    "title": "Additional public trash bins",
+    "description": "Place clearly labeled waste bins at busy pedestrian areas and provide a simple collection and maintenance plan.",
+    "category": "environment",
+    "barangay": "Longos",
+    "supportCount": 28,
+    "status": "published",
+    "submitted": "2026-08-05"
+  },
+  {
+    "id": "BM-I-008",
+    "title": "Public Wi-Fi zones in community spaces",
+    "description": "Explore reliable, time-limited public internet access in selected libraries, plazas, and other community spaces.",
+    "category": "digital-services",
+    "barangay": "Babatnin",
+    "supportCount": 21,
+    "status": "published",
+    "submitted": "2026-07-22"
+  }
+]

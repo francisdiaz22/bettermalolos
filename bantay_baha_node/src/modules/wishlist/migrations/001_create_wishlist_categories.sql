@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS wishlist_categories (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  slug VARCHAR(80) NOT NULL,
+  name VARCHAR(120) NOT NULL,
+  icon VARCHAR(80) NULL,
+  sort_order SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_wishlist_categories_slug (slug)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

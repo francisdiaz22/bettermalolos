@@ -6,8 +6,9 @@ import { loadConfig } from "./config.js";
 import { closePool } from "./db.js";
 import { healthRoutes } from "./routes/health.js";
 import { opsRoutes } from "./routes/ops.js";
+import { wishlistRoutes } from "./modules/wishlist/wishlist.routes.js";
 
-export async function buildApp({ config = loadConfig(), logger = false, database } = {}) {
+export async function buildApp({ config = loadConfig(), logger = false, database, wishlistRepository } = {}) {
   const app = Fastify({ logger });
 
   await app.register(cors, {
@@ -16,6 +17,7 @@ export async function buildApp({ config = loadConfig(), logger = false, database
   });
   await app.register(healthRoutes, { config, database });
   await app.register(opsRoutes, { config, database });
+  await app.register(wishlistRoutes, { config, repository: wishlistRepository });
 
   app.get("/", async () => ({
     service: "bantay-baha",
