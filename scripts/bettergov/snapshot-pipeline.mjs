@@ -1,32 +1,45 @@
 #!/usr/bin/env node
 import { copyFile, mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { assertSnapshotShape, fetchJson, makeSnapshot } from './api-client.mjs';
 
 const root = resolve(new URL('../..', import.meta.url).pathname);
 const outputDir = resolve(root, 'data/bettergov');
 
-const sources = {
+export const sources = {
   'budget-sample': {
-    sourceName: 'Philippine Budget Data API',
+    sourceName: 'BetterGov Philippine Budget API',
     sourceUrl: 'https://budget.bettergov.ph/api/v1/gaa/search',
-    parameters: { q: 'flood control', year: 2026, limit: 5 },
+    parameters: { q: 'Malolos', year: 2026, limit: 25 },
     snapshotFile: 'budget-sample.json',
     fixtureFile: 'fixtures/budget-sample.json',
     validate: (payload) => {
       if (!payload?.meta || !Array.isArray(payload.data)) throw new Error('Budget response must contain meta and data');
       if (payload.meta.currency !== 'PHP' || payload.meta.scale !== 'pesos') throw new Error('Budget response must declare exact PHP pesos');
-      if (payload.data.some((row) =>
+      const year = Number(payload.meta.year ?? 2026);
+      const records = payload.data.map((row) => {
+        const sourceYear = row.years?.[String(year)];
+        return {
+          id: row.id ?? row.fam_key ?? row.name,
+          program: row.program ?? row.name,
+          department: row.department,
+          amount: row.amount ?? sourceYear?.amount,
+          year: row.year ?? year,
+          ...(row.stage || payload.meta.dataset === 'gaa' ? { stage: row.stage ?? 'GAA' } : {}),
+          ...(row.fam_key ? { source_record_id: row.fam_key } : {}),
+        };
+      });
+      if (records.some((row) =>
         typeof row.amount !== 'number' ||
-        !['GAA', 'NEP'].includes(row.stage) ||
         !Number.isInteger(row.year) ||
         typeof row.program !== 'string' ||
-        typeof row.department !== 'string'
-      )) throw new Error('Budget records must contain amount, year, stage, program, and department');
-      return payload.data;
+        (row.department !== undefined && typeof row.department !== 'string')
+      )) throw new Error('Budget records must contain amount, year, and program');
+      return records;
     },
-    sourceRelease: 'FY 2026 GAA',
-    scopeNote: 'National-government context; not an LGU Malolos appropriation.',
+    sourceRelease: 'FY 2026 BetterGov budget response',
+    scopeNote: 'BetterGov budget records returned for the Malolos search scope; verify the precise geographic and administrative scope before publication.',
     currency: 'PHP',
     unit: 'pesos',
   },
@@ -51,19 +64,27 @@ async function readJson(path) {
   return JSON.parse(await readFile(path, 'utf8'));
 }
 
-async function writeAtomically(path, value) {
-  await mkdir(dirname(path), { recursive: true });
-  const tempPath = `${path}.tmp-${process.pid}`;
-  await writeFile(tempPath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
-  await rename(tempPath, path);
+export async function saveSnapshot(outputPath, snapshot) {
+  await mkdir(dirname(outputPath), { recursive: true });
+  const tempPath = `${outputPath}.tmp-${process.pid}`;
+  await writeFile(tempPath, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+
+  // Only rotate the prior snapshot after the new snapshot has been validated
+  // and fully written. A failed refresh therefore cannot change either file.
+  try {
+    await copyFile(outputPath, `${outputPath}.previous.json`);
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  await rename(tempPath, outputPath);
 }
 
-async function collect(name, { fixture = false } = {}) {
+export async function collect(name, { fixture = false, payloadOverride, outputDirOverride } = {}) {
   const config = sources[name];
   if (!config) throw new Error(`Unknown source ${name}`);
-  const payload = fixture
+  const payload = payloadOverride ?? (fixture
     ? await readJson(resolve(root, 'scripts/bettergov', config.fixtureFile))
-    : (await fetchJson(`${config.sourceUrl}?${new URLSearchParams(config.parameters)}`)).data;
+    : (await fetchJson(`${config.sourceUrl}?${new URLSearchParams(config.parameters)}`)).data);
   const data = config.validate(payload);
   const snapshot = makeSnapshot({
     snapshotId: `${name}-${new Date().toISOString().replaceAll(/[-:.TZ]/g, '').slice(0, 14)}`,
@@ -77,22 +98,19 @@ async function collect(name, { fixture = false } = {}) {
     data,
   });
   assertSnapshotShape(snapshot);
-  const outputPath = resolve(outputDir, config.snapshotFile);
-  try {
-    await copyFile(outputPath, `${outputPath}.previous.json`);
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-  }
-  await writeAtomically(outputPath, snapshot);
+  const outputPath = resolve(outputDirOverride ?? outputDir, config.snapshotFile);
+  await saveSnapshot(outputPath, snapshot);
   console.log(`Saved ${name}: ${config.snapshotFile} (${data.length} records)`);
 }
 
-const args = new Set(process.argv.slice(2));
-const names = process.argv.slice(2).filter((arg) => !arg.startsWith('--'));
-const selected = names.length ? names : Object.keys(sources);
-try {
-  for (const name of selected) await collect(name, { fixture: args.has('--fixture') });
-} catch (error) {
-  console.error(`Snapshot rejected: ${error.message}`);
-  process.exitCode = 1;
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const args = new Set(process.argv.slice(2));
+  const names = process.argv.slice(2).filter((arg) => !arg.startsWith('--'));
+  const selected = names.length ? names : Object.keys(sources);
+  try {
+    for (const name of selected) await collect(name, { fixture: args.has('--fixture') });
+  } catch (error) {
+    console.error(`Snapshot rejected: ${error.message}`);
+    process.exitCode = 1;
+  }
 }

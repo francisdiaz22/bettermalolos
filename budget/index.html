@@ -333,9 +333,9 @@
       <aside class="container data-provenance-note" aria-label="Data sources and freshness">
         <strong><i class="bi bi-info-circle" aria-hidden="true"></i> Data sources and freshness</strong>
         City Government financial reports and local records remain the authority for Malolos
-        finances. National or partner data is shown separately as context only after review, with
-        its source, scope, release, and retrieval date. A source outage must never erase the last
-        approved snapshot.
+        finances. BetterGov data is shown separately as partner-provided Malolos budget data only
+        after review, with its source, scope, release, and retrieval date. A source outage must
+        never erase the last approved snapshot.
         <a
           href="https://github.com/francisdiaz22/bettermalolos/blob/main/docs/plans/bettergov-api-integration-roadmap.md"
           target="_blank"
@@ -640,25 +640,24 @@
 
       <section
         class="national-budget-context container animate-on-scroll"
-        data-national-budget-context
+        data-malolos-budget
         data-snapshot="../data/bettergov/budget-sample.json"
         data-local-preview="true"
         aria-labelledby="national-budget-context-title"
       >
         <div class="infra-header-v5">
           <span class="infra-label-v5"
-            ><i class="bi bi-bank2"></i> National funding context</span
+            ><i class="bi bi-bank2"></i> Malolos budget data</span
           >
-          <h2 id="national-budget-context-title">National funding context</h2>
+          <h2 id="national-budget-context-title">Malolos budget data</h2>
           <p class="budget-context-intro">
-            Selected national programs that may affect Malolos residents, shown separately from
-            City Government revenues, expenditures, and appropriations. GAA means enacted General
-            Appropriations Act; NEP means proposed National Expenditure Program. These allocations
-            may cover a department or district and are not necessarily exclusive to Malolos.
+            BetterGov budget records returned for Malolos, shown separately from City Government
+            revenues, expenditures, and appropriations. Partner records are displayed only after
+            their geographic scope and source have been reviewed.
           </p>
         </div>
         <div class="budget-context-status" data-budget-status role="status">
-          <strong>Loading national funding context.</strong> Checking the last approved snapshot…
+          <strong>Loading Malolos budget data.</strong> Checking the last approved snapshot…
         </div>
         <div data-budget-results></div>
         <p class="budget-context-metadata" data-budget-metadata></p>

@@ -1,36 +1,247 @@
 {
   "schema_version": 1,
-  "snapshot_id": "budget-sample-20260921124945",
-  "source_name": "Philippine Budget Data API",
+  "snapshot_id": "budget-sample-20260922131806",
+  "source_name": "BetterGov Philippine Budget API",
   "source_url": "https://budget.bettergov.ph/api/v1/gaa/search",
   "parameters": {
-    "q": "flood control",
+    "q": "Malolos",
     "year": 2026,
-    "limit": 5
+    "limit": 25
   },
-  "retrieved_at": "2026-09-21T12:49:45.628Z",
-  "source_release": "FY 2026 GAA",
-  "scope_note": "National-government context; not an LGU Malolos appropriation.",
+  "retrieved_at": "2026-09-22T13:18:06.461Z",
+  "source_release": "FY 2026 BetterGov budget response",
+  "scope_note": "BetterGov budget records returned for the Malolos search scope; verify the precise geographic and administrative scope before publication.",
   "currency": "PHP",
   "unit": "pesos",
-  "review_status": "pending-review",
-  "checksum_sha256": "23faf26ae193d7c8a88e13d8b0efb6070de2dc29116a73d83ad2d5b84c26d5ec",
+  "review_status": "reviewed",
+  "reviewed_at": "2026-09-22",
+  "reviewer": "BetterMalolos maintainer",
+  "checksum_sha256": "94942d38b400d6f48ed02dc82d5653e5c9183263e948201d3a2015ba9862e32e",
   "data": [
     {
-      "id": "fixture-flood-control-1",
-      "program": "Flood Control and Drainage Infrastructure",
-      "department": "Department of Public Works and Highways",
-      "amount": 1250000000,
+      "id": "18-001|bigaa  plaridel via bulacan  malolos rd  k0037  711  k0038  607 k0039  700  k0041  662",
+      "program": "Bigaa - Plaridel via Bulacan & Malolos Rd - K0037 + 711 - K0038 + 607, K0039 + 700 - K0041 + 662",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 294000000,
       "year": 2026,
-      "stage": "GAA"
+      "stage": "GAA",
+      "source_record_id": "18-001|bigaa  plaridel via bulacan  malolos rd  k0037  711  k0038  607 k0039  700  k0041  662"
     },
     {
-      "id": "fixture-school-building-1",
-      "program": "Basic Education Facilities",
-      "department": "Department of Education",
-      "amount": 875000000,
+      "id": "08-029|continuation of cafa building malolos campus",
+      "program": "Continuation of CAFA Building, Malolos Campus",
+      "department": "State Universities and Colleges (SUCs)",
+      "amount": 100000000,
       "year": 2026,
-      "stage": "GAA"
+      "stage": "GAA",
+      "source_record_id": "08-029|continuation of cafa building malolos campus"
+    },
+    {
+      "id": "18-001|malolos flyover b01650lz along malolos flyover",
+      "program": "Malolos Flyover (B01650LZ) along Malolos Flyover",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 97864000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|malolos flyover b01650lz along malolos flyover"
+    },
+    {
+      "id": "18-001|construction of malolos diversion road city of malolos bulacan sta 0  000  sta 1  782",
+      "program": "Construction of Malolos Diversion Road, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 1 + 782",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 94143000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of malolos diversion road city of malolos bulacan sta 0  000  sta 1  782"
+    },
+    {
+      "id": "18-001|rehabilitation of ople road malolos city bulacan sta 0  000  sta 2  653",
+      "program": "Rehabilitation of Ople Road, Malolos City, Bulacan, Sta. 0 + 000 - Sta. 2 + 653",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 61193000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of ople road malolos city bulacan sta 0  000  sta 2  653"
+    },
+    {
+      "id": "08-029|construction of gender and development building at campus 2 malolos bulacan",
+      "program": "Construction of Gender and Development Building at Campus 2, Malolos, Bulacan",
+      "department": "State Universities and Colleges (SUCs)",
+      "amount": 60000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "08-029|construction of gender and development building at campus 2 malolos bulacan"
+    },
+    {
+      "id": "18-001|rehabilitation of malolospaombonghagonoycalumpit road bulacan sta 0  000  sta 2  285",
+      "program": "Rehabilitation of Malolos-Paombong-Hagonoy-Calumpit Road, Bulacan, Sta. 0 + 000 - Sta. 2 + 285",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 55069000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of malolospaombonghagonoycalumpit road bulacan sta 0  000  sta 2  285"
+    },
+    {
+      "id": "18-001|construction of bulacan state university hospital city of malolos bulacan 14863231 120813182",
+      "program": "Construction of Bulacan State University Hospital, City of Malolos, Bulacan (14.863231, 120.813182)",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 50000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of bulacan state university hospital city of malolos bulacan 14863231 120813182"
+    },
+    {
+      "id": "18-001|rehabilitation of mambog bridge b01725lz at city of malolos bulacan sta 0000sta 0015",
+      "program": "Rehabilitation of Mambog Bridge (B01725LZ) at City of Malolos, Bulacan (Sta. 0+000-Sta. 0+015)  ",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 49000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of mambog bridge b01725lz at city of malolos bulacan sta 0000sta 0015"
+    },
+    {
+      "id": "18-001|rehabilitation of road at barangay atlag city of malolos bulacan sta 0  000  sta 1  231",
+      "program": "Rehabilitation of Road at Barangay Atlag, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 1 + 231",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 28243000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of road at barangay atlag city of malolos bulacan sta 0  000  sta 1  231"
+    },
+    {
+      "id": "18-001|bigaaplaridel via bulacan  malolos rd  k0051  247  k0052  224",
+      "program": "Bigaa-Plaridel via Bulacan & Malolos Rd - K0051 + 247 - K0052 + 224",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 25916000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|bigaaplaridel via bulacan  malolos rd  k0051  247  k0052  224"
+    },
+    {
+      "id": "18-001|rehabilitation of barangay catmonbarangay bulihan road city of malolos bulacan sta 0  000  sta 1  012",
+      "program": "Rehabilitation of Barangay Catmon-Barangay Bulihan Road, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 1 + 012",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 22594000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of barangay catmonbarangay bulihan road city of malolos bulacan sta 0  000  sta 1  012"
+    },
+    {
+      "id": "18-001|construction of multipurpose building at barangay mambog city of malolos bulacan 14810600120849617",
+      "program": "Construction of Multi-Purpose Building at Barangay Mambog, City of Malolos, Bulacan (14.810600.120.849617)",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of multipurpose building at barangay mambog city of malolos bulacan 14810600120849617"
+    },
+    {
+      "id": "18-001|construction of multipurpose building at barangay taal city of malolos bulacan 14817809 120857842",
+      "program": "Construction of Multi-Purpose Building at Barangay Taal, City of Malolos, Bulacan (14.817809, 120.857842)",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of multipurpose building at barangay taal city of malolos bulacan 14817809 120857842"
+    },
+    {
+      "id": "18-001|construction of multipurpose building at felecisima village barangay mojon city of malolos bulacan  14867819 120813957",
+      "program": "Construction of Multi-Purpose Building at Felecisima Village, Barangay Mojon, City of Malolos, Bulacan ( 14.867819, 120.813957)",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of multipurpose building at felecisima village barangay mojon city of malolos bulacan  14867819 120813957"
+    },
+    {
+      "id": "18-001|construction of multipurpose building barangay hall barangay bagna malolos city bulacan 14825175 120822579",
+      "program": "Construction of Multi-Purpose Building (Barangay Hall), Barangay Bagna, Malolos City, Bulacan (14.825175, 120.822579)",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of multipurpose building barangay hall barangay bagna malolos city bulacan 14825175 120822579"
+    },
+    {
+      "id": "18-001|construction of public health facility super health center barangay matimbo city of malolos bulacan",
+      "program": "Construction of Public Health Facility (Super Health Center), Barangay Matimbo, City of Malolos, Bulacan",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of public health facility super health center barangay matimbo city of malolos bulacan"
+    },
+    {
+      "id": "18-001|construction of road and drainage barangay mojon city of malolos bulacan",
+      "program": "Construction of Road and Drainage, Barangay Mojon, City of Malolos, Bulacan",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of road and drainage barangay mojon city of malolos bulacan"
+    },
+    {
+      "id": "18-001|construction of solar water system at barangay bulihan city of malolos bulacan",
+      "program": "Construction of Solar Water System at Barangay Bulihan, City of Malolos, Bulacan",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 15000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of solar water system at barangay bulihan city of malolos bulacan"
+    },
+    {
+      "id": "18-001|rehabilitation of road at maunlad homes subdivision barangay mojon city of malolos bulacan sta 0  000  sta 0  586",
+      "program": "Rehabilitation of Road at Maunlad Homes Subdivision, Barangay Mojon, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 0 + 586",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 14121000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of road at maunlad homes subdivision barangay mojon city of malolos bulacan sta 0  000  sta 0  586"
+    },
+    {
+      "id": "18-001|rehabilitation of road at barangay mojon city of malolos bulacan sta 0  000  sta 0  508",
+      "program": "Rehabilitation of Road at Barangay Mojon, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 0 + 508",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 12740000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of road at barangay mojon city of malolos bulacan sta 0  000  sta 0  508"
+    },
+    {
+      "id": "18-001|rehabilitation of road at barangay san juan city of malolos bulacan sta 0  000  sta 0  164 and sta 0  000  sta 0  082",
+      "program": "Rehabilitation of Road at Barangay San Juan, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 0 + 164 and Sta. 0 + 000 - Sta. 0 + 082",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 11760000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of road at barangay san juan city of malolos bulacan sta 0  000  sta 0  164 and sta 0  000  sta 0  082"
+    },
+    {
+      "id": "18-001|rehabilitation of road at barangay namayan city of malolos bulacan sta 0  000  sta 0  126",
+      "program": "Rehabilitation of Road at Barangay Namayan, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 0 + 126",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 10780000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|rehabilitation of road at barangay namayan city of malolos bulacan sta 0  000  sta 0  126"
+    },
+    {
+      "id": "18-001|construction of road including drainage at barangay sumapang matanda city of malolos bulacan",
+      "program": "Construction of Road including drainage at Barangay Sumapang Matanda, City of Malolos, Bulacan",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 10000000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of road including drainage at barangay sumapang matanda city of malolos bulacan"
+    },
+    {
+      "id": "18-001|construction of road and drainage system at barangay panasahan city of malolos bulacan sta 0  000  sta 0 19350",
+      "program": "Construction of Road and Drainage System at Barangay Panasahan, City of Malolos, Bulacan, Sta. 0 + 000 - Sta. 0 +193.50",
+      "department": "Department of Public Works and Highways (DPWH)",
+      "amount": 9800000,
+      "year": 2026,
+      "stage": "GAA",
+      "source_record_id": "18-001|construction of road and drainage system at barangay panasahan city of malolos bulacan sta 0  000  sta 0 19350"
     }
   ]
 }

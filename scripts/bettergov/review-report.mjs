@@ -45,7 +45,9 @@ for (const file of files) {
     // The first run has no previous snapshot; this is expected.
   }
   const changes = diff(previous, current);
-  lines.push(`## ${file}`, '', `- Source: ${current.source_name}`, `- URL: ${current.source_url}`, `- Retrieved: ${current.retrieved_at}`, `- Status: ${current.review_status}`, `- Added: ${changes.added.length}`, `- Removed: ${changes.removed.length}`, `- Changed: ${changes.changed.length}`);
+  lines.push(`## ${file}`, '', `- Source: ${current.source_name}`, `- URL: ${current.source_url}`, `- Retrieved: ${current.retrieved_at}`, `- Status: ${current.review_status}`);
+  if (current.reviewed_at) lines.push(`- Reviewed: ${current.reviewed_at}`, `- Reviewer: ${current.reviewer ?? 'Not recorded'}`);
+  lines.push(`- Added: ${changes.added.length}`, `- Removed: ${changes.removed.length}`, `- Changed: ${changes.changed.length}`);
   if (changes.changed.some((change) => change.monetaryChanges.length)) lines.push('- Monetary changes: yes; inspect the source response before review.');
   lines.push('');
 }

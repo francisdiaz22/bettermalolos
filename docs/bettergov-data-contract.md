@@ -16,4 +16,4 @@ Every API-derived record or snapshot must include `source_name`, `source_url`, `
 
 ## Publishing rules
 
-Partner data never silently overwrites local data. National or partner data must be labelled as context, with its scope and retrieval date close to the value. A failed refresh must preserve the previous valid snapshot. A human reviews matches to Malolos before publication.
+Partner data never silently overwrites local data. BetterGov or other partner data must be labelled as context, with its scope and retrieval date close to the value. A failed refresh must preserve the previous valid snapshot. A human reviews the Malolos scope before publication.
