@@ -1,5 +1,5 @@
 (() => {
-  const module = document.querySelector('[data-national-budget-context]');
+  const module = document.querySelector('[data-malolos-budget]');
   if (!module) return;
 
   const snapshotPath = module.dataset.snapshot || '../data/bettergov/budget-sample.json';
@@ -53,11 +53,11 @@
     title.id = `budget-record-${record.id}`;
     title.textContent = record.program;
     header.appendChild(title);
-    addText(header, 'budget-stage-badge', `${record.stage} · FY ${record.year}`);
+    if (record.stage) addText(header, 'budget-stage-badge', `${record.stage} · FY ${record.year}`);
     card.appendChild(header);
 
     addText(card, 'budget-context-amount', formatPesos(record.amount));
-    addText(card, 'budget-context-department', record.department);
+    if (record.department) addText(card, 'budget-context-department', record.department);
 
     const scope = document.createElement('p');
     scope.className = 'budget-context-scope';
@@ -86,6 +86,7 @@
         !snapshot.retrieved_at ||
         !snapshot.source_release ||
         !snapshot.scope_note ||
+        !snapshot.scope_note.toLowerCase().includes('malolos') ||
         snapshot.currency !== 'PHP' ||
         snapshot.unit !== 'pesos'
       ) {
@@ -98,8 +99,8 @@
         !isLocalPreview
       ) {
         showStatus(
-          'National funding context is awaiting review.',
-          'The existing City Government financial information remains available. Collected partner data is not shown until a maintainer confirms its source, scope, fiscal year, and budget stage.',
+          'Malolos budget data is awaiting review.',
+          'The existing City Government financial information remains available. Collected partner data is not shown until a maintainer confirms its source, geographic scope, fiscal year, and amount.',
           'budget-context-status budget-context-status--pending'
         );
         return;
@@ -109,28 +110,15 @@
         (record) =>
           !record ||
           typeof record.amount !== 'number' ||
-          !['GAA', 'NEP'].includes(record.stage) ||
           !record.year ||
-          !record.program ||
-          !record.department
+          !record.program
       );
       if (invalidRecord) throw new Error('Invalid budget record');
 
-      const stages = [...new Set(snapshot.data.map((record) => record.stage))];
-      stages.forEach((stage) => {
-        const group = document.createElement('section');
-        group.className = 'budget-context-stage';
-        const heading = document.createElement('h3');
-        heading.textContent = stage === 'GAA' ? 'Enacted GAA' : 'Proposed NEP';
-        group.appendChild(heading);
-        const stageResults = document.createElement('div');
-        stageResults.className = 'budget-context-grid';
-        snapshot.data
-          .filter((record) => record.stage === stage)
-          .forEach((record) => stageResults.appendChild(renderCard(record, snapshot)));
-        group.appendChild(stageResults);
-        results.appendChild(group);
-      });
+      const resultGrid = document.createElement('div');
+      resultGrid.className = 'budget-context-grid';
+      snapshot.data.forEach((record) => resultGrid.appendChild(renderCard(record, snapshot)));
+      results.appendChild(resultGrid);
 
       metadata.textContent = `Source: ${snapshot.source_url} · Retrieved ${formatDate(snapshot.retrieved_at)} · Query: ${Object.entries(snapshot.parameters ?? {})
         .map(([key, value]) => `${key}=${value}`)
@@ -139,7 +127,7 @@
       if (isLocalPreview && snapshot.review_status !== 'reviewed' && snapshot.review_status !== 'verified') {
         showStatus(
           'Local preview only.',
-          'These fixture records demonstrate the Phase 3 interface. They are not approved for publication and are hidden on the public site until reviewed.',
+          'These fixture records demonstrate the Malolos budget interface. They are not approved for publication and are hidden on the public site until reviewed.',
           'budget-context-status budget-context-status--preview'
         );
       } else {
@@ -148,7 +136,7 @@
     })
     .catch(() => {
       showStatus(
-        'National funding context unavailable.',
+        'Malolos budget data unavailable.',
         'The last approved snapshot could not be loaded. City Government financial information and local project records remain available.',
         'budget-context-status budget-context-status--unavailable'
       );

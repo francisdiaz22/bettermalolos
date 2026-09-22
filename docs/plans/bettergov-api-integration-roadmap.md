@@ -13,7 +13,7 @@ BetterMalolos already publishes services, officials, city statistics, budget tra
 | Partner capability                | Malolos outcome                                                           | Initial release |
 | --------------------------------- | ------------------------------------------------------------------------- | --------------- |
 | Philippine Statistics API and MCP | Dynamic PSA-backed context and PSGC geographic references                 | Phase 2         |
-| Philippine Budget API and MCP     | National budget context for programs affecting Malolos                    | Phase 3         |
+| Philippine Budget API and MCP     | BetterGov budget data scoped to Malolos                                    | Phase 3         |
 | DPWH Transparency API             | Better evidence and later status updates for Malolos-linked DPWH projects | Phase 4         |
 | Officials portal                  | A reviewed public-official and office directory workflow                  | Phase 5         |
 | ASEAN API and MCP                 | An optional peer-city comparison view                                     | Phase 6         |
@@ -54,7 +54,7 @@ Suggested shared fields for every generated record:
   "source_url": "https://budget.bettergov.ph/api/v1/...",
   "retrieved_at": "2026-09-21T00:00:00+08:00",
   "source_release": "FY 2026 GAA",
-  "scope_note": "National-government context; not an LGU Malolos appropriation",
+  "scope_note": "BetterGov budget records returned for the Malolos search scope; precise scope reviewed before publication",
   "review_status": "reviewed"
 }
 ```
@@ -140,33 +140,33 @@ Suggested shared fields for every generated record:
 - One carousel: “What the indicator means / where it comes from / how current it is.”
 - A link to `/statistics/` and an invitation to submit source corrections through the Ideas page.
 
-## Phase 3 — National budget context for Malolos
+## Phase 3 — Malolos budget data from BetterGov
 
-**Goal:** Place the existing local fiscal transparency information beside clearly-labelled national funding that may affect Malolos residents.
+**Goal:** Add a small, source-aware BetterGov budget view for Malolos without importing broad national budget datasets or replacing local fiscal records.
 
 ### Site and data work
 
-- Query the Budget API for enacted GAA programs related to flood control, roads, school buildings, health facilities, and other reviewed priorities.
-- Add a `National funding context` section to `/budget/`, separate from LGU Malolos revenues, expenditures, and financial reports.
-- Display budget stage correctly: `GAA` is enacted; `NEP` is proposed. Never combine them into a single total.
-- Display all values in exact Philippine pesos and explain that a department/district allocation is not necessarily an amount exclusive to Malolos.
-- Link national budget results to matching local DPWH project cards only after a human reviews project name, fiscal year, implementing office, and location.
+- Query the documented BetterGov budget API using a Malolos-scoped search or geographic filter.
+- Add a `Malolos budget data` section to `/budget/`, separate from LGU Malolos revenues, expenditures, and financial reports.
+- Display only fields returned by the API, with exact currency/unit, period, source release, retrieval date, and geographic scope.
+- Keep the result set small and focused on Malolos; do not import broad national program data merely because it mentions a department or district.
+- Do not link these records to DPWH projects in this phase. That is a separate future integration.
 
 ### Acceptance checks
 
-- Every displayed amount has its fiscal year, budget stage, endpoint, and scope note.
-- No national allocation is presented as city revenue or an LGU appropriation.
-- A reviewer can trace each highlighted result to a Budget API response.
+- Every displayed amount has its period, endpoint, currency/unit, and scope note.
+- No partner amount is presented as a City Government appropriation unless the source explicitly identifies it as such.
+- A reviewer can trace each displayed result to a BetterGov API response and confirm that it is Malolos-scoped.
 - The current local SRE/fiscal page continues to work when the partner API snapshot is unavailable.
 
 ### Social post
 
-> We’ve added national-budget context to BetterMalolos’ transparency work. You can now see selected public programs connected to infrastructure and services that affect Malolos—clearly separated from the City Government’s own budget. Sources and fiscal years are included. #BudgetTransparency #Malolos
+> We’re adding a focused BetterGov budget view for Malolos. It will show only records that can be checked against a source, scope, and update date—and it will stay separate from the City Government’s own financial records. #BudgetTransparency #Malolos
 
 ### Publish assets
 
-- A side-by-side graphic: “City budget” versus “National program funding.”
-- One worked example showing why fiscal year and budget stage matter.
+- A side-by-side graphic: “City budget” versus “BetterGov Malolos data.”
+- One worked example showing how source scope and retrieval date are checked.
 
 ## Phase 4 — DPWH project evidence and progress tracker
 
@@ -252,7 +252,7 @@ Suggested shared fields for every generated record:
 | ---------------------- | ------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------- |
 | PSA statistics/catalog | Monthly or when a source release changes                | Update approved indicators after validation      | Required for new indicators or changed definitions |
 | PSGC reference         | Quarterly or when PSA publishes a new release           | Update codes/labels after comparison             | Required                                           |
-| National budget        | On GAA/NEP release and quarterly for execution datasets | Publish source-specific snapshots                | Required for featured Malolos connections          |
+| BetterGov Malolos budget | When the source dataset changes; at least quarterly while active | Publish only reviewed Malolos-scoped snapshots | Required                                           |
 | DPWH project data      | Weekly when the endpoint supports it                    | Show last verified status, not inferred progress | Required for new/changed project facts             |
 | Officials directory    | Monthly and after election/appointment events           | Update only verified public-office records       | Required                                           |
 | ASEAN comparison       | Quarterly or when the source updates                    | Update only after methodology review             | Required                                           |

@@ -21,6 +21,7 @@
     "bettergov:snapshot": "node scripts/bettergov/snapshot-pipeline.mjs",
     "bettergov:fixture": "node scripts/bettergov/snapshot-pipeline.mjs --fixture",
     "bettergov:review": "node scripts/bettergov/review-report.mjs",
+    "test:bettergov": "node --test tests/bettergov-snapshot-pipeline.test.mjs",
     "test:budget": "playwright test tests/budget-national-context.spec.js",
     "lighthouse": "lhci autorun",
     "format": "prettier --write .",
