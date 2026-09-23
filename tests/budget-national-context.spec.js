@@ -9,7 +9,10 @@ test.describe('Budget — Malolos BetterGov data', () => {
     await expect(context).toContainText('Malolos budget data');
     await expect(context.locator('[data-budget-status]')).toBeHidden();
     await expect(context).toContainText('₱294,000,000.00');
-    await expect(context).toContainText('BetterGov budget records returned for the Malolos search scope');
+    await expect(context.locator('.budget-context-scope')).toHaveCount(0);
+    await expect(context.locator('.budget-explorer-summary')).toContainText('Records');
+    await expect(context.locator('.budget-explorer-table tbody tr')).toHaveCount(25);
+    await expect(context.locator('.budget-explorer-controls input')).toBeVisible();
 
     await expect(page.locator('#sre-total-receipts')).toContainText('₱1,837.57 M');
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);
