@@ -18,6 +18,7 @@
   border-radius: 8px;
   background: #f4f8f4;
   line-height: 1.6;
+  text-align: center;
 }
 
 .budget-context-status strong {
@@ -25,7 +26,9 @@
 }
 
 .budget-context-progress {
-  margin-top: 14px;
+  width: min(100%, 760px);
+  margin: -6px auto 20px;
+  text-align: center;
 }
 
 .budget-context-progress-track {
@@ -196,6 +199,11 @@
   font-size: 0.75rem;
   font-weight: 400;
   overflow-wrap: anywhere;
+}
+
+.budget-explorer-record-id a {
+  color: var(--color-primary, #1a5f2a);
+  font-weight: 700;
 }
 
 .budget-explorer-amount {

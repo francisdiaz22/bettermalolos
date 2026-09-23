@@ -52,6 +52,20 @@
     return element;
   };
 
+  const getRecordReference = (record, snapshot) => {
+    const candidate = record.source_record_url || record.reference_url || record.url;
+    if (candidate) {
+      try {
+        const url = new URL(candidate, window.location.href);
+        if (url.protocol === 'http:' || url.protocol === 'https:') return url.href;
+      } catch (error) {
+        // Ignore malformed record URLs and use the reviewed snapshot source below.
+      }
+    }
+
+    return snapshot.source_url || null;
+  };
+
   const renderCard = (record, snapshot) => {
     const row = document.createElement('tr');
     row.className = 'budget-explorer-row';
@@ -62,10 +76,26 @@
     const summary = document.createElement('summary');
     summary.textContent = record.program;
     details.appendChild(summary);
-    const recordId = document.createElement('span');
-    recordId.className = 'budget-explorer-record-id';
-    recordId.textContent = `Record ID: ${record.source_record_id || record.id}`;
-    details.appendChild(recordId);
+    const reference = document.createElement('span');
+    reference.className = 'budget-explorer-record-id';
+    const referenceUrl = getRecordReference(record, snapshot);
+    if (referenceUrl) {
+      const referenceLink = document.createElement('a');
+      referenceLink.href = referenceUrl;
+      referenceLink.target = '_blank';
+      referenceLink.rel = 'noopener noreferrer';
+      referenceLink.textContent = record.source_record_url
+        ? 'View source record'
+        : 'View BetterGov source';
+      referenceLink.setAttribute(
+        'aria-label',
+        `Open source reference for ${record.program}`
+      );
+      reference.appendChild(referenceLink);
+    } else {
+      reference.textContent = 'Source reference unavailable';
+    }
+    details.appendChild(reference);
     programCell.appendChild(details);
     row.appendChild(programCell);
 
@@ -204,17 +234,37 @@
     return explorer;
   };
 
-  setProgress(10, 'Connecting to the approved snapshot…');
+  const fetchSnapshot = async (attempt = 1) => {
+    const maxAttempts = 3;
+    setProgress(
+      attempt === 1 ? 10 : Math.min(10 + attempt * 5, 25),
+      attempt === 1
+        ? 'Connecting to the approved snapshot…'
+        : `Retrying the approved snapshot (${attempt}/${maxAttempts})…`
+    );
 
-  const timeout = new Promise((_, reject) =>
-    window.setTimeout(() => reject(new Error('Snapshot request timed out')), 10000)
-  );
+    const timeout = new Promise((_, reject) =>
+      window.setTimeout(() => reject(new Error('Snapshot request timed out')), 10000)
+    );
 
-  Promise.race([fetch(snapshotPath, { cache: 'no-cache' }), timeout])
-    .then((response) => {
+    try {
+      const response = await Promise.race([
+        fetch(snapshotPath, { cache: 'no-cache' }),
+        timeout,
+      ]);
       if (!response.ok) throw new Error(`Snapshot request failed: ${response.status}`);
-      setProgress(55, 'Snapshot received. Reading records…');
       return response.json();
+    } catch (error) {
+      if (attempt >= maxAttempts) throw error;
+      await new Promise((resolve) => window.setTimeout(resolve, 350 * attempt));
+      return fetchSnapshot(attempt + 1);
+    }
+  };
+
+  fetchSnapshot()
+    .then((response) => {
+      setProgress(55, 'Snapshot received. Reading records…');
+      return response;
     })
     .then((snapshot) => {
       setProgress(80, 'Checking source and geographic scope…');
