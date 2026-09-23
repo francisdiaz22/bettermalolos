@@ -658,6 +658,22 @@
         </div>
         <div class="budget-context-status" data-budget-status role="status">
           <strong>Loading Malolos budget data.</strong> Checking the last approved snapshot…
+          <div class="budget-context-progress" data-budget-progress-wrap>
+            <div
+              class="budget-context-progress-track"
+              role="progressbar"
+              aria-label="Loading Malolos budget snapshot"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="10"
+              data-budget-progress
+            >
+              <span></span>
+            </div>
+            <span class="budget-context-progress-label" data-budget-progress-label
+              >Connecting to the approved snapshot…</span
+            >
+          </div>
         </div>
         <div data-budget-results></div>
         <p class="budget-context-metadata" data-budget-metadata></p>
