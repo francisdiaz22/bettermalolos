@@ -8,6 +8,10 @@ test.describe('Budget — Malolos BetterGov data', () => {
     const context = page.locator('[data-malolos-budget]');
     await expect(context).toContainText('Malolos budget data');
     await expect(context.locator('[data-budget-status]')).toBeHidden();
+    await expect(context.locator('[data-budget-progress-wrap]')).toHaveCount(1);
+    await expect(context.locator('[data-budget-progress-wrap]')).toBeHidden();
+    await expect(context.locator('[data-budget-progress]')).toHaveAttribute('aria-valuenow', '100');
+    await expect(context.locator('[data-budget-progress-label]')).toHaveText('Snapshot loaded.');
     await expect(context).toContainText('₱294,000,000.00');
     await expect(context.locator('.budget-context-scope')).toHaveCount(0);
     await expect(context.locator('.budget-explorer-summary')).toContainText('Records');

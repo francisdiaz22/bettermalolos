@@ -2,6 +2,19 @@
   margin: 32px auto;
 }
 
+/* Keep the Malolos budget subheader centered independently of shared section styles. */
+.national-budget-context > .infra-header-v5 {
+  width: 100%;
+  text-align: center;
+}
+
+.national-budget-context > .infra-header-v5 h2,
+.national-budget-context > .infra-header-v5 p {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .budget-context-intro {
   max-width: 760px;
   margin-right: auto;
