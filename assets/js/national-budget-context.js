@@ -138,11 +138,12 @@
       ['Agencies', departments.length],
       ['Fiscal year', `FY ${records[0]?.year || '—'}`],
     ];
+    const metricValues = [];
     metrics.forEach(([label, value]) => {
       const metric = document.createElement('div');
       metric.className = 'budget-explorer-metric';
       addText(metric, 'budget-explorer-metric-label', label);
-      addText(metric, 'budget-explorer-metric-value', value);
+      metricValues.push(addText(metric, 'budget-explorer-metric-value', value));
       summary.appendChild(metric);
     });
     explorer.appendChild(summary);
@@ -179,7 +180,7 @@
     const table = document.createElement('table');
     table.className = 'budget-explorer-table';
     const caption = document.createElement('caption');
-    caption.textContent = 'Reviewed BetterGov budget records returned for Malolos';
+    caption.textContent = 'Reviewed BetterGov and DBM FY 2026 budget records for Malolos context';
     table.appendChild(caption);
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
@@ -224,6 +225,11 @@
         const matchesDepartment = !department || record.department === department;
         return matchesQuery && matchesDepartment;
       });
+      const filteredDepartments = new Set(filtered.map((record) => record.department).filter(Boolean));
+      metricValues[0].textContent = String(filtered.length);
+      metricValues[1].textContent = formatPesos(filtered.reduce((total, record) => total + record.amount, 0));
+      metricValues[2].textContent = String(filteredDepartments.size);
+      metricValues[3].textContent = `FY ${filtered[0]?.year || '—'}`;
       tbody.replaceChildren(...filtered.map((record) => renderCard(record, snapshot)));
       empty.hidden = filtered.length > 0;
     };

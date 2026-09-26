@@ -11,7 +11,7 @@ export const sources = {
   'budget-sample': {
     sourceName: 'BetterGov Philippine Budget API',
     sourceUrl: 'https://budget.bettergov.ph/api/v1/gaa/search',
-    parameters: { q: 'Malolos', year: 2026, limit: 25 },
+    parameters: { queries: ['Malolos', 'Bulacan State University'], year: 2026, limit: 100 },
     snapshotFile: 'budget-sample.json',
     fixtureFile: 'fixtures/budget-sample.json',
     validate: (payload) => {
@@ -36,12 +36,41 @@ export const sources = {
         typeof row.program !== 'string' ||
         (row.department !== undefined && typeof row.department !== 'string')
       )) throw new Error('Budget records must contain amount, year, and program');
-      return records;
+      return records.filter((row) => row.amount > 0);
     },
     sourceRelease: 'FY 2026 BetterGov budget response',
-    scopeNote: 'BetterGov budget records returned for the Malolos search scope; verify the precise geographic and administrative scope before publication.',
+    scopeNote: 'FY 2026 records discovered through BetterGov Malolos and Bulacan State University searches, supplemented with top-level regular-program totals from DBM F.4; verify precise geographic and administrative scope before publication.',
     currency: 'PHP',
     unit: 'pesos',
+    supplementalRecords: [
+      {
+        id: 'dbm-f4|general-administration-and-support',
+        program: 'General Administration and Support (DBM F.4 regular program)',
+        department: 'State Universities and Colleges (SUCs)',
+        amount: 259133000,
+        year: 2026,
+        stage: 'DBM F.4',
+        source_record_url: 'https://www.dbm.gov.ph/wp-content/uploads/GAA/GAA2026/VolumeIA/SUCS/F4.pdf',
+      },
+      {
+        id: 'dbm-f4|support-to-operations',
+        program: 'Support to Operations (DBM F.4 regular program)',
+        department: 'State Universities and Colleges (SUCs)',
+        amount: 9000,
+        year: 2026,
+        stage: 'DBM F.4',
+        source_record_url: 'https://www.dbm.gov.ph/wp-content/uploads/GAA/GAA2026/VolumeIA/SUCS/F4.pdf',
+      },
+      {
+        id: 'dbm-f4|operations',
+        program: 'Operations (DBM F.4 regular program)',
+        department: 'State Universities and Colleges (SUCs)',
+        amount: 1417499000,
+        year: 2026,
+        stage: 'DBM F.4',
+        source_record_url: 'https://www.dbm.gov.ph/wp-content/uploads/GAA/GAA2026/VolumeIA/SUCS/F4.pdf',
+      },
+    ],
   },
   'psa-catalog': {
     sourceName: 'Philippine Statistics Authority Statistical Classification API',
@@ -82,10 +111,22 @@ export async function saveSnapshot(outputPath, snapshot) {
 export async function collect(name, { fixture = false, payloadOverride, outputDirOverride } = {}) {
   const config = sources[name];
   if (!config) throw new Error(`Unknown source ${name}`);
-  const payload = payloadOverride ?? (fixture
-    ? await readJson(resolve(root, 'scripts/bettergov', config.fixtureFile))
-    : (await fetchJson(`${config.sourceUrl}?${new URLSearchParams(config.parameters)}`)).data);
-  const data = config.validate(payload);
+  const payloads = payloadOverride
+    ? [payloadOverride]
+    : fixture
+      ? [await readJson(resolve(root, 'scripts/bettergov', config.fixtureFile))]
+      : await Promise.all(config.parameters.queries.map((query) =>
+        fetchJson(`${config.sourceUrl}?${new URLSearchParams({
+          q: query,
+          year: String(config.parameters.year),
+          limit: String(config.parameters.limit),
+        })}`).then((response) => response.data)
+      ));
+  const records = payloads.flatMap((payload) => config.validate(payload));
+  if (!fixture && !payloadOverride && config.supplementalRecords) {
+    records.push(...config.supplementalRecords);
+  }
+  const data = [...new Map(records.map((record) => [record.source_record_id ?? record.id ?? record.program, record])).values()];
   const snapshot = makeSnapshot({
     snapshotId: `${name}-${new Date().toISOString().replaceAll(/[-:.TZ]/g, '').slice(0, 14)}`,
     sourceName: config.sourceName,
