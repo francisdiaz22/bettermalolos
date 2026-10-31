@@ -106,6 +106,10 @@ else
 fi
 echo "  Legacy files copied."
 
+# Unreviewed snapshots can stay in the source tree for maintainer review, but
+# must not be published as downloadable files in the static deployment.
+node scripts/bettergov/filter-public-snapshots.mjs dist/data/bettergov
+
 # ── 4. Build React app and merge health page ──────────────────────────────────
 echo ""
 echo "▶ [4/6] React app build..."
