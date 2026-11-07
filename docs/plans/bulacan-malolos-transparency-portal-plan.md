@@ -1,6 +1,6 @@
 # Bulacan and Malolos FY2027 Transparency Portal — Agent Plan
 
-**Status:** Phases 1–5 implementation complete; human review of the pending FY2027 snapshot remains before public figures can appear
+**Status:** Phases 1–5 complete; FY2027 snapshot reviewed and ready for publication
 
 **Working branch:** `feat/bulacan-malolos-transparency-portal`
 
@@ -146,7 +146,7 @@ Phase 2 exit is complete. Phase 3 will add the route and project views using the
 
 - Added the static `/transparency/` route with responsive scope controls, summary cards, project search, budget-version filtering, sorting, and expandable source/inclusion details. The selected scope is stored in the URL query string and restored on refresh/back/forward navigation.
 - The browser view expects the reviewed `data/bettergov/hgab-2027.json` publication contract (`fiscal_year: 2027`, `review_status: reviewed`, scope project arrays, retrieval/source metadata, notices/disclaimers). It does not fetch BetterGov directly from the visitor's browser.
-- No reviewed HGAB snapshot is available. A pending-review collection remains outside the public view, which presents a clear reviewed-data-unavailable state instead of a successful empty result or fabricated amounts. Stale snapshots are labeled; null amounts remain “Not stated.” One-version-only rows are described as candidates for further review.
+- At the 2026-10-31 Phase 3 checkpoint, no reviewed HGAB snapshot was available. The pending-review collection stayed outside the public view, which presented a clear reviewed-data-unavailable state instead of a successful empty result or fabricated amounts. Stale snapshots are labeled; null amounts remain “Not stated.” One-version-only rows are described as candidates for further review. The snapshot was reviewed on 2026-11-07; see the Phase 5 decision and review packet below.
 - The interpretation notice remains adjacent to the project view, while source notices/disclaimers are rendered from the snapshot when available. Province/City scope notes disclose office and title-match limits.
 - Phase 4 remains necessary for shared navigation/localization and the full About/data explanation. Phase 5 remains necessary for source-data validation and handoff verification.
 
@@ -162,7 +162,7 @@ Phase 2 exit is complete. Phase 3 will add the route and project views using the
 - Added `/transparency/about/` with the FY2027 API endpoints and collection approach, exact office/title inclusion rules, source-check counts, geographic limitations, null/match/status interpretation, source links, and the separation from local Malolos fiscal records.
 - Added FY2027 project and data-explanation links to the shared Projects & Budget dropdown and route footers. Added English and Filipino navigation strings; the portal's content remains English for this release.
 - Synchronized the shared navigation template across public HTML pages and mapped `/transparency/` to the Projects & Budget active section.
-- The directory-based `transparency/about/index.html` route and root-relative links follow the existing static hosting conventions. A reviewed HGAB snapshot is still not published; Phase 5 must perform source validation and handoff verification before public figures can appear.
+- At the 2026-10-31 Phase 4 checkpoint, the reviewed HGAB snapshot had not yet been published; Phase 5 source validation and maintainer review were still outstanding before public figures could appear. The subsequent review decision and publication state are recorded below.
 
 ### Phase 5 — Verify for handoff
 
@@ -178,9 +178,10 @@ Phase 2 exit is complete. Phase 3 will add the route and project views using the
 - Collected live API data on 2026-10-31T17:07:11Z. All seven unique configured queries matched their API totals and unique-ID counts: Bulacan offices 152/191/55 (398); Malolos query inputs 152 from Bulacan 1st DEO plus 27 DPWH title rows and zero FMR/HFEP/NIA rows. Malolos has 160 unique rows, including 19 office/title overlaps, each retaining both reasons. Province contains no title-only additions. The exact filter, `limit=200`, and `offset=0` request parameters are recorded for every query.
 - Snapshot field audit: 66/398 Province and 18/160 Malolos records have a null amount in at least one of NEP/latest-House columns; null remains unknown. All 558 scope rows have a BetterGov project link and at least one source PDF page link; all provided links are HTTPS page-fragment links. The three distinct referenced source PDF files returned HTTP 200. The raw API source row is retained, and normalized NEP, House, second-reading, and third-reading amounts are checked against it. API metadata, the full overview, notice, and structured disclaimer are preserved. The UI labels NEP, latest House amount, and second/third-reading source links accurately.
 - Corrected the earlier About/plan count description: 406 is not the Malolos scope. The configured Malolos union is 160; Province remains 398.
-- The generated `data/bettergov/hgab-2027.json` is still `pending-review`, so the public route correctly continues to show its unavailable state. It must not be changed to `reviewed` until a maintainer completes human review.
+- On 2026-11-07, the maintainer confirmed human review and approved the configured Province and Malolos scopes. The two Calumpit/spanning title-search rows remain included under the documented title-match rule with the geographic limitation disclosed; no manual exclusions were made. Review metadata is recorded in the snapshot and details are in [the review packet](../review/hgab-2027-review-packet.md).
 - Production packaging initially included the pending snapshot as a downloadable JSON file even though the page refused to display it. Added `scripts/bettergov/filter-public-snapshots.mjs` and wired it into `build.sh` so unreviewed snapshots are removed from `dist/data/bettergov/`; reviewed/verified snapshots remain available. This keeps the public data boundary aligned with the page's reviewed-only contract.
-- Validation: `npm run check:navigation` passed. `node --check` passed for the HGAB contract, collection/filter scripts, and portal JavaScript. `bash build.sh --no-bump` completed successfully. The built `/transparency/` and `/transparency/about/` routes are present, and `dist/data/bettergov/hgab-2027.json` is absent while the source snapshot remains `pending-review`. The normal version-bumping build was not retained as a release-version change. No automated tests were added or run.
+- Validation at the 2026-11-01 checkpoint: `npm run check:navigation` passed. `node --check` passed for the HGAB contract, collection/filter scripts, and portal JavaScript. `bash build.sh --no-bump` completed successfully. The built `/transparency/` and `/transparency/about/` routes were present; the then-pending source snapshot was excluded from `dist/data/bettergov/`. The normal version-bumping build was not retained as a release-version change. No automated tests were added or run at that checkpoint.
+- Final pre-push validation (2026-11-07): `npm run check:navigation` passed; `node --check` passed for the HGAB contract, collection/filter scripts, and portal JavaScript; `bash build.sh --no-bump` completed successfully without changing the version. Confirmed the built `/transparency/` and `/transparency/about/` routes and reviewed snapshot are present in `dist/`. `git diff --check` passed. No automated test suite was run.
 
 ## Acceptance criteria
 

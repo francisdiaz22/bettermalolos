@@ -1143,7 +1143,7 @@
   },
   "currency": "PHP",
   "unit": "pesos",
-  "review_status": "pending-review",
+  "review_status": "reviewed",
   "scope_note": "FY2027 national budget document project rows; not actual spending, project completion, or Malolos LGU appropriations.",
   "notices": [
     "Amounts reflect published figures in the 2027 NEP and House Bill 10858, not actual spending. A project found in only one version is a candidate for further review, not a conclusive finding.",
@@ -43493,5 +43493,8 @@
         }
       ]
     }
-  }
+  },
+  "reviewed_at": "2026-11-07T07:26:38.000Z",
+  "reviewer": "BetterMalolos maintainer (user-confirmed)",
+  "review_notes": "Maintainer confirmed completion of human review on 2026-11-07. The configured Province and Malolos scope rules were accepted. Malolos title-search results naming Calumpit are retained under the documented title-match rule with the location limitation disclosed; no manual exclusions were made."
 }

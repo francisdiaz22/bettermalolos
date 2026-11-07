@@ -36,11 +36,13 @@
     const group = snapshot.scopes?.[activeScope];
     if (!group || !Array.isArray(group.projects)) {
       status.hidden = false; status.dataset.state = 'unavailable';
+      status.removeAttribute('aria-busy');
       status.textContent = 'Reviewed data for this view is unavailable. No project count or amount is being reported.';
       document.getElementById('project-browser').hidden = true; return;
     }
     const stale = snapshot.retrieved_at && Date.now() - Date.parse(snapshot.retrieved_at) > 180 * 86400000;
     status.hidden = false; status.dataset.state = stale ? 'stale' : 'ready';
+    status.removeAttribute('aria-busy');
     const retrieved = snapshot.retrieved_at ? new Date(snapshot.retrieved_at).toLocaleString('en-PH', { dateStyle: 'medium', timeStyle: 'short' }) : 'not stated';
     status.innerHTML = `${stale ? '<strong>Snapshot is stale.</strong> ' : '<strong>Reviewed snapshot.</strong> '}Retrieved ${escape(retrieved)}. Source release: ${escape(snapshot.source_release || 'Not stated by source')}. Currency and scale: ${escape(snapshot.currency || 'PHP')} ${escape(snapshot.unit || 'pesos')}.${stale ? ' Figures are retained for context and should not be treated as current.' : ''}`;
     document.getElementById('project-browser').hidden = false;
@@ -95,6 +97,7 @@
     snapshot = data; render();
   }).catch(() => {
     status.hidden = false; status.dataset.state = 'unavailable';
+    status.removeAttribute('aria-busy');
     status.innerHTML = '<strong>Reviewed FY2027 project data is not available yet.</strong> This page will show figures only after a complete snapshot has passed source validation and review. No data is presented as a successful empty result.';
     document.getElementById('project-browser').hidden = true;
   });

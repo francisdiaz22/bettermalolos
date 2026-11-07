@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="transparency.css" />
+    <link rel="stylesheet" href="/transparency/transparency.css?v=20261101-ui" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -123,7 +123,7 @@
       <header class="transparency-heading"><p class="eyebrow">National budget documents · FY2027</p><h1>Budget projects in Bulacan</h1><p>Explore project lines in the 2027 National Expenditure Program (NEP) and House Bill 10858. These published budget figures are not actual spending or confirmation that a project was built.</p></header>
       <section class="scope-panel" aria-labelledby="scope-title"><h2 id="scope-title">Choose a geographic view</h2><div class="scope-switch" role="group" aria-label="Project geographic scope"><button type="button" data-scope="bulacan-province" aria-pressed="true">Bulacan Province</button><button type="button" data-scope="malolos-city" aria-pressed="false">Malolos City</button></div><p id="scope-note" class="scope-note"></p></section>
       <div class="interpretation-notice" role="note"><strong>How to read these figures</strong><p>Amounts reflect published figures in the 2027 NEP and House Bill 10858, not actual spending. A project found in only one version is a candidate for further review, not a conclusive finding.</p></div>
-      <div id="snapshot-status" class="snapshot-status" role="status" aria-live="polite">Loading reviewed FY2027 data…</div>
+      <div id="snapshot-status" class="snapshot-status" data-state="loading" role="status" aria-live="polite" aria-busy="true"><strong>Preparing the reviewed FY2027 snapshot</strong><span>Checking source records and organizing project details for this view.</span></div>
       <section id="project-browser" hidden aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
         <div class="summary-grid" id="summary"></div>
@@ -135,6 +135,6 @@
     <footer class="site-footer"><div class="container"><p>BetterMalolos.org · Independent community information</p><p><a href="/transparency/about/">About the data and scope</a> · <a href="/budget/">View Malolos city budget and fiscal reports</a></p></div></footer>
     <script src="../assets/js/translations.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
-    <script src="transparency.js" defer></script>
+    <script src="/transparency/transparency.js" defer></script>
   </body>
 </html>
