@@ -3,7 +3,6 @@ from __future__ import annotations
 from datetime import UTC, datetime, timedelta
 
 from fastapi import APIRouter, Depends, Header, HTTPException, Query
-from sqlalchemy import desc
 from sqlalchemy.orm import Session
 
 from app.config import get_settings
@@ -47,13 +46,13 @@ def source_health(db: Session = Depends(get_db), _auth=Depends(_require_token)):
     now = datetime.now(UTC)
     for src in sources:
         last_snap: SourceSnapshot | None = (
-            db.query(SourceSnapshot).filter(SourceSnapshot.source_id == src.id).order_by(desc(SourceSnapshot.fetched_at)).first()
+            db.query(SourceSnapshot).filter(SourceSnapshot.source_id == src.id).order_by(SourceSnapshot.fetched_at.desc()).first()
         )
         last_obs: Observation | None = (
             db.query(Observation)
             .join(Station, Observation.station_id == Station.id)
             .filter(Station.source_id == src.id)
-            .order_by(desc(Observation.observed_at))
+            .order_by(Observation.observed_at.desc())
             .first()
         )
         observed_at = last_obs.observed_at if last_obs else None
@@ -77,7 +76,7 @@ def source_health(db: Session = Depends(get_db), _auth=Depends(_require_token)):
                 q = q.filter(Station.kind == kind)
             if metric:
                 q = q.filter(Observation.metric == metric)
-            obs = q.order_by(desc(Observation.observed_at)).first()
+            obs = q.order_by(Observation.observed_at.desc()).first()
             if not obs:
                 return None
             # map kind to freshness kind param
@@ -139,7 +138,7 @@ def list_snapshots(
         if not src:
             raise HTTPException(status_code=404, detail="source not found")
         q = q.filter(SourceSnapshot.source_id == src.id)
-    snaps = q.order_by(desc(SourceSnapshot.fetched_at)).limit(limit).all()
+    snaps = q.order_by(SourceSnapshot.fetched_at.desc()).limit(limit).all()
     return {
         "snapshots": [
             {
@@ -181,7 +180,7 @@ def list_observations(
         q = q.filter(Observation.metric == metric)
     if station:
         q = q.filter(Station.source_station_id == station)
-    obs = q.order_by(desc(Observation.observed_at)).limit(limit).all()
+    obs = q.order_by(Observation.observed_at.desc()).limit(limit).all()
     return {
         "observations": [
             {
@@ -246,7 +245,7 @@ def internal_dashboard(db: Session = Depends(get_db), _auth=Depends(_require_tok
         snapshot = (
             db.query(SourceSnapshot)
             .filter(SourceSnapshot.source_id == source.id)
-            .order_by(desc(SourceSnapshot.fetched_at))
+            .order_by(SourceSnapshot.fetched_at.desc())
             .first()
         )
         state = _source_state(source, snapshot)
