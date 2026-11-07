@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const markCurrentNavigation = () => {
     const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
     const sectionByPrefix = [
-      { prefixes: ['/budget'], section: 'projects-budget' },
+      { prefixes: ['/budget', '/transparency'], section: 'projects-budget' },
       { prefixes: ['/services', '/service-details'], section: 'services' },
       {
         prefixes: ['/government', '/statistics', '/news', '/legislative'],

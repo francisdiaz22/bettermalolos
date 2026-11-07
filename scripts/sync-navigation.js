@@ -62,6 +62,8 @@ const header = `    <header class="site-header">
                 <li><a href="/#project-tracker" data-i18n="nav-project-tracker-proposed">Project Tracker — Proposed</a></li>
                 <li><a href="/budget/" data-i18n="nav-infrastructure-projects">Infrastructure Projects</a></li>
                 <li><a href="/budget/" data-i18n="nav-city-budget">City Budget &amp; Transparency</a></li>
+                <li><a href="/transparency/" data-i18n="nav-fy2027-budget-projects">FY2027 Budget Projects</a></li>
+                <li><a href="/transparency/about/" data-i18n="nav-budget-data-about">About the data</a></li>
               </ul>
             </li>
             <li class="nav-services" data-nav-section="services"><a href="/services/" data-i18n="nav-services">Services</a></li>
