@@ -20,7 +20,7 @@
     "cheerio": "^1.1.2",
     "fastify": "^5.6.2",
     "mysql2": "^3.15.3",
-    "zod": "^4.1.12"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "eslint": "^10.9.1"
