@@ -103,7 +103,7 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
   const provinceIds = new Set(scopes['bulacan-province'].projects.map((item) => item.id));
   const provinceQueryIds = new Set(queryRecords.filter(({ query }) => query.parameters.office).flatMap(({ query, rows }) =>
     query.dataset === 'dpwh' && ['Bulacan 1st District Engineering Office', 'Bulacan 2nd District Engineering Office', 'Bulacan 3rd District Engineering Office'].includes(query.parameters.office) ? rows.map((row) => `dpwh:${row.id}`) : []));
-  if (provinceIds.size !== provinceQueryIds.size || [...provinceIds].some((id) => !provinceQueryIds.has(id))) throw new Error('Province scope contains records outside its configured office queries');
+  if ([...provinceQueryIds].some((id) => !provinceIds.has(id))) throw new Error('Province scope is missing rows from a configured Bulacan office query');
   const overlap = scopes['malolos-city'].projects.filter((project) => project.inclusion_reasons.some((reason) => reason.reason === 'office-assigned') && project.inclusion_reasons.some((reason) => reason.reason === 'title-match'));
   return {
     schema_version: HGAB_2027_SNAPSHOT_SCHEMA,
@@ -139,8 +139,9 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
       unique_ids: new Set(pages.flatMap((page) => page.data.rows.map((row) => row.id))).size,
     })),
     validation_summary: {
-      province_office_only: true,
+      province_includes_non_dpwh: true,
       province_query_unique_count: provinceIds.size,
+      first_district_unique_count: scopes['bulacan-first-district'].projects.length,
       malolos_unique_count: scopes['malolos-city'].projects.length,
       malolos_office_title_overlap_count: overlap.length,
       malolos_overlap_ids: overlap.map((project) => project.id),

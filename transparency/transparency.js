@@ -2,8 +2,9 @@
   'use strict';
   const SNAPSHOT_URL = '../data/bettergov/hgab-2027.json';
   const scopes = {
-    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH project rows assigned to the three published Bulacan district engineering offices. These office records are not municipality-level locations.' },
-    'malolos-city': { label: 'Malolos City', note: 'Combines rows assigned to the shared Bulacan 1st District Engineering Office with API title-search matches for “Malolos.” This is not a complete inventory of projects physically located in the city.' },
+    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH rows assigned to the three Bulacan district engineering offices, plus FMR, health-facility, and irrigation rows returned by the API search for “Bulacan”. Search results may miss projects whose titles do not name Bulacan.' },
+    'bulacan-first-district': { label: 'Bulacan 1st District', note: 'Includes matching DPWH office rows and FMR, health-facility, and irrigation rows returned by API searches for the six municipalities in the district. Title searches do not prove exact project location.' },
+    'malolos-city': { label: 'Malolos City', note: 'Shows API title-search results whose titles name Malolos, excluding projects whose stated location is another municipality. This is not a complete inventory of projects physically located in the city.' },
   };
   const notices = document.getElementById('api-notices');
   const status = document.getElementById('snapshot-status');
@@ -44,7 +45,8 @@
     status.hidden = false; status.dataset.state = stale ? 'stale' : 'ready';
     status.removeAttribute('aria-busy');
     const retrieved = snapshot.retrieved_at ? new Date(snapshot.retrieved_at).toLocaleString('en-PH', { dateStyle: 'medium', timeStyle: 'short' }) : 'not stated';
-    status.innerHTML = `${stale ? '<strong>Snapshot is stale.</strong> ' : '<strong>Reviewed snapshot.</strong> '}Retrieved ${escape(retrieved)}. Source release: ${escape(snapshot.source_release || 'Not stated by source')}. Currency and scale: ${escape(snapshot.currency || 'PHP')} ${escape(snapshot.unit || 'pesos')}.${stale ? ' Figures are retained for context and should not be treated as current.' : ''}`;
+    const reviewLabel = snapshot.review_status === 'reviewed' ? 'Reviewed snapshot.' : 'Snapshot is pending review.';
+    status.innerHTML = `${stale ? '<strong>Snapshot is stale.</strong> ' : `<strong>${escape(reviewLabel)}</strong> `}Retrieved ${escape(retrieved)}. Source release: ${escape(snapshot.source_release || 'Not stated by source')}. Currency and scale: ${escape(snapshot.currency || 'PHP')} ${escape(snapshot.unit || 'pesos')}.${stale ? ' Figures are retained for context and should not be treated as current.' : ''}`;
     document.getElementById('project-browser').hidden = false;
     const projects = projectList();
     const sum = (key) => projects.reduce((total, project) => total + (number(project.amounts?.[key]) ?? 0), 0);

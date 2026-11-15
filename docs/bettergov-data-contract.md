@@ -26,8 +26,9 @@ The contract for the transparency portal lives in `scripts/bettergov/hgab-2027-c
 
 All requests use `GET https://budget.bettergov.ph/api/v1/hgab/2027/datasets/{dataset}/projects` with `limit` / `offset` pagination.
 
-- `bulacan-province`: `dpwh` with exact `office` values `Bulacan 1st District Engineering Office`, `Bulacan 2nd District Engineering Office`, and `Bulacan 3rd District Engineering Office`. Project-title searches do not add records to this scope.
-- `malolos-city`: `dpwh` with exact `office=Bulacan 1st District Engineering Office`, plus `q=Malolos` searches in `dpwh`, `fmr`, `hfep`, and `nia`. Office assignment and title search are distinct inclusion reasons. The Bulacan 1st office serves more than one congressional district, and title search can return namesake or spanning projects; neither defines a complete physical-location inventory.
+- `bulacan-province`: `dpwh` with exact `office` values `Bulacan 1st District Engineering Office`, `Bulacan 2nd District Engineering Office`, and `Bulacan 3rd District Engineering Office`, plus `q=Bulacan` searches in `fmr`, `hfep`, and `nia`. The non-DPWH results are title-search matches and may omit rows without “Bulacan” in searchable text.
+- `bulacan-first-district`: `dpwh` with exact `office=Bulacan 1st District Engineering Office`, filtered to project titles naming Bulakan, Calumpit, Hagonoy, Malolos, Paombong, or Pulilan; plus `fmr`, `hfep`, and `nia` title searches for each of those six municipalities. Office assignment and title searches are proxies, not definitive project-location data.
+- `malolos-city`: `q=Malolos` searches in `dpwh`, `fmr`, `hfep`, and `nia`, filtered to rows whose project title names Malolos and excluding a row when its title explicitly locates the project in another municipality (for example, `Calumpit, Bulacan`). This title-based view is not a complete physical-location inventory.
 
 The normalized identity is `{dataset}:{source project id}` because IDs are only guaranteed within a dataset. Repeated results with the same identity are represented once and retain every distinct `{reason, dataset, parameters}` entry in `inclusion_reasons`. Rows from different datasets are not merged even if their raw IDs happen to match.
 
