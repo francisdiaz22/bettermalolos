@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_id": "hgab-2027-20261115161438",
+  "snapshot_id": "hgab-2027-20261115163158",
   "fiscal_year": 2027,
   "source_name": "BetterGov.ph Philippine Budget Data API",
   "source_url": "https://budget.bettergov.ph/api/v1/hgab/2027",
@@ -333,7 +333,7 @@
       "total": 27
     }
   },
-  "retrieved_at": "2026-11-15T16:14:38.681Z",
+  "retrieved_at": "2026-11-15T16:31:58.894Z",
   "source_release": "a0caa778442cdae5583f5a006ea7401dab00e5ac",
   "source_built_at": "2026-10-26T08:46:14.383Z",
   "api_metadata": {
@@ -1377,7 +1377,7 @@
   },
   "currency": "PHP",
   "unit": "pesos",
-  "review_status": "pending-review",
+  "review_status": "reviewed",
   "scope_note": "FY2027 national budget document project rows; not actual spending, project completion, or Malolos LGU appropriations.",
   "notices": [
     "Amounts reflect published figures in the 2027 NEP and House Bill 10858, not actual spending. A project found in only one version is a candidate for further review, not a conclusive finding.",
@@ -1822,9 +1822,9 @@
   ],
   "validation_summary": {
     "province_includes_non_dpwh": true,
-    "province_query_unique_count": 422,
-    "first_district_unique_count": 64,
-    "malolos_unique_count": 26,
+    "province_query_unique_count": 421,
+    "first_district_unique_count": 63,
+    "malolos_unique_count": 25,
     "malolos_office_title_overlap_count": 0,
     "malolos_overlap_ids": [],
     "source_row_checksums": {
@@ -1858,7 +1858,7 @@
   "scopes": {
     "bulacan-province": {
       "label": "Bulacan Province",
-      "scope_note": "DPWH rows assigned to the three published Bulacan district engineering offices, plus FMR, HFEP, and NIA rows returned by the API search for “Bulacan”. This is a title-search scope for non-DPWH programs, not a complete geographic inventory.",
+      "scope_note": "DPWH rows assigned to the three published Bulacan district engineering offices, plus FMR rows whose titles locate the work in Bulacan and HFEP/NIA rows returned by the API search for “Bulacan”. Search-based program matches are not a complete geographic inventory.",
       "query_manifest": [
         {
           "dataset": "dpwh",
@@ -32884,80 +32884,6 @@
           }
         },
         {
-          "id": "fmr:house_only:ib:p696:r16",
-          "source_project_id": "house_only:ib:p696:r16",
-          "dataset": "fmr",
-          "title": "Concreting of Brgy. Bulacan FMR, Brgy. Bulacan, Mabini Batangas",
-          "inclusion_reasons": [
-            {
-              "reason": "title-match",
-              "label": "Project returned by API title search for “Bulacan”",
-              "dataset": "fmr",
-              "parameters": {
-                "q": "Bulacan"
-              }
-            }
-          ],
-          "amounts": {
-            "nep_php": null,
-            "house_php": 5000000,
-            "hgab2_php": 5000000,
-            "hgab3_php": 5000000
-          },
-          "match_status": "House bill only",
-          "pdf_url": {
-            "nep": null,
-            "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf#page=696",
-            "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf#page=696"
-          },
-          "source_project_url": "https://budget.bettergov.ph/hgab/2027/fmr/p/house_only%3Aib%3Ap696%3Ar16",
-          "source_row": {
-            "id": "house_only:ib:p696:r16",
-            "dataset": "fmr",
-            "title": "Concreting of Brgy. Bulacan FMR, Brgy. Bulacan, Mabini Batangas",
-            "program": "REPAIR/REHABILITATION AND CONSTRUCTION OF FARM-TO-MARKET ROADS IN DESIGNATED KEY PRODUCTION AREAS",
-            "pap": null,
-            "region": "REGION IVA - CALABARZON",
-            "region_key": "IV-A",
-            "office": null,
-            "office_kind": null,
-            "zone": null,
-            "trace": "house_only_candidate",
-            "status_label": "House bill only",
-            "bridge_group": "house_only",
-            "group_label": "In the House bill only",
-            "held": false,
-            "house_match": null,
-            "reading_status": null,
-            "api_presence": null,
-            "confidence": null,
-            "nep_php": null,
-            "hgab2_php": 5000000,
-            "hgab3_php": 5000000,
-            "house_php": 5000000,
-            "api_php": null,
-            "delta_php": null,
-            "nep_page": null,
-            "hgab2_page": 696,
-            "hgab3_page": null,
-            "nep_doc": null,
-            "hgab2_doc": "hb10858-2r-vol-ib",
-            "hgab3_doc": null,
-            "pdf_url": {
-              "nep": null,
-              "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf#page=696",
-              "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf#page=696"
-            },
-            "length_m": null,
-            "flags": [],
-            "suggestions": 0,
-            "lon": 120.94528,
-            "lat": 13.74549,
-            "url": "https://budget.bettergov.ph/hgab/2027/fmr/p/house_only%3Aib%3Ap696%3Ar16",
-            "api_url": "/api/v1/hgab/2027/datasets/fmr/projects/house_only%3Aib%3Ap696%3Ar16"
-          }
-        },
-        {
           "id": "fmr:nep_only:nep_fmr:p13:r18",
           "source_project_id": "nep_only:nep_fmr:p13:r18",
           "dataset": "fmr",
@@ -33627,7 +33553,7 @@
     },
     "bulacan-first-district": {
       "label": "Bulacan 1st District",
-      "scope_note": "DPWH rows assigned to the Bulacan 1st District Engineering Office whose project titles identify a 1st District municipality, plus FMR, HFEP, and NIA rows returned by API searches for Bulakan, Calumpit, Hagonoy, Malolos, Paombong, or Pulilan. Title searches do not establish exact project locations.",
+      "scope_note": "DPWH rows assigned to the Bulacan 1st District Engineering Office whose project titles identify a 1st District municipality, plus FMR, HFEP, and NIA search results whose titles identify one of those municipalities. FMR titles must also locate the work in Bulacan. Title searches do not establish exact project locations.",
       "query_manifest": [
         {
           "dataset": "dpwh",
@@ -38595,80 +38521,6 @@
           }
         },
         {
-          "id": "fmr:house_only:ib:p697:r2",
-          "source_project_id": "house_only:ib:p697:r2",
-          "dataset": "fmr",
-          "title": "Concreting of Brgy. Calumpit FMR, Brgy. Calumpit, Lobo, Batangas",
-          "inclusion_reasons": [
-            {
-              "reason": "title-match",
-              "label": "Project returned by API title search for “Calumpit”",
-              "dataset": "fmr",
-              "parameters": {
-                "q": "Calumpit"
-              }
-            }
-          ],
-          "amounts": {
-            "nep_php": null,
-            "house_php": 5000000,
-            "hgab2_php": 5000000,
-            "hgab3_php": 5000000
-          },
-          "match_status": "House bill only",
-          "pdf_url": {
-            "nep": null,
-            "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf#page=697",
-            "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf#page=697"
-          },
-          "source_project_url": "https://budget.bettergov.ph/hgab/2027/fmr/p/house_only%3Aib%3Ap697%3Ar2",
-          "source_row": {
-            "id": "house_only:ib:p697:r2",
-            "dataset": "fmr",
-            "title": "Concreting of Brgy. Calumpit FMR, Brgy. Calumpit, Lobo, Batangas",
-            "program": "REPAIR/REHABILITATION AND CONSTRUCTION OF FARM-TO-MARKET ROADS IN DESIGNATED KEY PRODUCTION AREAS",
-            "pap": null,
-            "region": "REGION IVA - CALABARZON",
-            "region_key": "IV-A",
-            "office": null,
-            "office_kind": null,
-            "zone": null,
-            "trace": "house_only_candidate",
-            "status_label": "House bill only",
-            "bridge_group": "house_only",
-            "group_label": "In the House bill only",
-            "held": false,
-            "house_match": null,
-            "reading_status": null,
-            "api_presence": null,
-            "confidence": null,
-            "nep_php": null,
-            "hgab2_php": 5000000,
-            "hgab3_php": 5000000,
-            "house_php": 5000000,
-            "api_php": null,
-            "delta_php": null,
-            "nep_page": null,
-            "hgab2_page": 697,
-            "hgab3_page": null,
-            "nep_doc": null,
-            "hgab2_doc": "hb10858-2r-vol-ib",
-            "hgab3_doc": null,
-            "pdf_url": {
-              "nep": null,
-              "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf#page=697",
-              "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf#page=697"
-            },
-            "length_m": null,
-            "flags": [],
-            "suggestions": 0,
-            "lon": 121.22949,
-            "lat": 13.69594,
-            "url": "https://budget.bettergov.ph/hgab/2027/fmr/p/house_only%3Aib%3Ap697%3Ar2",
-            "api_url": "/api/v1/hgab/2027/datasets/fmr/projects/house_only%3Aib%3Ap697%3Ar2"
-          }
-        },
-        {
           "id": "fmr:pair:nep_fmr:p14:r4:ib:p681:r3",
           "source_project_id": "pair:nep_fmr:p14:r4:ib:p681:r3",
           "dataset": "fmr",
@@ -38982,80 +38834,6 @@
             "lat": 14.83938,
             "url": "https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A4095",
             "api_url": "/api/v1/hgab/2027/datasets/dpwh/projects/house-reading%3A4095"
-          }
-        },
-        {
-          "id": "dpwh:house-reading:7763",
-          "source_project_id": "house-reading:7763",
-          "dataset": "dpwh",
-          "title": "Improvement of Malolos Paombong Hagonoy Calumpit Road, Municipality of Calumpit, Bulacan",
-          "inclusion_reasons": [
-            {
-              "reason": "title-match",
-              "label": "Project title returned by API search for “Malolos”",
-              "dataset": "dpwh",
-              "parameters": {
-                "q": "Malolos"
-              }
-            }
-          ],
-          "amounts": {
-            "nep_php": 100000000,
-            "house_php": 100000000,
-            "hgab2_php": 100000000,
-            "hgab3_php": 100000000
-          },
-          "match_status": "Same amount in both",
-          "pdf_url": {
-            "nep": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf#page=439",
-            "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ic.pdf#page=422",
-            "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=422"
-          },
-          "source_project_url": "https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A7763",
-          "source_row": {
-            "id": "house-reading:7763",
-            "dataset": "dpwh",
-            "title": "Improvement of Malolos Paombong Hagonoy Calumpit Road, Municipality of Calumpit, Bulacan",
-            "program": "Convergence and Special Support Program",
-            "pap": "BIP - Access Roads and/or Bridges from the National Roads leading to Major/ Strategic Public Buildings/ Facilities",
-            "region": "Region III",
-            "region_key": "III",
-            "office": "Central Office",
-            "office_kind": "Central Office",
-            "zone": "local",
-            "trace": "amount_same",
-            "status_label": "Same amount in both",
-            "bridge_group": "unchanged",
-            "group_label": "Same amount in both",
-            "held": false,
-            "house_match": "exact_candidate",
-            "reading_status": "same_amount",
-            "api_presence": "paired",
-            "confidence": 1,
-            "nep_php": 100000000,
-            "hgab2_php": 100000000,
-            "hgab3_php": 100000000,
-            "house_php": 100000000,
-            "api_php": 100000000,
-            "delta_php": 0,
-            "nep_page": 439,
-            "hgab2_page": 422,
-            "hgab3_page": 422,
-            "nep_doc": "nep2027-vol-iib",
-            "hgab2_doc": "hb10858-2r-vol-ic",
-            "hgab3_doc": "hb10858-3r-vol-ic",
-            "pdf_url": {
-              "nep": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf#page=439",
-              "hgab2": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ic.pdf#page=422",
-              "hgab3": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=422"
-            },
-            "length_m": null,
-            "flags": [],
-            "suggestions": 0,
-            "lon": null,
-            "lat": null,
-            "url": "https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A7763",
-            "api_url": "/api/v1/hgab/2027/datasets/dpwh/projects/house-reading%3A7763"
           }
         },
         {
@@ -40859,5 +40637,7 @@
         }
       ]
     }
-  }
+  },
+  "reviewed_at": "2026-11-16T00:34:28+08:00",
+  "reviewer": "Codex, maintainer review requested by user"
 }

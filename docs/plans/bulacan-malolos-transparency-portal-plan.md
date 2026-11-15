@@ -167,8 +167,8 @@ Phase 2 exit is complete. Phase 3 will add the route and project views using the
 ### Phase 5 — Verify for handoff
 
 1. [x] Validate fetched/collected records against actual API responses and compare counts to API pagination.
-2. [x] Confirm Province scope has no place-name-only additions.
-3. [x] Confirm Malolos scope includes both office-assigned and title-matched records, with overlap appearing once and both reasons shown.
+2. [x] Confirm Province scope combines configured DPWH office rows with disclosed title-search matches from the other available project programs.
+3. [x] Confirm Bulacan 1st District and Malolos title-search rules, including documented exclusions for out-of-scope namesakes.
 4. [x] Check displayed amounts against raw API rows, version labels, disclaimers, PDF page links, and null/uncertain states.
 5. [x] Follow repository instructions for build/navigation validation and record commands and outcomes in the handoff.
 
@@ -182,13 +182,15 @@ Phase 2 exit is complete. Phase 3 will add the route and project views using the
 - Production packaging initially included the pending snapshot as a downloadable JSON file even though the page refused to display it. Added `scripts/bettergov/filter-public-snapshots.mjs` and wired it into `build.sh` so unreviewed snapshots are removed from `dist/data/bettergov/`; reviewed/verified snapshots remain available. This keeps the public data boundary aligned with the page's reviewed-only contract.
 - Validation at the 2026-11-01 checkpoint: `npm run check:navigation` passed. `node --check` passed for the HGAB contract, collection/filter scripts, and portal JavaScript. `bash build.sh --no-bump` completed successfully. The built `/transparency/` and `/transparency/about/` routes were present; the then-pending source snapshot was excluded from `dist/data/bettergov/`. The normal version-bumping build was not retained as a release-version change. No automated tests were added or run at that checkpoint.
 - Final pre-push validation (2026-11-07): `npm run check:navigation` passed; `node --check` passed for the HGAB contract, collection/filter scripts, and portal JavaScript; `bash build.sh --no-bump` completed successfully without changing the version. Confirmed the built `/transparency/` and `/transparency/about/` routes and reviewed snapshot are present in `dist/`. `git diff --check` passed. No automated test suite was run.
+- Follow-up review (2026-11-16): expanded Province and Bulacan 1st District collection to FMR, HFEP, and NIA searches; Malolos searches all four API project programs. Refreshed the snapshot from API build `a0caa778442cdae5583f5a006ea7401dab00e5ac`. All 25 configured query results matched API totals with unique IDs. Excluded two confirmed FMR namesakes in Batangas and two DPWH road rows explicitly located in Calumpit from the Malolos title-search scope. Reviewed the scope, pagination, PHP units, nullable amounts, source-row fidelity, project links, and PDF page-link structure; details and limits are in the updated [review packet](../review/hgab-2027-review-packet.md). Snapshot status is `reviewed` and records the reviewer and review timestamp.
 
 ## Acceptance criteria
 
 - `/transparency/` is reachable through the site's existing navigation and direct URL.
 - Province/City switcher is accessible by keyboard and screen reader and changes both the visible scope label and data.
-- Province records come only from explicitly configured Bulacan DPWH offices.
-- Malolos records are the union of configured Malolos DPWH office results and Malolos title results; duplicates are removed without losing reasons.
+- Bulacan Province includes rows from the three configured Bulacan DPWH offices and disclosed FMR/HFEP/NIA title searches.
+- Bulacan 1st District combines title-qualified rows from the 1st District DPWH office and the other available project programs.
+- Malolos rows come from title searches across all four available project programs, with explicit Calumpit road matches excluded and documented.
 - Each record has traceable source/query and update context; details link to the exact API/source document page where available.
 - The interpretation notice appears wherever amounts are shown; API disclaimers remain visible and unaltered.
 - One-version-only records are described as candidates for further review, not confirmed insertions/deletions.

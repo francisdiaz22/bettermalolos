@@ -9,7 +9,7 @@ export const HGAB_2027_SNAPSHOT_SCHEMA = 1;
 export const HGAB_2027_SCOPES = Object.freeze({
   'bulacan-province': Object.freeze({
     label: 'Bulacan Province',
-    scopeNote: 'DPWH rows assigned to the three published Bulacan district engineering offices, plus FMR, HFEP, and NIA rows returned by the API search for “Bulacan”. This is a title-search scope for non-DPWH programs, not a complete geographic inventory.',
+    scopeNote: 'DPWH rows assigned to the three published Bulacan district engineering offices, plus FMR rows whose titles locate the work in Bulacan and HFEP/NIA rows returned by the API search for “Bulacan”. Search-based program matches are not a complete geographic inventory.',
     queries: Object.freeze([
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 1st District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 1st District Engineering Office' },
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 2nd District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 2nd District Engineering Office' },
@@ -24,7 +24,7 @@ export const HGAB_2027_SCOPES = Object.freeze({
   }),
   'bulacan-first-district': Object.freeze({
     label: 'Bulacan 1st District',
-    scopeNote: 'DPWH rows assigned to the Bulacan 1st District Engineering Office whose project titles identify a 1st District municipality, plus FMR, HFEP, and NIA rows returned by API searches for Bulakan, Calumpit, Hagonoy, Malolos, Paombong, or Pulilan. Title searches do not establish exact project locations.',
+    scopeNote: 'DPWH rows assigned to the Bulacan 1st District Engineering Office whose project titles identify a 1st District municipality, plus FMR, HFEP, and NIA search results whose titles identify one of those municipalities. FMR titles must also locate the work in Bulacan. Title searches do not establish exact project locations.',
     queries: Object.freeze([
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 1st District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 1st District Engineering Office; title names a 1st District municipality' },
       ...['Bulakan', 'Calumpit', 'Hagonoy', 'Malolos', 'Paombong', 'Pulilan'].flatMap((place) =>
@@ -125,13 +125,21 @@ export function normalizeHgabProjects(scopeId, queryResults) {
       }
     }
   }
-  const normalized = [...projects.values()];
+  let normalized = [...projects.values()];
+  if (scopeId === 'bulacan-province') {
+    // q=Bulacan also matches a barangay named Bulacan in Mabini, Batangas.
+    normalized = normalized.filter((project) => project.dataset !== 'fmr' || /,\s*Bulacan\s*$/i.test(project.title));
+  }
   if (scopeId === 'bulacan-first-district') {
     const municipalities = /\b(?:bulakan|calumpit|hagonoy|malolos|paombong|pulilan)\b/i;
-    return normalized.filter((project) => project.dataset !== 'dpwh' || municipalities.test(project.title));
+    return normalized.filter((project) => project.dataset === 'dpwh'
+      ? municipalities.test(project.title)
+      : project.dataset === 'fmr'
+        ? municipalities.test(project.title) && /,\s*Bulacan\s*$/i.test(project.title)
+        : municipalities.test(project.title));
   }
   if (scopeId === 'malolos-city') return normalized.filter((project) =>
-    /\bmalolos\b/i.test(project.title) && !/,\s*Calumpit,\s*Bulacan\b/i.test(project.title));
+    /\bmalolos\b/i.test(project.title) && !/(?:,\s*Calumpit,\s*Bulacan\b|\b(?:City|Municipality) of Calumpit,\s*Bulacan\b)/i.test(project.title));
   return normalized;
 }
 

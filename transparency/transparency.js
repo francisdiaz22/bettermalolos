@@ -2,8 +2,8 @@
   'use strict';
   const SNAPSHOT_URL = '../data/bettergov/hgab-2027.json';
   const scopes = {
-    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH rows assigned to the three Bulacan district engineering offices, plus FMR, health-facility, and irrigation rows returned by the API search for “Bulacan”. Search results may miss projects whose titles do not name Bulacan.' },
-    'bulacan-first-district': { label: 'Bulacan 1st District', note: 'Includes matching DPWH office rows and FMR, health-facility, and irrigation rows returned by API searches for the six municipalities in the district. Title searches do not prove exact project location.' },
+    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH rows assigned to the three Bulacan district engineering offices, plus FMR rows identified in Bulacan and HFEP/NIA rows returned by the API search for “Bulacan”. Search results may miss projects whose searchable text does not identify Bulacan.' },
+    'bulacan-first-district': { label: 'Bulacan 1st District', note: 'Includes DPWH office rows and FMR, health-facility, or irrigation search results whose titles name a district municipality. FMR titles must also locate the work in Bulacan. Title searches do not prove exact project location.' },
     'malolos-city': { label: 'Malolos City', note: 'Shows API title-search results whose titles name Malolos, excluding projects whose stated location is another municipality. This is not a complete inventory of projects physically located in the city.' },
   };
   const notices = document.getElementById('api-notices');
