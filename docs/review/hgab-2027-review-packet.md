@@ -1,50 +1,62 @@
 # FY2027 BetterGov snapshot — human review packet
 
-**Snapshot:** `hgab-2027-20261031170711`  
-**Collected:** 2026-10-31T17:07:11.810Z  
-**Source release:** `a0caa778442cdae5583f5a006ea7401dab00e5ac` (API build 2026-10-26T08:46:14.383Z)  
-**Review status:** `reviewed`  
-**Reviewer:** BetterMalolos maintainer (user-confirmed)  
-**Reviewed:** 2026-11-07T07:26:38Z
+**Snapshot:** `hgab-2027-20261116072742`
 
-## What the automated checks establish
+**Collected:** 2026-11-16T07:27:42.147Z (2026-11-16 15:27:42 Asia/Manila)
 
-- The overview and all seven unique configured query results were collected; each request used `limit=200&offset=0`, and received counts matched API totals: 152, 191, 55, 27, 0, 0, and 0.
-- The three Bulacan office queries yield 398 distinct DPWH rows. Province contains no title-search additions.
-- Malolos is the documented union of Bulacan 1st DEO assignment (152 rows) and four title searches (27 DPWH, 0 FMR, 0 HFEP, 0 NIA); after deduplication it has 160 rows, including 19 overlaps retaining both reasons.
-- The fetched scope arrays contain no null-to-zero conversion. A null amount is retained as unknown. Every row has a project link and at least one source PDF page link; amount fields match the retained API source row.
-- Province has 66 records and Malolos has 18 records with at least one null among the NEP/latest-House amount fields. These are source-state cases, not failed collection checks.
+**Source release:** `a0caa778442cdae5583f5a006ea7401dab00e5ac` (API build 2026-10-26T08:46:14.383Z)
 
-These checks validate collection and transformation against the API response. They do not independently prove the API's PDF transcription, geographic correctness, or whether any project belongs physically within a city boundary.
+**Review status:** `reviewed`
 
-## Human review decision
+**Reviewer:** Codex, performing the maintainer review at the user's request
 
-- The maintainer confirmed the human review is complete and approved the configured Province and Malolos scope definitions.
-- The Calumpit/spanning title matches are retained under the existing Malolos title-search rule. Their title-match inclusion reason and the limitation that title searches are not a city-boundary inventory remain disclosed. No manual exclusions were made.
-- Null values remain unknown; one-version-only rows remain candidates for further review. Source notices and the portal interpretation notice remain part of the publication contract.
-- This record logs the maintainer's approval; it does not claim an independent geospatial verification or transcribe individual PDF spot-check results.
+**Reviewed:** 2026-11-16 (Asia/Manila)
 
-## Deliberate scope edge cases
+## Collection and record checks
 
-The following title-search matches are included because the API returned them for `q=Malolos`; their titles place the described works in Calumpit, not Malolos. Do not silently remove them. Either retain them with the existing title-match reason and location-limit disclosure, or record a reviewer-approved exclusion in the scope data and About page before publication.
+- The API overview and all 25 configured searches were collected. Each query's `data.total` matched received rows and unique IDs; all fit in one `limit=200&offset=0` page. The 75 district-lens DPWH project-detail records were also retrieved individually.
+- Amounts declare PHP pesos. Snapshot rows retain source values and nulls. The 75 benchmark records have HTTPS BetterGov project links and source PDF page links. Their normalized IDs are unique and dataset-qualified as `dpwh:{source id}`.
+- API source commit, build time, query parameters, totals, source links, notices, disclaimers, and source project rows are retained in the snapshot. Ledger schema and build/source/lens commits are recorded alongside the district scope.
+- Source amounts were checked against the pinned ledger totals and exact project-ID list. This review does not independently re-transcribe every amount from the underlying budget PDFs; all null amounts remain unknown.
 
-| API project | Title | Amount status | Source pages |
-| --- | --- | --- | --- |
-| `dpwh:house-reading:7772` | Rehabilitation of Malolos - Paombong - Hagonoy - Calumpit Road, Sta. 0+000 - Sta. 2+800, Calumpit, Bulacan | PHP 150,000,000 in NEP and House | [NEP p. 439](https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf#page=439), [House p. 423](https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=423) |
-| `dpwh:house-reading:7763` | Improvement of Malolos Paombong Hagonoy Calumpit Road, Municipality of Calumpit, Bulacan | PHP 100,000,000 in NEP and House | [NEP p. 439](https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf#page=439), [House p. 422](https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=422) |
+## BetterGov location-lens source and method
 
-The same title-query result set also includes records explicitly naming Malolos, for example:
+The benchmark source is [`locations.json`](https://budget-assets.bettergov.ph/hgab/2027/locations.json), schema 2, built `2026-11-03T15:37:22.239Z`. It names source commit `a0caa778442cdae5583f5a006ea7401dab00e5ac` and location-lens commit `d76863a917cb11e25a0a37776f35b024dbc9cc48`. The selected district key is `leg:bulacan:1st`.
 
-- `dpwh:house-reading:4095` — Retarding Basin along Sampaguita Road, Barangay Santo Rosario, City of Malolos; House-only, PHP 132,000,000; [House p. 303](https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=303).
-- `dpwh:house-reading:12403` — Evacuation Center at Barangay Mojon, City of Malolos; PHP 70,000,000 in both versions; [NEP p. 563](https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf#page=563), [House p. 637](https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf#page=637).
+The pinned [location-lens methodology](https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/d76863a917cb11e25a0a37776f35b024dbc9cc48/analysis/docs/location_district_lens_method.md) resolves one linked DPWH project once. It selects clean funded-section title PSGC evidence when supported by a usable DEO, coordinate, direct title context, or reviewed named site (`title_psgc`); otherwise it uses unique DEO-to-district mapping, the intact shared DEO, region, or unassigned. All 75 Bulacan 1st rows are `title_psgc`. Locations are provisional title evidence, not surveyed sites. They do not show that a representative requested, sponsored, or controlled a project or amount.
 
-## Reviewer decision record
+This location lens is not the `/api/v1/hgab/2027/districts/leg%3Abulacan%3A1st` office-association record. The API record associates whole engineering-office totals with districts the office serves; it does not reproduce the 75-row title-location assignment or split an office budget into district project amounts.
 
-- Primary reviewer: **BetterMalolos maintainer (user-confirmed)**
-- Review date: **2026-11-07 (Asia/Manila)**
-- Scope definitions: **accepted**
-- Calumpit/spanning title matches: **retained with disclosure**
-- Manual exclusions: **none**
-- Publication decision: **approved**
+## Bulacan 1st District reconciliation
 
-The snapshot records the review timestamp and decision in `data/bettergov/hgab-2027.json`.
+| DPWH set | Rows | 2027 NEP | House Bill 10858 | Net change |
+| --- | ---: | ---: | ---: | ---: |
+| BetterGov legislative location lens | 75 | ₱1,495,230,000 | ₱3,180,834,000 | +₱1,685,604,000 |
+| Shared with prior repo DEO/title scope | 57 | ₱840,230,000 | ₱860,230,000 | +₱20,000,000 |
+| Ledger-only rows added to the scope | 18 | ₱655,000,000 | ₱2,320,604,000 | +₱1,665,604,000 |
+| Repo-only rows excluded from the benchmark | 4 | ₱105,000,000 | ₱155,000,000 | +₱50,000,000 |
+
+Every one of the 75 qualified IDs, project titles, nullable amounts, source details, and location assignments is retained in `data/bettergov/bulacan-first-district-location-lens.json`. Its `reconciliation.ledger_only.projects` lists all 18 missing rows and its `reconciliation.repo_only.projects` lists all four extra rows. The four excluded IDs are `dpwh:house-reading:1518`, `dpwh:house-reading:7540`, `dpwh:house-reading:7547`, and `dpwh:house-reading:2669`. They are outside this location lens; their exclusion is not a claim that their source project lines are invalid.
+
+The refreshed snapshot contains 75 DPWH rows plus two separate FMR rows. FMR totals are ₱30,000,000 NEP and ₱30,000,000 House. HFEP and NIA have no 1st District search matches. None of these non-DPWH records is included in the 75-row benchmark.
+
+The 75 DPWH source rows contain 15 null NEP amounts and 3 null House amounts. These were preserved as `null`. The aggregate sums match the ledger because stated values are summed per version; unknown values are not rewritten as zero on project rows.
+
+## Other scopes and exclusions
+
+| View | Rows | 2027 NEP | House Bill 10858 |
+| --- | ---: | ---: | ---: |
+| Bulacan Province | 421 | ₱6,683,538,000 (371 stated rows) | ₱7,112,738,000 (399 stated rows) |
+| Bulacan 1st District DPWH benchmark | 75 | ₱1,495,230,000 | ₱3,180,834,000 |
+| Bulacan 1st District other programs | 2 FMR | ₱30,000,000 | ₱30,000,000 |
+| Malolos City | 25 | ₱504,000,000 (22 stated rows) | ₱722,600,000 (25 stated rows) |
+
+The 1st District FMR query excludes `fmr:house_only:ib:p697:r2`, “Concreting of Brgy. Calumpit FMR, Brgy. Calumpit, Lobo, Batangas” (House-only ₱5,000,000). The province FMR search excludes `fmr:house_only:ib:p696:r16`, a namesake project in Mabini, Batangas. Malolos excludes the two DPWH search matches `dpwh:house-reading:7772` and `dpwh:house-reading:7763` because those titles place work in Calumpit, Bulacan. The exclusions and reasons are implemented in `scripts/bettergov/hgab-2027-contract.mjs`; raw query rows and totals remain in provenance.
+
+These are scoped records, not complete physical-location inventories. A DPWH project can span places, and title place extraction is provisional. The BetterGov source is independent and unofficial. Figures describe budget documents, not actual spending, project completion, or Malolos LGU appropriations. One-version-only rows are candidates for review, not conclusive insertions or deletions.
+
+## Review decision
+
+- Source metadata, query completeness, dataset-qualified project IDs, exact location-lens totals, nullable amount handling, source links, scope separation, and the documented exclusions were checked.
+- The district page labels the DPWH lens, shows exact NEP and House totals and net change, separates FMR/HFEP/NIA totals, and states that location assignment does not establish representative control or sponsorship.
+- **Publication decision:** approved for the reviewed scopes above. This approval does not assert that each project was physically surveyed inside a municipality or independently verify every source-PDF transcription.

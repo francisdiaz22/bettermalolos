@@ -9,18 +9,37 @@ export const HGAB_2027_SNAPSHOT_SCHEMA = 1;
 export const HGAB_2027_SCOPES = Object.freeze({
   'bulacan-province': Object.freeze({
     label: 'Bulacan Province',
-    scopeNote: 'DPWH project rows assigned to the three published Bulacan district engineering offices. Office ledgers may cover multiple congressional districts; records are not assigned to a municipality.',
+    scopeNote: 'DPWH rows assigned to the three published Bulacan district engineering offices, plus FMR rows whose titles locate the work in Bulacan and HFEP/NIA rows returned by the API search for “Bulacan”. Search-based program matches are not a complete geographic inventory.',
     queries: Object.freeze([
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 1st District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 1st District Engineering Office' },
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 2nd District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 2nd District Engineering Office' },
       { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 3rd District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 3rd District Engineering Office' },
+      ...['fmr', 'hfep', 'nia'].map((dataset) => ({
+        dataset,
+        parameters: Object.freeze({ q: 'Bulacan' }),
+        reason: 'title-match',
+        reasonLabel: 'Project returned by API title search for “Bulacan”',
+      })),
+    ]),
+  }),
+  'bulacan-first-district': Object.freeze({
+    label: 'Bulacan 1st District',
+    scopeNote: 'DPWH rows use the pinned BetterGov DPWH location district lens for leg:bulacan:1st. FMR, HFEP, and NIA title-search results are retained as separate national programs and are excluded from the 75-row DPWH benchmark.',
+    queries: Object.freeze([
+      { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 1st District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 1st District Engineering Office; title names a 1st District municipality' },
+      ...['Bulakan', 'Calumpit', 'Hagonoy', 'Malolos', 'Paombong', 'Pulilan'].flatMap((place) =>
+        ['fmr', 'hfep', 'nia'].map((dataset) => ({
+          dataset,
+          parameters: Object.freeze({ q: place }),
+          reason: 'title-match',
+          reasonLabel: `Project returned by API title search for “${place}”`,
+        }))),
     ]),
   }),
   'malolos-city': Object.freeze({
     label: 'Malolos City',
-    scopeNote: 'Union of DPWH rows assigned to the Bulacan 1st District Engineering Office (shared across served districts) and FY2027 project rows returned by the API title search for Malolos. Neither rule is a complete inventory of projects physically located in Malolos.',
+    scopeNote: 'FY2027 project rows returned by the API title search for Malolos, excluding rows whose title identifies another municipality as the project location. This title-based view is not a complete inventory of projects physically located in the city.',
     queries: Object.freeze([
-      { dataset: 'dpwh', parameters: Object.freeze({ office: 'Bulacan 1st District Engineering Office' }), reason: 'office-assigned', reasonLabel: 'Assigned to Bulacan 1st District Engineering Office (shared office)' },
       ...['dpwh', 'fmr', 'hfep', 'nia'].map((dataset) => ({
         dataset,
         parameters: Object.freeze({ q: 'Malolos' }),
@@ -106,7 +125,22 @@ export function normalizeHgabProjects(scopeId, queryResults) {
       }
     }
   }
-  return [...projects.values()];
+  let normalized = [...projects.values()];
+  if (scopeId === 'bulacan-province') {
+    // q=Bulacan also matches a barangay named Bulacan in Mabini, Batangas.
+    normalized = normalized.filter((project) => project.dataset !== 'fmr' || /,\s*Bulacan\s*$/i.test(project.title));
+  }
+  if (scopeId === 'bulacan-first-district') {
+    const municipalities = /\b(?:bulakan|calumpit|hagonoy|malolos|paombong|pulilan)\b/i;
+    return normalized.filter((project) => project.dataset === 'dpwh'
+      ? municipalities.test(project.title) // Retained for the documented legacy-scope reconciliation; snapshot assembly substitutes the pinned ledger.
+      : project.dataset === 'fmr'
+        ? municipalities.test(project.title) && /,\s*Bulacan\s*$/i.test(project.title)
+        : municipalities.test(project.title));
+  }
+  if (scopeId === 'malolos-city') return normalized.filter((project) =>
+    /\bmalolos\b/i.test(project.title) && !/(?:,\s*Calumpit,\s*Bulacan\b|\b(?:City|Municipality) of Calumpit,\s*Bulacan\b)/i.test(project.title));
+  return normalized;
 }
 
 export function assertCompleteHgabPages(query, pages) {

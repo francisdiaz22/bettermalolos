@@ -14,6 +14,7 @@ import {
 
 const root = resolve(new URL('../..', import.meta.url).pathname);
 const outputPath = resolve(root, 'data/bettergov/hgab-2027.json');
+const districtLensPath = resolve(root, 'data/bettergov/bulacan-first-district-location-lens.json');
 const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 
 async function fetchAllPages(query, { request = fetchJson, limit = 200 } = {}) {
@@ -61,7 +62,7 @@ function scopeQueryManifest(scopeId) {
 }
 const queryKey = (query) => `${query.dataset}?${new URLSearchParams(query.parameters).toString()}`;
 
-export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new Date().toISOString() }) {
+export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new Date().toISOString(), districtLens, districtLensProjects = [] }) {
   const overviewData = normalizeOverview(overview);
   const scopes = {};
   for (const scopeId of Object.keys(HGAB_2027_SCOPES)) {
@@ -70,7 +71,24 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
       if (!found) throw new Error(`Missing collected query for ${scopeId}: ${query.dataset}`);
       return found;
     });
-    const projects = normalizeHgabScopeProjects(scopeId, selected);
+    let projects = normalizeHgabScopeProjects(scopeId, selected);
+    if (scopeId === 'bulacan-first-district' && districtLens) {
+      const nonDpwh = projects.filter((project) => project.dataset !== 'dpwh');
+      const lensRows = districtLensProjects.map((row) => ({
+        id: `dpwh:${row.id}`,
+        source_project_id: row.id,
+        dataset: 'dpwh',
+        title: row.title,
+        inclusion_reasons: [{ reason: 'location-lens', label: `BetterGov DPWH location lens · ${row.location_assignment?.basis || 'district assignment'}`, dataset: 'dpwh', parameters: { district: 'leg:bulacan:1st', basis: row.location_assignment?.basis || null } }],
+        amounts: { nep_php: row.nep_php ?? null, house_php: row.house_php ?? null, hgab2_php: row.hgab2_php ?? null, hgab3_php: row.hgab3_php ?? null },
+        match_status: row.status_label ?? row.trace ?? null,
+        pdf_url: row.pdf_url ?? {},
+        source_project_url: row.url ?? null,
+        source_row: row,
+        location_assignment: row.location_assignment,
+      }));
+      projects = [...nonDpwh, ...lensRows];
+    }
     for (const project of projects) {
       for (const amount of Object.values(project.amounts)) {
         if (amount !== null && (typeof amount !== 'number' || !Number.isFinite(amount))) throw new Error(`Invalid amount for ${project.id}`);
@@ -88,7 +106,9 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
     }
     scopes[scopeId] = {
       label: HGAB_2027_SCOPES[scopeId].label,
-      scope_note: HGAB_2027_SCOPES[scopeId].scopeNote,
+      scope_note: scopeId === 'bulacan-first-district' && districtLens
+        ? 'DPWH projects use the BetterGov DPWH location district lens (75-row FY2027 ledger). FMR, HFEP, and NIA search results are separate program records and are excluded from the DPWH benchmark.'
+        : HGAB_2027_SCOPES[scopeId].scopeNote,
       query_manifest: selected.map(({ query, total, pageRequests }) => ({
         dataset: query.dataset,
         parameters: query.parameters,
@@ -103,8 +123,29 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
   const provinceIds = new Set(scopes['bulacan-province'].projects.map((item) => item.id));
   const provinceQueryIds = new Set(queryRecords.filter(({ query }) => query.parameters.office).flatMap(({ query, rows }) =>
     query.dataset === 'dpwh' && ['Bulacan 1st District Engineering Office', 'Bulacan 2nd District Engineering Office', 'Bulacan 3rd District Engineering Office'].includes(query.parameters.office) ? rows.map((row) => `dpwh:${row.id}`) : []));
-  if (provinceIds.size !== provinceQueryIds.size || [...provinceIds].some((id) => !provinceQueryIds.has(id))) throw new Error('Province scope contains records outside its configured office queries');
+  if ([...provinceQueryIds].some((id) => !provinceIds.has(id))) throw new Error('Province scope is missing rows from a configured Bulacan office query');
   const overlap = scopes['malolos-city'].projects.filter((project) => project.inclusion_reasons.some((reason) => reason.reason === 'office-assigned') && project.inclusion_reasons.some((reason) => reason.reason === 'title-match'));
+  if (districtLens) {
+    const districtProjects = scopes['bulacan-first-district'].projects.filter((project) => project.dataset === 'dpwh');
+    const sum = (key) => districtProjects.reduce((total, project) => total + (project.amounts[key] ?? 0), 0);
+    if (districtProjects.length !== districtLens.district.all.rows
+      || sum('nep_php') !== districtLens.district.all.nep_php
+      || sum('house_php') !== districtLens.district.all.house_php) {
+      throw new Error('Bulacan 1st District DPWH lens does not match its pinned ledger count and totals');
+    }
+    scopes['bulacan-first-district'].location_lens = {
+      source_url: districtLens.source_url,
+      built_at: districtLens.built_at,
+      ledger_schema: districtLens.ledger_schema,
+      source_commit: districtLens.source_commit,
+      lens_commit: districtLens.lens_commit,
+      methodology_url: districtLens.methodology_url,
+      district: districtLens.district.id,
+      expected_rows: districtLens.district.all.rows,
+      expected_nep_php: districtLens.district.all.nep_php,
+      expected_house_php: districtLens.district.all.house_php,
+    };
+  }
   return {
     schema_version: HGAB_2027_SNAPSHOT_SCHEMA,
     snapshot_id: `hgab-2027-${retrievedAt.replaceAll(/[-:.TZ]/g, '').slice(0, 14)}`,
@@ -139,8 +180,10 @@ export function assembleHgabSnapshot({ overview, queryPages, retrievedAt = new D
       unique_ids: new Set(pages.flatMap((page) => page.data.rows.map((row) => row.id))).size,
     })),
     validation_summary: {
-      province_office_only: true,
+      province_includes_non_dpwh: true,
       province_query_unique_count: provinceIds.size,
+      first_district_unique_count: scopes['bulacan-first-district'].projects.length,
+      first_district_dpwh_count: scopes['bulacan-first-district'].projects.filter((project) => project.dataset === 'dpwh').length,
       malolos_unique_count: scopes['malolos-city'].projects.length,
       malolos_office_title_overlap_count: overlap.length,
       malolos_overlap_ids: overlap.map((project) => project.id),
@@ -163,7 +206,18 @@ export async function collectHgab2027({ request = fetchJson, output = outputPath
   }
   const queryPages = [];
   for (const query of queryMap.values()) queryPages.push(await fetchAllPages(query, { request }));
-  const snapshot = assembleHgabSnapshot({ overview: overviewResult.data, queryPages });
+  const districtLens = JSON.parse(await readFile(districtLensPath, 'utf8'));
+  const districtLensProjects = [];
+  for (const project of districtLens.district.projects) {
+    const result = await request(`${HGAB_2027_BASE_URL}/datasets/dpwh/projects/${encodeURIComponent(project.source_project_id)}`);
+    const row = result.data?.data;
+    if (!isObject(row) || row.id !== project.source_project_id) throw new Error(`Invalid location-lens project detail for ${project.source_project_id}`);
+    for (const field of ['nep_php', 'house_php', 'hgab2_php', 'hgab3_php']) {
+      if ((row[field] ?? null) !== (project.amounts[field] ?? null)) throw new Error(`Location-lens source amount changed for ${project.id}: ${field}`);
+    }
+    districtLensProjects.push({ ...row, location_assignment: project.location_assignment });
+  }
+  const snapshot = assembleHgabSnapshot({ overview: overviewResult.data, queryPages, districtLens, districtLensProjects });
   const temp = `${output}.tmp-${process.pid}`;
   await mkdir(dirname(output), { recursive: true });
   await writeFile(temp, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');

@@ -2,8 +2,9 @@
   'use strict';
   const SNAPSHOT_URL = '../data/bettergov/hgab-2027.json';
   const scopes = {
-    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH project rows assigned to the three published Bulacan district engineering offices. These office records are not municipality-level locations.' },
-    'malolos-city': { label: 'Malolos City', note: 'Combines rows assigned to the shared Bulacan 1st District Engineering Office with API title-search matches for “Malolos.” This is not a complete inventory of projects physically located in the city.' },
+    'bulacan-province': { label: 'Bulacan Province', note: 'Includes DPWH rows assigned to the three Bulacan district engineering offices, plus FMR rows identified in Bulacan and HFEP/NIA rows returned by the API search for “Bulacan”. Search results may miss projects whose searchable text does not identify Bulacan.' },
+    'bulacan-first-district': { label: 'Bulacan 1st District', note: 'DPWH uses BetterGov’s 75-project legislative location lens. FMR, HFEP, and NIA search results are shown separately and are excluded from the DPWH benchmark.' },
+    'malolos-city': { label: 'Malolos City', note: 'Shows API title-search results whose titles name Malolos, excluding projects whose stated location is another municipality. This is not a complete inventory of projects physically located in the city.' },
   };
   const notices = document.getElementById('api-notices');
   const status = document.getElementById('snapshot-status');
@@ -13,6 +14,7 @@
   const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
   const number = (value) => typeof value === 'number' && Number.isFinite(value) ? value : null;
   const formatPhp = (value) => value === null ? 'Not stated' : new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP', maximumFractionDigits: 0 }).format(value);
+  const formatCompactPhp = (value) => new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP', notation: 'compact', maximumFractionDigits: 2 }).format(value);
   function updateUrl(scope, push = true) {
     const url = new URL(window.location.href);
     url.searchParams.set('scope', scope);
@@ -44,16 +46,36 @@
     status.hidden = false; status.dataset.state = stale ? 'stale' : 'ready';
     status.removeAttribute('aria-busy');
     const retrieved = snapshot.retrieved_at ? new Date(snapshot.retrieved_at).toLocaleString('en-PH', { dateStyle: 'medium', timeStyle: 'short' }) : 'not stated';
-    status.innerHTML = `${stale ? '<strong>Snapshot is stale.</strong> ' : '<strong>Reviewed snapshot.</strong> '}Retrieved ${escape(retrieved)}. Source release: ${escape(snapshot.source_release || 'Not stated by source')}. Currency and scale: ${escape(snapshot.currency || 'PHP')} ${escape(snapshot.unit || 'pesos')}.${stale ? ' Figures are retained for context and should not be treated as current.' : ''}`;
+    const reviewLabel = snapshot.review_status === 'reviewed' ? 'Reviewed snapshot.' : 'Snapshot is pending review.';
+    status.innerHTML = `${stale ? '<strong>Snapshot is stale.</strong> ' : `<strong>${escape(reviewLabel)}</strong> `}Retrieved ${escape(retrieved)}. Source release: ${escape(snapshot.source_release || 'Not stated by source')}. Currency and scale: ${escape(snapshot.currency || 'PHP')} ${escape(snapshot.unit || 'pesos')}.${stale ? ' Figures are retained for context and should not be treated as current.' : ''}`;
     document.getElementById('project-browser').hidden = false;
     const projects = projectList();
-    const sum = (key) => projects.reduce((total, project) => total + (number(project.amounts?.[key]) ?? 0), 0);
-    const countKnown = (key) => projects.filter((project) => number(project.amounts?.[key]) !== null).length;
-    document.getElementById('summary').innerHTML = [
-      ['Project rows', projects.length.toLocaleString('en-PH'), 'In this selected scope'],
-      ['2027 NEP · PHP', formatPhp(countKnown('nep_php') ? sum('nep_php') : null), `${countKnown('nep_php')} rows with stated amounts`],
-      ['House Bill 10858 · PHP', formatPhp(countKnown('house_php') ? sum('house_php') : null), `${countKnown('house_php')} rows with stated amounts`],
-    ].map(([label, value, detail]) => `<div class="summary-card"><span>${escape(label)}</span><strong>${escape(value)}</strong><span>${escape(detail)}</span></div>`).join('');
+    const sum = (rows, key) => rows.reduce((total, project) => total + (number(project.amounts?.[key]) ?? 0), 0);
+    const countKnown = (rows, key) => rows.filter((project) => number(project.amounts?.[key]) !== null).length;
+    const summary = document.getElementById('summary');
+    if (activeScope === 'bulacan-first-district') {
+      const dpwh = projects.filter((project) => project.dataset === 'dpwh');
+      const nonDpwh = projects.filter((project) => project.dataset !== 'dpwh');
+      const nep = sum(dpwh, 'nep_php');
+      const house = sum(dpwh, 'house_php');
+      const net = house - nep;
+      const signed = (value) => `${value > 0 ? '+' : value < 0 ? '−' : ''}${formatPhp(Math.abs(value))}`;
+      const datasets = [...new Set(nonDpwh.map((project) => project.dataset))];
+      const labels = { fmr: 'FMR', hfep: 'HFEP', nia: 'NIA' };
+      const otherPrograms = datasets.length ? datasets.map((dataset) => {
+        const rows = nonDpwh.filter((project) => project.dataset === dataset);
+        return `<li><strong>${escape(labels[dataset] || dataset)}</strong>: ${rows.length} rows · NEP ${escape(formatPhp(countKnown(rows, 'nep_php') ? sum(rows, 'nep_php') : null))} · House ${escape(formatPhp(countKnown(rows, 'house_php') ? sum(rows, 'house_php') : null))}</li>`;
+      }).join('') : '<li>No non-DPWH rows in this snapshot.</li>';
+      summary.innerHTML = `<div class="summary-card summary-card--wide"><span>DPWH legislative location lens · ${dpwh.length} projects</span><strong>2027 NEP: ${escape(formatPhp(nep))}</strong><span>House Bill 10858: ${escape(formatPhp(house))}</span><span>Net change: <strong>${escape(signed(net))}</strong> (about ${escape(net > 0 ? '+' : net < 0 ? '−' : '')}${escape(formatCompactPhp(Math.abs(net)))})</span><span>Amounts are exact pesos. NEP and House Bill versions are compared, never added.</span></div><div class="summary-card summary-card--wide"><span>Other programs · outside the DPWH benchmark</span><ul>${otherPrograms}</ul></div>`;
+    } else {
+      const knownNep = countKnown(projects, 'nep_php');
+      const knownHouse = countKnown(projects, 'house_php');
+      summary.innerHTML = [
+        ['Project rows', projects.length.toLocaleString('en-PH'), 'In this selected scope'],
+        ['2027 NEP · PHP', formatPhp(knownNep ? sum(projects, 'nep_php') : null), `${knownNep} rows with stated amounts`],
+        ['House Bill 10858 · PHP', formatPhp(knownHouse ? sum(projects, 'house_php') : null), `${knownHouse} rows with stated amounts`],
+      ].map(([label, value, detail]) => `<div class="summary-card"><span>${escape(label)}</span><strong>${escape(value)}</strong><span>${escape(detail)}</span></div>`).join('');
+    }
     const sourceNotices = [...(snapshot.notices || []), ...(snapshot.disclaimers || [])];
     if (sourceNotices.length) notices.innerHTML = [...new Map(sourceNotices.map((item) => {
       const value = typeof item === 'string' ? item : [item.title, item.body].filter(Boolean).join(' ');
@@ -77,7 +99,7 @@
     });
     projects.sort((a, b) => sort === 'title' ? String(a.title).localeCompare(String(b.title)) : sort === 'amount-desc' ? (number(b.amounts?.nep_php) ?? -Infinity) - (number(a.amounts?.nep_php) ?? -Infinity) : (number(a.amounts?.nep_php) ?? Infinity) - (number(b.amounts?.nep_php) ?? Infinity));
     document.getElementById('result-count').textContent = `${projects.length.toLocaleString('en-PH')} project rows shown`;
-    document.getElementById('project-list').innerHTML = projects.length ? projects.map((project) => {
+    const renderCard = (project) => {
       const amounts = project.amounts || {};
       const reasons = (project.inclusion_reasons || []).map((reason) => `<li>${escape(reason.label || reason.reason || 'Scope inclusion')}</li>`).join('');
       const sourceLabels = { nep: '2027 NEP', hgab2: 'House Bill 10858 · second reading', hgab3: 'House Bill 10858 · third reading' };
@@ -85,7 +107,14 @@
       const projectLink = typeof project.source_project_url === 'string' && /^https:\/\//.test(project.source_project_url) ? `<a href="${escape(project.source_project_url)}" target="_blank" rel="noopener noreferrer">BetterGov project record</a>` : '';
       const onlyOne = (number(amounts.nep_php) === null) !== (number(amounts.house_php) === null);
       return `<article class="project-card"><h3>${escape(project.title || 'Untitled project')}</h3><div class="project-meta"><span>${escape(project.dataset || 'Dataset not stated')} · ${escape(project.source_project_id || project.id || 'ID not stated')}</span><span>${escape(project.match_status || 'Match status not stated')}</span></div><div class="project-amounts"><span>2027 NEP: <strong>${escape(formatPhp(number(amounts.nep_php)))}</strong></span><span>House Bill 10858: <strong>${escape(formatPhp(number(amounts.house_php)))}</strong></span></div>${onlyOne ? '<p><strong>Candidate for further review:</strong> a published amount is present in only one version. This is not a conclusive finding.</p>' : ''}<details><summary>Inclusion and source details</summary><p>Included in ${escape(scopes[activeScope].label)} because:</p><ul class="inclusion-reasons">${reasons || '<li>Inclusion reason not supplied in snapshot.</li>'}</ul><p>${escape(project.source_row?.notes || project.source_row?.note || 'No additional source note supplied.')}</p><p>${[projectLink, links].filter(Boolean).join(' · ') || 'Source links are not available in this snapshot.'}</p></details></article>`;
-    }).join('') : '<p>No project rows match these filters in the reviewed snapshot.</p>';
+    };
+    let content;
+    if (activeScope === 'bulacan-first-district') {
+      const dpwh = projects.filter((project) => project.dataset === 'dpwh');
+      const other = projects.filter((project) => project.dataset !== 'dpwh');
+      content = `${dpwh.length ? `<section class="project-group"><h3>DPWH legislative location lens (${dpwh.length})</h3><div class="project-group-list">${dpwh.map(renderCard).join('')}</div></section>` : ''}${other.length ? `<section class="project-group"><h3>Other programs · outside the DPWH benchmark (${other.length})</h3><div class="project-group-list">${other.map(renderCard).join('')}</div></section>` : ''}`;
+    } else content = projects.map(renderCard).join('');
+    document.getElementById('project-list').innerHTML = projects.length ? content : '<p>No project rows match these filters in the reviewed snapshot.</p>';
   }
   switchButtons.forEach((button) => button.addEventListener('click', () => selectScope(button.dataset.scope)));
   ['search', 'version-filter', 'sort'].forEach((id) => document.getElementById(id).addEventListener(id === 'search' ? 'input' : 'change', renderProjects));
